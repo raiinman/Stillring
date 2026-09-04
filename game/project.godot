@@ -1,0 +1,23 @@
+; Engine configuration file.
+; Project Stillring — Godot 4.7.2 baseline
+; Keep initial project intentionally minimal until Gate 1.
+
+config_version=5
+
+[application]
+config/name="Project Stillring"
+run/main_scene=""
+
+[display]
+
+[display/window]
+size/viewport_width=640
+size/viewport_height=480
+size/window_width_override=1280
+size/window_height_override=960
+stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
