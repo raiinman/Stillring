@@ -413,6 +413,63 @@ Exact acceleration, braking, friction, rotation, and pivot values remain prototy
 
 ---
 
+## 16. Target-lock locomotion — LOCKED
+
+Target lock changes **movement reference and precision**, not the basic ownership principle. The player still controls position; the system does not secretly orbit, maintain distance, or choose combat spacing on the player's behalf.
+
+### Target-relative movement frame
+While target-lock locomotion is active on ordinary ground:
+- forward input moves Neris toward the locked target;
+- backward input moves away from the locked target;
+- left/right input strafes/orbits around the target on the local horizontal plane;
+- diagonals combine those radial and lateral components normally and remain magnitude-normalized;
+- the target-relative forward axis is based on the horizontal/projected direction to the target, not on camera pitch or target height;
+- if Neris and the target become nearly co-located such that the radial frame would become numerically unstable, locomotion uses the last valid horizontal target-relative frame until a stable direction exists again rather than flipping controls unpredictably.
+
+### Player owns combat spacing
+- target-lock locomotion does **not** automatically maintain a preferred distance;
+- it does not automatically orbit when the stick is neutral;
+- it does not push Neris forward/back to preserve framing;
+- target collision/spacing may prevent physical overlap, but collision does not become an invisible auto-positioning system;
+- attacks, evades, pulls, knockback, or other combat actions may have their own movement authority later, but ordinary locked locomotion itself does not lunge or reposition automatically.
+
+### Speed / precision
+- target-lock movement preserves analog low-speed precision and the same processed dead-zone semantics as exploration movement;
+- full exploration Sprint is unavailable while locked as already established;
+- locked ground movement uses a deliberate combat-appropriate maximum travel band below exploration Sprint speed;
+- forward, backward, and lateral movement must all remain useful and responsive; any directional speed differences are modest tuning choices rather than severe hidden penalties or disabled directions;
+- acceleration/deceleration is brisk and precise, following the low/run responsiveness philosophy rather than Sprint-weight inertia;
+- exact locked maximum speeds, directional multipliers, acceleration, and rotation rates remain Gate 1 tuning.
+
+### Facing
+- while locked and not overridden by a higher-priority action, Neris faces/orients toward the target promptly enough to support readable strafing and radial movement;
+- facing may blend physically rather than snapping, but animation may not delay movement input;
+- ordinary target-lock locomotion does not turn into tank controls when the target moves rapidly across Neris's facing.
+
+### Entering lock
+- acquiring target lock ends active exploration Sprint immediately as a state while preserving brief physical velocity through the already-locked short deceleration/pivot;
+- remaining velocity settles into the target-relative locomotion frame rather than being hard-zeroed;
+- the current held movement input is honored in the new target-relative frame without requiring the player to release and press again;
+- any toggled Sprint request is cleared by entry into target lock, preventing surprise Sprint when lock later ends.
+
+### Jump / traversal boundary while locked
+- Jump remains the same deliberate baseline jump when legally available; target lock does **not** silently convert Jump into a side-hop, backflip, dodge, or contextual evade;
+- combat evade/reposition remains a separate combat verb/system;
+- routine step handling remains available;
+- automatic exploration entries that could unexpectedly seize combat movement—especially mantle initiation and ladder mounting—are suppressed while target-lock ground locomotion is active unless a later explicit combat/traversal rule authorizes them;
+- if Neris physically enters an incompatible traversal state such as hang, ladder, surface swim, committed slide, or a tool-owned traversal state, target-lock locomotion ends; target retention/camera behavior after that transition belongs to Issue #2/combat lock authority;
+- a valid ledge catch caused by an actual airborne trajectory may still save a fall under the existing ledge rules, and entering the hang state ends target-lock locomotion.
+
+### Releasing / losing lock
+- voluntarily releasing lock or losing a valid target returns movement to camera-relative exploration semantics without hard-zeroing existing velocity;
+- held movement input is reinterpreted under exploration movement immediately; no stick/key re-press is required;
+- because the Sprint request was cleared on lock entry, leaving lock never auto-Sprints Neris;
+- camera recentering, target-selection behavior, lock-loss presentation, and camera framing remain Issue #2 / combat-camera authority.
+
+The target feel is **precise position control around an opponent, with no invisible autopilot**.
+
+---
+
 ## Current locked movement grammar
 ```text
 baseline ground/jump/sprint                   → ordinary locomotion contract
@@ -438,12 +495,19 @@ ordinary run intent change                    → brisk response; short stopping
 Sprint ordinary curve                         → highly steerable with visible momentum
 Sprint hard reversal                          → brief momentum shed + planted redirect + re-acceleration
 release/reduce Sprint intent                  → short controlled deceleration to requested lower band
+target lock + forward/back                    → move toward/away from target
+target lock + left/right                      → strafe/orbit; player owns spacing
+target lock + neutral                         → no automatic orbit/distance correction
+target lock + Sprint request                  → NO exploration Sprint
+target lock + Jump                            → normal baseline jump; NO contextual evade flip
+target lock → incompatible traversal state    → end target-lock locomotion; enter explicit traversal state
+release/lose target lock                      → preserve physical velocity; return to camera-relative exploration
 animation transition                          → follows movement authority; NO hidden input-delay ownership
 ```
 
 ---
 
 ## Next locomotion decision
-**Target-lock locomotion detail.**
+**Locomotion accessibility implications.**
 
-After that: accessibility implications and the final five-minute human-play acceptance test.
+After that: the final five-minute human-play acceptance test and repository-authority reconciliation before owner review.
