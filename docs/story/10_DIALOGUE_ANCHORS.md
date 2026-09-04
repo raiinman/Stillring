@@ -1,26 +1,21 @@
-# Project Stillring — Dialogue Anchors
+# Project Stillring — Final Dialogue Anchors
 
-**Status:** canonical dialogue-intent contract  
-**Related:** Issue #16, `docs/story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`, `docs/story/07_SCENE_BEAT_LEDGER.md`
+**Status:** final canonical dialogue-intent contract  
+**Related:** `docs/story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`, `docs/story/07_SCENE_BEAT_LEDGER.md`, `docs/story/08_REVEAL_AND_FORESHADOW_LEDGER.md`
 
-This is **not the final script**.
-
-It identifies lines/images that carry structural weight so later writing does not casually remove the setup needed by a payoff.
+This is **not the final screenplay**. It protects lines and conversational functions whose setup/payoff matters structurally.
 
 ## Anchor classes
 
-### LOCKED
-The wording is part of the current story identity. Change only through a deliberate narrative revision that checks all callbacks.
+- **LOCKED** — wording is part of current story identity. Revise only through a deliberate continuity pass.
+- **STRONG** — idea, speaker, and emotional shape are canonical; copy editing is allowed.
+- **INTENT** — conversational purpose is canonical; quoted wording is illustrative.
 
-### STRONG
-The idea, speaker, and emotional shape are canonical. Copy editing is allowed if the new line performs the same job and downstream references are updated.
+## Global rule
 
-### INTENT
-The quoted wording is a working example. The conversational purpose is canonical; prose is not.
+Do not turn every good sentence into scripture. A spoken game script must survive performance, animation, localization, pacing, and silence.
 
-## Rule
-
-Do not turn every good draft sentence into holy text. A game script needs room to become speakable once actors, animation, scene duration, and localization are known.
+Characters do not all speak like the Story Bible.
 
 ---
 
@@ -28,250 +23,207 @@ Do not turn every good draft sentence into holy text. A game script needs room t
 
 ## D001 — Ilyra's listening lesson
 **Class:** LOCKED  
-**Scene:** M00-S01
+**Scene:** `M00-S01`
 
 > “One. Listen. Two. Listen again. Three—no. That one is wrong.”
 
-### Purpose
-- establishes Ilyra through sound/work rather than biography;
-- makes “listen again” a family principle;
-- sets up cracked/imperfect instruments as meaningful rather than defective-by-default.
-
-### Callback
-The final Cantor Key remains cracked; the point is understanding the imperfection, not restoring cosmetic perfection.
-
----
+**Purpose:** establishes Ilyra through work and sound; seeds listening twice; pays off the permanently cracked Key.
 
 ## D002 — Orin finally intends to talk
 **Class:** STRONG  
-**Scene:** M00-S04
+**Scene:** `M00-S04`
 
 > “After the Ring, we talk. Properly.”
 
-### Purpose
-Makes Orin tragic rather than eternally stubborn. He was finally going to change; intention arrived too late to become action.
+**Purpose:** Orin is not an eternal coward. He finally chooses honesty and runs out of time before the choice becomes action.
 
-### Do not
-Add an ominous “if anything happens to me” speech. Orin does not expect the catastrophe.
-
----
+**Do not add:** ominous “if something happens to me” language. Orin does not expect the catastrophe.
 
 ## D003 — The first family truth
 **Class:** LOCKED  
-**Scene:** M00-S06
+**Scene:** `M00-S06`
 
 > “Your mother didn't die where they said she did.”
 
-### Purpose
-This is the sentence that launches the family mystery.
+**Purpose:** launches the family mystery while remaining exactly within what Orin knows.
 
-It must remain incomplete.
-
-### Do not
-Change it into “your mother is alive.” Orin does not know that.
+**Never change to:** “your mother is alive.”
 
 ---
 
-# Road / Cairnspire
+# Road / Cairnspire / First Circuit
 
 ## D004 — Looking back is not a road
 **Class:** STRONG  
-**Scene:** road camp / early journey
+**Scene:** early road travel
 
-Tessa, after Neris insists Orin looked back through the Hush:
+After Neris insists Orin looked back through the seam, Tessa says:
 
 > “Looking back and finding a road back are different jobs.”
 
-### Purpose
-Tessa respects what Neris saw without pretending hope is a plan.
-
-### Callback
-Still-Cairn: a perfect remembered route is not automatically a future route.
-
----
+**Purpose:** hope is respected without being treated as a plan. Still-Cairn later proves remembered routes are not automatically futures.
 
 ## D005 — Cairnspire chose the roads
-**Class:** STRONG
+**Class:** STRONG  
+**Scene:** `M01-S02`
 
 > “Every road looks like it chose Cairnspire. Mostly Cairnspire chose for it.”
 
-### Speaker
-Tessa.
+**Speaker:** Tessa.
 
-### Purpose
-Conveys centralized infrastructure through road-worker language rather than political lecture.
+**Purpose:** central infrastructure through road-worker language instead of political lecture.
 
----
+## D006 — The Key remembers Neris
+**Class:** STRONG  
+**Scene:** `M02-S02`
 
-## D006 — Caldrin's first read on Ilyra
+Maelor, after the field reading drifts away from Neris:
+
+> “For now, it remembers you better than it remembers its own instructions.”
+
+**Purpose:** establishes the practical accident that makes Neris necessary without chosen-one language.
+
+## D007 — Caldrin's first read on Ilyra
 **Class:** LOCKED  
-**Scene:** M02-S05
+**Scene:** `M02-S05`
 
 > “Your mother wrote in margins because she did not trust clean copies.”
 
-### Purpose
-- characterizes Ilyra;
-- establishes archive contradiction;
-- sets up Palinode and provenance;
-- gives Neris a behavioral clue about a mother remembered mostly through fragments.
+**Purpose:** characterizes Ilyra, seeds archival contradiction, provenance, and Palinode.
 
----
-
-## D007 — Eda on standards
-**Class:** STRONG
+## D008 — Eda on standards
+**Class:** STRONG  
+**Scene:** `M03-S02`
 
 > “A standard is a tool. The minute it becomes a commandment, somebody stopped measuring.”
 
-### Purpose
-Mechanical seed for the ending without preaching “decentralization good” at the player.
+**Voice:** irritated craftsperson, not philosopher delivering thesis.
 
-### Voice note
-Eda should sound like a worker irritated by bad practice, not a philosopher delivering the game's thesis.
+**Purpose:** seeds the ending while leaving room for the story to later show where shared standards remain useful.
+
+## D009 — Tessa on old Line Skiffs
+**Class:** STRONG  
+**Scene:** `M03-S10`
+
+> “Unsafe, loud, and still better than walking.”
+
+**Purpose:** makes later Skiff acquisition recognition rather than surprise upgrade.
 
 ---
 
-# Rootmere
+# Rootmere / Saltreach
 
-## D008 — Ilyra's phase warning
-**Class:** LOCKED as document text
+## D010 — Ilyra's phase warning
+**Class:** LOCKED as document text  
+**Scene:** `M04-S06`
 
 > **CENTRAL PHASE LOAD EXCEEDS SAFE LIMIT. DO NOT FORCE FULL NETWORK SYNCHRONIZATION.**
 
-### Purpose
-First hard evidence that restoration can itself be dangerous.
+**Do not add:** Stillring, three-point entrainment, or Maelor's plan. This is old technical evidence, not prophecy.
 
-### Do not
-Add references to Stillring, Maelor's plan, or three-point entrainment here.
+## D011 — Maelor admits closeness
+**Class:** STRONG  
+**Scene:** `M04-S06`
 
----
-
-## D009 — Maelor admits closeness
-**Class:** STRONG
-
-Neris: How well did you know her?
+Neris: “How well did you know her?”
 
 Maelor:
 
 > “Well enough to miss arguing with her.”
 
-### Purpose
-Moves Maelor/Ilyra from suspicious professional familiarity into personal collaboration without revealing Quiet Court yet.
+**Purpose:** moves the relationship from suspicious familiarity to acknowledged friendship/collaboration without dumping Quiet Court history.
 
----
+## D012 — Tessa's defense collapses
+**Class:** STRONG  
+**Scene:** `M05-S06`
 
-# Saltreach
+> “I knew enough to know I didn't want to know more.”
 
-## D010 — Tessa's defense collapses
-**Class:** INTENT
+**Canonical meaning:** she knew the manifest was false, cargo restricted, and pay abnormal. She deliberately avoided knowing the purpose. She did not know Stillring.
 
-Tessa's working sentiment:
-
-> “I knew the papers were false. I didn't know what was inside, and I made damn sure I didn't ask.”
-
-### Canonical intent
-Tessa knowingly committed freight fraud and deliberately avoided knowing the purpose.
-
-### Do not
-Make her secretly know about Stillring.
-
----
-
-## D011 — Maelor on Ilyra and safety
-**Class:** LOCKED
+## D013 — Maelor's narrow truth
+**Class:** LOCKED  
+**Scene:** `M05-S07`
 
 > “Your mother knew the system was killing people. So did I. We disagreed about what safety required.”
 
-### Purpose
-A true sentence that conceals the exact disagreement.
-
-### Writing note
-Maelor's strongest manipulations should often be truths with withheld scope, not falsehoods.
+**Purpose:** a true sentence whose withheld scope is the manipulation.
 
 ---
 
 # Emberstep / Grand Ring
 
-## D012 — Mercy Window archive mark
-**Class:** LOCKED as technical record
+## D014 — Mercy Window archive mark
+**Class:** LOCKED as technical record  
+**Scene:** `M06-S05`
 
 > **MERCY WINDOW — LOCAL HOLD TEST / I. VALE LEAD**
 
-### Purpose
-The player must see Ilyra listed as lead before meeting her alive.
+**Purpose:** Ilyra must be visibly named as lead before Neris meets her alive.
 
----
-
-## D013 — “Ask her.”
-**Class:** LOCKED exchange
-
-Neris shows the Mercy Window record.
+## D015 — Ask her
+**Class:** LOCKED exchange  
+**Scene:** `M07-S02`
 
 Maelor:
 
 > “Ask her.”
 
-Neris: She's dead.
+Neris:
+
+> “She's dead.”
 
 Maelor:
 
 > “That has always been the most convenient version.”
 
-### Purpose
-Plants Ilyra's survival immediately before Grand Ring without Maelor simply spoiling the reveal.
+**Purpose:** plants Ilyra's survival immediately before catastrophe without directly spoiling the Hush reunion.
 
-### Performance
-Maelor is not smirking. “Convenient” carries bitterness toward the official history and toward his own inability to retrieve Ilyra.
+## D016 — Another tomorrow
+**Class:** LOCKED exchange  
+**Scene:** `M07-S02`
 
----
+Maelor:
 
-## D014 — Another tomorrow
-**Class:** STRONG
+> “I was wrong to believe your mother would accept the cost.”
 
-Neris asks the cost of Maelor's solution.
+Neris:
 
-Maelor looks toward the city:
+> “What cost?”
+
+Maelor:
 
 > “Another tomorrow.”
 
-### Purpose
-Condenses his thesis without a monologue moments before activation.
+**Purpose:** compresses Maelor's thesis into character language rather than a monologue.
+
+**Do not insert:** a long technical explanation between these lines.
 
 ---
 
-# Ilyra reunion
+# Ilyra / changed world
 
-## D015 — I lost you one day at a time
-**Class:** LOCKED
-
-> “I tried to save everyone at once. I lost you one day at a time.”
-
-### Purpose
-Ilyra acknowledges consequence without claiming disappearance was a noble sacrifice that should excuse everything.
-
----
-
-## D016 — The truth I owe you
-**Class:** STRONG
+## D017 — Ilyra owes the truth herself
+**Class:** STRONG  
+**Scene:** `M08-S04`
 
 Ilyra:
 
 > “There are things Maelor will tell you about me because they are true.”
 
-Neris: Which things?
+Neris:
+
+> “Which things?”
 
 Ilyra:
 
 > “That's the part I owe you myself.”
 
-### Purpose
-Promises Mercy Window while immediately creating the flaw that Ilyra will delay that truth anyway.
+**Purpose:** acknowledges Ilyra's responsibility while showing she still controls timing—a flaw the story will confront.
 
----
-
-# Changed Brindle
-
-## D017 — Tessa meets Ilyra
-**Class:** STRONG comic beat
+## D018 — Tessa meets Ilyra by voice
+**Class:** STRONG  
+**Scene:** `M09-S02`
 
 Tessa:
 
@@ -281,213 +233,126 @@ Ilyra:
 
 > “That narrows it less than you think.”
 
-### Purpose
-One human laugh after Grand Ring. Also establishes that Ilyra's work had mundane institutional consequences beyond the central tragedy.
-
-### Do not
-Turn Ilyra/Tessa into a constant quip duo afterward.
+**Purpose:** first laugh after Grand Ring; establishes Ilyra as a person with dry humor rather than pure revelation source.
 
 ---
 
-# High Aerie / Bone Archive
+# Bone Archive / Mireglass / family fracture
 
-## D018 — Caldrin breaks with master history
-**Class:** LOCKED
+## D019 — Ilyra authored Mercy Window
+**Class:** INTENT  
+**Scene:** `M11-S04`
 
-> “An archive that cannot survive contradiction is not preserving history. It is embalming authority.”
+Neris asks whether Maelor adapted the old local hold.
 
-### Purpose
-Caldrin's major articulation after the player has physically dealt with archive triage and Saint Varo's contradictory record.
+Ilyra must answer plainly that **she** designed Mercy Window.
 
-### Risk
-This is intentionally polished. Use sparingly around it; do not make every Caldrin sentence another aphorism.
+Working form:
 
----
+> “The old relation wasn't his. Mercy Window wasn't either. That part was mine.”
 
-## D019 — Ilyra controls the confession order
-**Class:** STRONG
+**Purpose:** no passive voice, no “we all made mistakes” diffusion.
 
-After Ilyra delays Mercy Window again, Neris's intent:
+## D020 — Yes
+**Class:** LOCKED emotional response  
+**Scene:** `M12-S05`
 
-> “You don't get to decide the safe order for me to know my own family.”
-
-### Canonical intent
-Neris explicitly connects Ilyra's staged truth to Orin's protective secrecy.
-
-Wording may change.
-
----
-
-## D020 — Caldrin names Ilyra's mistake
-**Class:** LOCKED
-
-> “You are preserving your own preferred sequence of confession.”
-
-### Purpose
-Turns the game's preservation theme inward on a sympathetic character.
-
----
-
-# Mireglass / Mercy Window
-
-## D021 — Ilyra's old objection to Maelor
-**Class:** LOCKED memory line
-
-> “Then nobody gets another meaning.”
-
-### Context
-Maelor argues that meaningful states could be preserved physically.
-
-### Purpose
-Short, incomplete early version of their philosophical split.
-
----
-
-## D022 — Neris refuses the innocent-Ilyra version
-**Class:** LOCKED exchange
-
-Neris:
-
-> “You keep telling me he turned your work into something else. But you were still the one who learned how to stop the room.”
+After full Mercy Window reconstruction, Neris asks whether Ilyra understood her work could become something like this.
 
 Ilyra:
 
-> “Yes.”
+> **“Yes.”**
 
-### Purpose
-The single-word answer matters.
+Silence follows before any qualification.
 
-No immediate “but.”
-
-### Scene direction
-Allow silence after “Yes.” The game does not need to sprint to exoneration.
+**Purpose:** responsibility without self-exoneration. Any later context must not erase the force of the answer.
 
 ---
 
-# Cairnfall
+# Still-Cairn / Orin
 
-## D023 — Maelor's consent argument
-**Class:** STRONG exchange
-
-Maelor argues that Mercy Window saved lives and asks why repetitive preservation is considered horror while death is accepted.
-
-Neris:
-
-> “Because you stopped asking him.”
-
-Maelor:
-
-> “The dead do not answer either.”
-
-### Purpose
-Neris identifies consent/agency as central. Maelor exposes the hard limit of consent in death and emergency decisions.
-
-### Do not
-Write an immediate third line that neatly proves Maelor wrong. Let the discomfort persist.
-
----
-
-# Still-Cairn
-
-## D024 — Memory versus future
-**Class:** STRONG intent
-
-In the perfect workshop, Neris's key idea must be:
-
-> This can be real as a memory and still be false as a future.
-
-### Wording
-Not locked. Avoid making Neris sound like a philosophy textbook.
-
-### Player action
-The line is secondary to the player choosing release.
-
----
-
-## D025 — Orin's accusation
-**Class:** LOCKED
-
-After Orin admits hiding Ilyra's research:
+## D021 — You chose my life
+**Class:** LOCKED  
+**Scene:** `M14-S05`
 
 Neris:
 
 > “So you chose which life I was allowed to have.”
 
-### Orin response rule
-He does **not** answer with “I was protecting you.”
+**Purpose:** names Orin's protection-through-information-control precisely.
 
-A simple acknowledgement, silence, or “Yes” is stronger.
+**Orin may not answer:** “I was only protecting you.” The scene and player already understand that.
+
+## D022 — Orin stops defending himself
+**Class:** INTENT  
+**Scene:** `M14-S05`
+
+Orin's reply should acknowledge the act rather than ask for forgiveness.
+
+Working intent:
+
+> “Yes. I told myself the reason made the choosing mine.”
+
+The exact prose may change, but no justification speech follows.
 
 ---
 
-# Null Meridian
+# Maelor / finale
 
-## D026 — Maelor's final offer
-**Class:** LOCKED exchange
+## D023 — Maelor's offer
+**Class:** INTENT  
+**Scene:** `M16-S05` / `M16-S06`
 
-Neris asks whether preserved people can choose anything new.
+Maelor does **not** offer rule, immortality, or power. He offers a world in which no loved state has to become past.
 
-Maelor:
+The conversational shape must force Neris to distinguish:
 
-> “They already chose. They chose to want the moment to last.”
+**wanting a moment to last** from **consenting to have no moment after it**.
 
-Neris:
+No one should summarize the entire theme in one polished paragraph.
 
-> “Wanting a moment to last isn't the same as wanting nothing after it.”
+## D024 — Maelor loses without being absolved
+**Class:** INTENT
 
-### Purpose
-Central argument in plain human terms.
+When defeated, Maelor may recognize Neris's solution as technically coherent before refusing its ethical premise. Competence is allowed. Redemption is not required.
 
-### Performance
-Neither should shout this exchange.
+Do not give him a deathbed apology because he survives.
 
 ---
 
 # Listener
 
-## D027 — The Listener's first clear question
-**Class:** LOCKED
+## D025 — Listener question
+**Class:** LOCKED  
+**Scene:** `M17-S04`
 
-> “MUST ALL ENDINGS BE CAGES?”
+> **“MUST ALL ENDINGS BE CAGES?”**
 
-### Presentation
-The Listener does not suddenly become an eloquent humanoid narrator. This should feel like extraordinary compression of a consciousness that normally cannot speak in ordinary sentences.
+**Purpose:** the Listener's question is sincere, not villain taunt. It should feel slightly unlike ordinary human speech.
 
----
+## D026 — Neris's final answer is action
+**Class:** INTENT  
+**Scene:** `M17-S05`
 
-# Maelor's end
+Neris does not need a thesis monologue in response. The principal answer is using Motion, Memory, and Ending to release the central hold.
 
-## D028 — No redemption speech
-**Class:** STRUCTURAL LOCK, not a line
-
-When Maelor's wife/son impressions dissolve, he does not deliver a final explanation of how Neris was right.
-
-His son's echo taps the cracked cup.
-
-Maelor laughs once through tears and allows the memory to end.
-
-Silence does more work here than a redemption monologue.
+If a spoken line is used, keep it short enough that the action remains primary.
 
 ---
 
 # Epilogue
 
-## D029 — Orin's new rule
-**Class:** STRONG intent
+## D027 — Orin answers plainly
+**Class:** INTENT  
+**Scene:** `M18-S03`
 
-Orin's promise must mean:
+Neris asks one uncomfortable question about Ilyra or the old case. Orin answers directly even though the answer reflects badly on him.
 
-> Ask me. I answer. Even when the answer makes me look worse.
+**Purpose:** demonstrate his repaired behavior instead of saying “I've changed.”
 
-Wording can remain plain and Orin-like.
-
-### Purpose
-His repair is behavioral, not ceremonial apology.
-
----
-
-## D030 — Final road exchange
-**Class:** LOCKED
+## D028 — Final road exchange
+**Class:** LOCKED  
+**Scene:** `M18-S05`
 
 Tessa:
 
@@ -495,73 +360,46 @@ Tessa:
 
 Neris:
 
-> “Yeah. I heard something cracked.”
+> **“Yeah. I heard something cracked.”**
 
-### Purpose
-Returns Neris from cosmic stakes to ordinary repair work.
-
-The story ends with another problem, not a throne.
+**Purpose:** repair remains Neris's vocation, but “cracked” no longer means “restore it to pristine state.”
 
 ---
 
-# Voice constraints by character
+# Character voice constraints
 
 ## Neris
-- direct;
-- mechanically observant;
-- can be unfair when angry;
-- does not become grandiose in Act III;
-- by the finale speaks **less**, not more.
+Direct, impatient with ceremonial wording, often uses mechanical language. Can say unfair things when angry. Becomes quieter late-game rather than increasingly heroic in diction.
 
 ## Tessa
-- practical route language;
-- humor used defensively or socially, not every sentence;
-- notices labor/logistics others overlook;
-- should be allowed serious lines without a joke attached.
+Route/work vocabulary, practical observations, humor used defensively. Avoid endless sarcasm and constant punchlines.
 
 ## Ilyra
-- precise;
-- when anxious, over-explains technical context;
-- occasionally uses language appropriate to six-year-old Neris, then catches herself;
-- does not speak like a mystical ghost despite living in the Hush.
+Precise, sometimes over-explains when anxious, occasionally treats Neris as younger than reality and catches herself. Dry humor should appear outside major reveals.
 
 ## Orin
-- plain, domestic, workshop metaphors;
-- avoids theory;
-- after Still-Cairn, stops using explanation as defense.
+Plainspoken, domestic and craft metaphors, uncomfortable with abstraction. His growth appears as shorter, more direct answers.
 
 ## Maelor
-- calm;
-- exact;
-- rarely insults;
-- strongest lines sound like conclusions repeated privately for years;
-- should never sound pleased that people suffer.
+Controlled and exact. Strongest lines sound like conclusions he has repeated internally for years. Rare anger should matter.
 
 ## Caldrin
-- careful about source/claim distinctions;
-- occasional dry humor;
-- one or two polished lines per major chapter, not twenty.
+Careful distinctions, provenance vocabulary, occasional dry humor. Do not make him a walking citation system.
 
 ## Sena
-- concise;
-- maker/process/labor vocabulary;
-- suspicious of guilt that does not produce changed practice.
+Short declarative worker/process language. Little patience for abstract guilt without changed behavior.
 
 ## Rusk
-- administrative precision;
-- uses institutional nouns early (“authorization,” “incident,” “public confidence”);
-- language becomes more personal as the system collapses.
+Administrative precision. Formality visibly erodes when his institutional framework fails.
 
 ---
 
-# Script drafting rule
+# Dialogue anti-slop rules
 
-When final dialogue is written for a scene, the writer must identify:
-
-- which anchors above are present;
-- whether they are LOCKED / STRONG / INTENT;
-- what physical action prevents the conversation becoming two stationary heads;
-- what can be cut if localization/animation timing demands a shorter scene;
-- which later scene depends on the wording or fact.
-
-No script pass may silently remove a LOCKED anchor and leave its payoff intact as though setup still exists.
+1. Do not let multiple characters state the same theme using different metaphors.
+2. Do not explain a mechanic in dialogue after the player has already demonstrated it.
+3. Do not use banter to cancel grief immediately after a heavy scene.
+4. Do not give every named NPC a quotable aphorism.
+5. Allow unfinished sentences, wrong assumptions, silence, interruption, and mundane talk.
+6. Important characters should sometimes discuss food, work, weather, travel, bad tools, other people, and petty annoyances rather than the plot.
+7. If a line sounds like it belongs in a design document, rewrite it for the speaker.
