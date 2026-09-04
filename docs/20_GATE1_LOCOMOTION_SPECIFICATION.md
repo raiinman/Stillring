@@ -159,7 +159,20 @@ At the **bottom**:
 
 The exit transition may smoothly align Neris with the authored standing position, but it may not snap her through geometry or carry her farther than the local ladder exit requires.
 
-Ladder-specific Drop/Release remains a separate decision.
+### 5.4 Ladder Drop/Release — LOCKED
+
+While attached to a ladder, Neris detaches only when the player presses the same distinct deliberate **Drop/Release** action used for ledge release.
+
+Locked behavior:
+- the Drop/Release press acts promptly with no hold-to-confirm delay;
+- ordinary analog direction never detaches Neris from the ladder;
+- down input remains unambiguously **climb down** while attached;
+- away-from-ladder, sideways, diagonal, partial-stick input, drift, and dead-zone noise do not release the ladder;
+- explicit Drop/Release immediately ends the ladder state and hands movement to normal airborne/fall behavior;
+- after release, ordinary fall, landing, and valid ledge-catch rules apply; ladder release does not grant a special safety state or free reattachment;
+- the exact physical button/key remains remappable and should match the broader Drop/Release semantic unless a later accessibility review deliberately changes the control mapping.
+
+This completes the baseline authored-ladder grammar. Special ladder damage, combat, broken-rung behavior, moving ladders, or tool-specific ladder interactions are content/system questions and are not implied here.
 
 ---
 
@@ -203,6 +216,8 @@ ladder top + continued up + valid exit   → automatically dismount onto top
 ladder bottom + continued down + valid exit → automatically step off
 ladder end + neutral input               → remain attached
 ladder end + blocked/unsafe exit         → remain attached; NO forced placement
+ladder + explicit Drop/Release press     → detach promptly → normal airborne/fall
+ladder + analog away/side/down noise     → remain attached; NO implicit release
 invalid or blocked ledge top             → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge    → NO catch
 passing near/alongside mantle geometry   → NO mantle
@@ -214,6 +229,6 @@ major cliff / meaningful height gate     → route, tool, or later traversal cap
 
 ## Next locomotion decision
 
-**Ladder-specific Drop/Release behavior.**
+**Swimming baseline.**
 
-After that: swimming, crouch/stealth posture, slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: crouch/stealth posture, slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
