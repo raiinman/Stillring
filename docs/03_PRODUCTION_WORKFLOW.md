@@ -19,6 +19,8 @@ A game is not a screenplay with code attached. It is a coupled production of:
 
 Changes in one discipline can invalidate work in several others. The workflow therefore reduces uncertainty in the cheapest order possible.
 
+Project Stillring uses Unreal Engine 5.8 with Claude as the primary implementation agent. Engine/editor convenience does not replace the source-of-truth and evidence rules in this workflow.
+
 ---
 
 # Phase 0 — Charter / legal cleanliness
@@ -66,7 +68,8 @@ For Project Stillring, the major early risks are:
 4. content-production speed,
 5. retro visual style remaining readable rather than merely ugly,
 6. save-state complexity across changing world layers,
-7. AI-generated coding drift creating inconsistent architecture.
+7. AI-generated coding drift creating inconsistent architecture,
+8. Unreal binary/editor asset state drifting away from repository authority.
 
 The next phase attacks these risks directly.
 
@@ -103,13 +106,16 @@ Prototype separately:
 - one combat use.
 
 ## D. Hush laboratory
-- Waking/Hush scene relationship,
+- Waking/Hush world relationship,
 - persistent object IDs,
 - state changes,
 - transition time,
-- save/reload.
+- save/reload,
+- at least two credible Unreal representation approaches before architecture lock.
 
-Do not merge a prototype into production simply because it works. Rewrite ugly experimental code when the mechanic is proven.
+Prototype authoritative gameplay/state in C++ unless an issue explicitly authorizes a disposable Blueprint-only experiment.
+
+Do not merge a prototype into production simply because it works. Rewrite ugly experimental code/Blueprints when the mechanic is proven.
 
 ---
 
@@ -132,7 +138,7 @@ The slice must include representative:
 - save/load,
 - controller input,
 - performance,
-- build/export.
+- build/package pipeline.
 
 Why: a vertical slice tests the **pipeline**, not merely the idea.
 
@@ -170,9 +176,10 @@ Recommended ordering:
 - Does the dungeon teach then remix its central mechanic?
 - Does the boss test mastery?
 - Can an artist/content author add a room without programmer surgery?
+- Can Claude implement and verify systemic changes without depending on opaque Blueprint graphs?
 - Can a new build be made reproducibly?
 - Can a saved game survive content iteration?
-- Does a screenshot look like *our* game?
+- Does a screenshot look like *our* game rather than generic Unreal defaults?
 - How long did one minute of finished gameplay take to build?
 
 If the cost curve is absurd, cut scope now.
@@ -183,17 +190,18 @@ If the cost curve is absurd, cut scope now.
 
 Only after vertical-slice approval:
 
-- normalize folder structure,
+- normalize Unreal project/folder/module structure,
 - stabilize save schema,
 - stabilize content IDs,
 - build dialogue/cutscene authoring workflow,
 - build enemy composition pattern,
 - build boss state-machine conventions,
-- add debug menus,
-- add validation scripts,
-- establish LFS patterns,
-- create reusable region template,
-- document import/export settings.
+- harden debug tooling,
+- harden Automation/Functional Test coverage,
+- establish LFS/binary-asset patterns,
+- create reusable region template/pattern,
+- document import/export/package settings,
+- document binary-asset authority/evidence conventions.
 
 This is where prototype hacks become maintainable systems.
 
@@ -317,7 +325,8 @@ Checklist:
 - performance targets,
 - long-session soak,
 - final ending/credits verification,
-- export reproducibility,
+- package reproducibility,
+- release build proven free of development-only AI/debug dependencies,
 - repository tag and archived build artifacts.
 
 ---
@@ -342,7 +351,7 @@ After stabilization, conduct a postmortem:
 
 ---
 
-# GitHub / AI-agent workflow
+# GitHub / Claude workflow
 
 ## One issue = one outcome
 
@@ -362,30 +371,37 @@ Suggested:
 - `fix/<issue>-short-name`,
 - `docs/<issue>-short-name`.
 
-## Agent cycle
+## Claude cycle
 
-Claude/Codex should:
+Claude should:
 
 1. read `CLAUDE.md`,
 2. read the issue,
-3. inspect existing architecture,
+3. inspect existing C++/Unreal architecture and relevant binary-asset context,
 4. state assumptions in the PR description,
 5. implement the smallest complete change,
-6. run validation,
-7. update docs when behavior/contracts change,
-8. open PR,
-9. report limitations honestly.
+6. run reproducible validation,
+7. update docs/contracts when behavior changes,
+8. enumerate created/modified Unreal binary assets,
+9. open PR,
+10. report limitations honestly.
+
+Claude may handle the complete implementation workflow, but it does not get authority to redefine canon or waive human playtest gates.
 
 ## Merge gate
 
-Do not merge because “the code looks plausible.”
+Do not merge because “the code looks plausible” or because Unreal Editor saved an asset successfully.
 
 Require evidence appropriate to the change:
-- automated checks,
-- reproducible manual steps,
+- C++ build/compile evidence,
+- Automation/Functional Tests where applicable,
+- reproducible manual/editor steps,
 - screenshots/video for visual behavior,
+- explicit list of modified `.uasset`/`.umap` files,
 - save/load test for stateful features,
 - frame-time evidence for performance-sensitive changes.
+
+Binary asset changes that cannot be meaningfully diffed require **more evidence**, not less.
 
 ## Scope control
 
@@ -394,4 +410,4 @@ If a task reveals a new requirement:
 - open/record a follow-up,
 - do not secretly fold a second system into the first PR.
 
-This protects the project from agent-driven architecture drift.
+This protects the project from Claude-driven architecture drift and Unreal-editor convenience creep.
