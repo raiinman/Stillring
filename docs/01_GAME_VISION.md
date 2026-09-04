@@ -40,7 +40,10 @@ Locked movement/camera principles:
 - Exact mantle heights/angles in centimeters are Gate 1 tuning values tied to Neris's actual character scale; those numbers may be tuned without changing the locked body-relative scope.
 - Neris may automatically catch a **valid reachable ledge above the ordinary mantle band** when her jump/fall trajectory and directional intent clearly communicate a grab; there is no dedicated ledge-grab button.
 - Ledge catch must not trigger from incidental proximity, sideways passes, running parallel to geometry, or implausible rescue distances; it is an intentional catch, not magnetic parkour.
-- Entering a ledge hang is a real traversal state that stops ordinary locomotion. What Neris may do from that hang—pull up, shimmy, drop, or other actions—remains separately specified rather than silently creating a full climbing system.
+- A successful ledge catch always settles into a real **hang state first** rather than immediately forcing a climb-up.
+- While hanging, neutral input keeps Neris hanging; continued movement **toward/up onto the ledge** requests a pull-up, with no separate climb button.
+- Pull-up only completes when the top/landing surface is valid, standable, and clear enough to finish safely; otherwise Neris remains hanging.
+- Ledge shimmy, deliberate drop, transfers, and broader climbing remain separately specified rather than being implied by catch or pull-up.
 - Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
 - The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 - Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
