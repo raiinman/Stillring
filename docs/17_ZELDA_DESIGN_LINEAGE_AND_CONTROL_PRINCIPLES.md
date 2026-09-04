@@ -42,7 +42,7 @@ Nintendo introduced a freely controllable camera to 3D Zelda with **The Wind Wak
 
 Nintendo deliberately added a dash action in **Skyward Sword** and discussed avoiding movement interruptions. Dash also supported quickly scrambling up small cliffs/slopes.
 
-**Stillring conclusion:** movement should preserve flow. Sprint/dash is a valid modern baseline to prototype. A stamina cost is **not** automatically part of the answer; resource cost must earn its place in Stillring's own design.
+**Stillring conclusion:** movement should preserve flow. Neris therefore has a sustained sprint state from the beginning for faster ground travel. Sprint is **not** the combat evade and must not become a second dodge. Whether sprint consumes stamina or another resource remains a separate owner decision.
 
 ### Breath of the Wild — terrain becomes a route choice
 
@@ -133,7 +133,7 @@ The jump exists for intentional vertical movement and ordinary small gaps. It is
 The baseline grammar is:
 
 ```text
-tiny step / stair / minor floor lip  → automatic terrain handling
+tiny step / stair / minor floor lip   → automatic terrain handling
 small gap / intentional vertical move → deliberate jump
 obviously low obstacle                → jump + small mantle/scramble response
 major cliff / meaningful height gate  → route, tool, or later traversal capability
@@ -141,7 +141,31 @@ major cliff / meaningful height gate  → route, tool, or later traversal capabi
 
 The exact jump height, arc, air control, animation, and mantle threshold remain prototype tuning questions, but **the existence of deliberate jump and small low-obstacle mantle/scramble is locked**.
 
-### 4.5 Lock-on remains a tactical movement mode
+### 4.5 Sustained sprint
+
+Neris has a **sustained sprint available from the beginning**.
+
+Sprint is a travel-speed state for:
+- roads;
+- fields;
+- backtracking;
+- larger authored spaces;
+- other situations where ordinary running would become needless friction.
+
+Sprint is **separate from the eventual combat evade**. It should not become a short burst-dodge, invulnerability move, or replacement for combat spacing rules.
+
+Locked:
+- sprint exists from the beginning;
+- sprint is sustained rather than a one-shot dash;
+- normal analog walk/run remains useful below sprint;
+- sprint's role is faster travel, not a second evade.
+
+Still pending owner review:
+- whether sprint consumes stamina or another resource;
+- hold versus toggle/default accessibility behavior;
+- exact acceleration, top speed, turning, jump interaction, and combat restrictions.
+
+### 4.6 Lock-on remains a tactical movement mode
 
 Target lock is still valuable because it solves a real third-person combat problem.
 
@@ -153,7 +177,7 @@ While locked:
 
 Stillring will design its own targeting indicator, switching rules, camera geometry, aggression model, and animation language.
 
-### 4.6 Animation contributes to responsiveness
+### 4.7 Animation contributes to responsiveness
 
 Responsiveness is not only movement acceleration.
 
@@ -162,6 +186,7 @@ The prototype and later animation work must consider:
 - stop transitions;
 - direction reversals;
 - turn-in-place behavior if retained;
+- run/sprint transitions;
 - run-to-interaction transitions;
 - jump/landing transitions;
 - mantle/scramble transitions;
@@ -170,7 +195,7 @@ The prototype and later animation work must consider:
 
 A physically weighted character can still feel responsive if the requested action is acknowledged immediately and the transition communicates clearly.
 
-### 4.7 Affordance honesty
+### 4.8 Affordance honesty
 
 Level design, art, collision, and gameplay rules must agree about what the player can do.
 
@@ -210,35 +235,28 @@ The modern-Zelda lesson is **player trust and agency**, not removal of authored 
 
 ---
 
-## 6. Gate 1 prototype hypotheses
+## 6. Gate 1 movement rules still requiring tuning
 
-The following remains an **approved hypothesis to prototype**, not yet a permanent final control.
+### Analog walk → run → sprint
 
-### Sprint / dash
+Gate 1 must preserve three readable movement bands:
+- careful analog walk / low-speed movement;
+- confident ordinary run;
+- player-requested sustained sprint.
 
-Prototype an explicit sprint/dash state.
+Sprint should improve travel flow without destroying careful analog control or making the ordinary run feel intentionally bad.
 
-Do not assume:
-- stamina is required;
-- sprint must be held rather than toggled;
-- sprint belongs in combat exactly as it does in exploration.
-
-Those are separate design questions.
-
-### Analog walk → run
-
-Prototype analog low-speed to full-speed movement even if sprint also exists.
-
-Sprint should add a meaningful travel state, not destroy careful analog control.
+The exact thresholds and speeds remain tuning questions.
 
 ---
 
 ## 7. Physical capabilities still requiring owner review
 
-Issue #1 must walk through these **one decision at a time** before they become final locomotion authority:
+Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- sprint/dash behavior;
 - whether sprint has a resource cost;
+- sprint hold/toggle/accessibility behavior;
+- exact sprint interaction with combat, jump, and turning;
 - exact mantle/scramble thresholds and control timing;
 - ledge grab/hang behavior;
 - deliberate drop behavior;
