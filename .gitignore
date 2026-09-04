@@ -1,0 +1,19 @@
+# Godot 4.x generated cache
+.godot/
+
+# Export/build output
+build/
+dist/
+exports/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/
+
+# Local captures / temp profiling
+captures/
+profiling/
