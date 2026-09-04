@@ -169,12 +169,14 @@ Locked:
 - full sprint remains **highly steerable** for ordinary curves and corners;
 - sprint does **not** use a large turning circle, tank steering, or require a full stop merely to redirect;
 - very sharp direction changes naturally shed some speed so Neris retains believable physical weight;
-- a hard 180-degree reversal uses a quick planted reversal and then re-accelerates into sprint rather than snapping instantly at full speed.
+- a hard 180-degree reversal uses a quick planted reversal and then re-accelerates into sprint rather than snapping instantly at full speed;
+- jumping while sprinting preserves the horizontal sprint momentum Neris already has rather than automatically dropping her to ordinary run speed;
+- sprint-jumping does **not** grant an extra speed boost beyond the momentum already carried into the jump;
+- after landing, Neris returns to/continues sprint when sprint is still being requested and no other movement state overrides it.
 
-The exact turn-rate curve, speed-loss amount, animation timing, and re-acceleration values remain Gate 1 tuning questions. The **feel rule** is locked: responsive steering with brief momentum loss only for genuinely hard reversals.
+The exact turn-rate curve, speed-loss amount, animation timing, re-acceleration values, jump arc, and air-control values remain Gate 1 tuning questions. The **feel rules** are locked: responsive steering, brief momentum loss only for genuinely hard reversals, and no invisible braking merely because the player jumped.
 
 Still pending owner review:
-- sprint-to-jump retention;
 - target-lock/combat entry behavior while sprinting;
 - exact acceleration and top speed.
 
@@ -261,7 +263,9 @@ Sprint should improve travel flow without destroying careful analog control or m
 
 At full sprint, normal curves/corners should remain responsive. Only hard direction changes should visibly trade a small amount of momentum for physical weight. A 180-degree reversal should read as a quick planted change of direction, not an instant velocity flip and not a lumbering semicircle.
 
-The exact speed thresholds, turn curves, reversal speed loss, and re-acceleration values remain tuning questions.
+When sprint transitions into a jump, horizontal sprint momentum carries through the jump. Jumping is not a brake and is not a hidden speed exploit: it preserves existing travel momentum without adding more. If sprint is still requested on landing and no other movement state takes priority, Neris continues sprinting rather than being arbitrarily reset to run.
+
+The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, and air-control values remain tuning questions.
 
 ---
 
@@ -269,7 +273,6 @@ The exact speed thresholds, turn curves, reversal speed loss, and re-acceleratio
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- sprint-to-jump retention;
 - target-lock/combat entry behavior while sprinting;
 - exact mantle/scramble thresholds and control timing;
 - ledge grab/hang behavior;
@@ -311,6 +314,7 @@ Failure examples:
 - being forced into repetitive sprint-wait-sprint cycles during ordinary travel;
 - sprint steering feeling like a vehicle or tank;
 - instant full-speed 180-degree snaps making Neris feel weightless;
+- jump input acting like an invisible brake during a running jump;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
