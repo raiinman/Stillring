@@ -22,8 +22,9 @@ Locked movement/camera principles:
 - Camera collision must never shove through walls or hide the player for long.
 - Controller movement preserves useful analog range for careful positioning through confident full-speed travel.
 - Neris has a sustained sprint available from the beginning for faster ground travel; sprint is separate from the eventual combat evade.
+- Ordinary sprint has **no stamina or other resource cost** and may be sustained indefinitely during normal traversal.
+- A future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
 - Sprint must not replace useful analog walk/run control or become a second dodge.
-- Whether sprint consumes stamina or another resource remains pending owner review.
 - Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
 - Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
 - Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
