@@ -27,6 +27,7 @@ Locked movement/camera principles:
 - A future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
 - Sprint must not replace useful analog walk/run control or become a second dodge.
 - Full sprint remains highly steerable; ordinary curves/corners stay responsive, while hard reversals briefly shed momentum instead of snapping instantly at full speed or forcing a large turning circle.
+- Jumping from sprint preserves existing horizontal sprint momentum; jumping does not add bonus speed, and landing continues/returns to sprint when sprint is still requested and no higher-priority movement state overrides it.
 - Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
 - Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
 - Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
