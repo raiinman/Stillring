@@ -23,6 +23,7 @@ Once the core story is understood, use these documents when writing or implement
 2. [`story/08_REVEAL_AND_FORESHADOW_LEDGER.md`](story/08_REVEAL_AND_FORESHADOW_LEDGER.md) — authoritative seed → evidence → pressure → reveal → payoff timing for the game's major mysteries.
 3. [`story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`](story/09_MAIN_QUEST_OBJECTIVE_FLOW.md) — player-facing main objectives and the narrative/world-state gates that advance them.
 4. [`story/10_DIALOGUE_ANCHORS.md`](story/10_DIALOGUE_ANCHORS.md) — dialogue lines and conversational intents that future script passes must preserve or deliberately revise with their callbacks.
+5. [`story/regions/00_REGIONAL_STORY_INDEX.md`](story/regions/00_REGIONAL_STORY_INDEX.md) — regional community authority: ordinary life, social spaces, recurring residents, internal disagreement, pre/post-Stillness states, Unringing roles, and earned credits recurrence.
 
 These are not redundant summaries. They answer different production questions:
 
@@ -33,8 +34,19 @@ These are not redundant summaries. They answer different production questions:
 - **Reveal ledger:** what is the player allowed to know yet?
 - **Objective flow:** what does Neris currently intend to do?
 - **Dialogue anchors:** which wording or conversational function carries a later payoff?
+- **Regional bibles:** who lives in each place when Neris is not looking, and why should the player care about returning?
 
 A future narrative change that affects more than one of those questions must update every affected contract together.
+
+## Regional story rule
+
+**Every major location must be worth visiting before anything bad happens there.**
+
+For each normal-world region, the pre-crisis state must contain ordinary life, at least one memorable social space, recurring people, humor/tenderness, work rhythms, sensory identity, and at least one reason to return that is not loot or completion percentage.
+
+If a location only becomes interesting after its dungeon crisis or the Grand Ring, the pre-crisis version is unfinished.
+
+For Hush-Cairnspire and Null Meridian, which are encountered after the catastrophe, this rule is paid for by establishing recognizable living Cairnspire anchors before the Grand Ring and by allowing the Hush itself moments of beauty, banality, and humor rather than making every echo tragic exposition.
 
 ## Canonical spine
 
@@ -92,6 +104,7 @@ Additional authority is divided deliberately:
 - `story/08_REVEAL_AND_FORESHADOW_LEDGER.md` — mystery/reveal timing.
 - `story/09_MAIN_QUEST_OBJECTIVE_FLOW.md` — player-facing critical-path intent and objective gates.
 - `story/10_DIALOGUE_ANCHORS.md` — locked/strong dialogue setup and callback obligations.
+- `story/regions/00_REGIONAL_STORY_INDEX.md` and its linked bibles — regional ordinary life, recurring cast, local continuity, and community-state authority.
 
 Any change that contradicts the spine or another authority contract must update every affected canonical document in the same pull request.
 
