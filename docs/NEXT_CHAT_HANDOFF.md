@@ -4,14 +4,15 @@
 **Updated:** 2026-09-04  
 **Repository:** `raiinman/Stillring`
 
-## Decision boundary
+## Current main
 
-Base before the current shimmy decision PR:
+`6c2b255f822e43ffaa1c0366651930b7121b4587`
 
-`f05314a60d8de918c82e8c157ccfe1a81ebc2630`
-
-Current decision PR:
+Latest merged decision PR:
 - PR #37 — `Design: lock same-handhold ledge shimmy`
+
+Reference research completed after that decision:
+- `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — **research input only; not design authority**. It studies AC1 through the Ezio/Kenway/Unity/RPG/Mirage/Shadows eras and 2026 Black Flag Resynced for player-intent, flow, safety, route-design, animation, and climbing lessons. It does not decide any unresolved Stillring mechanic.
 
 ## Read first in the next chat
 
@@ -22,6 +23,8 @@ Current decision PR:
 5. GitHub Issue #2 — `Lock exploration and combat camera specification`
 6. `ROADMAP.md`
 7. `CLAUDE.md`
+
+Use `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary reference when an unresolved movement choice benefits from that research; never treat it as a shortcut around owner review.
 
 ## Production / technical baseline
 
@@ -39,7 +42,7 @@ Current decision PR:
 
 > **Simple intention, capable character, honest world.**
 
-Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses the Zelda design lineage to solve control problems rather than copy exact mechanics or protected expression.
+Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses the Zelda design lineage to solve control problems rather than copy exact mechanics or protected expression. Assassin's Creed movement history may be consulted as secondary research on traversal intention/flow, but does not become authority by reference.
 
 ## Gate 1 locomotion decisions already LOCKED
 
@@ -138,7 +141,9 @@ major cliff / meaningful height gate    → route, tool, or later traversal capa
 
 **Deliberate drop behavior while hanging.**
 
-The shimmy package is now owner-approved and locked. The next question is intentionally narrower:
+The shimmy package is owner-approved, repository-locked, and merged. The Assassin's Creed study strengthens the case for separating dangerous release from ordinary analog correction, but it does **not** decide the input.
+
+Next question:
 
 > When Neris is hanging, what explicit player input means “let go,” and how do we prevent ordinary analog movement from accidentally causing a fall?
 
@@ -197,4 +202,4 @@ A green automated test can prove state and regressions. It cannot declare moveme
 
 ## Important continuation rule
 
-If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **deliberate drop decision** unless the owner deliberately changes priorities.
+If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **deliberate drop decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
