@@ -11,27 +11,29 @@
 - Issue #1 — tracking/final review
 
 ## Current boundary
-Merged main before branch: `9b96c3d085f995d9d9890ac3d4375af59e420643`
+Merged main before branch: `d9081fb4ab056d944a5d5be557792b1f3243f4b5`
 
 Latest merged locomotion PR:
-- #53 `Design: lock analog speed and Sprint threshold philosophy`
+- #54 `Design: lock acceleration, deceleration, and turning philosophy`
 
 Current branch:
-- `design/accel-decel-turning`
+- `design/target-lock-locomotion`
 
 Current decision:
-- valid movement intent is acknowledged immediately rather than waiting on locomotion animation anticipation;
-- careful movement has near-immediate precision response;
-- ordinary run accelerates/decelerates briskly, stops in a short distance, and turns tightly without tank-style arcs;
-- Sprint keeps highly steerable normal curves but carries more visible momentum, especially on stopping and hard reversal;
-- hard Sprint reversal retains the already-locked momentum shed + planted redirect + re-acceleration behavior;
-- exploration facing follows requested movement promptly, with only speed-appropriate visible lag;
-- digital movement uses the same physical speed-band response;
-- animation follows gameplay locomotion authority and may not introduce hidden control delay or state-transition impulses;
-- exact acceleration/braking/friction/rotation values remain Gate 1 tuning.
+- target-lock movement is target-relative on the horizontal plane: forward/back control radial distance and left/right strafe/orbit;
+- player owns combat spacing; neutral input does not auto-orbit, auto-maintain distance, or auto-position Neris;
+- analog low-speed precision remains available and full exploration Sprint is unavailable;
+- all locked movement directions remain useful, with only modest tuning differences allowed;
+- Neris faces the target promptly without tank controls or animation-delayed movement;
+- lock entry preserves brief physical velocity through the existing deceleration/pivot and clears toggled Sprint request;
+- Jump remains the normal baseline jump, not a hidden side-hop/backflip/evade;
+- combat-disrupting automatic exploration entries such as mantle initiation and ladder mounting are suppressed while ordinary target-lock ground locomotion is active;
+- entering an incompatible traversal state ends target-lock locomotion;
+- releasing/losing lock preserves physical velocity and immediately returns held input to camera-relative exploration semantics;
+- camera framing/target-selection presentation remains Issue #2 authority.
 
 Next after merge:
-- **target-lock locomotion detail**.
+- **locomotion accessibility implications**.
 
 ## Owner delegation
 Remaining **locomotion-only** decisions continue without individual approval pauses. One decision at a time; repository authority + diff review + merge. Final owner review together remains mandatory.
@@ -39,14 +41,13 @@ Remaining **locomotion-only** decisions continue without individual approval pau
 > **Simple intention, capable character, honest world.**
 
 ## Remaining sequence
-1. target-lock locomotion detail;
-2. accessibility implications;
-3. five-minute human-play acceptance test;
-4. repository-authority reconciliation;
-5. final owner review.
+1. accessibility implications;
+2. five-minute human-play acceptance test;
+3. repository-authority reconciliation;
+4. final owner review.
 
 ## Implementation order after final review
 Issue #1 final → Issue #2 camera → Issue #5 Unreal harness → movement → camera → target lock.
 
 ## Continuation rule
-After this PR merges, continue from **target-lock locomotion detail**. Read repository authority rather than chat memory.
+After this PR merges, continue from **locomotion accessibility implications**. Read repository authority rather than chat memory.
