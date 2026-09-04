@@ -1,10 +1,23 @@
-# Godot 4.x generated cache
-.godot/
+# Unreal Engine generated/build directories
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
 
-# Export/build output
+# Unreal generated IDE/project files
+.vs/
+*.sln
+*.VC.db
+*.VC.opendb
+
+# Packaged/export/build output
 build/
 dist/
-exports/
+packages/
+
+# Local shader/derived caches and crash data
+ShaderDebugInfo/
+Crashes/
 
 # OS/editor
 .DS_Store
@@ -17,3 +30,6 @@ Thumbs.db
 # Local captures / temp profiling
 captures/
 profiling/
+
+# Historical Godot cache ignore retained so an old local checkout cannot accidentally commit it
+.godot/
