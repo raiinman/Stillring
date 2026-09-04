@@ -1,464 +1,233 @@
 # 09 — Stillring Progression Blueprint
 
-**Status:** research proposal, not yet canonical story replacement  
-**Related:** Issue #6, `docs/reference/OOT_100_PERCENT_ANATOMY.md`
+**Status:** adopted canonical progression rationale  
+**Detailed authority:** `docs/02_STORY_BIBLE.md`, `docs/06_CONTENT_MATRIX.md`, `docs/story/07_SCENE_BEAT_LEDGER.md`, `docs/story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`, `docs/12_100_PERCENT_ROUTE.md`  
+**Research basis:** Issue #6 and `docs/reference/OOT_100_PERCENT_ANATOMY.md`
 
-## Why this document exists
+This document records **why** Stillring's final progression is structured the way it is.
 
-Project Stillring already has a strong original story, region set, tool set, and ending. The 100% Ocarina of Time structural pass exposed one likely pacing weakness in the current plan: **six full regional Waybell arcs occur before the Grand Ring / Stillness catastrophe**.
+It is no longer a proposal. The early Grand Ring pivot, six-region First Circuit, changed-world campaign, and final synthesis are adopted canon.
 
-That risks delaying Stillring's most distinctive mechanic and strongest dramatic recontextualization—the Hush changing places the player already knows—until too late in a 20–30 hour game.
-
-This proposal preserves the established world, characters, themes, named regions, and tools while reorganizing **when** they matter.
-
-It deliberately does **not** copy Ocarina's sacred-object/sage structure, geography, dungeons, story scenes, items, or exact counts. The reference is used only to improve pacing, revisit logic, optional-content integration, and mechanical teaching.
+The Ocarina research informs functional structure only: teaching order, revisit cadence, optional-content braiding, world-state recontextualization, and final synthesis. It does not supply Stillring's protected expression, story scenes, maps, characters, items, songs, dungeon layouts, or quest dependencies.
 
 ---
 
-# Proposed macro shape
+# Final macro shape
 
-## Act 0 — Home under strain
+## Act 0 — Brindle / home under strain
 
-### Movement 0: Brindle — The Bell That Does Not Ring
+**Goal:** make Neris, Orin, Tessa, Brindle, bellwright work, and First Ring emotionally legible before catastrophe.
 
-**Target:** 45–60 minutes first playthrough.
+The opening teaches movement/camera/interactions/basic combat through ordinary work rather than a tutorial arena detached from life.
 
-Player goals:
-- meet Neris Vale through ordinary bellwright work;
-- learn locomotion, camera, contextual traversal, interaction, basic combat, and the Cantor Key's primitive resonance function;
-- establish Orin as a real relationship before losing him;
-- show one Hush seam as frightening physical evidence rather than lore exposition;
-- survive the silent catastrophe that pulls Orin away;
-- leave Brindle because staying home cannot solve the problem.
+The Cantor Key breach takes Orin and creates the family objective.
 
-Content layers:
-- 3–4 optional village conversations with later state changes;
-- one tiny repair side job that becomes a post-Stillness callback;
-- one visible but inaccessible anomaly that promises future revisit value;
-- one short crisis-space rather than a full production dungeon.
-
-**Do not put a major collectible checklist in the first thirty minutes.** The player needs attachment and control confidence before completion systems compete for attention.
+**Critical rule:** do not bury the inciting incident under completion systems.
 
 ---
 
-# Act I — The First Circuit
+# Act I — Cairnspire and the First Circuit
 
-## Movement 1: Road to Cairnspire
+## Road to Cairnspire
+Widen from workshop scale to continental infrastructure through a broken relay and the Meridian vista.
 
-**Purpose:** world-scale reveal and social contrast.
+## Cairnspire
+Introduce:
+- public infrastructure dependence;
+- Rusk's legitimate safety concerns;
+- Maelor as genuinely useful;
+- Caldrin and conflicting records;
+- the practical reason the damaged Cantor Key requires Neris in the field.
 
-The player leaves a workshop-scale life and sees Orra's centralized infrastructure for the first time: relay towers, toll structures, bell roads, maintenance stations, civic caravans, and the distant Meridian Bell.
+## First Circuit — world ownership before dungeon cadence
 
-Required jobs:
-- teach road navigation and simple field encounters;
-- demonstrate that the bell network is infrastructure, not just religion/lore;
-- create at least one day/weather or schedule-dependent interaction;
-- preview a locked maintenance cavity that becomes optional content later;
-- reach Cairnspire without making the road a featureless corridor.
+The damaged Key cannot safely trust Meridian's compromised reference. Neris therefore needs independent regional baselines to avoid following a false relation away from Orin.
 
-## Movement 2: Cairnspire — The Authorized Version
+The Circuit provides **compact ordinary-life visits to all six regional cultures**:
+- Rootmere;
+- Saltreach;
+- Emberstep;
+- High Aerie;
+- Mireglass;
+- Cairnfall.
 
-**Purpose:** hub establishment, institutional infiltration, Maelor recruitment.
+These are not six proto-dungeons. They are calibration/social postcards whose purpose is:
+- player ownership of Orra;
+- pre-Grand-Ring memory anchors;
+- early optional system seeding;
+- cross-state setup choices;
+- recurring NPC introduction;
+- proving healthy systems can disagree.
 
-Neris cannot simply walk into the most sensitive bell infrastructure. Access should require a short social/maintenance chain that demonstrates the city's hierarchy.
-
-This movement establishes:
-- Tessa;
-- Maelor Renn as useful, credible, and emotionally comprehensible;
-- the official history of the Hush;
-- the idea that the Waybells are failing in different physical ways;
-- a restricted maintenance/archive wing that rewards careful observation rather than stealth copied from another game;
-- the first full set of optional systems.
-
-Reward is not a sacred quest object. It is **authorization, information, and responsibility**.
-
-## Movement 3: First Circuit — Ownership of the World
-
-**Purpose:** a deliberate exploration intermission before dungeon cadence begins.
-
-Neris receives three urgent service calls but is not forced immediately into the nearest dungeon. The player can travel a bounded first circuit containing:
-- Brindle revisit;
-- Cairnspire outskirts;
-- approaches toward Rootmere, Saltreach, and Emberstep;
-- two smaller settlements/service stations;
-- one Bellwright refuge;
-- several micro-secrets;
-- first completion-contract rewards;
-- first cross-state setups whose payoff cannot yet be claimed.
-
-This is where Stillring teaches that curiosity has structure.
-
-### Systems introduced here
-
-- distributed survivability fragments;
-- global resonance-fault collectible;
-- repair contracts;
-- field kit / flexible utility slots;
-- first Cantor patterns;
-- region noticeboard or diegetic work-order system;
-- one skill minigame tied to an existing mechanic;
-- first optional capacity upgrade;
-- one long-form prestige quest seeded but impossible to finish.
-
-The player should leave this movement with **places they remember and unfinished business they chose**, not a screen full of icons.
+Graymile also seeds the obsolete Line Skiff before its later payoff.
 
 ---
 
-# Act II — Three Tuning Crises
+# Act II — three crisis regions
 
-The first three regional arcs prove Maelor's theory appears to work. Each teaches a major verb and reveals a different crack in the official history.
+The first three full regional arcs each teach a major verb and expose another layer of Maelor/Ilyra/Meridian history.
 
-They are not 'collect three sacred things.' The objective is practical: stabilize failing civic infrastructure long enough to find Orin and prevent cascading disaster.
+## Rootmere
+**Dungeon:** Root Cathedral  
+**Tool:** Anchor Line  
+**Story job:** bad repair can be the problem; First Ring damping clue; Maelor genuinely helps.
 
-## Movement 4: Rootmere — Root Cathedral
+## Saltreach
+**Dungeon:** Tide Foundry  
+**Tool:** Glasslung Reed  
+**Story job:** Tessa's deliberate incuriosity; Maelor/Ilyra research logistics; harm cannot always be reversed.
 
-**Core mechanic:** water routing + living root load paths  
-**Major tool:** Anchor Line  
-**Boss:** Mawhart  
-**Story reveal:** first strong evidence the centralized network was knowingly unsafe.
+## Emberstep
+**Dungeon:** Kiln of Names  
+**Tool:** Temper Gauntlet  
+**Story job:** Ilyra/Maelor collaboration proven; three-point entrainment derived; Mercy Window seeded.
 
-### Tool curriculum — Anchor Line
+### Why only three full crisis regions before Grand Ring
+The story's distinctive changed-world state must arrive early enough to transform familiar places rather than function as a late gimmick.
 
-- **Traversal:** anchor to authored structural points, cross controlled gaps, reposition suspended objects.
-- **Puzzle:** tension/brace mechanisms, pull roots/gates into temporary alignment.
-- **Combat:** interrupt or reposition certain enemies rather than functioning as a generic ranged weapon.
-- **Revisit:** unlock elevated maintenance routes and collapsed crossings in Brindle/Cairnspire/First Circuit.
+Three geographically separated repaired references are technically sufficient for Maelor's emergency entrainment plan. The remaining Waybells are seized remotely.
 
-### Mandatory post-region revisit wave
-
-Before the next major crisis, at least three earlier locations advertise new Anchor Line payoffs. One should be optional narrative content, not loot.
-
-## Movement 5: Saltreach — Tide Foundry
-
-**Core mechanic:** water pressure, buoyancy, submerged machinery  
-**Major tool:** Glasslung Reed  
-**Boss:** Nine-Lung Leviathan  
-**Story reveal:** Tessa is connected unknowingly to Quiet Court logistics.
-
-### Tool curriculum — Glasslung Reed
-
-The tool must be more than 'breathe underwater.' Its final design should manipulate pressure/resonance in a Stillring-native way.
-
-- **Traversal:** survive or redirect high-pressure/submerged routes.
-- **Puzzle:** equalize chambers, operate pneumatic/buoyant mechanisms.
-- **Combat:** create a tactical pressure interaction against specific armored or aquatic enemies.
-- **Revisit:** open flooded service spaces previously seen in Rootmere/First Circuit.
-
-### Optional system expansion
-
-Saltreach should host one repeatable or mastery activity where the Glasslung Reed is useful but not mandatory for basic participation.
-
-## Movement 6: Emberstep — Kiln of Names
-
-**Core mechanic:** heat, cooling, casting, material state  
-**Major tool:** Temper Gauntlet  
-**Boss:** Cinder Regent  
-**Story reveal:** Ilyra and Maelor collaborated; the catastrophe is connected to deliberate research, not random failure.
-
-### Tool curriculum — Temper Gauntlet
-
-- **Traversal:** safely handle/shift heated mechanisms and temporary material states.
-- **Puzzle:** mold, cool, deform, or lock authored mechanical components.
-- **Combat:** manipulate enemy armor/weapon temperature or counter heat-based attacks.
-- **Revisit:** alter old sealed housings and damaged relay hardware.
-
-### Act-II convergence
-
-By the end of Emberstep, the player should possess enough evidence to distrust the official story but enough successful repairs to believe the network can still be saved.
-
-That contradiction is what makes the next event hurt.
+This is an engineering/pacing structure, not a sacred-object collection analogue.
 
 ---
 
-# Act III — Grand Ring / Stillness Pivot
+# Midpoint — Grand Ring
 
-## Movement 7: Cairnspire — The Repair Was the Trigger
+By the confrontation, Neris and allies already understand the three-point mechanism.
 
-The three completed regional tunings were not arbitrary keys. Maelor needed them to establish a stable phase reference. He uses the central network to seize the remaining dormant Waybells remotely.
+Maelor confirms intent, First Ring interference, site selection, and the already-committed first entrainment step.
 
-This preserves the original premise—Neris's repairs help Maelor—without requiring six same-era full dungeon arcs before the game's defining world transition.
+Grand Ring changes **places the player already knows** because the First Circuit established all six beforehand.
 
-### Grand Ring event requirements
-
-- the player should traverse part of Cairnspire during failure rather than only watch a cutscene;
-- at least three previously familiar civic systems behave incorrectly;
-- one earlier optional relationship changes what help is available during the escape, without changing the required outcome;
-- the Hush becomes mechanically traversable at production scale;
-- Neris encounters Ilyra after the transition;
-- the player sees at least one familiar place in a horrifying new state before receiving a new quest list.
-
-### New world rule
-
-The remaining regional infrastructure is no longer 'waiting to be repaired.' It is **actively held in pathological synchronization**. Post-pivot objectives therefore become liberation/disconnection/fault-resolution missions rather than a second set of ordinary repair calls.
+The midpoint ends with Neris crossing into the Hush and finding Ilyra.
 
 ---
 
-# Act IV — A Changed Orra
+# Act III — changed Orra / one practical lead at a time
 
-## Movement 8: Return Through Familiar Ground
+The second half must not become “collect three Countertones.”
 
-**Purpose:** teach changed-world grammar before another major dungeon.
+Ilyra gives one immediate problem: High Aerie is still exhibiting a changing relation.
 
-The player revisits Cairnspire outskirts, Brindle, and part of the First Circuit.
+## Changed Brindle / Line Skiff
+Pay off early setup choices and restore player agency quickly through the previously seeded Line Skiff.
 
-Required differences:
-- altered routes, not only altered lighting;
-- NPC absences/presences with story meaning;
-- Hush seams allowing alternative geometry;
-- old micro-content with new outcomes;
-- one early setup paying off now;
-- a new traversal transformation obtained through relationship/repair history rather than purchased from a shop.
+## High Aerie
+**Tool:** Vane Cloak  
+**Relation:** Motion, named only after the player resolves the region  
+**Story job:** Caldrin's archive crisis, Tessa accepts durable responsibility, change can remain coordinated.
 
-### Traversal transformation
+## Bone Archive
+**Tool/procedure:** Palinode  
+**Scale:** compact interlude  
+**Story job:** pre-Meridian rescue history; Ilyra admits Mercy Window authorship; evidence leads to Mireglass.
 
-Design target: materially reduce cross-region travel friction and create a new movement activity/skill layer.
+## Mireglass
+**Tool:** Mirror Nail  
+**Relation:** Memory, named only after resolution  
+**Story job:** full Mercy Window truth; Neris/Ilyra emotional low point; largest perception revisit wave.
 
-**Do not default to a horse analogue.** Candidate directions for prototyping:
-- road-skimming resonance sled powered by active relay strips;
-- foldable wind-rig that uses established bell roads and updraft lanes;
-- semi-autonomous maintenance strider with route-specific interactions;
-- another Orra-native system developed from existing world infrastructure.
+## Cairnfall
+**Capability:** Cantor Key seam mode + Local Accord  
+**Story job:** remove Meridian correction; Neris/Ilyra collaborate without absolution; raw data locates Orin's repeating workshop signal.
 
-Selection criteria:
-- visible relationship/history before acquisition;
-- changes route planning;
-- supports one optional hunt;
-- has at least one mastery challenge;
-- cannot be mistaken for Epona with cosmetic changes.
+## Still-Cairn
+**Relation:** Ending, named only after the player releases the perfect Vale workshop  
+**Story job:** recover Orin; expose family secrecy; teach that useful states may need to end.
 
----
-
-# Post-Stillness major domains
-
-The current High Aerie, Mireglass, and Cairnfall content is retained but moved after the pivot and given new narrative purposes.
-
-## Movement 9: High Aerie — Monastery / Tempest Belfry convergence
-
-**Existing mechanic family:** wind, suspension, lightning, air  
-**Major tool:** Vane Cloak  
-**Countertone function:** Motion  
-**Boss lineage:** Choir of Talons / Saint Varo concept to be reconciled in story revision
-
-Rather than two separate air-region dungeons, merge the strongest ideas into one layered regional campaign:
-- lower monastery teaches controlled air/suspension;
-- upper Tempest Belfry becomes the dangerous mastery space;
-- Vane Cloak changes vertical navigation;
-- Motion is learned as a principle through preventing Stillness, not collected as a colored token.
-
-**Story purpose:** Tessa chooses responsibility over inherited institutional loyalty; the Listener's imprisonment becomes undeniable.
-
-## Movement 10: Mireglass — Palace Under Reeds
-
-**Existing mechanic family:** reflection, echo geometry, mutually inconsistent spaces  
-**Major tool:** Mirror Nail  
-**Countertone function:** Memory  
-**Boss:** Mirror Widow
-
-This region is a natural home for the Memory theme. The player confronts contradictory records and physically incompatible memories of the same place.
-
-The Mirror Nail should function as a **perception/commitment verb**, not a magic mirror from another franchise:
-- pin one echo-state long enough to traverse it;
-- expose discrepancies between authorized and lived memory;
-- force certain enemies/objects to commit to one state;
-- reveal optional historical layers in old regions.
-
-### Post-Mireglass revisit wave
-
-This should be one of the largest optional-content expansions in the game. Every previously visited region receives at least one Mirror Nail secret, but only a curated subset should be required for story progression.
-
-## Movement 11: Deep Rootmere — Bone Archive (micro-dungeon)
-
-**Purpose:** short, focused perception/causality dungeon between major domains.
-
-The Bone Archive is reduced from a full separate major arc to a dense 30–45 minute space that:
-- uses Mirror Nail knowledge immediately;
-- teaches a new Hush causality rule;
-- reveals why a single official historical record is dangerous;
-- contains no new giant boss simply because every dungeon 'needs one';
-- unlocks a world-wide perception upgrade or Cantor pattern.
-
-This breaks the major-dungeon rhythm and prevents returning to Rootmere from feeling like 'Rootmere Temple 2.'
-
-## Movement 12: Cairnfall — Fallen Orrery
-
-**Core mechanic:** phase alignment + moving astronomical/mechanical reference frames  
-**Major capability:** Cantor Key seam mode  
-**Boss:** Gravemoon Engine
-
-Cairnfall becomes the system-level turning point. Neris learns to open/close selected Hush seams intentionally instead of only using fixed authored crossings.
-
-Important constraint: seam mode must still operate at authored seam candidates; freeform dimension switching everywhere would multiply level-production and QA cost catastrophically.
-
-### World consequence
-
-After Cairnfall, several communities can begin disconnecting from the central system. Optional repair contracts now visibly change regional state and the ending montage.
-
-## Movement 13: Hush Cairnspire — Still-Cairn
-
-**Core mechanic:** mutually exclusive routes, family memory, ending/acceptance  
-**Countertone function:** Ending  
-**Boss:** Echo-bound Orin
-
-This is not 'fight your possessed brother because games need a boss.' The encounter must be built around freeing Orin without making him disposable combat content.
-
-The Ending principle is the thematic ability to let a state stop being preserved—not a death spell or magic key.
-
-### Mechanical objective
-
-Use the full Hush toolset to choose which temporary states to sustain and which to release. The player must demonstrate comfort with loss of access: some temporary geometry should intentionally disappear after use.
-
-### Story objective
-
-The Vale family truth is exposed. Neris has enough knowledge to reject both the ancient bellwrights' forced permanence and Maelor's forced Stillness.
+Only after Still-Cairn may Motion / Memory / Ending be naturally summarized as one learned set.
 
 ---
 
-# Act V — Completion before confrontation
+# Act IV — Unringing
 
-## Movement 14: The Unringing
+Communities begin acting before Neris arrives because Cairnfall's correction loop is gone.
 
-Before Null Meridian, the world should enter a short but meaningful preparation state.
+The late-game world phase is deliberately not an army-assembly checklist. It is a rebuilding/convergence period where:
+- Rootmere develops living local coordination;
+- Saltreach uses manual navigation/pressure systems;
+- Emberstep builds traceable local hardware;
+- High Aerie opens provenance-based archives;
+- Mireglass debates public seams;
+- Cairnfall reports drift openly;
+- Cairnspire route workers coordinate between them.
 
-Available content:
-- final stages of prestige side quest;
-- final capacity/health upgrades;
-- regional disconnection contracts;
-- optional anomaly hunt completion;
-- mastery challenge / training complex;
-- final NPC conversations whose text reflects solved side chains;
-- remaining Hush seam secrets;
-- optional combat challenge with a mechanically distinctive reward;
-- no arbitrary requirement to reach 100% before ending.
+The critical path needs enough compatible independent signals to open Null Meridian.
 
-The player should feel: **I am choosing to finish what matters before I go.**
-
-The game should not feel: **the map says 87%, time to vacuum icons.**
+The 100% route can finish all completion-bearing categories here without requiring postgame cleanup.
 
 ---
 
-# Act VI — Null Meridian
+# Finale — Null Meridian / Listener / epilogue
 
-## Movement 15: Quiet Court / Meridian Bell
+## Null Meridian
+Final curriculum exam. Recombine existing verbs; do not add a last-minute mandatory core mechanic.
 
-**Purpose:** synthesis dungeon + narrative resolution.
+The Quiet Court archive reveals reform hardening into coercion without rewriting Maelor as secretly evil from the beginning.
 
-### Synthesis structure
+## Maelor
+Human antagonist whose grief and technical competence remain intact. His choice of permanent coercive preservation remains his own.
 
-Null Meridian should contain 5–7 compact trials, but they should be organized around **combinations**, not one room per old region.
+## Listener
+Temptation uses the player's remembered imperfect world rather than generic utopia where feasible.
 
-Candidate pairings:
-- Anchor Line + Vane Cloak: tension while suspended in moving air;
-- Glasslung Reed + Temper Gauntlet: pressure/temperature material-state problem;
-- Mirror Nail + seam mode: commit one echo while traversing another;
-- Cantor pattern + Anchor Line: stabilize an oscillating structure long enough to cross;
-- perception + combat: identify which attack state is physically committed before countering.
+## Final action
+Neris does not repair Meridian into a better central authority.
 
-No trial should be a visual clone of a prior dungeon. Familiar verbs, new problem.
+Motion permits change. Memory preserves what happened. Ending allows state to become past.
 
-### Final encounters
+Neris decommissions the Meridian heart and releases forced singularity.
 
-**Maelor:** human-scale confrontation using combat and infrastructure control; his emotional argument must remain intelligible even while rejected.
-
-**Listener:** not a conventional evil monster. The final sequence should test the player's ability to dismantle forced synchronization rather than merely reduce a health bar.
-
-### Ending
-
-Keep the existing canonical ending:
-- Neris destroys the Meridian Bell's central heart rather than restoring it;
-- the Hush settles into local seams;
-- the Listener is released from forced singular existence;
-- Maelor survives to face trial;
-- local communities replace sacred centralized control with imperfect responsibility;
-- Ilyra returns changed and the family relationship must be rebuilt;
-- Neris eventually becomes a traveling bellwright;
-- distant underwater bell post-credit hook remains.
+## Epilogue
+Return to Brindle and ordinary people. The world is changed, politically unfinished, and still needs repair.
 
 ---
 
-# Progression cadence targets
+# Revisit-wave spine
 
-These targets are design constraints, not hard mathematical quotas.
+Stillring's 100% structure is a braid:
 
-| Game phase | Mandatory duration target | Optional-content density | Major goal |
-|---|---:|---|---|
-| Brindle | 0.75–1 h | low | attachment + control literacy |
-| Cairnspire arrival | 1–1.5 h | low/medium | world + institution + mission |
-| First Circuit | 1.5–2.5 h | high | ownership + side-system literacy |
-| Rootmere | 1.5–2 h | medium | first major verb |
-| Saltreach | 1.5–2 h | medium | second systemic domain |
-| Emberstep | 1.5–2 h | medium/high | evidence + third major verb |
-| Grand Ring pivot | 0.75–1 h | intentionally low | catastrophe + Hush-scale reveal |
-| Changed-world return | 1–1.5 h | high | recontextualization + traversal transformation |
-| High Aerie | 2–2.5 h | medium | vertical mastery + Motion |
-| Mireglass | 2–2.5 h | medium | perception + Memory |
-| Bone Archive | 0.5–0.75 h | low | rhythm break + causality lesson |
-| Cairnfall | 2–2.5 h | medium/high | seam mastery + decentralization |
-| Still-Cairn | 1.5–2 h | medium | Ending + family resolution |
-| Unringing | player-driven 0.5–4 h | very high | voluntary completion |
-| Null Meridian | 1.5–2 h | low | synthesis + ending |
+1. **Base / First Circuit** — early contracts, Common Measure, refuges, visible future locks.
+2. **Anchor wave** — structural/tension revisits.
+3. **Glasslung wave** — pressure/water revisits.
+4. **Temper wave** — thermal/material revisits, limited by story urgency after Emberstep.
+5. **Post-Grand-Ring / Line Skiff** — setup payoffs, moving routes, Drift Knots.
+6. **Vane / Palinode** — wind and contradictory-history expansion.
+7. **Mirror wave** — largest old-world perception/state reopening.
+8. **Seam wave** — late Hush/route completion and community autonomy.
+9. **Unringing sweep** — natural final completion convergence.
+10. **Null Meridian** — final allocated records/Faults/vaults and story completion.
 
-A 100% player can reasonably land around 25–35 hours depending on exploration and challenge tuning; mandatory critical path should remain closer to the existing 20–30 hour project promise once real playtest data exists.
+New verbs should make the player think **“I remember where that matters.”**
 
 ---
 
-# Major-verb revisit manifest
+# Completion philosophy
 
-Every production tool must ship with a manifest like this before its owning region is called content-complete.
+100% is not “do main quest, then vacuum icons.”
 
-| Verb | Immediate dungeon use | Boss use | Old-area revisit | Optional mastery | Late synthesis |
-|---|---|---|---|---|---|
-| Cantor Key base | tune/simple resonance | crisis interaction | Brindle/Cairnspire machinery | pattern challenges | Null Meridian network logic |
-| Anchor Line | Root Cathedral tension | disrupt Mawhart position | crossings, suspended machinery | precision/timed anchors | Vane + Anchor trial |
-| Glasslung Reed | pressure/buoyancy | Leviathan pressure vulnerability | flooded service routes | pressure course/hunt | Reed + Temper trial |
-| Temper Gauntlet | heat/material state | armor/arena state | old sealed housings | forge mastery | Reed + Temper trial |
-| Vane Cloak | suspension/updraft | aerial positioning | vertical shortcuts | wind route challenge | Vane + Anchor trial |
-| Mirror Nail | echo-state commitment | force Mirror Widow state | history/secrets across world | anomaly hunt tier | Mirror + seam trial |
-| Seam mode | authored layer transition | Gravemoon alignment | selected seam candidates | high-risk Hush pockets | full synthesis |
-| Ending principle | release preserved states | Orin encounter resolution | optional closure contracts | narrative completion | Listener resolution |
+Optional systems should appear early, recur under new verbs, and return as social/world-state consequences.
 
----
+Completion may change:
+- who appears;
+- what routes survive;
+- which local systems are prepared;
+- what evidence is available;
+- credits specificity.
 
-# Cross-state setup/payoff requirement
-
-Every major region must include at least one authored chain of this form:
-
-`player action before Stillness -> visible remembered object/person/state -> changed post-Stillness consequence -> optional or mandatory payoff`
-
-Examples of **Stillring-native categories**, not finished quests:
-- reinforce a bridge bell support early -> later the bridge is the only structure still oscillating rather than frozen;
-- record a worker's unsanctioned testimony -> later the Hush preserves that memory when official archives are blank;
-- leave a maintenance bypass open -> later it becomes an escape route but also lets a hostile echo into the area;
-- repair a local chime incorrectly-but-practically at an NPC's request -> later that imperfection prevents central synchronization.
-
-The point is causality and ownership, not time-travel imitation.
+Completion does **not** purchase a superior ending or hidden morality rank.
 
 ---
 
-# Story changes requiring explicit approval
+# Production protections
 
-This proposal **does not silently rewrite the story bible**. The following changes require a dedicated narrative PR if approved:
-
-1. Move the Grand Ring catastrophe from after all six Waybell arcs to after Rootmere, Saltreach, and Emberstep.
-2. Change Maelor's technical requirement so three tuned Waybells provide the phase reference used to seize/synchronize the remaining network remotely.
-3. Move High Aerie, Mireglass, and Cairnfall to post-Stillness objectives.
-4. Merge High Aerie's existing Monastery of Updraft and later Tempest Belfry concepts.
-5. Rehome the Countertone of Memory into Mireglass and reduce Deep Rootmere/Bone Archive to a micro-dungeon.
-6. Preserve Still-Cairn as the Ending/Orin arc.
-7. Reconcile boss/story duplicates created by the merge (Choir of Talons vs. Saint Varo concept).
-
-Until that narrative revision is approved and merged, `docs/02_STORY_BIBLE.md` remains canonical.
-
----
-
-# Gate implication
-
-None of this changes the immediate engineering order.
-
-Issues #1–#5 remain correct:
-- locomotion specification;
-- camera specification;
-- combat state model;
-- persistence schema;
-- Gate 1 Godot prototype harness.
-
-The progression research should influence architecture only where necessary—for example stable world-state IDs and authored state transitions—not cause premature production of regions or story scenes.
+1. Preserve six-region before-memories even if individual postcard scenes shrink.
+2. Preserve the practical Key-calibration motive for First Circuit.
+3. Preserve the Line Skiff seed before Grand Ring.
+4. Preserve progressive discovery of Motion / Memory / Ending.
+5. Preserve major-tool revisit waves.
+6. Preserve side-content breathing room after high-intensity reveals.
+7. Preserve communities acting without Neris during Unringing.
+8. Preserve Null Meridian as synthesis rather than new-mechanic dump.
+9. Preserve one canonical ending with completion-sensitive specificity.
+10. If a later design starts resembling another game's exact protected expression, redesign while keeping the functional job.
