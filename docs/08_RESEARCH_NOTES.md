@@ -1,6 +1,6 @@
 # 08 — Production Research Notes
 
-Research date: 2026-09-03.
+Research dates: 2026-09-03 through 2026-09-04.
 
 ## What “developing a game” actually entails
 
@@ -26,34 +26,123 @@ Unity's production-planning material explicitly uses milestones such as an MVP/p
 Source:
 - https://learn.unity.com/tutorial/create-your-production-plan?version=2022.3
 
-## Why Godot 4.7.2
+## Engine decision history
 
-Godot 4.7.2 was the current stable 4.x maintenance release on 2026-09-03 (released 2026-08-18). The project intentionally avoids the 4.8 development branch for production stability.
+### Initial baseline — Godot 4.7.2
+
+Godot was initially selected before technical prototyping because it offered a lightweight, open, VCS-friendly, text-heavy workflow well suited to AI-assisted coding.
+
+That decision was **superseded before Gate 1 implementation**. The only committed engine artifact was a skeletal `project.godot` stub with no gameplay implementation, so the migration carried essentially no gameplay-code sunk cost.
+
+The original Godot rationale is retained here as decision history rather than current direction.
+
+Historical sources:
+- https://godotengine.org/download/archive/4.7.2-stable/
+- https://docs.godotengine.org/en/stable/tutorials/best_practices/version_control_systems.html
+
+### Production baseline — Unreal Engine 5.8
+
+On 2026-09-04, Project Stillring switched to **Unreal Engine 5.8** before Gate 1.
+
+Epic released Unreal Engine 5.8 on 2026-06-23 and describes it as the last planned major UE5 release on the current roadmap while UE5 continues receiving bug/regression support.
 
 Source:
-- https://godotengine.org/download/archive/4.7.2-stable/
+- https://www.unrealengine.com/news/unreal-engine-5-8-is-now-available
 
-## Why Godot fits an AI-assisted Git workflow
+## Why Unreal now fits Stillring better
 
-Godot's stable documentation describes the engine as VCS-friendly and generating mostly readable/mergeable files. It also recommends excluding `.godot/` generated cache data and describes Git LFS as appropriate for large textures, audio, and 3D models.
+Stillring's design matured from a concept into a substantial authored 20–30 hour third-person 3D action-adventure with:
+- lock-on melee combat;
+- multiple animated characters and bosses;
+- large amounts of authored environment content;
+- cinematics and dialogue;
+- layered Waking/Hush states;
+- before/after regional state;
+- complex save/progression semantics;
+- extensive developer tooling;
+- machine-assisted regression needs.
+
+At that scale, production tooling for 3D world building, animation, cinematics, editor workflows, and automated game testing outweighs Godot's advantage in text-only simplicity.
+
+The migration does **not** authorize generic Unreal design. `docs/04_TECHNICAL_DIRECTION.md` requires a C++-first architecture, thin Blueprints, explicit binary-asset discipline, and opt-in use of heavyweight engine systems.
+
+## Unreal world-state research
+
+Unreal Engine 5.8's World Partition system provides automatic world data/streaming management and integrates with One File Per Actor, Data Layers, Level Instancing, and HLOD.
+
+Source:
+- https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine
+
+Runtime Data Layers can organize and toggle Actors at runtime and are a plausible candidate for some Waking/Hush or catastrophe presentation when using World Partition.
+
+Source:
+- https://dev.epicgames.com/documentation/unreal-engine/world-partition---data-layers-in-unreal-engine
+
+Important Stillring conclusion:
+- Data Layers are a **presentation/world-organization candidate**, not canonical quest/world-state authority.
+- World Partition is **not automatically required**; Gate 4 must compare it against a simpler non-World-Partition representation if that better fits authored regions.
+
+## Unreal automated QA research
+
+Unreal Engine 5.8 includes an Automation Test Framework for unit/API checks, feature tests, smoke tests, content-stress tests, and screenshot comparison.
+
+Source:
+- https://dev.epicgames.com/documentation/unreal-engine/automation-test-framework-in-unreal-engine?lang=en-US
+
+Epic's test documentation supports running tests from the editor/Session Frontend, and the project should establish command-line/reproducible automation entry points for Claude during Gate 1.
 
 Sources:
-- https://docs.godotengine.org/en/stable/tutorials/best_practices/version_control_systems.html
-- https://docs.godotengine.org/en/latest/tutorials/best_practices/project_organization.html
+- https://dev.epicgames.com/documentation/en-us/unreal-engine/automation-system-user-guide-in-unreal-engine
+- https://dev.epicgames.com/documentation/en-us/unreal-engine/run-automation-tests-in-unreal-engine
 
-GitHub's own documentation explains that Git LFS stores pointer files in Git while large objects live in LFS storage.
+Unreal Automation Specs provide a BDD-style C++ test form suitable for self-documenting functional/integration expectations where useful.
+
+Source:
+- https://dev.epicgames.com/documentation/unreal-engine/automation-spec-in-unreal-engine?lang=en-US
+
+## Git and binary assets
+
+GitHub's documentation explains that Git LFS stores pointer files in Git while large objects live in LFS storage.
 
 Source:
 - https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage
 
+Unreal's `.uasset` and `.umap` files are binary. Therefore Project Stillring deliberately separates:
+- C++/config/docs/structured source data — normal Git and human/Claude-reviewable diffs;
+- Unreal binary assets/maps and large source assets — Git LFS plus explicit PR evidence.
+
+This is a central architectural constraint, not repository housekeeping.
+
+## Claude development conclusion
+
+Claude is the primary implementation agent, but the project is structured so Claude does not need to infer the game from opaque editor state.
+
+The working rule is:
+
+```text
+CANON
+  ↓
+PRODUCTION CONTRACT
+  ↓
+C++ / REVIEWABLE SOURCE AUTHORITY
+  ↓
+UNREAL PRESENTATION + BINARY ASSETS
+  ↓
+AUTOMATED VERIFICATION
+  ↓
+HUMAN PLAY
+```
+
+Blueprint/editor convenience cannot bypass that chain.
+
 ## Production conclusion
 
-The project therefore follows this sequence:
+The project follows this sequence:
 
 ```mermaid
 flowchart LR
-    A[Charter + IP rules] --> B[Pre-production]
-    B --> C[Graybox prototypes]
+    A[Charter + IP rules] --> B[Pre-production + canon]
+    B --> C[Unreal graybox prototypes]
     C --> D[Vertical slice]
     D -->|greenlight| E[Production architecture lock]
     D -->|not good/costly| B
@@ -64,4 +153,4 @@ flowchart LR
     I --> J[Launch + operations]
 ```
 
-The critical policy is simple: **uncertainty gets tested before expensive content is multiplied.**
+The critical policy remains simple: **uncertainty gets tested before expensive content is multiplied.**
