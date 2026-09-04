@@ -4,9 +4,13 @@ The roadmap is gate-based. Calendar estimates are secondary; evidence decides wh
 
 All gates operate under `docs/15_CANON_TO_PLAY_PIPELINE.md`: **CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY**.
 
+**Production engine:** Unreal Engine 5.8  
+**Primary implementation agent:** Claude  
+**Gameplay/state architecture:** C++ first; thin Blueprint presentation/assembly.
+
 ## Gate 0 — Charter and narrative locked
 
-**Status:** narrative/design foundation complete for production entry.
+**Status:** narrative/design foundation complete for production entry; Unreal Engine migration completed before Gate 1 implementation.
 
 Locked deliverables:
 - project pillars;
@@ -22,28 +26,35 @@ Locked deliverables:
 - regional community bibles;
 - world-pulse / emotional pacing / quiet-moment rules;
 - completion taxonomy and authored side-content ledger;
-- technical direction;
+- Unreal Engine 5.8 technical direction and C++/Blueprint authority boundary;
 - vertical-slice definition;
 - canon-to-play production contract;
 - developer-tooling / machine-QA contract.
 
-Exit condition: the team can explain the game in two minutes without saying “it is basically Zelda with changed names,” implementation agents have one non-conflicting narrative authority chain, and production has an explicit method for turning that authority into playable slices without agent improvisation.
+Exit condition: the team can explain the game in two minutes without saying “it is basically Zelda with changed names,” Claude has one non-conflicting authority chain, and production has an explicit method for turning that authority into playable slices without implementation improvisation.
 
 ---
 
 ## Gate 1 — Core movement/camera prototype
 
-Build only graybox systems:
+Bootstrap the minimum Unreal Engine 5.8 C++ project needed to test graybox movement/camera.
+
+Build only:
+- minimal C++ project/module structure;
+- Enhanced Input baseline;
+- graybox movement/camera test map;
 - third-person locomotion;
 - analog movement;
 - camera collision;
 - target lock;
 - ledge/drop handling;
 - interaction prompt;
-- debug room;
-- minimal runtime state/performance readout.
+- minimal runtime state/performance readout;
+- reproducible command-line build/editor-load/Automation entry point.
 
-Exit condition: moving around an empty room already feels deliberate and controllable.
+Do not let stock Third Person template defaults silently become Stillring's movement/camera specification.
+
+Exit condition: moving around an ugly gray room already feels deliberate and controllable, and Claude can build/validate the prototype reproducibly without depending entirely on manual editor clicking.
 
 ## Gate 2 — Combat prototype
 
@@ -61,6 +72,8 @@ Add:
 - death/retry loop;
 - test enemy spawn/reset and health/resource restore controls.
 
+Authoritative combat rules remain C++ first; Animation Blueprints present gameplay state rather than owning a contradictory combat model.
+
 Exit condition: ten minutes of repeated combat remains readable and satisfying without story or final art.
 
 ## Gate 3 — Puzzle/tool prototype
@@ -73,12 +86,19 @@ Exit condition: the same tool produces at least one traversal use, one combat/pr
 
 Build a tiny area that can transition between ordinary Orra and the Hush.
 
+Compare at least two credible Unreal representations before locking the production architecture, including:
+- World Partition + Runtime Data Layers where appropriate;
+- a non-World-Partition explicit level/Actor layering approach.
+
+Data Layers/presentation state must not become canonical quest/world-state authority.
+
 Exit condition:
 - transition is fast;
 - state ownership is understandable;
 - puzzles can depend on different geometry/state in each layer;
 - save/load survives layer changes;
-- developer controls can force the approved test transition and inspect paired persistent IDs.
+- developer controls can force the approved test transition and inspect paired persistent IDs;
+- the chosen architecture is justified by authoring clarity, source-control cost, performance, and save reliability.
 
 ## Gate 5 — Vertical slice
 
@@ -94,12 +114,13 @@ Content:
 - Anchor Line unlock;
 - one Hush puzzle;
 - NPC dialogue;
-- one cinematic;
+- one Sequencer-supported cinematic;
 - save/load;
 - controller support;
 - representative low-poly art;
 - representative sound/music;
-- accessibility baseline.
+- accessibility baseline;
+- representative Stillring rendering configuration rather than generic Unreal defaults.
 
 Required testing/tooling for the slice:
 - teleport/checkpoint selection for slice areas;
@@ -110,16 +131,18 @@ Required testing/tooling for the slice:
 - persistent-ID inspection;
 - named state presets for important slice states;
 - local bug/observation capture;
-- at least one automated smoke route through a representative slice path.
+- at least one automated smoke route through a representative slice path;
+- reproducible package/build verification.
 
 Exit condition:
 - new tester finishes without developer coaching;
 - no progression blockers;
 - stable frame pacing on target PC;
-- art direction is recognizable from screenshots;
+- art direction is recognizable from screenshots and does not read as a default Unreal project;
 - content pipeline is fast enough to repeat;
 - important slice states can be reproduced in minutes rather than by replaying the entire route;
 - automated smoke route and save/load checks pass;
+- package/build process is reproducible;
 - team chooses to continue after seeing real production cost.
 
 ## Gate 6 — Production foundations
@@ -128,7 +151,7 @@ Before mass content:
 - save schema v1;
 - deterministic quest/world-state model;
 - dialogue toolchain;
-- cutscene sequencing;
+- Sequencer/cutscene state-entry conventions;
 - NPC recurrence/state support;
 - enemy base components;
 - boss state-machine pattern;
@@ -138,22 +161,26 @@ Before mass content:
 - durable local developer console;
 - named world/story test-state presets;
 - semantic machine-readable state dump;
+- Unreal Automation/Functional Test conventions;
 - reusable local machine-playable QA surface;
 - save/load fixture automation;
 - quest/dialogue/reference validation;
 - completion-ledger validation hooks;
 - structured local bug/observation capture;
-- automated smoke-test scene/harness.
+- automated smoke-test map/harness;
+- binary Unreal asset/reference validation and PR evidence convention;
+- Gauntlet adoption only if packaged-session orchestration now justifies it.
 
 World-state architecture must support characters and settlements changing while Neris is absent.
 
-The machine-QA surface is development infrastructure only. Retail builds must not require model APIs, remote agents, network control surfaces, or player-funded AI usage.
+The machine-QA surface is development infrastructure only. Retail builds must not require Claude/model APIs, remote agents, network control surfaces, or player-funded AI usage.
 
 Exit condition:
 - the architecture is stable enough to build region pods without programmer surgery;
 - important story/world states can be created with named, reviewable presets;
 - regressions can exercise semantic game actions and read semantic state without relying on screenshot automation;
-- a tester can reproduce a late or state-heavy scenario quickly and hand structured evidence to an engineer/agent.
+- binary `.uasset`/`.umap` state is not the only place critical gameplay rules can be understood;
+- a tester or Claude can reproduce a late/state-heavy scenario quickly and produce structured evidence.
 
 ---
 
@@ -287,7 +314,7 @@ Requirements:
 - build reproducibility;
 - legal/IP review;
 - final backup/tag;
-- retail build proven free of development-only remote control/model dependencies.
+- Shipping build proven free of Claude/model runtime, development-only remote control, editor-only, and test-only dependencies.
 
 ## Gate 14 — Launch and operations
 
