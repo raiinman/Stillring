@@ -522,6 +522,120 @@ Gate 1 accessibility verification must include at minimum: fully remapped locomo
 
 ---
 
+## 18. Canonical five-minute human-play acceptance test — LOCKED
+
+This is the **owner-facing feel gate**, not a substitute for automated/unit/functional testing. It is designed to expose betrayal of player intent quickly. Passing automated checks does not override a human result of “this feels wrong.”
+
+### Test-course requirement
+Gate 1 must provide one compact representative locomotion course that can be completed continuously without menus/loading and contains, in route order or a similarly efficient layout:
+- flat open movement space, a tight precision area, small stairs/steps/floor lips;
+- knee/waist and waist/lower-chest mantle obstacles plus a shoulder-height obstacle that must **not** baseline auto-mantle;
+- a small authored jump gap, a catchable ledge, same-handhold shimmy segment, valid pull-up top, blocked pull-up top, and deliberate Drop/Release case;
+- a ladder positioned so the player can intentionally approach it and also pass nearby/parallel without mounting; valid top/bottom exits and a mid-ladder release opportunity;
+- shallow/wade water, ordinary deep swimmable water, a valid low exit, and a high/blocked exit;
+- normal walkable slope, short borderline scramble slope, and steep/low-traction slide slope;
+- safe traversal drop, upper-safe/heavy landing, and a controlled damaging-fall example;
+- one movement-compatible interaction and one planted/alignment-required interaction;
+- one target-lock dummy with enough space for radial/strafe movement and a nearby mantle/ladder temptation that should remain suppressed while locked;
+- one visually plausible but unsupported rough wall/cliff route that proves baseline free climbing remains impossible.
+
+The course may use graybox geometry. Visual polish is irrelevant; semantic readability and repeatability are mandatory.
+
+### Five-minute script
+Run the following as one continuous pass. Times are targets, not frame-perfect requirements.
+
+**0:00–0:45 — ground trust / speed bands**
+- start from neutral and make several tiny analog movements in different directions;
+- smoothly push from careful → run → requested Sprint, then reduce magnitude without releasing Sprint;
+- release movement from run and Sprint and judge stopping distance;
+- perform normal curved Sprint steering and one hard Sprint reversal;
+- intentionally hover around the Sprint threshold to check for chatter;
+- pass over stairs/small lips without special input.
+
+**0:45–1:35 — jump / mantle / ledge intent**
+- perform ordinary jump from stand/run/Sprint and verify no hidden speed boost;
+- intentionally press Jump slightly late at an ordinary edge once to feel the coyote window, and slightly early before a legal landing once to feel the buffer;
+- make a small midair correction and then attempt an unreasonable hard reverse that must remain limited;
+- approach low mantle geometry directly, then brush/pass parallel to similar geometry and verify only the deliberate case triggers;
+- test the upper mantle boundary so shoulder-height+ does not silently auto-mantle;
+- deliberately catch a valid ledge, remain neutral, shimmy, stop at a forbidden corner/gap, pull up on a valid top, remain hanging at a blocked top, and use explicit Drop/Release;
+- push analog down/away while hanging once and verify it does **not** drop.
+
+**1:35–2:15 — ladder trust**
+- pass close/parallel to the ladder without mounting;
+- directly approach with clear intent and mount;
+- climb up, down, stop neutral mid-ladder, then complete a valid end exit;
+- repeat enough to test the opposite end if needed;
+- use explicit Drop/Release mid-ladder and verify analog direction alone never releases;
+- confirm no magnetic long-distance alignment or forced blocked-end placement.
+
+**2:15–2:55 — water / slope / fall consequence**
+- wade through shallow water without entering unnecessary swim state;
+- enter deep water automatically, swim camera-relative, release movement and tread, press down/look downward without silently diving, then use a valid low exit;
+- test a high/blocked water edge and verify no invented climb;
+- traverse ordinary slope, deliberate short scramble slope, and committed slide with limited steering;
+- attempt one out-of-band uphill trick/diagonal/jump-spam approach and verify no mountain-goat ratcheting;
+- take a safe drop and a controlled damaging fall and judge whether consequence is clear without excessive control theft.
+
+**2:55–3:35 — interaction continuity**
+- trigger a movement-compatible interaction while moving and verify movement is not unnecessarily zeroed;
+- approach a planted interaction at run/Sprint, request it while moving, and verify short natural deceleration plus only local plausible alignment;
+- move away before commit once and verify clean cancellation/no delayed surprise trigger;
+- after a committed interaction releases movement, keep holding a valid direction and verify Neris resumes without requiring input re-press.
+
+**3:35–4:20 — target-lock precision**
+- acquire target lock while moving fast enough to expose the Sprint→lock transition;
+- move toward, away, left/right, and diagonally around the dummy;
+- release stick and verify there is no auto-orbit or auto-distance correction;
+- press Sprint and verify exploration Sprint remains unavailable;
+- press Jump and verify it remains the baseline jump rather than a contextual evade flip;
+- deliberately move toward the nearby mantle/ladder temptation and verify locked ground locomotion does not accidentally seize that exploration traversal;
+- release/lose lock while holding movement and verify physical continuity plus immediate return to camera-relative exploration without re-press or surprise Sprint.
+
+**4:20–5:00 — stress loop / forbidden behavior**
+- chain Sprint → jump → landing → interaction → target lock → unlock → Sprint again;
+- repeat a ledge/ladder/water boundary quickly enough to expose accidental double triggers;
+- run directly at the unsupported rough wall/cliff and try obvious jump/Sprint/diagonal abuse: baseline free climbing must remain impossible;
+- finish with several rapid but reasonable direction/speed changes and ask whether the controls disappear beneath intention rather than demanding attention themselves.
+
+### Input-profile repetition
+- the canonical test unit is **five minutes per input profile**, not five minutes split between devices;
+- run at least once with a representative controller using default movement settings;
+- run again on keyboard/digital input using ordinary movement and the Digital Precision option before Gate 1 locomotion is considered input-complete;
+- Hold/Toggle Sprint, drift/worn-controller settings, and remap functionality also receive their separate accessibility verification; they need not all fit inside one five-minute feel pass.
+
+### Hard-fail conditions
+Any one of these fails the locomotion feel gate regardless of automated pass status:
+- Neris moves, mounts, mantles, drops, dives, climbs, exits, or interacts without a player intent that reasonably explains it;
+- clear legal intent is ignored because an animation/state waits unnecessarily or requires input release/re-press;
+- a transition hard-snaps/teleports position or velocity where the contract requires physical continuity;
+- analog drift/noise triggers movement or traversal;
+- repeated state transitions manufacture speed, height, fall reset, or collision bypass;
+- an unsupported wall/slope becomes solvable through input spam or diagonal abuse;
+- target lock auto-positions the player or exploration traversal steals locked combat movement unexpectedly;
+- accessibility settings change authored traversal eligibility;
+- the human tester reports that routine movement feels slippery, mushy, late, magnetic, unpredictable, or tiring enough that they are thinking about fighting the controls instead of playing.
+
+### Tuning note versus semantic failure
+A test may produce **tuning notes** without failing the locked design when the behavior class is correct but an exact value needs adjustment—for example sprint acceleration slightly too quick, shimmy speed slightly slow, coyote window slightly generous, or a mantle angle needing refinement.
+
+A **semantic failure** is not a tuning note. Examples: analog-down drops a ledge, Sprint adds jump speed, ladder proximity auto-mounts, target lock auto-orbits, a blocked water edge pulls Neris out, or shoulder-height geometry baseline auto-mantles. Semantic failures must be fixed before proceeding.
+
+### Required human verdict
+After each five-minute run, the tester records:
+1. **Did Neris go where I intended?**
+2. **Did Neris ever move/traverse when I did not intend it?**
+3. **Did any animation or state hold control longer than the visible action justified?**
+4. **Did the world ever lie about what looked traversable?**
+5. **Was I thinking about the destination/problem, or thinking about fighting the controls?**
+
+For final owner acceptance, questions 1 and 5 must resolve positively and questions 2–4 must have no unresolved material failure. The owner may reject locomotion on feel even when every machine-verifiable check passes.
+
+### Regression rule
+Re-run this five-minute test after any material change to movement physics, collision, traversal detection, movement animation/root motion, Enhanced Input processing, target-lock movement, or representative environment geometry. Art/prop/collision changes that alter traversal routes are not exempt.
+
+---
+
 ## Current locked movement grammar
 ```text
 baseline ground/jump/sprint                   → ordinary locomotion contract
@@ -557,12 +671,13 @@ release/lose target lock                      → preserve physical velocity; re
 remapped locomotion actions                   → same semantics on chosen bindings
 Digital Precision active                      → tuned careful digital movement magnitude; NO new traversal eligibility
 accessibility input settings                  → ergonomics/tolerance only; NO hidden world-rule expansion
+human five-minute feel test                   → owner feel verdict outranks automated pass
 animation transition                          → follows movement authority; NO hidden input-delay ownership
 ```
 
 ---
 
-## Next locomotion decision
-**Final five-minute human-play acceptance test.**
+## Remaining before locomotion owner review
+**Repository-authority reconciliation.**
 
-After that: repository-authority reconciliation and final owner review together.
+After reconciliation, present the complete locomotion package to the owner for final review together. Issue #1 remains open until that review is complete.
