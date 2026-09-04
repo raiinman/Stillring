@@ -74,6 +74,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 | D-048 | LOCKED | Sprint supports both Hold and Toggle input modes. Hold is the default; Toggle is available through controls/accessibility settings without changing sprint gameplay rules. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-049 | LOCKED | Full sprint remains highly steerable. Ordinary curves/corners preserve responsiveness, while genuinely hard direction changes briefly shed momentum; a 180-degree reversal uses a quick planted turn and re-acceleration rather than an instant full-speed snap or a large turning circle. Exact turn curves/speed loss remain Gate 1 tuning. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-049A | LOCKED | Jumping from sprint preserves existing horizontal sprint momentum rather than automatically dropping Neris to run speed. Sprint-jump adds no bonus speed, and landing continues/returns to sprint when sprint is still requested and no higher-priority state overrides it. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
+| D-049B | LOCKED | Acquiring target lock while sprinting ends exploration sprint but does not instantly zero velocity. Neris transitions through a short natural deceleration/pivot into precise target-relative combat locomotion. Full exploration sprint is unavailable while target-locked. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 
 ---
 
