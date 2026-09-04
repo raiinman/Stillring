@@ -141,9 +141,25 @@ Must **not** mount from:
 
 The mount may use a short authored alignment transition, but it may not magnetically pull Neris from an implausible offset or long distance.
 
-The following ladder details remain separate decisions:
-- top/bottom dismount behavior;
-- ladder-specific Drop/Release behavior.
+### 5.3 Ladder top/bottom dismount — LOCKED
+
+Ladder-end dismount is a fluent continuation of the player's existing climb direction; it does not require a separate interaction button.
+
+At the **top**:
+- when Neris reaches the valid upper exit and the player continues pressing up, she automatically transitions onto the top surface;
+- the top must be valid, standable, and sufficiently clear for safe completion;
+- neutral input at the top holds Neris attached rather than forcing an exit;
+- if the top is blocked, invalid, too small, or otherwise unsafe, continued up input does not clip or teleport Neris through the obstruction; she remains on the ladder.
+
+At the **bottom**:
+- when Neris reaches the valid lower exit and the player continues pressing down, she automatically steps off onto the ground;
+- the floor/exit must be valid and clear enough for safe placement;
+- neutral input at the bottom holds Neris attached rather than forcing an exit;
+- blocked or unsafe lower exits keep Neris attached instead of forcing placement.
+
+The exit transition may smoothly align Neris with the authored standing position, but it may not snap her through geometry or carry her farther than the local ladder exit requires.
+
+Ladder-specific Drop/Release remains a separate decision.
 
 ---
 
@@ -183,6 +199,10 @@ on ladder + up input                     → climb up
 on ladder + down input                   → climb down
 on ladder + neutral input                → hold current ladder position
 on ladder + camera input                 → player controls camera
+ladder top + continued up + valid exit   → automatically dismount onto top
+ladder bottom + continued down + valid exit → automatically step off
+ladder end + neutral input               → remain attached
+ladder end + blocked/unsafe exit         → remain attached; NO forced placement
 invalid or blocked ledge top             → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge    → NO catch
 passing near/alongside mantle geometry   → NO mantle
@@ -194,6 +214,6 @@ major cliff / meaningful height gate     → route, tool, or later traversal cap
 
 ## Next locomotion decision
 
-**Ladder top/bottom dismount behavior.**
+**Ladder-specific Drop/Release behavior.**
 
-After that: ladder Drop/Release, swimming, crouch/stealth posture, slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: swimming, crouch/stealth posture, slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
