@@ -11,29 +11,25 @@
 - Issue #1 — tracking/final review
 
 ## Current boundary
-Merged main before branch: `d9081fb4ab056d944a5d5be557792b1f3243f4b5`
+Merged main before branch: `b4f448928e51c9cf448bf9bee9c04e23c0f14277`
 
 Latest merged locomotion PR:
-- #54 `Design: lock acceleration, deceleration, and turning philosophy`
+- #55 `Design: lock target-lock locomotion semantics`
 
 Current branch:
-- `design/target-lock-locomotion`
+- `design/locomotion-accessibility`
 
 Current decision:
-- target-lock movement is target-relative on the horizontal plane: forward/back control radial distance and left/right strafe/orbit;
-- player owns combat spacing; neutral input does not auto-orbit, auto-maintain distance, or auto-position Neris;
-- analog low-speed precision remains available and full exploration Sprint is unavailable;
-- all locked movement directions remain useful, with only modest tuning differences allowed;
-- Neris faces the target promptly without tank controls or animation-delayed movement;
-- lock entry preserves brief physical velocity through the existing deceleration/pivot and clears toggled Sprint request;
-- Jump remains the normal baseline jump, not a hidden side-hop/backflip/evade;
-- combat-disrupting automatic exploration entries such as mantle initiation and ladder mounting are suppressed while ordinary target-lock ground locomotion is active;
-- entering an incompatible traversal state ends target-lock locomotion;
-- releasing/losing lock preserves physical velocity and immediately returns held input to camera-relative exploration semantics;
-- camera framing/target-selection presentation remains Issue #2 authority.
+- locomotion actions are remappable and preserve semantic meaning across bindings;
+- Sprint retains Hold/Toggle alternatives and baseline locomotion avoids mashing, grab-button holds, locomotion QTEs, or repeated swim inputs;
+- movement dead-zone and outer-saturation settings remain configurable/resettable without changing world rules;
+- keyboard/digital players receive an optional remappable Digital Precision modifier to access the tuned careful movement band without analog hardware;
+- coyote time and jump buffering remain baseline forgiveness rather than hidden assists;
+- accessibility input settings may change ergonomics/tolerance, not mantle/ledge/slope/jump/water/fall eligibility;
+- camera and combat accessibility remain their own authority.
 
 Next after merge:
-- **locomotion accessibility implications**.
+- **final five-minute human-play acceptance test**.
 
 ## Owner delegation
 Remaining **locomotion-only** decisions continue without individual approval pauses. One decision at a time; repository authority + diff review + merge. Final owner review together remains mandatory.
@@ -41,13 +37,12 @@ Remaining **locomotion-only** decisions continue without individual approval pau
 > **Simple intention, capable character, honest world.**
 
 ## Remaining sequence
-1. accessibility implications;
-2. five-minute human-play acceptance test;
-3. repository-authority reconciliation;
-4. final owner review.
+1. five-minute human-play acceptance test;
+2. repository-authority reconciliation;
+3. final owner review.
 
 ## Implementation order after final review
 Issue #1 final → Issue #2 camera → Issue #5 Unreal harness → movement → camera → target lock.
 
 ## Continuation rule
-After this PR merges, continue from **locomotion accessibility implications**. Read repository authority rather than chat memory.
+After this PR merges, define the **final five-minute human-play acceptance test**. Read repository authority rather than chat memory.
