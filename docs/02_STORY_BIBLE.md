@@ -1,115 +1,560 @@
 # 02 — Story Bible
 
-This is the canonical beginning-to-end narrative for Project Stillring.
+This is the canonical beginning-to-end narrative index for Project Stillring.
 
-The complete story is intentionally split into reviewable chapters so narrative changes produce smaller diffs and coding agents do not have to load a thousand-line monolith for every content task.
+The core story is split into reviewable chapters so later narrative changes produce smaller diffs and implementation agents do not have to load one enormous monolith.
 
-## Core story — read in this order
+---
 
-1. [`story/01_FOUNDATIONS_AND_OPENING.md`](story/01_FOUNDATIONS_AND_OPENING.md) — story promise, ancient history, Quiet Court, Mercy Window, main cast, Brindle opening, inciting catastrophe.
-2. [`story/02_ACT_ONE_WAYBELLS.md`](story/02_ACT_ONE_WAYBELLS.md) — Cairnspire arrival, the First Circuit exploration phase, Rootmere/Saltreach/Emberstep tuning crises, and Maelor's three-point Grand Ring betrayal.
-3. [`story/03_MIDPOINT_AND_DEEP_WOUNDS.md`](story/03_MIDPOINT_AND_DEEP_WOUNDS.md) — Grand Ring catastrophe, Ilyra reunion, changed-world traversal, High Aerie/Mireglass/Cairnfall, the Countertones, Still-Cairn, and the Unringing.
-4. [`story/04_FINALE_AND_ENDING.md`](story/04_FINALE_AND_ENDING.md) — Null Meridian, Maelor confrontation, the Listener, destruction of the centralized bell system, and Neris's ending.
-5. [`story/05_CREDITS_AND_THEMATIC_RULES.md`](story/05_CREDITS_AND_THEMATIC_RULES.md) — credits montage, post-credits hook, and thematic rules for future writers.
-6. [`story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`](story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md) — canonical character motivations, culpability, relationship fractures, rebuilds, and dialogue continuity.
+# Core story — read in this order
 
-For exact spoiler timing across the critical path and optional 100% story, also read [`12_100_PERCENT_ROUTE.md`](12_100_PERCENT_ROUTE.md).
+1. [`story/01_FOUNDATIONS_AND_OPENING.md`](story/01_FOUNDATIONS_AND_OPENING.md) — ancient truth, Quiet Court, Mercy Window, First Ring causal truth, why the Cantor Key needs Neris in the field, cast, Brindle opening.
+2. [`story/02_ACT_ONE_WAYBELLS.md`](story/02_ACT_ONE_WAYBELLS.md) — Cairnspire, six-region First Circuit, Rootmere/Saltreach/Emberstep crises, three-point investigation, Grand Ring betrayal.
+3. [`story/03_MIDPOINT_AND_DEEP_WOUNDS.md`](story/03_MIDPOINT_AND_DEEP_WOUNDS.md) — Ilyra reunion, changed Brindle/Line Skiff, progressive discovery of Motion/Memory/Ending, Orin, Unringing.
+4. [`story/04_FINALE_AND_ENDING.md`](story/04_FINALE_AND_ENDING.md) — Null Meridian, Maelor, personalized Listener temptation, decommissioning Meridian, human-scale epilogue.
+5. [`story/05_CREDITS_AND_THEMATIC_RULES.md`](story/05_CREDITS_AND_THEMATIC_RULES.md) — recognizable credits recurrence, ongoing political disagreement, post-credits hook, thematic protections.
+6. [`story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`](story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md) — character motivation and relationship continuity.
 
-## Production story contracts
+For optional-content timing, also read [`12_100_PERCENT_ROUTE.md`](12_100_PERCENT_ROUTE.md), **but apply the red-team corrections below wherever the older route conflicts**.
 
-Once the core story is understood, use these documents when writing or implementing scenes:
+---
 
-1. [`story/07_SCENE_BEAT_LEDGER.md`](story/07_SCENE_BEAT_LEDGER.md) — stable scene/sequence IDs, participants, player-control state, physical action, scene wants, state transitions, and downstream payoffs.
-2. [`story/08_REVEAL_AND_FORESHADOW_LEDGER.md`](story/08_REVEAL_AND_FORESHADOW_LEDGER.md) — authoritative seed → evidence → pressure → reveal → payoff timing for the game's major mysteries.
-3. [`story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`](story/09_MAIN_QUEST_OBJECTIVE_FLOW.md) — player-facing main objectives and the narrative/world-state gates that advance them.
-4. [`story/10_DIALOGUE_ANCHORS.md`](story/10_DIALOGUE_ANCHORS.md) — dialogue lines and conversational intents that future script passes must preserve or deliberately revise with their callbacks.
-5. [`story/regions/00_REGIONAL_STORY_INDEX.md`](story/regions/00_REGIONAL_STORY_INDEX.md) — regional community authority: ordinary life, social spaces, recurring residents, internal disagreement, pre/post-Stillness states, Unringing roles, and earned credits recurrence.
+# Production story contracts
 
-These are not redundant summaries. They answer different production questions:
+Once the core story is understood:
 
-- **Story Bible:** what happens and why?
-- **Character arcs:** what changes inside the people involved?
-- **100% route:** when can the player encounter each critical/optional story beat?
-- **Scene ledger:** what is physically happening while a scene delivers story?
-- **Reveal ledger:** what is the player allowed to know yet?
-- **Objective flow:** what does Neris currently intend to do?
-- **Dialogue anchors:** which wording or conversational function carries a later payoff?
-- **Regional bibles:** who lives in each place when Neris is not looking, and why should the player care about returning?
+- [`story/07_SCENE_BEAT_LEDGER.md`](story/07_SCENE_BEAT_LEDGER.md) — legacy detailed mandatory scene map.
+- [`story/08_REVEAL_AND_FORESHADOW_LEDGER.md`](story/08_REVEAL_AND_FORESHADOW_LEDGER.md) — legacy detailed mystery/reveal timing.
+- [`story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`](story/09_MAIN_QUEST_OBJECTIVE_FLOW.md) — legacy main-objective chain.
+- [`story/10_DIALOGUE_ANCHORS.md`](story/10_DIALOGUE_ANCHORS.md) — locked/strong conversational obligations.
+- [`story/regions/00_REGIONAL_STORY_INDEX.md`](story/regions/00_REGIONAL_STORY_INDEX.md) and linked regional bibles — ordinary life, recurring casts, community continuity.
 
-A future narrative change that affects more than one of those questions must update every affected contract together.
+## Red-team authority — read before implementing old scene/objective documents
 
-## Regional story rule
+The following files are newer and deliberately audit/correct the earlier production contracts:
 
-**Every major location must be worth visiting before anything bad happens there.**
+1. [`story/11_NARRATIVE_FLOW_AUDIT.md`](story/11_NARRATIVE_FLOW_AUDIT.md) — holes found, severity, and required fixes.
+2. [`story/12_WORLD_PULSE_LEDGER.md`](story/12_WORLD_PULSE_LEDGER.md) — what changes while Neris is elsewhere.
+3. [`story/13_EMOTIONAL_PACING_MAP.md`](story/13_EMOTIONAL_PACING_MAP.md) — intended emotional waveform and breathing-room rules.
+4. [`story/14_QUIET_MOMENTS_AND_TRAVEL_BEATS.md`](story/14_QUIET_MOMENTS_AND_TRAVEL_BEATS.md) — ordinary moments protected from plot compression.
+5. [`story/15_OOT_PRINCIPLE_COMPLIANCE.md`](story/15_OOT_PRINCIPLE_COMPLIANCE.md) — functional Ocarina-of-Time principle audit and non-copy boundary.
+6. [`story/16_RED_TEAM_SCENE_OBJECTIVE_PATCHES.md`](story/16_RED_TEAM_SCENE_OBJECTIVE_PATCHES.md) — **authoritative replacements** for conflicting legacy scene/reveal/objective/100%-route entries until those files are consolidated.
+7. [`story/17_SIDE_INTERACTION_REBALANCE.md`](story/17_SIDE_INTERACTION_REBALANCE.md) — theme/character/life interaction balance and no-reward world texture.
 
-For each normal-world region, the pre-crisis state must contain ordinary life, at least one memorable social space, recurring people, humor/tenderness, work rhythms, sensory identity, and at least one reason to return that is not loot or completion percentage.
+### Supersession rule
 
-If a location only becomes interesting after its dungeon crisis or the Grand Ring, the pre-crisis version is unfinished.
+Where `story/16_RED_TEAM_SCENE_OBJECTIVE_PATCHES.md` conflicts with `07`, `08`, `09`, `10`, or `12_100_PERCENT_ROUTE.md`, **the red-team patch wins**.
 
-For Hush-Cairnspire and Null Meridian, which are encountered after the catastrophe, this rule is paid for by establishing recognizable living Cairnspire anchors before the Grand Ring and by allowing the Hush itself moments of beauty, banality, and humor rather than making every echo tragic exposition.
+Do not implement an older contradictory scene because it has a more detailed legacy description.
 
-## Canonical spine
+---
 
-Neris Vale, a seventeen-year-old apprentice bellwright from Brindle, inherits the unfinished Cantor Key after a silent catastrophe pulls Orin Vale into the Hush. Neris travels with courier Tessa Marr to Cairnspire, where respected acoustician Maelor Renn appears to be one of the few officials willing to help.
+# Non-negotiable regional rule
 
-Eleven years earlier, Neris's mother **Ilyra Vale** willingly joined Maelor's private research circle, the Quiet Court, because the Meridian network was genuinely failing and the Bellwardens were concealing fatal accidents. During a route-collapse rescue, Ilyra designed **Mercy Window**, a brief local phase hold meant to stop structural motion for seconds while workers escaped. It saved lives. When one mortally injured worker was held beyond the intended interval, consciousness began repeating and new memory stopped advancing normally. Ilyra concluded that release had to remain part of the design. Maelor instead saw proof that physical loss could be delayed by engineering. That split becomes the technical and moral ancestor of Stillring.
+> **Every major location must be worth visiting before anything bad happens there.**
 
-Ilyra later developed the prototype Cantor Key to study local Waking/Hush relationships without forcing every anomaly through Meridian reference. When Maelor's experiments began treating permanent hold as the objective rather than rescue as the objective, Ilyra tried to expose the work and fell through an unstable seam into the Hush. The Bellwardens declared her dead in a field accident. Orin knew the official story was false and hid her research involvement from Neris, but he did not know she survived.
+For normal-world regions, pre-crisis experience must include:
+- ordinary life;
+- a memorable social space;
+- recognizable recurring people;
+- humor, tenderness, competition, or mundane irritation;
+- work rhythm;
+- sensory identity;
+- at least one reason to care that is unrelated to loot/completion.
 
-In the present, Maelor says Orra's six regional Waybells have fallen out of phase and commissions Neris to stabilize the three most urgent reference regions: **Rootmere, Saltreach, and Emberstep**. Before beginning those repairs, Neris completes a First Circuit through Cairnspire's surrounding roads and communities, learning that Orra's bell network is practical civic infrastructure and that local people have lived for generations with the costs of central standardization.
+If the catastrophe is the first interesting thing about a place, the place is unfinished.
 
-Each of the three regional crises awards a major field verb and exposes another part of the lie behind the Meridian system. Rootmere reveals that earlier Bellwardens knowingly damaged local living infrastructure. Saltreach connects Tessa to old Quiet Court logistics and forces her to admit that refusing to ask questions never truly kept her uninvolved. Emberstep proves Ilyra and Maelor collaborated, exposes the forbidden three-point phase-reference experiment, and plants the unexplained phrase **MERCY WINDOW — I. VALE LEAD**.
+The six-region First Circuit now exists partly to guarantee the player has a **before-memory** of every major normal-world culture before Grand Ring.
 
-Neris realizes too late that Maelor chose those three regions deliberately. Three geographically separated stable signals are enough for the Meridian Bell's old emergency entrainment system to calculate a continent-scale reference and forcibly seize the remaining Waybells. Neris's successful repairs therefore become the trigger Maelor needs rather than six sacred objects in a collection ritual.
+---
 
-Maelor activates the **Grand Ring**. Cairnspire and then Orra enter **Stillness**, a forced phase-lock that preserves people and infrastructure in a repeating resonance relation. Neris escapes into the Hush and finds Ilyra alive after eleven missing years.
+# Canonical spine — red-team revision
 
-Ilyra explains that the Meridian Bell did not cure an invading evil centuries ago. It compressed the naturally occurring Hush—an echo-layer of abandoned possibilities, memories, and unchosen states—and imprisoned its emergent consciousness, the **Listener**. Maelor, broken by the deaths of his wife and son, has taken the same central machinery to its logical extreme: if change causes loss, he will stop change.
+## 1. The old system
 
-The reunion does not make Ilyra an innocent exposition figure. She admits joining Quiet Court and helping create precursor technology but initially controls the sequence of painful truth, repeating Orin's mistake in a different form. The full Mercy Window history emerges over High Aerie, Bone Archive, and Mireglass. Neris eventually learns that Maelor did not steal the foundational phase-hold concept from an innocent Ilyra; he extrapolated monstrously from work that she herself designed and once believed was worth doing. Ilyra remains responsible for her work without becoming responsible for Maelor's later coercive choice.
+Orra's Waking World is coupled to the **Hush**, an echo-layer of discarded possibilities, memory residue, and unrealized states.
 
-The changed-world act is not another sequence of ordinary Waybell repairs. Neris learns to survive temporary moving pockets and reunites with Tessa, who restores an obsolete **Line Skiff** for travel along old bell-road reinforcement lines. Early optional choices can now alter routes, shelters, survivor scenes, and local repair burdens without feeding a hidden morality meter.
+Centuries ago, the Long Hush frightened early bellwrights into building the **Meridian Bell** and six regional **Waybells**.
 
-At **High Aerie**, the Monastery of Updraft and Tempest Belfry form one regional campaign about intermittent motion, wind, public history, and the cost of preserving a heroic myth. Neris earns the **Vane Cloak** and learns the Countertone of **Motion**: systems can coordinate while continuing to change. Caldrin breaks with the idea that one master archive should decide which contradictory records survive; Tessa begins turning improvised courier relief into an actual civic responsibility.
+The network ended the visible crisis by forcibly synchronizing the Waking World and compressing the Hush.
 
-A compact interlude in the ancient **Bone Archive** teaches the **Palinode Pattern**, allowing Neris to perceive incompatible resonance histories without forcing one to become the official truth. It also exposes the older rescue relation that inspired Mercy Window, forcing Ilyra to admit she designed the local hold rather than merely observing Maelor's work.
+The emergent Hush consciousness later called the **Listener** became trapped inside that forced singular relation.
 
-That prepares **Mireglass**, where the Palace Under Reeds overlaps contradictory memories. Neris completes the **Mirror Nail**, a tool that temporarily commits one local echo-state, defeats the Mirror Widow without selecting one perfect history, and learns the Countertone of **Memory**: the past can remain knowable without being physically recreated. A stable Hush memory finally reveals the complete Mercy Window incident and marks the emotional low point between Neris and Ilyra.
+Orra remembers the system as salvation.
 
-At **Cairnfall Observatory**, Maelor's phase-correction machinery is shortening every moving pocket across Orra. Neris and Ilyra finally complete the Cantor Key's controlled **seam mode**, limited to authored places where reality is already thin. This is their first successful adult collaboration after the full truth is known; it is cooperation without automatic forgiveness. Neris disconnects Cairnfall from Meridian correction, allowing communities to remain active long enough to begin separating their own local systems from the central network.
+It forgets the prison underneath it.
 
-The final Countertone lies inside **Still-Cairn**, the impossible Hush accumulation of every Cairnspire that could have existed. There Neris finds Orin trapped inside a repeating reconstruction of the night Ilyra disappeared. Freeing him requires deliberately allowing useful temporary states to end rather than preserving every advantage. Neris learns **Ending**: what is over can be released without erasing that it happened. Orin then admits he knew Ilyra's official death story was false and had hidden her involvement with Maelor's research to control what life Neris would pursue. Ilyra and Orin likewise learn truths the other withheld; neither gets to edit Neris's future for protection anymore.
+## 2. Quiet Court / Mercy Window
 
-With Motion, Memory, and Ending learned, and Cairnfall no longer correcting every local deviation, the **Unringing** begins. Rootmere, Saltreach, Emberstep, High Aerie, Mireglass, and Cairnfall each develop local ways to survive and disconnect. Optional repair contracts, testimonies, mastery challenges, tool upgrades, anomaly hunts, the Freehand Frame prestige quest, and community projects can deepen those outcomes, but the world does not wait passively for Neris to complete a checklist before acting.
+Generations later, Meridian is failing and Bellwarden leadership hides increasingly severe accidents.
 
-Independent local signals create temporary routes into the **Null Meridian**, where Maelor has moved the central machine partly into the Hush. The final dungeon recombines the game's accumulated verbs rather than introducing a new mandatory language. Neris defeats Maelor, but he opens the Listener's prison rather than accept disconnection.
+After losing his spouse and child in a synchronization disaster, chief acoustician **Maelor Renn** helps form the private **Quiet Court** with engineers, clergy, route workers, grieving families, survivors, and others who no longer trust the state to investigate itself.
 
-The final conflict reveals that the ancient bellwrights and Maelor made opposite versions of the same mistake: both tried to defeat time. The ancients imprisoned endings; Maelor tried to imprison beginnings.
+**Ilyra Vale** joins willingly.
 
-The final act is not to repair the sacred machine. Neris deliberately destroys the Meridian Bell's central heart. The Hush settles into many small natural seams, the Listener is released from forced singular existence, Maelor survives to face public trial, and Orra replaces centralized sacred infrastructure with imperfect local responsibility.
+During a route collapse, Ilyra designs **Mercy Window**, a local phase hold meant to stop structural motion for seconds while trapped workers escape.
 
-Ilyra returns physically but is changed by eleven years in the Hush; her relationship with Neris must be built anew. Orin begins repairing trust by giving up protective secrecy. Tessa organizes an independent courier network. Caldrin opens the archives to provenance and contradiction. Sena helps cast decentralized civic bells bearing their makers' names. Rusk can participate in exposing Bellwarden cover-ups rather than being magically transformed into an uncomplicated reform hero.
+It saves lives.
 
-Neris eventually leaves Brindle as a traveling bellwright carrying a repaired but permanently cracked Cantor Key. The post-credits scene establishes that a different bell is ringing beneath an ocean far beyond Orra.
+When a mortally injured worker is held too long, conscious response begins repeating and new memory stops advancing normally.
 
-## Narrative authority rule
+Ilyra concludes release must remain part of any ethical hold.
 
-The individual chapter files are authoritative for scene-level story details. This index is the authoritative high-level spine.
+Maelor sees proof physical loss can be delayed by engineering.
 
-Additional authority is divided deliberately:
+That disagreement becomes the technical/moral ancestor of Stillring.
 
-- `story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md` — motivation and relationship continuity.
-- `12_100_PERCENT_ROUTE.md` — spoiler timing and optional-story sequencing.
-- `story/07_SCENE_BEAT_LEDGER.md` — mandatory scene staging and state transitions.
-- `story/08_REVEAL_AND_FORESHADOW_LEDGER.md` — mystery/reveal timing.
-- `story/09_MAIN_QUEST_OBJECTIVE_FLOW.md` — player-facing critical-path intent and objective gates.
-- `story/10_DIALOGUE_ANCHORS.md` — locked/strong dialogue setup and callback obligations.
-- `story/regions/00_REGIONAL_STORY_INDEX.md` and its linked bibles — regional ordinary life, recurring cast, local continuity, and community-state authority.
+Ilyra later creates the **Cantor Key**, which can compare local Waking/Hush relationships without automatically correcting them toward Meridian.
 
-Any change that contradicts the spine or another authority contract must update every affected canonical document in the same pull request.
+When Maelor's research stops treating release as necessary, Ilyra tries to expose it and falls through an unstable seam.
 
-## Structural rule
+The Bellwardens declare her dead.
 
-Stillring may study the **design jobs** performed by classic adventure games—teaching order, revisit cadence, side-content braiding, spatial recontextualization, and final synthesis—but the actual fiction, quest logic, geometry, interactions, characters, presentation, and implementation must remain Stillring's own.
+Orin knows the official story is false and hides Ilyra's Quiet Court involvement from six-year-old Neris, but he does not know she survived.
 
-The Grand Ring's placement after three regional tuning crises is a pacing decision, not an instruction to imitate any other game's early/late dungeon count.
+## 3. First Ring — a real failure deliberately worsened
+
+Eleven years later, Meridian is near a major uncontrolled failure.
+
+The annual **First Ring** festival is also an old full-network reference check.
+
+Maelor deliberately disables one emergency damping layer because he believes the Bellwardens will otherwise conceal another dangerous year.
+
+He expects a controlled crisis.
+
+He is wrong.
+
+Compressed Hush pressure escapes violently.
+
+Ilyra's hidden Cantor Key behaves as a non-Meridian local reference inside the Vale workshop, concentrating one of Brindle's strongest seams.
+
+Orin opens its compartment and is pulled through.
+
+Maelor did not target him, but Maelor's deliberate intervention helped create the conditions that took him.
+
+Before disappearing, Orin tells seventeen-year-old **Neris Vale**:
+
+> “Your mother didn't die where they said she did.”
+
+Neris briefly crosses the Hush, sees Orin, and is thrown back.
+
+The damaged Key partially imprints Neris's emergency local calibration into its field memory.
+
+This makes Neris the only practical current **field operator** during the crisis by accident and timing—not prophecy, bloodline, or cosmic selection.
+
+Immediate goal:
+
+**Reach Cairnspire. Find out what happened. Bring Orin back.**
+
+## 4. Cairnspire / Maelor becomes useful
+
+In Cairnspire, **Aven Rusk** attempts to confiscate the illegal experimental Key for legitimate safety reasons.
+
+Maelor intervenes because the Key can produce local comparisons normal Meridian-referenced instruments cannot.
+
+A physical calibration test shows it drifts away from Neris and stabilizes when Neris carries it.
+
+Maelor helps keep the Key in Neris's hands.
+
+He is genuinely useful and secretly needs exactly the clean field data Neris can gather.
+
+Registration introduces:
+- locally healthy equipment made wrong by central reference;
+- Tessa's Route House relationships;
+- Caldrin and contradictory archive copies;
+- Maelor's unexpectedly intimate knowledge of Ilyra.
+
+Maelor commissions the three strongest crisis regions:
+**Rootmere, Saltreach, Emberstep.**
+
+## 5. First Circuit — urgent calibration, not sightseeing
+
+The damaged Key gives inconsistent results under Cairnspire's compromised references.
+
+A false calibration could send Neris away from Orin.
+
+Independent bellwright **Eda Vell** explains the Key needs multiple local baselines.
+
+Tessa turns that need into a compact six-region courier loop.
+
+Before the first full dungeon, the player personally experiences ordinary life in:
+- Rootmere;
+- Saltreach;
+- Emberstep;
+- High Aerie;
+- Mireglass;
+- Cairnfall.
+
+The player rides ferries, eats, sees work, meets recurring residents, crosses High Aerie under normal wind, watches Mireglass children play with reflections, and looks through Cairnfall's public scopes.
+
+Graymile also seeds an obsolete **Line Skiff** and Tessa's history with the old machines.
+
+The First Circuit ends when the Key can distinguish healthy local disagreement from actual collapse.
+
+This gives the player ownership of Orra before dungeon cadence and makes Grand Ring a transformation of remembered places.
+
+## 6. Rootmere
+
+Neris returns to people already known from the circuit.
+
+Old Bellwarden braces are forcing the living bell-oak into a damaging load relation.
+
+Neris gains the **Anchor Line** and frees Mawhart/the bell-oak from the forced load.
+
+Ilyra's old maintenance plate warns against full network synchronization.
+
+Maelor provides genuinely good diagnostic help and plausibly dismisses the warning as an old overload note.
+
+Rusk acknowledges the brace failure but correctly notes shared flood timing has also saved lives.
+
+No region is allowed to reduce the whole story to “central standards bad.”
+
+Anchor immediately reopens remembered spaces.
+
+## 7. Saltreach
+
+The player returns to a harbor previously seen working.
+
+The coast's centralized calibration no longer matches physical reality.
+
+Neris gains the **Glasslung Reed** in Tide Foundry.
+
+The Nine-Lung Leviathan is released from coercive pressure machinery but later dies offshore from accumulated damage.
+
+The story allows a good intervention to arrive too late to repair everything.
+
+Tessa's old Quiet Court freight record is exposed.
+
+She knew the manifests were forged, the cargo restricted, and the pay suspiciously high. She chose not to ask more.
+
+Her failure is deliberate incuriosity, not secret villainy or total innocence.
+
+Maelor admits unsanctioned research with Ilyra.
+
+Rusk investigates but continues believing only the institution should decide what becomes public.
+
+Glasslung reopens old areas.
+
+## 8. Emberstep / three-point proof
+
+The player returns to an industrial community previously seen producing competent ordinary work.
+
+A state impurity accusation threatens the foundries.
+
+Neris and Tessa help Sena establish that the failures predate the blamed metal.
+
+Neris gains the **Temper Gauntlet**.
+
+Cinder Regent is an unambiguous dangerous machine rather than another secretly innocent boss.
+
+Sealed records prove:
+- Ilyra/Maelor collaboration;
+- the old three-point reference test naming Rootmere/Saltreach/Emberstep;
+- Mercy Window with Ilyra as lead;
+- abnormal First Ring damping access.
+
+Caldrin/Rusk records let the heroes deduce **before confronting Maelor** that three stable separated references can feed Meridian emergency entrainment.
+
+The return to Cairnspire is urgent.
+
+## 9. Grand Ring — betrayal through player action
+
+Neris, Tessa, Sena, and Caldrin arrive knowing what Maelor is attempting.
+
+Maelor does not explain their investigation back to them.
+
+He reveals only:
+- he deliberately selected the three reference regions;
+- he disabled First Ring damping to expose a failing system;
+- he has already committed Meridian to entrainment;
+- he believes another future is the unacceptable cost.
+
+The argument happens during a physical attempt to stop activation.
+
+Rusk's own security architecture traps civilians, and he begins opening the locks he previously defended.
+
+Grand Ring activates.
+
+The montage freezes **places the player visited before**:
+- Rootmere bell-oak;
+- Saltreach fog harbor;
+- Emberstep cooling court;
+- High Aerie wind span;
+- Mireglass Lantern Ferry;
+- Cairnfall public scopes.
+
+Neris's three correct repairs become the clean references Maelor abuses.
+
+Neris escapes into the Hush and finds Ilyra.
+
+## 10. Ilyra reunion — person first, lore later
+
+Recognition is angry and awkward.
+
+Ilyra does not deliver the entire cosmology.
+
+The player works around her imperfect reconstructed bench, sees how memory has failed, and encounters mundane mismatch between the mother Ilyra remembers being and the adult Neris who exists now.
+
+Ilyra admits Quiet Court membership, Key authorship, dangerous research, attempted exposure, and Hush survival.
+
+She withholds full Mercy Window history.
+
+She explains only the immediate problem:
+
+Stillring repeatedly drags matter toward one preserved phase, and **High Aerie currently contains a strong local relation that is still changing**.
+
+Goal:
+
+**Return to Brindle. Find Tessa. Reach High Aerie.**
+
+There is no three-Countertone shopping list.
+
+## 11. Changed Brindle / Line Skiff
+
+The player revisits familiar ordinary anchors.
+
+Early choices have authored consequences, with no secret morality branch.
+
+Tessa arrives using the obsolete Line Skiff technology seeded at Graymile.
+
+She has already been rescuing route workers without Neris.
+
+The first Skiff sequence contains a genuine stretch of speed/fun after the initial danger.
+
+Agency returns quickly after catastrophe.
+
+## 12. High Aerie — Motion discovered before named
+
+The player returns to a place remembered under ordinary wind.
+
+Now interrupted motion threatens suspended districts.
+
+Neris gains the **Vane Cloak**.
+
+Choir of Talons are ordinary predators; not every enemy is an infrastructure victim.
+
+Saint Varo's Hush construct can only stabilize when his cowardice and later courage are both allowed to remain part of one life.
+
+The resulting local relation keeps changing without collapsing into one state.
+
+Only after the player experiences it does Ilyra name it:
+
+**Motion.**
+
+The Wind Kitchen provides a normal meal/noisy breath before the next lead.
+
+## 13. Bone Archive / Palinode
+
+High Aerie records point to old rescue relations beneath Rootmere that resemble Motion and Mercy Window.
+
+The compact **Bone Archive** teaches **Palinode**, which keeps incompatible resonance histories legible without choosing one as master.
+
+Evidence forces Ilyra to admit she designed Mercy Window.
+
+Neris resents having to extract truth layer by layer.
+
+A quiet aftermath follows.
+
+Palinode points toward pathological contradictory states spreading through Mireglass.
+
+## 14. Mireglass — Memory discovered before named
+
+The player returns to reflections once experienced as funny/beautiful.
+
+Now contradictory states are physically dangerous.
+
+Neris completes the **Mirror Nail**, which commits one small local echo-state temporarily without declaring it objectively true.
+
+Mirror Widow resolves when incompatible selves stop fighting to become the sole official history.
+
+The stable relation allows the past to remain knowable without forcing the present to become it again.
+
+Only then is it named:
+
+**Memory.**
+
+Palinode + Mirror Nail let the player reconstruct the full Mercy Window event through evidence and interaction rather than an Ilyra confession dump.
+
+This is the emotional low point between Neris and Ilyra.
+
+A major old-world revisit wave opens.
+
+## 15. Cairnfall — repair the relationship through work
+
+The player returns to a public-observation culture remembered before catastrophe.
+
+Meridian correction is making every moving pocket shorter and turning maps consistently wrong.
+
+Neris and Ilyra finish **controlled seam mode** together.
+
+Their first adult collaboration after the full truth is competent and awkward, not a forgiveness speech.
+
+Neris disconnects Gravemoon correction while preserving local observation.
+
+Moving pockets begin lasting longer.
+
+Raw Cairnfall data reveals one Hush-Cairnspire pattern that **cannot finish releasing a used state** and matches Orin's workshop signal.
+
+The next objective is Orin—not “collect the third Countertone.”
+
+## 16. Still-Cairn — Ending discovered by letting home go
+
+The player crosses an impossible civic mass made from known Cairnspire possibilities.
+
+Ordinary Vale family echoes make the preserved workshop genuinely tempting.
+
+Orin is trapped preserving every state the instant it feels safe.
+
+The player must repeatedly release useful temporary routes.
+
+At the climax, the perfect Vale workshop appears.
+
+Even Orin's historically bad chair is level, which feels wrong because the player knew the real one.
+
+Neris refuses both to destroy the memory and to live inside it.
+
+The player releases the workshop.
+
+Only then is the relation named:
+
+**Ending.**
+
+Orin wakes and admits his years of protective secrecy.
+
+No instant reconciliation follows.
+
+## 17. Unringing — the world acts without waiting
+
+With Cairnfall correction disabled and the three learned relations understood, communities can remain active long enough to build local alternatives.
+
+They have already started.
+
+The Unringing includes:
+- meals;
+- arguments;
+- route paperwork;
+- failed local experiments;
+- repairs;
+- small celebrations;
+- people solving problems without Neris.
+
+Optional completion deepens preparedness and credits recurrence but does not create the only valid ending.
+
+Independent compatible signals open a route to Null Meridian.
+
+## 18. Null Meridian / Maelor
+
+The sacred exterior gives way to worker infrastructure.
+
+The final dungeon is a **curriculum exam**: old verbs recombine; no new mandatory language appears.
+
+Maelor's private space and ordinary objects carry his grief before dialogue.
+
+His final argument uses losses the player actually witnessed rather than a long manifesto.
+
+The central Neris/Maelor exchange remains concise.
+
+Neris defeats him.
+
+He opens the Listener's prison rather than release his family's preserved impressions.
+
+## 19. Listener — temptation uses the player's own memories
+
+The Listener offers mandatory family alternatives **and save-sensitive ordinary moments the player actually loved**:
+- meals;
+- ferries;
+- wind;
+- games;
+- side characters;
+- imperfect objects;
+- optional relationship states.
+
+The trap does not look perfect at first.
+
+It looks familiar.
+
+Then it cannot progress.
+
+The final mechanical realization is that repairing Meridian would recreate its central authority.
+
+Neris decommissions it by shattering the central heart using Motion, Memory, Ending, and the learned toolkit.
+
+The Hush releases into local seams.
+
+Some useful Hush spaces vanish permanently.
+
+Freedom includes loss.
+
+The Listener ceases to exist as one forced singular consciousness without becoming fully explained.
+
+## 20. Ending
+
+Maelor survives and begins a public trial that is not finished in the credits.
+
+Ilyra returns but remains changed.
+
+Orin begins practicing honesty rather than being magically repaired.
+
+Tessa's courier network becomes real and messy.
+
+Regional communities retain standards where useful while exposing assumptions and distributing authority.
+
+Arguments continue.
+
+Systems still fail.
+
+Neris's field journal has gradually become full of regional repair methods and local solutions.
+
+The final choice to become a **traveling bellwright** therefore pays off a desire built across the game rather than appearing as an epilogue career assignment.
+
+The repaired Cantor Key remains cracked.
+
+Final line:
+
+Tessa:
+> “You coming, bellwright?”
+
+Neris:
+> “Yeah. I heard something cracked.”
+
+The remote ocean bell rings after credits and remains unexplained.
+
+---
+
+# Structural rules
+
+Stillring studies the **design jobs** performed by classic adventure games:
+- clean motivation;
+- world ownership before escalation;
+- tools as reusable verbs;
+- revisits that reward memory;
+- optional systems braided into the route;
+- seeded traversal transformation;
+- varied dungeon cadence;
+- world-state recontextualization;
+- final synthesis.
+
+It does **not** copy Ocarina of Time's characters, maps, story expression, dungeon layouts, quest choreography, melodies, items, dialogue, or role-for-role cast.
+
+The detailed compliance boundary lives in `story/15_OOT_PRINCIPLE_COMPLIANCE.md`.
+
+---
+
+# Narrative authority rule
+
+The individual core chapter files own scene-level story details.
+
+This index owns the high-level spine.
+
+Additional authority:
+- `story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md` — character motivation/relationship continuity;
+- regional bibles — local community continuity;
+- `story/11_NARRATIVE_FLOW_AUDIT.md` — red-team problem/repair rationale;
+- `story/12_WORLD_PULSE_LEDGER.md` — offscreen state changes;
+- `story/13_EMOTIONAL_PACING_MAP.md` — pacing intent;
+- `story/14_QUIET_MOMENTS_AND_TRAVEL_BEATS.md` — protected breathing room;
+- `story/15_OOT_PRINCIPLE_COMPLIANCE.md` — reference-principle compliance;
+- `story/16_RED_TEAM_SCENE_OBJECTIVE_PATCHES.md` — authoritative overrides to conflicting legacy production ledgers;
+- `story/17_SIDE_INTERACTION_REBALANCE.md` — side-interaction palette.
+
+Any future narrative change that affects more than one authority must update all affected contracts together.
