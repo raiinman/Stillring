@@ -23,9 +23,10 @@ Locked movement/camera principles:
 - Controller movement preserves useful analog range for careful positioning through confident full-speed travel.
 - Neris has a sustained sprint available from the beginning for faster ground travel; sprint is separate from the eventual combat evade.
 - Ordinary sprint has **no stamina or other resource cost** and may be sustained indefinitely during normal traversal.
+- Sprint supports **Hold** and **Toggle** input modes; Hold is the default and Toggle is an accessibility/control preference.
 - A future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
-- Sprint supports **Hold** and **Toggle** input behavior; **Hold is the default** and Toggle is available through controls/accessibility settings.
 - Sprint must not replace useful analog walk/run control or become a second dodge.
+- Full sprint remains highly steerable; ordinary curves/corners stay responsive, while hard reversals briefly shed momentum instead of snapping instantly at full speed or forcing a large turning circle.
 - Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
 - Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
 - Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
