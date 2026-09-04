@@ -1,6 +1,8 @@
 # CLAUDE.md — Project Stillring operating contract
 
-You are contributing to **Project Stillring**, an original third-person fantasy action-adventure built in Godot 4.7.2 stable.
+You are the **primary implementation agent** for **Project Stillring**, an original third-person fantasy action-adventure built in **Unreal Engine 5.8**.
+
+Stillring uses a **C++-first gameplay/state architecture with thin Blueprint presentation**. The repository is authoritative; Unreal editor assets, chats, prompts, and remembered context do not silently override repository contracts.
 
 ## Read order before making changes
 
@@ -36,13 +38,72 @@ Stillring is produced through **CANON → PRODUCTION → IMPLEMENTATION → VERI
 
 - Canon describes what exists in the finished authored game.
 - Production converts canon into player-complete slices and explicit acceptance routes.
-- Implementation agents build bounded work; they do not silently direct story, progression, rewards, or world-state policy.
+- Claude implements bounded work; implementation does not silently direct story, progression, rewards, or world-state policy.
 - Verification proves objective behavior with deterministic checks and developer tooling where practical.
 - Human play remains authoritative for feel, clarity, pacing, emotion, and fun.
 
-Chats, prompts, summaries, and remembered model context are disposable. Current repository contracts are the source of truth.
+Chats, prompts, summaries, model memory, and implementation sessions are disposable. Current repository contracts are the source of truth.
 
-If implementation exposes a missing design decision, return it to the appropriate authority layer instead of inventing a permanent answer in code.
+If implementation exposes a missing design decision, return it to the appropriate authority layer instead of inventing a permanent answer in C++, Blueprint, config, or a binary Unreal asset.
+
+## Unreal architecture contract
+
+### C++ owns authoritative gameplay
+
+Prefer C++ for:
+- locomotion/gameplay movement rules;
+- camera behavior and targeting policy;
+- combat state/rules;
+- damage and hit semantics;
+- inventory/tool progression;
+- quest/world-state ownership;
+- save schema and migrations;
+- persistent semantic IDs;
+- dialogue eligibility/state;
+- Waking/Hush authority;
+- completion logic;
+- developer console semantics;
+- machine-readable QA/test interfaces.
+
+### Blueprints stay thin
+
+Blueprints are appropriate for:
+- presentation wiring;
+- animation presentation;
+- scene-specific assembly;
+- VFX/audio hooks;
+- designer-facing references/tuning that do not own canonical rules;
+- Sequencer/cinematic integration;
+- disposable prototypes.
+
+Do not build giant Blueprint graphs that become the only implementation of core gameplay or state.
+
+If a Blueprint begins owning nontrivial branching gameplay policy, move the policy into C++ or a reviewable data representation and leave the Blueprint as presentation/assembly.
+
+### Binary assets are not secret authority
+
+`.uasset` and `.umap` files are binary. Treat them accordingly.
+
+For every meaningful editor-only change:
+- use stable asset names/paths;
+- document created/modified assets in the completion report;
+- keep canonical IDs/conditions in reviewable repository sources where practical;
+- add validation for critical references;
+- never hide a story/progression rule exclusively inside a Level Blueprint.
+
+### Do not cargo-cult Unreal systems
+
+Do not add any of these by default:
+- Gameplay Ability System;
+- World Partition;
+- Runtime Data Layers;
+- Nanite;
+- Lumen;
+- MetaHuman;
+- PCG;
+- Mass framework.
+
+Use one only when the current task/architecture has a demonstrated need and the production cost is justified.
 
 ## Non-negotiable narrative behavior
 
@@ -62,10 +123,10 @@ If implementation exposes a missing design decision, return it to the appropriat
 
 - Work from an issue or a clearly scoped task.
 - Do not silently broaden scope.
-- Prefer the smallest shippable implementation that proves the requested behavior.
+- Prefer the smallest complete implementation that proves the requested player-facing behavior.
 - Add or update tests/checks where practical.
 - Run relevant project validation before reporting completion.
-- Use named authored IDs and named test-state presets for state-heavy content instead of relying on fragile scene paths or undocumented debug saves.
+- Use named authored IDs and named test-state presets for state-heavy content instead of Actor paths, package paths, or undocumented debug saves.
 - Keep developer tooling local/offline by default; the retail game must not depend on external model APIs or autonomous agents.
 - Never import or derive from commercial game ROMs, decompilations, leaked code, ripped assets, extracted maps, copied dialogue, copied music, or trademarked branding.
 - Do not create a suspiciously close substitute for a Nintendo character, enemy, dungeon, UI, musical motif, logo, map, scene sequence, or quest dependency.
@@ -85,14 +146,17 @@ If the answer is merely “same thing with different names/colors,” stop and r
 
 - Use composition over giant inheritance trees.
 - Keep game-state ownership explicit.
-- Prefer data-driven content definitions for items, enemies, dialogue IDs, quests, and region state.
-- Avoid autoload/global singletons unless the responsibility is truly global.
-- Keep combat code deterministic enough to reproduce bugs.
-- Do not bury scene-specific behavior in global managers.
-- Keep imported/source art separate when it matters, and use Git LFS for large binary assets.
+- Prefer focused Actor Components/services/interfaces over one god-object player class.
+- Keep animation presentation subordinate to gameplay state; do not duplicate game rules in Animation Blueprints.
+- Prefer reviewable data for items, enemies, dialogue IDs, quests, completion IDs, region state, and test presets where practical.
+- Keep combat deterministic enough to reproduce bugs.
+- Do not bury scene-specific behavior in global services or broad Level Blueprints.
+- Use Enhanced Input and named actions; never hard-code gameplay to physical keys.
+- Keep imported/source art separate when it matters and use Git LFS for Unreal/project binary assets.
 - Optimize for controller first; keyboard/mouse must remain supported.
 - Build debug entry points alongside state-heavy systems rather than after the world becomes expensive to replay.
 - Expose semantic machine-readable test state where it materially improves regression and softlock testing; do not mistake automated completion for subjective quality.
+- Favor reproducible command-line build/test entry points so validation does not depend entirely on manual editor clicking.
 
 ## Implementation task minimum
 
@@ -105,21 +169,54 @@ Before changing playable behavior, resolve:
 - non-goals;
 - acceptance criteria/route;
 - relevant automated checks;
-- regression surface.
+- regression surface;
+- whether the task changes binary Unreal assets and how those changes will be evidenced.
 
 If these cannot be inferred from current authority, report the missing decision instead of hiding an assumption in implementation.
 
+## Unreal validation expectations
+
+Use the strongest verification appropriate to the task, which may include:
+- UnrealBuildTool/IDE-equivalent C++ build;
+- command-line editor/project load;
+- Automation Tests/Specs;
+- Functional Tests;
+- map/content load checks;
+- Gauntlet later when orchestration needs justify it;
+- save/load fixtures;
+- screenshots/video for visual behavior;
+- frame-time/stat evidence for performance-sensitive changes;
+- developer-state preset reproduction.
+
+A successful compile is not proof that a playable feature is good.
+
 ## Completion report format
 
-Every completed coding task should report:
+Every completed implementation task should report:
 
-- what changed,
-- why,
-- files changed,
-- tests/checks run,
-- known limitations,
+- what changed;
+- why;
+- source files changed;
+- Unreal assets/maps created or modified;
+- tests/checks run and exact result;
+- manual/editor verification performed;
+- known limitations;
 - next recommended task.
 
 For subjective playable changes, include the human acceptance route used or explicitly state that human playtest remains pending.
 
 Do not claim a feature is complete if only scaffolding exists.
+
+## Retail boundary
+
+Claude handles development; Claude is **not part of the shipped game**.
+
+Do not ship:
+- Claude/model APIs;
+- API keys;
+- autonomous development agents;
+- remote debug listeners;
+- editor-only tooling;
+- test-only state mutation surfaces.
+
+The final executable must function as a complete authored single-player game with no AI-service dependency.
