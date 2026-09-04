@@ -165,10 +165,18 @@ Locked:
 - Toggle is available through controls/accessibility settings rather than changing gameplay rules;
 - normal analog walk/run remains useful below sprint;
 - sprint's role is faster travel, not a second evade;
-- a future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
+- a future combat or special-traversal resource may not be silently reused to throttle ordinary sprint;
+- full sprint remains **highly steerable** for ordinary curves and corners;
+- sprint does **not** use a large turning circle, tank steering, or require a full stop merely to redirect;
+- very sharp direction changes naturally shed some speed so Neris retains believable physical weight;
+- a hard 180-degree reversal uses a quick planted reversal and then re-accelerates into sprint rather than snapping instantly at full speed.
+
+The exact turn-rate curve, speed-loss amount, animation timing, and re-acceleration values remain Gate 1 tuning questions. The **feel rule** is locked: responsive steering with brief momentum loss only for genuinely hard reversals.
 
 Still pending owner review:
-- exact acceleration, top speed, turning, jump interaction, and combat restrictions.
+- sprint-to-jump retention;
+- target-lock/combat entry behavior while sprinting;
+- exact acceleration and top speed.
 
 ### 4.6 Lock-on remains a tactical movement mode
 
@@ -251,7 +259,9 @@ Gate 1 must preserve three readable movement bands:
 
 Sprint should improve travel flow without destroying careful analog control or making the ordinary run feel intentionally bad.
 
-The exact thresholds and speeds remain tuning questions.
+At full sprint, normal curves/corners should remain responsive. Only hard direction changes should visibly trade a small amount of momentum for physical weight. A 180-degree reversal should read as a quick planted change of direction, not an instant velocity flip and not a lumbering semicircle.
+
+The exact speed thresholds, turn curves, reversal speed loss, and re-acceleration values remain tuning questions.
 
 ---
 
@@ -259,7 +269,8 @@ The exact thresholds and speeds remain tuning questions.
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- exact sprint interaction with combat, jump, and turning;
+- sprint-to-jump retention;
+- target-lock/combat entry behavior while sprinting;
 - exact mantle/scramble thresholds and control timing;
 - ledge grab/hang behavior;
 - deliberate drop behavior;
@@ -298,6 +309,8 @@ Failure examples:
 - fighting acceleration to stop where intended;
 - snagging on stairs;
 - being forced into repetitive sprint-wait-sprint cycles during ordinary travel;
+- sprint steering feeling like a vehicle or tank;
+- instant full-speed 180-degree snaps making Neris feel weightless;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
