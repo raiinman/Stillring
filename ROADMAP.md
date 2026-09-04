@@ -2,6 +2,8 @@
 
 The roadmap is gate-based. Calendar estimates are secondary; evidence decides whether we advance.
 
+All gates operate under `docs/15_CANON_TO_PLAY_PIPELINE.md`: **CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY**.
+
 ## Gate 0 — Charter and narrative locked
 
 **Status:** narrative/design foundation complete for production entry.
@@ -21,9 +23,11 @@ Locked deliverables:
 - world-pulse / emotional pacing / quiet-moment rules;
 - completion taxonomy and authored side-content ledger;
 - technical direction;
-- vertical-slice definition.
+- vertical-slice definition;
+- canon-to-play production contract;
+- developer-tooling / machine-QA contract.
 
-Exit condition: the team can explain the game in two minutes without saying “it is basically Zelda with changed names,” and implementation agents have one non-conflicting narrative authority chain.
+Exit condition: the team can explain the game in two minutes without saying “it is basically Zelda with changed names,” implementation agents have one non-conflicting narrative authority chain, and production has an explicit method for turning that authority into playable slices without agent improvisation.
 
 ---
 
@@ -36,7 +40,8 @@ Build only graybox systems:
 - target lock;
 - ledge/drop handling;
 - interaction prompt;
-- debug room.
+- debug room;
+- minimal runtime state/performance readout.
 
 Exit condition: moving around an empty room already feels deliberate and controllable.
 
@@ -53,7 +58,8 @@ Add:
 - one ranged enemy;
 - one shield/armor enemy;
 - lock-on switching;
-- death/retry loop.
+- death/retry loop;
+- test enemy spawn/reset and health/resource restore controls.
 
 Exit condition: ten minutes of repeated combat remains readable and satisfying without story or final art.
 
@@ -71,7 +77,8 @@ Exit condition:
 - transition is fast;
 - state ownership is understandable;
 - puzzles can depend on different geometry/state in each layer;
-- save/load survives layer changes.
+- save/load survives layer changes;
+- developer controls can force the approved test transition and inspect paired persistent IDs.
 
 ## Gate 5 — Vertical slice
 
@@ -94,12 +101,25 @@ Content:
 - representative sound/music;
 - accessibility baseline.
 
+Required testing/tooling for the slice:
+- teleport/checkpoint selection for slice areas;
+- inventory/tool grant/remove for test loadouts;
+- encounter and boss reset;
+- quest/objective inspection for slice content;
+- dedicated developer save slots;
+- persistent-ID inspection;
+- named state presets for important slice states;
+- local bug/observation capture;
+- at least one automated smoke route through a representative slice path.
+
 Exit condition:
 - new tester finishes without developer coaching;
 - no progression blockers;
 - stable frame pacing on target PC;
 - art direction is recognizable from screenshots;
 - content pipeline is fast enough to repeat;
+- important slice states can be reproduced in minutes rather than by replaying the entire route;
+- automated smoke route and save/load checks pass;
 - team chooses to continue after seeing real production cost.
 
 ## Gate 6 — Production foundations
@@ -115,10 +135,25 @@ Before mass content:
 - interactable framework;
 - inventory/tool framework;
 - options/remapping;
-- local-only debug/telemetry if used;
-- automated smoke-test scene.
+- durable local developer console;
+- named world/story test-state presets;
+- semantic machine-readable state dump;
+- reusable local machine-playable QA surface;
+- save/load fixture automation;
+- quest/dialogue/reference validation;
+- completion-ledger validation hooks;
+- structured local bug/observation capture;
+- automated smoke-test scene/harness.
 
 World-state architecture must support characters and settlements changing while Neris is absent.
+
+The machine-QA surface is development infrastructure only. Retail builds must not require model APIs, remote agents, network control surfaces, or player-funded AI usage.
+
+Exit condition:
+- the architecture is stable enough to build region pods without programmer surgery;
+- important story/world states can be created with named, reviewable presets;
+- regressions can exercise semantic game actions and read semantic state without relying on screenshot automation;
+- a tester can reproduce a late or state-heavy scenario quickly and hand structured evidence to an engineer/agent.
 
 ---
 
@@ -144,6 +179,8 @@ Build the ordinary-life slices that will later become parts of the full changed-
 
 Do **not** build full High Aerie/Mireglass/Cairnfall campaigns as if they happen before Grand Ring. Only their before-memory spaces belong in this wave.
 
+Each production pod must have canonical sources, a player-facing acceptance route, named test presets for important states, and regression coverage for affected earlier content.
+
 Exit condition: a start-to-Grand-Ring playthrough makes all six regions recognizable and the three crisis regions production-complete.
 
 ---
@@ -162,6 +199,8 @@ Build:
 - Line Skiff acquisition/tutorial;
 - moving-pocket rules;
 - post-Grand-Ring route-state framework.
+
+Required verification includes save/reload across the pivot, setup/payoff state combinations, recurrence changes, and regression against pre-Grand-Ring presets.
 
 Exit condition: the world-state pivot is fully playable and old choices visibly alter changed-world routes/social states without breaking saves.
 
@@ -207,6 +246,8 @@ Build:
 - credits-state variations;
 - post-credits stinger.
 
+Required verification includes completion-ledger reconciliation, sequence probes around optional Unringing work, and save-state-sensitive credits/epilogue checks.
+
 Exit condition: complete story route and legitimate non-100% ending work; 100% changes specificity/preparedness rather than ending validity.
 
 ---
@@ -216,6 +257,8 @@ Exit condition: complete story route and legitimate non-100% ending work; 100% c
 Definition: feature-complete, start-to-finish playable, placeholder assets allowed.
 
 No new foundational systems after alpha without explicit approval.
+
+Automated progression, save/load, completion-integrity, and representative region regression suites must be running before Alpha exit.
 
 ## Gate 12 — Beta
 
@@ -243,7 +286,8 @@ Requirements:
 - storefront assets;
 - build reproducibility;
 - legal/IP review;
-- final backup/tag.
+- final backup/tag;
+- retail build proven free of development-only remote control/model dependencies.
 
 ## Gate 14 — Launch and operations
 
