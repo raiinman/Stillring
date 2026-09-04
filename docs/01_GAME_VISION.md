@@ -35,6 +35,9 @@ Locked movement/camera principles:
 - Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
 - Low-obstacle mantle/scramble is **automatic from clear movement or jump intent** when the path is valid; there is no separate mantle button.
 - Automatic mantle requires clear directional intent, a reachable valid top/landing surface, an appropriate approach angle, enough space to complete the move, and no conflicting higher-priority action; it must never feel magnetic or trigger merely because Neris passes near an obstacle.
+- Baseline mantle height is **body-relative** rather than defined by a permanent arbitrary Unreal-unit threshold: roughly knee-through-waist obstacles are ordinary fluent traversal; waist-through-lower-chest obstacles remain baseline-mantleable but require a clearly deliberate direct approach or jump; shoulder-height and above is not ordinary auto-mantle territory.
+- Shoulder-height-plus walls/ledges are treated as meaningful traversal problems, ledge-specific interactions, routes, tools, or later capabilities rather than silently expanding baseline parkour.
+- Exact mantle heights/angles in centimeters are Gate 1 tuning values tied to Neris's actual character scale; those numbers may be tuned without changing the locked body-relative scope.
 - Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
 - The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 - Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
