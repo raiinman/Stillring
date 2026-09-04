@@ -6,13 +6,16 @@
 
 ## Current main
 
-`6c2b255f822e43ffaa1c0366651930b7121b4587`
+`7ebf9526f02d83d8a98b254dc64a89250dcba8a0`
+
+Current decision-authority branch:
+- `design/deliberate-ledge-drop`
 
 Latest merged decision PR:
 - PR #37 — `Design: lock same-handhold ledge shimmy`
 
-Reference research completed after that decision:
-- `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — **research input only; not design authority**. It studies AC1 through the Ezio/Kenway/Unity/RPG/Mirage/Shadows eras and 2026 Black Flag Resynced for player-intent, flow, safety, route-design, animation, and climbing lessons. It does not decide any unresolved Stillring mechanic.
+Reference research:
+- PR #38 / `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — **research input only; not design authority**. It studies AC1 through the Ezio/Kenway/Unity/RPG/Mirage/Shadows eras and 2026 Black Flag Resynced for player-intent, flow, safety, route-design, animation, and climbing lessons. It does not decide unresolved Stillring mechanics.
 
 ## Read first in the next chat
 
@@ -84,7 +87,7 @@ Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses 
   - shoulder-height and above: **not** baseline auto-mantle territory.
 - Exact centimeters/angles/detection volumes/timing remain Gate 1 tuning tied to Neris's actual prototype scale and may not silently expand baseline mantle upward.
 
-### Ledge catch / hang / pull-up / shimmy
+### Ledge catch / hang / pull-up / shimmy / drop
 
 - Above the ordinary mantle band, Neris may automatically catch a **valid reachable ledge** when jump/fall trajectory and directional intent clearly communicate the attempt.
 - There is no dedicated ledge-grab button.
@@ -101,8 +104,12 @@ Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses 
 - Shimmy may correct an imperfect catch or move Neris toward a valid pull-up position.
 - Baseline shimmy does **not** wrap corners, cross gaps, transfer to another wall/ledge, jump laterally between ledges, or climb vertically between handholds.
 - A corner, gap, new wall/ledge, or higher/lower handhold is a separate traversal problem.
-- Exact shimmy speed, acceleration, animation cadence, hand spacing, and ledge-follow tolerances remain Gate 1 tuning.
-- Ledge catch/pull-up/shimmy does not silently authorize a broader climbing system.
+- While hanging, release requires a **distinct deliberate Drop/Release action press**.
+- Ordinary analog direction alone — including down, away, diagonal-down, partial input, drift, or dead-zone noise — never releases the ledge.
+- A deliberate Drop/Release press acts promptly with **no hold-to-confirm delay**.
+- The exact physical button/key binding is not locked and remains remappable control-layout/accessibility policy.
+- Exact shimmy/drop timing, animation, and tolerance values remain Gate 1 tuning.
+- Ledge catch/pull-up/shimmy/drop does not silently authorize a broader climbing system.
 
 ## Current locked movement grammar
 
@@ -130,6 +137,8 @@ hang + continued toward/up intent       → pull up if top is valid/clear
 hang + left/right on same handhold      → simple lateral shimmy
 shimmy reaches corner/gap/new wall      → stop; NO automatic continuation
 shimmy toward higher/lower handhold     → NO vertical transfer/climb
+hang + analog down/away                 → remain hanging; NEVER implicit drop
+hang + explicit Drop/Release press      → promptly let go
 invalid or blocked top                  → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge   → NO catch
 passing near/alongside mantle geometry  → NO mantle
@@ -139,13 +148,11 @@ major cliff / meaningful height gate    → route, tool, or later traversal capa
 
 ## IMMEDIATE NEXT OWNER DECISION
 
-**Deliberate drop behavior while hanging.**
+**Broader climbing scope.**
 
-The shimmy package is owner-approved, repository-locked, and merged. The Assassin's Creed study strengthens the case for separating dangerous release from ordinary analog correction, but it does **not** decide the input.
+Ledge catch, pull-up, same-handhold shimmy, and deliberate Drop/Release behavior are owner-approved and locked. The next question is intentionally broader but still only one decision:
 
-Next question:
-
-> When Neris is hanging, what explicit player input means “let go,” and how do we prevent ordinary analog movement from accidentally causing a fall?
+> Beyond the existing catch → hang → same-handhold shimmy → pull-up/drop grammar, does Neris have any baseline free-climbing capability at all, or should broader climbing exist only on specially authored traversal structures/tools/capabilities?
 
 Do **not** let Unreal defaults, Zelda, Assassin's Creed, Souls games, or another traversal system answer this automatically.
 
@@ -153,16 +160,15 @@ Do **not** let Unreal defaults, Zelda, Assassin's Creed, Souls games, or another
 
 Continue one meaningful decision at a time:
 
-1. deliberate drop behavior;
-2. broader climbing scope;
-3. ladders;
-4. swimming;
-5. crouch/stealth posture if any;
-6. slope scrambling/sliding;
-7. fall damage/recovery;
-8. jump arc / air control;
-9. interaction while moving;
-10. traversal-tool overrides.
+1. broader climbing scope;
+2. ladders;
+3. swimming;
+4. crouch/stealth posture if any;
+5. slope scrambling/sliding;
+6. fall damage/recovery;
+7. jump arc / air control;
+8. interaction while moving;
+9. traversal-tool overrides.
 
 Issue #1 also still needs enough prototype-tuning authority for controller dead zones, movement thresholds, acceleration/deceleration philosophy, and target-lock movement details before it can be considered implementation-complete. Do not let Claude infer permanent design policy from Unreal defaults.
 
@@ -199,7 +205,8 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #34 automatic reachable ledge catch
 - #35 ledge hang pull-up continuation
 - #37 same-continuous-handhold ledge shimmy
+- current branch `design/deliberate-ledge-drop` — deliberate explicit ledge release authority
 
 ## Important continuation rule
 
-If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **deliberate drop decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
+If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **broader climbing scope decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
