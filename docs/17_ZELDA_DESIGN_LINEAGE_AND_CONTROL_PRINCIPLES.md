@@ -139,13 +139,15 @@ The baseline grammar is:
 ```text
 tiny step / stair / minor floor lip   → automatic terrain handling
 small gap / intentional vertical move → deliberate jump
-obviously low obstacle                → clear move/jump intent + automatic mantle/scramble
+knee → waist obstacle                 → fluent automatic step/vault/mantle
+waist → lower-chest obstacle          → deliberate direct approach/jump + automatic mantle
+shoulder-height and above             → not baseline auto-mantle; real traversal problem
 major cliff / meaningful height gate  → route, tool, or later traversal capability
 ```
 
 Automatic mantle must only trigger when the player's intention is clear and the path is valid. Required safeguards:
 - sustained directional intent toward the obstacle or a jump trajectory clearly carrying Neris into it;
-- an obstacle within the authored low-mantle class;
+- an obstacle within the authored baseline-mantle class;
 - a reachable, valid top/landing surface;
 - an approach angle appropriate to the move;
 - enough clearance and standing space to complete the traversal;
@@ -154,7 +156,17 @@ Automatic mantle must only trigger when the player's intention is clear and the 
 
 The system must never feel magnetic. The player should feel that Neris understood an already-expressed traversal intention, not that the game seized control.
 
-The exact jump height, arc, air control, mantle height/angle thresholds, animation, detection volumes, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, and the no-separate-button rule are locked.**
+#### Body-relative mantle scope
+
+Baseline mantle scope is defined against **Neris's body**, not a permanent arbitrary Unreal-unit number:
+
+- **knee through waist height:** ordinary traversal; forward movement intent should be enough for a fluent step/vault/mantle response;
+- **waist through lower-chest height:** still baseline-mantleable, but it should read as intentional traversal and require a clearly direct approach or jump into the valid mantle path;
+- **shoulder height and above:** not ordinary automatic mantle territory. This becomes a meaningful ledge/traversal interaction, route, tool, later capability, or intentionally inaccessible geometry.
+
+This body-relative scope is locked. Exact centimeter thresholds, approach-angle tolerances, detection volumes, animation selection, and timings are Gate 1 tuning values tied to Neris's actual prototype scale. Tuning those values may refine feel but may not silently expand baseline mantle into shoulder-height-plus parkour.
+
+The exact jump height, arc, air control, animation, detection volumes, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-button rule, and the body-relative mantle scope are locked.**
 
 ### 4.5 Sustained sprint
 
@@ -296,9 +308,9 @@ When sprint transitions into a jump, horizontal sprint momentum carries through 
 
 When sprint transitions into target-lock combat, sprint authority ends immediately as a state but **velocity does not disappear instantly**. Gate 1 should tune a short natural deceleration/pivot that settles rapidly into precise target-relative movement. The transition should feel intentional and physical, never like an invisible wall and never like Neris keeps using full exploration sprint around the target.
 
-For low obstacles, Gate 1 should tune automatic mantle detection so normal traversal feels fluent without magnetic false positives. The test must include head-on approaches, shallow angles, parallel passes, jump-into-mantle cases, invalid landing tops, low ceilings, and nearby-but-not-intended obstacles.
+For low obstacles, Gate 1 should tune automatic mantle detection so normal traversal feels fluent without magnetic false positives. The test must include head-on approaches, shallow angles, parallel passes, jump-into-mantle cases, invalid landing tops, low ceilings, nearby-but-not-intended obstacles, and representative knee/waist/lower-chest/shoulder-height geometry. Shoulder-height-plus test pieces must prove they do **not** silently become baseline auto-mantles.
 
-The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, mantle thresholds, and mantle timing remain tuning questions.
+The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, and mantle timing remain tuning questions.
 
 ---
 
@@ -306,7 +318,6 @@ The exact speed thresholds, turn curves, reversal speed loss, re-acceleration va
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- exact mantle/scramble height and angle thresholds;
 - ledge grab/hang behavior;
 - deliberate drop behavior;
 - climbing scope;
@@ -351,6 +362,7 @@ Failure examples:
 - target-lock allowing full exploration sprint circles that undermine precise combat spacing;
 - auto-mantle pulling Neris onto geometry she was merely passing;
 - obvious valid low obstacles failing because the player did not press a redundant context button;
+- shoulder-height-plus geometry being swallowed by baseline auto-mantle and erasing authored traversal distinctions;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
