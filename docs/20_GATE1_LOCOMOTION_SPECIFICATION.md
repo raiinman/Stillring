@@ -184,17 +184,16 @@ Exact angles/traction/friction/slide authority remain tuning. Slope rules may no
 ---
 
 ## 9. Fall damage / landing recovery — LOCKED
-
 Fall consequences use body/level-design-relative severity bands. Exact thresholds are tuned against Neris's scale, jump arc, ordinary traversal envelope, representative cliffs, and level geometry.
 
 ### Safe traversal falls
-- routine jump/mantle/ledge/ladder/route drops inside the intended traversal envelope deal no damage;
+- routine traversal drops inside the intended envelope deal no damage;
 - normal landings acknowledge impact without stealing meaningful control;
-- upper-safe falls may use a firmer but brief non-damaging landing response.
+- upper-safe falls may use a firmer but brief non-damaging response.
 
 ### Damaging falls
 - above the safe envelope, damage increases with impact severity;
-- moderate damaging falls may use proportionate brief stumble/impact recovery, never long helpless stun;
+- moderate damaging falls use proportionate brief recovery, never long helpless stun;
 - severe falls can cause major health loss;
 - genuinely extreme falls may be lethal;
 - visible recovery completion and actual control return must agree.
@@ -204,91 +203,108 @@ Fall consequences use body/level-design-relative severity bands. Exact threshold
 - no hidden perfect-landing timing mechanic;
 - only separately designed future capabilities may modify fall consequences.
 
-### Water impact
-- sufficiently deep valid swimmable water may reduce ordinary-to-moderate impact severity;
-- water is not universal immunity; extreme falls may still damage/kill, and shallow/blocked/hazardous water may not cushion;
-- comparable water depths should behave consistently.
-
-### State continuity
-- ledge/ladder release feeds the same fall rules;
-- sliding off an edge does not reset severity through a state exploit;
-- an actual valid ledge catch before impact legitimately ends the fall path.
+### Water impact / state continuity
+- sufficiently deep valid water may reduce ordinary-to-moderate impact severity but is not universal immunity;
+- ledge/ladder release uses the same fall rules;
+- slide-off transitions do not reset fall severity;
+- a physical valid ledge catch before impact legitimately ends the fall path.
 
 ---
 
 ## 10. Jump arc / air control — LOCKED
-
-Stillring's jump is a **predictable authored traversal verb**, not a platformer movement system layered on top of the game.
-
 ### Arc and takeoff
-- the baseline jump uses a consistent, modest, readable vertical arc tuned for ordinary small gaps and intentional vertical movement;
-- jump height is **not meaningfully variable based on how long the jump button is held**; a deliberate press requests the same baseline jump arc so authored gaps remain learnable and predictable;
-- there is no baseline double jump, air jump, hover, or repeated-jump extension;
-- takeoff immediately acknowledges the jump request when the locomotion state permits it;
-- existing horizontal velocity is inherited into the jump; sprint-jump momentum preservation remains binding;
-- jumping never adds a hidden horizontal speed boost.
+- consistent modest readable baseline arc;
+- jump hold duration does not meaningfully increase height;
+- no double jump, air jump, hover, or repeated-jump extension;
+- takeoff acknowledges input immediately when legal;
+- existing horizontal velocity is inherited; sprint-jump preservation remains binding;
+- no hidden horizontal speed boost.
 
 ### Air control
-- Neris has **useful but limited** air steering for landing correction;
-- air input may bend the travel line and correct a slightly imperfect takeoff, but it cannot instantly rewrite a committed jump or produce full ground-style turning authority;
-- at meaningful forward speed, opposite input may reduce/redirect horizontal momentum gradually but cannot create an immediate full-speed 180-degree reversal in midair;
-- air steering must not increase horizontal speed above the momentum/authority available from the originating ground state;
-- neutral air input preserves the natural takeoff trajectory rather than applying hidden braking;
-- exact air-control acceleration, turn influence, and momentum-retention values remain Gate 1 tuning.
+- useful but limited landing correction;
+- can bend line/correct a slightly imperfect takeoff, not produce full ground turning authority;
+- no instant full-speed 180-degree midair reversal;
+- air steering adds no speed beyond originating ground authority;
+- neutral preserves natural trajectory;
+- exact influence remains tuning.
 
-### Forgiveness at the edge: short coyote window
-- a **short coyote-time window** exists immediately after Neris unintentionally leaves an ordinary valid ground edge, allowing a jump request that was clearly intended at the edge to still begin;
-- this window is a control-forgiveness mechanism, not a traversal extension: it must be short enough that the jump still visually belongs to the edge departure;
-- coyote time does not reactivate after deliberate ledge Drop/Release, ladder release, a long fall, a slide-off already outside the valid edge window, or another explicit airborne/traversal state;
-- exact time is Gate 1 tuning.
+### Coyote / buffer
+- short coyote window immediately after ordinary valid ground-edge departure;
+- does not reactivate after deliberate release, long fall, out-of-window slide-off, or explicit airborne/traversal state;
+- short jump-input buffer honors a request just before becoming legally able to jump;
+- buffer cannot bypass damaging-fall recovery, blocked states, committed interactions, or explicit traversal restrictions;
+- exact windows remain tuning.
 
-### Jump input buffering
-- a **short jump-input buffer** exists so a jump pressed just before a valid landing/state transition can execute when Neris becomes legally able to jump;
-- the buffer must feel like honoring an already-expressed request, not queuing actions far into the future;
-- buffered jump does not bypass damaging-fall recovery, blocked states, authored interaction commitments, or traversal-state rules that explicitly prohibit immediate jumping;
-- exact buffer time is Gate 1 tuning.
+### Collision
+- blocked takeoff/low ceiling behaves honestly rather than clipping;
+- coyote/buffer cannot ratchet slopes or bypass authored height gates.
 
-### Collision / failed jump cases
-- low ceilings or blocked takeoff space prevent/limit the jump honestly rather than clipping Neris through geometry;
-- landing on ordinary walkable terrain returns to the appropriate requested ground state promptly;
-- jump, coyote, and buffering rules may not be exploited to ratchet up out-of-band slopes or bypass authored height gates.
+---
 
-The target feel is forgiving execution with predictable geography: the player can correct a small mistake, but cannot turn a bad committed jump into arbitrary flight.
+## 11. Interaction while moving — LOCKED
+
+The player does **not** need to come to a perfect standstill before ordinary interaction input becomes valid. Interaction acceptance and movement transition depend on what the specific interaction physically requires.
+
+### Accepting interaction input
+- an explicit interaction request may be accepted while Neris is walking, running, or sprinting when the target is valid, in range, and otherwise interactable;
+- movement speed alone does not make an obviously valid nearby interaction fail;
+- proximity by itself never auto-fires a generic interaction; traversal verbs that are already intentionally automatic (mantle, ladder mount, water entry, etc.) remain governed by their own rules;
+- ordinary ground interactions do not yank Neris out of an airborne, hanging, ladder, swimming, slide, or other incompatible locomotion state unless that interaction is explicitly authored to support that state.
+
+### Movement-compatible interactions
+- an interaction explicitly designed to work while moving may complete without forcing Neris to stop;
+- such interactions may not secretly zero velocity, rotate the character, or snap position unless their own authored behavior requires it;
+- content examples are decided by the interaction/content specification, not by locomotion authority.
+
+### Planted / alignment-required interactions
+When an interaction physically requires a planted position, facing, or hand placement:
+- accepting the interaction ends Sprint if active and transitions through a **short natural deceleration** rather than an instantaneous hard stop;
+- Neris may use a small local alignment step/turn into the authored interaction pose only when already inside a plausible valid interaction envelope;
+- alignment may not teleport Neris across a room, pull through collision, cross a gap, or bypass a traversal restriction;
+- if valid alignment/clearance cannot be achieved locally, the interaction does not commit and the player keeps movement authority;
+- exact local alignment radius/angle and blend timing remain tuning/content-authoring values.
+
+### Pre-commit cancellation and commitment
+- before the interaction has committed, moving away/out of the valid envelope may cleanly cancel the pending request rather than dragging Neris back magnetically;
+- the system must not queue an interaction for a long time and fire it unexpectedly after the player has moved elsewhere;
+- once a committed interaction legitimately owns movement, its authored action state may temporarily override locomotion until its release point;
+- when the interaction releases movement authority, current valid movement input is acknowledged promptly rather than requiring the stick/key to be released and pressed again.
+
+### Sprint and traversal boundaries
+- sprint-to-interaction uses the same philosophy as sprint-to-lock: the state can end promptly without pretending existing velocity vanished instantly;
+- interaction input does not silently extend mantle reach, ledge reach, ladder magnetism, slope scramble authority, or any other traversal envelope;
+- movement/interact overlap must be tested for accidental double-trigger cases at doors, mechanisms, pickups, ledges, ladders, water edges, and other representative boundaries.
+
+This keeps interaction flow modern without turning every interactable into a magnetic cutscene anchor.
 
 ---
 
 ## Current locked movement grammar
 ```text
-ordinary terrain / careful movement       → analog ground locomotion
-ordinary travel / sprint                  → run / unlimited requested sprint
-jump press from valid ground              → consistent modest jump arc
-jump hold duration                        → no meaningful extra jump height
-sprint → jump                             → preserve existing horizontal momentum; no boost
-air + directional correction             → useful limited steering
-air + hard reverse                        → gradual correction; NO instant full-speed 180
-air + neutral                             → preserve natural trajectory
-just left ordinary ground edge            → short coyote jump eligibility
-jump pressed just before valid landing    → short input buffer, execute when legal
-double/air jump input                     → NO baseline extra jump
-low obstacle                              → automatic valid mantle
-deliberate reachable ledge                → automatic catch → hang
-hang explicit Drop/Release                → normal fall
-ordinary rough wall/cliff                 → NO free climbing
+ordinary terrain / careful movement        → analog ground locomotion
+ordinary travel / sprint                   → run / unlimited requested sprint
+jump                                       → predictable modest arc + limited air correction
+coyote / jump buffer                       → short intent forgiveness only
+low obstacle                               → automatic valid mantle
+deliberate reachable ledge                 → automatic catch → hang
+hang explicit Drop/Release                 → normal fall
+ordinary rough wall/cliff                  → NO free climbing
 authored ladder                            → authored ladder grammar
-ordinary deep swimmable water              → surface swim; no baseline dive
-generic crouch                             → NO baseline crouch
-short plausible borderline uphill slope    → limited automatic scramble
-out-of-band uphill slope                   → no ratcheting progress
-steep/low-traction descent                 → automatic limited-steer slide
-ordinary traversal-scale fall              → no damage; prompt landing control
-moderate/severe fall                       → proportional damage + brief proportional recovery
-extreme fall                               → may be lethal
-landing input gimmick                      → cannot cancel impact severity
+ordinary deep swimmable water               → surface swim; no baseline dive
+generic crouch                              → NO baseline crouch
+borderline slope / steep descent            → limited scramble / limited-steer slide
+fall severity                               → safe band → proportional damage → possible lethal extreme
+interaction input while moving + valid      → request accepted; do not require standstill
+moving-compatible interaction              → may complete without forced stop
+planted interaction                        → short natural decel + small valid local alignment
+invalid/nonlocal alignment                 → do not commit; preserve movement
+move away before commit                    → cancel cleanly; NO magnetic pullback
+interaction completes/releases movement    → current movement input resumes promptly
 ```
 
 ---
 
 ## Next locomotion decision
-**Interaction while moving.**
+**Traversal-tool overrides.**
 
-After that: traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
