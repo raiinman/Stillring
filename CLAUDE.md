@@ -15,13 +15,14 @@ A useful shorthand is:
 3. `docs/00_PROJECT_CHARTER.md`
 4. `docs/01_GAME_VISION.md`
 5. `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` when work touches movement, camera, traversal, target-lock, level affordances, or player control
-6. `docs/03_PRODUCTION_WORKFLOW.md`
-7. `docs/04_TECHNICAL_DIRECTION.md`
-8. `docs/15_CANON_TO_PLAY_PIPELINE.md`
-9. `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` when the task creates or changes playable behavior, stateful content, debug tooling, or tests
-10. `docs/18_PROJECT_DECISION_REGISTER.md` when a task depends on a cross-project settled decision or reveals a new durable decision
-11. `docs/05_IP_GUARDRAILS.md`
-12. `docs/06_CONTENT_MATRIX.md` when work touches a region, dungeon, item, boss, or progression beat
+6. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` **before any work that implements or changes player locomotion, traversal-state movement, target-lock movement, movement input processing, or locomotion-facing accessibility**
+7. `docs/03_PRODUCTION_WORKFLOW.md`
+8. `docs/04_TECHNICAL_DIRECTION.md`
+9. `docs/15_CANON_TO_PLAY_PIPELINE.md`
+10. `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` when the task creates or changes playable behavior, stateful content, debug tooling, or tests
+11. `docs/18_PROJECT_DECISION_REGISTER.md` when a task depends on a cross-project settled decision or reveals a new durable decision
+12. `docs/05_IP_GUARDRAILS.md`
+13. `docs/06_CONTENT_MATRIX.md` when work touches a region, dungeon, item, boss, or progression beat
 
 ### If the task touches narrative, quests, NPCs, regions, dialogue, world state, or progression
 Read these **in order** before authoring or implementing content:
@@ -61,18 +62,23 @@ Ocarina of Time is a **root reference, not the 2026 control ceiling**.
 Stillring studies the evolution of authored 3D Zelda design across later games and extracts abstract player problems/solutions rather than preserving obsolete hardware constraints or copying exact expression.
 
 For movement/camera/traversal work:
-- read `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`;
+- read `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` for the design reasoning;
+- read `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` for exact locomotion semantics;
 - use modern free-camera expectations rather than one-stick-era assumptions;
 - preserve target-lock because it solves a real readability problem, not because Zelda has it;
 - keep world affordances honest;
 - retain authored traversal progression rather than automatically adopting universal climb-everything traversal;
 - do not infer exact speeds, timings, camera distances, animation shapes, geometry, reticles, or input layouts from Zelda games.
 
-Current movement items explicitly marked **PROTOTYPE HYPOTHESIS** or **PENDING OWNER REVIEW** are not implementation freedom. Claude may build the approved experiment, but may not silently promote it to permanent design.
+`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` is the implementation-facing locomotion authority. Numeric values explicitly left to Gate 1 tuning may be tuned through the approved prototype/human-play process, but Claude may not reinterpret the locked behavior class while tuning them.
+
+Issue #1 remains the owner-acceptance gate for the locomotion package. **Do not treat an open final owner-review item as permission to redesign locomotion.** If final owner review has not closed Issue #1, movement implementation must not outrun that gate.
+
+Camera framing, look response, collision behavior, and target-selection presentation remain Issue #2 authority even where locomotion specifies when a movement reference/state changes.
 
 ## Owner-led player-feel boundary
 
-High-impact player-feel decisions are reviewed with the owner one meaningful decision at a time.
+High-impact player-feel decisions are reviewed with the owner one meaningful decision at a time unless the owner explicitly grants a bounded delegation for a named workstream.
 
 Examples:
 - jump/sprint/mantle/climb rules;
@@ -83,7 +89,9 @@ Examples:
 - guard/evade feel;
 - traversal-tool behavior.
 
-If an issue identifies a pending owner decision, do not pick the Unreal default, the common-industry answer, or a Zelda answer and call it settled. Implement only the specifically authorized hypothesis or return the unresolved choice to the design authority.
+Issue #1 locomotion semantics were completed under an explicit locomotion-only owner delegation and are now recorded in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`; final package acceptance remains owner-controlled.
+
+For any other pending owner decision, do not pick the Unreal default, common-industry answer, or Zelda answer and call it settled. Implement only the specifically authorized hypothesis or return the unresolved choice to design authority.
 
 ## Unreal architecture contract
 
@@ -200,7 +208,6 @@ If the answer is merely “same thing with different names/colors,” stop and r
 ## Implementation task minimum
 
 Before changing playable behavior, resolve:
-
 - canonical source files/IDs;
 - player-facing outcome;
 - required story/world states;
@@ -211,6 +218,8 @@ Before changing playable behavior, resolve:
 - regression surface;
 - whether the task changes binary Unreal assets and how those changes will be evidenced;
 - any player-feel decision still marked pending/prototype-only.
+
+For locomotion work specifically, verify the task against `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` and its canonical human acceptance route. If implementation appears to require a semantic choice not covered there, stop and return the gap to design authority rather than filling it with an Unreal default.
 
 If these cannot be inferred from current authority, report the missing decision instead of hiding an assumption in implementation.
 
@@ -230,10 +239,11 @@ Use the strongest verification appropriate to the task, which may include:
 
 A successful compile is not proof that a playable feature is good.
 
+For locomotion changes, the canonical five-minute-per-input-profile feel test in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` remains a human gate and regression route; machine checks do not overrule a material human feel failure.
+
 ## Completion report format
 
 Every completed implementation task should report:
-
 - what changed;
 - why;
 - source files changed;
