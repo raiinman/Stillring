@@ -160,12 +160,14 @@ Locked:
 - sprint is sustained rather than a one-shot dash;
 - ordinary traversal sprint has **no stamina/resource cost**;
 - the player may sustain ordinary sprint indefinitely;
+- sprint supports **Hold** and **Toggle** input modes;
+- **Hold is the default** sprint input behavior;
+- Toggle is available through controls/accessibility settings rather than changing gameplay rules;
 - normal analog walk/run remains useful below sprint;
 - sprint's role is faster travel, not a second evade;
 - a future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
 
 Still pending owner review:
-- hold versus toggle/default accessibility behavior;
 - exact acceleration, top speed, turning, jump interaction, and combat restrictions.
 
 ### 4.6 Lock-on remains a tactical movement mode
@@ -257,7 +259,6 @@ The exact thresholds and speeds remain tuning questions.
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- sprint hold/toggle/accessibility behavior;
 - exact sprint interaction with combat, jump, and turning;
 - exact mantle/scramble thresholds and control timing;
 - ledge grab/hang behavior;
