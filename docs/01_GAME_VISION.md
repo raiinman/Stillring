@@ -43,7 +43,10 @@ Locked movement/camera principles:
 - A successful ledge catch always settles into a real **hang state first** rather than immediately forcing a climb-up.
 - While hanging, neutral input keeps Neris hanging; continued movement **toward/up onto the ledge** requests a pull-up, with no separate climb button.
 - Pull-up only completes when the top/landing surface is valid, standable, and clear enough to finish safely; otherwise Neris remains hanging.
-- Ledge shimmy, deliberate drop, transfers, and broader climbing remain separately specified rather than being implied by catch or pull-up.
+- While hanging, left/right movement input allows a simple lateral shimmy along the **same continuous valid handhold**; releasing lateral input leaves Neris hanging at the current valid position.
+- Baseline shimmy does **not** wrap corners, cross gaps, transfer to a different wall/ledge, jump laterally between ledges, or climb vertically between handholds. Those remain separate traversal problems/capabilities.
+- Exact shimmy speed, acceleration, animation cadence, hand spacing, and ledge-follow tolerances remain Gate 1 tuning rather than permanent arbitrary values.
+- Deliberate drop, transfers, vertical climbing, and broader climbing remain separately specified rather than being implied by catch, pull-up, or shimmy.
 - Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
 - The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 - Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
