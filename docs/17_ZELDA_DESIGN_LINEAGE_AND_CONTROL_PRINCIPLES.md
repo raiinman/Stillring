@@ -96,6 +96,7 @@ Examples:
 - ordinary sprint should not be periodically disabled by an empty stamina bar;
 - obvious low obstacles should not require a separate “mantle” command after the player has already expressed the intention to cross them;
 - a clearly reachable ledge should not demand a frame-perfect extra “grab” input after the player has already committed to the jump;
+- a hanging Neris should not require a redundant climb button after the player continues pressing toward a valid top surface;
 - camera collision should solve itself without punishing the player;
 - the player should not need pixel-perfect alignment to perform an obvious everyday traversal action.
 
@@ -189,9 +190,23 @@ The catch must **not** occur merely because Neris:
 
 A ledge catch is allowed to save a well-aimed jump from becoming a frame-perfect input test. It is **not** a universal last-second rescue system.
 
-What Neris can do *after* entering the hang—pull up, shimmy, deliberately drop, transfer, or other actions—remains separate owner-review authority. The existence of a catch/hang may not be used to silently introduce a full climbing system.
+#### Ledge-hang continuation and pull-up
 
-The exact jump height, arc, air control, mantle/ledge detection volumes, reach envelope, catch tolerances, animation, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-mantle-button rule, the body-relative mantle scope, and automatic intent-based reachable-ledge catch with no grab button are locked.**
+A successful catch always settles Neris into the **hang state first**. Catching a ledge does not immediately force a pull-up animation or carry her onto the top surface.
+
+While hanging:
+- neutral movement input leaves Neris hanging;
+- continued movement **toward/up onto the ledge** communicates the player's intent to climb onto the surface;
+- there is **no separate pull-up/climb button** for this ordinary continuation;
+- pull-up may begin only when the top/landing surface is valid, standable, and has enough clearance for Neris to finish safely;
+- if the top is blocked, invalid, too small, or otherwise unsafe for a normal completion, Neris remains hanging rather than clipping or being forced onto bad geometry;
+- a higher-priority action/state may block the pull-up when explicitly designed to do so.
+
+This preserves a meaningful hang beat: the player can catch, stop, look, and decide whether to continue instead of being automatically carried onto the top. At the same time, once the player clearly continues toward a valid top, no redundant context-button press is required.
+
+This rule does **not** authorize ledge shimmy, deliberate drop, lateral transfers, wall climbing, or a broader parkour system. Those remain separate owner-review decisions.
+
+The exact jump height, arc, air control, mantle/ledge detection volumes, reach envelope, catch tolerances, hang settle timing, pull-up input threshold, clearance tests, animation, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-mantle-button rule, the body-relative mantle scope, automatic intent-based reachable-ledge catch with no grab button, and deliberate hang-to-pull-up continuation with no separate climb button are locked.**
 
 ### 4.5 Sustained sprint
 
@@ -271,6 +286,7 @@ The prototype and later animation work must consider:
 - jump/landing transitions;
 - mantle/scramble transitions;
 - ledge-catch/hang transitions;
+- hang-to-pull-up transitions;
 - sprint-to-lock transitions;
 - lock/unlock transitions;
 - weapon-state locomotion transitions.
@@ -338,7 +354,9 @@ For low obstacles, Gate 1 should tune automatic mantle detection so normal trave
 
 For ledge catch, Gate 1 must include deliberate jump catches, short-fall catches with clear forward intent, near misses outside plausible reach, sideways/parallel passes, incidental geometry, invalid handholds, low-clearance hangs, and large-cliff fall cases. The test succeeds when clearly intended reachable catches feel generous while non-intended geometry never feels magnetic.
 
-The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, mantle timing, ledge reach envelope, catch tolerance, and catch animation timing remain tuning questions.
+For hang-to-pull-up, Gate 1 must test that every valid catch visibly settles into hang before any climb continuation, neutral input holds the hang, continued toward/up input produces a prompt pull-up on valid tops, and blocked/invalid tops leave Neris hanging without clipping or forced placement. The pull-up continuation should feel intentional without requiring a separate context button.
+
+The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, mantle timing, ledge reach envelope, catch tolerance, hang settle timing, pull-up input threshold, clearance tests, and catch/pull-up animation timing remain tuning questions.
 
 ---
 
@@ -346,7 +364,6 @@ The exact speed thresholds, turn curves, reversal speed loss, re-acceleration va
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- ledge-hang continuation / pull-up behavior;
 - ledge shimmy behavior if any;
 - deliberate drop behavior;
 - broader climbing scope;
@@ -394,6 +411,9 @@ Failure examples:
 - shoulder-height-plus geometry being swallowed by baseline auto-mantle and erasing authored traversal distinctions;
 - a clearly intended reachable ledge failing because the player missed a redundant grab button or tiny timing window;
 - ledge catch magnetically rescuing sideways/incidental falls that the player did not intend;
+- a ledge catch immediately auto-pulling Neris up before the player can inhabit or assess the hang state;
+- clear continued toward/up input failing to pull Neris onto an obviously valid top because the game expects a redundant climb button;
+- an invalid or blocked top forcing a pull-up that clips or places Neris unsafely;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
