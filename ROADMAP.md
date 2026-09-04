@@ -51,9 +51,9 @@ Build only:
 - graybox movement/camera test map;
 - third-person locomotion;
 - useful analog low-speed through full-speed movement;
+- sustained sprint available from the beginning for faster ground travel, separate from combat evade;
 - always-available modest deliberate jump;
 - small authored mantle/scramble response for obviously low obstacles;
-- approved sprint/dash prototype hypothesis;
 - automatic stairs/small-step/minor-terrain handling;
 - meaningful height gates that remain blocked until a route/tool/later traversal capability solves them;
 - free exploration camera;
@@ -68,12 +68,14 @@ Build only:
 
 Do not let stock Third Person template defaults, Ocarina-era hardware constraints, or another Zelda game's exact control values silently become Stillring's movement/camera specification.
 
-The existence of deliberate jump and low-obstacle mantle/scramble is now locked. Gate 1 still tunes their exact arc, thresholds, animation response, and air-control details through human play. Sprint/dash remains a prototype hypothesis and may still be rejected or revised.
+The existence of deliberate jump, low-obstacle mantle/scramble, and sustained sprint is locked. Gate 1 still tunes their exact speeds, curves, thresholds, animation response, and jump/air-control details through human play. Whether sprint consumes stamina or another resource remains a separate owner decision.
 
 Exit condition:
 - moving around an ugly gray room already feels deliberate and controllable;
 - ordinary movement stops demanding conscious correction within roughly the first five minutes of a fresh playtest;
 - stairs/small terrain do not create accidental friction;
+- walk/run/sprint each have a useful role rather than making ordinary run intentionally bad;
+- sprint improves travel flow without behaving like a second dodge;
 - deliberate jump feels useful without turning ordinary traversal into constant bunny-hopping;
 - low obvious obstacles mantle/scramble consistently;
 - meaningful height gates remain readable rather than accidentally bypassable;

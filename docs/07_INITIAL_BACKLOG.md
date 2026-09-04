@@ -22,8 +22,9 @@ Acceptance:
 - stairs/small-step/minor-terrain handling defined;
 - always-available modest deliberate jump locked;
 - small low-obstacle mantle/scramble response locked;
+- sustained sprint from the beginning locked and kept distinct from combat evade;
+- sprint resource cost and hold/toggle/accessibility behavior explicitly resolved or marked pending;
 - major cliffs/meaningful height gates preserved as authored traversal gates;
-- sprint/dash prototype hypothesis reviewed;
 - ledge/drop behavior defined;
 - climbing/swimming/crouch/air-control/fall rules either defined or explicitly marked out-of-scope/pending;
 - accessibility implications recorded;
@@ -85,12 +86,12 @@ If Claude would need to invent story, progression, reward, world-state policy, o
 - implement gameplay movement behavior in C++ from Issue #1;
 - analog low-speed through full-speed movement;
 - camera-relative steering;
+- sustained sprint from the beginning, separate from combat evade;
 - slopes/stairs/small-step handling;
 - grounded transitions;
 - always-available modest deliberate jump;
 - small low-obstacle mantle/scramble response;
 - meaningful height gates not bypassable by baseline jump/mantle;
-- approved sprint/dash experiment;
 - ledge/drop behavior per Issue #1;
 - tuning values exposed deliberately;
 - debug values visible;
@@ -131,12 +132,13 @@ The prototype does not pass because it compiles.
 Required human questions:
 - within roughly five minutes, does ordinary movement stop demanding conscious correction?
 - do stairs and minor ground irregularities disappear beneath player intention?
+- do walk, run, and sprint each have a useful role?
+- does sprint make travel pleasant without becoming a second evade or making normal run feel artificially bad?
 - does the deliberate jump feel useful without encouraging constant meaningless bunny-hopping?
 - do obviously low obstacles mantle/scramble consistently and naturally?
 - do major height gates remain readable and intact?
 - does the free camera feel owned by the player without constant babysitting?
 - do obvious traversal affordances work consistently or communicate their restriction?
-- does the sprint/dash hypothesis improve the game, or should it be rejected/revised before combat depends on it?
 
 ## P2 — Gate 2 combat prototype
 
