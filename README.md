@@ -22,16 +22,20 @@ The game is built around five pillars:
 ## Repository map
 
 - `CLAUDE.md` — operating instructions for Claude/Codex-style coding agents.
-- `ROADMAP.md` — milestone gates from concept to release.
+- `ROADMAP.md` — evidence-gated milestones from concept to release.
 - `docs/00_PROJECT_CHARTER.md` — scope and non-negotiables.
 - `docs/01_GAME_VISION.md` — gameplay, visual, camera, combat, progression, accessibility.
-- `docs/02_STORY_BIBLE.md` — complete story from opening scene through ending and post-credits.
+- `docs/02_STORY_BIBLE.md` — canonical narrative index and authority chain.
 - `docs/03_PRODUCTION_WORKFLOW.md` — actual game-development workflow and definition-of-done gates.
 - `docs/04_TECHNICAL_DIRECTION.md` — Godot architecture, folders, save/state, testing, performance.
 - `docs/05_IP_GUARDRAILS.md` — clean-room/IP rules.
 - `docs/06_CONTENT_MATRIX.md` — regions, dungeons, bosses, tools, narrative purpose.
-- `docs/07_INITIAL_BACKLOG.md` — first GitHub issues in dependency order.
+- `docs/07_INITIAL_BACKLOG.md` — first implementation work in dependency order.
 - `docs/08_RESEARCH_NOTES.md` — production research and source links.
+- `docs/10_COMPLETION_MODEL.md` through `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md` — completion, authored optional content, 100% route, upgrades, and mastery authority.
+- `docs/15_CANON_TO_PLAY_PIPELINE.md` — source-of-truth pipeline: **CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY**.
+- `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` — developer console, named state presets, structured bug capture, and offline machine-assisted QA contract.
+- `docs/story/` — final scene, reveal, objective, dialogue, character, regional, pacing, recurrence, and side-interaction narrative contracts.
 - `game/` — Godot project root.
 
 ## Production rule
@@ -53,12 +57,20 @@ The first playable target is a 20–30 minute slice containing:
 - save/load,
 - N64-inspired final-ish art direction,
 - music/SFX placeholders,
-- controller support.
+- controller support,
+- state presets/debug entry points sufficient to reproduce important slice states,
+- at least one automated representative smoke route.
 
-If that slice is not fun, readable, stable, and fast to produce, full production does not begin.
+If that slice is not fun, readable, stable, testable, and fast to produce, full production does not begin.
+
+## How the game gets built
+
+Stillring is specified from the finished-game side backward. Canon describes what exists; production contracts convert that authority into playable slices; implementation agents build bounded work; deterministic verification proves objective behavior; humans play the result and decide whether it actually works as a game.
+
+The repository is authoritative. Chats and implementation sessions are temporary working context.
 
 ## Current status
 
-**Phase 0 — Project charter / pre-production.**
+**Gate 0 — narrative/design foundation complete for production entry.**
 
-No production-scale content should be created until the story bible, game pillars, technical prototype, and vertical-slice acceptance criteria are accepted.
+The beginning-to-end story, scene/reveal/objective/dialogue contracts, regional living-world material, completion model, technical direction, vertical-slice target, and production operating rules are established. The next work is evidence-gated technical prototyping beginning with movement/camera—not production-scale world construction.
