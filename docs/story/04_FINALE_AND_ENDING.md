@@ -1,86 +1,85 @@
-# XXIV. FINAL ACT — NULL MERIDIAN
+# Project Stillring — Finale and Ending
+
+**Status:** final canonical finale narrative
+
+This chapter owns the final-act prose context. Exact scene order is in `07_SCENE_BEAT_LEDGER.md`; reveal timing is in `08_REVEAL_AND_FORESHADOW_LEDGER.md`.
+
+---
+
+# XXIV. NULL MERIDIAN
 
 ## Approach
 
 Maelor has pulled the Meridian Bell partly into the Hush, creating **Null Meridian**, a central phase structure that exists across both realities.
 
-The player does not arrive behind an army.
+The route opens because Orra is already running independent systems in compatible disagreement:
+- Rootmere reports living load and water states;
+- Saltreach coordinates manual fog and pressure signals;
+- Emberstep rings locally cast civic bells and shares traceable hardware;
+- High Aerie publishes load windows and contradictory archive copies with provenance;
+- Mireglass commits temporary safe echo routes;
+- Cairnfall reports raw drift alongside visible correction;
+- Cairnspire route crews carry information between them.
 
-The route exists because communities across Orra are already running independent systems in compatible disagreement:
-- Rootmere reports living load states;
-- Saltreach times manual fog/pressure signals;
-- Emberstep rings locally cast civic bells;
-- High Aerie publishes load windows and contradictory timing copies;
-- Mireglass commits temporary echo routes;
-- Cairnfall reports raw phase drift without silently correcting it;
-- Cairnspire route crews relay between them.
+No one signal becomes the new master.
 
-The result is messy, coordinated, and alive.
-
-Optional community completion makes the approach more stable, changes which named people appear, and opens additional services or shortcuts.
-
-It does not unlock a morally superior ending.
+Optional community completion changes approach routes, named allies, services, and side spaces. It never unlocks a morally superior ending.
 
 ## The sacred shell comes off
 
-Null Meridian begins as monumental sacred architecture.
+Null Meridian begins as monumental civic-sacred architecture.
 
-As Neris moves inward, ceremonial cladding gives way to:
+Deeper inside, ceremonial cladding gives way to:
 - worker bypasses;
+- meal rooms;
 - maintenance lifts;
-- pressure rooms;
-- shift boards;
-- meal stations;
+- pressure chambers;
 - inspection marks;
-- emergency releases;
+- shift boards;
 - confiscated nonstandard tools;
+- emergency releases;
 - ordinary handwriting.
 
 The player should understand without a speech:
 
-**this godlike system was built, maintained, repaired, and hidden by people.**
+**this godlike system was built, maintained, hidden, and repaired by people.**
 
-One abandoned meal room contains mugs, a half-finished card game, and a note complaining about somebody never cleaning a valve wrench.
+One abandoned meal room contains mugs, a half-finished card game, and a note complaining that somebody never cleans a valve wrench.
 
 No ghost explains it.
 
-## Final dungeon — curriculum exam
+## Final dungeon — synthesis, not new language
 
 Null Meridian does not award a final mandatory adventure verb.
 
-It asks new questions with the vocabulary the player already owns.
+Representative combinations:
+- **Anchor Line + Vane Cloak** under unstable suspension;
+- **Glasslung + Temper** through linked pressure/thermal history;
+- **Palinode + Mirror Nail** across conflicting Court records;
+- **Mirror Nail + seam mode** to hold one useful state while crossing another, then release it;
+- **Cantor + combat** to identify which phase of a formation is physically committed;
+- **Local Accord + unstable infrastructure** to operate several systems without a master pulse;
+- a Line Skiff approach segment using old route strips.
 
-Representative synthesis:
-- **Anchor Line + Vane Cloak** — hold tension on a moving suspension assembly while riding intermittent air;
-- **Glasslung + Temper** — move pressure and heat together without rupturing a chamber;
-- **Palinode + Mirror Nail** — preserve conflicting histories long enough to commit only the useful local state;
-- **Mirror Nail + seam mode** — hold one echo while crossing through another, then release what was useful behind you;
-- **Cantor Key + combat** — diagnose which phase of a formation is physically committed while core spacing/defense still matter;
-- **Motion / Memory / Ending + infrastructure** — alter rules of a failing system rather than use three colored keys.
-
-Every test should make the player think:
+Every trial should make the player think:
 
 > “I know how this world works now.”
 
-If a room requires a brand-new tutorial language, the mechanic belongs earlier in the game.
-
-If a room is merely an old regional puzzle with Meridian wallpaper, cut it.
+If a room requires a brand-new tutorial language, the mechanic belongs earlier.
 
 ## Quiet Court archive
 
-The surviving archive is optional to explore deeply but impossible to mistake for treasure storage.
+The critical path establishes the essential history:
 
-It contains:
-- early decentralization plans;
-- grieving-family letters;
-- worker objections;
-- Ilyra's corrections written directly over Maelor's calculations;
-- safety arguments that were once legitimate;
-- later documents where names gradually become categories such as **state continuity**.
+Quiet Court began because Meridian was genuinely killing people and institutions were hiding it.
 
-The archive does not reveal Maelor was evil all along.
+The archive contains early decentralization proposals, grieving-family letters, worker objections, Ilyra's corrections over Maelor's calculations, and later pages where personal names gradually become abstractions such as **state continuity**.
 
-It shows a problem worth solving, a rebellion against real institutional secrecy, and a solution that became monstrous because Maelor eventually valued preventing loss more than other people's right to have futures.
+The point is not “Maelor was evil all along.”
+
+The point is that a legitimate reform problem hardened into a coercive solution when Maelor decided preventing loss mattered more than other people's right to have futures.
+
+Optional records add individual members, victims, dissenters, compromises, and failed alternatives.
 
 ---
 
@@ -88,91 +87,71 @@ It shows a problem worth solving, a rebellion against real institutional secrecy
 
 ## His room is smaller than expected
 
-Near the bell chamber, Maelor's private work area is almost disappointingly ordinary.
-
-It contains:
+Near the bell chamber, Maelor's private work area is ordinary:
 - two adult cups and one child's cracked cup;
 - a repeatedly repaired coat that belonged to his spouse;
 - maintenance notebooks in ordinary handwriting;
-- one unfinished small repair/toy;
+- one unfinished small repair or toy;
 - early pages full of names and personal notes;
-- later pages increasingly dominated by phase diagrams.
+- later pages dominated by phase diagrams.
 
-The environment carries his grief before he talks about it.
+The room carries his grief before he discusses it.
 
-Do not place an explanatory diary on the table.
+Do not leave an explanatory manifesto diary.
 
 ## Final conversation
 
-Maelor sits beside Hush impressions of his wife and son.
+Maelor sits beside preserved impressions of his wife and son.
 
-The chamber is unnaturally peaceful.
+He does not offer Neris rulership, power, or immortality.
 
-Nothing changes unless Neris moves.
+He offers an end to future irreversible loss.
 
-He offers Stillring as the last chance to preserve people before their next loss.
-
-He does not list every tragedy in the world like a manifesto.
-
-He points to what Neris has personally seen:
+His argument uses pain the player also hates:
 - Orin taken;
 - Ilyra lost for eleven years;
 - the Leviathan dying even after the machinery was removed;
-- ordinary people injured by hidden system failures;
-- memories that cannot be made whole again.
+- workers killed by hidden system failures;
+- family truths that cannot be made clean again.
 
-His argument is strongest when it uses evidence the player also hates.
+The story lets the argument hurt without granting him the right to force the answer on everyone.
 
-The central exchange remains:
+The conversational core is simple:
 
-Maelor:
+Maelor claims people already choose preservation when they beg good moments to last.
 
-> “They already chose. They chose to want the moment to last.”
+Neris distinguishes wanting a moment to last from consenting to have **nothing after it**.
 
-Neris:
+Do not inflate this into a long philosophy debate. The world has already made both arguments.
 
-> “Wanting a moment to last isn't the same as wanting nothing after it.”
+## Boss phase one — First Acoustician
 
-Do not expand that into a five-minute philosophy duel.
-
-The world has already made both arguments.
-
-## Boss phase 1 — First Acoustician
-
-Maelor fights as an engineer who knows the same infrastructure vocabulary Neris learned:
+Maelor fights as a technically brilliant human who knows the same infrastructure language Neris learned:
 - silence removes audio tells;
-- delayed attack echoes punish reflexive evasion;
+- delayed attack echoes punish reflex;
 - local pressure/air shifts alter spacing;
-- some Anchor points are temporarily disrupted;
 - false diagnostic histories can be separated with Palinode;
-- preserved objects become temporary cover or traps.
+- preserved objects become temporary cover or traps;
+- ordinary lock-on movement and defense remain central.
 
-Core lock-on movement, defense, target reading, and selective tool use remain central.
+There is no single item that trivializes the fight.
 
-There is no one-item gimmick that wins automatically.
-
-## Boss phase 2 — Keeper of the Last Moment
+## Boss phase two — Keeper of the Last Moment
 
 Maelor connects himself to the central mechanism.
 
-The arena cycles through preserved configurations.
-
-Previous safe positions can become traps when an old state returns.
+The arena cycles through preserved configurations. Formerly safe states can return as traps.
 
 The learned relations become combat rules:
 - **Motion** prevents one local zone from being repeatedly dragged back;
-- **Memory** lets Neris retain/read a hazard's history without recreating it;
+- **Memory** lets Neris read a hazard's history without recreating it;
 - **Ending** permanently releases one maintained configuration.
 
 Neris defeats him and disconnects most of the chamber.
 
-The Hush impressions of his family begin destabilizing.
+The preserved impressions of his family begin destabilizing.
 
-Maelor cannot allow that.
-
-He drives the central striker into the forbidden phase.
-
-The Listener's prison opens.
+Maelor cannot accept their loss and opens the Listener's containment rather than allow the central system to end under someone else's terms.
 
 ---
 
@@ -180,42 +159,35 @@ The Listener's prison opens.
 
 The Listener emerges as an impossible assembly of unfinished scenes rather than a conventional monster.
 
-It cannot initially distinguish Neris from every possible Neris.
+It cannot initially distinguish present Neris from all possible Neris states.
 
-The encounter is not “the bigger final boss.”
-
-It is temptation, recognition, and release.
+The encounter is temptation, recognition, and release.
 
 ## Mandatory preserved possibilities
 
-The Listener can offer:
+The Listener can show:
 - Ilyra never disappearing;
 - Orin telling the truth before First Ring;
-- Brindle never entering the seam crisis;
-- Maelor's child surviving;
-- Tessa never learning to protect herself through deliberate detachment.
+- Brindle never suffering the workshop breach;
+- Maelor's child surviving.
 
-But those alone are not enough.
+These possibilities are not malicious lies. They are states the Listener actually contains.
 
-## Completion-sensitive preserved memories
+## Save-state memories
 
-Where possible, the Listener also rebuilds **places and moments the player actually spent time in**.
-
-Examples selected from save state:
-- the First Ring food table crowded exactly as before;
-- Lio Fen's ferry under ordinary water;
+Where production allows, it also rebuilds moments the player actually spent time in:
+- First Ring's crowded food table;
+- Lio Fen's ferry under normal water;
 - Saltreach's cheap quay meal and working fog signal;
 - Emberstep workers laughing over ugly brackets;
-- High Aerie's normal wind span and Wind Kitchen;
-- children playing the Mireglass reflection-ring game;
-- Cairnfall's public observation night;
-- Mara Pell's neighborhood before Stillness;
-- a favorite optional NPC at the point in their life the player first knew them;
-- a completed relationship scene that later became complicated.
+- High Aerie's ordinary wind span and Wind Kitchen;
+- Mireglass children playing the reflection-ring game;
+- Cairnfall public observation night;
+- Mara Pell's neighborhood;
+- a favorite optional NPC at a remembered point in their life;
+- a relationship moment that later became complicated.
 
-The Listener should not only offer **perfect** worlds.
-
-It should preserve beloved imperfections too.
+The Listener should preserve beloved imperfections.
 
 Orin's chair still wobbles.
 
@@ -233,48 +205,44 @@ Then they fail to progress:
 - a kettle reaches the instant before boiling and never crosses it;
 - laughter restarts before anyone catches breath;
 - a ferry approaches but never completes docking;
-- the same joke is always about to receive its answer;
+- the answer to a joke never arrives;
 - a child runs the same three steps;
-- wind moves exactly the same way each cycle.
+- wind repeats one exact motion.
 
 Nothing can surprise anyone because surprise requires a future different from the preserved present.
 
-The Listener finally communicates through the Key:
+The Listener asks through the Key:
 
-> “MUST ALL ENDINGS BE CAGES?”
+> **“MUST ALL ENDINGS BE CAGES?”**
 
 Neris understands the larger symmetry:
 
-The ancient bellwrights imprisoned what ended.
+The ancient bellwrights imprisoned what had ended by compressing the Hush.
 
 Maelor tried to prevent anything from reaching an ending.
 
-Both turned time into a system they believed they had authority to control.
+Both treated time as a system they had authority to defeat.
 
-## Final mechanical realization
+## Final realization
 
-The Cantor Key cannot **repair** Meridian without recreating the same central relationship.
+The Cantor Key cannot “repair” Meridian without recreating the same central relation.
 
-This conclusion comes from play:
-- Motion keeps local systems changing;
+The conclusion comes from play:
+- Motion keeps living systems changing;
 - Memory preserves what happened as knowledge;
 - Ending releases states that have served their purpose;
 - Palinode holds incompatible histories without choosing one master;
 - Mirror Nail provides temporary local certainty;
-- seam mode works only where relationship already permits crossing;
-- earlier physical tools keep Neris moving through the failing machine.
+- seam mode works only where local relationship permits crossing;
+- physical tools keep Neris moving through the failing machine.
 
-The correct action is therefore decommissioning.
+The responsible action is **decommissioning**.
 
-Neris routes Motion, Memory, and Ending through a use the Key was never designed to survive.
-
-The Key overloads.
-
-Neris shatters the **Meridian Bell's central heart**.
+Neris routes Motion, Memory, and Ending through a use the Key was never designed to survive and shatters the **Meridian Bell's central heart**.
 
 The six Waybells do not explode.
 
-Their forced synchronization ends.
+Forced synchronization ends.
 
 The Hush floods outward for one terrifying moment, then settles into many local seams rather than one compressed mass.
 
@@ -284,7 +252,7 @@ Some useful memories become unreachable.
 
 Freedom includes loss.
 
-The Listener ceases to exist as one forced singular consciousness.
+The Listener is no longer forced to exist as one compressed singular consciousness.
 
 Its final understandable sensation is relief.
 
@@ -294,165 +262,117 @@ The game does not explain what every released fragment becomes.
 
 # XXVII. MAELOR'S END
 
-The impressions of Maelor's family begin dissolving.
+The impressions of Maelor's family dissolve.
 
-His son performs one tiny remembered habit: tapping the cracked cup twice before drinking, something Ilyra once taught him during an ordinary family visit.
+His son performs one small remembered habit: tapping the cracked cup before drinking, something learned during an ordinary family visit with Ilyra.
 
-Maelor laughs once through tears.
-
-He finally stops trying to hold the figures in place.
-
-Neris may approach or remain at a distance.
+Maelor finally stops trying to hold the figures in place.
 
 There is no execution choice and no dialogue option that cures him.
 
-Maelor survives.
+**Maelor survives.**
 
-That matters.
+Death would let history reduce him to martyr, monster, or genius. Living requires testimony, trial, and continued existence in a world that rejected his solution.
 
-Death would let history reduce him to a martyr, monster, or genius.
-
-Living means he must hear what his choices did to people.
-
-His public trial begins later and is **not finished by the credits**.
+His public trial begins later and is not finished by the credits.
 
 ---
 
-# XXVIII. EPILOGUE — A WORLD THAT HAS MOVED, NOT ARRIVED
+# XXVIII. EPILOGUE — A WORLD THAT HAS MOVED
 
 ## Brindle
 
-Months later, Brindle is being rebuilt.
+Months later Brindle is rebuilding.
 
-The ceremonial Waybell is gone.
+There is no restored master Waybell. Smaller practical bells overlap imperfectly for fire, arrival, mourning, celebration, warning, and dinner.
 
-Several smaller bells made from regional contributions serve practical purposes:
-- fire;
-- arrival;
-- mourning;
-- celebration;
-- warning;
-- dinner.
-
-They overlap imperfectly.
-
-If Mara's old crooked bell remains, it is still crooked.
-
-If the standardized repair branch was chosen, that work also remains visible as part of the route that survived later stress.
-
-The ending does not retroactively choose one branch as wiser.
+Early repair choices remain visible. The ending does not retroactively declare one branch wiser.
 
 ## Ilyra
 
 Ilyra returns physically but not as a restored reward.
 
-She loses words sometimes.
+She may lose words, remember events out of order, or reach for an old drawer arrangement that no longer exists.
 
-Some memories arrive in the wrong order.
-
-The rebuilt Vale workshop does not match her remembered bench.
-
-At one point she starts moving an object back to where she thinks it belongs.
-
-She stops.
-
-She leaves it where Neris put it.
+At one point she starts moving something back to where she thinks it belongs, then stops and leaves it where Neris placed it.
 
 Their relationship is beginning, not recovered.
 
 ## Orin
 
-Orin helps rebuild the workshop.
+Orin gives Neris Ilyra's old traveling case and answers an uncomfortable question plainly.
 
-He gives Neris Ilyra's old traveling case.
-
-He promises to answer questions even when the answer makes him look bad.
-
-The promise is meaningful because the story does not immediately prove he will never fail again.
+The behavior demonstrates change without claiming trust is repaired.
 
 ## Tessa
 
-Tessa's independent courier network has become real enough to generate paperwork she deeply regrets.
+Tessa's independent courier network is real enough to generate paperwork she hates.
 
-Line Skiffs are one tool among many rather than the foundation of another monopoly.
+Line Skiffs are one route tool among many, not the foundation of a new monopoly.
 
-Different regions modify them differently.
+Her arc is not “cynic learns to care.” She always cared about individual people. Her change is accepting that staying unofficial and refusing to know do not remove responsibility.
 
 ## Caldrin
 
 High Aerie's archive keeps contradictory records with provenance rather than one silent master copy.
 
-People still argue about which version should guide policy.
+People still argue about which evidence should guide policy.
 
 ## Sena
 
-Emberstep casts civic bells with maker names visible.
-
-A named maker can still make a bad part.
-
-Traceability does not create perfection; it creates responsibility.
+Emberstep stamps maker names on new civic hardware. Traceability does not create perfection; it creates recoverable responsibility.
 
 ## Rusk
 
-Rusk participates in releasing Bellwarden records and explaining old systems.
+Rusk participates in disclosure and dismantling. Some people despise him for protecting secrecy too long. Others value his institutional knowledge.
 
-Some people despise him for having protected secrecy too long.
-
-Some value his institutional knowledge during dismantling.
-
-He is not elected the hero of reform.
+He is not the hero of reform.
 
 ## Regional politics remain unfinished
 
 - Mireglass still argues about safe public Hush seams;
 - High Aerie still debates archive authority;
-- Rootmere still negotiates shared flood standards;
-- Saltreach crews still disagree about how much manual redundancy is enough;
-- Cairnfall still corrects data sometimes—now visibly;
-- decentralized systems occasionally fail and need repair.
+- Rootmere still negotiates shared watershed standards;
+- Saltreach still argues about manual redundancy;
+- Cairnfall still corrects data sometimes, now visibly;
+- distributed systems occasionally fail and need repair.
 
-The ending is not a utopia produced by smashing one bell.
+The ending is not utopia produced by smashing one bell.
 
 It is a world where responsibility can move again.
 
 ## Neris
 
-Throughout the journey, Neris has filled field-journal margins with regional repair methods and strange local solutions.
-
-That makes the final choice legible.
+The field journal is full of local methods and strange repairs learned across Orra.
 
 Neris does not simply inherit Orin's workshop.
 
-Neris becomes a **traveling bellwright** because the road, regional craft, and exchange of local practice became something Neris learned to want.
+Neris becomes a **traveling bellwright** because the road and exchange of regional practice became something genuinely wanted during the journey.
 
-The Cantor Key is repaired rather than replaced.
+The Cantor Key is repaired rather than replaced. One prong remains permanently cracked.
 
-One prong remains permanently cracked.
+The player may linger in Brindle before leaving.
 
-The final playable sequence contains no urgent objective.
-
-The player can linger in Brindle:
-- eat;
-- visit Mara;
-- inspect the old chair;
-- listen to mundane bells;
-- hear arguments;
-- see people working.
-
-When ready, the player walks to the hill road.
-
-Tessa waits without calling twice.
-
-Then:
+Tessa waits on the hill road.
 
 > “You coming, bellwright?”
 
-Neris looks at the cracked Key.
+Neris:
 
-> “Yeah. I heard something cracked.”
+> **“Yeah. I heard something cracked.”**
 
 They leave.
 
-Fade out.
-
 ---
+
+# Post-credits
+
+Night on a remote island far beyond Orra.
+
+A fisherman hears a bell beneath the ocean.
+
+It is not one of Orra's bells.
+
+A second ring answers from somewhere impossibly deep.
+
+Cut to black.
