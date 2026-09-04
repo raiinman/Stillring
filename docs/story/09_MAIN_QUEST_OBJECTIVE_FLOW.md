@@ -1,90 +1,66 @@
-# Project Stillring — Main Quest Objective Flow
+# Project Stillring — Final Main Quest Objective Flow
 
-**Status:** canonical player-facing critical-path flow  
-**Related:** Issue #16, `docs/story/07_SCENE_BEAT_LEDGER.md`, `docs/story/08_REVEAL_AND_FORESHADOW_LEDGER.md`
+**Status:** final canonical player-facing critical-path flow  
+**Related:** `docs/story/07_SCENE_BEAT_LEDGER.md`, `docs/story/08_REVEAL_AND_FORESHADOW_LEDGER.md`, `docs/12_100_PERCENT_ROUTE.md`
 
-This document owns the **main quest objective chain**: what the player is asked to do, what state unlocks the objective, and what must be true before the next objective can begin.
+This document owns what Neris is trying to do next, what world state permits it, and what closes each mandatory objective.
 
-It is intentionally not a quest-script implementation. Scene-tree paths, trigger volumes, dialogue resource IDs, and save serialization belong in implementation docs later.
+It intentionally does **not** expose hidden developer logic or puzzle solutions.
 
 ## Objective design rules
 
-1. Player-facing objectives describe **what Neris intends**, not hidden developer logic.
-2. Do not expose twist logic in objective text before Neris knows it.
-3. Mandatory objectives should usually point toward a place/person/problem, not give exact puzzle solutions.
-4. Optional content may interrupt travel but must not silently advance mandatory state.
-5. A save/reload at any objective boundary must reconstruct a coherent world state.
+1. Objective text states Neris's current intent, not the design system beneath it.
+2. Hidden twists stay hidden until Neris knows them.
+3. Mandatory text usually points toward a person, place, or problem rather than a solution.
+4. Optional content may interrupt travel but cannot silently advance mandatory state.
+5. Narrative urgency outranks cleanup efficiency.
+6. A save/reload at any objective boundary must reconstruct a coherent world state.
+7. If the player could reasonably ask “why am I going there?”, the handoff is not finished.
 
 ---
 
 # ACT 0 — BRINDLE
 
 ## MQ00.01 — Finish First Ring Repairs
-
-**Display text:** `Help Orin finish the village repairs before First Ring.`
+**Display:** `Help Orin finish the village repairs before First Ring.`
 
 **Starts:** game start after `M00-S01`.
 
-**Required tasks:**
-- mill signal repair;
-- basic delivery/interaction tutorial;
-- return required component to Orin.
+**Required:** morning tutorial work from `M00-S02`.
 
-**Optional during state:** C01 and village conversations.
+**Optional:** C01 Crooked Fire Bell and ordinary Brindle interactions.
 
-**Completes when:** core morning tasks done.
+**Completes:** core morning tasks done.
 
 **Next:** MQ00.02.
 
----
-
 ## MQ00.02 — Meet Tessa
+**Display:** `Meet Tessa at the practice yard.`
 
-**Display text:** `Meet Tessa at the practice yard.`
-
-**Starts:** morning work complete.
-
-**Completes when:** combat tutorial `M00-S03` completed.
+**Completes:** `M00-S03` spar ends.
 
 **Next:** MQ00.03.
 
----
-
 ## MQ00.03 — Return for First Ring
+**Display:** `Return to the workshop before the ceremony.`
 
-**Display text:** `Return to the workshop before the ceremony.`
-
-**Starts:** spar complete.
-
-**Required state:** allows `M00-S04` Orin almost-confession.
-
-**Completes when:** player enters festival staging state.
+**Completes:** `M00-S04` finishes and festival staging begins.
 
 **Next:** MQ00.04.
 
----
-
 ## MQ00.04 — Get Back to the Workshop
+**Display:** `Stay with Orin. Get back to the workshop.`
 
-**Display text:** `Stay with Orin. Get back to the workshop.`
+**Starts:** `M00-S05` failure.
 
-**Starts:** First Ring failure begins.
-
-**Control:** crisis route.
-
-**Completes when:** floor-compartment sequence begins.
+**Completes:** floor-compartment sequence begins.
 
 **Next:** MQ00.05.
 
----
-
 ## MQ00.05 — Reach Orin
+**Display:** `Follow Orin through the seam.`
 
-**Display text:** `Follow Orin through the seam.`
-
-**Starts:** Orin pulled into Hush.
-
-**Completes when:** Cantor Key overload returns Neris to Waking Brindle.
+**Completes:** Key overload returns Neris to Waking Brindle after `M00-S07`.
 
 **Next:** MQ01.01.
 
@@ -93,24 +69,16 @@ It is intentionally not a quest-script implementation. Scene-tree paths, trigger
 # ACT I — ROAD / CAIRNSPIRE
 
 ## MQ01.01 — Reach Cairnspire
+**Display:** `Reach Cairnspire. Find out what happened to Orin.`
 
-**Display text:** `Reach Cairnspire. Find out what happened to Orin.`
+**Required travel beats:** flood relay and Meridian ridge.
 
-**Starts:** after first Hush ejection.
-
-**Required travel beats:** damaged flood relay + ridge vista.
-
-**Completes when:** Neris enters Cairnspire route ward.
+**Completes:** Neris enters Cairnspire route ward.
 
 **Next:** MQ02.01.
 
----
-
 ## MQ02.01 — Register Ilyra's Cantor Key
-
-**Display text:** `Get the Cantor Key registered before the Bellwardens take it.`
-
-**Starts:** after Rusk/Maelor encounter.
+**Display:** `Get the Cantor Key registered before the Bellwardens take it.`
 
 **Sub-objectives:**
 1. `Repair the late warning chime.`
@@ -118,443 +86,323 @@ It is intentionally not a quest-script implementation. Scene-tree paths, trigger
 3. `Find Ilyra's field certification in the Lower Archive.`
 4. `Meet Maelor for calibration.`
 
-**Completes when:** Key gains provisional field authorization.
-
-**World output:** three regional commissions become visible as main objectives.
+**Completes:** Key receives provisional field authorization and Maelor issues three crisis commissions.
 
 **Next:** MQ03.01.
 
+## MQ03.01 — Calibrate the Key Beyond Meridian
+**Display:** `Calibrate the Cantor Key against independent regional baselines.`
+
+**Why Neris wants this:** a bad central calibration could point away from Orin or misdiagnose the regions entirely.
+
+**Required:**
+- Old Viaduct Refuge / Eda Vell;
+- ordinary-life baseline in Rootmere;
+- ordinary-life baseline in Saltreach;
+- ordinary-life baseline in Emberstep;
+- ordinary-life baseline in High Aerie;
+- ordinary-life baseline in Mireglass;
+- ordinary-life baseline in Cairnfall;
+- compare all six in `M03-S11`.
+
+**Pacing:** these are compact social/calibration visits, not six proto-dungeons.
+
+**Completes:** Key can separate healthy regional variance from true crisis drift.
+
+**Next:** MQ04.01.
+
 ---
 
-## MQ03.01 — Learn the First Circuit
-
-**Display text:** `Travel the outer circuit before taking a regional commission.`
-
-**Starts:** after Maelor issues Rootmere/Saltreach/Emberstep work.
-
-**Minimum completion condition:**
-- reach Old Viaduct Refuge;
-- complete Eda's local calibration;
-- visit all three regional approaches/roadheads.
-
-**Optional:** most early completion systems.
-
-**Completes when:** player has enough route familiarity to choose a region.
-
-**Next:** three commissions unlock, but canonical authored route expects Rootmere first for teaching order.
-
----
-
-# ACT II — THREE TUNING CRISES
+# ACT II — THREE CRISIS REGIONS
 
 ## MQ04.01 — Diagnose Rootmere's Waybell
+**Display:** `Find why Rootmere's bell-oak is losing phase.`
 
-**Display text:** `Find why Rootmere's bell-oak is losing phase.`
-
-**Starts:** first Rootmere entry.
-
-**Sub-objective:** `Prove whether the failure is in the tree or the old repair network.`
-
-**Completes when:** old Bellwarden braces identified.
+**Completes:** old Bellwarden bracing is identified as the harmful load path.
 
 **Next:** MQ04.02.
 
----
-
 ## MQ04.02 — Release the Root Cathedral Load
+**Display:** `Enter Root Cathedral and remove the forced load from the bell-oak.`
 
-**Display text:** `Enter Root Cathedral and remove the forced load from the bell-oak.`
+**Required internal gates:** Anchor Line, Mossjaw route, Mawhart resolution.
 
-**Starts:** C06 critical diagnosis complete.
-
-**Internal mandatory gates:**
-- acquire Anchor Line;
-- clear structural route;
-- defeat/resolve Mawhart encounter.
-
-**Completes when:** Waybell stabilizes locally.
+**Completes:** Waybell stabilizes locally and Mawhart retreats.
 
 **Next:** MQ04.03.
 
----
+## MQ04.03 — Read the Old Warning
+**Display:** `Inspect Ilyra's maintenance plate.`
 
-## MQ04.03 — Read Ilyra's Warning
-
-**Display text:** `Inspect the old maintenance plate.`
-
-**Starts:** post-Mawhart.
-
-**Completes when:** Neris reads phase-load warning and talks to Maelor.
+**Completes:** Neris reads the central-phase warning and resolves the Maelor relay conversation.
 
 **Next:** MQ05.01.
 
-**Optional revisit window:** Anchor wave opens before Saltreach.
+**Optional window:** Anchor revisit content opens, but presentation allows Rootmere evening to breathe first.
 
 ---
 
-## MQ05.01 — Find a Safe Route Through Saltreach
+## MQ05.01 — Restore a Trustworthy Harbor Signal
+**Display:** `Find a safe route through Saltreach and reach Tide Foundry.`
 
-**Display text:** `Restore a trustworthy harbor signal and reach Tide Foundry.`
+**Required:** critical portion of Fog Tower diagnostic.
 
-**Starts:** Saltreach arrival.
-
-**Required:** C10 diagnostic critical portion.
-
-**Completes when:** route to foundry opens.
+**Completes:** route to Tide Foundry opens.
 
 **Next:** MQ05.02.
 
----
+## MQ05.02 — Break the Foundry Pressure Cycle
+**Display:** `Stop Tide Foundry from forcing the harbor through one pressure cycle.`
 
-## MQ05.02 — Break Tide Foundry's Pressure Cycle
+**Required gates:** Glasslung Reed and Leviathan encounter.
 
-**Display text:** `Stop the foundry from forcing the harbor through the same pressure cycle.`
-
-**Required gates:**
-- acquire Glasslung Reed;
-- learn pressure state;
-- resolve Nine-Lung Leviathan encounter.
-
-**Completes when:** Leviathan escapes and foundry stabilizes.
+**Completes:** coercive pressure system is disabled and Leviathan escapes.
 
 **Next:** MQ05.03.
 
----
+## MQ05.03 — Trace the Restricted Freight
+**Display:** `Search the foundry freight records.`
 
-## MQ05.03 — Trace the Quiet Court Shipment
-
-**Display text:** `Search the foundry freight records.`
-
-**Starts:** boss resolution.
-
-**Completes when:** Tessa's manifest and Maelor/Ilyra marks are found; Tessa confesses; Maelor acknowledges unsanctioned research.
+**Completes:** manifest links Tessa's old route to restricted Maelor/Ilyra research and Tessa confesses deliberate incuriosity.
 
 **Next:** MQ06.01.
 
-**Optional revisit window:** Glasslung wave.
+**Quiet handoff:** Leviathan death news may arrive during travel; do not convert it into another mandatory objective.
 
 ---
 
 ## MQ06.01 — Clear Emberstep's Name
+**Display:** `Prove whether Emberstep's recent castings caused the failures.`
 
-**Display text:** `Prove whether recent Emberstep castings caused the failures.`
-
-**Starts:** Sena denies Waybell access.
-
-**Required:** critical portion of C14.
-
-**Completes when:** evidence distributed publicly and Sena grants access.
+**Completes:** maker evidence shows the accusation is false and Sena grants access.
 
 **Next:** MQ06.02.
 
----
-
 ## MQ06.02 — Enter the Kiln of Names
+**Display:** `Stabilize Emberstep's Waybell and recover the sealed casting records.`
 
-**Display text:** `Stabilize Emberstep's Waybell and recover the sealed casting records.`
+**Required gates:** Temper Gauntlet and Cinder Regent.
 
-**Required gates:**
-- acquire Temper Gauntlet;
-- resolve Cinder Regent;
-- reach restricted archive.
-
-**Completes when:** three-point phase-reference document and Mercy Window seed found.
+**Completes:** three-point records and Mercy Window mark are recovered.
 
 **Next:** MQ07.01 immediately.
 
-**Urgency rule:** no mandatory detour. Optional post-dungeon content remains available but UI/story presentation emphasizes return to Cairnspire.
+**Urgency rule:** optional content remains technically available but UI/story presentation emphasizes Cairnspire.
 
 ---
 
 # ACT III — GRAND RING
 
-## MQ07.01 — Reach Maelor Before He Uses the Three References
+## MQ07.01 — Reach Maelor Before Entrainment Begins
+**Display:** `Take the Emberstep records to Cairnspire. Stop the three-reference activation.`
 
-**Display text:** `Take the Emberstep records to Cairnspire. Stop the phase-reference test.`
+**Starts:** `M06-S05` evidence.
 
-**Starts:** sealed log discovered.
-
-**Completes when:** confrontation `M07-S02` begins.
+**Completes:** Neris's group reaches Meridian sub-chamber and confrontation begins.
 
 **Next:** MQ07.02.
 
----
-
 ## MQ07.02 — Stop the Grand Ring
+**Display:** `Reach the Meridian controls.`
 
-**Display text:** `Reach the Meridian controls.`
+**Gameplay:** crisis traversal, civilian assistance, manual overrides, failed attempt to stop activation.
 
-**Starts:** Maelor admits entrainment plan.
-
-**Gameplay:** crisis traversal, civilian assistance, manual locks, failed attempt to reach central striker.
-
-**Completes when:** Stillness becomes unavoidable and Key/Hush escape becomes available.
+**Completes:** phase-lock becomes unavoidable and the Key/Hush escape is available.
 
 **Next:** MQ07.03.
 
----
-
 ## MQ07.03 — Cross Before Stillness Takes You
+**Display:** `Use the Cantor Key. Cross into the Hush.`
 
-**Display text:** `Use the Cantor Key. Cross into the Hush.`
-
-**Completes when:** Hush-Cairnspire world state loaded and Neris stabilizes.
+**Completes:** Hush-Cairnspire state stabilizes around Neris.
 
 **Next:** MQ08.01.
 
 ---
 
-# ACT IV — HUSH / CHANGED ORRA
+# ACT IV — ILYRA / CHANGED BRINDLE
 
-## MQ08.01 — Find the Workbench Signal
+## MQ08.01 — Follow the Workbench Signal
+**Display:** `Follow the familiar tuning pattern through Hush-Cairnspire.`
 
-**Display text:** `Follow the familiar tuning pattern through Hush-Cairnspire.`
-
-**Starts:** first full-Hush free movement.
-
-**Completes when:** Ilyra found.
+**Completes:** Ilyra is found in `M08-S01`.
 
 **Next:** MQ08.02.
 
----
+## MQ08.02 — Help Ilyra Stabilize the Key
+**Display:** `Help Ilyra stabilize the Cantor Key.`
 
-## MQ08.02 — Learn What Stillring Did
+**Gameplay:** wrong-workbench repair and local Stillring demonstration.
 
-**Display text:** `Help Ilyra stabilize the Key and understand the phase-lock.`
+**Completes:** Neris understands enough to re-enter at Brindle and High Aerie is identified as the strongest moving relation.
 
-**Gameplay:** workbench repair + local relation demonstration.
+**Next:** MQ08.03.
 
-**Completes when:** Motion/Memory/Ending need established and Brindle re-entry method learned.
+## MQ08.03 — Return to Brindle
+**Display:** `Return to Brindle. Find Tessa.`
+
+**Completes:** changed Brindle entered and Tessa returns on the seeded Line Skiff.
 
 **Next:** MQ09.01.
 
----
+## MQ09.01 — Learn Roadhand Pulse
+**Display:** `Learn Roadhand Pulse and reach High Aerie.`
 
-## MQ09.01 — Return to Brindle
-
-**Display text:** `Use the Brindle seam to return to the Waking World.`
-
-**Completes when:** changed Brindle entered.
-
-**Next:** MQ09.02.
-
----
-
-## MQ09.02 — Find Tessa
-
-**Display text:** `Reach the Vale workshop and look for surviving route traffic.`
-
-**Completes when:** Tessa arrives on Line Skiff and Ilyra speaks through seam.
-
-**Next:** MQ09.03.
-
----
-
-## MQ09.03 — Learn the Line Skiff
-
-**Display text:** `Follow Tessa through the next Stillness wave.`
-
-**Required:** Roadhand Pulse + Skiff tutorial route.
-
-**Completes when:** highland route network opens.
+**Completes:** Skiff tutorial and first fast-road stretch are finished; highland network opens.
 
 **Next:** MQ10.01.
 
 ---
 
-# ACT V — MOTION / PALINODE / MEMORY
+# ACT V — MOTION / BONE ARCHIVE / MEMORY
 
 ## MQ10.01 — Keep High Aerie From Falling
+**Display:** `Restart local airflow before the suspended districts drop.`
 
-**Display text:** `Restart local airflow before the suspended districts drop.`
+**Starts:** changed High Aerie arrival.
 
-**Starts:** High Aerie arrival.
+**Required early beat:** Weight of the Archive / Caldrin return.
 
-**Required early beat:** archive triage / Caldrin return.
-
-**Completes when:** route through Monastery of Updraft opens and Vane capability obtained.
+**Completes:** route through the Monastery of Updraft opens and Vane Cloak is operational.
 
 **Next:** MQ10.02.
 
----
-
 ## MQ10.02 — Reach Tempest Belfry
+**Display:** `Follow the released wind to the upper belfry.`
 
-**Display text:** `Follow the released storm to the upper belfry.`
+**Required:** Vane basics and Choir of Talons.
 
-**Required gates:** Vane mastery basics + Choir of Talons.
-
-**Completes when:** Saint Varo arena reached.
+**Completes:** Saint Varo arena reached.
 
 **Next:** MQ10.03.
 
----
+## MQ10.03 — Break the Repeating Belfry
+**Display:** `Break Saint Varo's repeating belfry state.`
 
-## MQ10.03 — Let the Story Move
-
-**Display text:** `Stop the Varo memory from resetting the belfry.`
-
-**Player-facing wording deliberately avoids telling solution.**
-
-**Completes when:** Motion learned.
+**Completes:** Varo resolution; relation is named **Motion** afterward.
 
 **Next:** MQ10.04.
 
----
+## MQ10.04 — Follow the Old Rescue Records
+**Display:** `Follow the old rescue records beneath Rootmere.`
 
-## MQ10.04 — Follow the Forbidden Records
-
-**Display text:** `Use High Aerie's records to locate the Bone Archive.`
-
-**Completes when:** archive coordinates/route obtained after Caldrin breaks seal.
+**Completes:** Bone Archive route is opened.
 
 **Next:** MQ11.01.
 
 ---
 
 ## MQ11.01 — Enter the Bone Archive
+**Display:** `Find the pre-Meridian rescue records.`
 
-**Display text:** `Find the pre-Meridian rescue records beneath Rootmere.`
-
-**Completes when:** Palinode acquired and original local-hold relation reached.
+**Completes:** Palinode Pattern acquired and older local-hold history reached.
 
 **Next:** MQ11.02.
 
----
+## MQ11.02 — Hear the Conflicting Rescue Histories
+**Display:** `Hear the conflicting rescue histories.`
 
-## MQ11.02 — Hear Both Histories
-
-**Display text:** `Use Palinode to preserve the conflicting rescue accounts.`
-
-**Completes when:** Ilyra admits she designed Mercy Window.
+**Completes:** Ilyra admits she designed Mercy Window.
 
 **Next:** MQ12.01.
 
+**Pacing:** no “next collectible” prompt during the silent road beat.
+
 ---
 
-## MQ12.01 — Reach Mireglass Before Its Memories Collapse
+## MQ12.01 — Follow the Contradictory Resonance Into Mireglass
+**Display:** `Follow the contradictory resonance into Mireglass.`
 
-**Display text:** `Travel to Mireglass and find the Deep Wound of Memory.`
-
-**Completes when:** Palace Under Reeds route established.
+**Completes:** route to Palace Under Reeds established.
 
 **Next:** MQ12.02.
 
----
-
 ## MQ12.02 — Finish the Mirror Nail
+**Display:** `Use Palinode to finish Ilyra's local state anchor.`
 
-**Display text:** `Use Palinode to complete Ilyra's local state anchor.`
-
-**Completes when:** Mirror Nail operational.
+**Completes:** Mirror Nail operational.
 
 **Next:** MQ12.03.
 
----
-
 ## MQ12.03 — Stop the Palace From Choosing One Past
+**Display:** `Reach the shared memory at the center of the Palace Under Reeds.`
 
-**Display text:** `Reach the shared memory at the center of the Palace Under Reeds.`
-
-**Completes when:** Mirror Widow resolved and Memory learned.
+**Completes:** Mirror Widow resolved; relation named **Memory** afterward.
 
 **Next:** MQ12.04.
 
----
-
 ## MQ12.04 — Witness Mercy Window
+**Display:** `Stabilize the surviving experiment record.`
 
-**Display text:** `Stabilize the surviving experiment records.`
-
-**Completes when:** full Mercy Window event reconstructed and Neris/Ilyra fracture lands.
+**Completes:** full Mercy Window history reconstructed and Neris/Ilyra fracture lands.
 
 **Next:** MQ13.01.
 
-**Optional revisit window:** largest Mirror/Palinode completion wave.
+**Pacing:** biggest Mirror/Palinode revisit wave becomes available, but the game does not nag the player toward cleanup after the reveal.
 
 ---
 
-# ACT VI — CAIRNFALL / ENDING
+# ACT VI — CAIRNFALL / ORIN / ENDING
 
 ## MQ13.01 — Reach Cairnfall Before the Moving Pockets Collapse
+**Display:** `Reach Cairnfall and stop Meridian's correction signal.`
 
-**Display text:** `Find the observatory and stop Meridian's correction signal.`
-
-**Completes when:** telescope disagreement tutorial and observatory entrance complete.
+**Completes:** observatory disagreement tutorial and Fallen Orrery entrance.
 
 **Next:** MQ13.02.
 
----
+## MQ13.02 — Finish Seam Mode
+**Display:** `Recover the focusing lens and finish controlled seam mode.`
 
-## MQ13.02 — Finish the Cantor Key
+**Required:** Neris/Ilyra cross-layer calibration.
 
-**Display text:** `Recover Ilyra's focusing lens and build controlled seam mode.`
-
-**Required:** cross-layer Neris/Ilyra calibration.
-
-**Completes when:** seam mode operational.
+**Completes:** seam mode operational.
 
 **Next:** MQ13.03.
 
----
-
 ## MQ13.03 — Disconnect Gravemoon
+**Display:** `Break Meridian's correction loop without destroying Cairnfall's local instruments.`
 
-**Display text:** `Break Meridian's correction loop without destroying Cairnfall's local instruments.`
-
-**Completes when:** Gravemoon Engine disconnected.
+**Completes:** Gravemoon disconnected; moving pockets lengthen across Orra.
 
 **Next:** MQ13.04.
 
----
+## MQ13.04 — Trace Orin's Workshop Signal
+**Display:** `Trace Orin's repeating workshop signal.`
 
-## MQ13.04 — Let Cairnfall Disagree
-
-**Display text:** `Help the survey crew establish a local reference protocol.`
-
-**Completes when:** Local Accord path opens and Ilyra locates Still-Cairn/Ending.
+**Completes:** uncorrected Cairnfall observation identifies the deep Still-Cairn seam.
 
 **Next:** MQ14.01.
 
 ---
 
 ## MQ14.01 — Enter Still-Cairn
+**Display:** `Open the deepest Cairnspire seam and follow Orin's workshop signal.`
 
-**Display text:** `Open the deepest Cairnspire seam and follow Orin's workshop signal.`
-
-**Completes when:** Echo-bound Orin encountered.
+**Completes:** Echo-bound Orin encountered.
 
 **Next:** MQ14.02.
 
----
-
 ## MQ14.02 — Reach Orin Without Preserving the Cage
+**Display:** `Break the repeating workshop loop.`
 
-**Display text:** `Break the repeating workshop loop.`
+**Internal rule:** useful temporary states must be released; objective text does not explain the solution early.
 
-**Internal rule:** player must release useful temporary states; objective text must not spell this out too early.
-
-**Completes when:** perfect workshop reached.
+**Completes:** perfect Vale workshop reached.
 
 **Next:** MQ14.03.
 
----
-
 ## MQ14.03 — Let the Workshop End
+**Display:** `Choose what can remain a memory.`
 
-**Display text:** `Choose what can remain a memory.`
-
-**Completes when:** player performs release, learns Ending, wakes Orin.
+**Completes:** perfect workshop is released and relation is named **Ending**.
 
 **Next:** MQ14.04.
 
----
-
 ## MQ14.04 — Hear Orin's Truth
+**Display:** `Talk to Orin.`
 
-**Display text:** `Talk to Orin.`
-
-**Completes when:** full secrecy confession and Ilyra/Orin acknowledgement scene ends.
+**Completes:** full secrecy confession and family acknowledgement scene ends.
 
 **Next:** MQ15.01.
 
@@ -563,74 +411,62 @@ It is intentionally not a quest-script implementation. Scene-tree paths, trigger
 # ACT VII — UNRINGING / FINALE
 
 ## MQ15.01 — Open a Route Without Meridian
+**Display:** `Help Orra establish enough independent signals to reach the central tower.`
 
-**Display text:** `Help Orra establish enough independent signals to reach the central tower.`
+**World state:** communities have already begun attempts after Cairnfall. Neris is helping, not inventing all six systems alone.
 
-**Starts:** return from Still-Cairn.
+**Minimum critical-path requirement:** authored subset of regional cooperation sufficient to open Null Meridian route.
 
-**Minimum critical-path requirement:** authored subset of regional cooperation sufficient to open the Null Meridian approach.
+**100% path:** all six community projects and remaining completion content may be resolved before finale.
 
-**100% path:** all six community projects and all remaining world content can be completed before moving on.
-
-**Completes when:** local-signal convergence creates final route.
+**Completes:** independent local signals overlap into final approach.
 
 **Next:** MQ16.01.
 
----
-
 ## MQ16.01 — Enter Null Meridian
+**Display:** `Follow the independent signals into Null Meridian.`
 
-**Display text:** `Follow the independent signals into the central phase structure.`
+**Before confirmation:**
+- create recoverable pre-finale save;
+- display unresolved completion categories;
+- allow cancellation;
+- never imply 100% is needed for the valid ending.
 
-**Point-of-no-return warning:** show unresolved completion categories before confirmation.
-
-**Completes when:** final dungeon begins.
+**Completes:** final dungeon begins.
 
 **Next:** MQ16.02.
 
----
-
 ## MQ16.02 — Reach the Meridian Bell
+**Display:** `Use everything you've learned to reach the central chamber.`
 
-**Display text:** `Use everything you've learned to reach the central chamber.`
+**Internal:** paired-mechanic synthesis; no new mandatory verb.
 
-**Internal:** paired-mechanic synthesis trials; no new mandatory verb.
-
-**Completes when:** Quiet Court archive + Maelor chamber reached.
+**Completes:** Quiet Court archive and Maelor chamber reached.
 
 **Next:** MQ16.03.
 
----
-
 ## MQ16.03 — Disconnect Maelor
+**Display:** `Stop Stillring.`
 
-**Display text:** `Stop Stillring.`
+**Includes:** Maelor phase one and phase two.
 
-**Includes:** Maelor dialogue, phase one, phase two.
-
-**Completes when:** Maelor opens Listener prison.
+**Completes:** Maelor is defeated and opens Listener containment.
 
 **Next:** MQ17.01.
 
----
-
 ## MQ17.01 — Find a Future That Moves
+**Display:** `Escape the preserved possibilities.`
 
-**Display text:** `Escape the preserved possibilities.`
-
-**Starts:** Listener alternate-world sequence.
-
-**Completes when:** player returns from repeating good-world states and Listener asks its question.
+**Completes:** player recognizes the beloved worlds cannot continue into anything new and reaches the Listener's question.
 
 **Next:** MQ17.02.
 
----
-
 ## MQ17.02 — End the Meridian Hold
+**Display:** `Use Motion, Memory, and Ending.`
 
-**Display text:** `Use Memory, Motion, and Ending.`
+**Note:** this is the first late objective where all three names are legitimately available to Neris and the player.
 
-**Completes when:** player shatters Meridian central heart and controlled release succeeds.
+**Completes:** Neris shatters Meridian's central heart and controlled release succeeds.
 
 **Next:** Epilogue.
 
@@ -638,77 +474,41 @@ It is intentionally not a quest-script implementation. Scene-tree paths, trigger
 
 # EPILOGUE
 
-## MQ18.01 — One Last Walk Through Brindle
-
-**Display text:** `Visit the workshop when you're ready to leave.`
+## MQ18.01 — Walk Through Brindle
+**Display:** `Visit the workshop when you're ready to leave.`
 
 **Control:** playable epilogue.
 
-**Optional:** talk to returned/changed villagers; credits-state hooks.
+**Optional:** talk to returned/changed residents and inspect credits-state hooks.
 
-**Completes when:** Neris visits Ilyra and Orin scenes, then approaches road.
+**Completes:** Ilyra and Orin scenes resolved and Neris approaches the road.
 
 **Next:** MQ18.02.
 
----
-
 ## MQ18.02 — Take the Road
+**Display:** `Meet Tessa on the hill road.`
 
-**Display text:** `Meet Tessa on the hill road.`
+**Completes:** player walks final steps after:
 
-**Completes when:** player walks the final steps after “Yeah. I heard something cracked.”
+> **“Yeah. I heard something cracked.”**
 
-**Outputs:** credits, post-credits, story-complete flag.
-
----
-
-# Objective-flow state summary
-
-| Phase | Main objective count | New critical verb/relation | Main emotional transition |
-|---|---:|---|---|
-| Brindle | 5 | base Key glimpse | family certainty breaks |
-| Road/Cairnspire | 2 + subchain | calibrated Key | Maelor becomes trusted/useful |
-| First Circuit | 1 | Common Measure optional seed | world becomes personally known |
-| Rootmere | 3 | Anchor Line | good repair can mean removing bad repair |
-| Saltreach | 3 | Glasslung | Tessa's deliberate ignorance exposed |
-| Emberstep | 2 | Temper | Maelor selection / Ilyra culpability seed |
-| Grand Ring | 3 | full Hush transition | Neris's repairs become complicity without intent |
-| Hush/Brindle | 5 | phase envelope, Line Skiff | Ilyra alive; reunion fractures expectations |
-| High Aerie | 4 | Vane + Motion | history can hold failure and courage |
-| Bone/Mireglass | 6 | Palinode + Mirror + Memory | full Mercy Window truth |
-| Cairnfall | 4 | seam mode + Local Accord | Neris/Ilyra cooperate without absolution |
-| Still-Cairn | 4 | Ending | Orin's protection logic released |
-| Unringing | 1 | regional cooperation | communities act without one master |
-| Null/Listener | 4 | synthesis | final repair becomes decommissioning |
-| Epilogue | 2 | none | relationships restart instead of reset |
+**Outputs:** story-complete flag, credits, post-credits scene.
 
 ---
 
-# Quest implementation safety rules
+# Critical-path motivation chain
 
-## Objective text may not spoil hidden state
+The main quest must remain understandable in ordinary language:
 
-Bad before Emberstep:
+1. Orin is taken, so Neris goes to the people who understand the network.
+2. The only useful Key cannot yet be trusted, so Neris calibrates it against the world.
+3. The strongest crises reveal both a path toward Orin and evidence of deliberate manipulation.
+4. Neris tries to stop Maelor and fails.
+5. Ilyra helps Neris survive the altered world, and a region that is still moving becomes the next practical lead.
+6. High Aerie's records lead to the older rescue relation; that contradiction leads to Mireglass and the complete family truth.
+7. Cairnfall's raw observation finds Orin's repeating signal.
+8. Freeing Orin teaches the missing release relation.
+9. Communities begin disconnecting, producing the final route.
+10. Neris dismantles the central hold instead of restoring it.
 
-> `Repair Maelor's three phase-reference nodes.`
-
-Correct:
-
-> `Stabilize Rootmere's Waybell.`
-
-## Objective completion and narrative completion are separate
-
-Example: defeating Mawhart does not complete Rootmere story state until Ilyra's maintenance plate is inspected and the relay conversation with Maelor resolves.
-
-## Optional content acknowledgements do not become blockers
-
-If the player completed a relevant setup/record, mandatory dialogue may branch to acknowledge it. The mandatory objective must still resolve coherently if the flag is absent.
-
-## Point-of-no-return behavior
-
-Entering Null Meridian must:
-
-1. autosave a recoverable pre-finale checkpoint;
-2. display unresolved completion categories if any;
-3. allow cancellation;
-4. never imply 100% is required for the valid ending.
+If an implementation changes that into “collect named things because the quest log says so,” the implementation has broken the story.
