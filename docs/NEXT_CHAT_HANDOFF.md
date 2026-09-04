@@ -4,15 +4,17 @@
 **Updated:** 2026-09-04  
 **Repository:** `raiinman/Stillring`
 
-## Current main
+## Decision boundary
 
-`7ebf9526f02d83d8a98b254dc64a89250dcba8a0`
+Base before the current decision PR:
 
-Current decision-authority branch:
-- `design/deliberate-ledge-drop`
+`f881a3336b117656901e0d833b8c0962056bdbdd`
 
-Latest merged decision PR:
-- PR #37 — `Design: lock same-handhold ledge shimmy`
+Current decision PR:
+- PR #40 — `Design: lock no baseline free climbing`
+
+Latest previously merged decision PR:
+- PR #39 — `Design: lock deliberate ledge drop`
 
 Reference research:
 - PR #38 / `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — **research input only; not design authority**. It studies AC1 through the Ezio/Kenway/Unity/RPG/Mirage/Shadows eras and 2026 Black Flag Resynced for player-intent, flow, safety, route-design, animation, and climbing lessons. It does not decide unresolved Stillring mechanics.
@@ -109,7 +111,16 @@ Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses 
 - A deliberate Drop/Release press acts promptly with **no hold-to-confirm delay**.
 - The exact physical button/key binding is not locked and remains remappable control-layout/accessibility policy.
 - Exact shimmy/drop timing, animation, and tolerance values remain Gate 1 tuning.
-- Ledge catch/pull-up/shimmy/drop does not silently authorize a broader climbing system.
+
+### Broader climbing boundary
+
+- Neris has **no baseline free-climbing capability** beyond the locked ledge grammar.
+- Ordinary rough walls, cliffs, masonry, roots, rock faces, and similar surfaces do not become climbable merely because they look physically grippable.
+- Catch → hang → same-handhold shimmy → pull-up/drop does **not** chain into universal vertical climbing or corner traversal.
+- Broader climbing may exist only through **explicitly authored traversal structures, tools, or later capabilities**.
+- Supported climbing must use a consistent visible world language; equivalent-looking geometry must not differ only because one has a hidden climbable flag.
+- This boundary explicitly protects **authored traversal puzzles, route memory, and progression** from being bypassed by Assassin's-Creed-style universal surface solving.
+- The rule does not forbid future climbing verbs. Ladders, ropes, vines, chains, climbable masonry, transfers, vertical handhold chains, and other forms remain individually designed if/when needed.
 
 ## Current locked movement grammar
 
@@ -139,6 +150,8 @@ shimmy reaches corner/gap/new wall      → stop; NO automatic continuation
 shimmy toward higher/lower handhold     → NO vertical transfer/climb
 hang + analog down/away                 → remain hanging; NEVER implicit drop
 hang + explicit Drop/Release press      → promptly let go
+ordinary wall/cliff/rough surface       → NO baseline free climbing
+authored climb structure/tool/capability→ separately supported traversal
 invalid or blocked top                  → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge   → NO catch
 passing near/alongside mantle geometry  → NO mantle
@@ -148,11 +161,13 @@ major cliff / meaningful height gate    → route, tool, or later traversal capa
 
 ## IMMEDIATE NEXT OWNER DECISION
 
-**Broader climbing scope.**
+**Ladders.**
 
-Ledge catch, pull-up, same-handhold shimmy, and deliberate Drop/Release behavior are owner-approved and locked. The next question is intentionally broader but still only one decision:
+The broader climbing boundary is owner-approved and locked: no universal/baseline free climbing; broader climbing exists only through explicitly authored traversal structures/tools/later capabilities so traversal puzzles and progression remain meaningful.
 
-> Beyond the existing catch → hang → same-handhold shimmy → pull-up/drop grammar, does Neris have any baseline free-climbing capability at all, or should broader climbing exist only on specially authored traversal structures/tools/capabilities?
+The next question is deliberately narrower:
+
+> When Neris encounters an authored ladder, what should ordinary ladder traversal feel like and how much input/control should the player retain while climbing it?
 
 Do **not** let Unreal defaults, Zelda, Assassin's Creed, Souls games, or another traversal system answer this automatically.
 
@@ -160,15 +175,14 @@ Do **not** let Unreal defaults, Zelda, Assassin's Creed, Souls games, or another
 
 Continue one meaningful decision at a time:
 
-1. broader climbing scope;
-2. ladders;
-3. swimming;
-4. crouch/stealth posture if any;
-5. slope scrambling/sliding;
-6. fall damage/recovery;
-7. jump arc / air control;
-8. interaction while moving;
-9. traversal-tool overrides.
+1. ladders;
+2. swimming;
+3. crouch/stealth posture if any;
+4. slope scrambling/sliding;
+5. fall damage/recovery;
+6. jump arc / air control;
+7. interaction while moving;
+8. traversal-tool overrides.
 
 Issue #1 also still needs enough prototype-tuning authority for controller dead zones, movement thresholds, acceleration/deceleration philosophy, and target-lock movement details before it can be considered implementation-complete. Do not let Claude infer permanent design policy from Unreal defaults.
 
@@ -205,8 +219,9 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #34 automatic reachable ledge catch
 - #35 ledge hang pull-up continuation
 - #37 same-continuous-handhold ledge shimmy
-- current branch `design/deliberate-ledge-drop` — deliberate explicit ledge release authority
+- #39 deliberate explicit ledge release
+- #40 no baseline free climbing / authored-climbing boundary
 
 ## Important continuation rule
 
-If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **broader climbing scope decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
+If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **ladder decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.

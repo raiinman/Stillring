@@ -48,7 +48,10 @@ Locked movement/camera principles:
 - Exact shimmy speed, acceleration, animation cadence, hand spacing, and ledge-follow tolerances remain Gate 1 tuning rather than permanent arbitrary values.
 - While hanging, letting go requires a **distinct deliberate Drop/Release action press**. Ordinary analog movement — including down, away-from-wall, diagonal-down input, stick drift, or dead-zone noise — never releases the ledge by itself.
 - A deliberate Drop/Release press acts promptly with no hold-to-confirm delay. The physical controller/keyboard binding is not locked here and remains remappable control-layout policy.
-- Transfers, vertical climbing, and broader climbing remain separately specified rather than being implied by catch, pull-up, shimmy, or deliberate drop.
+- Neris has **no baseline free-climbing capability** beyond the locked ledge grammar. Rough walls, cliffs, masonry, and other ordinary surfaces do not become climbable merely because they look physically grippable.
+- Broader climbing may exist only through **explicitly authored traversal structures, tools, or later capabilities** with a consistent visible world language. It must never be a hidden universal surface rule.
+- This boundary exists to protect authored traversal puzzles, route memory, and progression: an inaccessible cliff or wall must remain meaningful until the player finds the intended route, structure, tool, or capability.
+- Lateral transfers, vertical handhold chains, corner traversal, ladders, ropes, vines, and other specific climbing forms are not implied by this rule and remain separately specified if/when needed.
 - Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
 - The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 - Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
