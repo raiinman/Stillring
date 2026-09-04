@@ -281,22 +281,70 @@ The governing rule is simple: **future traversal verbs are allowed to be powerfu
 
 ---
 
+## 13. Controller movement axes / dead-zone behavior — LOCKED
+
+The movement stick is treated as a **two-dimensional intention vector**, not as two unrelated digital-ish axes. Dead-zone processing exists to suppress hardware noise without distorting the direction the player actually pointed.
+
+### Radial inner dead zone
+- movement uses a **radial / magnitude-based inner dead zone** centered on stick neutral;
+- input whose vector magnitude remains inside the configured dead zone is treated as zero movement intent;
+- separate per-axis dead zones are not the baseline because they distort diagonals and create square/cross-shaped response artifacts;
+- once magnitude exceeds the inner dead zone, the original stick direction is preserved;
+- post-dead-zone magnitude is smoothly rescaled from the dead-zone boundary toward full input rather than creating a sudden speed step at activation.
+
+### Drift and traversal intent
+- ordinary controller drift, jitter, and dead-zone noise must not move Neris;
+- the same processed movement-intent vector is used by locomotion systems that depend on analog intent, so drift cannot mount ladders, start mantles, request pull-up, leave neutral hang, steer a slide, exit water, or trigger another directional traversal transition;
+- traversal states that intentionally listen to a different action button remain governed by that explicit action instead of raw-stick noise;
+- neutral means neutral consistently across ground, hang, ladder, surface swim, and other analog-driven states.
+
+### Full-range response / worn controllers
+- a small configurable outer saturation margin may map near-maximum physical stick travel to full movement intent so worn controllers can still reach 100% requested magnitude;
+- outer saturation must not alter the intended direction or create faster-than-maximum movement;
+- exact default inner and outer values remain Gate 1 tuning against representative controllers rather than being hard-coded here.
+
+### Configuration and accessibility boundary
+- movement dead-zone values must be exposed through player settings within safe supported bounds;
+- defaults should work for healthy modern controllers without requiring setup;
+- increasing the inner dead zone trades fine low-speed precision for drift resistance; decreasing it trades drift tolerance for earlier response, and the settings presentation should communicate that tradeoff plainly;
+- reset-to-default must be available;
+- dead-zone settings affect movement intent processing, not authored traversal distances, speeds, stamina rules, or world eligibility.
+
+### Digital movement inputs
+- keyboard/digital directional inputs map to explicit directional movement intent rather than emulating noisy analog values;
+- simultaneous digital diagonals are vector-normalized so diagonal movement does not exceed the intended maximum movement magnitude;
+- digital input still passes through the same locomotion-state speed/acceleration rules after its direction/magnitude is formed.
+
+### Scope boundary
+- this section governs **movement-stick locomotion input**;
+- look-stick dead zones, camera sensitivity, acceleration, inversion, and camera response curves belong to Issue #2 / camera accessibility authority and are not silently decided here;
+- exact Enhanced Input modifier implementation is an implementation detail so long as the player-facing semantics above are preserved.
+
+Gate 1 must explicitly test centered healthy controllers, mild drift, near-dead-zone diagonals, slow circular stick motion, worn-controller maximum travel, keyboard diagonals, and traversal states whose neutral behavior must remain neutral.
+
+---
+
 ## Current locked movement grammar
 ```text
-baseline ground/jump/sprint                  → ordinary locomotion contract
-mantle / ledge / ladder / swim / slope       → their explicit locked state grammar
-interaction while moving                     → valid flow without magnetic snapping
-future traversal tool owned                  → NO passive universal movement expansion
-valid authored tool affordance + clear intent→ enter that tool's explicit traversal state
-invalid tool target/entry                    → do not seize movement / do not magnetically pull
-tool traversal active                        → only documented axes/verbs/overrides apply
-tool cancel/exit/failure                     → restore baseline movement predictably
-tool state churn                             → NO free height/speed/fall reset/collision bypass
+baseline ground/jump/sprint                   → ordinary locomotion contract
+mantle / ledge / ladder / swim / slope        → their explicit locked state grammar
+interaction while moving                      → valid flow without magnetic snapping
+future traversal tool owned                   → NO passive universal movement expansion
+valid authored tool affordance + clear intent → enter that tool's explicit traversal state
+invalid tool target/entry                     → do not seize movement / do not magnetically pull
+tool traversal active                         → only documented axes/verbs/overrides apply
+tool cancel/exit/failure                      → restore baseline movement predictably
+tool state churn                              → NO free height/speed/fall reset/collision bypass
+movement stick inside radial dead zone        → zero movement intent
+movement stick outside radial dead zone       → preserve direction + smoothly rescaled magnitude
+stick drift / dead-zone noise                 → NO movement and NO directional traversal intent
+near-full worn-controller input               → configurable outer saturation may reach full intent
+keyboard diagonal                             → normalized directional vector; NO diagonal speed bonus
 ```
 
 ---
 
 ## Next locomotion decision
-**Controller axes / dead-zone behavior.**
+**Analog low-speed / run / sprint threshold philosophy.**
 
-After that: analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
