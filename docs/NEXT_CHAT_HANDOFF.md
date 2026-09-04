@@ -11,24 +11,25 @@
 - Issue #1 — tracking/final review
 
 ## Current boundary
-Merged main before branch: `15a91056e05d228ef354e78f4c9810f82b607064`
+Merged main before branch: `41b4c0f1569527d3488c14850eb474b11390a6f2`
 
 Latest merged locomotion PR:
-- #50 `Design: lock interaction while moving semantics`
+- #51 `Design: lock traversal-tool locomotion override contract`
 
 Current branch:
-- `design/traversal-tool-overrides`
+- `design/controller-dead-zone`
 
 Current decision:
-- future traversal tools/capabilities do not passively expand baseline movement;
-- every override requires explicit authored affordance + entry intent + state contract;
-- each future contract must define entry, axes/steering, suppressed/allowed verbs, cancel/release, exits, failures, fall interaction, state conflicts, and restoration of baseline movement;
-- failed activation never seizes movement or magnetically pulls Neris;
-- tool state churn cannot grant free height/speed, reset falls, or bypass collision;
-- any intentional change to mantle/ledge/slope/air/fall rules is explicit and state-bounded.
+- movement stick uses radial/magnitude-based dead-zone processing rather than separate X/Y dead zones;
+- stick direction is preserved once active and magnitude is smoothly rescaled beyond the dead-zone boundary;
+- drift/jitter inside the dead zone produces zero movement and zero directional traversal intent;
+- configurable outer saturation may let worn controllers reach full requested magnitude without changing direction or maximum speed;
+- movement dead-zone settings are player-configurable within safe bounds and resettable;
+- keyboard diagonals are normalized so they do not create a speed bonus;
+- look-stick/camera response remains Issue #2 authority.
 
 Next after merge:
-- **controller axes / dead-zone behavior**.
+- **analog low-speed / run / sprint threshold philosophy**.
 
 ## Owner delegation
 Remaining **locomotion-only** decisions continue without individual approval pauses. One decision at a time; repository authority + diff review + merge. Final owner review together remains mandatory.
@@ -36,17 +37,16 @@ Remaining **locomotion-only** decisions continue without individual approval pau
 > **Simple intention, capable character, honest world.**
 
 ## Remaining sequence
-1. controller axes / dead-zone behavior;
-2. analog low-speed / run / sprint thresholds;
-3. acceleration / deceleration / turning philosophy;
-4. target-lock locomotion detail;
-5. accessibility implications;
-6. five-minute human-play acceptance test;
-7. repository-authority reconciliation;
-8. final owner review.
+1. analog low-speed / run / sprint thresholds;
+2. acceleration / deceleration / turning philosophy;
+3. target-lock locomotion detail;
+4. accessibility implications;
+5. five-minute human-play acceptance test;
+6. repository-authority reconciliation;
+7. final owner review.
 
 ## Implementation order after final review
 Issue #1 final → Issue #2 camera → Issue #5 Unreal harness → movement → camera → target lock.
 
 ## Continuation rule
-After this PR merges, continue from **controller axes / dead-zone behavior**. Read repository authority rather than chat memory.
+After this PR merges, continue from **analog low-speed / run / sprint threshold philosophy**. Read repository authority rather than chat memory.
