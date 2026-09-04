@@ -172,22 +172,36 @@ Locked:
 - a hard 180-degree reversal uses a quick planted reversal and then re-accelerates into sprint rather than snapping instantly at full speed;
 - jumping while sprinting preserves the horizontal sprint momentum Neris already has rather than automatically dropping her to ordinary run speed;
 - sprint-jumping does **not** grant an extra speed boost beyond the momentum already carried into the jump;
-- after landing, Neris returns to/continues sprint when sprint is still being requested and no other movement state overrides it.
+- after landing, Neris returns to/continues sprint when sprint is still being requested and no other movement state overrides it;
+- acquiring target lock while sprinting **ends the exploration sprint state**;
+- lock-on does **not** hard-stop Neris instantly: existing momentum decays quickly and naturally through a short deceleration/pivot transition;
+- after that transition, precise target-relative combat locomotion owns movement;
+- full exploration sprint is **not available while target-locked**.
 
-The exact turn-rate curve, speed-loss amount, animation timing, re-acceleration values, jump arc, and air-control values remain Gate 1 tuning questions. The **feel rules** are locked: responsive steering, brief momentum loss only for genuinely hard reversals, and no invisible braking merely because the player jumped.
+The exact turn-rate curve, speed-loss amount, animation timing, re-acceleration values, jump arc, air-control values, and sprint-to-lock blend timing remain Gate 1 tuning questions. The **feel rules** are locked: responsive steering, brief momentum loss only for genuinely hard reversals, no invisible braking merely because the player jumped, and no jarring hard stop when sprint turns into combat locomotion.
 
 Still pending owner review:
-- target-lock/combat entry behavior while sprinting;
 - exact acceleration and top speed.
 
 ### 4.6 Lock-on remains a tactical movement mode
 
 Target lock is still valuable because it solves a real third-person combat problem.
 
+Entering target lock from sprint follows this locked transition:
+
+```text
+exploration sprint
+      ↓ acquire target lock
+short natural deceleration / pivot
+      ↓
+target-relative combat locomotion
+```
+
 While locked:
 - movement becomes target-relative where appropriate;
 - camera framing preserves both Neris and the relevant threat;
 - target switching must be understandable;
+- full exploration sprint is unavailable;
 - enemy encounter logic must participate in readability rather than allowing every nearby enemy to attack without regard for visual/combat bandwidth.
 
 Stillring will design its own targeting indicator, switching rules, camera geometry, aggression model, and animation language.
@@ -205,6 +219,7 @@ The prototype and later animation work must consider:
 - run-to-interaction transitions;
 - jump/landing transitions;
 - mantle/scramble transitions;
+- sprint-to-lock transitions;
 - lock/unlock transitions;
 - weapon-state locomotion transitions.
 
@@ -265,7 +280,9 @@ At full sprint, normal curves/corners should remain responsive. Only hard direct
 
 When sprint transitions into a jump, horizontal sprint momentum carries through the jump. Jumping is not a brake and is not a hidden speed exploit: it preserves existing travel momentum without adding more. If sprint is still requested on landing and no other movement state takes priority, Neris continues sprinting rather than being arbitrarily reset to run.
 
-The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, and air-control values remain tuning questions.
+When sprint transitions into target-lock combat, sprint authority ends immediately as a state but **velocity does not disappear instantly**. Gate 1 should tune a short natural deceleration/pivot that settles rapidly into precise target-relative movement. The transition should feel intentional and physical, never like an invisible wall and never like Neris keeps using full exploration sprint around the target.
+
+The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, and sprint-to-lock transition timing remain tuning questions.
 
 ---
 
@@ -273,7 +290,6 @@ The exact speed thresholds, turn curves, reversal speed loss, re-acceleration va
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- target-lock/combat entry behavior while sprinting;
 - exact mantle/scramble thresholds and control timing;
 - ledge grab/hang behavior;
 - deliberate drop behavior;
@@ -315,6 +331,8 @@ Failure examples:
 - sprint steering feeling like a vehicle or tank;
 - instant full-speed 180-degree snaps making Neris feel weightless;
 - jump input acting like an invisible brake during a running jump;
+- target-lock instantly zeroing sprint velocity and feeling like a collision;
+- target-lock allowing full exploration sprint circles that undermine precise combat spacing;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
