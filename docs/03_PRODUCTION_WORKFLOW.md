@@ -21,6 +21,22 @@ Changes in one discipline can invalidate work in several others. The workflow th
 
 Project Stillring uses Unreal Engine 5.8 with Claude as the primary implementation agent. Engine/editor convenience does not replace the source-of-truth and evidence rules in this workflow.
 
+## Conversation-to-repository capture rule
+
+Durable project decisions must not live only in chat.
+
+When a conversation settles a decision that future design or implementation could depend on, the same workstream must:
+
+1. identify the correct repository authority file;
+2. record the accepted decision there;
+3. distinguish **LOCKED**, **PROTOTYPE HYPOTHESIS**, and **PENDING OWNER REVIEW** where relevant;
+4. update `docs/18_PROJECT_DECISION_REGISTER.md` when the decision is project-significant;
+5. reconcile dependent issues/docs instead of leaving contradictory older wording behind.
+
+A conversational suggestion is **not** automatically a locked design rule. It becomes durable authority only when accepted and recorded in the repository.
+
+The project should remain reconstructable even if every chat transcript disappears.
+
 ---
 
 # Phase 0 — Charter / legal cleanliness
@@ -56,6 +72,31 @@ Deliver:
 - target hardware,
 - accessibility baseline.
 
+### Owner-led player-feel review
+
+High-impact player-feel decisions are reviewed with the owner **one meaningful decision at a time** before Claude turns them into permanent implementation assumptions.
+
+Examples include:
+- locomotion vocabulary;
+- jump/sprint/mantle/climb behavior;
+- camera authority;
+- lock-on movement;
+- combat commitment;
+- evade/guard feel;
+- traversal-tool behavior;
+- major accessibility tradeoffs that alter interaction grammar.
+
+The design/research process may present a recommendation and alternatives, but it must not bury ten unresolved feel decisions inside one implementation package and treat silence as approval.
+
+For each decision:
+- explain the player-facing problem in plain language;
+- show the relevant research/design lineage where useful;
+- state the recommended direction;
+- mark whether the result is locked, a prototype hypothesis, or still pending;
+- write the accepted result into repository authority before implementation depends on it.
+
+Claude may tune implementation within a locked contract. Claude does not get to silently choose unresolved player-feel policy because Unreal has a default setting.
+
 ### Risk list
 
 Rank risks by **unknown × cost**.
@@ -88,7 +129,11 @@ Prototype separately:
 - low ceiling,
 - wall collision,
 - target lock,
-- multiple enemies.
+- multiple enemies,
+- current Issue #1 movement hypotheses,
+- current Issue #2 camera rules.
+
+The locomotion/camera prototype must be informed by `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, not by blindly inheriting stock Unreal Third Person template behavior or preserving 1998 controller limitations.
 
 ## B. Combat arena
 - attack commitment,
@@ -363,6 +408,8 @@ Every implementation issue should contain:
 - test steps,
 - affected milestone.
 
+For player-feel issues, the issue must also identify any still-pending owner decisions so Claude cannot mistake them for implementation freedom.
+
 ## Branching
 
 Suggested:
@@ -379,14 +426,15 @@ Claude should:
 2. read the issue,
 3. inspect existing C++/Unreal architecture and relevant binary-asset context,
 4. state assumptions in the PR description,
-5. implement the smallest complete change,
-6. run reproducible validation,
-7. update docs/contracts when behavior changes,
-8. enumerate created/modified Unreal binary assets,
-9. open PR,
-10. report limitations honestly.
+5. stop and return unresolved design-policy questions to repository/owner authority rather than silently deciding them,
+6. implement the smallest complete change,
+7. run reproducible validation,
+8. update docs/contracts when behavior changes,
+9. enumerate created/modified Unreal binary assets,
+10. open PR,
+11. report limitations honestly.
 
-Claude may handle the complete implementation workflow, but it does not get authority to redefine canon or waive human playtest gates.
+Claude may handle the complete implementation workflow, but it does not get authority to redefine canon, settle pending owner feel choices, or waive human playtest gates.
 
 ## Merge gate
 
@@ -402,6 +450,8 @@ Require evidence appropriate to the change:
 - frame-time evidence for performance-sensitive changes.
 
 Binary asset changes that cannot be meaningfully diffed require **more evidence**, not less.
+
+For subjective/player-feel changes, automated evidence never replaces the required human acceptance route.
 
 ## Scope control
 
