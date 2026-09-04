@@ -4,14 +4,16 @@
 **Updated:** 2026-09-04  
 **Repository:** `raiinman/Stillring`
 
-## Current main
+## Decision boundary
+
+Base before the current decision PR:
 
 `f881a3336b117656901e0d833b8c0962056bdbdd`
 
-Current decision-authority branch:
-- `design/no-baseline-free-climbing`
+Current decision PR:
+- PR #40 — `Design: lock no baseline free climbing`
 
-Latest merged decision PR:
+Latest previously merged decision PR:
 - PR #39 — `Design: lock deliberate ledge drop`
 
 Reference research:
@@ -218,7 +220,7 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #35 ledge hang pull-up continuation
 - #37 same-continuous-handhold ledge shimmy
 - #39 deliberate explicit ledge release
-- current branch `design/no-baseline-free-climbing` — authored-climbing boundary authority
+- #40 no baseline free climbing / authored-climbing boundary
 
 ## Important continuation rule
 
