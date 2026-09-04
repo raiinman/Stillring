@@ -4,15 +4,14 @@
 **Updated:** 2026-09-04  
 **Repository:** `raiinman/Stillring`
 
-## Current main
+## Decision boundary
+
+Base before the current shimmy decision PR:
 
 `f05314a60d8de918c82e8c157ccfe1a81ebc2630`
 
-Current decision-authority branch:
-- `design/ledge-shimmy`
-
-Latest merged decision PR:
-- PR #35 — `Design: lock ledge hang pull-up continuation`
+Current decision PR:
+- PR #37 — `Design: lock same-handhold ledge shimmy`
 
 ## Read first in the next chat
 
@@ -194,7 +193,7 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #33 body-relative mantle height scope
 - #34 automatic reachable ledge catch
 - #35 ledge hang pull-up continuation
-- current branch `design/ledge-shimmy` — same-continuous-handhold shimmy authority
+- #37 same-continuous-handhold ledge shimmy
 
 ## Important continuation rule
 
