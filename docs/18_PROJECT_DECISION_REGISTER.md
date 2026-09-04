@@ -71,6 +71,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 | D-045 | PENDING OWNER REVIEW | Final ledge grab/hang/drop, climbing scope, swimming, crouch, slope sliding/scrambling, fall damage/recovery, and air-control rules. | Issue #1 |
 | D-046 | LOCKED | Gate 1 human target: within roughly five minutes, ordinary movement should stop being something the player consciously fights. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, `ROADMAP.md` |
 | D-047 | LOCKED | Major cliffs/meaningful height gates remain authored traversal problems solved by route, tool, or later capability rather than baseline jump/mantle. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
+| D-048 | LOCKED | Sprint supports both Hold and Toggle input modes. Hold is the default; Toggle is available through controls/accessibility settings without changing sprint gameplay rules. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 
 ---
 
