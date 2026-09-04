@@ -4,7 +4,7 @@ This is the canonical beginning-to-end narrative for Project Stillring.
 
 The complete story is intentionally split into reviewable chapters so narrative changes produce smaller diffs and coding agents do not have to load a thousand-line monolith for every content task.
 
-## Read in this order
+## Core story — read in this order
 
 1. [`story/01_FOUNDATIONS_AND_OPENING.md`](story/01_FOUNDATIONS_AND_OPENING.md) — story promise, ancient history, Quiet Court, Mercy Window, main cast, Brindle opening, inciting catastrophe.
 2. [`story/02_ACT_ONE_WAYBELLS.md`](story/02_ACT_ONE_WAYBELLS.md) — Cairnspire arrival, the First Circuit exploration phase, Rootmere/Saltreach/Emberstep tuning crises, and Maelor's three-point Grand Ring betrayal.
@@ -13,7 +13,28 @@ The complete story is intentionally split into reviewable chapters so narrative 
 5. [`story/05_CREDITS_AND_THEMATIC_RULES.md`](story/05_CREDITS_AND_THEMATIC_RULES.md) — credits montage, post-credits hook, and thematic rules for future writers.
 6. [`story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`](story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md) — canonical character motivations, culpability, relationship fractures, rebuilds, and dialogue continuity.
 
-For exact spoiler timing across the critical path and optional 100% story, also read [`12_100_PERCENT_ROUTE.md`](../docs/12_100_PERCENT_ROUTE.md).
+For exact spoiler timing across the critical path and optional 100% story, also read [`12_100_PERCENT_ROUTE.md`](12_100_PERCENT_ROUTE.md).
+
+## Production story contracts
+
+Once the core story is understood, use these documents when writing or implementing scenes:
+
+1. [`story/07_SCENE_BEAT_LEDGER.md`](story/07_SCENE_BEAT_LEDGER.md) — stable scene/sequence IDs, participants, player-control state, physical action, scene wants, state transitions, and downstream payoffs.
+2. [`story/08_REVEAL_AND_FORESHADOW_LEDGER.md`](story/08_REVEAL_AND_FORESHADOW_LEDGER.md) — authoritative seed → evidence → pressure → reveal → payoff timing for the game's major mysteries.
+3. [`story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`](story/09_MAIN_QUEST_OBJECTIVE_FLOW.md) — player-facing main objectives and the narrative/world-state gates that advance them.
+4. [`story/10_DIALOGUE_ANCHORS.md`](story/10_DIALOGUE_ANCHORS.md) — dialogue lines and conversational intents that future script passes must preserve or deliberately revise with their callbacks.
+
+These are not redundant summaries. They answer different production questions:
+
+- **Story Bible:** what happens and why?
+- **Character arcs:** what changes inside the people involved?
+- **100% route:** when can the player encounter each critical/optional story beat?
+- **Scene ledger:** what is physically happening while a scene delivers story?
+- **Reveal ledger:** what is the player allowed to know yet?
+- **Objective flow:** what does Neris currently intend to do?
+- **Dialogue anchors:** which wording or conversational function carries a later payoff?
+
+A future narrative change that affects more than one of those questions must update every affected contract together.
 
 ## Canonical spine
 
@@ -59,11 +80,20 @@ Ilyra returns physically but is changed by eleven years in the Hush; her relatio
 
 Neris eventually leaves Brindle as a traveling bellwright carrying a repaired but permanently cracked Cantor Key. The post-credits scene establishes that a different bell is ringing beneath an ocean far beyond Orra.
 
-## Narrative rule
+## Narrative authority rule
 
-The individual chapter files are authoritative for scene-level story details. This index is the authoritative high-level spine. `story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md` is authoritative for motivation/relationship continuity. `docs/12_100_PERCENT_ROUTE.md` is authoritative for spoiler timing and optional-story sequencing.
+The individual chapter files are authoritative for scene-level story details. This index is the authoritative high-level spine.
 
-Any change that contradicts the spine must update every affected canonical document in the same pull request.
+Additional authority is divided deliberately:
+
+- `story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md` — motivation and relationship continuity.
+- `12_100_PERCENT_ROUTE.md` — spoiler timing and optional-story sequencing.
+- `story/07_SCENE_BEAT_LEDGER.md` — mandatory scene staging and state transitions.
+- `story/08_REVEAL_AND_FORESHADOW_LEDGER.md` — mystery/reveal timing.
+- `story/09_MAIN_QUEST_OBJECTIVE_FLOW.md` — player-facing critical-path intent and objective gates.
+- `story/10_DIALOGUE_ANCHORS.md` — locked/strong dialogue setup and callback obligations.
+
+Any change that contradicts the spine or another authority contract must update every affected canonical document in the same pull request.
 
 ## Structural rule
 
