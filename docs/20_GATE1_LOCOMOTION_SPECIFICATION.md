@@ -324,6 +324,48 @@ Gate 1 must explicitly test centered healthy controllers, mild drift, near-dead-
 
 ---
 
+## 14. Analog speed bands / sprint threshold philosophy — LOCKED
+
+Processed movement-stick magnitude represents **how strongly the player wants to travel**, and baseline speed should respond continuously rather than snapping through arbitrary walk/run gears.
+
+### Careful movement through ordinary run
+- after dead-zone processing, analog magnitude maps continuously from very low-speed careful movement toward ordinary run;
+- there is no separate baseline Walk button or Walk/Run toggle required to access precision movement;
+- low stick magnitude must provide a genuinely useful careful-speed band for lining up traversal, approaching edges, interacting, and moving through tight spaces;
+- increasing stick magnitude should increase requested travel speed smoothly enough that crossing an animation blend threshold does not feel like a gameplay speed switch;
+- without Sprint requested, high/full analog magnitude reaches the ordinary run ceiling and does not silently enter Sprint.
+
+### Sprint unlocks the upper band
+- Sprint remains an **explicit request** through the already-locked Hold/Toggle control option;
+- requesting Sprint does not turn a tiny stick tilt into full-speed sprint: low analog magnitude continues to mean low movement intent;
+- Sprint becomes the active locomotion state only when both Sprint is requested and movement magnitude enters a clear upper travel-intent band;
+- while Sprint is requested, increasing magnitude through that upper band blends toward the sprint ceiling; full valid magnitude reaches full sprint speed;
+- lowering magnitude deliberately allows the player to return toward run/careful movement without first releasing the Sprint control;
+- Sprint does not increase mantle height, ledge reach, slope scramble authority, jump impulse, or any traversal eligibility other than the already-locked preservation of existing horizontal sprint momentum into a jump.
+
+### Threshold hysteresis / no state chatter
+- the Sprint engage boundary and disengage boundary use a small hysteresis band rather than one razor-thin identical threshold;
+- once Sprint is active, tiny stick fluctuations around the engage point do not repeatedly enter/exit Sprint every frame;
+- dropping clearly below the lower disengage boundary exits active Sprint cleanly;
+- exact engage/disengage magnitudes and the magnitude-to-speed response curve remain Gate 1 tuning, but the semantic separation must be stable and easy to reproduce across controller hardware.
+
+### Hold / Toggle request lifetime
+- **Hold**: Sprint is requested only while the Sprint control is held;
+- **Toggle**: a toggled Sprint request may remain armed through brief ordinary neutral movement so the option actually reduces repeated button presses;
+- entering an explicitly incompatible locomotion state—such as target lock, hanging, ladder traversal, swimming, committed slide, planted interaction, or damaging-fall recovery—clears active Sprint and clears a toggled Sprint request so exiting that state does not unexpectedly launch Neris back into Sprint;
+- the player can always toggle Sprint off manually before such a transition;
+- exact brief-neutral persistence timing, if any is needed to distinguish a pause from a state transition, remains implementation tuning and must not create surprise movement.
+
+### Digital movement
+- digital movement input represents full directional magnitude for the currently allowed non-Sprint movement band;
+- without Sprint requested, digital movement reaches ordinary run;
+- with Sprint requested and Sprint legally available, digital movement reaches full Sprint;
+- diagonal normalization remains binding, so keyboard diagonal run/sprint is not faster than cardinal run/sprint.
+
+The target is one readable continuum: **tilt a little to move carefully, push farther to run, explicitly request Sprint to unlock the fastest travel band.**
+
+---
+
 ## Current locked movement grammar
 ```text
 baseline ground/jump/sprint                   → ordinary locomotion contract
@@ -339,12 +381,18 @@ movement stick inside radial dead zone        → zero movement intent
 movement stick outside radial dead zone       → preserve direction + smoothly rescaled magnitude
 stick drift / dead-zone noise                 → NO movement and NO directional traversal intent
 near-full worn-controller input               → configurable outer saturation may reach full intent
-keyboard diagonal                             → normalized directional vector; NO diagonal speed bonus
+analog low magnitude                          → useful careful movement
+analog high magnitude, no Sprint request      → ordinary run ceiling
+Sprint requested + low magnitude              → remain low/ordinary movement; NO forced full sprint
+Sprint requested + upper magnitude band       → stable Sprint engagement and blend toward sprint ceiling
+Sprint threshold noise                        → hysteresis prevents state chatter
+digital direction, no Sprint request          → ordinary run
+digital direction + legal Sprint request      → full Sprint
 ```
 
 ---
 
 ## Next locomotion decision
-**Analog low-speed / run / sprint threshold philosophy.**
+**Acceleration / deceleration / turning philosophy.**
 
-After that: acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
