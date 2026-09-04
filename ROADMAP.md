@@ -52,6 +52,7 @@ Build only:
 - third-person locomotion;
 - useful analog low-speed through full-speed movement;
 - sustained sprint available from the beginning for faster ground travel, separate from combat evade;
+- **no stamina/resource cost for ordinary sprint**;
 - always-available modest deliberate jump;
 - small authored mantle/scramble response for obviously low obstacles;
 - automatic stairs/small-step/minor-terrain handling;
@@ -68,14 +69,14 @@ Build only:
 
 Do not let stock Third Person template defaults, Ocarina-era hardware constraints, or another Zelda game's exact control values silently become Stillring's movement/camera specification.
 
-The existence of deliberate jump, low-obstacle mantle/scramble, and sustained sprint is locked. Gate 1 still tunes their exact speeds, curves, thresholds, animation response, and jump/air-control details through human play. Whether sprint consumes stamina or another resource remains a separate owner decision.
+The existence of deliberate jump, low-obstacle mantle/scramble, sustained sprint, and no-cost ordinary sprint is locked. Gate 1 still tunes their exact speeds, curves, thresholds, animation response, and jump/air-control details through human play. A future combat or special-traversal resource must not silently become a tax on normal sprinting.
 
 Exit condition:
 - moving around an ugly gray room already feels deliberate and controllable;
 - ordinary movement stops demanding conscious correction within roughly the first five minutes of a fresh playtest;
 - stairs/small terrain do not create accidental friction;
 - walk/run/sprint each have a useful role rather than making ordinary run intentionally bad;
-- sprint improves travel flow without behaving like a second dodge;
+- sprint improves travel flow without behaving like a second dodge or creating a sprint-wait-sprint loop;
 - deliberate jump feels useful without turning ordinary traversal into constant bunny-hopping;
 - low obvious obstacles mantle/scramble consistently;
 - meaningful height gates remain readable rather than accidentally bypassable;
@@ -91,7 +92,7 @@ Add:
 - guard;
 - dodge/evade;
 - hit reactions;
-- stamina/commitment model if retained after testing;
+- stamina/commitment model if retained after testing **for combat-specific mechanics only**;
 - one melee enemy;
 - one ranged enemy;
 - one shield/armor enemy;
