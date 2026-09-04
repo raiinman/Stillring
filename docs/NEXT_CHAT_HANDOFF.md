@@ -6,7 +6,10 @@
 
 ## Current main
 
-`594ae03cdd2aaae651bbc64083f42deefe5480a3`
+`f05314a60d8de918c82e8c157ccfe1a81ebc2630`
+
+Current decision-authority branch:
+- `design/ledge-shimmy`
 
 Latest merged decision PR:
 - PR #35 — `Design: lock ledge hang pull-up continuation`
@@ -79,7 +82,7 @@ Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses 
   - shoulder-height and above: **not** baseline auto-mantle territory.
 - Exact centimeters/angles/detection volumes/timing remain Gate 1 tuning tied to Neris's actual prototype scale and may not silently expand baseline mantle upward.
 
-### Ledge catch / hang / pull-up
+### Ledge catch / hang / pull-up / shimmy
 
 - Above the ordinary mantle band, Neris may automatically catch a **valid reachable ledge** when jump/fall trajectory and directional intent clearly communicate the attempt.
 - There is no dedicated ledge-grab button.
@@ -91,7 +94,13 @@ Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses 
 - Continued movement toward/up onto the ledge requests pull-up with **no separate climb button**.
 - Pull-up only completes when the top/landing is valid, standable, and clear enough to finish safely.
 - Invalid/blocked/unsafe tops leave Neris hanging rather than clipping or forcing placement.
-- Ledge catch/pull-up does not silently authorize a broader climbing system.
+- Left/right input while hanging allows **simple lateral shimmy along the same continuous valid handhold**.
+- Releasing lateral input leaves Neris hanging at the current valid position.
+- Shimmy may correct an imperfect catch or move Neris toward a valid pull-up position.
+- Baseline shimmy does **not** wrap corners, cross gaps, transfer to another wall/ledge, jump laterally between ledges, or climb vertically between handholds.
+- A corner, gap, new wall/ledge, or higher/lower handhold is a separate traversal problem.
+- Exact shimmy speed, acceleration, animation cadence, hand spacing, and ledge-follow tolerances remain Gate 1 tuning.
+- Ledge catch/pull-up/shimmy does not silently authorize a broader climbing system.
 
 ## Current locked movement grammar
 
@@ -116,6 +125,9 @@ shoulder-height and above               → NO baseline auto-mantle; meaningful 
 valid reachable ledge + clear intent    → automatic catch → hang
 hang + neutral movement                 → remain hanging
 hang + continued toward/up intent       → pull up if top is valid/clear
+hang + left/right on same handhold      → simple lateral shimmy
+shimmy reaches corner/gap/new wall      → stop; NO automatic continuation
+shimmy toward higher/lower handhold     → NO vertical transfer/climb
 invalid or blocked top                  → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge   → NO catch
 passing near/alongside mantle geometry  → NO mantle
@@ -125,45 +137,28 @@ major cliff / meaningful height gate    → route, tool, or later traversal capa
 
 ## IMMEDIATE NEXT OWNER DECISION
 
-**Ledge shimmy behavior while hanging.**
+**Deliberate drop behavior while hanging.**
 
-The recommendation proposed immediately before this handoff, but **NOT YET OWNER-APPROVED**, is:
+The shimmy package is now owner-approved and locked. The next question is intentionally narrower:
 
-> Allow simple lateral shimmy along one continuous valid ledge, with no corner wrapping, gaps, transfers, or vertical climbing.
+> When Neris is hanging, what explicit player input means “let go,” and how do we prevent ordinary analog movement from accidentally causing a fall?
 
-Intended boundary if approved:
+Do **not** let Unreal defaults, Zelda, Assassin's Creed, Souls games, or another traversal system answer this automatically.
 
-```text
-same continuous handhold
-←  simple shimmy  →
-
-corner / gap / new wall / higher ledge
-             ✕
-```
-
-Rationale:
-- lets the player correct a slightly-off catch;
-- lets Neris move toward a valid pull-up spot;
-- gives hang state useful agency;
-- avoids quietly becoming Assassin's Creed-style free climbing.
-
-Do **not** mark this LOCKED until the owner explicitly approves it.
-
-## Remaining Issue #1 owner-review sequence after shimmy
+## Remaining Issue #1 owner-review sequence
 
 Continue one meaningful decision at a time:
 
-1. ledge shimmy behavior;
-2. deliberate drop behavior;
-3. broader climbing scope;
-4. ladders;
-5. swimming;
-6. crouch/stealth posture if any;
-7. slope scrambling/sliding;
-8. fall damage/recovery;
-9. jump arc / air control;
-10. interaction while moving;
-11. traversal-tool overrides.
+1. deliberate drop behavior;
+2. broader climbing scope;
+3. ladders;
+4. swimming;
+5. crouch/stealth posture if any;
+6. slope scrambling/sliding;
+7. fall damage/recovery;
+8. jump arc / air control;
+9. interaction while moving;
+10. traversal-tool overrides.
 
 Issue #1 also still needs enough prototype-tuning authority for controller dead zones, movement thresholds, acceleration/deceleration philosophy, and target-lock movement details before it can be considered implementation-complete. Do not let Claude infer permanent design policy from Unreal defaults.
 
@@ -199,7 +194,8 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #33 body-relative mantle height scope
 - #34 automatic reachable ledge catch
 - #35 ledge hang pull-up continuation
+- current branch `design/ledge-shimmy` — same-continuous-handhold shimmy authority
 
 ## Important continuation rule
 
-If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **ledge shimmy decision** unless the owner deliberately changes priorities.
+If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **deliberate drop decision** unless the owner deliberately changes priorities.
