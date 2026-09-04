@@ -78,6 +78,54 @@ No region waits for Neris to invent self-government in the final hour.
 
 ---
 
+# Visit-worthiness rule
+
+> **Every major location must be worth visiting before anything bad happens there.**
+
+This is a hard narrative and worldbuilding requirement.
+
+A region does not earn emotional weight merely because its later catastrophe is dramatic. The player must first have reasons to enjoy, recognize, and voluntarily linger in the place while ordinary life is still functioning.
+
+Before any major destructive or transformative story beat, each region must provide at least:
+
+- one social space the player can enjoy without progressing the main quest;
+- one ordinary activity, ritual, or local routine worth watching or joining;
+- one memorable minor relationship or joke unrelated to the regional crisis;
+- one person the player can become fond of before that person's circumstances change;
+- one harmless or low-stakes problem that shows how people actually live there;
+- one visual or audio feature the player can later notice has changed;
+- one reason to return that is not loot, completion percentage, or dungeon access.
+
+The player should be able to form a **before-memory** of the place.
+
+The Grand Ring, regional crisis, or later transformation then changes something the player already knows rather than presenting damage to an unfamiliar backdrop.
+
+### Failure test
+
+If a designer says:
+
+> “This location becomes really interesting after the disaster,”
+
+then the pre-disaster version is not finished.
+
+If the player would willingly revisit the pre-crisis settlement simply to see people, use a favorite service, hear local conversation, take a route they like, or spend a few quiet minutes there, the location is approaching the target.
+
+### Emotional target
+
+The changed-world return should produce recognition before exposition:
+
+- “that table used to be crowded;”
+- “the ferry guy should be here;”
+- “that bell never sounded right;”
+- “those children used to race across this bridge;”
+- “this shop used to stay open late.”
+
+The game should not need a character to tell the player that a place has changed if the player already knows what used to happen there.
+
+This rule is stronger than simple foreshadowing. It requires **attachment before loss**.
+
+---
+
 # Regional overview
 
 | Region | What ordinary life is built around | Network dependence | Core local argument | Changed-world question |
