@@ -366,6 +366,53 @@ The target is one readable continuum: **tilt a little to move carefully, push fa
 
 ---
 
+## 15. Acceleration / deceleration / turning philosophy — LOCKED
+
+Stillring prioritizes **immediate intention acknowledgement with speed-dependent physical weight**. The character should feel responsive at all speeds, but higher momentum should be visible and believable rather than erased.
+
+### Input acknowledgement
+- a valid change in movement intent begins affecting requested movement immediately; basic locomotion does not wait for an animation anticipation, foot plant, or turn clip before acknowledging input;
+- acceleration curves may shape how quickly velocity changes, but they may not create a perceptible dead pause before motion begins;
+- gameplay movement/state remains authoritative; animation follows the locomotion result rather than owning ordinary exploration trajectory through opaque root-motion delays.
+
+### Careful / low-speed movement
+- careful movement accelerates, decelerates, and changes direction very quickly so precision positioning does not feel mushy;
+- releasing the stick from low speed should settle to rest promptly without skating or a long stopping animation;
+- small directional corrections near edges or interaction points should feel direct and trustworthy.
+
+### Ordinary run
+- ordinary run uses brisk acceleration to requested speed and brisk deceleration when intent is reduced or released;
+- stopping distance is short enough that ordinary running never feels like moving on ice;
+- deceleration may be slightly stronger than acceleration where useful for control, but exact rates remain Gate 1 tuning;
+- ordinary run can make tight practical turns without being forced through a broad vehicle-like turning radius;
+- a hard run reversal may use a quick planted pivot/reorientation, but control response remains substantially faster/lighter than a full-speed Sprint reversal.
+
+### Sprint weight
+- Sprint carries more visible momentum than run, especially when stopping or making a hard reversal;
+- ordinary Sprint curves remain highly steerable as already locked;
+- hard Sprint reversal still briefly sheds momentum, plants, redirects, and re-accelerates rather than instantly preserving full speed in the opposite direction;
+- releasing Sprint or reducing analog magnitude uses a short controlled deceleration into the requested lower-speed band instead of either hard-zeroing velocity or coasting excessively;
+- Sprint momentum may be visually sold through lean, stride, pivot, and recovery animation, but those animations may not add hidden control lock beyond the movement-state rules.
+
+### Direction / facing
+- in free exploration, Neris turns toward the requested movement direction promptly and smoothly enough that the character never feels like a tank;
+- at careful and ordinary run speeds, facing should converge quickly to movement intent;
+- at Sprint speed, facing/velocity may visibly lag a hard direction change just enough to communicate momentum, while ordinary curves remain responsive;
+- exact rotation rates and animation blending remain Gate 1 tuning and must be evaluated together with camera behavior later under Issue #2.
+
+### Digital parity
+- keyboard/digital inputs use the same speed-band acceleration/deceleration philosophy as controller input rather than bypassing directly to physically impossible instantaneous velocity;
+- digital direction changes must remain responsive, and diagonal normalization remains binding.
+
+### Collision / state-transition continuity
+- ordinary collision contact must not create pinball bounce, unexplained speed gain, or long residual sliding;
+- transitions into jump, interaction, target lock, mantle, ladder, swim, slide, or another explicit state preserve or shed velocity only according to that state's documented rules;
+- animation-state changes, frame-rate variation, or repeated state toggling may not manufacture extra acceleration/deceleration impulses.
+
+Exact acceleration, braking, friction, rotation, and pivot values remain prototype tuning. The semantic target is locked: **precision is immediate, running is brisk, Sprint has believable extra weight, and no locomotion animation is allowed to make intention feel late.**
+
+---
+
 ## Current locked movement grammar
 ```text
 baseline ground/jump/sprint                   → ordinary locomotion contract
@@ -386,13 +433,17 @@ analog high magnitude, no Sprint request      → ordinary run ceiling
 Sprint requested + low magnitude              → remain low/ordinary movement; NO forced full sprint
 Sprint requested + upper magnitude band       → stable Sprint engagement and blend toward sprint ceiling
 Sprint threshold noise                        → hysteresis prevents state chatter
-digital direction, no Sprint request          → ordinary run
-digital direction + legal Sprint request      → full Sprint
+careful movement intent change                → near-immediate precise acceleration/deceleration/turn
+ordinary run intent change                    → brisk response; short stopping distance; tight practical turns
+Sprint ordinary curve                         → highly steerable with visible momentum
+Sprint hard reversal                          → brief momentum shed + planted redirect + re-acceleration
+release/reduce Sprint intent                  → short controlled deceleration to requested lower band
+animation transition                          → follows movement authority; NO hidden input-delay ownership
 ```
 
 ---
 
 ## Next locomotion decision
-**Acceleration / deceleration / turning philosophy.**
+**Target-lock locomotion detail.**
 
-After that: target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: accessibility implications and the final five-minute human-play acceptance test.
