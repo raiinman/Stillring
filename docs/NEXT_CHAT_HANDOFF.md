@@ -6,14 +6,14 @@
 
 ## Decision boundary
 
-Current merged main before this decision branch:
+Base before the current decision PR:
 
 `fa229b186c5b902b96fb4ad2b6525a8f87f6a551`
 
-Current decision-authority branch:
-- `design/player-driven-ladders`
+Current decision PR:
+- PR #41 — `Design: lock player-driven ladder movement`
 
-Latest merged decision PR:
+Latest previously merged decision PR:
 - PR #40 — `Design: lock no baseline free climbing`
 
 Reference research:
@@ -238,7 +238,7 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #37 same-continuous-handhold ledge shimmy
 - #39 deliberate explicit ledge release
 - #40 no baseline free climbing / authored-climbing boundary
-- current branch `design/player-driven-ladders` — player-driven ladder locomotion authority
+- #41 player-driven ladder locomotion
 
 ## Important continuation rule
 
