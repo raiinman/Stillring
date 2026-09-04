@@ -8,13 +8,13 @@
 
 Base before the current decision PR:
 
-`f881a3336b117656901e0d833b8c0962056bdbdd`
+`fa229b186c5b902b96fb4ad2b6525a8f87f6a551`
 
 Current decision PR:
-- PR #40 — `Design: lock no baseline free climbing`
+- PR #41 — `Design: lock player-driven ladder movement`
 
 Latest previously merged decision PR:
-- PR #39 — `Design: lock deliberate ledge drop`
+- PR #40 — `Design: lock no baseline free climbing`
 
 Reference research:
 - PR #38 / `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — **research input only; not design authority**. It studies AC1 through the Ezio/Kenway/Unity/RPG/Mirage/Shadows eras and 2026 Black Flag Resynced for player-intent, flow, safety, route-design, animation, and climbing lessons. It does not decide unresolved Stillring mechanics.
@@ -119,8 +119,19 @@ Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses 
 - Catch → hang → same-handhold shimmy → pull-up/drop does **not** chain into universal vertical climbing or corner traversal.
 - Broader climbing may exist only through **explicitly authored traversal structures, tools, or later capabilities**.
 - Supported climbing must use a consistent visible world language; equivalent-looking geometry must not differ only because one has a hidden climbable flag.
-- This boundary explicitly protects **authored traversal puzzles, route memory, and progression** from being bypassed by Assassin's-Creed-style universal surface solving.
+- This boundary explicitly protects **authored traversal puzzles, route memory, and progression** from being bypassed by universal surface solving.
 - The rule does not forbid future climbing verbs. Ladders, ropes, vines, chains, climbable masonry, transfers, vertical handhold chains, and other forms remain individually designed if/when needed.
+
+### Authored ladder movement
+
+- Authored ladders are a supported specific traversal structure; they do not imply free climbing elsewhere.
+- Once Neris is on a ladder, traversal is **player-driven rather than an automatic climb sequence**.
+- Up movement input climbs upward.
+- Down movement input climbs downward.
+- Neutral movement input holds Neris at the current ladder position.
+- The player retains ordinary camera ownership while Neris is on the ladder.
+- Exact ladder speed, acceleration, hand/foot cadence, alignment tolerances, and animation remain Gate 1 tuning.
+- How Neris mounts a ladder, how she exits at the top/bottom, and whether/how Drop/Release works from a ladder remain separate owner-review decisions.
 
 ## Current locked movement grammar
 
@@ -152,6 +163,10 @@ hang + analog down/away                 → remain hanging; NEVER implicit drop
 hang + explicit Drop/Release press      → promptly let go
 ordinary wall/cliff/rough surface       → NO baseline free climbing
 authored climb structure/tool/capability→ separately supported traversal
+on ladder + up input                    → climb up
+on ladder + down input                  → climb down
+on ladder + neutral input               → hold current ladder position
+on ladder + camera input                → player controls camera
 invalid or blocked top                  → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge   → NO catch
 passing near/alongside mantle geometry  → NO mantle
@@ -161,28 +176,30 @@ major cliff / meaningful height gate    → route, tool, or later traversal capa
 
 ## IMMEDIATE NEXT OWNER DECISION
 
-**Ladders.**
+**Ladder mounting behavior.**
 
-The broader climbing boundary is owner-approved and locked: no universal/baseline free climbing; broader climbing exists only through explicitly authored traversal structures/tools/later capabilities so traversal puzzles and progression remain meaningful.
+The basic ladder locomotion is owner-approved and locked: once attached, up/down input moves Neris, neutral holds position, camera remains player-owned, and the ladder never becomes an automatic ride to the top.
 
-The next question is deliberately narrower:
+The next narrow question is:
 
-> When Neris encounters an authored ladder, what should ordinary ladder traversal feel like and how much input/control should the player retain while climbing it?
+> When Neris approaches an authored ladder, should clear movement intent automatically mount it when alignment/path are valid, or should entering the ladder state require a deliberate interaction/action press?
 
-Do **not** let Unreal defaults, Zelda, Assassin's Creed, Souls games, or another traversal system answer this automatically.
+Do **not** decide top/bottom dismount behavior or ladder Drop/Release in the same choice. Those remain subsequent ladder decisions.
 
 ## Remaining Issue #1 owner-review sequence
 
 Continue one meaningful decision at a time:
 
-1. ladders;
-2. swimming;
-3. crouch/stealth posture if any;
-4. slope scrambling/sliding;
-5. fall damage/recovery;
-6. jump arc / air control;
-7. interaction while moving;
-8. traversal-tool overrides.
+1. ladder mounting behavior;
+2. ladder top/bottom dismount behavior;
+3. ladder Drop/Release behavior;
+4. swimming;
+5. crouch/stealth posture if any;
+6. slope scrambling/sliding;
+7. fall damage/recovery;
+8. jump arc / air control;
+9. interaction while moving;
+10. traversal-tool overrides.
 
 Issue #1 also still needs enough prototype-tuning authority for controller dead zones, movement thresholds, acceleration/deceleration philosophy, and target-lock movement details before it can be considered implementation-complete. Do not let Claude infer permanent design policy from Unreal defaults.
 
@@ -221,7 +238,8 @@ A green automated test can prove state and regressions. It cannot declare moveme
 - #37 same-continuous-handhold ledge shimmy
 - #39 deliberate explicit ledge release
 - #40 no baseline free climbing / authored-climbing boundary
+- #41 player-driven ladder locomotion
 
 ## Important continuation rule
 
-If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **ladder decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
+If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **ladder mounting decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
