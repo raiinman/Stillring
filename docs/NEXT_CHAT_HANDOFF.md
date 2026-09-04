@@ -11,29 +11,29 @@
 - Tracking/final review: GitHub Issue #1
 
 ## Current boundary
-Merged main before this decision branch:
-`4222428489ec9c26e07faf2e70f769143a22ff5b`
+Merged main before this branch:
+`cd874c96295007396110a0eaa70783b3ce60173e`
 
 Latest merged locomotion PR:
-- PR #46 — `Design: reject baseline crouch posture`
+- PR #47 — `Design: lock slope scramble and slide grammar`
 
 Current branch:
-- `design/slope-scramble-slide`
+- `design/fall-damage-recovery`
 
 Current decision:
-- ordinary walkable slopes remain ordinary ground locomotion;
-- short plausible borderline uphill slopes may use automatic, slower, no-stamina scrambling from clear direct intent;
-- terrain outside that authored scramble band cannot be mountain-goated with sprint/jump/diagonal tricks;
-- steep or low-traction downhill terrain may automatically slide;
-- slides retain camera ownership and limited lateral line correction, but not full uphill cancellation;
-- no baseline slide/surf button;
-- exact angle/traction values remain Gate 1 tuning.
+- routine traversal-scale falls deal no damage;
+- the upper safe band may use a firm but brief non-damaging landing response;
+- above the safe envelope, damage scales with impact severity and moderate falls use proportionate brief recovery rather than long helpless stun;
+- genuinely extreme falls may be lethal;
+- no landing-timing/jump/Sprint/input trick cancels impact;
+- deep valid water may reduce ordinary-to-moderate impact severity but is not universal immunity;
+- ledge/ladder release and slide-off falls feed the same severity rules.
 
 Next decision after merge:
-- **fall damage / landing recovery**.
+- **jump arc / air control**.
 
 ## Owner delegation
-The owner authorized completion of the remaining **locomotion-only** decisions without individual approval pauses. Continue one meaningful choice at a time, document it, inspect the diff, merge it, then proceed. This does not extend to camera, combat, story, world design, or unrelated systems. Final locomotion authority remains pending a final owner review together.
+The owner authorized completion of the remaining **locomotion-only** decisions without individual approval pauses. Each meaningful choice is documented, diff-reviewed, and merged before proceeding. Final locomotion authority still requires final owner review together.
 
 ## Read first in a fresh chat
 1. `docs/NEXT_CHAT_HANDOFF.md`
@@ -45,34 +45,24 @@ The owner authorized completion of the remaining **locomotion-only** decisions w
 7. `ROADMAP.md`
 8. `CLAUDE.md`
 
-## Technical baseline
-Unreal 5.8; Claude primary implementation agent; C++-first gameplay/state; thin Blueprints; Enhanced Input; no retail runtime AI dependency; CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY; human play owns feel/fun judgment.
-
 ## Governing movement principle
 > **Simple intention, capable character, honest world.**
 
-## Locked summary
-The exact contract is in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`. Locked so far: ground/jump/sprint, mantle, ledge grammar, no universal free climbing, complete ladder grammar, surface swimming/no baseline dive, no baseline crouch, and the slope scramble/slide bands above.
-
 ## Remaining locomotion sequence
-1. fall damage/recovery;
-2. jump arc / air control;
-3. interaction while moving;
-4. traversal-tool overrides;
-5. controller axes / dead-zone behavior;
-6. analog low-speed / run / sprint threshold philosophy;
-7. acceleration / deceleration / turning philosophy;
-8. target-lock locomotion detail;
-9. locomotion accessibility implications;
-10. final five-minute human-play acceptance test;
-11. repository-authority reconciliation;
-12. final owner review together.
+1. jump arc / air control;
+2. interaction while moving;
+3. traversal-tool overrides;
+4. controller axes / dead-zone behavior;
+5. analog low-speed / run / sprint thresholds;
+6. acceleration / deceleration / turning philosophy;
+7. target-lock locomotion detail;
+8. locomotion accessibility implications;
+9. final five-minute human-play acceptance test;
+10. repository-authority reconciliation;
+11. final owner review together.
 
-## Camera / implementation order
-After final owner review: finalize Issue #1 → finish Issue #2 → Issue #5 Unreal harness → movement → camera → target lock. Issue #5 must not invent unresolved policy.
-
-## Recent locomotion PRs
-#25, #26, #27, #28, #29, #30, #31, #32, #33, #34, #35, #37, #39, #40, #41, #42, #43, #44, #45, #46.
+## Implementation order after final locomotion review
+Finalize Issue #1 → finish Issue #2 → Issue #5 Unreal harness → movement → camera → target lock. Issue #5 must not invent unresolved policy.
 
 ## Continuation rule
-Once the current slope PR is merged, continue from **fall damage / landing recovery**. Do not reconstruct locomotion from chat memory alone.
+Once this fall-behavior PR is merged, continue from **jump arc / air control**. Do not reconstruct locomotion from chat memory alone.
