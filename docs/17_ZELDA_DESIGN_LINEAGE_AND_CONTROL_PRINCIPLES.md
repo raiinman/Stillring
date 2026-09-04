@@ -97,6 +97,7 @@ Examples:
 - obvious low obstacles should not require a separate “mantle” command after the player has already expressed the intention to cross them;
 - a clearly reachable ledge should not demand a frame-perfect extra “grab” input after the player has already committed to the jump;
 - a hanging Neris should not require a redundant climb button after the player continues pressing toward a valid top surface;
+- a hanging Neris should be able to correct laterally along the same continuous handhold without that correction silently becoming universal free climbing;
 - camera collision should solve itself without punishing the player;
 - the player should not need pixel-perfect alignment to perform an obvious everyday traversal action.
 
@@ -204,9 +205,27 @@ While hanging:
 
 This preserves a meaningful hang beat: the player can catch, stop, look, and decide whether to continue instead of being automatically carried onto the top. At the same time, once the player clearly continues toward a valid top, no redundant context-button press is required.
 
-This rule does **not** authorize ledge shimmy, deliberate drop, lateral transfers, wall climbing, or a broader parkour system. Those remain separate owner-review decisions.
+#### Same-handhold lateral shimmy
 
-The exact jump height, arc, air control, mantle/ledge detection volumes, reach envelope, catch tolerances, hang settle timing, pull-up input threshold, clearance tests, animation, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-mantle-button rule, the body-relative mantle scope, automatic intent-based reachable-ledge catch with no grab button, and deliberate hang-to-pull-up continuation with no separate climb button are locked.**
+While hanging, Neris may move sideways with left/right movement input **along the same continuous valid handhold**.
+
+Locked boundaries:
+- releasing lateral input leaves Neris hanging at the current valid position;
+- shimmy may correct a slightly imperfect catch or move Neris toward a valid pull-up location;
+- the baseline shimmy does **not** wrap around a corner;
+- it does **not** cross a physical gap in the handhold;
+- it does **not** transfer onto a different wall or ledge;
+- it does **not** perform a lateral jump between separate ledges;
+- it does **not** climb upward or downward between handholds;
+- when the continuous valid handhold ends, Neris stops rather than inventing a traversal continuation.
+
+A corner, gap, different wall/ledge, or higher/lower handhold is therefore a separate authored traversal problem. This gives the hang state useful correction and local agency without silently creating a broader parkour/free-climbing system.
+
+Exact shimmy speed, acceleration, animation cadence, hand spacing, ledge-follow tolerances, and visual hand placement remain Gate 1 tuning questions. Tuning may improve feel but may not broaden the locked traversal grammar.
+
+Deliberate drop, lateral transfers, vertical climbing, corner traversal, and broader climbing remain separate owner-review decisions.
+
+The exact jump height, arc, air control, mantle/ledge detection volumes, reach envelope, catch tolerances, hang settle timing, pull-up input threshold, clearance tests, shimmy speed/acceleration/tolerances, animation, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-mantle-button rule, the body-relative mantle scope, automatic intent-based reachable-ledge catch with no grab button, deliberate hang-to-pull-up continuation with no separate climb button, and same-continuous-handhold lateral shimmy with no corners/gaps/transfers/vertical climbing are locked.**
 
 ### 4.5 Sustained sprint
 
@@ -287,6 +306,7 @@ The prototype and later animation work must consider:
 - mantle/scramble transitions;
 - ledge-catch/hang transitions;
 - hang-to-pull-up transitions;
+- hang-shimmy transitions and stop-at-boundary behavior;
 - sprint-to-lock transitions;
 - lock/unlock transitions;
 - weapon-state locomotion transitions.
@@ -356,7 +376,9 @@ For ledge catch, Gate 1 must include deliberate jump catches, short-fall catches
 
 For hang-to-pull-up, Gate 1 must test that every valid catch visibly settles into hang before any climb continuation, neutral input holds the hang, continued toward/up input produces a prompt pull-up on valid tops, and blocked/invalid tops leave Neris hanging without clipping or forced placement. The pull-up continuation should feel intentional without requiring a separate context button.
 
-The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, mantle timing, ledge reach envelope, catch tolerance, hang settle timing, pull-up input threshold, clearance tests, and catch/pull-up animation timing remain tuning questions.
+For ledge shimmy, Gate 1 must test continuous straight handholds, handholds that end, corners, physical gaps, adjacent-but-separate ledges, new-wall transitions, higher/lower nearby handholds, blocked pull-up areas, and movement toward a later valid pull-up spot. Left/right intent should feel responsive along the same continuous valid handhold, releasing input should hold position, and reaching a prohibited boundary must stop cleanly rather than snapping, wrapping, transferring, or inventing free climbing.
+
+The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, mantle timing, ledge reach envelope, catch tolerance, hang settle timing, pull-up input threshold, clearance tests, shimmy speed/acceleration/hand spacing/ledge-follow tolerances, and catch/pull-up/shimmy animation timing remain tuning questions.
 
 ---
 
@@ -364,7 +386,6 @@ The exact speed thresholds, turn curves, reversal speed loss, re-acceleration va
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- ledge shimmy behavior if any;
 - deliberate drop behavior;
 - broader climbing scope;
 - ladders;
@@ -414,6 +435,8 @@ Failure examples:
 - a ledge catch immediately auto-pulling Neris up before the player can inhabit or assess the hang state;
 - clear continued toward/up input failing to pull Neris onto an obviously valid top because the game expects a redundant climb button;
 - an invalid or blocked top forcing a pull-up that clips or places Neris unsafely;
+- same-handhold shimmy feeling sluggish, sticky, or over-precise when the player only wants to correct position;
+- shimmy automatically wrapping a corner, crossing a gap, changing walls, or climbing vertically and thereby erasing an authored traversal distinction;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
