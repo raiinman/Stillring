@@ -33,6 +33,8 @@ Locked movement/camera principles:
 - Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
 - Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
 - Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
+- Low-obstacle mantle/scramble is **automatic from clear movement or jump intent** when the path is valid; there is no separate mantle button.
+- Automatic mantle requires clear directional intent, a reachable valid top/landing surface, an appropriate approach angle, enough space to complete the move, and no conflicting higher-priority action; it must never feel magnetic or trigger merely because Neris passes near an obstacle.
 - Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
 - The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 - Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
