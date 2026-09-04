@@ -113,6 +113,72 @@ Unreal's `.uasset` and `.umap` files are binary. Therefore Project Stillring del
 
 This is a central architectural constraint, not repository housekeeping.
 
+## Zelda design-lineage research
+
+Stillring's Zelda inspiration must be treated as a **series design lineage**, not as a frozen Ocarina of Time control specification.
+
+Detailed project conclusions are recorded in `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`. The research basis is summarized here.
+
+### Ocarina of Time — simplify early 3D control problems
+
+Nintendo's developers described early explicit jumping being replaced by auto-jump and described Z-targeting as a response to alignment, camera, combat-orientation, and multi-enemy readability problems in early 3D action.
+
+Stillring research conclusion:
+- the durable lesson is reducing unnecessary control friction and creating readable player/camera/target relationships;
+- auto-jump itself is not sacred and should not be preserved just because it was effective on Nintendo 64 hardware.
+
+Sources:
+- https://iwataasks.nintendo.com/interviews/3ds/zelda-ocarina-of-time/1/1/
+- https://iwataasks.nintendo.com/interviews/3ds/zelda-ocarina-of-time/1/2/
+- https://iwataasks.nintendo.com/interviews/3ds/zelda-ocarina-of-time/4/4/
+- https://iwataasks.nintendo.com/interviews/3ds/zelda-ocarina-of-time/0/3/
+
+### Wind Waker — free camera ownership
+
+Aonuma later identified **The Wind Waker** as the first Zelda to integrate a freely controllable camera and recalled how good that freedom felt.
+
+Stillring research conclusion:
+- modern free camera is the exploration baseline;
+- recenter remains useful but no longer substitutes for direct camera control.
+
+Source:
+- https://iwataasks.nintendo.com/interviews/3ds/majoras-mask-3d/0/4/
+
+### Skyward Sword — preserve movement flow
+
+Nintendo described adding dash and allowing rapid movement up small cliffs/slopes partly to keep movement from being interrupted.
+
+Stillring research conclusion:
+- sprint/dash deserves a Gate 1 prototype;
+- stamina/resource cost is a separate design question and should not be inherited automatically.
+
+Source:
+- https://iwataasks.nintendo.com/interviews/wii/zelda-skyward-sword/0/1/
+
+### Breath of the Wild / Tears of the Kingdom — route agency and affordance honesty
+
+Breath of the Wild expanded terrain traversal and player route choice. Tears of the Kingdom developers later articulated an especially useful principle: enable actions players reasonably believe should work, and visually communicate intentional exceptions.
+
+Stillring research conclusion:
+- world geometry should support player reasoning;
+- readable affordances should be trustworthy;
+- Stillring can preserve authored progression and tool-gated recontextualization without adopting universal climb-everything traversal.
+
+Sources:
+- https://www.nintendo.com/jp/topics/article/c1fb9037-03c1-11e7-9aaf-063b7ac45a6d
+- https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-9-the-legend-of-zelda-tears-of-the-kingdom-part-3/
+- https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-9-the-legend-of-zelda-tears-of-the-kingdom-part-5/
+
+### Overall control-lineage conclusion
+
+Stillring should feel as though the **classic authored 3D adventure philosophy kept learning through modern control and world-design expectations**, not as though a 1998 control scheme was rebuilt in Unreal.
+
+The project-level synthesis is:
+
+> **Simple intention, capable character, honest world.**
+
+Exact Nintendo control values, animations, UI, camera distances, geometry, and protected expression remain outside the implementation input under `docs/05_IP_GUARDRAILS.md`.
+
 ## Claude development conclusion
 
 Claude is the primary implementation agent, but the project is structured so Claude does not need to infer the game from opaque editor state.
