@@ -108,7 +108,7 @@ No automatic climb sequence. Exact speed/alignment/animation remain tuning.
 ### End dismount
 - valid top + continued up → automatic safe top exit;
 - valid bottom + continued down → automatic safe bottom exit;
-- neutral at end stays attached;
+- neutral at either end remains attached;
 - blocked/unsafe exit stays attached.
 
 ### Drop/Release
@@ -470,6 +470,58 @@ The target feel is **precise position control around an opponent, with no invisi
 
 ---
 
+## 17. Locomotion accessibility implications — LOCKED
+
+Accessibility support should reduce **input burden and hardware friction without changing authored world rules**. A player may choose a more comfortable way to express the same locomotion intent, but accessibility settings do not secretly expand traversal reach, grant immunity, or change puzzle geography.
+
+### Remapping and action independence
+- all player-facing locomotion actions must be remappable through Enhanced Input, including movement directions/axis source, Sprint, Jump, and Drop/Release;
+- controls that overlap with interaction or target-lock systems must remain remappable in their own control authority as well;
+- remapping must preserve action semantics: Drop/Release stays a deliberate release action, Jump stays Jump, and Sprint remains distinct from evade;
+- the control UI must detect or clearly warn about destructive binding conflicts instead of silently making a locomotion action unreachable;
+- no locomotion rule depends on one specific manufacturer button label or keyboard key.
+
+### Sustained-input alternatives / no mashing
+- Sprint supports Hold and Toggle as already locked, with Hold default;
+- ordinary swimming never requires repeated button tapping to remain afloat;
+- mantle, ledge catch, ladder mount, and valid water entry use intention/geometry rather than repeated grab/interact presses;
+- ordinary ledge hang and ladder hold do not require continuously holding a grab button;
+- no baseline locomotion verb requires rapid repeated tapping, stick wiggling, a multi-button chord, or a long hold-to-confirm action;
+- ordinary safe landing has no mandatory timed “perfect landing” input or QTE.
+
+### Controller hardware tolerance
+- player-configurable radial movement dead-zone and supported outer-saturation settings remain required;
+- settings expose reset-to-default and explain the precision-versus-drift tradeoff in plain language;
+- drift tolerance may change when movement begins responding, but it may not change maximum movement speed, traversal reach, or world eligibility;
+- worn-controller support must be tested without treating broken/noisy input as intentional traversal direction.
+
+### Digital precision option
+- keyboard/digital movement normally represents full ordinary run magnitude as already locked;
+- an **optional remappable Digital Precision modifier** must be available so digital-input players can deliberately access the careful movement band without needing analog hardware;
+- the modifier may support Hold and/or Toggle presentation according to accessibility/control settings, but its locomotion meaning is simply “request the tuned careful digital movement magnitude”;
+- Digital Precision does not create crouch, stealth bonuses, new collision size, extra traversal eligibility, or a separate gameplay state beyond requested movement magnitude;
+- Sprint request while Digital Precision is active does not override the precision request into full Sprint until the player leaves precision mode or otherwise expresses full travel intent;
+- exact careful digital magnitude remains Gate 1 tuning and should match a useful region of the controller careful-movement band.
+
+### Timing forgiveness is baseline, not an assist cheat
+- the short coyote window and jump-input buffer are baseline control forgiveness for all players rather than hidden difficulty assists;
+- they do not need to be manually enabled to make basic movement reliable;
+- neither may bypass authored traversal restrictions, damaging recovery, deliberate release states, or height gates.
+
+### No accessibility tax on world honesty
+- an accessibility setting may alter input ergonomics, dead-zone tolerance, Hold/Toggle behavior, or access to the careful digital speed band;
+- it may not silently increase mantle height, ledge-catch reach, ladder magnetism, slope scramble authority, jump arc, air control, water access, or fall-damage safety;
+- any future assist that intentionally changes traversal geometry or timing windows beyond the locked baseline must be proposed, named, and reviewed as a separate accessibility/gameplay rule rather than smuggled in through input settings.
+
+### Scope boundary
+- camera inversion, camera sensitivity, look-stick dead zones, motion reduction, target-lock presentation, and camera assistance belong to Issue #2 / broader accessibility authority;
+- combat input assists belong to combat authority;
+- this section records only locomotion-facing implications.
+
+Gate 1 accessibility verification must include at minimum: fully remapped locomotion controls, Hold and Toggle Sprint, a drifting controller with adjusted dead zone, a worn controller using outer saturation, keyboard diagonal normalization, keyboard Digital Precision, and confirmation that no accessibility setting changes authored traversal eligibility.
+
+---
+
 ## Current locked movement grammar
 ```text
 baseline ground/jump/sprint                   → ordinary locomotion contract
@@ -502,12 +554,15 @@ target lock + Sprint request                  → NO exploration Sprint
 target lock + Jump                            → normal baseline jump; NO contextual evade flip
 target lock → incompatible traversal state    → end target-lock locomotion; enter explicit traversal state
 release/lose target lock                      → preserve physical velocity; return to camera-relative exploration
+remapped locomotion actions                   → same semantics on chosen bindings
+Digital Precision active                      → tuned careful digital movement magnitude; NO new traversal eligibility
+accessibility input settings                  → ergonomics/tolerance only; NO hidden world-rule expansion
 animation transition                          → follows movement authority; NO hidden input-delay ownership
 ```
 
 ---
 
 ## Next locomotion decision
-**Locomotion accessibility implications.**
+**Final five-minute human-play acceptance test.**
 
-After that: the final five-minute human-play acceptance test and repository-authority reconciliation before owner review.
+After that: repository-authority reconciliation and final owner review together.
