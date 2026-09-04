@@ -6,63 +6,41 @@ A young bellwright crosses a fantasy world whose ancient resonance network is fa
 
 ## Camera and movement
 
-Detailed lineage and Gate 1 control principles live in `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`.
+Design-lineage reasoning lives in `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`.
+
+The detailed, implementation-facing Gate 1 locomotion contract lives in:
+
+- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+
+Issue #1 tracks final locomotion owner acceptance. Camera-specific authority remains Issue #2.
 
 The governing idea is:
 
 > **Simple intention, capable character, honest world.**
 
-Stillring studies the full evolution of authored 3D Zelda controls rather than freezing the design at Ocarina of Time's 1998 hardware constraints.
+Stillring studies the evolution of authored 3D Zelda controls rather than freezing the design at Ocarina of Time's 1998 hardware constraints. It preserves the deeper lessons—clear intention, readable target-relative combat movement, trustworthy world affordances, and authored traversal progression—while inventing its own control expression.
 
-Locked movement/camera principles:
-- Third-person trailing exploration camera with modern free right-stick / mouse camera control.
-- Recenter is a convenience, not a substitute for camera ownership.
-- Player retains steering authority during ordinary movement.
-- Lock-on changes camera and movement grammar into deliberate combat framing.
-- Camera collision must never shove through walls or hide the player for long.
-- Controller movement preserves useful analog range for careful positioning through confident full-speed travel.
-- Neris has a sustained sprint available from the beginning for faster ground travel; sprint is separate from the eventual combat evade.
-- Ordinary sprint has **no stamina or other resource cost** and may be sustained indefinitely during normal traversal.
-- Sprint supports **Hold** and **Toggle** input modes; Hold is the default and Toggle is an accessibility/control preference.
-- A future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
-- Sprint must not replace useful analog walk/run control or become a second dodge.
-- Full sprint remains highly steerable; ordinary curves/corners stay responsive, while hard reversals briefly shed momentum instead of snapping instantly at full speed or forcing a large turning circle.
-- Jumping from sprint preserves existing horizontal sprint momentum; jumping does not add bonus speed, and landing continues/returns to sprint when sprint is still requested and no higher-priority movement state overrides it.
-- Acquiring target lock while sprinting ends the exploration sprint state, but does **not** instantly erase velocity: Neris transitions through a short natural deceleration/pivot into precise target-relative combat locomotion.
-- Full exploration sprint is unavailable while target-locked.
-- Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
-- Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
-- Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
-- Low-obstacle mantle/scramble is **automatic from clear movement or jump intent** when the path is valid; there is no separate mantle button.
-- Automatic mantle requires clear directional intent, a reachable valid top/landing surface, an appropriate approach angle, enough space to complete the move, and no conflicting higher-priority action; it must never feel magnetic or trigger merely because Neris passes near an obstacle.
-- Baseline mantle height is **body-relative** rather than defined by a permanent arbitrary Unreal-unit threshold: roughly knee-through-waist obstacles are ordinary fluent traversal; waist-through-lower-chest obstacles remain baseline-mantleable but require a clearly deliberate direct approach or jump; shoulder-height and above is not ordinary auto-mantle territory.
-- Shoulder-height-plus walls/ledges are treated as meaningful traversal problems, ledge-specific interactions, routes, tools, or later capabilities rather than silently expanding baseline parkour.
-- Exact mantle heights/angles in centimeters are Gate 1 tuning values tied to Neris's actual character scale; those numbers may be tuned without changing the locked body-relative scope.
-- Neris may automatically catch a **valid reachable ledge above the ordinary mantle band** when her jump/fall trajectory and directional intent clearly communicate a grab; there is no dedicated ledge-grab button.
-- Ledge catch must not trigger from incidental proximity, sideways passes, running parallel to geometry, or implausible rescue distances; it is an intentional catch, not magnetic parkour.
-- A successful ledge catch always settles into a real **hang state first** rather than immediately forcing a climb-up.
-- While hanging, neutral input keeps Neris hanging; continued movement **toward/up onto the ledge** requests a pull-up, with no separate climb button.
-- Pull-up only completes when the top/landing surface is valid, standable, and clear enough to finish safely; otherwise Neris remains hanging.
-- While hanging, left/right movement input allows a simple lateral shimmy along the **same continuous valid handhold**; releasing lateral input leaves Neris hanging at the current valid position.
-- Baseline shimmy does **not** wrap corners, cross gaps, transfer to a different wall/ledge, jump laterally between ledges, or climb vertically between handholds. Those remain separate traversal problems/capabilities.
-- Exact shimmy speed, acceleration, animation cadence, hand spacing, and ledge-follow tolerances remain Gate 1 tuning rather than permanent arbitrary values.
-- While hanging, letting go requires a **distinct deliberate Drop/Release action press**. Ordinary analog movement — including down, away-from-wall, diagonal-down input, stick drift, or dead-zone noise — never releases the ledge by itself.
-- A deliberate Drop/Release press acts promptly with no hold-to-confirm delay. The physical controller/keyboard binding is not locked here and remains remappable control-layout policy.
-- Neris has **no baseline free-climbing capability** beyond the locked ledge grammar. Rough walls, cliffs, masonry, and other ordinary surfaces do not become climbable merely because they look physically grippable.
-- Broader climbing may exist only through **explicitly authored traversal structures, tools, or later capabilities** with a consistent visible world language. It must never be a hidden universal surface rule.
-- This boundary exists to protect authored traversal puzzles, route memory, and progression: an inaccessible cliff or wall must remain meaningful until the player finds the intended route, structure, tool, or capability.
-- Lateral transfers, vertical handhold chains, corner traversal, ladders, ropes, vines, and other specific climbing forms are not implied by this rule and remain separately specified if/when needed.
-- Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
-- The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
-- Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
-- Authored traversal progression remains central: later tools/capabilities should make remembered spaces newly understandable.
-- Animation transitions are part of responsiveness; physical weight must not mean delayed acknowledgement of player intent.
+Vision-level movement commitments:
+- exploration movement is camera-relative and preserves a useful analog range from careful positioning through ordinary run;
+- Neris has an always-available modest deliberate jump and an unlimited ordinary-travel Sprint with no stamina/resource tax;
+- Sprint is separate from combat evade, supports Hold/Toggle, remains highly steerable, and carries believable extra momentum only where it helps physical weight;
+- ordinary stairs, small steps, floor lips, and minor terrain should disappear beneath movement rather than create accidental platforming;
+- low-obstacle mantle, reachable-ledge catch, authored ladders, surface swimming, slope response, fall consequence, and target-lock locomotion use the explicit intent/state rules in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
+- Neris does **not** have universal/free climbing, baseline underwater free-diving, or a generic baseline crouch/stealth posture;
+- broader traversal comes from clearly authored structures, tools, or later capabilities with a consistent visible world language;
+- meaningful cliffs, height gates, submerged spaces, and route obstacles remain part of puzzle/progression geography instead of being erased by universal traversal;
+- animation sells weight but does not own ordinary locomotion timing or delay acknowledgement of valid player intent;
+- movement input/accessibility may change ergonomics—remapping, dead-zone tolerance, Hold/Toggle, digital precision—but does not secretly expand authored traversal eligibility;
+- target lock changes movement into precise target-relative positioning without auto-orbit, auto-distance maintenance, or hidden combat autopilot;
+- the world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 
-The first locomotion specification must resolve remaining physical-capability questions one at a time with owner review rather than inheriting Unreal template defaults.
+Exact speeds, acceleration values, angles, reach envelopes, coyote/buffer windows, fall thresholds, animation cadence, and related numeric values remain Gate 1 tuning unless `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` explicitly states otherwise. Tuning may refine feel; it may not silently change the locked movement grammar.
 
 Human target for Gate 1:
 
 > **Within roughly five minutes, ordinary movement should stop being something the player consciously fights.**
+
+The canonical human acceptance course/script and hard-fail conditions are defined in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`. Human feel is authoritative even when automated checks pass.
 
 ## Combat language
 
@@ -173,5 +151,6 @@ Sound is mechanical and narrative.
 - camera sensitivity and inversion,
 - camera shake slider,
 - hold/toggle options where feasible,
+- locomotion-facing requirements from `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`,
 - combat assistance options tested later without changing canonical balance data,
 - no critical information conveyed by audio alone.
