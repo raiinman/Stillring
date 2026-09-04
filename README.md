@@ -2,7 +2,9 @@
 
 **Working title:** Project Stillring  
 **Genre:** Third-person fantasy action-adventure  
-**Engine:** Godot 4.7.2 stable  
+**Engine:** Unreal Engine 5.8  
+**Primary implementation:** C++ core with thin Blueprint presentation  
+**Primary implementation agent:** Claude  
 **Target feel:** A late-1990s 3D adventure remembered through modern eyes: readable low-poly forms, deliberate fog, compact textures, strong silhouettes, tactile lock-on combat, puzzle-heavy dungeons, memorable towns, and a complete authored story.
 
 Project Stillring is an **original IP**. It may study the design principles of classic 3D action-adventure games, but it must not reproduce Nintendo characters, story, maps, music, dialogue, item designs, textures, code, ROM data, trademarks, or other protected expression.
@@ -21,22 +23,35 @@ The game is built around five pillars:
 
 ## Repository map
 
-- `CLAUDE.md` — operating instructions for Claude/Codex-style coding agents.
+- `CLAUDE.md` — authoritative operating contract for Claude.
 - `ROADMAP.md` — evidence-gated milestones from concept to release.
 - `docs/00_PROJECT_CHARTER.md` — scope and non-negotiables.
 - `docs/01_GAME_VISION.md` — gameplay, visual, camera, combat, progression, accessibility.
 - `docs/02_STORY_BIBLE.md` — canonical narrative index and authority chain.
 - `docs/03_PRODUCTION_WORKFLOW.md` — actual game-development workflow and definition-of-done gates.
-- `docs/04_TECHNICAL_DIRECTION.md` — Godot architecture, folders, save/state, testing, performance.
+- `docs/04_TECHNICAL_DIRECTION.md` — Unreal/C++ architecture, source-of-truth boundaries, save/state, testing, rendering, and performance.
 - `docs/05_IP_GUARDRAILS.md` — clean-room/IP rules.
 - `docs/06_CONTENT_MATRIX.md` — regions, dungeons, bosses, tools, narrative purpose.
 - `docs/07_INITIAL_BACKLOG.md` — first implementation work in dependency order.
-- `docs/08_RESEARCH_NOTES.md` — production research and source links.
+- `docs/08_RESEARCH_NOTES.md` — production and engine research with source links.
 - `docs/10_COMPLETION_MODEL.md` through `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md` — completion, authored optional content, 100% route, upgrades, and mastery authority.
 - `docs/15_CANON_TO_PLAY_PIPELINE.md` — source-of-truth pipeline: **CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY**.
 - `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` — developer console, named state presets, structured bug capture, and offline machine-assisted QA contract.
 - `docs/story/` — final scene, reveal, objective, dialogue, character, regional, pacing, recurrence, and side-interaction narrative contracts.
-- `game/` — Godot project root.
+- `game/` — Unreal project root; intentionally skeletal until Gate 1 bootstrap.
+
+## Engine policy
+
+Stillring uses Unreal because the project is now clearly a substantial authored 3D action-adventure with heavy animation, cinematics, combat, world-state, and content-production demands.
+
+That does **not** mean accepting Unreal defaults as the design.
+
+- C++ owns authoritative gameplay and state.
+- Blueprints remain thin where practical.
+- Canon remains in repository contracts, not hidden in binary assets.
+- Gameplay Ability System, World Partition, Data Layers, Nanite, Lumen, MetaHuman, and PCG are opt-in tools rather than automatic dependencies.
+- Rendering must serve Stillring's deliberate low-poly/retro-modern identity, not generic Unreal presentation.
+- Claude and all development automation are development infrastructure only; the shipped game has no model/API dependency.
 
 ## Production rule
 
@@ -44,33 +59,33 @@ The game is built around five pillars:
 
 The first playable target is a 20–30 minute slice containing:
 
-- one village exterior,
-- one wilderness route,
-- one compact dungeon,
-- three enemy archetypes,
-- one miniboss,
-- one boss,
-- lock-on combat,
-- one traversal/tool unlock,
-- one Hush-layer puzzle,
-- dialogue/cutscene support,
-- save/load,
-- N64-inspired final-ish art direction,
-- music/SFX placeholders,
-- controller support,
-- state presets/debug entry points sufficient to reproduce important slice states,
+- one village exterior;
+- one wilderness route;
+- one compact dungeon;
+- three enemy archetypes;
+- one miniboss;
+- one boss;
+- lock-on combat;
+- one traversal/tool unlock;
+- one Hush-layer puzzle;
+- dialogue/cutscene support;
+- save/load;
+- Stillring's representative low-poly final-ish art direction;
+- music/SFX placeholders;
+- controller support;
+- state presets/debug entry points sufficient to reproduce important slice states;
 - at least one automated representative smoke route.
 
 If that slice is not fun, readable, stable, testable, and fast to produce, full production does not begin.
 
 ## How the game gets built
 
-Stillring is specified from the finished-game side backward. Canon describes what exists; production contracts convert that authority into playable slices; implementation agents build bounded work; deterministic verification proves objective behavior; humans play the result and decide whether it actually works as a game.
+Stillring is specified from the finished-game side backward. Canon describes what exists; production contracts convert that authority into playable slices; Claude implements bounded work; deterministic verification proves objective behavior; humans play the result and decide whether it actually works as a game.
 
 The repository is authoritative. Chats and implementation sessions are temporary working context.
 
 ## Current status
 
-**Gate 0 — narrative/design foundation complete for production entry.**
+**Gate 0 — narrative/design foundation complete; engine migrated to Unreal Engine 5.8 before Gate 1.**
 
-The beginning-to-end story, scene/reveal/objective/dialogue contracts, regional living-world material, completion model, technical direction, vertical-slice target, and production operating rules are established. The next work is evidence-gated technical prototyping beginning with movement/camera—not production-scale world construction.
+The beginning-to-end story, scene/reveal/objective/dialogue contracts, regional living-world material, completion model, canon-to-play process, developer QA contract, and Unreal technical direction are established. The next implementation work is evidence-gated technical prototyping beginning with movement/camera—not production-scale world construction.
