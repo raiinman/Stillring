@@ -21,6 +21,9 @@ Locked movement/camera principles:
 - Lock-on changes camera and movement grammar into deliberate combat framing.
 - Camera collision must never shove through walls or hide the player for long.
 - Controller movement preserves useful analog range for careful positioning through confident full-speed travel.
+- Neris has a sustained sprint available from the beginning for faster ground travel; sprint is separate from the eventual combat evade.
+- Sprint must not replace useful analog walk/run control or become a second dodge.
+- Whether sprint consumes stamina or another resource remains pending owner review.
 - Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
 - Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
 - Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
@@ -29,9 +32,6 @@ Locked movement/camera principles:
 - Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
 - Authored traversal progression remains central: later tools/capabilities should make remembered spaces newly understandable.
 - Animation transitions are part of responsiveness; physical weight must not mean delayed acknowledgement of player intent.
-
-Current Gate 1 prototype hypothesis, **not yet a final locked control**:
-- prototype an explicit sprint/dash state while leaving stamina/resource cost and exact use undecided.
 
 The first locomotion specification must resolve remaining physical-capability questions one at a time with owner review rather than inheriting Unreal template defaults.
 
