@@ -22,23 +22,25 @@ Tracking / acceptance:
 
 Merged main before this decision branch:
 
-`89200b7288d04e063e025fb4b55085e54c8bee77`
+`50cad84b7263665896b7070531f0c1162efb68b2`
 
 Latest merged locomotion PR:
-- PR #42 — `Design: lock automatic deliberate-intent ladder mounting`
+- PR #43 — `Design: lock ladder end dismount behavior`
 
 Current decision branch:
-- `design/ladder-dismount`
+- `design/ladder-drop-release`
 
 Current decision:
-- continued up input at a valid ladder top automatically dismounts onto the clear standable top;
-- continued down input at a valid ladder bottom automatically steps off onto clear ground;
-- neutral input at either ladder end keeps Neris attached;
-- blocked/unsafe exits keep Neris attached instead of clipping, teleporting, or forcing placement;
-- local alignment is allowed only as needed for the authored ladder exit.
+- ladder Drop/Release uses the same distinct deliberate action as ledge release;
+- the press acts immediately with no hold delay;
+- down input remains climb-down;
+- away/side/diagonal/partial analog input, drift, and dead-zone noise never detach Neris;
+- release exits the ladder state directly into normal airborne/fall behavior.
 
-Next decision after this branch merges:
-- **ladder-specific Drop/Release behavior**.
+The baseline ladder grammar is complete after this branch merges.
+
+Next decision:
+- **swimming baseline**.
 
 ## Owner delegation for this locomotion pass
 
@@ -91,27 +93,27 @@ Use `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary res
 - broader climbing only through explicit authored structures/tools/later capabilities;
 - authored ladder movement is player-driven;
 - ladder mounting is automatic only from clear deliberate valid approach intent;
-- ladder top/bottom dismount follows continued climb direction only when the exit is valid and clear; neutral stays attached.
+- valid ladder-end exits follow continued climb direction; neutral stays attached;
+- explicit ladder Drop/Release detaches immediately; analog direction never does.
 
 See `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` for exact safeguards and grammar.
 
 ## Remaining locomotion sequence
 
-1. ladder Drop/Release behavior;
-2. swimming;
-3. crouch/stealth posture if any;
-4. slope scrambling/sliding;
-5. fall damage/recovery;
-6. jump arc / air control;
-7. interaction while moving;
-8. traversal-tool overrides;
-9. controller axes / dead-zone behavior;
-10. analog low-speed / run / sprint threshold philosophy;
-11. acceleration / deceleration / turning philosophy;
-12. target-lock locomotion detail;
-13. locomotion accessibility implications;
-14. final five-minute human-play acceptance test;
-15. repository-authority reconciliation and final owner review.
+1. swimming;
+2. crouch/stealth posture if any;
+3. slope scrambling/sliding;
+4. fall damage/recovery;
+5. jump arc / air control;
+6. interaction while moving;
+7. traversal-tool overrides;
+8. controller axes / dead-zone behavior;
+9. analog low-speed / run / sprint threshold philosophy;
+10. acceleration / deceleration / turning philosophy;
+11. target-lock locomotion detail;
+12. locomotion accessibility implications;
+13. final five-minute human-play acceptance test;
+14. repository-authority reconciliation and final owner review.
 
 ## Camera / implementation order
 
@@ -143,7 +145,8 @@ Issue #5 must not invent unresolved Issue #1/#2 policy.
 - #40 no baseline free climbing
 - #41 player-driven ladder movement
 - #42 automatic deliberate-intent ladder mounting
+- #43 ladder end dismount behavior
 
 ## Continuation rule
 
-If a fresh chat opens, read the files above and continue from **ladder-specific Drop/Release behavior** once the current ladder-dismount PR is confirmed merged. Do not reconstruct locomotion from chat memory alone.
+If a fresh chat opens, read the files above and continue from **swimming baseline** once the current ladder-release PR is confirmed merged. Do not reconstruct locomotion from chat memory alone.
