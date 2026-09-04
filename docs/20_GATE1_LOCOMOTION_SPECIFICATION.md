@@ -215,6 +215,22 @@ Combat actions while swimming, special water hazards, boats, currents, diving to
 
 ---
 
+## 7. Crouch / stealth posture — LOCKED: NO BASELINE CROUCH
+
+Stillring does **not** include an always-available baseline crouch or generic stealth-posture state.
+
+Locked boundaries:
+- there is no permanent crouch button/state in the ordinary Gate 1 locomotion grammar;
+- ordinary careful, quiet-feeling, or precise positioning is expressed through the existing analog low-speed movement band rather than a second posture layer;
+- Neris's collision capsule does not generically shrink because the player presses an otherwise-unused crouch input;
+- ordinary level geometry must not assume that every waist/shoulder-height opening is traversable simply because many action games include crouch;
+- a future crawlspace, squeeze-through, concealment posture, stealth sequence, tool-assisted posture, or special authored traversal state may be added only when that specific game/content need is deliberately designed and given honest visible affordances;
+- such a future authored posture does not retroactively create universal crouch traversal or a general stealth system.
+
+This choice keeps the baseline control vocabulary focused and avoids creating stealth-AI, cover, animation, collision, input, level-design, and encounter expectations that Stillring has not otherwise earned.
+
+---
+
 ## Current locked movement grammar
 
 ```text
@@ -264,6 +280,8 @@ surface swim + ordinary Sprint input     → no separate swim-sprint state
 surface swim + down/camera pitch         → remain surface swimming; NO baseline dive
 surface swim + direct valid low exit     → automatically leave water
 surface swim + blocked/high invalid exit → remain swimming; NO magnetic climb
+generic crouch input                      → NO baseline crouch state
+authored crawl/squeeze/special posture   → separately designed traversal state if later approved
 invalid or blocked ledge top             → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge    → NO catch
 passing near/alongside mantle geometry   → NO mantle
@@ -275,6 +293,6 @@ major cliff / meaningful height gate     → route, tool, or later traversal cap
 
 ## Next locomotion decision
 
-**Crouch / stealth posture.**
+**Slope scrambling / sliding.**
 
-After that: slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
