@@ -63,10 +63,10 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 | ID | Status | Decision | Detailed authority |
 |---|---|---|---|
-| D-040 | LOCKED | Analog low-speed through full-speed control remains useful even if a sprint state exists. Ordinary stairs/small steps/minor terrain are handled automatically. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
+| D-040 | LOCKED | Analog low-speed through full-speed control remains useful even with sprint. Ordinary stairs/small steps/minor terrain are handled automatically. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-041 | LOCKED | Neris has an always-available, modest, deliberate jump for intentional vertical movement and ordinary small gaps. The exact arc/height/air-control remain tuning decisions. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-042 | PROTOTYPE HYPOTHESIS | Prototype an explicit sprint/dash state. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-043 | PENDING OWNER REVIEW | Whether sprint/dash consumes stamina or another resource. | Issue #1 |
+| D-042 | LOCKED | Neris has a sustained sprint available from the beginning for faster ground travel. Sprint is separate from the eventual combat evade and is not a second dodge. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
+| D-043 | PENDING OWNER REVIEW | Whether sustained sprint consumes stamina or another resource. | Issue #1 |
 | D-044 | LOCKED | Obviously low obstacles use a small authored mantle/scramble response; this removes waist-high-wall friction without creating universal parkour. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-045 | PENDING OWNER REVIEW | Final ledge grab/hang/drop, climbing scope, swimming, crouch, slope sliding/scrambling, fall damage/recovery, and air-control rules. | Issue #1 |
 | D-046 | LOCKED | Gate 1 human target: within roughly five minutes, ordinary movement should stop being something the player consciously fights. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, `ROADMAP.md` |
