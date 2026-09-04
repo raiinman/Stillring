@@ -185,43 +185,75 @@ Exact angles/traction/friction/slide authority remain tuning. Slope rules may no
 
 ## 9. Fall damage / landing recovery — LOCKED
 
-Fall consequences use **body/level-design-relative severity bands**, not one arbitrary permanent centimeter cutoff. Exact thresholds must be tuned against Neris's scale, jump arc, ordinary traversal envelope, representative cliffs, and level geometry.
+Fall consequences use body/level-design-relative severity bands. Exact thresholds are tuned against Neris's scale, jump arc, ordinary traversal envelope, representative cliffs, and level geometry.
 
-### Ordinary traversal falls — no damage
-- jumps, mantle drops, ordinary ledge releases, common ladder exits, small route drops, and falls inside the expected normal traversal envelope do **not** deal fall damage;
-- ordinary safe landings acknowledge impact visually/audio-wise without stealing meaningful control time;
-- the player should never be afraid to use the movement verbs the game teaches as routine traversal.
-
-### Heavy but non-damaging edge band
-- a fall near the upper end of the safe traversal envelope may use a firmer landing/compression response for physical weight;
-- this response must be brief and must not become a long canned stun;
-- control returns promptly and predictably;
-- exact boundary between ordinary and heavy-safe landing remains tuning.
+### Safe traversal falls
+- routine jump/mantle/ledge/ladder/route drops inside the intended traversal envelope deal no damage;
+- normal landings acknowledge impact without stealing meaningful control;
+- upper-safe falls may use a firmer but brief non-damaging landing response.
 
 ### Damaging falls
-- above the safe envelope, fall damage increases with impact severity rather than using a single binary “safe/dead” threshold;
-- moderate damaging falls may use a brief stumble/knee/impact recovery, but recovery is proportionate and never a long helpless animation tax;
-- player intent should be acknowledged as soon as the recovery state permits, with no hidden extra delay after the visible recovery is complete;
-- severe falls can deal major health loss;
-- genuinely extreme falls may be lethal.
+- above the safe envelope, damage increases with impact severity;
+- moderate damaging falls may use proportionate brief stumble/impact recovery, never long helpless stun;
+- severe falls can cause major health loss;
+- genuinely extreme falls may be lethal;
+- visible recovery completion and actual control return must agree.
 
-### No input gimmick to erase impact
-- jump, Sprint, analog direction, Drop/Release, or any future crouch-like input at the instant of landing does not magically cancel fall damage;
-- there is no hidden “perfect landing” button or timing exploit in baseline locomotion;
-- a future explicitly designed traversal tool/capability may alter fall consequences only through its own documented rules.
+### No landing exploit
+- jump/Sprint/direction/Drop/Release/future crouch-like landing input cannot magically cancel damage;
+- no hidden perfect-landing timing mechanic;
+- only separately designed future capabilities may modify fall consequences.
 
 ### Water impact
-- sufficiently deep, valid swimmable water can **reduce** impact severity for ordinary-to-moderate water entries when the authored volume has clear safe depth;
-- water is not universal fall-damage immunity: extreme-height impacts may still damage or kill Neris, and shallow/blocked/hazardous water may not cushion a fall;
-- exact water-cushioning thresholds remain tuning and must be consistent enough that comparable water depths behave comparably;
-- scripted safe dives or special water mechanics require explicit authored rules rather than silently changing the baseline.
+- sufficiently deep valid swimmable water may reduce ordinary-to-moderate impact severity;
+- water is not universal immunity; extreme falls may still damage/kill, and shallow/blocked/hazardous water may not cushion;
+- comparable water depths should behave consistently.
 
-### Relationship to release and slopes
-- ledge Drop/Release and ladder Drop/Release feed directly into the same fall-severity rules;
-- sliding off a slope/edge does not reset accumulated fall severity through a state-transition exploit;
-- catching a valid reachable ledge before impact legitimately ends the free-fall impact path because Neris physically caught the ledge; it is not a damage-cancel input trick.
+### State continuity
+- ledge/ladder release feeds the same fall rules;
+- sliding off an edge does not reset severity through a state exploit;
+- an actual valid ledge catch before impact legitimately ends the fall path.
 
-The design goal is consequence without making ordinary exploration timid: routine movement is trusted, reckless/high falls matter, and recovery communicates impact without repeatedly taking the controller away.
+---
+
+## 10. Jump arc / air control — LOCKED
+
+Stillring's jump is a **predictable authored traversal verb**, not a platformer movement system layered on top of the game.
+
+### Arc and takeoff
+- the baseline jump uses a consistent, modest, readable vertical arc tuned for ordinary small gaps and intentional vertical movement;
+- jump height is **not meaningfully variable based on how long the jump button is held**; a deliberate press requests the same baseline jump arc so authored gaps remain learnable and predictable;
+- there is no baseline double jump, air jump, hover, or repeated-jump extension;
+- takeoff immediately acknowledges the jump request when the locomotion state permits it;
+- existing horizontal velocity is inherited into the jump; sprint-jump momentum preservation remains binding;
+- jumping never adds a hidden horizontal speed boost.
+
+### Air control
+- Neris has **useful but limited** air steering for landing correction;
+- air input may bend the travel line and correct a slightly imperfect takeoff, but it cannot instantly rewrite a committed jump or produce full ground-style turning authority;
+- at meaningful forward speed, opposite input may reduce/redirect horizontal momentum gradually but cannot create an immediate full-speed 180-degree reversal in midair;
+- air steering must not increase horizontal speed above the momentum/authority available from the originating ground state;
+- neutral air input preserves the natural takeoff trajectory rather than applying hidden braking;
+- exact air-control acceleration, turn influence, and momentum-retention values remain Gate 1 tuning.
+
+### Forgiveness at the edge: short coyote window
+- a **short coyote-time window** exists immediately after Neris unintentionally leaves an ordinary valid ground edge, allowing a jump request that was clearly intended at the edge to still begin;
+- this window is a control-forgiveness mechanism, not a traversal extension: it must be short enough that the jump still visually belongs to the edge departure;
+- coyote time does not reactivate after deliberate ledge Drop/Release, ladder release, a long fall, a slide-off already outside the valid edge window, or another explicit airborne/traversal state;
+- exact time is Gate 1 tuning.
+
+### Jump input buffering
+- a **short jump-input buffer** exists so a jump pressed just before a valid landing/state transition can execute when Neris becomes legally able to jump;
+- the buffer must feel like honoring an already-expressed request, not queuing actions far into the future;
+- buffered jump does not bypass damaging-fall recovery, blocked states, authored interaction commitments, or traversal-state rules that explicitly prohibit immediate jumping;
+- exact buffer time is Gate 1 tuning.
+
+### Collision / failed jump cases
+- low ceilings or blocked takeoff space prevent/limit the jump honestly rather than clipping Neris through geometry;
+- landing on ordinary walkable terrain returns to the appropriate requested ground state promptly;
+- jump, coyote, and buffering rules may not be exploited to ratchet up out-of-band slopes or bypass authored height gates.
+
+The target feel is forgiving execution with predictable geography: the player can correct a small mistake, but cannot turn a bad committed jump into arbitrary flight.
 
 ---
 
@@ -229,29 +261,34 @@ The design goal is consequence without making ordinary exploration timid: routin
 ```text
 ordinary terrain / careful movement       → analog ground locomotion
 ordinary travel / sprint                  → run / unlimited requested sprint
-small intentional vertical move           → deliberate jump
+jump press from valid ground              → consistent modest jump arc
+jump hold duration                        → no meaningful extra jump height
+sprint → jump                             → preserve existing horizontal momentum; no boost
+air + directional correction             → useful limited steering
+air + hard reverse                        → gradual correction; NO instant full-speed 180
+air + neutral                             → preserve natural trajectory
+just left ordinary ground edge            → short coyote jump eligibility
+jump pressed just before valid landing    → short input buffer, execute when legal
+double/air jump input                     → NO baseline extra jump
 low obstacle                              → automatic valid mantle
 deliberate reachable ledge                → automatic catch → hang
-hang neutral / toward-up / left-right      → hold / valid pull-up / same-handhold shimmy
-hang explicit Drop/Release                 → normal fall
-ordinary rough wall/cliff                  → NO free climbing
-authored ladder                            → auto valid mount; player-driven climb; safe directional exits; explicit release
+hang explicit Drop/Release                → normal fall
+ordinary rough wall/cliff                 → NO free climbing
+authored ladder                            → authored ladder grammar
 ordinary deep swimmable water              → surface swim; no baseline dive
 generic crouch                             → NO baseline crouch
 short plausible borderline uphill slope    → limited automatic scramble
 out-of-band uphill slope                   → no ratcheting progress
-steep/low-traction descent                 → automatic steerable-limited slide
+steep/low-traction descent                 → automatic limited-steer slide
 ordinary traversal-scale fall              → no damage; prompt landing control
-upper safe-envelope fall                   → firm but brief non-damaging landing
-moderate/severe fall                       → proportional damage + proportionate brief recovery
+moderate/severe fall                       → proportional damage + brief proportional recovery
 extreme fall                               → may be lethal
-deep valid water impact                    → reduced severity, NOT universal immunity
 landing input gimmick                      → cannot cancel impact severity
 ```
 
 ---
 
 ## Next locomotion decision
-**Jump arc / air control.**
+**Interaction while moving.**
 
-After that: interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
