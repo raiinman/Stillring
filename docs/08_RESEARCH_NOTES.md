@@ -149,8 +149,9 @@ Source:
 Nintendo described adding dash and allowing rapid movement up small cliffs/slopes partly to keep movement from being interrupted.
 
 Stillring research conclusion:
-- sprint/dash deserves a Gate 1 prototype;
-- stamina/resource cost is a separate design question and should not be inherited automatically.
+- sustained sprint belongs in Stillring's baseline movement vocabulary;
+- resource cost was treated as a separate design question rather than inherited from Zelda;
+- owner review resolved that question in favor of **unlimited ordinary sprint with no stamina/resource cost**, because a sprint-wait-sprint cycle would add traversal friction without creating a meaningful decision in Stillring's current movement economy.
 
 Source:
 - https://iwataasks.nintendo.com/interviews/wii/zelda-skyward-sword/0/1/

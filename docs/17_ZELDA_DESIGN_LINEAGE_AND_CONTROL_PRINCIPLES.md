@@ -42,7 +42,7 @@ Nintendo introduced a freely controllable camera to 3D Zelda with **The Wind Wak
 
 Nintendo deliberately added a dash action in **Skyward Sword** and discussed avoiding movement interruptions. Dash also supported quickly scrambling up small cliffs/slopes.
 
-**Stillring conclusion:** movement should preserve flow. Neris therefore has a sustained sprint state from the beginning for faster ground travel. Sprint is **not** the combat evade and must not become a second dodge. Whether sprint consumes stamina or another resource remains a separate owner decision.
+**Stillring conclusion:** movement should preserve flow. Neris therefore has a sustained sprint state from the beginning for faster ground travel. Sprint is **not** the combat evade and must not become a second dodge. Ordinary traversal sprint has **no stamina or other resource cost** because a periodic forced slowdown would add friction without creating a meaningful Stillring decision.
 
 ### Breath of the Wild — terrain becomes a route choice
 
@@ -93,6 +93,7 @@ Examples:
 - stairs should simply work;
 - tiny floor lips should not snag Neris;
 - ordinary small steps should not require a jump input;
+- ordinary sprint should not be periodically disabled by an empty stamina bar;
 - camera collision should solve itself without punishing the player;
 - the player should not need pixel-perfect alignment to perform an obvious everyday traversal action.
 
@@ -157,11 +158,13 @@ Sprint is **separate from the eventual combat evade**. It should not become a sh
 Locked:
 - sprint exists from the beginning;
 - sprint is sustained rather than a one-shot dash;
+- ordinary traversal sprint has **no stamina/resource cost**;
+- the player may sustain ordinary sprint indefinitely;
 - normal analog walk/run remains useful below sprint;
-- sprint's role is faster travel, not a second evade.
+- sprint's role is faster travel, not a second evade;
+- a future combat or special-traversal resource may not be silently reused to throttle ordinary sprint.
 
 Still pending owner review:
-- whether sprint consumes stamina or another resource;
 - hold versus toggle/default accessibility behavior;
 - exact acceleration, top speed, turning, jump interaction, and combat restrictions.
 
@@ -242,7 +245,7 @@ The modern-Zelda lesson is **player trust and agency**, not removal of authored 
 Gate 1 must preserve three readable movement bands:
 - careful analog walk / low-speed movement;
 - confident ordinary run;
-- player-requested sustained sprint.
+- player-requested unlimited sustained sprint.
 
 Sprint should improve travel flow without destroying careful analog control or making the ordinary run feel intentionally bad.
 
@@ -254,7 +257,6 @@ The exact thresholds and speeds remain tuning questions.
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- whether sprint has a resource cost;
 - sprint hold/toggle/accessibility behavior;
 - exact sprint interaction with combat, jump, and turning;
 - exact mantle/scramble thresholds and control timing;
@@ -294,6 +296,7 @@ Failure examples:
 - repeatedly correcting the camera;
 - fighting acceleration to stop where intended;
 - snagging on stairs;
+- being forced into repetitive sprint-wait-sprint cycles during ordinary travel;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
