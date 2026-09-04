@@ -1,1435 +1,1041 @@
-# 12 — 100% Narrative Route
+# 12 — Final 100% Narrative Route
 
-**Status:** canonical spoiler route for story timing and completion sequencing  
-**Related:** `docs/02_STORY_BIBLE.md`, `docs/11_QUEST_AND_COMPLETION_LEDGER.md`, `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`, `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md`, Issue #14
+**Status:** final canonical spoiler route for story timing and completion sequencing  
+**Related:** `docs/02_STORY_BIBLE.md`, `docs/story/07_SCENE_BEAT_LEDGER.md`, `docs/story/08_REVEAL_AND_FORESHADOW_LEDGER.md`, `docs/story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`, `docs/11_QUEST_AND_COMPLETION_LEDGER.md`, `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`, `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md`
 
-This document is the **spoiler-heavy playthrough spine** for Project Stillring.
+This is the authoritative spoiler-heavy route for a complete Stillring save.
 
-It does not prescribe one mandatory order for every optional activity. It records:
-
+It does **not** prescribe one exact order for every optional activity. It records:
 - what the critical path is doing at every phase;
-- what Neris and the player are allowed to know at that point;
-- which optional stories become available and why they matter;
-- when new verbs make old places worth revisiting;
-- where character relationships advance;
-- where pre-Stillness choices pay off after the Grand Ring;
-- the cleanest route by which a player could reach a legitimate 100% save without postgame cleanup feeling like archaeology.
+- what Neris and the player may know;
+- what optional stories are available and why they matter;
+- when new verbs reopen remembered places;
+- when regional people recur;
+- when setup choices pay off;
+- where narrative urgency should suppress cleanup nudges;
+- how a player can reach 100% without the final hours becoming icon archaeology.
 
-The rule is simple:
+The core rule is:
 
-> A 100% route should feel like **living through more of Orra**, not postponing the ending until every icon is vacuumed off a map.
-
-No optional quest may reveal a mandatory plot fact before the critical path is ready for it. No mandatory scene may pretend an optional relationship never happened.
+> **100% should feel like living through more of Orra, not postponing the ending until every icon is vacuumed off the map.**
 
 ---
 
-# 0. Narrative continuity rules
+# 0. Route-wide continuity rules
 
 ## 0.1 Knowledge has ownership
+A fact may be known by Neris, the player, one NPC, a faction, or the antagonist. Those are not one global knowledge pool.
 
-A fact can be known by:
+Optional evidence may let a completionist infer a truth early. Mandatory scenes acknowledge that inference instead of pretending the evidence was never found.
 
-- **Neris**;
-- **the player** through a scene Neris witnessed;
-- **the player only** through an optional record, environmental clue, or dramatic cutaway;
-- one or more NPCs who have not yet told Neris;
-- the antagonist while everyone else is still guessing.
+## 0.2 Optional depth may not carry mandatory logic alone
+The critical path must explain everything required to understand:
+- why Maelor can trigger Grand Ring;
+- why Neris is the useful Key operator;
+- what Ilyra actually did;
+- why Meridian cannot simply be repaired and left in charge;
+- why the final release is possible.
 
-Writers must not collapse those into one global pool of knowledge.
-
-## 0.2 Optional content can deepen truth, not replace it
-
-The critical path must establish every fact needed to understand the ending.
-
-Optional content may:
-
-- reveal who paid the cost;
-- contradict an official account;
-- show an earlier example of the final theme;
-- make a later accusation more personal;
-- cause an NPC to volunteer information sooner;
-- change a later line from explanation into acknowledgement.
-
-Optional content may **not** contain the only explanation for why Maelor can trigger the Grand Ring, why Ilyra disappeared, what the Hush is, or why the Meridian Bell must ultimately be destroyed.
+Optional content may reveal victims, provenance, local consequences, competing interpretations, and more personal versions of those truths.
 
 ## 0.3 No hidden morality meter
+Local repair choices may create different later routes, survivor scenes, burdens, dialogue, and credits images. The game does not secretly score one as the “correct compassionate” answer.
 
-If two authored choices are presented as legitimate local judgments, the game does not secretly score one as the compassionate answer.
+## 0.4 Narrative pressure outranks efficient routing
+If Neris has just learned Maelor is about to activate a continent-scale system, the UI does not enthusiastically recommend collecting three nearby vaults.
 
-Different choices can produce:
+Optional content can remain technically available while presentation respects urgency.
 
-- different routes;
-- different people available during a crisis;
-- different repair work later;
-- different dialogue;
-- different credits images.
+## 0.5 Every major region has a before-memory
+Rootmere, Saltreach, Emberstep, High Aerie, Mireglass, and Cairnfall all receive a short ordinary-life visit during the First Circuit before Grand Ring changes them.
 
-The player reaches the same thematic ending because the ending is about accepting responsibility for choices, not discovering a developer-approved perfect branch.
+The later catastrophe must recontextualize places the player remembers.
 
-## 0.4 The main cast must keep moving when Neris is elsewhere
-
-Tessa, Caldrin, Sena, Ilyra, Orin, Aven Rusk, Maelor, and regional leaders have work, fear, loyalties, and failures independent of Neris.
-
-Whenever the player returns to a major hub after a dungeon, at least one important person should have **done something without the player**.
+## 0.6 World pulse continues while Neris travels
+Regional residents, Rusk, Caldrin, Tessa, Sena, Maelor, and local institutions act between visits. The route references `docs/story/12_WORLD_PULSE_LEDGER.md` for offscreen changes.
 
 ---
 
-# 1. Movement 0 — Brindle: The Bell That Does Not Ring
+# 1. Movement 0 — Brindle before First Ring
 
-**Critical-path target:** 45–60 minutes on a first playthrough.  
-**100% opportunity:** light. Do not bury the inciting incident under checklist behavior.
+**Target feel:** comfort, competence, anticipation.  
+**Completion density:** intentionally light.
 
-## Mandatory sequence
+## Mandatory
+Follow `M00-S01` through `M00-S07`: ordinary work, Tessa spar, Orin's almost-confession, First Ring, Vale workshop breach, first Hush crossing.
 
-1. Neris wakes under the bell-shed workbench after falling asleep during First Ring repairs.
-2. Orin assigns ordinary jobs rather than giving a tutorial speech.
-3. Movement, camera, interaction, contextual climbing/stepping, basic diagnosis, and simple combat are taught through village work.
-4. Tessa arrives with a damaged courier fitting and spars with Neris while waiting for Orin.
-5. Neris notices Orin hiding a letter bearing Cairnspire service marks when Ilyra is mentioned.
-6. The village gathers for First Ring.
-7. Cairnspire fails to answer.
-8. The silent pressure wave crosses Brindle.
-9. Orin opens Ilyra's sealed floor compartment and exposes the prototype Cantor Key.
-10. Orin says only: **“Your mother didn't die where they said she did.”**
-11. The Hush takes half the workshop and pulls Orin across.
-12. Neris strikes the Key against the floor, sees Orin through impossible Hush geometry, and is thrown back into the Waking World.
-13. Immediate objective: reach Cairnspire and learn what happened.
+## Optional content that belongs here
 
-## Optional story window before First Ring
+### C01 — The Crooked Fire Bell
+May be completed before First Ring or on the first Brindle revisit.
 
-The player can complete or begin a small number of village interactions:
+Doing it before catastrophe gives Mara Pell and the neighborhood stronger recognition later.
 
-- **C01 — The Crooked Fire Bell** can be completed before First Ring or during the first Brindle revisit. Doing it before the catastrophe makes Mara Pell's later survival scene more personal.
-- talk to the mill keeper about a sealed tailbox that produces an empty resonance return; this previews Hollow Measure without naming it;
-- meet two children arguing over whether Ilyra was a famous inventor or “the woman who broke a route bell.” Neither story is correct;
-- inspect Orin's old traveling case, which is locked and becomes important only in the ending.
+### Small non-completion interactions
+- children arguing over contradictory stories about Ilyra;
+- help with food/festival setup;
+- roof shortcut race;
+- mill keeper complains about an unreachable tailbox;
+- inspect Ilyra's locked traveling case;
+- hear the fire bell's particular imperfect tone before deciding anything about it.
 
-## Character state on departure
+These interactions may award nothing.
 
-### Neris
-Believes:
-- Orin is alive somewhere across the Hush boundary;
+## Completion policy
+Do **not** let the opening become a checklist. Visible inaccessible spaces are useful promises.
+
+## Knowledge checkpoint
+Neris knows:
+- Orin crossed into the Hush and looked back;
 - the Cantor Key belonged to Ilyra;
-- Orin and the state lied about Ilyra's death.
+- Orin knew the official death story was false.
 
-Does **not** know:
-- Quiet Court;
-- Maelor's relationship to Ilyra;
-- what the Listener is;
-- that the Meridian network is a containment system.
-
-### Tessa
-Treats the trip to Cairnspire as a practical favor. She does not yet believe Neris is entering a continent-scale conspiracy.
-
-### Orin
-Absent, but his final incomplete sentence becomes the emotional engine of Act One.
-
-## 100% bookkeeping
-
-Do not require the player to clear every Brindle object before leaving. The opening intentionally contains inaccessible content so the player learns that **remembering a place matters**.
+Neris does not know Quiet Court, Maelor, the Listener, Mercy Window, or First Ring's causal owner.
 
 ---
 
 # 2. Movement 1 — Road to Cairnspire
 
-**Story purpose:** widen the scale from one family workshop to a civilization dependent on shared infrastructure.
+**Target feel:** urgency opening into scale.
 
-## Mandatory sequence
-
-1. Neris and Tessa take the damaged bell road toward Cairnspire.
-2. A broken flood-warning relay forces a small field repair; Tessa explains how many unrelated civic systems depend on Meridian timing.
-3. The pair pass frozen-for-seconds anomalies that recover before they can be inspected.
-4. Neris first sees the Meridian Bell from a ridge.
-5. Tessa points out that every road line seems to lead toward it whether people want that or not.
+## Mandatory
+Flood relay → Meridian ridge → capital route ward.
 
 ## Optional seeds
+- first Resonance Fault;
+- one visibly locked maintenance cavity;
+- Mireglass traveler with cracked diplomatic hand-mirror;
+- drifted Cairnfall training lens on display;
+- route-worker gossip about worsening bell timing.
 
-- first visible Resonance Fault;
-- one locked maintenance cavity;
-- a Cairnfall survey lens in a roadside civic display can be inspected, establishing `setup.cairnfall.uncorrected_lens` for later action in Cairnspire;
-- a Mireglass traveler carrying a cracked diplomatic hand-mirror introduces `setup.mireglass.personal_provenance` without explaining its future significance.
+These are seeds, not mini-quests.
 
-## Relationship beat — Neris / Tessa
-
-Tessa asks why Neris is so certain Orin can be rescued.
-
-Neris answers that Orin **looked back** through the seam.
-
-Tessa does not argue, but says:
+## Relationship
+Tessa challenges Neris's certainty without dismissing it:
 
 > “Looking back and finding a road back are different jobs.”
 
-The line should return in altered form during Still-Cairn.
+This establishes that hope needs a route.
 
 ---
 
-# 3. Movement 2 — Cairnspire: The Authorized Version
+# 3. Movement 2 — Cairnspire / registration chain
 
-**Story purpose:** establish the capital, Maelor as a credible ally, Caldrin as an uncertain historian, and the difference between technical truth and institutional truth.
+**Target feel:** busy life, institutional friction, useful suspicion.
 
-## Mandatory registration chain
+## Mandatory
+- `M02-S02` Rusk/Key conflict;
+- Public Bell Office diagnostic;
+- **C02 — Twelve Minutes Missing**;
+- Lower Archive / Caldrin;
+- Maelor calibration.
 
-### Public Bell Office
-Neris diagnoses a neighborhood warning chime whose late strike is caused by a correctly functioning local mechanism following a bad central reference.
+C02 counts automatically toward 100% when completed through the story.
 
-The player learns early that a machine can be internally healthy and systemically wrong.
+## Optional setup work
 
-### Route House — C02 Twelve Minutes Missing
-Tessa helps expose falsified relay timestamps hiding chronic understaffing.
+### `setup.highaerie.distributed_copy`
+Allow Caldrin's disputed record to travel with Tessa rather than keeping the only copy in the archive.
 
-If the player documents the staffing failure rather than scapegoating Pellon Vey, he later becomes one of Tessa's independent dispatchers.
+### `setup.mireglass.personal_provenance`
+Register the cracked Mireglass hand-mirror as named personal provenance rather than anonymous state salvage.
 
-### Lower Archive
-Neris finds Ilyra's field-certification number in a record the Bellwardens claimed did not exist.
+### `setup.cairnfall.uncorrected_lens`
+Document the survey lens with its known drift instead of “fixing” it to state calibration.
 
-Brother Caldrin notices Ilyra's margin shorthand and shows Neris two official accounts of the same historical accident with different casualty totals.
+## Early optional systems
+The player can encounter:
+- Cairnspire Faults;
+- one or more early records;
+- civic micro-vault promises;
+- Route House relationship content;
+- first Bellwarden policy arguments with Rusk.
 
-He says:
-
-> “Your mother wrote in margins because she did not trust clean copies.”
-
-## Maelor's public entrance
-
-Prefect Aven Rusk attempts to confiscate the Cantor Key.
-
-Maelor intervenes.
-
-He is calm, practical, and correct about the immediate engineering danger.
-
-He does not ask Neris to trust him. He demonstrates usefulness.
-
-This matters.
-
-## Maelor's first private scene
-
-In the instrument room Maelor admits knowing Ilyra professionally but avoids the Quiet Court.
-
-He recalls a specific, harmless memory: Ilyra tapping drinking cups to hear cracks before using them.
-
-That detail should bother Neris because it is too intimate for “everyone serious about Meridian work knew her.”
-
-Maelor gives the three regional commissions: Rootmere, Saltreach, Emberstep.
-
-## Optional Cairnspire story work
-
-Before leaving the city, the 100% player can:
-
-- preserve Caldrin's disputed-record copy through Tessa, activating `setup.highaerie.distributed_copy`;
-- document the uncorrected Cairnfall survey lens instead of recalibrating it, activating `setup.cairnfall.uncorrected_lens`;
-- register the Mireglass hand-mirror with personal provenance, activating `setup.mireglass.personal_provenance`;
-- find the first Quiet Court-adjacent record, which at this stage looks like ordinary private research procurement;
-- hear Rusk argue that public confidence is itself infrastructure. He is not entirely wrong, which prevents him from becoming a paper-thin bureaucratic villain.
-
-## Knowledge checkpoint
-
-Neris now knows:
-- Ilyra's official record was altered or hidden;
-- Maelor knew Ilyra better than he first implied;
-- historical Meridian records contradict one another;
-- three regional reference repairs are needed for diagnosis.
-
-Neris still believes Maelor's stated goal is restoration.
-
-The player should have reasons for suspicion, not proof.
+## Important story logic
+The Key drift demonstration makes the later route necessary. Maelor's three commissions exist, but Neris cannot safely trust the damaged Key until multiple independent baselines are compared.
 
 ---
 
-# 4. Movement 3 — The First Circuit
+# 4. Movement 3 — First Circuit / make Orra belong to the player
 
-**Story purpose:** make Orra belong to the player before the dungeon cadence begins.
+**Target feel:** curiosity, ownership, ordinary life.  
+**Target duration:** substantial enough to remember the world, compact enough that Orin's urgency remains alive.
 
-This chapter is deliberately flexible.
+The Circuit is one calibration journey, not six quest hubs.
 
-## Required route beats
+## Core stop — Old Viaduct Refuge
 
-The player must visit enough of the circuit to:
-
-- calibrate the Key outside the capital;
-- learn how local communities adapt central standards;
-- find one independent Bellwright Refuge;
-- complete one field repair;
-- see the approaches to all three commissioned regions.
-
-The player is not required to exhaust the circuit.
-
-## Old Viaduct Refuge — Eda Vell
-
-Independent bellwright **Eda Vell** becomes a recurring optional mentor.
-
-She dislikes both Cairnspire certification worship and romantic anti-technology rhetoric.
-
-Her position is practical:
-
-> “A standard is a tool. The minute it becomes a commandment, somebody stopped measuring.”
-
-She teaches **Common Measure**, an uncertified Cantor pattern that coordinates nearby machines without assigning them one master phase.
-
-The player does not yet understand how important that idea is.
+Meet Eda Vell and learn **P01 Common Measure**.
 
 ### Trial 01 — The Balance Bench
-Completing Eda's training opens Stage 01 of **The Unstandard Tool** prestige quest.
+Introduces practical mastery and can begin the prestige chain.
 
-The broken yoke becomes the first long-term object whose solution lies across multiple cultures rather than in one master archive.
+### Prestige Stage 01 — Bent Yoke
+The Unstandard Tool begins with an object that has no single archival solution.
 
-## Optional setup cluster
-
-A 100% player can establish several future consequences now:
-
-- C03 Graymile's Open Bypass;
-- C04 A Lantern Without a Bell;
-- `setup.circuit.unregistered_pattern` through Common Measure;
-- Rootmere's young green-span bracing choice;
-- copy Amsa Wren's margin warning once the roadhead becomes accessible;
-- Saltreach local fog-code repainting seed;
-- Emberstep maker-mark dispute through freight workers;
-- Mireglass provenance registration;
-- Cairnfall drifted-lens documentation.
-
-## Tessa's first deeper scene
-
-At camp after the circuit, Tessa recognizes a maker mark on Eda's broken yoke from Saltreach.
-
-She mentions doing “off-book freight” there years earlier and changes the subject.
-
-The player should notice.
-
-Neris does not press yet.
-
-## Sweep A — First Circuit completion opportunity
-
-Before Rootmere, a 100% route can reasonably clear:
-
-- available Brindle/First Circuit contracts;
-- first refuges;
-- first Faults/Pulse Shards;
-- first micro-vaults reachable without major tools;
-- Balance Bench;
-- Common Measure;
-- early testimonies;
-- Prestige Stage 01.
-
-Do **not** allow 100% of the First Circuit yet. Multiple visible objects deliberately require Anchor, Glasslung, Temper, Palinode, Mirror Nail, or seam mode.
-
----
-
-# 5. Movement 4 — Rootmere: What Counts as Damage
-
-**Main cast:** Neris, Tessa, Keeper Amsa Wren; Maelor by relay.
-
-## Arrival conflict — C06 The Root That Isn't Sick
-
-State authorization makes local keepers distrust Neris.
-
-Neris must prove the failure is not an intrinsic disease of the bell-oak.
-
-The diagnosis reveals old state braces forcing living roots into a geometry they cannot sustain.
-
-Maelor sends a technically excellent remote suggestion that helps Neris isolate the pressure fault.
-
-This is intentional: **the future antagonist genuinely helps save Rootmere**.
-
-His betrayal is not retroactive proof that every good thing he did was fake.
-
-## Root Cathedral
-
-The dungeon teaches water routing, living load paths, wet/dry state changes, and finally the Anchor Line.
-
-Mawhart survives once the foreign braces are removed.
-
-The boss outcome establishes a major Stillring rule: victory can mean removing a system that makes violence inevitable rather than killing the organism caught inside it.
-
-## Ilyra plate
-
-Neris finds Ilyra's warning:
-
-**CENTRAL PHASE LOAD EXCEEDS SAFE LIMIT. DO NOT FORCE FULL NETWORK SYNCHRONIZATION.**
-
-Maelor calls it an old overload note.
-
-His explanation is plausible enough to preserve ambiguity.
-
-## Optional Rootmere stories
-
-After the dungeon:
-
-- C07 Widow's Ferrygate gives Anchor mastery and a permanent route;
-- Trial 02 River Under Tension yields the Brake Reel;
-- the player can continue the green-span setup;
-- Eda's prestige quest points toward living fiber but Amsa refuses to cut healthy growth, delaying the solution until naturally shed fiber can be recovered;
-- one early record names a Bellwarden repair crew whose member names are absent from Cairnspire's version of the same incident.
-
-## Relationship beat — Neris / Maelor
-
-On the outgoing relay Maelor congratulates Neris and, unprompted, tells a story about Ilyra refusing to replace a cracked measuring fork because “a flaw you understand can be safer than a perfect instrument you don't.”
-
-Neris asks again how well he knew her.
-
-Maelor replies:
-
-> “Well enough to miss arguing with her.”
-
-This is the first admission that their relationship was personal as well as professional.
-
-## Sweep B — Anchor revisit
-
-Before Saltreach, 100% routing should naturally pass through at least some older areas:
-
-- Brindle mill tailbox;
-- Cairnspire service gantry;
-- Graymile collapsed span;
-- Rootmere ferry and one high root route.
-
-The purpose is not cleanup efficiency. It teaches that **new verbs rewrite memory of old spaces**.
-
----
-
-# 6. Movement 5 — Saltreach: What Was Carried
-
-**Main cast:** Neris, Tessa, Vessa Mor, local captains; Maelor by relay.
-
-## Regional social conflict
-
-Large merchant captains want central navigation restored immediately.
-
-Small fishing families believe the system itself caused the anomalies.
-
-Neither group is reduced to wisdom versus greed. Central timing genuinely saved lives for generations; dependence on it also erased local resilience.
-
-## C10 — The Fog Tower That Lies
-
-The tower is mechanically healthy but points wrong because its state calibration assumes an obsolete coastline.
-
-Repainting Vessa Mor's local fog code establishes a manual system that later matters during Stillness.
-
-## Tide Foundry
-
-The dungeon teaches pressure as a state, combines Anchor Line with water machinery, and awards the Glasslung Reed.
-
-The Nine-Lung Leviathan is not slain. Its attached pressure chambers are decoupled from the foundry's coercive cycle.
-
-## Tessa's confession
-
-After recovering the shipping manifest, Tessa can no longer minimize her old freight job.
-
-She admits she knowingly used forged manifests to move sealed research equipment for unusually high pay.
-
-She did **not** know the Quiet Court's purpose.
-
-Her guilt is not that she secretly caused Stillring. It is that she spent years protecting herself with the sentence “I didn't ask.”
-
-Neris, furious about Orin's secrecy, recognizes the same logic and is harsher with Tessa than the situation deserves.
-
-This produces their first serious argument.
-
-## Maelor confrontation
-
-Maelor admits funding unsanctioned research with Ilyra:
-
-> “Your mother knew the system was killing people. So did I. We disagreed about what safety required.”
-
-Neris demands the rest.
-
-Maelor refuses, saying he will explain in person when the three reference regions are stable.
-
-Because his diagnosis continues helping real people, Neris keeps going.
-
-## Optional Saltreach story layer
-
-- C11 Dry Dock at Low Water;
-- C12 Kelp Bell Funeral;
-- Trial 03 Fogline Pressure;
-- Breath Ledger acquisition;
-- Prestige Stages 02–04 can now advance through Vessa, Rootmere fiber, and the breathing coupler;
-- Leviathan pressure-release setup determines which harbor infrastructure later survives best.
-
-## Neris / Tessa repair scene
-
-Before leaving Saltreach, the player gets a quiet mandatory camp scene.
-
-Tessa says she does not need Neris to absolve her.
-
-Neris admits that demanding perfect hindsight from Tessa is easier than admitting Neris is also following Maelor despite mounting evidence.
-
-They do not fully reconcile, but the partnership becomes more honest.
-
-## Sweep C — Glasslung revisit
-
-Recommended 100% wave:
-
-- C05 Fourth Landing in Cairnspire;
-- Rootmere C08 Orchard of Split Notes;
-- submerged First Circuit cavities;
-- Saltreach pressure trial and dock spaces;
-- prestige coupler stage.
-
----
-
-# 7. Movement 6 — Emberstep: The Work Had Names
-
-**Main cast:** Neris, Tessa, Sena Ash; Maelor increasingly absent.
-
-## Entry conflict — C14 Names Ground Flat
-
-Sena refuses state access until the Bellwardens' false metal-blame narrative is challenged publicly.
-
-Neris cannot solve this by finding one smoking-gun memo. The player compares erased castings, old molds, freight dates, and testimony from workers.
-
-Tessa distributes the evidence through courier routes.
-
-Sena allows access because Neris helped restore **agency**, not because a government meter reached “friendly.”
-
-## Kiln of Names
-
-The dungeon teaches non-uniform heat, moving molds, multi-material states, and combinations of Anchor/Glasslung.
-
-The Temper Gauntlet arrives as a tool for managing different states without flattening them into one average.
-
-The Cinder Regent's surviving command—**PROTECT THE PURITY OF THE BELL**—turns a safety machine into a threat because it cannot tolerate variation.
-
-## The three-point document
-
-The sealed casting log proves:
-
-- Ilyra ordered Cantor Key alloy;
-- Maelor co-signed the order;
-- their research proposed a three-point phase-reference experiment using exactly Rootmere, Saltreach, and Emberstep.
-
-This is the first moment Neris possesses **proof that Maelor selected the regions for a hidden purpose**.
-
-## Optional Emberstep story layer
-
-Before racing back to Cairnspire, the 100% player can still reasonably complete a short post-dungeon window:
-
-- C15 The Cold Kiln;
-- C16 Crack in the Foreman's Cup;
-- Trial 04 Three-Heat Cast;
-- Temper Cycle;
-- Prestige Stage 05.
-
-The route should strongly discourage a giant cleanup sweep here. Story urgency matters.
-
-## Ilyra culpability seed
-
-Inside the same restricted log is a phrase that does not yet make sense:
-
-**MERCY WINDOW — LOCAL HOLD TEST / I. VALE LEAD**
-
-Neris assumes it was part of Maelor's experiment.
-
-Sena notes that the document lists **Ilyra as lead**, not Maelor.
-
-No explanation is available before the Grand Ring.
-
-This becomes an important later truth: Ilyra did not merely discover Maelor's work and object. She helped invent the first ethical-looking version of the idea that eventually became Stillring.
-
----
-
-# 8. Movement 7 — Cairnspire: The Three-Point Lie
-
-**This is a no-cleanup story lock once the player enters the Meridian district.**
-
-## Confrontation
-
-Caldrin arrives with High Aerie records. Sena joins in person. Tessa carries the copied evidence.
-
-Neris confronts Maelor beneath the Meridian tower.
-
-Maelor admits the three repairs were enough for the emergency entrainment system to seize the other Waybells.
-
-He does not claim he planned every regional disaster. He exploited them.
-
-That distinction matters: Orra's system was already failing before his intervention.
-
-## The Mercy Window accusation
-
-Neris throws the Emberstep record at Maelor and asks what Ilyra led.
-
-Maelor's expression changes.
-
-He says:
-
-> “Ask her.”
-
-Neris says Ilyra is dead.
-
-Maelor answers:
-
-> “That has always been the most convenient version.”
-
-Before Neris can process it, he disables the local sound field and begins the Grand Ring sequence.
-
-## Why Maelor acts now
-
-He believes the current failures prove Orra is out of time.
-
-He also knows that Neris's successful repairs make the three reference points cleaner than anything Quiet Court achieved eleven years ago.
-
-His grief and ideology matter, but his plan is also an engineer's terrible conclusion drawn from a real unstable system.
-
-## Grand Ring
-
-The sequence must be partly playable.
-
-Neris moves through failing civic infrastructure while:
-
-- Tessa tries to reach the route house;
-- Caldrin attempts to get copied records out of the district;
-- Sena protects trapped foundry workers in the capital maintenance yards;
-- Rusk orders the Meridian district sealed, then realizes the locks themselves are phase-dependent and opens them manually.
-
-Optional pre-Stillness choices alter **who can help during the escape**, but not the fact of the catastrophe.
-
-The Meridian Bell swings without sound.
-
-Stillness takes Cairnspire and then Orra.
-
-Neris crosses into the Hush.
-
----
-
-# 9. Movement 8 — Hush-Cairnspire: The Mother Who Survived
-
-## First Ilyra scene
-
-Ilyra recognizes Neris by voice.
-
-She calls Neris by the childhood nickname.
-
-Neris's first reaction is anger.
-
-The player should not be allowed to turn the reunion immediately sentimental through dialogue choice.
-
-## What Ilyra admits now
-
-Ilyra tells Neris:
-
-- she joined Maelor's research circle willingly;
-- the Meridian network was causing deaths and cover-ups;
-- Quiet Court originally included people with sincerely different proposed solutions;
-- she built the prototype Cantor Key to examine Waking/Hush seams;
-- she discovered Maelor wanted continent-scale phase control and tried to stop him;
-- she fell through a seam during that conflict and survived in the Hush.
-
-She initially avoids explaining the **Mercy Window**.
-
-Neris notices.
-
-## Stillring's actual effect
-
-Ilyra explains phase-lock, moving pockets, and why destroying Meridian immediately would cause uncontrolled overlap.
-
-She introduces Motion, Memory, and Ending as natural relations rather than sacred objects.
-
-## Relationship rule from this point forward
-
-Ilyra remains physically in the Hush for most of the game.
-
-The Cantor Key allows limited communication:
-
-- strong at designated seams;
-- fragmentary in ordinary moving pockets;
-- unreliable where Meridian correction is intense.
-
-This prevents Ilyra from becoming an always-on exposition companion.
-
-## End of movement
-
-Ilyra helps Neris establish a narrow personal phase envelope and points toward Brindle as the safest Waking re-entry.
-
-Before Neris leaves, Ilyra says:
-
-> “There are things Maelor will tell you about me because they are true.”
-
-Neris asks which things.
-
-Ilyra replies:
-
-> “That's the part I owe you myself.”
-
----
-
-# 10. Movement 9 — Brindle Changed / The Line Skiff
-
-## Required Brindle return
-
-This is the first major payoff for the setup system.
-
-The village is neither destroyed nor simply recolored.
-
-Its social geography changes according to early repair history.
-
-Examples:
-
-- Crooked Fire Bell outcome changes the moving shelter;
-- Graymile bypass changes how Tessa reaches Brindle;
-- local mechanical devices like Dori's lantern work precisely because they do not depend on Meridian phase.
-
-## Tessa returns
-
-Tessa arrives during a moving interval with the obsolete **Line Skiff**.
-
-She has spent the time since Grand Ring moving between brief route pockets, dragging people out of phase-locked stations.
-
-She is no longer merely Neris's courier friend. She is beginning to organize other couriers.
-
-## Neris tells Tessa Ilyra is alive
-
-Tessa first thinks Hush exposure is confusing Neris.
-
-Ilyra speaks through a strong seam in the damaged workshop.
-
-The first Tessa/Ilyra exchange is deliberately awkward.
-
-Tessa says:
-
-> “You sound exactly like the person whose paperwork ruined three years of my life.”
-
-Ilyra replies:
-
-> “That narrows it less than you think.”
-
-This gives the cast one small human laugh after the catastrophe without dissolving the stakes.
-
-## Line Skiff tutorial
-
-Tessa teaches Roadhand Pulse and the Skiff during an escape from a Stillness wave.
-
-The vehicle's existence demonstrates the game's central argument materially: old decentralized infrastructure becomes useful because the perfect central system failed.
-
-## Optional changed-world wave 1
-
-The 100% route should now revisit:
-
-- Brindle payoffs;
-- Graymile payoff;
-- Saltreach manual signal consequences;
-- Emberstep maker-mark consequences;
-- the independent refuges that can maintain local phase pockets.
-
-Drift Knot hunt unlocks after its Fault threshold.
-
----
-
-# 11. Movement 10 — High Aerie: Motion
-
-## Caldrin's homecoming
-
-Caldrin returns to find his order sealing records and waiting for central instructions.
-
-His Act One skepticism becomes a personal institutional crisis.
-
-C18 Weight of the Archive should occur early in the campaign so the player physically chooses how to save knowledge under load before hearing speeches about history.
-
-## Monastery of Updraft / Tempest Belfry
-
-The two halves form one escalating campaign:
-
-- restore local airflow;
-- earn the Vane Cloak;
-- survive structures moving in interrupted windows;
-- confront the official memory of Saint Varo.
-
-## Saint Varo
-
-The solution is not “expose the hero as fraud.”
-
-Varo both failed and acted courageously.
-
-The construct becomes stable only when both events remain allowed to exist.
-
-The Cantor Key learns **Motion**.
-
-## Character payoffs
-
-### Caldrin
-Breaks the authority seal and begins distributing contradictory copies.
-
-### Tessa
-Stops describing her courier relief work as temporary. She accepts responsibility for organizing it.
-
-### Neris / Ilyra
-During a strong storm seam, Neris asks again about Mercy Window.
-
-Ilyra says she will explain once Neris has seen the Bone Archive, because without understanding how the old communities treated temporary states, the experiment will sound either more innocent or more monstrous than it was.
-
-Neris accuses her of controlling the order in which truth is allowed to arrive—exactly what Orin did.
-
-Ilyra has no good defense.
-
-The tension remains.
-
-## Optional High Aerie layer
-
-- C18, C19, C20;
-- Crosswind Measure;
-- Trial 06;
-- Vane upgrades;
-- distributed-copy setup payoff;
-- prestige Stage 07 becomes available later once Palinode is learned;
-- High Aerie records point to Bone Archive.
-
----
-
-# 12. Movement 11 — Bone Archive: Contradiction Without Collapse
-
-**Scale:** compact, dense, story-heavy interlude.
-
-## Main purpose
-
-Teach Palinode and prepare both Mireglass's mechanics and Ilyra's confession.
-
-## Ilyra's presence
-
-Because Bone Archive is a natural Deep Wound, Ilyra can communicate almost continuously here.
-
-Caldrin accompanies Neris physically.
-
-The result is the first sustained scene where Ilyra has to answer questions in front of another person who understands the technical history.
-
-## Archivist Without a Face
-
-The recurring defense pattern repeatedly simplifies contradictory rooms into one clean version.
-
-The player progresses by preserving incompatible evidence long enough to understand the relationship between it.
-
-## Palinode Pattern
-
-Neris learns the diagnostic relation that lets multiple resonance histories remain legible simultaneously.
-
-## Mercy Window — partial truth
-
-Bone Archive contains a pre-Meridian record describing a rescue practice: temporarily **holding a local state** for seconds so people could escape a collapsing structure, then deliberately releasing the hold.
-
-Ilyra admits this inspired Mercy Window.
-
-Her team tried to reproduce the effect artificially.
-
-She still withholds what happened in the human trial.
-
-Caldrin tells her plainly:
-
-> “You are preserving your own preferred sequence of confession.”
-
-That lands.
-
-## Optional Bone Archive story
-
-Prestige Stage 08 uses two contradictory tool dimensions to teach loaded/unloaded relationship rather than one correct length.
-
-C09 A Name Under Bark becomes fully resolvable on the Rootmere revisit after Palinode.
-
----
-
-# 13. Movement 12 — Mireglass: Memory
-
-## Regional crisis
-
-Stillring has turned Mireglass's ordinary possibility-reflections into a social catastrophe.
-
-Families are trapped between versions of events. Destroying reflective surfaces makes the condition harder to read.
-
-## Optional C21 before the palace
-
-**The House That Remembers a Door** is strongly recommended before the major dungeon.
-
-It gives Neris a small domestic version of the problem: preserving a lost room permanently would comfort one person and imprison another inside grief.
-
-No answer is marked correct.
-
-## Palace Under Reeds
-
-Palinode reveals contradictions; Mirror Nail temporarily commits a useful local state.
-
-The Mirror Widow is resolved through a shared mundane event rather than one official treaty version.
-
-The Cantor Key learns **Memory**.
-
-## Full Mercy Window confession
-
-The newly stable memory does not show Maelor inventing everything alone.
-
-It shows **Ilyra proposing Mercy Window** eleven years earlier.
-
-### What Mercy Window was
-
-A route-maintenance accident had trapped several workers inside a collapsing resonant chamber.
-
-Ilyra proposed using a local phase hold for **less than twenty seconds**—long enough to stop structural motion while rescuers crossed the chamber.
-
-The test worked.
-
-People were saved.
-
-The last worker, already dying from injuries, was held longer while the team argued about release.
-
-During that extension:
-
-- the worker remained physically stable;
-- conscious response became repetitive;
-- memory failed to advance normally;
-- the Hush accumulated around the held state.
-
-Ilyra ordered the hold released.
-
-The worker died minutes later from the original injuries.
-
-Maelor saw proof that death could be postponed by engineering the state relation.
-
-Ilyra saw proof that a temporary rescue tool became a prison the moment **release stopped being part of the design**.
-
-That disagreement eventually split Quiet Court.
-
-### Why Ilyra hid this
-
-She is ashamed because Maelor did not steal the foundational idea from her.
-
-He extrapolated from work she was proud of at the time.
-
-Neris says:
-
-> “You keep telling me he turned your work into something else. But you were still the one who learned how to stop the room.”
-
-Ilyra answers:
-
-> “Yes.”
-
-No excuse follows.
-
-This is the emotional low point of their relationship.
-
-## Mirror Nail revisit wave
-
-Now the 100% route has its largest optional expansion:
-
-- old regions gain one or more committed echo-states;
-- Witness Interval becomes available through C22 and testimony work;
-- prestige Stage 09 uses an anonymous worker echo to reconstruct actual Freehand Frame use;
-- late elite encounters and Faults unlock;
-- old setup/payoff chains gain final states.
-
-The player should feel the world become **deeper**, not simply larger.
-
----
-
-# 14. Movement 13 — Cairnfall: The Listening Machine
-
-## Arrival — C23 Telescope That Disagrees
-
-Two healthy instruments disagree because they operate from different reference assumptions.
-
-This is a small tutorial for the entire region and a direct rebuke to Meridian's correction ideology.
-
-## Fallen Orrery
-
-The dungeon combines prior tools and introduces controlled seam work.
-
-Ilyra's original focusing lens is recovered.
-
-## Neris and Ilyra build together
-
-This is the first time since their reunion that Neris and Ilyra perform a repair as something resembling family rather than interrogator and witness.
-
-The sequence should require alternating action across the boundary:
-
-- Ilyra aligns Hush-side reference geometry;
-- Neris adjusts physical optics/mechanics;
-- neither can complete the calibration alone;
-- Palinode keeps their conflicting measurements legible;
-- the final solution intentionally retains a documented tolerance rather than forcing exact agreement.
-
-They complete **Cantor Key seam mode**.
-
-Neris does not forgive Ilyra because the repair went well.
-
-But for the first time, Neris understands what it felt like to learn from her.
-
-## Gravemoon Engine
-
-Neris disconnects the correction system instead of destroying the observatory.
-
-Moving pockets across Orra begin lasting longer.
-
-## C24 — No Correction Required
-
-Strongly recommended immediately after the dungeon.
-
-The young survey crew assumes disagreement means failure. Neris helps establish a local reporting protocol.
-
-This unlocks **Local Accord** and makes the coming Unringing mechanically possible.
-
-## Maelor's late communication
-
-For the first time since Grand Ring, Maelor deliberately opens a clean channel to Neris.
-
-He knows Cairnfall correction is gone.
-
-He does not threaten Neris.
-
-He says Mercy Window saved people.
-
-He asks why one dying worker's repetitive consciousness should count as a moral horror while ordinary death is accepted as natural.
-
-Neris answers:
-
-> “Because you stopped asking him.”
-
-Maelor replies:
-
-> “The dead do not answer either.”
-
-The argument is not resolved by the scene.
-
-## Optional Cairnfall layer
-
-- C23/C24;
-- Trial 08 Drift Survey;
-- Local Accord;
-- Seam Brace path;
-- prestige Stage 10;
-- late Drift Knots;
-- community projects begin across the world after correction is disabled.
-
----
-
-# 15. Movement 14 — Still-Cairn: Ending
-
-## Entry
-
-Cairnfall data locates the deepest Hush accumulation around Cairnspire.
-
-Still-Cairn is the game's civic-memory dungeon: overlapping streets, unbuilt homes, abandoned plans, and versions of people shaped by choices they never made.
-
-## Design rule
-
-The player repeatedly creates a temporary useful state and then must **let it end** to continue.
-
-This makes the Countertone of Ending something the player has already practiced before the emotional climax.
-
-## Orin
-
-Orin is trapped inside a repeating reconstruction of the night Ilyra disappeared.
-
-His defensive shell treats Neris as a six-year-old child.
-
-The encounter does not frame trauma as villainy.
-
-Orin's mistake is preserving every safe state until safety itself becomes confinement.
-
-## The perfect workshop
-
-At the climax, Neris can stand inside the Vale workshop before Ilyra vanished.
-
-Ilyra is present as the memory remembers her.
-
-Orin wants to stay.
-
-Neris says the place is real **as a memory** and false **as a future**.
-
-Neris releases it.
-
-The Cantor Key learns **Ending**.
-
-## Orin's confession
-
-Orin admits:
-
-- he knew Ilyra joined Maelor's research circle;
-- he knew the field-accident death story was false;
-- he did not know she remained alive in the Hush;
-- he hid the research connection because he feared Neris would spend life chasing her.
-
-Neris replies:
-
-> “So you chose which life I was allowed to have.”
-
-Orin accepts it.
-
-## Ilyra / Orin confrontation
-
-A strong seam lets Ilyra hear the confession.
-
-She realizes Orin carried part of the lie alone for eleven years.
-
-He realizes she had gone further into Quiet Court work than he understood.
-
-They do not resolve their marriage inside a dungeon.
-
-The only agreement reached is that **Neris is no longer a child whose future they may edit for protection**.
-
-That is enough for now.
-
----
-
-# 16. Movement 15 — The Unringing: Finish the World Before the Finale
-
-This is the natural home of the full 100% sweep.
-
-The critical path can proceed once enough regional signals cooperate to open Null Meridian.
-
-A 100% player deliberately stays and helps each region finish becoming capable of acting without Meridian.
-
-## Regional closure order is flexible
+## First Circuit ordinary-life postcards
 
 ### Rootmere
-- complete remaining contracts including C09;
-- resolve all setup/payoff chains;
-- finish living-resonator community project;
-- close remaining Faults/vaults/records;
-- optional elite encounter;
-- Local Accord proves distributed roots can coordinate without a master phase.
+Ride Lio Fen's ferry. See Olo carrying marker notes and Amsa in an ordinary disagreement. The bell-oak moves freely.
+
+**Setup opportunities:**
+- `setup.rootmere.green_span` — choose rigid plate or flexible keeper weave for a young bridge;
+- `setup.rootmere.wrens_margin` — preserve Amsa's handwritten warning once available.
 
 ### Saltreach
-- C13 Two Captains, One Tide;
-- finish manual fog/pressure network;
-- late underwater/Mirror/seam content;
-- Drift Knot routes;
-- community project produces a harbor schedule that changes with tide rather than pretending tide follows schedule.
+Ride a normal harbor launch. Meet Vessa. Hear berth arguments and functioning fog signals.
+
+**Setup opportunity:** seed `setup.saltreach.manual_fog_code`; full repaint resolves with C10 later.
 
 ### Emberstep
-- C17 Borrowed Heat;
-- finish maker-name restoration;
-- complete heat-sharing project;
-- late forge upgrades and elite;
-- prestige work advances with Sena.
+See a successful pour and ordinary shift change. Meet maker culture before the false accusation.
+
+**Setup opportunity:** seed `setup.emberstep.maker_marks` through freight/maker conversations.
 
 ### High Aerie
-- C20 public reconstruction of Pera's rope cut;
-- archive distribution project;
-- remaining Vane/Anchor vaults;
-- elite and trial completion;
-- Caldrin's order begins functioning without a single master seal.
+Ride a working cargo lift, cross a normal wind span, eat at the Wind Kitchen.
+
+The player should know what wind and ordinary height feel like here before Stillness.
 
 ### Mireglass
-- C22 Witness at Reedwater;
-- Witness Interval cleanup wave;
-- safe civic Hush-seam project;
-- remaining Mirror/Palinode content;
-- testimony sets reveal contradictions without requiring the player to choose one “canon” for 100%.
+Ride the lantern ferry; see children using strange reflections as a game.
+
+The player learns Mireglass weirdness can be funny and domestic before it becomes horror.
 
 ### Cairnfall
-- independent survey network project;
+Attend public observation night; use a deliberately flawed teaching scope; see students bet food on instrument disagreement.
+
+The sky is pleasure before it is plot.
+
+### Graymile
+See the mothballed Line Skiff in `M03-S10`.
+
+## First Circuit contracts
+
+### C03 — Graymile's Open Bypass
+Resolve whether to reinforce the unauthorized worker route or seal it and document why the certified tunnel failed.
+
+Feeds `setup.circuit.graymile_bypass`.
+
+### C04 — A Lantern Without a Bell
+Build Dori Senn a purely local arrival indicator.
+
+The humble mechanical solution later becomes a useful post-Grand-Ring rendezvous.
+
+## Setup — unregistered Common Measure
+Learning Common Measure establishes `setup.circuit.unregistered_pattern` and later proves small machines can coordinate without Meridian.
+
+## First completion sweep — base/Cantor wave
+A dedicated 100% player may reasonably clear:
+- available Brindle/Cairnspire/First Circuit contracts;
+- Old Viaduct Refuge and early refuges;
+- base-access Faults;
+- base Pulse Shards;
+- base micro-vaults;
+- early records/testimonies;
+- Balance Bench;
+- Common Measure;
+- Prestige Stage 01.
+
+Do not permit total regional exhaustion. Visible Anchor/Glasslung/Temper/Palinode/Mirror/seam locks should remain.
+
+## Key story result
+`M03-S11` compares **all six** healthy-but-different baselines. The player learns through play that disagreement is not automatically damage.
+
+The Key now points to Rootmere as the strongest actual crisis.
+
+---
+
+# 5. Movement 4 — Rootmere / Anchor wave
+
+**Target feel:** conflict → diagnosis → wonder → competent release.
+
+## Mandatory
+
+### C06 — The Root That Isn't Sick
+Critical-path contract. Counts automatically.
+
+Neris proves old foreign bracing, not the living bell-oak itself, is causing the collapse.
+
+### Root Cathedral
+Acquire **Anchor Line**.
+
+Mossjaw remains an ordinary animal encounter. Mawhart is the liberation boss: remove the harmful load relationship; creature survives.
+
+### Ilyra plate
+Obtain the first hard warning against forced full-network synchronization and evidence that First Ring damping was abnormal.
+
+## Optional Rootmere after dungeon
+
+### C07 — Widow's Ferrygate
+Use Anchor under changing river load. Lio's late husband's asymmetric mechanism can be preserved or reworked; either path has later behavior.
+
+### Trial 02 — River Under Tension
+Anchor mastery.
+
+### Prestige progression
+Living material for the Unstandard Tool must come from naturally shed fiber rather than cutting healthy growth.
+
+### Ordinary return beat
+Eat, ferry, hear disagreement about the repair, and see people act without waiting for Neris.
+
+## Anchor revisit wave
+Recommended natural route before Saltreach:
+- Brindle mill tailbox;
+- Graymile span/service cavity;
+- Old Viaduct high tension route;
+- Cairnspire service gantry;
+- Rootmere ferry/high root spaces.
+
+The purpose is memory transformation, not cleanup optimization.
+
+---
+
+# 6. Movement 5 — Saltreach / Glasslung wave
+
+**Target feel:** familiarity → suspicion → pressure → relationship fracture → quiet loss.
+
+## Mandatory
+
+### C10 — The Fog Tower That Lies
+The same harbor seen during the Circuit now misbehaves because the official calibration assumes an old coastline.
+
+Completing the local fog code establishes `setup.saltreach.manual_fog_code`.
+
+### Tide Foundry
+Acquire **Glasslung Reed**.
+
+### Nine-Lung Leviathan
+Remove coercive pressure hardware. Leviathan escapes but later dies offshore from accumulated damage.
+
+### Tessa manifest
+Tessa's old restricted freight becomes personal. Her failure is deliberate incuriosity, not secret Stillring knowledge.
+
+## Optional Saltreach
+
+### C11 — Dry Dock at Low Water
+Pressure-state repair; Mirror Nail later creates another route.
+
+### C12 — Kelp Bell Funeral
+A family decides what preserving a rescue memory means when physical possession and evidence conflict.
+
+### Trial 03 — Fogline Pressure
+Signal/pressure mastery.
+
+### Breath Ledger
+Optional/required catalog timing follows doc 13.
+
+### `setup.saltreach.levis_pressure_release`
+The old cistern bypass can remain independent or reconnect centrally; both create distinct later consequences.
+
+### Prestige Stages 02–04
+Pressurewright mark, living fiber, breathing coupler.
+
+## Neris/Tessa relationship
+The argument after the manifest is not instantly healed. A quiet camp lets both admit what they are projecting without requiring absolution.
+
+## Leviathan remembrance
+News of its death travels during the road out, not as a reward popup. Saltreach begins a small harbor remembrance while Neris is elsewhere.
+
+## Glasslung revisit wave
+Natural 100% opportunities:
+- **C05 — The Fourth Landing** in Cairnspire;
+- **C08 — Orchard of Split Notes** in Rootmere;
+- submerged First Circuit pockets;
+- pressure vaults/refuge services;
+- associated Faults/Pulse Shards/upgrades.
+
+---
+
+# 7. Movement 6 — Emberstep / Temper wave
+
+**Target feel:** social pressure → public evidence → industrial mastery → betrayal proof.
+
+## Mandatory
+
+### C14 — Names Ground Flat
+Critical-path contract. Publish maker evidence and disprove the convenient impurity accusation.
+
+Feeds `setup.emberstep.maker_marks`.
+
+### Kiln of Names
+Acquire **Temper Gauntlet**.
+
+### Cinder Regent
+Dangerous machine. No “actually innocent victim” repeat.
+
+### Sealed records
+Establish:
+- three-point reference geometry;
+- Ilyra/Maelor collaboration;
+- privileged First Ring damping path;
+- Mercy Window mark.
+
+Neris's group can understand the mechanism before confronting Maelor.
+
+## Optional Emberstep window
+Short only. Story pressure should dominate.
+
+### C15 — The Cold Kiln
+Use controlled uneven heat rather than force uniform certification.
+
+### C16 — Crack in the Foreman's Cup
+Personal Sena scene about repairing without erasing visible history.
+
+### Trial 04 — Three-Heat Cast
+Thermal mastery.
+
+### `setup.emberstep.quench_bypass`
+Repair or close the manual emergency branch; later clinic heat route differs accordingly.
+
+### Prestige Stage 05
+Multi-temperature material requirement.
+
+## Temper revisit wave
+Technically opens older heat-memory routes, but the UI does not advertise a grand sweep after `M06-S05`.
+
+**Narrative action:** return to Cairnspire now.
+
+---
+
+# 8. Movement 7 — Grand Ring / no-cleanup lock
+
+**Target feel:** dread → attempted intervention → betrayal → catastrophe.
+
+Once the player enters the Meridian district, this sequence is a story lock.
+
+## Mandatory
+- evidence converges independently;
+- Maelor admits deliberate reference selection;
+- Maelor admits disabling First Ring damping to expose hidden failure;
+- Mercy Window/Ilyra-alive pressure lands;
+- Neris attempts to stop activation;
+- Rusk, Tessa, Caldrin, Sena act independently;
+- Orra freezes through **remembered** regional places;
+- Neris escapes into Hush.
+
+## Optional-state acknowledgements
+Early setup choices alter:
+- accessible crisis side routes;
+- which civilians/helpers appear;
+- what equipment keeps working;
+- who can move briefly.
+
+They do not prevent Grand Ring.
+
+## Knowledge checkpoint
+Neris knows Maelor deliberately used the three repairs and worsened First Ring. Maelor's final ideology and Ilyra's full culpability remain incomplete.
+
+---
+
+# 9. Movement 8 — Ilyra / Hush-Cairnspire
+
+**Target feel:** impossible hope → anger → awkward humanity → minimal practical plan.
+
+## Mandatory
+- find Ilyra;
+- wrong workbench recognition;
+- stabilize the Key;
+- hear only the necessary admissions;
+- learn that High Aerie is still exhibiting a changing relation;
+- create Brindle re-entry.
+
+## Important removal
+Ilyra does **not** introduce “the three Countertones” as a checklist.
+
+At this point there is only one practical lead: something at High Aerie is still moving.
+
+## Quiet character content
+Required mundane moments:
+- Ilyra remembers a childhood food wrong;
+- Neris puts tools in a drawer Ilyra keeps correcting;
+- Ilyra catches herself speaking to a six-year-old;
+- neither gets a perfect reunion hug that resets eleven years.
+
+## Optional Hush content
+Ilyra's Workbench refuge can provide one-time service/history without turning Ilyra into an always-on quest dispenser.
+
+---
+
+# 10. Movement 9 — changed Brindle / Line Skiff / first payoff sweep
+
+**Target feel:** recognition → hurt → surprise joy → regained mobility.
+
+## Mandatory Brindle return
+The player sees:
+- C01 outcome;
+- Dori's local lantern if C04 completed;
+- Graymile bypass consequence;
+- Brindle social spaces changed rather than simply recolored.
+
+## Tessa / Line Skiff
+Tessa arrives with the seeded Graymile technology. This is a payoff, not an unexplained traversal gift.
+
+Acquire **Roadhand Pulse** and usable **Line Skiff**.
+
+## First fun Skiff stretch
+Do not make the first vehicle sequence pure urgency. The player needs one period where changed traversal simply feels good.
+
+## Post-Grand-Ring setup payoffs now visible
+
+### S01 Crooked Fire Bell
+Standard replacement and asymmetric brace produce different movement/safety outcomes.
+
+### S02 Graymile bypass
+Reinforced route can become courier escape with Hush risk; sealed route protects against contamination but requires exterior rescue.
+
+### S03 Common Measure
+Independent machines can create small local operating windows.
+
+### S04 Rootmere green span
+Rigid and flexible solutions preserve different routes.
+
+### S05 Wren margin copy
+Personal copy survives archive failure and later helps C09.
+
+### S06 Saltreach manual fog code
+Manual signal determines early reachable harbor shelter.
+
+### S07 Leviathan pressure release
+Independent bypass or central reconnection protects different infrastructure.
+
+### S08 Emberstep maker marks
+Workers can identify local alloys and disconnect selectively.
+
+### S09 Emberstep quench bypass
+Creates one clinic heat route or prevents rupture and requires another.
+
+### S10 High Aerie distributed copy
+Traveling evidence challenges archive authority earlier.
+
+### S11 Mireglass personal provenance
+Named hand-mirror later identifies a mundane shared memory.
+
+### S12 Cairnfall uncorrected lens
+Known drift later separates real coordinates from Meridian-corrected false ones.
+
+## Moving hunt
+**Drift Knots** begin once the required Fault threshold and Line Skiff state are met. They are deterministic moving synchronization errors, not ghost collection.
+
+---
+
+# 11. Movement 10 — High Aerie / Vane / Motion
+
+**Target feel:** loss of familiar wind → rescue competence → historical ambiguity → relief.
+
+## Before-memory payoff
+Return to the Wind Kitchen, suspended lift, laundry, and familiar people from M03-S07.
+
+## Mandatory
+
+### C18 — Weight of the Archive
+Strongly integrated early. Physical rescue priorities force Caldrin to confront archive hierarchy.
+
+### Monastery/Tempest campaign
+Acquire **Vane Cloak**.
+
+### Choir of Talons
+Ordinary predators; combat curriculum without a tragic lore explanation.
+
+### Saint Varo
+Preserve failure **and** courage. The relation is named **Motion only after the player performs it**.
+
+## Optional High Aerie
+
+### C19 — Chain Nine Sings
+Crosswind/Anchor structure problem.
+
+### C20 — The Novice Who Cut the Bellrope
+Post-Motion reconstruction; Pera's “failure” prevented worse entrainment.
+
+### Trial 06 — Crosswind Traverse
+Vane mastery.
+
+### High Aerie upgrades/refuges/records
+Chainhouse Seven, Storm Blind, Vane/Anchor components, record sets.
+
+## Quiet meal
+Wind Kitchen reopens imperfectly. This is a required breathing beat.
+
+## Story lead
+Caldrin's released records point beneath Rootmere to an older rescue relation. The next destination emerges from evidence, not a “next Countertone” marker.
+
+---
+
+# 12. Movement 11 — Bone Archive / Palinode
+
+**Target feel:** claustrophobic curiosity → intellectual tension → family accusation → silence.
+
+## Mandatory
+- re-enter familiar Rootmere through accumulated verbs;
+- Archivist Without a Face pressure pattern;
+- acquire **Palinode Pattern**;
+- find pre-Meridian local-hold rescue history;
+- Ilyra admits she designed Mercy Window.
+
+## Optional integration
+
+### C09 — A Name Under Bark
+Now fully resolvable with Palinode and the earlier Wren margin copy.
+
+### Prestige Stage 08
+Contradictory dimensions become a tool-design lesson.
+
+### Rootmere late records/Faults
+Can be resolved naturally during departure rather than forcing another separate trip.
+
+## Pacing rule
+The immediate road afterward is quiet. No next-objective exposition monologue. The contradictory resonance itself points toward Mireglass.
+
+---
+
+# 13. Movement 12 — Mireglass / Mirror / Memory
+
+**Target feel:** familiar strangeness becomes intimate horror → problem solving → grief.
+
+## Before-memory payoff
+The reflection game from M03-S08 is now wrong in a way the player personally understands.
+
+## Recommended pre-palace side story
+
+### C21 — The House That Remembers a Door
+A domestic version of preservation: a lost room comforts one person and traps another in grief. No moral-score answer.
+
+## Mandatory
+- Palace Under Reeds;
+- complete **Mirror Nail**;
+- resolve Mirror Widow through a shared mundane memory;
+- relation named **Memory** only after action;
+- reconstruct full Mercy Window.
+
+## Full family truth
+Ilyra's work saved lives and materially enabled Maelor's later path. She accepts responsibility without accepting responsibility for his choices.
+
+This is the Neris/Ilyra emotional low point.
+
+## Optional Mireglass
+
+### C22 — Witness at Reedwater
+Feeds **Witness Interval** and civic provenance.
+
+### Trial 07 — Two Histories, One Repair
+Palinode/Mirror mastery.
+
+### Mireglass records/vaults/Faults
+Now include committed echo-state routes.
+
+## Mirror/Palinode mega-revisit wave
+This is the largest optional expansion in the game.
+
+Older regions gain:
+- alternate useful states;
+- unresolved records that can now coexist;
+- hidden spaces based on never-built/remembered geometry;
+- late Pulse Shards;
+- late tool upgrades;
+- elite access;
+- prestige stages.
+
+**Presentation rule:** the world is available, not nagging. Give the player emotional space after Mercy Window before surfacing completion assistance.
+
+---
+
+# 14. Movement 13 — Cairnfall / seam mode
+
+**Target feel:** calm technical disagreement → collaboration → regained possibility → new family lead.
+
+## Before-memory payoff
+Return to public observation night space. The fun flawed scopes now insist on one impossible coordinate.
+
+## Mandatory
+
+### C23 — The Telescope That Disagrees
+Critical teaching for reference-frame logic.
+
+### Fallen Orrery
+Accumulated tool synthesis.
+
+### Neris/Ilyra collaboration
+Complete **Cantor Key seam mode**. This is cooperation after truth, not forgiveness reward.
+
+### Gravemoon Engine
+Disconnect Meridian correction while preserving local instruments.
+
+### C24 — No Correction Required
+Strongly integrated post-dungeon. Establish a local disagreement-reporting protocol and **Local Accord**.
+
+## Main-story lead
+Raw uncorrected observation detects a repeating Vale workshop signal that cannot finish releasing its state.
+
+The next objective is **find Orin**, not “collect Ending.”
+
+## Optional Cairnfall
+- Trial 08 Drift Survey;
+- Night Survey Hut;
+- seam-mode Faults/vaults;
+- late tool upgrade components;
+- Prestige Stage 10;
+- late Drift Knot tiers.
+
+## World-state consequence
+Because correction is disabled, moving pockets last long enough for regional communities to begin their own disconnection attempts **without waiting for Neris**.
+
+---
+
+# 15. Seam-mode world sweep
+
+**Target feel:** world depth and player mastery, not final checklist panic.
+
+This optional wave can be taken before or after Still-Cairn depending on pacing, except where a story gate requires Ending.
+
+Seam mode opens:
+- final regional seam Faults;
+- late micro-vaults;
+- late Pulse Shards;
+- Ilyra Workbench/Hush service interactions;
+- several record/testimony conclusions;
+- final stages of moving hunt access.
+
+The player should see communities attempting solutions during these revisits. Some succeed, some fail, some ask for help, some choose not to use Neris's preferred method.
+
+---
+
+# 16. Movement 14 — Still-Cairn / Orin / Ending
+
+**Target feel:** uncanny possibility → personal safety → temptation → release → family fracture.
+
+## Mandatory
+- enter layered Hush-Cairnspire;
+- learn through repeated play that preserved useful states become barriers;
+- reach Echo-bound Orin;
+- reach perfect Vale workshop;
+- release it;
+- relation named **Ending** afterward;
+- hear Orin's full confession.
+
+## Important sequence rule
+Only now may characters naturally summarize **Motion / Memory / Ending** as a learned set.
+
+The set has emerged from lived problems rather than being handed out as a collection quest.
+
+## Family outcome
+Ilyra and Orin do not reconcile their marriage in the dungeon. They agree only that neither gets to control Neris's future through withheld information.
+
+## Pacing rule
+Do not immediately throw a 100%-remaining checklist on screen after Orin's confession.
+
+Return to ordinary people first.
+
+---
+
+# 17. Movement 15 — Unringing / natural home of final 100% sweep
+
+**Target feel:** rebuilding, responsibility, community competence, earned preparation.
+
+The world has already started moving. Neris helps communities finish practical disconnection rather than arriving as the sole inventor of local life.
+
+The critical path needs an authored subset of cooperation to open Null Meridian.
+
+A 100% player stays and resolves **all six community projects plus remaining completion-bearing content**.
+
+## Rootmere — Many Roots, Many Bells
+- complete remaining C07/C08/C09 if unresolved;
+- living-resonator project;
+- final setup payoffs;
+- remaining Faults/Pulse/vaults/records;
+- Rootmere elite;
+- keeper coordination still includes watershed-scale shared warning where useful.
+
+## Saltreach — Fog Without Meridian
+- **C13 — Two Captains, One Tide**;
+- manual fog/pressure network;
+- remaining underwater/Mirror/seam spaces;
+- Saltreach elite;
+- Drift Knot routes;
+- harbor coordination changes with tide rather than demanding tide fit a schedule.
+
+## Emberstep — Maker's Clock
+- **C17 — Borrowed Heat**;
+- clinic/foundry heat-sharing outcome;
+- maker-name restoration;
+- remaining Faults/vaults/records/upgrades;
+- Emberstep elite.
+
+## High Aerie — Open Copies
+- finish C19/C20 if unresolved;
+- archive distribution project;
+- remaining Vane/Anchor content;
+- High Aerie elite/trial completion;
+- Caldrin's archive retains evidence discipline without one master copy.
+
+## Mireglass — Public Seams
+- finish C21/C22;
+- safe civic seam project;
+- remaining Mirror/Palinode content;
+- Mireglass elite;
+- residents may disagree about whether public seam access should exist at all.
+
+## Cairnfall — Report the Drift
+- finish C23/C24 if unresolved;
+- independent survey network;
 - remaining seam content;
-- Local Accord final calibration;
-- final Drift Knot tiers;
-- school/observation material begins before the ending rather than appearing from nowhere in credits.
+- Cairnfall elite;
+- school/observation practices begin **before** the credits.
 
 ## Prestige quest — The Unstandard Tool
+Stages 11–12 complete here.
 
-Stages 11–12 should complete during the Unringing.
+Final reward: **Freehand Frame**. Different workshops can build compatible but visibly different versions; no master pattern becomes the new sacred standard.
 
-The final **Freehand Frame** is assembled with Eda, Tessa, Sena, Caldrin's records, and knowledge gathered across every major region.
+## Moving hunt — Drift Knots
+All 12 targets can now be resolved if earlier thresholds and verbs are complete.
 
-Eda destroys the tracing jig after the principles are shared.
+Final reward: **Route Listener**, a route-sector unresolved-service/fault aid, not treasure radar.
 
-This is the game's largest optional thematic statement:
-
-> compatibility does not require one master pattern.
+## Optional elites — 8
+All eight become resolvable by late Unringing according to doc 14.
 
 ## Mastery complex — Broken Standard Yard
+Seven commissions test actual disaster-response combinations. Final reward **Open-Hand Coupler** improves field experimentation/convenience without adding a new mandatory verb or damage tier.
 
-The late mastery complex becomes available only after the major optional verbs are learned.
-
-It should feel like a practical disaster-response yard, not an abstract challenge palace.
-
-Completion proves the player can combine tools under pressure before Null Meridian.
+## Bellwright Refuges — 11
+All refuges and their unique one-time services/history should now be resolvable, including Ilyra's Hush workbench.
 
 ## 100% pre-finale verification
+Before Null Meridian, a complete route should have resolved every completion-bearing category except content physically allocated inside Null Meridian and the story-complete flag.
 
-Before entering Null Meridian, a true 100% route should be able to confirm all completion-bearing categories except:
-
-- main story completion itself;
-- any final-dungeon records/Faults/vaults explicitly allocated to Null Meridian;
-- credits-triggered completion stamp.
-
-The game should provide a **diegetic completion-assist service** at the courier network/refuges showing whether each region still has unresolved categories. It should not reveal exact hidden coordinates by default.
+Diegetic completion assistance may report unresolved **categories by region** through courier/refuge services. It should not default to exact hidden coordinates.
 
 ---
 
-# 17. Movement 16 — Null Meridian: What Perfect Preservation Costs
+# 18. Movement 16 — Null Meridian
 
-## Approach
+**Target feel:** mastery → institutional truth → confrontation → dread.
 
-Independent local signals ring in deliberate disagreement with Meridian.
+## Point of no return
+Before entry:
+- create recoverable pre-finale save;
+- show unresolved completion categories;
+- allow cancellation;
+- never imply 100% is required for the legitimate ending.
 
-Every region contributes, but no one signal becomes the new master.
+## Optional-completion effects
+Completion may change:
+- which approach routes remain open;
+- which allies appear;
+- final refuge services;
+- optional Null Meridian side rooms;
+- dialogue acknowledging relationships;
+- witness/record specificity.
 
-Optional community completion changes:
+It never makes Neris more “worthy.”
 
-- how many routes are open;
-- which allies appear in approach scenes;
-- what services are available at the final refuge;
-- additional dialogue acknowledging people Neris helped;
-- some optional Null Meridian side rooms.
+## Final dungeon
+Paired-mechanic synthesis, not one nostalgia room per region:
+- Anchor + Vane;
+- Glasslung + Temper;
+- Palinode + Mirror;
+- Mirror + seam;
+- Cantor + combat;
+- Local Accord + unstable infrastructure;
+- Line Skiff approach segment.
 
-It does not change whether Neris is “worthy” to finish the story.
+No new mandatory core verb.
 
-## Final dungeon structure
+## Quiet Court archive
+Critical path establishes the reform-to-coercion history. Optional records add people, victims, dissenters, and compromises.
 
-Null Meridian is not six nostalgia rooms.
+## Maelor
+Human-scale first phase, more integrated second phase. He remains responsible and physically human rather than being transformed into a possessed monster.
 
-Each major trial combines verbs that were learned separately:
+His final offer is preservation from future loss, not power.
 
-- Anchor + Vane under unstable suspension;
-- Glasslung + Temper using pressure/thermal history;
-- Palinode + Mirror Nail where two incompatible Court records affect physical state;
-- Line Skiff / route infrastructure during an external approach segment;
-- seam mode + Local Accord to create a temporary multi-system operating window;
-- core combat in partial silence.
-
-No new mandatory core verb appears here.
-
-## Quiet Court truth
-
-Optional records can fill in individual members, victims, dissenters, and compromises.
-
-The critical path establishes the essential fact:
-
-Quiet Court was not a cartoon cabal. It began as people who agreed the Meridian system was killing people and disagreed radically about what should replace it.
-
-Maelor gradually converted a rescue/research coalition into a project built around permanent phase preservation.
-
-Ilyra's Mercy Window work gave the project a technical ancestor, but she rejected permanent hold once release ceased being fundamental.
-
-## Maelor — phase 1
-
-Human-scale duel.
-
-Maelor removes or delays audio tells, attacks spacing, and manipulates frozen environmental objects.
-
-He remains physically human because the ideological conflict is stronger if the player first defeats **a person**, not a monster costume.
-
-## Final offer
-
-Maelor shows Neris preserved versions of his wife and son.
-
-He offers a world in which every person is held before the next irreversible loss.
-
-Neris asks whether preserved people can choose anything new.
-
-Maelor replies:
-
-> “They already chose. They chose to want the moment to last.”
-
-Neris:
-
-> “Wanting a moment to last isn't the same as wanting nothing after it.”
-
-## Maelor — phase 2
-
-He connects himself to Meridian.
-
-The arena alternates frozen/moving states. Countertones restore limited local agency.
-
-Neris wins.
-
-Maelor refuses disconnection and opens the Listener's prison.
+Neris defeats him. Maelor opens Listener containment rather than accept disconnection.
 
 ---
 
-# 18. The Listener: The Last False Solution
+# 19. Movement 17 — Listener / preserved beloved world
 
-The Listener manifests as unfinished scenes rather than an evil deity.
+**Target feel:** temptation → recognition → existential sadness → release.
 
-It cannot initially distinguish Neris from all possible Neris states.
+## Save-state personalization
+Where production allows, preserved possibilities use actual remembered content:
+- Lio's ferry;
+- Wind Kitchen;
+- Mireglass reflection game;
+- Cairnfall public sky;
+- Brindle festival table;
+- Crooked Fire Bell;
+- optional NPCs with completed arcs;
+- Tessa's ordinary jokes;
+- imperfect household details.
 
-## Alternate scenes
+The Listener does not offer a shiny perfect utopia.
 
-The player can walk into peaceful preserved possibilities:
+It offers the imperfect world the player loved **forever**.
 
-- Ilyra never disappeared;
-- Orin told the truth;
-- Brindle never suffered First Ring;
-- Tessa never learned detachment;
-- Maelor's son survived;
-- optional 100% relationships can add small additional possibilities based on people the player actually knows.
+## Recognition
+The ferry never finishes docking. Laughter never finishes becoming silence. Nobody reaches the next sentence.
 
-The scenes are pleasant.
+The player understands pleasant preservation is still a cage when no state may become past.
 
-They also do not progress.
+## Final question
 
-NPCs repeat. Wind resets. New responses never emerge.
+> **“MUST ALL ENDINGS BE CAGES?”**
 
-## The Listener's question
+## Final action
+Motion allows change, Memory keeps what happened knowable, Ending allows state to become past.
 
-> “MUST ALL ENDINGS BE CAGES?”
+Neris shatters Meridian's central heart.
 
-Neris understands:
-
-- the ancient bellwrights imprisoned endings by compressing the Hush;
-- Maelor imprisoned beginnings by refusing to allow the next state;
-- both treated time as an engineering defect.
-
-## Final mechanical act
-
-Neris uses:
-
-- **Memory** to keep what happened knowable;
-- **Motion** to allow living systems to change;
-- **Ending** to let a state become past.
-
-The Cantor Key cannot repair Meridian.
-
-Neris shatters the central heart.
-
-Forced synchronization ends.
-
-The Hush spreads briefly, then settles into many local seams.
-
-The Listener ceases to exist as one compressed consciousness.
-
-Its final sensation is relief.
+The Hush settles into many local seams. The Listener is no longer forced into one compressed singular consciousness.
 
 ---
 
-# 19. Maelor's survival
+# 20. Epilogue / credits
 
-Maelor's family impressions begin to dissolve.
-
-His son's echo taps a cracked cup before drinking—a tiny remembered habit linked back to Ilyra.
-
-Maelor finally allows the scene to end.
-
-He survives.
-
-This remains non-negotiable unless the entire ending is deliberately rewritten later.
-
-Death would let him become a clean martyr or monster.
-
-Survival requires testimony, trial, and continued existence in a world that rejected his solution.
-
----
-
-# 20. Ending route
+**Target feel:** relief without reset.
 
 ## Brindle
-
-Months later the village has no restored master Waybell.
-
-Smaller local bells overlap imperfectly for practical purposes.
-
-The player can walk through the rebuilt village before leaving.
+Playable return through a village that is familiar and changed. Early repair history is still visible.
 
 ## Ilyra
-
-She returns physically after a difficult reintegration.
-
-Her memory is not magically repaired.
-
-The relationship with Neris starts again between the people they are now.
-
-If the player completed optional research/testimony work, Neris can discuss more of Ilyra's past without the ending pretending those discoveries never happened.
+Present but not restored. Relationship begins again between who Neris and Ilyra are now.
 
 ## Orin
-
-He gives Neris Ilyra's traveling case and promises to answer future questions even when the answers reflect badly on him.
-
-He and Ilyra are not automatically restored as a couple.
-
-Their future relationship is intentionally unresolved.
+Answers plainly and gives Neris Ilyra's traveling case.
 
 ## Tessa
-
-The courier network becomes independent civic infrastructure.
-
-Her arc is not “cynic learns to care.” She always cared about individuals. Her change is accepting that refusing formal responsibility does not keep a person innocent.
+Independent courier network is durable civic work, not a temporary adventure job.
 
 ## Caldrin
-
-The archive becomes public and annotated with conflict rather than purified into one corrected record.
+Public archive preserves provenance, uncertainty, contradiction, and revision history.
 
 ## Sena
+New civic bells and hardware carry maker names.
 
-Foundries stamp maker names on new local bells.
+## Rusk
+Can testify and assist disclosure without becoming the reform hero.
+
+## Maelor
+Public trial is ongoing.
 
 ## Neris
+Carries a repaired but permanently cracked Cantor Key and leaves as a traveling bellwright.
 
-The Cantor Key remains cracked.
-
-Neris becomes a traveling bellwright rather than a monarch, sacred guardian, chosen champion, or new central authority.
-
-Tessa calls from the road:
+Tessa:
 
 > “You coming, bellwright?”
 
 Neris:
 
-> “Yeah. I heard something cracked.”
+> **“Yeah. I heard something cracked.”**
 
-They leave.
+## Credits variation policy
+There is one canonical ending.
 
----
+100% changes specificity, not moral rank:
+- named workers appear on public boards;
+- chosen repair consequences remain visible;
+- optional families and social spaces recur;
+- courier routes reflect completed Drift Knots;
+- Freehand Frame variants appear if prestige quest completed;
+- Maelor trial includes additional witnesses based on record/testimony sets;
+- community projects show fuller preparedness.
 
-# 21. 100% credits variation policy
+An incomplete player does not receive a “bad ending.”
 
-There is **one canonical ending**.
-
-100% completion does not unlock a superior ending where everyone is happier and the incomplete player's world is implicitly wrong.
-
-Instead, completion changes the **specificity of the credits**.
-
-Examples:
-
-- Mara Pell's fire-bell neighborhood shows the consequence of the player's chosen repair history;
-- named Rootmere workers appear on public maintenance boards;
-- Saltreach shows whichever manual systems the player helped establish;
-- Emberstep workers stamp names on castings and may use the clinic heat-sharing design;
-- Pera trains riggers if C20 was completed;
-- Mireglass memorial spaces include people/records the player helped preserve;
-- Cairnfall students use the disagreement-reporting protocol;
-- the Freehand Frame appears in multiple visibly different apprentice-built forms if the prestige quest was finished;
-- completed Drift Knots show Tessa's couriers using safer independent routes;
-- Maelor's trial contains additional witnesses corresponding to completed testimony sets.
-
-The difference is **texture and consequence**, not moral rank.
+## Post-credits
+A bell rings beneath an ocean far beyond Orra. A second ring answers from impossible depth.
 
 ---
 
-# 22. Post-credits
+# 21. Completion-bearing category closure map
 
-Night on a remote island beyond Orra.
-
-A fisherman hears a bell beneath the ocean.
-
-It is not one of Orra's bells.
-
-A second ring answers from somewhere impossibly deep.
-
-Cut to black.
+| Category | Early availability | Major revisit wave | Expected closure |
+|---|---|---|---|
+| Main story | Brindle | continuous | Epilogue |
+| 24 Local Repair Contracts | C01/C02/C03/C04 early | tool/world-state gated | Unringing |
+| 12 Setup/Payoff chains | First Circuit/Act I setups | post-Grand-Ring payoffs | Unringing |
+| 11 Bellwright Refuges | First Circuit onward | tool/Hush gated | pre-Null |
+| 48 Resonance Faults | base Key | Anchor → Glasslung → Temper → Palinode → Mirror → seam | Null allocation/finale |
+| 28 Pulse Shards | opening onward | all major verb waves | pre-Null except late allocated |
+| 9 Cantor Patterns | Common Measure early | regional/story acquisition | Unringing |
+| 14 Tool Mastery Upgrades | first major tool | regional revisit waves | Unringing |
+| 9 Skill Trials | Balance Bench | each mastery wave | Unringing |
+| 30 Micro-vaults | First Circuit | all verb waves | Null allocation/finale |
+| 32 Records/Testimonies | Cairnspire onward | Palinode/Mirror/seam deepen sets | Null allocation/finale |
+| 12-stage prestige quest | First Circuit | cross-region continuous | Unringing |
+| 12 Drift Knots | post-Grand Ring + threshold | later verb tiers | Unringing |
+| 8 optional elites | regional mastery | later verbs | Unringing |
+| 6 community projects | after Cairnfall | Unringing | Unringing |
+| Broken Standard Yard | late game | mastery synthesis | pre-Null |
 
 ---
 
-# 23. Knowledge ledger
+# 22. Local Repair Contract route index
 
-| Checkpoint | Neris believes / knows | Player should feel about Maelor | Ilyra status | Central unanswered question |
+| ID | Contract | Earliest meaningful window | Natural payoff/revisit |
+|---|---|---|---|
+| C01 | The Crooked Fire Bell | Brindle opening | changed Brindle / credits |
+| C02 | Twelve Minutes Missing | Cairnspire registration | Tessa courier network |
+| C03 | Graymile's Open Bypass | First Circuit | changed-world route |
+| C04 | A Lantern Without a Bell | First Circuit | changed-world rendezvous |
+| C05 | The Fourth Landing | Glasslung revisit | Cairnspire refuge/community |
+| C06 | The Root That Isn't Sick | Rootmere critical | Root Cathedral access |
+| C07 | Widow's Ferrygate | Anchor | Stillness behavior / route |
+| C08 | Orchard of Split Notes | Glasslung revisit | Hollow/diagnostic progression |
+| C09 | A Name Under Bark | Palinode | public Rootmere record |
+| C10 | The Fog Tower That Lies | Saltreach critical | manual signal payoff |
+| C11 | Dry Dock at Low Water | Glasslung | Mirror late route |
+| C12 | Kelp Bell Funeral | post-Foundry | Memory theme / testimony |
+| C13 | Two Captains, One Tide | post-Stillness | community project |
+| C14 | Names Ground Flat | Emberstep critical | maker-mark payoff |
+| C15 | The Cold Kiln | Temper | Temper mastery/service |
+| C16 | Crack in the Foreman's Cup | post-Kiln | Sena personal recurrence |
+| C17 | Borrowed Heat | post-Stillness | Emberstep community project |
+| C18 | Weight of the Archive | High Aerie arrival | Caldrin arc |
+| C19 | Chain Nine Sings | Vane | permanent High Aerie route |
+| C20 | The Novice Who Cut the Bellrope | post-Motion | credits / archive truth |
+| C21 | The House That Remembers a Door | Mireglass | domestic Memory setup |
+| C22 | Witness at Reedwater | Memory | Witness Interval/community |
+| C23 | The Telescope That Disagrees | Cairnfall | dungeon teaching |
+| C24 | No Correction Required | post-Gravemoon | Local Accord/community |
+
+---
+
+# 23. Player-knowledge checkpoint
+
+| Checkpoint | Neris knows | Player stance toward Maelor | Ilyra state | Immediate human question |
 |---|---|---|---|---|
-| Brindle departure | Orin crossed into Hush; Ilyra death story false | unknown | presumed dead | what happened to the Vale family? |
-| Cairnspire | Ilyra records altered; Maelor knew her | useful, withholding | presumed dead | why were Ilyra's records hidden? |
-| Rootmere | Ilyra warned against forced synchronization | credible but increasingly suspicious | presumed dead | what overload was she warning about? |
-| Saltreach | Maelor/Ilyra funded unsanctioned work | morally ambiguous, still helping | presumed dead | what did they disagree about? |
-| Emberstep | three-point test was their research; Mercy Window/Ilyra lead appears | active deception proven | presumed dead | what was Mercy Window? |
-| Grand Ring | Maelor used Neris's repairs to seize network | antagonist whose logic is still partly unknown | Maelor implies official death story convenient | is Ilyra somehow involved/alive? |
-| Hush reunion | Ilyra alive; joined Quiet Court; helped build precursor tech | catastrophic plan understood | alive in Hush; confession incomplete | how responsible was Ilyra? |
-| High Aerie | institutions preserved useful lies; Motion learned | ideology clearer | withholding Mercy Window details | is temporary preservation itself wrong? |
-| Bone Archive | Mercy Window came from an older temporary rescue relation | Maelor's idea has historical/technical roots | admits designing local hold | what happened in the human test? |
-| Mireglass | full Mercy Window truth; Ilyra's work directly enabled Maelor's extrapolation | understandable origin, unacceptable permanent choice | culpability accepted | can Neris work with Ilyra without absolving her? |
-| Cairnfall | local disagreement can be safe; seam mode complete | Maelor openly argues his case | Neris/Ilyra can collaborate again | where is Ending / Orin? |
-| Still-Cairn | Orin's protective lie exposed; Ending learned | final confrontation inevitable | family truth shared | what should replace Meridian? |
-| Unringing | communities can coordinate without central sameness | Maelor's premise disproven in practice | reintegration possible if Meridian ends | can the system be ended safely? |
-| Null Meridian | all core truths known | tragic antagonist, not hidden mastermind | active ally across seams | will Neris repair or dismantle? |
-| Ending | change accepted as condition of life | accountable survivor | changed survivor, not restored reward | what comes after? |
+| Brindle departure | Orin crossed; death story false | unknown | presumed dead | how do I get Orin back? |
+| Cairnspire | Ilyra records altered; Key uniquely stable with Neris | useful, withholding | presumed dead | why was her work hidden? |
+| First Circuit | six healthy regions disagree naturally | useful, suspicious | presumed dead | which crisis actually matters? |
+| Rootmere | Ilyra warned against forced synchronization; First Ring damping abnormal | credible but increasingly suspicious | presumed dead | what was she warning about? |
+| Saltreach | Maelor/Ilyra funded restricted work; Tessa chose not to know | morally ambiguous, still helpful | presumed dead | what did they disagree about? |
+| Emberstep | three-point plan and Mercy Window/Ilyra lead | deception proven | presumed dead | what is Mercy Window and what is Maelor doing now? |
+| Grand Ring | Maelor selected references and worsened First Ring | antagonist with partially understood ideology | survival implied possible | is Ilyra alive? |
+| Ilyra reunion | she joined Quiet Court and built precursor tech | catastrophic choice understood | alive in Hush | how responsible was she? |
+| High Aerie | Motion discovered; official history curated | ideology clearer | confession incomplete | why does old rescue history resemble this? |
+| Bone Archive | Ilyra designed Mercy Window | Maelor's path has a real technical ancestor | culpability admitted partially | what happened when they used it? |
+| Mireglass | complete Mercy Window truth | origin understandable, permanent choice unacceptable | culpability accepted | can Neris work with her without absolving her? |
+| Cairnfall | local disagreement can be safe; seam mode works | still technically dangerous and ideologically committed | adult collaboration possible | why can't Orin's workshop signal finish? |
+| Still-Cairn | Orin's secrecy exposed; Ending discovered | finale unavoidable | family truth shared | what can replace Meridian? |
+| Unringing | communities can coordinate without singular control | premise disproven in practice | reintegration becomes possible | can central hold end safely? |
+| Null Meridian | core history known | accountable tragic antagonist | active ally through seams | repair or decommission? |
+| Ending | change accepted as condition of life | survives for trial | changed survivor | what happens after? |
 
 ---
 
-# 24. Production rule for future story additions
+# 24. Final 100% route quality test
 
-Before adding a quest, scene, record, or character beat, answer:
+A full-completion player should be able to say:
+- “I kept coming back because these places changed,” not “I cleared the map.”
+- “I knew these people before the catastrophe.”
+- “New tools made old places mean something different.”
+- “Optional stories changed who showed up and what I understood, but the main story never depended on finding a hidden note.”
+- “The world did things while I was gone.”
+- “The final dungeon asked me to use what I had learned instead of giving me a new gimmick.”
+- “100% made the ending more specific, not more morally correct.”
 
-1. **What does the player know before this?**
-2. **What changes after it?**
-3. **Who remembers that change later?**
-4. **Does it deepen an existing theme/relationship or merely add lore?**
-5. **If optional, does the mandatory story still make sense without it?**
-6. **If mandatory, is the player doing something rather than receiving a lecture?**
-7. **Does the scene preserve Stillring's own characters, infrastructure, conflicts, and mechanics rather than recreating another game's quest role too literally?**
-
-If those questions do not have useful answers, the scene does not belong in the game yet.
+If playtesting instead produces long stretches of cleanup divorced from current character motivation, the route must be rebalanced even if the completion counts are technically perfect.
