@@ -29,13 +29,19 @@ Locked deliverables:
 - Unreal Engine 5.8 technical direction and C++/Blueprint authority boundary;
 - vertical-slice definition;
 - canon-to-play production contract;
-- developer-tooling / machine-QA contract.
+- developer-tooling / machine-QA contract;
+- modern Zelda design-lineage / player-control principles;
+- project decision register and conversation-to-repository capture rule.
 
-Exit condition: the team can explain the game in two minutes without saying “it is basically Zelda with changed names,” Claude has one non-conflicting authority chain, and production has an explicit method for turning that authority into playable slices without implementation improvisation.
+Exit condition: the team can explain the game in two minutes without saying “it is basically Zelda with changed names,” Claude has one non-conflicting authority chain, and production has an explicit method for turning that authority into playable slices without implementation improvisation or chat-memory dependency.
 
 ---
 
 ## Gate 1 — Core movement/camera prototype
+
+Before implementation, complete the owner-led locomotion and camera specifications in Issues #1 and #2.
+
+Movement/camera decisions must follow `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`: Ocarina of Time is a root reference rather than the 2026 ceiling, later Zelda improvements matter, and exact Nintendo expression is not copied.
 
 Bootstrap the minimum Unreal Engine 5.8 C++ project needed to test graybox movement/camera.
 
@@ -44,17 +50,32 @@ Build only:
 - Enhanced Input baseline;
 - graybox movement/camera test map;
 - third-person locomotion;
-- analog movement;
+- useful analog low-speed through full-speed movement;
+- approved explicit-jump prototype hypothesis;
+- approved sprint/dash prototype hypothesis;
+- approved small mantle/scramble prototype hypothesis where Issue #1 retains it;
+- automatic stairs/small-step/minor-terrain handling;
+- free exploration camera;
+- recenter convenience;
 - camera collision;
 - target lock;
-- ledge/drop handling;
+- ledge/drop handling per the final Issue #1 decisions;
 - interaction prompt;
+- affordance-honesty test geometry;
 - minimal runtime state/performance readout;
 - reproducible command-line build/editor-load/Automation entry point.
 
-Do not let stock Third Person template defaults silently become Stillring's movement/camera specification.
+Do not let stock Third Person template defaults, Ocarina-era hardware constraints, or another Zelda game's exact control values silently become Stillring's movement/camera specification.
 
-Exit condition: moving around an ugly gray room already feels deliberate and controllable, and Claude can build/validate the prototype reproducibly without depending entirely on manual editor clicking.
+Prototype hypotheses are allowed to fail. If human play rejects jump/sprint/mantle behavior, revise the authority before building more systems on top of it.
+
+Exit condition:
+- moving around an ugly gray room already feels deliberate and controllable;
+- ordinary movement stops demanding conscious correction within roughly the first five minutes of a fresh playtest;
+- stairs/small terrain do not create accidental friction;
+- camera behavior is trustworthy enough that the player looks at the room rather than fighting the view;
+- obvious traversal affordances behave consistently or communicate their restriction;
+- Claude can build/validate the prototype reproducibly without depending entirely on manual editor clicking.
 
 ## Gate 2 — Combat prototype
 
@@ -69,6 +90,7 @@ Add:
 - one ranged enemy;
 - one shield/armor enemy;
 - lock-on switching;
+- encounter aggression/readability rules compatible with the camera's practical visual bandwidth;
 - death/retry loop;
 - test enemy spawn/reset and health/resource restore controls.
 

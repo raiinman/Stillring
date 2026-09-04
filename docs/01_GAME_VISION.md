@@ -6,12 +6,38 @@ A young bellwright crosses a fantasy world whose ancient resonance network is fa
 
 ## Camera and movement
 
-- Third-person trailing camera.
+Detailed lineage and Gate 1 control principles live in `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`.
+
+The governing idea is:
+
+> **Simple intention, capable character, honest world.**
+
+Stillring studies the full evolution of authored 3D Zelda controls rather than freezing the design at Ocarina of Time's 1998 hardware constraints.
+
+Locked movement/camera principles:
+- Third-person trailing exploration camera with modern free right-stick / mouse camera control.
+- Recenter is a convenience, not a substitute for camera ownership.
 - Player retains steering authority during ordinary movement.
-- Lock-on changes camera grammar into combat framing.
+- Lock-on changes camera and movement grammar into deliberate combat framing.
 - Camera collision must never shove through walls or hide the player for long.
-- Jumping is context-aware at normal traversal edges; optional explicit jump may be tested in prototype, not assumed.
-- Ledges, ladders, vaults, narrow beams, swimming, and climbing are intentionally authored, not a universal parkour system.
+- Controller movement preserves useful analog range for careful positioning through confident full-speed travel.
+- Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
+- The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
+- Ledges, ladders, vaults/mantles, narrow beams, swimming, and climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
+- Authored traversal progression remains central: later tools/capabilities should make remembered spaces newly understandable.
+- Animation transitions are part of responsiveness; physical weight must not mean delayed acknowledgement of player intent.
+
+Current Gate 1 prototype hypotheses, **not final locked controls**:
+- prototype a dedicated explicit jump rather than assuming Ocarina-style auto-jump;
+- prototype an explicit sprint/dash state while leaving stamina/resource cost undecided;
+- prototype or reserve a small mantle/scramble capability for obviously traversable low obstacles;
+- keep analog walk-to-run control useful even if sprint exists.
+
+The first locomotion specification must resolve remaining physical-capability questions one at a time with owner review rather than inheriting Unreal template defaults.
+
+Human target for Gate 1:
+
+> **Within roughly five minutes, ordinary movement should stop being something the player consciously fights.**
 
 ## Combat language
 
@@ -33,6 +59,7 @@ Combat principles:
 - Enemies telegraph through silhouette + motion + sound.
 - Contact feedback matters: hitstop, sound, reaction, sparks/debris, controller feedback where available.
 - Bosses test learned mechanics rather than merely having huge health bars.
+- Multi-enemy aggression must respect what the player and camera can reasonably read; encounter design participates in lock-on clarity.
 
 ## The Cantor Key
 

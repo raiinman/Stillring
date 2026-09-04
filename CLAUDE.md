@@ -4,18 +4,24 @@ You are the **primary implementation agent** for **Project Stillring**, an origi
 
 Stillring uses a **C++-first gameplay/state architecture with thin Blueprint presentation**. The repository is authoritative; Unreal editor assets, chats, prompts, and remembered context do not silently override repository contracts.
 
+A useful shorthand is:
+
+> **Unreal executes the game. The repository defines what the game is supposed to do.**
+
 ## Read order before making changes
 
 1. `README.md`
 2. `ROADMAP.md`
 3. `docs/00_PROJECT_CHARTER.md`
 4. `docs/01_GAME_VISION.md`
-5. `docs/03_PRODUCTION_WORKFLOW.md`
-6. `docs/04_TECHNICAL_DIRECTION.md`
-7. `docs/15_CANON_TO_PLAY_PIPELINE.md`
-8. `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` when the task creates or changes playable behavior, stateful content, debug tooling, or tests
-9. `docs/05_IP_GUARDRAILS.md`
-10. `docs/06_CONTENT_MATRIX.md` when work touches a region, dungeon, item, boss, or progression beat
+5. `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` when work touches movement, camera, traversal, target-lock, level affordances, or player control
+6. `docs/03_PRODUCTION_WORKFLOW.md`
+7. `docs/04_TECHNICAL_DIRECTION.md`
+8. `docs/15_CANON_TO_PLAY_PIPELINE.md`
+9. `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` when the task creates or changes playable behavior, stateful content, debug tooling, or tests
+10. `docs/18_PROJECT_DECISION_REGISTER.md` when a task depends on a cross-project settled decision or reveals a new durable decision
+11. `docs/05_IP_GUARDRAILS.md`
+12. `docs/06_CONTENT_MATRIX.md` when work touches a region, dungeon, item, boss, or progression beat
 
 ### If the task touches narrative, quests, NPCs, regions, dialogue, world state, or progression
 Read these **in order** before authoring or implementing content:
@@ -45,6 +51,39 @@ Stillring is produced through **CANON → PRODUCTION → IMPLEMENTATION → VERI
 Chats, prompts, summaries, model memory, and implementation sessions are disposable. Current repository contracts are the source of truth.
 
 If implementation exposes a missing design decision, return it to the appropriate authority layer instead of inventing a permanent answer in C++, Blueprint, config, or a binary Unreal asset.
+
+When a conversation settles a durable project decision, ensure the relevant repository authority and `docs/18_PROJECT_DECISION_REGISTER.md` are updated before later implementation depends on chat memory.
+
+## Zelda design-lineage rule
+
+Ocarina of Time is a **root reference, not the 2026 control ceiling**.
+
+Stillring studies the evolution of authored 3D Zelda design across later games and extracts abstract player problems/solutions rather than preserving obsolete hardware constraints or copying exact expression.
+
+For movement/camera/traversal work:
+- read `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`;
+- use modern free-camera expectations rather than one-stick-era assumptions;
+- preserve target-lock because it solves a real readability problem, not because Zelda has it;
+- keep world affordances honest;
+- retain authored traversal progression rather than automatically adopting universal climb-everything traversal;
+- do not infer exact speeds, timings, camera distances, animation shapes, geometry, reticles, or input layouts from Zelda games.
+
+Current movement items explicitly marked **PROTOTYPE HYPOTHESIS** or **PENDING OWNER REVIEW** are not implementation freedom. Claude may build the approved experiment, but may not silently promote it to permanent design.
+
+## Owner-led player-feel boundary
+
+High-impact player-feel decisions are reviewed with the owner one meaningful decision at a time.
+
+Examples:
+- jump/sprint/mantle/climb rules;
+- acceleration/turning philosophy;
+- camera authority;
+- lock-on movement;
+- attack commitment;
+- guard/evade feel;
+- traversal-tool behavior.
+
+If an issue identifies a pending owner decision, do not pick the Unreal default, the common-industry answer, or a Zelda answer and call it settled. Implement only the specifically authorized hypothesis or return the unresolved choice to the design authority.
 
 ## Unreal architecture contract
 
@@ -170,7 +209,8 @@ Before changing playable behavior, resolve:
 - acceptance criteria/route;
 - relevant automated checks;
 - regression surface;
-- whether the task changes binary Unreal assets and how those changes will be evidenced.
+- whether the task changes binary Unreal assets and how those changes will be evidenced;
+- any player-feel decision still marked pending/prototype-only.
 
 If these cannot be inferred from current authority, report the missing decision instead of hiding an assumption in implementation.
 
