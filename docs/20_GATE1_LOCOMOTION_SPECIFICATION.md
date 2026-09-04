@@ -104,9 +104,9 @@ Exact centimeters, approach angles, detection volumes, animation choices, and ti
 
 ---
 
-## 5. Authored ladders
+## 5. Authored ladders — LOCKED
 
-### 5.1 Player-driven ladder movement — LOCKED
+### 5.1 Player-driven ladder movement
 
 Once Neris is attached to a valid authored ladder:
 
@@ -120,7 +120,7 @@ camera input   → player retains camera control
 - Entering a ladder never starts an automatic ride/climb sequence.
 - Exact ladder speed, acceleration, alignment tolerance, hand/foot cadence, and animation timing remain Gate 1 tuning.
 
-### 5.2 Ladder mounting — LOCKED
+### 5.2 Ladder mounting
 
 Neris automatically mounts a valid authored ladder from **clear deliberate movement intent** when the entry path and alignment are valid. There is no separate ladder-interact button.
 
@@ -141,7 +141,7 @@ Must **not** mount from:
 
 The mount may use a short authored alignment transition, but it may not magnetically pull Neris from an implausible offset or long distance.
 
-### 5.3 Ladder top/bottom dismount — LOCKED
+### 5.3 Ladder top/bottom dismount
 
 Ladder-end dismount is a fluent continuation of the player's existing climb direction; it does not require a separate interaction button.
 
@@ -159,7 +159,7 @@ At the **bottom**:
 
 The exit transition may smoothly align Neris with the authored standing position, but it may not snap her through geometry or carry her farther than the local ladder exit requires.
 
-### 5.4 Ladder Drop/Release — LOCKED
+### 5.4 Ladder Drop/Release
 
 While attached to a ladder, Neris detaches only when the player presses the same distinct deliberate **Drop/Release** action used for ledge release.
 
@@ -173,6 +173,45 @@ Locked behavior:
 - the exact physical button/key remains remappable and should match the broader Drop/Release semantic unless a later accessibility review deliberately changes the control mapping.
 
 This completes the baseline authored-ladder grammar. Special ladder damage, combat, broken-rung behavior, moving ladders, or tool-specific ladder interactions are content/system questions and are not implied here.
+
+---
+
+## 6. Swimming baseline — LOCKED
+
+Stillring supports competent **surface swimming** as an ordinary baseline traversal state without turning water into a universal three-dimensional bypass.
+
+### Water entry
+
+- Entering ordinary authored swimmable water transitions Neris automatically from ground/air locomotion into the surface-swim state when the water volume and local geometry are valid.
+- There is no separate “start swimming” interaction button.
+- Shallow water that is explicitly authored as walk/wade depth remains ordinary ground locomotion rather than needlessly switching states.
+- Hazardous liquids, violent currents, scripted flood states, or other non-ordinary water may define separate authored rules and must communicate those rules honestly.
+- Extreme-height water-entry consequences are governed by the later fall-damage/recovery decision; ordinary swimming does not silently guarantee immunity to every possible fall.
+
+### Surface movement
+
+- Surface swimming is camera-relative and analog, preserving the same intention-first relationship as exploration movement.
+- Movement input directly steers Neris across the water surface; exact speed, acceleration, turn rate, drag, and animation cadence remain Gate 1 tuning.
+- Neutral movement input keeps Neris afloat/treading at approximately the current position without repeated button presses or stick wiggling.
+- Ordinary surface swimming has **no stamina meter, breath meter, or periodic forced slowdown**.
+- Baseline swimming uses one competent travel band; ordinary ground Sprint input does not create a second water-sprint state unless a future design specifically earns one.
+- The player retains camera control while swimming.
+
+### Underwater boundary
+
+- Baseline locomotion does **not** include free underwater diving or free three-dimensional underwater traversal.
+- Camera pitch, down input, or holding a direction toward the lakebed does not silently submerge Neris into a dive state.
+- Underwater exploration may exist later only as an explicitly approved tool/capability or authored traversal mode with its own readable affordances and rules.
+- This preserves water depth, submerged structures, and remembered locations as potential progression/puzzle language rather than making every body of water immediately solvable.
+
+### Exiting water
+
+- Direct movement intent toward a valid low bank, dock edge, beach, step, or reachable mantle/ledge automatically transitions Neris out of surface swimming when the exit is valid and clear.
+- Low water exits reuse the established intention-first terrain/mantle philosophy; they do not require a redundant context button.
+- A high, blocked, unsafe, or non-standable water edge does not magnetically pull Neris out or invent a climb. It remains a route/traversal problem under the existing ledge/climbing rules.
+- Neutral input near an exit keeps Neris swimming/treading rather than forcing her ashore.
+
+Combat actions while swimming, special water hazards, boats, currents, diving tools, and underwater content remain separate systems/content questions; this section defines only baseline locomotion.
 
 ---
 
@@ -218,6 +257,13 @@ ladder end + neutral input               → remain attached
 ladder end + blocked/unsafe exit         → remain attached; NO forced placement
 ladder + explicit Drop/Release press     → detach promptly → normal airborne/fall
 ladder + analog away/side/down noise     → remain attached; NO implicit release
+enter ordinary deep swimmable water      → automatic surface-swim state
+surface swim + movement input            → camera-relative analog swim
+surface swim + neutral input             → tread/hold approximate position
+surface swim + ordinary Sprint input     → no separate swim-sprint state
+surface swim + down/camera pitch         → remain surface swimming; NO baseline dive
+surface swim + direct valid low exit     → automatically leave water
+surface swim + blocked/high invalid exit → remain swimming; NO magnetic climb
 invalid or blocked ledge top             → remain hanging; NO forced pull-up
 sideways/incidental/implausible ledge    → NO catch
 passing near/alongside mantle geometry   → NO mantle
@@ -229,6 +275,6 @@ major cliff / meaningful height gate     → route, tool, or later traversal cap
 
 ## Next locomotion decision
 
-**Swimming baseline.**
+**Crouch / stealth posture.**
 
-After that: crouch/stealth posture, slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
+After that: slope scramble/slide, fall damage/recovery, jump arc/air control, interaction while moving, traversal-tool overrides, controller/dead-zone behavior, analog thresholds, acceleration/deceleration philosophy, target-lock movement detail, accessibility implications, and the final five-minute human-play acceptance test.
