@@ -11,25 +11,26 @@
 - Issue #1 — tracking/final review
 
 ## Current boundary
-Merged main before branch: `41b4c0f1569527d3488c14850eb474b11390a6f2`
+Merged main before branch: `05a3e1ca35104da80a7c44717984681134f96d53`
 
 Latest merged locomotion PR:
-- #51 `Design: lock traversal-tool locomotion override contract`
+- #52 `Design: lock controller movement dead-zone semantics`
 
 Current branch:
-- `design/controller-dead-zone`
+- `design/analog-speed-thresholds`
 
 Current decision:
-- movement stick uses radial/magnitude-based dead-zone processing rather than separate X/Y dead zones;
-- stick direction is preserved once active and magnitude is smoothly rescaled beyond the dead-zone boundary;
-- drift/jitter inside the dead zone produces zero movement and zero directional traversal intent;
-- configurable outer saturation may let worn controllers reach full requested magnitude without changing direction or maximum speed;
-- movement dead-zone settings are player-configurable within safe bounds and resettable;
-- keyboard diagonals are normalized so they do not create a speed bonus;
-- look-stick/camera response remains Issue #2 authority.
+- post-dead-zone analog magnitude continuously expresses movement strength from useful careful movement through ordinary run;
+- there is no required baseline Walk button/toggle;
+- without Sprint requested, high/full analog input reaches the ordinary run ceiling;
+- Sprint is an explicit request that unlocks the upper speed band rather than forcing tiny stick input to full Sprint;
+- Sprint uses separate engage/disengage thresholds with hysteresis to prevent state chatter;
+- Hold requests Sprint only while held; Toggle may remain armed through brief ordinary neutral movement but is cleared by explicit incompatible locomotion states to avoid surprise re-sprint;
+- digital movement maps to ordinary run, or full Sprint when Sprint is requested and legally available;
+- exact curves and threshold magnitudes remain Gate 1 tuning.
 
 Next after merge:
-- **analog low-speed / run / sprint threshold philosophy**.
+- **acceleration / deceleration / turning philosophy**.
 
 ## Owner delegation
 Remaining **locomotion-only** decisions continue without individual approval pauses. One decision at a time; repository authority + diff review + merge. Final owner review together remains mandatory.
@@ -37,16 +38,15 @@ Remaining **locomotion-only** decisions continue without individual approval pau
 > **Simple intention, capable character, honest world.**
 
 ## Remaining sequence
-1. analog low-speed / run / sprint thresholds;
-2. acceleration / deceleration / turning philosophy;
-3. target-lock locomotion detail;
-4. accessibility implications;
-5. five-minute human-play acceptance test;
-6. repository-authority reconciliation;
-7. final owner review.
+1. acceleration / deceleration / turning philosophy;
+2. target-lock locomotion detail;
+3. accessibility implications;
+4. five-minute human-play acceptance test;
+5. repository-authority reconciliation;
+6. final owner review.
 
 ## Implementation order after final review
 Issue #1 final → Issue #2 camera → Issue #5 Unreal harness → movement → camera → target lock.
 
 ## Continuation rule
-After this PR merges, continue from **analog low-speed / run / sprint threshold philosophy**. Read repository authority rather than chat memory.
+After this PR merges, continue from **acceleration / deceleration / turning philosophy**. Read repository authority rather than chat memory.
