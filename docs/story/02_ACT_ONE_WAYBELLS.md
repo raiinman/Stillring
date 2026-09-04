@@ -1,38 +1,199 @@
-# IV. ACT ONE — THE SIX WAYBELLS
+# IV. ACT ONE — THE FIRST CIRCUIT
 
 ## Cairnspire arrival
 
-Neris and Tessa travel through a damaged route network and reach Cairnspire.
+Neris and Tessa travel through a damaged route network and reach **Cairnspire**.
 
-The capital is not destroyed. It is worse: officials insist the outage is temporary, public bells continue fake ceremonial schedules using smaller replacements, and guards prevent citizens from approaching the central tower.
+The capital is not destroyed. It is worse in a quieter way: officials insist the outage is temporary, public bells continue ceremonial schedules using hand-rung substitutes, and guards prevent citizens from approaching the Meridian district.
 
-Neris meets **Prefect Aven Rusk**, administrator of the Bellwarden Office. Rusk identifies Ilyra's Cantor Key and immediately tries to confiscate it.
+People queue outside repair offices with clocks, signal plates, navigation chimes, and household devices that have all begun behaving strangely since First Ring.
 
-Before he can, Maelor Renn appears publicly for the first time as a respected acoustical adviser assisting with the crisis.
+The player should understand immediately that Orra's bell network is not fantasy decoration. It is infrastructure. It tells ships where shore is, coordinates work shifts, warns of floods, marks civic time, and keeps thousands of smaller resonant machines calibrated.
+
+Neris meets **Prefect Aven Rusk**, administrator of the Bellwarden Office. Rusk identifies Ilyra's Cantor Key and immediately tries to confiscate it as state property.
+
+Before he can, **Maelor Renn** appears publicly for the first time as a respected acoustical adviser assisting with the crisis.
 
 He stops Rusk.
 
 Maelor recognizes Neris and is visibly shaken, though the player does not yet know why.
 
-He explains that the six regional Waybells have fallen out of phase. If they are retuned, Cairnspire may be able to restart the Meridian Bell.
+He says the six regional Waybells have fallen out of phase. Cairnspire cannot safely diagnose the Meridian Bell until several remote reference points are stable again.
 
-This is true—but incomplete.
+That statement is technically true.
 
-Neris agrees because restoring the network seems like the fastest way to retrieve Orin.
+What he does not say is that **three geographically separated Waybells are enough to establish a continent-scale phase reference**. Once that reference exists, the Meridian Bell's old emergency entrainment system can seize the remaining network without local consent.
 
-Maelor becomes a distant mentor figure through mechanical notes and relay messages during Act One.
+Maelor gives Neris three urgent field commissions:
 
-He is using Neris.
+- Rootmere,
+- Saltreach,
+- Emberstep.
+
+He presents them as triage, not sacred trials.
+
+Neris accepts because every diagnostic model still points toward Orin being trapped somewhere across the Waking/Hush boundary.
+
+Maelor becomes a distant mentor through technical notes, relay messages, and occasional conversations during Act One.
+
+He is helpful often enough that his betrayal can hurt.
 
 ---
 
-# V. REGION ONE — ROOTMERE
+# V. CAIRNSPIRE — THE AUTHORIZED VERSION
+
+Before Neris can leave for the regions, the Cantor Key must be registered and calibrated against a surviving civic standard.
+
+This becomes the player's first real experience of Cairnspire as a hub rather than a cutscene location.
+
+## The registration problem
+
+Rusk refuses to authorize an unlicensed seventeen-year-old carrying an illegal prototype into regional infrastructure.
+
+Tessa proposes the obvious solution: steal a stamp.
+
+Neris refuses—not because Neris suddenly respects bureaucracy, but because a forged calibration record could cause someone to trust a dangerous repair later.
+
+The player instead completes a short chain through three parts of the city:
+
+1. **The Public Bell Office** — diagnose why a neighborhood warning chime is ringing late.
+2. **The Route House** — help Tessa prove a courier relay has been falsifying delivery timestamps to hide staffing shortages.
+3. **The Lower Archive** — recover Ilyra's old field-certification number from records the Bellwardens claim are missing.
+
+The chain establishes a Stillring design rule early: repair problems are social as often as mechanical.
+
+## Brother Caldrin
+
+In the Lower Archive, Neris meets **Brother Caldrin**, a High Aerie monk-engineer visiting Cairnspire to compare damaged historical records.
+
+Caldrin notices Ilyra's diagnostic shorthand immediately.
+
+He does not reveal the ancient conspiracy. He only says:
+
+> “Your mother wrote in margins because she did not trust clean copies.”
+
+He shows Neris two official records describing the same century-old Waybell accident with different casualty counts.
+
+This is the first explicit warning that Orra's archives are curated rather than neutral.
+
+Caldrin returns to High Aerie with a promise to keep searching.
+
+## Maelor's first private scene
+
+After calibration, Maelor asks Neris to meet him in a quiet instrument room beneath the civic observatory.
+
+He talks about Ilyra without yet admitting the Quiet Court.
+
+He says she was brilliant, impatient, and dangerous whenever an institution told her a question was settled.
+
+Neris asks why he knew her.
+
+Maelor answers:
+
+> “Everyone who was serious about the Meridian work knew your mother.”
+
+It is another truth shaped to conceal a larger truth.
+
+---
+
+# VI. THE FIRST CIRCUIT
+
+Maelor's three commissions are urgent, but not so urgent that the player is marched through three dungeons in a row.
+
+Tessa tells Neris that a bellwright who only knows the capital's maps is a bellwright who gets stranded.
+
+She proposes a **First Circuit**: a practical route through the roads and communities surrounding Cairnspire before committing to the first regional repair.
+
+This is a deliberate exploration chapter in the story.
+
+The player can visit, in flexible order:
+
+- Brindle again,
+- the Cairnspire outer wards,
+- the Rootmere roadhead,
+- the Saltreach caravan quay,
+- an Emberstep freight junction,
+- two small relay settlements,
+- an independent Bellwright refuge built into an abandoned stone viaduct.
+
+The full regions remain gated by their crises, but their identities are previewed.
+
+## What the First Circuit teaches
+
+The player encounters the first examples of systems that will run through the whole game:
+
+- small resonance faults that the Cantor Key can diagnose;
+- local repair contracts;
+- survivability/field-harness components;
+- hidden maintenance cavities;
+- reusable Cantor patterns;
+- tool-capacity upgrades;
+- skill challenges built around mechanics the player already knows;
+- records and testimonies that disagree with official history.
+
+Nothing should feel like a menu being unlocked all at once. The systems are introduced through people and places.
+
+## Cross-state promises
+
+Several optional actions during the First Circuit are designed specifically to matter after Stillness.
+
+Examples locked into the story world:
+
+### Brindle — the crooked fire bell
+
+An elderly carpenter, **Mara Pell**, refuses to let Neris replace a warped local fire bell with a standardized Cairnspire plate because her late wife cast the original.
+
+The technically clean solution is replacement.
+
+The practical solution is to brace the crooked bell and retune the warning mechanism around its flaw.
+
+If the player completes the contract, the bell's imperfect frequency later prevents it from fully phase-locking during Stillring. A small cluster of homes around it retains intermittent motion.
+
+### Graymile relay — the open bypass
+
+A route technician asks Neris to seal an unauthorized maintenance bypass that workers use to avoid a dangerous official service tunnel.
+
+Neris can leave the bypass open after making it safer.
+
+After the Grand Ring, it becomes an escape route through otherwise frozen relay infrastructure—but its openness also allows Hush residue into the station.
+
+The later payoff is useful and complicated rather than a morality score.
+
+### Viaduct refuge — the unregistered pattern
+
+An independent bellwright teaches Neris a crude local Cantor pattern that Cairnspire standards call “impure.”
+
+It cannot solve a major dungeon puzzle.
+
+It can, however, stabilize small civic machines without forcing them onto the Meridian reference frequency.
+
+The player has unknowingly learned the philosophical seed of the ending: **local systems can coordinate without becoming identical**.
+
+## Long-form optional quest seed
+
+At the refuge, Neris finds a broken component from a suppressed non-standard bellwright implement.
+
+No one person knows how to rebuild it.
+
+Tessa recognizes a maker's stamp from Saltreach; Caldrin later identifies a contradictory drawing; Sena will recognize its alloy.
+
+The quest cannot be completed in Act One.
+
+Its purpose is to make specialists across Orra feel connected long before the reward exists.
+
+---
+
+# VII. REGION ONE — ROOTMERE
 
 ## Regional conflict
 
 Rootmere's Waybell is grown into an enormous living bell-oak. The local keepers refuse to let Cairnspire engineers cut into it because earlier repairs poisoned the surrounding forest.
 
-Neris must earn access by proving the problem is not in the tree itself.
+Neris arrives carrying state authorization and immediately discovers that the document makes locals trust them **less**.
+
+The repair cannot begin until Neris proves the failure is not inside the tree.
+
+The player helps trace pressure loss through irrigation channels and discovers old metal braces driven into living roots by a previous Bellwarden crew.
 
 ## Dungeon 1: Root Cathedral
 
@@ -40,97 +201,160 @@ An ancient irrigation sanctuary swallowed by roots.
 
 Dungeon language:
 - redirect water,
-- grow/shrink resonant root bridges,
+- grow and relax resonant root bridges,
 - strike suspended seed-bells,
-- move between wet and dry states.
+- move between wet and dry system states,
+- read structural tension rather than following colored locks.
+
+The first section deliberately relies on the player's existing kit. The new tool arrives only after the player understands why it is needed.
 
 ### Tool reward: Anchor Line
 
 A compact bellwright cable launcher used to:
-- pull light objects,
+- pull authored light objects,
 - create short anchored traversals,
-- rip armor plates from enemies,
-- tension mechanisms.
+- brace or tension mechanisms,
+- interrupt or strip specific enemy components.
 
-It is explicitly not shaped, named, animated, or functionally copied from any famous hook-based adventure item.
+It is not a universal grappling hook. It attaches only to readable structural points and compatible targets.
 
 ### Miniboss: Mossjaw
 
 A territorial root-beast wearing pieces of old maintenance harness as accidental armor.
 
+The fight teaches target selection and component removal without making every future armored enemy use the same solution.
+
 ### Boss: Mawhart, Keeper Gone Wild
 
 A colossal antlered forest creature whose body has fused with the bell-oak's root network.
 
-The boss teaches that the correct goal is not killing every corrupted thing. The player uses the Anchor Line to expose and break foreign metal braces that Cairnspire engineers drove into the root system decades earlier.
+The player initially appears to be fighting the creature itself.
+
+The actual problem is the foreign bracing system forcing Mawhart and the tree into one resonant load path.
+
+The Anchor Line exposes and tears loose the old braces while core combat keeps the creature at bay.
 
 Mawhart survives and retreats.
 
 ## Narrative payoff
 
-The Waybell returns to tune.
+The Waybell returns to a stable local tune.
 
-Neris discovers a maintenance plate engraved with Ilyra's initials and a warning:
+Neris discovers a maintenance plate engraved with Ilyra's initials and the warning:
 
-**CENTRAL PHASE LOAD EXCEEDS SAFE LIMIT. DO NOT SYNCHRONIZE ALL SIX.**
+**CENTRAL PHASE LOAD EXCEEDS SAFE LIMIT. DO NOT FORCE FULL NETWORK SYNCHRONIZATION.**
 
-Maelor dismisses it as an old diagnostic note.
+Maelor dismisses it as an old diagnostic note written during an unrelated overload.
 
 The first seed of distrust is planted.
 
+## Rootmere revisit wave
+
+The Anchor Line immediately changes previously known spaces:
+
+- a collapsed span on the First Circuit becomes crossable;
+- a Cairnspire service gantry can be tensioned back into place;
+- the Brindle mill exposes a hidden maintenance cavity;
+- one optional Rootmere family contract continues beyond the dungeon rather than ending with the boss.
+
+The story does not force all of these. It makes them visible enough that the player understands what the new verb means to the world.
+
 ---
 
-# VI. REGION TWO — SALTREACH
+# VIII. REGION TWO — SALTREACH
 
 ## Regional conflict
 
-Saltreach's bells ring underwater at low tide, guiding fishing fleets through fog. Since the outage, tides have become temporally irregular: pools drain upward, wrecks appear where no ship sank, and people hear voices from choices they never made.
+Saltreach's bells ring underwater at low tide, guiding fishing fleets through fog.
+
+Since the outage, tides have become temporally irregular: pools drain upward, wrecks appear where no ship sank, and people hear voices from choices they never made.
+
+The local problem is political as well as physical. Merchant captains want the Waybell restored immediately. Smaller fishing families believe the central navigation system caused the anomalies and want the bell shut down permanently.
+
+Tessa has old friends on both sides.
 
 ## Dungeon 2: Tide Foundry
 
-A drowned civic factory that cast navigation bells.
+A drowned civic factory that cast navigation bells and pressure housings.
 
 Dungeon language:
-- changing water level through pressure gates,
+- changing pressure and water level through linked gates,
 - floating counterweights,
-- sound traveling through water differently than air,
-- using the Anchor Line to tow platforms and open jammed sluices.
+- sound/resonance moving differently through water and air,
+- Anchor Line towing and bracing,
+- machinery whose safe state depends on pressure rather than simple on/off switches.
 
 ### Tool reward: Glasslung Reed
 
-A pressure tool that stores a short burst of compressed air/water and can:
-- propel Neris underwater,
-- blow debris or rotating vanes,
+A pressure instrument that stores and redirects a short burst of compressed air or water.
+
+Uses:
+- propel Neris through authored underwater currents,
+- equalize pressure locks,
+- blow debris or rotate vanes,
 - interrupt certain enemy attacks,
-- power pneumatic mechanisms.
+- combine with hot systems later to create controlled steam.
+
+Its identity is pressure manipulation, not merely underwater breathing.
 
 ### Boss: The Nine-Lung Leviathan
 
-A blind marine beast nesting in the foundry's resonant cisterns. The “nine lungs” are actually old pressure chambers attached to its shell over generations by desperate locals.
+A blind marine beast nesting in the foundry's resonant cisterns.
 
-The player wins by breaking the machinery's control over the creature, not by simply stabbing a giant monster until dead.
+The “nine lungs” are old pressure chambers attached to its shell over generations by desperate locals trying to keep it alive and useful as part of the navigation system.
+
+The boss is dangerous because the foundry keeps forcing the creature through pressure cycles it cannot survive.
+
+The player uses the Glasslung Reed to decouple those cycles, create vulnerability windows, and then survive close combat while dismantling the machinery.
+
+The creature escapes into open water rather than dying as a trophy.
 
 ## Narrative payoff
 
-Tessa reveals she once smuggled Quiet Court equipment without knowing what it was.
+Tessa reveals that years earlier she smuggled sealed Quiet Court equipment through Saltreach under a false freight manifest.
 
-A surviving shipping manifest bears Maelor's private seal.
+She had believed it was tax evasion.
 
-Neris confronts him remotely.
+A surviving shipping record bears Maelor's private seal and Ilyra's field code.
 
-Maelor admits he funded unsanctioned research but claims it was meant to prevent exactly this disaster.
+Neris confronts Maelor remotely.
 
-He sounds believable.
+Maelor admits he funded unsanctioned research with Ilyra but frames it as a desperate attempt to prevent Meridian accidents.
+
+He says:
+
+> “Your mother knew the system was killing people. So did I. We disagreed about what safety required.”
+
+He refuses to explain the disagreement.
+
+## Saltreach revisit wave
+
+The Glasslung Reed reopens:
+
+- submerged service pockets on the First Circuit;
+- a Rootmere flood-control side route;
+- a Cairnspire pressure elevator previously locked out;
+- an optional Saltreach mastery course built around reading currents rather than raw speed.
 
 ---
 
-# VII. REGION THREE — EMBERSTEP
+# IX. REGION THREE — EMBERSTEP
 
 ## Regional conflict
 
-The kiln cities forge the bell-metal used across Orra. Cairnspire blames impurities in recent castings for the network failure.
+The kiln cities forge the bell-metal used across Orra.
 
-Sena Ash proves the accusation is politically convenient nonsense: the failed bells are older than the allegedly defective metal.
+Cairnspire publicly blames impurities in recent castings for the network failure.
+
+**Sena Ash**, captain of one of the largest foundries, proves the accusation is politically convenient nonsense: the failed bells are older than the allegedly defective metal.
+
+She refuses to let Neris touch Emberstep's Waybell until the Bellwardens retract the accusation.
+
+Rusk refuses.
+
+Neris and Tessa therefore help Sena publish the foundry's own records through courier routes the capital cannot easily suppress.
+
+This gives Neris access without resolving the political conflict by decree.
 
 ## Dungeon 3: Kiln of Names
 
@@ -142,184 +366,101 @@ Dungeon language:
 - heat expansion,
 - cooling channels,
 - moving molds,
-- molten metal hazards,
-- resonance altering brittle vs flexible materials.
+- molten-metal hazards,
+- resonance changing brittle versus flexible material states,
+- combinations of Anchor Line tension and Glasslung pressure.
 
 ### Tool reward: Temper Gauntlet
 
-A reinforced glove assembly that can briefly absorb and redirect thermal energy.
+A reinforced glove assembly capable of briefly absorbing and redirecting thermal energy.
 
 Uses:
 - safely handle hot mechanisms,
-- ignite/cool specific puzzle objects,
-- empower a short-range combat parry against elemental attacks,
-- create steam when combined with Glasslung water.
+- heat or quench authored puzzle components,
+- create steam when combined with Glasslung water,
+- parry or destabilize specific elemental/thermal attacks,
+- alter the physical state of old bell housings during later revisits.
 
 ### Boss: Cinder Regent
 
-An automated casting guardian whose instructions have degraded into “protect the purity of the bell.”
+An automated casting guardian whose surviving instruction has degraded into:
 
-The fight forces the player to manipulate heat, cooling, and moving molds rather than merely trade attacks.
+**PROTECT THE PURITY OF THE BELL.**
 
-## Narrative payoff
+It continually destroys anything outside its approved thermal/material profile—including the workers it was built to protect.
 
-In a sealed casting log, Neris finds Ilyra listed as ordering an illegal small batch of experimental alloy eleven years ago—the metal used in the Cantor Key.
-
-More importantly, Maelor's name appears beside hers.
-
-He knew Ilyra personally.
-
----
-
-# VIII. REGION FOUR — HIGH AERIE
-
-## Regional conflict
-
-The mountain monasteries preserve the oldest records of the bell network. Their Waybell has physically broken loose and hangs over a canyon, supported by ancient chains.
-
-Brother Caldrin agrees to help only if Neris first recovers forbidden archive tablets from a collapsed observatory.
-
-## Dungeon 4: Monastery of Updraft
-
-Dungeon language:
-- wind columns,
-- suspended architecture,
-- counterweighted bridges,
-- sound carried by moving air,
-- deliberate exposure and vertigo.
-
-### Tool reward: Vane Cloak
-
-A short-duration wing-cloak used to catch authored air currents, soften long falls, and redirect certain projectiles. It is not free flight.
-
-### Boss: Choir of Talons
-
-Three coordinated predatory wind-beasts that attack in rhythm, requiring target switching, airflow manipulation, and use of the Vane Cloak.
+The player manipulates heat, cooling, molds, and moving platforms to create openings. Basic combat matters, but the arena is the real machine being solved.
 
 ## Narrative payoff
 
-Caldrin deciphers the forbidden tablets.
+In a sealed casting log, Neris finds Ilyra listed as ordering a small illegal batch of experimental alloy eleven years ago—the metal used in the Cantor Key.
 
-The foundational myth of Orra is false.
+Maelor's name appears beside hers.
 
-The Listener did not invade the world.
+A second document is worse: it describes a proposed **three-point phase reference test** using Rootmere, Saltreach, and Emberstep.
 
-The first bellwrights found the Hush already present and **imprisoned** it.
+The test was never authorized.
 
-The Meridian Bell is a containment engine.
+Neris realizes the three regions Maelor selected were not simply the most urgent failures.
 
-Neris asks the obvious question:
+They were the three reference points from his old research.
 
-> “Then what happens if we restart it?”
-
-Caldrin answers:
-
-> “No honest archive can tell us. They made sure of that.”
-
-Neris stops trusting Maelor but continues restoring the Waybells because Orin and thousands of missing people may still be trapped in the Hush.
+Neris sends word to Caldrin and races back to Cairnspire with Tessa and Sena.
 
 ---
 
-# IX. REGION FIVE — MIREGLASS
+# X. ACT-ONE CONVERGENCE — THE THREE-POINT LIE
 
-## Regional conflict
+Caldrin arrives in Cairnspire carrying records from High Aerie.
 
-The marsh reflects things that are not present. Entire houses appear in water before they are built. People begin meeting versions of themselves shaped by roads not taken.
+Together the group confronts Maelor beneath the Meridian tower.
 
-This is the Hush bleeding through naturally.
+Neris accuses him of using the repairs to repeat the forbidden phase test.
 
-## Dungeon 5: Palace Under Reeds
+Maelor does not deny it.
 
-A half-submerged diplomatic estate whose mirrored architecture overlaps with its Hush impression.
+He explains the engineering truth:
 
-Dungeon language:
-- reflections that reveal alternate geometry,
-- paired mechanisms where moving one changes its echo,
-- false doors that become real only from specific angles,
-- combat against enemies that telegraph in reflections before appearing.
+A synchronized network does not require every node to be tuned manually.
 
-### Tool reward: Mirror Nail
+Three stable, widely separated reference signals are enough to calculate the phase relation of the whole system. The Meridian Bell was designed with an emergency **entrainment** function capable of dragging outlying Waybells into alignment once a reference field exists.
 
-A resonant spike planted at authored seam points. It temporarily pins a small section of Hush geometry into the Waking World.
+Rootmere, Saltreach, and Emberstep now provide that field.
 
-Uses:
-- create temporary platforms,
-- freeze moving spectral hazards,
-- make certain enemies tangible,
-- hold paired mechanisms in one state.
+High Aerie, Mireglass, and Cairnfall do not need Neris's cooperation anymore.
 
-### Boss: The Mirror Widow
+Neris reaches for the Cantor Key.
 
-Not a giant spider. A once-human diplomat fragmented into multiple mutually contradictory Hush selves, each insisting that a different version of history is true.
+Maelor disables the chamber's local sound field.
 
-The fight is half combat and half state puzzle. The player cannot defeat every reflection. Neris must identify the one memory all versions share and anchor it.
+For several seconds the scene plays without audio.
 
-## Narrative payoff
+He tells Neris:
 
-Neris experiences a Hush memory of Ilyra arguing with Maelor.
+> “I did ask your mother to help me save this world. I was wrong to believe she would accept the cost.”
 
-For the first time the player hears Maelor's true project name:
+Neris asks what cost.
 
-**STILLRING.**
+Maelor looks at the city beyond the glass.
 
-His plan is to synchronize every Waybell not with the Meridian Bell's normal pulse, but with a single frozen phase.
+> “Another tomorrow.”
 
-He intends to stop change across Orra.
+He activates the Meridian Bell.
 
----
+Across Orra, the three repaired Waybells answer.
 
-# X. REGION SIX — CAIRNFALL OBSERVATORY
+Then, one by one, the three unrepaired Waybells are forcibly pulled into the same phase.
 
-## Regional conflict
+High Aerie's hanging bell stops swinging.
 
-Cairnfall is an ancient plateau observatory where bellwrights once mapped resonance against celestial cycles. The Waybell here does not ring outward. It listens.
+Mireglass reflections stop rippling.
 
-Maelor personally travels to Cairnfall and asks Neris to meet him.
+Cairnfall's listening arrays all turn toward Cairnspire.
 
-He finally tells most of the truth.
+The **Grand Ring** begins.
 
-He describes losing his family and discovering the government's cover-up. He shows Neris records proving thousands have died over centuries maintaining the Meridian system.
+Neris's three successful repairs were not the whole machine.
 
-Then he makes his argument:
-
-> “You call it living because you have been trained to worship the wound. Every joy is permitted only because it can be taken. Every child is born under sentence. Every promise is made to time, and time breaks every one. I can end that.”
-
-He asks Neris to willingly finish the sixth tuning.
-
-Neris refuses.
-
-Maelor smiles sadly.
-
-The previous five restorations were enough. Cairnfall is only the final focusing point.
-
-He activates it remotely.
-
-## Dungeon 6: The Fallen Orrery
-
-Neris races through a collapsing astronomical machine attempting to desynchronize the focusing mirrors.
-
-Dungeon language:
-- rotating gravity-adjacent architecture (carefully authored, not free gravity simulation),
-- lens alignment,
-- moving star maps,
-- Hush seams appearing under phase stress.
-
-### Tool reward: Cantor Key — full seam mode
-
-The Key is upgraded using Ilyra's original focusing lens found inside the observatory.
-
-Neris can now cross between Waking and Hush states at designated resonant seams.
-
-### Boss: Gravemoon Engine
-
-A malfunctioning observatory core that manifests abandoned orbital predictions as physical hazards.
-
-## Act-one ending
-
-Neris wins the dungeon but loses the larger race.
-
-All six Waybells synchronize.
-
-Cairnspire begins the **Grand Ring**.
+They were enough to let Maelor seize the rest.
 
 ---
