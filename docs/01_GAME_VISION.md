@@ -22,16 +22,16 @@ Locked movement/camera principles:
 - Camera collision must never shove through walls or hide the player for long.
 - Controller movement preserves useful analog range for careful positioning through confident full-speed travel.
 - Stairs, small steps, minor floor lips, and ordinary uneven ground are handled automatically rather than becoming accidental platforming challenges.
+- Neris has an always-available, modest, deliberate jump for intentional vertical movement and small gaps.
+- Obviously low obstacles use a small authored mantle/scramble response rather than forcing awkward collision fighting.
+- Major cliffs and meaningful height gates remain authored traversal problems solved by routes, tools, or later capabilities rather than by making Neris a universal parkour character.
 - The world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
-- Ledges, ladders, vaults/mantles, narrow beams, swimming, and climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
+- Ledges, ladders, narrow beams, swimming, and broader climbing remain intentionally designed capabilities rather than an assumed universal parkour/climb-everything system.
 - Authored traversal progression remains central: later tools/capabilities should make remembered spaces newly understandable.
 - Animation transitions are part of responsiveness; physical weight must not mean delayed acknowledgement of player intent.
 
-Current Gate 1 prototype hypotheses, **not final locked controls**:
-- prototype a dedicated explicit jump rather than assuming Ocarina-style auto-jump;
-- prototype an explicit sprint/dash state while leaving stamina/resource cost undecided;
-- prototype or reserve a small mantle/scramble capability for obviously traversable low obstacles;
-- keep analog walk-to-run control useful even if sprint exists.
+Current Gate 1 prototype hypothesis, **not yet a final locked control**:
+- prototype an explicit sprint/dash state while leaving stamina/resource cost and exact use undecided.
 
 The first locomotion specification must resolve remaining physical-capability questions one at a time with owner review rather than inheriting Unreal template defaults.
 

@@ -124,7 +124,24 @@ These are **locked design principles** unless deliberately revised in repository
 - ordinary terrain should not create accidental platforming difficulty;
 - traversal friction must come from intentional geometry, mechanics, hazards, or player decisions.
 
-### 4.4 Lock-on remains a tactical movement mode
+### 4.4 Deliberate jump and low-obstacle mantle
+
+Neris has an **always-available, modest, deliberate jump**.
+
+The jump exists for intentional vertical movement and ordinary small gaps. It is not a high, floaty platformer jump and is not intended to erase authored traversal gates.
+
+The baseline grammar is:
+
+```text
+tiny step / stair / minor floor lip  → automatic terrain handling
+small gap / intentional vertical move → deliberate jump
+obviously low obstacle                → jump + small mantle/scramble response
+major cliff / meaningful height gate  → route, tool, or later traversal capability
+```
+
+The exact jump height, arc, air control, animation, and mantle threshold remain prototype tuning questions, but **the existence of deliberate jump and small low-obstacle mantle/scramble is locked**.
+
+### 4.5 Lock-on remains a tactical movement mode
 
 Target lock is still valuable because it solves a real third-person combat problem.
 
@@ -136,7 +153,7 @@ While locked:
 
 Stillring will design its own targeting indicator, switching rules, camera geometry, aggression model, and animation language.
 
-### 4.5 Animation contributes to responsiveness
+### 4.6 Animation contributes to responsiveness
 
 Responsiveness is not only movement acceleration.
 
@@ -153,7 +170,7 @@ The prototype and later animation work must consider:
 
 A physically weighted character can still feel responsive if the requested action is acknowledged immediately and the transition communicates clearly.
 
-### 4.6 Affordance honesty
+### 4.7 Affordance honesty
 
 Level design, art, collision, and gameplay rules must agree about what the player can do.
 
@@ -195,19 +212,7 @@ The modern-Zelda lesson is **player trust and agency**, not removal of authored 
 
 ## 6. Gate 1 prototype hypotheses
 
-The following are **approved hypotheses to prototype**, not yet permanent final controls.
-
-### Explicit jump
-
-Prototype a dedicated jump action.
-
-Do **not** assume Ocarina-style auto-jump is correct merely because Ocarina is an inspiration.
-
-The test should answer:
-- does explicit vertical agency make Neris more satisfying to control?
-- does it create unwanted bunny-hopping or sequence-breaking pressure?
-- can authored level design remain clean and readable?
-- should some ordinary edge behaviors still be contextual even with an explicit jump?
+The following remains an **approved hypothesis to prototype**, not yet a permanent final control.
 
 ### Sprint / dash
 
@@ -219,12 +224,6 @@ Do not assume:
 - sprint belongs in combat exactly as it does in exploration.
 
 Those are separate design questions.
-
-### Mantle / scramble
-
-Prototype or reserve architecture for a small authored mantle/scramble capability where geometry clearly supports it.
-
-The goal is to remove stupid waist-high-wall friction, **not** to create a universal parkour system.
 
 ### Analog walk → run
 
@@ -238,10 +237,9 @@ Sprint should add a meaningful travel state, not destroy careful analog control.
 
 Issue #1 must walk through these **one decision at a time** before they become final locomotion authority:
 
-- explicit jump behavior;
 - sprint/dash behavior;
 - whether sprint has a resource cost;
-- mantle/scramble rules;
+- exact mantle/scramble thresholds and control timing;
 - ledge grab/hang behavior;
 - deliberate drop behavior;
 - climbing scope;
@@ -250,7 +248,7 @@ Issue #1 must walk through these **one decision at a time** before they become f
 - crouch/stealth posture if any;
 - slope scrambling/sliding;
 - fall damage or recovery rules;
-- air control;
+- jump arc / air control;
 - interaction while moving;
 - traversal-tool overrides.
 

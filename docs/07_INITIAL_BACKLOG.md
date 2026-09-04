@@ -20,9 +20,10 @@ Acceptance:
 - analog low-speed/full-speed behavior defined;
 - acceleration/deceleration/turn philosophy defined;
 - stairs/small-step/minor-terrain handling defined;
-- explicit jump prototype hypothesis reviewed;
+- always-available modest deliberate jump locked;
+- small low-obstacle mantle/scramble response locked;
+- major cliffs/meaningful height gates preserved as authored traversal gates;
 - sprint/dash prototype hypothesis reviewed;
-- mantle/scramble prototype hypothesis reviewed;
 - ledge/drop behavior defined;
 - climbing/swimming/crouch/air-control/fall rules either defined or explicitly marked out-of-scope/pending;
 - accessibility implications recorded;
@@ -74,7 +75,7 @@ If Claude would need to invent story, progression, reward, world-state policy, o
 - project opens cleanly in Unreal Engine 5.8;
 - establish the smallest practical C++ module structure;
 - configure Enhanced Input baseline;
-- create a Gate 1 graybox test map with floor, slopes, stairs, narrow passage, low ceiling, ledges, low mantle candidate geometry, affordance comparison geometry, and target markers;
+- create a Gate 1 graybox test map with floor, slopes, stairs, narrow passage, low ceiling, ledges, low mantle geometry, affordance comparison geometry, meaningful height-gate geometry, and target markers;
 - add minimal runtime state/performance readout;
 - establish Git/LFS-safe Unreal ignore rules and project binary policy;
 - document reproducible command-line build/editor-load/automation entry points;
@@ -86,14 +87,15 @@ If Claude would need to invent story, progression, reward, world-state policy, o
 - camera-relative steering;
 - slopes/stairs/small-step handling;
 - grounded transitions;
-- approved explicit-jump experiment;
+- always-available modest deliberate jump;
+- small low-obstacle mantle/scramble response;
+- meaningful height gates not bypassable by baseline jump/mantle;
 - approved sprint/dash experiment;
-- approved mantle/scramble experiment if retained by Issue #1;
 - ledge/drop behavior per Issue #1;
 - tuning values exposed deliberately;
 - debug values visible;
 - Blueprint/animation work presentation-only;
-- no promotion of prototype hypotheses to permanent design without human play evidence.
+- locked movement vocabulary may be tuned through play but not silently removed or expanded.
 
 ### Issue 7 — Exploration camera prototype
 - C++ camera policy/controller logic;
@@ -129,9 +131,12 @@ The prototype does not pass because it compiles.
 Required human questions:
 - within roughly five minutes, does ordinary movement stop demanding conscious correction?
 - do stairs and minor ground irregularities disappear beneath player intention?
+- does the deliberate jump feel useful without encouraging constant meaningless bunny-hopping?
+- do obviously low obstacles mantle/scramble consistently and naturally?
+- do major height gates remain readable and intact?
 - does the free camera feel owned by the player without constant babysitting?
 - do obvious traversal affordances work consistently or communicate their restriction?
-- do explicit jump/sprint/mantle hypotheses improve the game, or should any be rejected/revised before combat depends on them?
+- does the sprint/dash hypothesis improve the game, or should it be rejected/revised before combat depends on it?
 
 ## P2 — Gate 2 combat prototype
 

@@ -64,12 +64,13 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 | ID | Status | Decision | Detailed authority |
 |---|---|---|---|
 | D-040 | LOCKED | Analog low-speed through full-speed control remains useful even if a sprint state exists. Ordinary stairs/small steps/minor terrain are handled automatically. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-041 | PROTOTYPE HYPOTHESIS | Prototype a dedicated explicit jump rather than assuming Ocarina-style auto-jump. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
+| D-041 | LOCKED | Neris has an always-available, modest, deliberate jump for intentional vertical movement and ordinary small gaps. The exact arc/height/air-control remain tuning decisions. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-042 | PROTOTYPE HYPOTHESIS | Prototype an explicit sprint/dash state. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-043 | PENDING OWNER REVIEW | Whether sprint/dash consumes stamina or another resource. | Issue #1 |
-| D-044 | PROTOTYPE HYPOTHESIS | Prototype/reserve a small mantle/scramble capability to remove stupid waist-high-wall friction without becoming universal parkour. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
+| D-044 | LOCKED | Obviously low obstacles use a small authored mantle/scramble response; this removes waist-high-wall friction without creating universal parkour. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 | D-045 | PENDING OWNER REVIEW | Final ledge grab/hang/drop, climbing scope, swimming, crouch, slope sliding/scrambling, fall damage/recovery, and air-control rules. | Issue #1 |
 | D-046 | LOCKED | Gate 1 human target: within roughly five minutes, ordinary movement should stop being something the player consciously fights. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, `ROADMAP.md` |
+| D-047 | LOCKED | Major cliffs/meaningful height gates remain authored traversal problems solved by route, tool, or later capability rather than baseline jump/mantle. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
 
 ---
 

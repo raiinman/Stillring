@@ -51,10 +51,11 @@ Build only:
 - graybox movement/camera test map;
 - third-person locomotion;
 - useful analog low-speed through full-speed movement;
-- approved explicit-jump prototype hypothesis;
+- always-available modest deliberate jump;
+- small authored mantle/scramble response for obviously low obstacles;
 - approved sprint/dash prototype hypothesis;
-- approved small mantle/scramble prototype hypothesis where Issue #1 retains it;
 - automatic stairs/small-step/minor-terrain handling;
+- meaningful height gates that remain blocked until a route/tool/later traversal capability solves them;
 - free exploration camera;
 - recenter convenience;
 - camera collision;
@@ -67,12 +68,15 @@ Build only:
 
 Do not let stock Third Person template defaults, Ocarina-era hardware constraints, or another Zelda game's exact control values silently become Stillring's movement/camera specification.
 
-Prototype hypotheses are allowed to fail. If human play rejects jump/sprint/mantle behavior, revise the authority before building more systems on top of it.
+The existence of deliberate jump and low-obstacle mantle/scramble is now locked. Gate 1 still tunes their exact arc, thresholds, animation response, and air-control details through human play. Sprint/dash remains a prototype hypothesis and may still be rejected or revised.
 
 Exit condition:
 - moving around an ugly gray room already feels deliberate and controllable;
 - ordinary movement stops demanding conscious correction within roughly the first five minutes of a fresh playtest;
 - stairs/small terrain do not create accidental friction;
+- deliberate jump feels useful without turning ordinary traversal into constant bunny-hopping;
+- low obvious obstacles mantle/scramble consistently;
+- meaningful height gates remain readable rather than accidentally bypassable;
 - camera behavior is trustworthy enough that the player looks at the room rather than fighting the view;
 - obvious traversal affordances behave consistently or communicate their restriction;
 - Claude can build/validate the prototype reproducibly without depending entirely on manual editor clicking.
