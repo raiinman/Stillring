@@ -4,32 +4,69 @@
 **Updated:** 2026-09-04  
 **Repository:** `raiinman/Stillring`
 
+## Current locomotion authority
+
+Detailed implementation-facing locomotion contract:
+
+- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+
+Design-lineage / reasoning authority:
+
+- `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`
+
+Decision index:
+
+- `docs/18_PROJECT_DECISION_REGISTER.md`
+
+Tracking / acceptance:
+
+- GitHub Issue #1 — `Lock player locomotion specification`
+
 ## Decision boundary
 
-Base before the current decision PR:
+Merged main before this decision branch:
 
-`fa229b186c5b902b96fb4ad2b6525a8f87f6a551`
+`ce3ab95512146e5a88ebf3e1947f479dc63a11aa`
 
-Current decision PR:
+Latest merged locomotion PR:
+
 - PR #41 — `Design: lock player-driven ladder movement`
 
-Latest previously merged decision PR:
-- PR #40 — `Design: lock no baseline free climbing`
+Current decision branch:
 
-Reference research:
-- PR #38 / `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — **research input only; not design authority**. It studies AC1 through the Ezio/Kenway/Unity/RPG/Mirage/Shadows eras and 2026 Black Flag Resynced for player-intent, flow, safety, route-design, animation, and climbing lessons. It does not decide unresolved Stillring mechanics.
+- `design/auto-ladder-mount`
 
-## Read first in the next chat
+Current decision:
+
+- authored ladders automatically mount from clear deliberate movement intent when entry geometry/alignment are valid;
+- no separate ladder-interact button;
+- incidental proximity, parallel movement, sideways brushing, neutral standing, camera orientation, drift, and implausible offsets do not mount;
+- short alignment transition is allowed but magnetic long-distance snapping is not.
+
+Next decision after this branch merges:
+
+- **ladder top/bottom dismount behavior**.
+
+## Owner delegation for this locomotion pass
+
+The owner authorized the assistant to continue the remaining **locomotion-only** decisions without stopping for individual approval. The same discipline still applies: reason through one meaningful decision at a time, write it into repository authority, inspect the diff, merge, then continue.
+
+This delegation does **not** extend to camera, combat, story, world design, or unrelated systems.
+
+The locomotion package remains pending a **final owner review together** before Issue #1 is considered final/closed.
+
+## Read first in a fresh chat
 
 1. `docs/NEXT_CHAT_HANDOFF.md`
-2. `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`
-3. `docs/18_PROJECT_DECISION_REGISTER.md`
-4. GitHub Issue #1 — `Lock player locomotion specification`
-5. GitHub Issue #2 — `Lock exploration and combat camera specification`
-6. `ROADMAP.md`
-7. `CLAUDE.md`
+2. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+3. GitHub Issue #1
+4. `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`
+5. `docs/18_PROJECT_DECISION_REGISTER.md`
+6. GitHub Issue #2 — camera specification
+7. `ROADMAP.md`
+8. `CLAUDE.md`
 
-Use `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary reference when an unresolved movement choice benefits from that research; never treat it as a shortcut around owner review.
+Use `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research. It is not design authority.
 
 ## Production / technical baseline
 
@@ -38,208 +75,88 @@ Use `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary ref
 - Gameplay/state authority: **C++ first**.
 - Blueprints: thin presentation/assembly/prototyping.
 - Enhanced Input is the Gate 1 input baseline.
-- No runtime AI/model/API dependency ships in the retail game.
+- No runtime AI/model/API dependency ships in retail.
 - Permanent pipeline: **CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY**.
 - Human play is authoritative for feel, fun, clarity, pacing, atmosphere, and whether movement disappears beneath play.
-- High-impact player-feel choices are settled **one meaningful owner decision at a time** and migrated into repository authority before implementation depends on them.
 
 ## Governing movement principle
 
 > **Simple intention, capable character, honest world.**
 
-Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring uses the Zelda design lineage to solve control problems rather than copy exact mechanics or protected expression. Assassin's Creed movement history may be consulted as secondary research on traversal intention/flow, but does not become authority by reference.
+Ocarina of Time is a root reference, not a 2026 control ceiling. Stillring learns design principles without copying protected expression. Universal/free climbing has been deliberately rejected so authored route and puzzle meaning survives.
 
-## Gate 1 locomotion decisions already LOCKED
+## Already locked at this boundary
 
-### Base movement
+- analog exploration movement and ordinary terrain handling;
+- deliberate jump;
+- unlimited sustained sprint with Hold default / Toggle optional;
+- sprint steering/reversal and sprint-jump momentum;
+- sprint-to-target-lock transition;
+- automatic low-obstacle mantle with body-relative scope;
+- automatic intent-based reachable-ledge catch;
+- hang before pull-up;
+- toward/up pull-up continuation;
+- same-handhold shimmy only;
+- explicit ledge Drop/Release; analog direction never drops;
+- no baseline universal/free climbing;
+- broader climbing only through explicit authored structures/tools/later capabilities;
+- authored ladder movement is player-driven: up/down moves, neutral holds, camera remains player-owned;
+- ladder mounting is automatic only from clear deliberate valid approach intent, never from incidental proximity.
 
-- Modern free exploration camera; recenter is convenience only.
-- Camera-relative analog exploration movement.
-- Useful careful movement below ordinary run.
-- Stairs, tiny steps, minor floor lips, and ordinary uneven ground resolve automatically.
-- Neris has an always-available, modest, deliberate jump.
-- Major cliffs / meaningful height gates remain authored traversal problems.
-- Affordance honesty is mandatory.
+See `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` for exact safeguards and grammar.
 
-### Sprint
+## Remaining locomotion sequence
 
-- Sustained sprint is available from the beginning.
-- Ordinary sprint has **no stamina or resource cost**.
-- Ordinary sprint may be sustained indefinitely.
-- Sprint is separate from the eventual combat evade.
-- Sprint supports **Hold** and **Toggle**; Hold is default.
-- Full sprint remains highly steerable through ordinary curves/corners.
-- Hard reversals briefly shed momentum; 180-degree reversal uses a quick planted turn and re-acceleration rather than an instant full-speed snap or giant turning circle.
-- Sprint → jump preserves existing horizontal sprint momentum.
-- Sprint-jumping adds no bonus speed.
-- Landing continues/returns to sprint when sprint is still requested and no higher-priority state overrides it.
-- Acquiring target lock ends exploration sprint but does not hard-zero velocity.
-- Sprint → target lock uses a short natural deceleration/pivot into precise target-relative combat locomotion.
-- Full exploration sprint is unavailable while target-locked.
+Continue without pausing for approval, but preserve one-decision-at-a-time reasoning:
 
-### Mantle / scramble
-
-- Low-obstacle mantle/scramble is automatic from clear movement or jump intent.
-- There is no separate mantle button.
-- Auto-mantle requires valid geometry, reachable landing/top, appropriate approach, clearance, standing space, and no conflicting higher-priority state.
-- Passing near, brushing, or moving parallel to mantle geometry must not trigger it.
-- Baseline mantle scope is body-relative, not a permanently locked arbitrary Unreal-unit threshold:
-  - knee → waist: fluent ordinary traversal;
-  - waist → lower chest: baseline-mantleable, but requires deliberate direct approach/jump intent;
-  - shoulder-height and above: **not** baseline auto-mantle territory.
-- Exact centimeters/angles/detection volumes/timing remain Gate 1 tuning tied to Neris's actual prototype scale and may not silently expand baseline mantle upward.
-
-### Ledge catch / hang / pull-up / shimmy / drop
-
-- Above the ordinary mantle band, Neris may automatically catch a **valid reachable ledge** when jump/fall trajectory and directional intent clearly communicate the attempt.
-- There is no dedicated ledge-grab button.
-- Catch requires plausible physical reach, clear facing/directional intent, a valid handhold/hang position, and no conflicting higher-priority state.
-- Incidental proximity, sideways/parallel passes, wall-brushing, implausible rescue distance, or arbitrary cliff falls must not trigger a catch.
-- A successful catch always settles into a real **hang state first**.
-- Catching does **not** immediately force pull-up.
-- Neutral movement input keeps Neris hanging.
-- Continued movement toward/up onto the ledge requests pull-up with **no separate climb button**.
-- Pull-up only completes when the top/landing is valid, standable, and clear enough to finish safely.
-- Invalid/blocked/unsafe tops leave Neris hanging rather than clipping or forcing placement.
-- Left/right input while hanging allows **simple lateral shimmy along the same continuous valid handhold**.
-- Releasing lateral input leaves Neris hanging at the current valid position.
-- Shimmy may correct an imperfect catch or move Neris toward a valid pull-up position.
-- Baseline shimmy does **not** wrap corners, cross gaps, transfer to another wall/ledge, jump laterally between ledges, or climb vertically between handholds.
-- A corner, gap, new wall/ledge, or higher/lower handhold is a separate traversal problem.
-- While hanging, release requires a **distinct deliberate Drop/Release action press**.
-- Ordinary analog direction alone — including down, away, diagonal-down, partial input, drift, or dead-zone noise — never releases the ledge.
-- A deliberate Drop/Release press acts promptly with **no hold-to-confirm delay**.
-- The exact physical button/key binding is not locked and remains remappable control-layout/accessibility policy.
-- Exact shimmy/drop timing, animation, and tolerance values remain Gate 1 tuning.
-
-### Broader climbing boundary
-
-- Neris has **no baseline free-climbing capability** beyond the locked ledge grammar.
-- Ordinary rough walls, cliffs, masonry, roots, rock faces, and similar surfaces do not become climbable merely because they look physically grippable.
-- Catch → hang → same-handhold shimmy → pull-up/drop does **not** chain into universal vertical climbing or corner traversal.
-- Broader climbing may exist only through **explicitly authored traversal structures, tools, or later capabilities**.
-- Supported climbing must use a consistent visible world language; equivalent-looking geometry must not differ only because one has a hidden climbable flag.
-- This boundary explicitly protects **authored traversal puzzles, route memory, and progression** from being bypassed by universal surface solving.
-- The rule does not forbid future climbing verbs. Ladders, ropes, vines, chains, climbable masonry, transfers, vertical handhold chains, and other forms remain individually designed if/when needed.
-
-### Authored ladder movement
-
-- Authored ladders are a supported specific traversal structure; they do not imply free climbing elsewhere.
-- Once Neris is on a ladder, traversal is **player-driven rather than an automatic climb sequence**.
-- Up movement input climbs upward.
-- Down movement input climbs downward.
-- Neutral movement input holds Neris at the current ladder position.
-- The player retains ordinary camera ownership while Neris is on the ladder.
-- Exact ladder speed, acceleration, hand/foot cadence, alignment tolerances, and animation remain Gate 1 tuning.
-- How Neris mounts a ladder, how she exits at the top/bottom, and whether/how Drop/Release works from a ladder remain separate owner-review decisions.
-
-## Current locked movement grammar
-
-```text
-tiny step / stair / minor floor lip    → automatic terrain handling
-careful movement                        → analog low-speed movement
-ordinary travel                         → run
-faster ground travel                    → unlimited sustained sprint
-sprint input                             → Hold default / Toggle optional
-normal sprint steering                  → highly responsive
-hard sprint reversal                    → brief momentum loss + planted turn
-sprint → jump                            → preserve horizontal sprint momentum
-jump speed                               → no bonus speed added
-land while sprint still requested       → continue/return to sprint
-sprint → acquire target lock             → end sprint state, keep brief physical momentum
-lock transition                          → short deceleration/pivot
-locked movement                          → precise target-relative combat locomotion
-small gap / intentional vertical move   → deliberate jump
-knee → waist obstacle                   → fluent automatic step/vault/mantle
-waist → lower-chest obstacle            → deliberate direct approach/jump + automatic mantle
-shoulder-height and above               → NO baseline auto-mantle; meaningful ledge/traversal problem
-valid reachable ledge + clear intent    → automatic catch → hang
-hang + neutral movement                 → remain hanging
-hang + continued toward/up intent       → pull up if top is valid/clear
-hang + left/right on same handhold      → simple lateral shimmy
-shimmy reaches corner/gap/new wall      → stop; NO automatic continuation
-shimmy toward higher/lower handhold     → NO vertical transfer/climb
-hang + analog down/away                 → remain hanging; NEVER implicit drop
-hang + explicit Drop/Release press      → promptly let go
-ordinary wall/cliff/rough surface       → NO baseline free climbing
-authored climb structure/tool/capability→ separately supported traversal
-on ladder + up input                    → climb up
-on ladder + down input                  → climb down
-on ladder + neutral input               → hold current ladder position
-on ladder + camera input                → player controls camera
-invalid or blocked top                  → remain hanging; NO forced pull-up
-sideways/incidental/implausible ledge   → NO catch
-passing near/alongside mantle geometry  → NO mantle
-combat defense/reposition               → eventual evade, NOT sprint
-major cliff / meaningful height gate    → route, tool, or later traversal capability
-```
-
-## IMMEDIATE NEXT OWNER DECISION
-
-**Ladder mounting behavior.**
-
-The basic ladder locomotion is owner-approved and locked: once attached, up/down input moves Neris, neutral holds position, camera remains player-owned, and the ladder never becomes an automatic ride to the top.
-
-The next narrow question is:
-
-> When Neris approaches an authored ladder, should clear movement intent automatically mount it when alignment/path are valid, or should entering the ladder state require a deliberate interaction/action press?
-
-Do **not** decide top/bottom dismount behavior or ladder Drop/Release in the same choice. Those remain subsequent ladder decisions.
-
-## Remaining Issue #1 owner-review sequence
-
-Continue one meaningful decision at a time:
-
-1. ladder mounting behavior;
-2. ladder top/bottom dismount behavior;
-3. ladder Drop/Release behavior;
-4. swimming;
-5. crouch/stealth posture if any;
-6. slope scrambling/sliding;
-7. fall damage/recovery;
-8. jump arc / air control;
-9. interaction while moving;
-10. traversal-tool overrides.
-
-Issue #1 also still needs enough prototype-tuning authority for controller dead zones, movement thresholds, acceleration/deceleration philosophy, and target-lock movement details before it can be considered implementation-complete. Do not let Claude infer permanent design policy from Unreal defaults.
+1. ladder top/bottom dismount behavior;
+2. ladder Drop/Release behavior;
+3. swimming;
+4. crouch/stealth posture if any;
+5. slope scrambling/sliding;
+6. fall damage/recovery;
+7. jump arc / air control;
+8. interaction while moving;
+9. traversal-tool overrides;
+10. controller axes / dead-zone behavior;
+11. analog low-speed / run / sprint threshold philosophy;
+12. acceleration / deceleration / turning philosophy;
+13. target-lock locomotion detail;
+14. locomotion accessibility implications;
+15. final five-minute human-play acceptance test;
+16. repository-authority reconciliation and final owner review.
 
 ## Camera / implementation order
 
-After locomotion authority is sufficiently settled:
+After final owner review of locomotion:
 
-1. finish Issue #1 locomotion specification;
+1. close/finalize Issue #1;
 2. finish Issue #2 exploration/combat camera specification;
 3. proceed to Issue #5 Unreal Engine 5.8 Gate 1 C++ prototype harness;
 4. implement movement;
 5. implement camera;
 6. implement target lock.
 
-Issue #5 should not invent movement/camera decisions that Issues #1/#2 have not resolved.
+Issue #5 must not invent unresolved Issue #1/#2 policy.
 
-## Gate 1 human target
-
-> **Within roughly five minutes, ordinary movement should stop being something the player consciously fights.**
-
-A green automated test can prove state and regressions. It cannot declare movement fun, trustworthy, readable, or comfortable. Human play remains authoritative.
-
-## Recent locomotion decision PR chain
+## Recent locomotion PR chain
 
 - #25 deliberate jump + low-obstacle mantle
 - #26 sustained sprint
 - #27 unlimited ordinary sprint
-- #28 Hold/Toggle sprint input
-- #29 sprint steering + reversal weight
+- #28 Hold/Toggle sprint
+- #29 sprint steering/reversal
 - #30 sprint-jump momentum
 - #31 sprint-to-combat transition
 - #32 automatic mantle trigger
-- #33 body-relative mantle height scope
-- #34 automatic reachable ledge catch
-- #35 ledge hang pull-up continuation
-- #37 same-continuous-handhold ledge shimmy
-- #39 deliberate explicit ledge release
-- #40 no baseline free climbing / authored-climbing boundary
-- #41 player-driven ladder locomotion
+- #33 body-relative mantle scope
+- #34 reachable ledge catch
+- #35 hang/pull-up continuation
+- #37 same-handhold shimmy
+- #39 explicit ledge release
+- #40 no baseline free climbing
+- #41 player-driven ladder movement
 
-## Important continuation rule
+## Continuation rule
 
-If a fresh chat is opened, do not reconstruct Stillring from remembered chat text alone. Read this handoff, Issue #1, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, and `docs/18_PROJECT_DECISION_REGISTER.md`, then continue from the **ladder mounting decision** unless the owner deliberately changes priorities. Consult `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` only as secondary research when relevant.
+If a fresh chat opens, read the files above and continue from **ladder top/bottom dismount behavior** once the current ladder-mount PR is confirmed merged. Do not reconstruct locomotion from chat memory alone.
