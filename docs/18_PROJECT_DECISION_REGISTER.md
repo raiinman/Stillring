@@ -12,7 +12,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 - **LOCKED** — accepted project direction. Do not silently change during implementation.
 - **PROTOTYPE HYPOTHESIS** — deliberately approved to test, but human play may reject or revise it.
-- **PENDING OWNER REVIEW** — not yet decided. Claude must not invent a permanent answer.
+- **PENDING OWNER REVIEW** — a stated owner decision/review is still outstanding. Claude must not treat it as resolved.
 - **HISTORICAL / SUPERSEDED** — retained only to explain why current direction changed.
 
 ---
@@ -52,7 +52,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 |---|---|---|---|
 | D-030 | LOCKED | Zelda is studied at the level of design problems and principles, not copied expression, assets, maps, dialogue, music, code, or exact mechanics. | `docs/05_IP_GUARDRAILS.md` |
 | D-031 | LOCKED | Ocarina of Time is a root reference, **not the 2026 control ceiling**. Later Zelda improvements are part of the reference lineage. Obsolete hardware compromises are not sacred. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` |
-| D-032 | LOCKED | Modern exploration uses a freely controllable camera; recenter is convenience rather than replacement for camera ownership. Lock-on deliberately changes camera grammar. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #2 |
+| D-032 | LOCKED | Modern exploration uses a freely controllable camera; recenter is convenience rather than replacement for camera ownership. Lock-on deliberately changes camera grammar. Exact camera behavior remains Issue #2 authority. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #2 |
 | D-033 | LOCKED | World affordances should be honest: if geometry/art makes an action look reasonably possible, gameplay should either support it or clearly communicate the exception. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` |
 | D-034 | LOCKED | Stillring keeps authored traversal progression. It is not assuming universal climb-everything traversal; new verbs should recontextualize remembered spaces. | `docs/01_GAME_VISION.md`, `docs/09_STILLRING_PROGRESSION_BLUEPRINT.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` |
 | D-035 | LOCKED | Target-lock readability includes encounter behavior: enemy aggression and combat composition must respect what the player/camera can reasonably read. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, future combat specification |
@@ -61,28 +61,37 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 ## Gate 1 player-control status
 
+`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` is the detailed implementation-facing authority for the rows below. This register intentionally summarizes rather than re-specifies exact movement mechanics.
+
 | ID | Status | Decision | Detailed authority |
 |---|---|---|---|
-| D-040 | LOCKED | Analog low-speed through full-speed control remains useful even with sprint. Ordinary stairs/small steps/minor terrain are handled automatically. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-041 | LOCKED | Neris has an always-available, modest, deliberate jump for intentional vertical movement and ordinary small gaps. The exact arc/height/air-control remain tuning decisions. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-042 | LOCKED | Neris has a sustained sprint available from the beginning for faster ground travel. Sprint is separate from the eventual combat evade and is not a second dodge. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-043 | LOCKED | Ordinary sustained sprint has no stamina or other resource cost and may be maintained indefinitely during normal traversal. Future combat/special-traversal resources may not silently throttle ordinary sprint. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-044 | LOCKED | Obviously low obstacles use a small authored mantle/scramble response; this removes waist-high-wall friction without creating universal parkour. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-045 | PENDING OWNER REVIEW | Ledge catch/hang, hang-to-pull-up continuation, same-handhold lateral shimmy, deliberate drop, the no-baseline-free-climbing boundary, and player-driven ladder movement are locked; ladder mount/dismount/release details, swimming, crouch, slope sliding/scrambling, fall damage/recovery, air-control rules, and remaining specific traversal forms still require owner review. | Issue #1 |
-| D-046 | LOCKED | Gate 1 human target: within roughly five minutes, ordinary movement should stop being something the player consciously fights. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, `ROADMAP.md` |
-| D-047 | LOCKED | Major cliffs/meaningful height gates remain authored traversal problems solved by route, tool, or later capability rather than baseline jump/mantle. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-048 | LOCKED | Sprint supports both Hold and Toggle input modes. Hold is the default; Toggle is available through controls/accessibility settings without changing sprint gameplay rules. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049 | LOCKED | Full sprint remains highly steerable. Ordinary curves/corners preserve responsiveness, while genuinely hard direction changes briefly shed momentum; a 180-degree reversal uses a quick planted turn and re-acceleration rather than an instant full-speed snap or a large turning circle. Exact turn curves/speed loss remain Gate 1 tuning. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049A | LOCKED | Jumping from sprint preserves existing horizontal sprint momentum rather than automatically dropping Neris to run speed. Sprint-jump adds no bonus speed, and landing continues/returns to sprint when sprint is still requested and no higher-priority state overrides it. | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049B | LOCKED | Acquiring target lock while sprinting ends exploration sprint but does not instantly zero velocity. Neris transitions through a short natural deceleration/pivot into precise target-relative combat locomotion. Full exploration sprint is unavailable while target-locked. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049C | LOCKED | Low-obstacle mantle/scramble triggers automatically from clear movement or jump intent; there is no separate mantle button. It requires a valid low obstacle, reachable landing surface, appropriate approach, clearance, and no conflicting higher-priority action, and must never trigger merely from passing near geometry. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049D | LOCKED | Baseline mantle scope is body-relative: knee-through-waist obstacles are fluent ordinary traversal; waist-through-lower-chest obstacles remain baseline-mantleable with deliberate direct approach/jump intent; shoulder-height and above is not baseline auto-mantle territory and becomes a meaningful traversal/ledge/tool problem. Exact centimeter and angle tolerances remain Gate 1 tuning tied to Neris's scale. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049E | LOCKED | Neris automatically catches a valid reachable ledge above the ordinary mantle band when jump/fall trajectory and directional intent clearly communicate the grab. There is no dedicated grab button; incidental proximity, sideways/parallel passes, implausible reach, and arbitrary fall-rescues must not trigger a catch. The catch always enters a real hang state first rather than forcing an immediate climb-up. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049F | LOCKED | While hanging, neutral input keeps Neris hanging and continued movement toward/up onto the ledge requests pull-up without a separate climb button. Pull-up only completes onto a valid, standable, sufficiently clear top; invalid/blocked tops leave Neris hanging. Transfers and broader climbing remain separate decisions. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049G | LOCKED | While hanging, left/right input allows simple lateral shimmy only along the same continuous valid handhold. Releasing input leaves Neris hanging at the current valid position. Baseline shimmy does not wrap corners, cross gaps, transfer to a different wall/ledge, jump between ledges, or climb vertically; those are separate traversal problems. Exact shimmy speed, acceleration, animation cadence, hand spacing, and ledge-follow tolerances remain Gate 1 tuning. | Issue #1 |
-| D-049H | LOCKED | While hanging, ledge release requires a distinct deliberate Drop/Release action press. Analog direction alone — including down, away, diagonal-down, drift, or dead-zone noise — never releases the ledge. A deliberate press acts promptly with no hold-to-confirm delay. The physical binding remains remappable control-layout policy rather than a locked gameplay button. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049I | LOCKED | Neris has no baseline free-climbing capability beyond the locked ledge grammar. Broader climbing may exist only through explicitly authored traversal structures, tools, or later capabilities with a consistent visible world language. Ordinary rough walls/cliffs/masonry do not become climbable merely because they look grippable. This protects authored traversal puzzles, route memory, and progression from universal surface solvability. | `docs/01_GAME_VISION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, Issue #1 |
-| D-049J | LOCKED | On an authored ladder, traversal remains player-driven: up input climbs up, down input climbs down, neutral input holds position, and the player retains camera control. Entering a ladder does not trigger an automatic climb sequence. Ladder mounting, top/bottom dismount behavior, and ladder-specific Drop/Release behavior remain separate owner-review decisions. | Issue #1 |
+| D-040 | LOCKED | Analog low-speed through full-speed control remains useful even with Sprint. Ordinary stairs/small steps/minor terrain are handled automatically. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, Issue #1 |
+| D-041 | LOCKED | Neris has an always-available modest deliberate jump. Its semantic arc/air-control rules are locked; exact numeric arc/height/influence remain Gate 1 tuning. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, Issue #1 |
+| D-042 | LOCKED | Neris has sustained Sprint from the beginning for faster ground travel. Sprint is separate from the eventual combat evade. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, Issue #1 |
+| D-043 | LOCKED | Ordinary Sprint has no stamina/resource cost and may be maintained indefinitely during normal traversal. Future combat/special-traversal resources may not silently throttle ordinary Sprint. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, Issue #1 |
+| D-044 | LOCKED | Obviously low obstacles use an intent-based authored mantle/scramble response rather than waist-high-wall friction or universal parkour. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, Issue #1 |
+| D-045 | HISTORICAL / SUPERSEDED | This row originally tracked the unresolved traversal bundle. Those questions were subsequently resolved one at a time; the current authority is `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` and the later D-049* rows below. | Issue #1, `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-046 | LOCKED | Gate 1 human target: within roughly five minutes, ordinary movement should stop being something the player consciously fights. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md`, `ROADMAP.md` |
+| D-047 | LOCKED | Major cliffs/meaningful height gates remain authored traversal problems solved by route, authored structure, tool, or later capability rather than baseline jump/mantle/free climbing. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-048 | LOCKED | Sprint supports Hold and Toggle. Hold is default; Toggle is a controls/accessibility preference without changing Sprint gameplay rules. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049 | LOCKED | Sprint remains highly steerable on ordinary curves. Hard reversals briefly shed momentum and use a quick planted redirect/re-acceleration rather than an instant full-speed flip or vehicle-like arc. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049A | LOCKED | Sprint→jump preserves existing horizontal Sprint momentum, adds no bonus speed, and landing resumes requested Sprint when no higher-priority state overrides it. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049B | LOCKED | Sprint→target-lock ends exploration Sprint without hard-zeroing velocity; a short natural deceleration/pivot settles into precise target-relative locomotion. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049C | LOCKED | Low-obstacle mantle/scramble triggers automatically from clear movement/jump intent when geometry/path/clearance are valid; passing nearby/parallel never triggers it. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049D | LOCKED | Mantle scope is body-relative: knee→waist fluent; waist→lower chest deliberate/direct; shoulder-height+ not baseline auto-mantle. Exact dimensions/angles remain tuning tied to Neris. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049E | LOCKED | Clear reachable ledge attempts may auto-catch without a grab button; incidental/sideways/implausible rescue cases do not. Catch always enters a real hang first. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049F | LOCKED | Neutral hang stays hanging; toward/up requests pull-up with no separate climb button; only a valid clear standable top completes. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049G | LOCKED | Hang shimmy is limited to the same continuous handhold; no corner wrapping, gaps, transfers, lateral jumps, or vertical handhold climbing. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049H | LOCKED | Ledge release requires explicit Drop/Release. Analog down/away/diagonal/drift never releases; the explicit press acts promptly and remains remappable. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049I | LOCKED | Neris has no baseline universal/free climbing. Broader climbing exists only through explicit authored structures/tools/later capabilities with consistent visible world language. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049J | LOCKED | Authored ladder traversal is player-driven: up/down climb, neutral holds, camera remains player-controlled; entry does not auto-complete the climb. Mount/end-exit/release details are also fully specified in `docs/20`. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049K | LOCKED | The remaining baseline traversal grammar is resolved: deliberate-intent ladder mount + safe directional end exits + explicit release; competent surface swimming with no stamina/breath tax and no baseline free dive; no generic baseline crouch; authored slope scramble/slide bands; proportional fall consequences; predictable jump/air-control/coyote/buffer semantics; and interaction-while-moving continuity. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049L | LOCKED | Future traversal tools/capabilities may override movement only through explicit authored affordances and complete state contracts; ownership/equipping never passively universalizes movement or creates state-churn exploits. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049M | LOCKED | Movement input uses radial dead-zone semantics, drift protection, normalized digital diagonals, continuous analog careful→run strength, explicit-request Sprint upper band with hysteresis, and responsive speed-dependent acceleration/deceleration/turning. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049N | LOCKED | Target-lock locomotion is target-relative with player-owned spacing: forward/back radial movement, left/right strafe/orbit, no auto-orbit/distance autopilot, no exploration Sprint, and Jump remains Jump rather than a hidden contextual evade. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049O | LOCKED | Locomotion accessibility includes remapping, Hold/Toggle Sprint, configurable movement dead zones/outer saturation, no mashing/QTE locomotion, and a Digital Precision option for digital input. These change input ergonomics, not authored traversal eligibility. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049P | LOCKED | Gate 1 locomotion uses a canonical representative five-minute **per input profile** human feel test with hard semantic-fail conditions. Human feel may reject locomotion even when automated checks pass, and the test is a regression gate after material movement/traversal/input/animation/route changes. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049Q | PENDING OWNER REVIEW | Final owner acceptance of the reconciled Gate 1 locomotion package remains pending. This does **not** reopen the individually locked locomotion rules above; Issue #1 remains open until the owner completes the package review. | Issue #1, `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
 
 ---
 
@@ -130,7 +139,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 | ID | Status | Decision | Detailed authority |
 |---|---|---|---|
-| D-080 | LOCKED | High-impact player-feel choices are walked through with the owner **one meaningful decision at a time** rather than hidden inside a large implementation dump. | `docs/03_PRODUCTION_WORKFLOW.md`, Issues #1/#2 and later feel-spec issues |
+| D-080 | LOCKED | High-impact player-feel choices are walked through with the owner **one meaningful decision at a time** rather than hidden inside a large implementation dump. A specifically delegated bounded workstream may proceed without repeated pauses when the owner explicitly grants that authority, but final review requirements remain binding. | `docs/03_PRODUCTION_WORKFLOW.md`, Issues #1/#2 and later feel-spec issues |
 | D-081 | LOCKED | A conversational suggestion does not become permanent design merely because it was proposed. Accepted rules, prototype hypotheses, and unresolved questions are labeled distinctly. | this register, `docs/03_PRODUCTION_WORKFLOW.md` |
 | D-082 | LOCKED | When a conversation settles a durable project decision, the same workstream should migrate it into the repository before proceeding far enough that future work could depend on chat memory. | `docs/03_PRODUCTION_WORKFLOW.md` |
 
@@ -138,8 +147,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 # Audit coverage — 2026-09-04
 
-The 2026-09-04 audit checked the major decisions made during the recent project conversation against repository authority, including:
-
+The 2026-09-04 audit/reconciliation checked the major project decisions against repository authority, including:
 - story red-team/final canonical scene, reveal, objective, dialogue, regional, recurrence, side-interaction, and 100% contracts;
 - the “every major location is worth visiting before catastrophe” rule;
 - rejection of runtime AI/API-credit gameplay gimmicks;
@@ -154,16 +162,16 @@ The 2026-09-04 audit checked the major decisions made during the recent project 
 - C++-first / thin-Blueprint architecture;
 - Unreal binary authority and heavy-system opt-in rules;
 - modern Zelda design-lineage conclusions for movement/camera/traversal;
-- the owner-review requirement to walk high-impact feel decisions through one at a time.
+- the complete Gate 1 locomotion semantic package and canonical five-minute human feel gate in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
+- the owner-review/conversation-to-repository capture protocol.
 
-At this audit boundary, the **largest previously chat-only gap was the modern Zelda control/design lineage**. It is now captured in `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` and should feed Issues #1 and #2 before Gate 1 implementation.
+At this reconciliation boundary, **locomotion semantics no longer depend on chat memory or stale unresolved lists**. The only remaining Issue #1 owner item is final review/acceptance of the reconciled package. Camera remains a separate Issue #2 workstream.
 
 ---
 
 # Maintenance rule
 
 Before relying on remembered conversation context for a durable project choice:
-
 1. search this register and the linked authority files;
 2. if the decision is absent but has actually been settled, update the appropriate authority file and this register;
 3. if it is still unresolved, mark it **PENDING OWNER REVIEW** rather than guessing;
