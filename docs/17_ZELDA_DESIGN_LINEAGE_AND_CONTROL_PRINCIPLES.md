@@ -95,6 +95,7 @@ Examples:
 - ordinary small steps should not require a jump input;
 - ordinary sprint should not be periodically disabled by an empty stamina bar;
 - obvious low obstacles should not require a separate “mantle” command after the player has already expressed the intention to cross them;
+- a clearly reachable ledge should not demand a frame-perfect extra “grab” input after the player has already committed to the jump;
 - camera collision should solve itself without punishing the player;
 - the player should not need pixel-perfect alignment to perform an obvious everyday traversal action.
 
@@ -166,7 +167,31 @@ Baseline mantle scope is defined against **Neris's body**, not a permanent arbit
 
 This body-relative scope is locked. Exact centimeter thresholds, approach-angle tolerances, detection volumes, animation selection, and timings are Gate 1 tuning values tied to Neris's actual prototype scale. Tuning those values may refine feel but may not silently expand baseline mantle into shoulder-height-plus parkour.
 
-The exact jump height, arc, air control, animation, detection volumes, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-button rule, and the body-relative mantle scope are locked.**
+#### Automatic reachable-ledge catch
+
+Above the ordinary mantle band, Neris may **automatically catch and enter a hang on a valid reachable ledge** when the player's jump/fall trajectory and directional intent clearly communicate the attempt. There is no dedicated ledge-grab button.
+
+A ledge catch is not a free extension of baseline mantle. It is a distinct traversal state: ordinary locomotion stops when Neris catches the ledge.
+
+The catch requires:
+- a ledge that is physically reachable from Neris's actual jump/fall trajectory;
+- clear orientation/directional intent toward the ledge;
+- a valid handhold/edge and enough local clearance to form the hang state;
+- no conflicting higher-priority state;
+- a catch window that is forgiving enough to honor clear intent but not so large that nearby geometry becomes magnetic.
+
+The catch must **not** occur merely because Neris:
+- runs or falls parallel to a wall;
+- passes sideways near an edge;
+- brushes incidental geometry;
+- is outside a plausible reach envelope;
+- falls past arbitrary cliff geometry with no clear grab intent.
+
+A ledge catch is allowed to save a well-aimed jump from becoming a frame-perfect input test. It is **not** a universal last-second rescue system.
+
+What Neris can do *after* entering the hang—pull up, shimmy, deliberately drop, transfer, or other actions—remains separate owner-review authority. The existence of a catch/hang may not be used to silently introduce a full climbing system.
+
+The exact jump height, arc, air control, mantle/ledge detection volumes, reach envelope, catch tolerances, animation, and traversal timing remain Gate 1 tuning questions. **The existence of deliberate jump, automatic low-obstacle mantle/scramble, the no-separate-mantle-button rule, the body-relative mantle scope, and automatic intent-based reachable-ledge catch with no grab button are locked.**
 
 ### 4.5 Sustained sprint
 
@@ -245,6 +270,7 @@ The prototype and later animation work must consider:
 - run-to-interaction transitions;
 - jump/landing transitions;
 - mantle/scramble transitions;
+- ledge-catch/hang transitions;
 - sprint-to-lock transitions;
 - lock/unlock transitions;
 - weapon-state locomotion transitions.
@@ -310,7 +336,9 @@ When sprint transitions into target-lock combat, sprint authority ends immediate
 
 For low obstacles, Gate 1 should tune automatic mantle detection so normal traversal feels fluent without magnetic false positives. The test must include head-on approaches, shallow angles, parallel passes, jump-into-mantle cases, invalid landing tops, low ceilings, nearby-but-not-intended obstacles, and representative knee/waist/lower-chest/shoulder-height geometry. Shoulder-height-plus test pieces must prove they do **not** silently become baseline auto-mantles.
 
-The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, and mantle timing remain tuning questions.
+For ledge catch, Gate 1 must include deliberate jump catches, short-fall catches with clear forward intent, near misses outside plausible reach, sideways/parallel passes, incidental geometry, invalid handholds, low-clearance hangs, and large-cliff fall cases. The test succeeds when clearly intended reachable catches feel generous while non-intended geometry never feels magnetic.
+
+The exact speed thresholds, turn curves, reversal speed loss, re-acceleration values, jump arc, air-control values, sprint-to-lock transition timing, body-relative mantle calibration, approach-angle tolerance, mantle timing, ledge reach envelope, catch tolerance, and catch animation timing remain tuning questions.
 
 ---
 
@@ -318,9 +346,10 @@ The exact speed thresholds, turn curves, reversal speed loss, re-acceleration va
 
 Issue #1 must continue through these **one decision at a time** before they become final locomotion authority:
 
-- ledge grab/hang behavior;
+- ledge-hang continuation / pull-up behavior;
+- ledge shimmy behavior if any;
 - deliberate drop behavior;
-- climbing scope;
+- broader climbing scope;
 - ladders;
 - swimming;
 - crouch/stealth posture if any;
@@ -363,6 +392,8 @@ Failure examples:
 - auto-mantle pulling Neris onto geometry she was merely passing;
 - obvious valid low obstacles failing because the player did not press a redundant context button;
 - shoulder-height-plus geometry being swallowed by baseline auto-mantle and erasing authored traversal distinctions;
+- a clearly intended reachable ledge failing because the player missed a redundant grab button or tiny timing window;
+- ledge catch magnetically rescuing sideways/incidental falls that the player did not intend;
 - guessing which small obstacles are passable;
 - accidentally falling because edge behavior is unclear;
 - needing instructions for ordinary movement;
