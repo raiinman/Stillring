@@ -2,11 +2,13 @@
 
 ## Story promise
 
-This is an adventure about **change, grief, memory, and the danger of confusing preservation with life**.
+This is an adventure about **change, grief, memory, responsibility, and the danger of confusing preservation with life**.
 
 The villain is not trying to destroy the world. He is trying to stop it from changing.
 
 The hero does not restore an ancient golden age. By the end, the hero dismantles the system everyone believed was sacred and returns responsibility for the world's future to ordinary people.
+
+The story does not divide its engineers into innocent creators and evil corrupters. Useful inventions can carry moral risk. Good repairs can strengthen bad systems. Responsibility must remain specific without becoming a search for one person to blame for history.
 
 ---
 
@@ -37,23 +39,100 @@ What history forgets is the cost: the network is not healing the world. It is co
 
 Three hundred years later, Cairnspire's chief acoustician, **Maelor Renn**, loses his wife and young son in a Waybell synchronization accident. The official inquiry blames mechanical failure. Maelor discovers the darker truth: the Meridian network has been destabilizing for generations, and the Bellwardens have concealed increasingly severe incidents to preserve public faith.
 
-Maelor becomes obsessed with one conclusion:
+He forms a private research circle with bellwrights, mathematicians, clergy, route engineers, grieving families, and several people who have survived Meridian accidents. It becomes known as **the Quiet Court**.
 
-> Change creates loss. Motion creates separation. Memory creates grief. Therefore a perfect world must be one in which nothing is ever allowed to become past.
+The Court does not begin with one secret plan.
 
-He founds a private research circle with several bellwrights, mathematicians, clergy, and grieving families. It becomes known as **the Quiet Court**.
+Its members agree on only two things:
 
-One of the founders is **Ilyra Vale**, a brilliant field bellwright and the mother of the future protagonist.
+1. the existing Meridian system is killing people;
+2. the state cannot be trusted to investigate itself honestly.
 
-Ilyra initially believes the group is trying to safely disconnect the failing Meridian network. She helps invent a portable tuning instrument capable of detecting seams between the Waking World and the Hush: the prototype **Cantor Key**.
+They disagree on what should replace it.
 
-When she learns Maelor's actual plan—to force the entire continent into a single unchanging instant—she steals the prototype and attempts to expose the Court.
+One of the early members is **Ilyra Vale**, a brilliant field bellwright and the mother of the future protagonist.
 
-Maelor catches her beneath the central tower. During the confrontation, Ilyra falls through an unstable seam and becomes trapped in the Hush.
+Ilyra joins willingly.
 
-The government tells her family she died in a field accident.
+She is not tricked into doing ordinary work for obvious villains. She believes the Court may be the only place where the real engineering problem can be discussed.
+
+## The Mercy Window
+
+During a route-maintenance collapse, several workers become trapped inside a resonant chamber whose structure is failing too quickly for a normal rescue.
+
+Ilyra has been studying older pre-Meridian records describing brief local states that could remain coherent without being forced onto a central reference.
+
+She proposes an experimental procedure:
+
+**hold one small local phase relation for less than twenty seconds, stop the collapsing motion, move the workers, then release the hold.**
+
+The procedure is later called **Mercy Window**.
+
+It works.
+
+Several workers are saved.
+
+One worker is already mortally injured. While the team argues about whether release will kill him immediately, the phase hold is extended beyond its intended interval.
+
+His body remains stable.
+
+His conscious responses begin repeating.
+
+New memory fails to advance normally.
+
+Hush residue accumulates around the held state.
+
+Ilyra orders the window released.
+
+The worker dies minutes later from the injuries he already sustained.
+
+Ilyra's conclusion is severe but bounded:
+
+> A temporary hold may be a legitimate rescue tool only if release remains part of the design.
+
+Maelor reaches a different conclusion.
+
+He has just watched physical loss delayed by engineering.
+
+To him, Mercy Window proves the central premise he has been searching for:
+
+> loss is not inevitable if a state can be preserved long enough.
+
+The disagreement does not turn them instantly into enemies. They remain collaborators and friends while arguing about duration, consent, scale, and what counts as rescue.
+
+That history matters. Maelor does not steal Stillring from an innocent Ilyra. He extrapolates monstrously from work she helped create and once believed in.
+
+## The Cantor Key
+
+Ilyra develops a portable tuning instrument capable of detecting and comparing seams between the Waking World and the Hush: the prototype **Cantor Key**.
+
+She intends it to help field crews understand local relationships without forcing every anomaly through Meridian reference.
+
+Maelor increasingly uses the same research to model longer and wider phase holds.
+
+Ilyra discovers that he has stopped treating release as a necessary endpoint.
+
+His emerging project is not a rescue interval.
+
+It is a permanent continent-scale preservation state.
+
+He eventually calls it **STILLRING**.
+
+Ilyra attempts to expose the work, steals the prototype Cantor Key, and prepares evidence of Quiet Court experiments.
+
+Maelor confronts her beneath the central tower.
+
+During the confrontation, an unstable seam opens and Ilyra falls into the Hush.
+
+Maelor cannot retrieve her.
+
+The Bellwardens suppress the incident and tell her family she died in a field accident.
 
 Her child, **Neris Vale**, is six years old.
+
+Maelor's wife and son are already dead by then. Over the next eleven years, grief, the Court's failed reform efforts, continued Meridian accidents, and Ilyra's Mercy Window research harden into his final doctrine:
+
+> Change creates loss. Motion creates separation. Memory creates grief. Therefore a perfect world must be one in which nothing is ever allowed to become past.
 
 ---
 
@@ -69,11 +148,13 @@ Neris remembers Ilyra mostly through tiny sensory fragments: oil on her hands, m
 
 Neris's arc:
 
-**“I need to restore what was lost” → “Some things cannot be restored” → “Remembering is not the same as refusing change.”**
+**“I need to restore what was lost” → “A correct repair can still serve a harmful system” → “Remembering is not the same as refusing change” → “Sometimes responsible repair means letting an old system end.”**
 
 ## Orin Vale — Neris's father
 
-A practical village repairman. Orin knows more about Ilyra's disappearance than he admits, but not the full truth. He has spent eleven years trying to keep Neris away from Cairnspire politics.
+A practical village repairman. Orin knows more about Ilyra's disappearance than he admits, but not the full truth. He knows she worked with Maelor's research circle and that the official death story is false. He does not know she survived in the Hush.
+
+He has spent eleven years trying to keep Neris away from Cairnspire politics and from a mystery he believes will consume Neris's life.
 
 His arc is learning that protection through silence becomes another form of control.
 
@@ -81,17 +162,21 @@ His arc is learning that protection through silence becomes another form of cont
 
 A sharp-tongued route courier who knows the roads, smugglers, old signal towers, and every cheap inn between Rootmere and Saltreach.
 
-Tessa initially sees heroic causes as scams invented by powerful people who need someone else to die for them.
+Tessa cares about individual people from the beginning but distrusts formal causes, titles, and institutions that make responsibility permanent. Years earlier she moved Quiet Court equipment under forged freight manifests and protected herself with the belief that not asking questions kept her uninvolved.
 
-Her arc moves from detachment to chosen responsibility.
+Her arc moves from **unofficial competence as self-protection** to chosen civic responsibility.
 
 ## Brother Caldrin — archivist of the High Aerie
 
-A gentle but stubborn monk-engineer who has spent decades preserving damaged bell records. He becomes the party's historical interpreter but is repeatedly forced to admit that the archives themselves were curated propaganda.
+A gentle but stubborn monk-engineer who has spent decades preserving damaged bell records. He becomes the party's historical interpreter but is repeatedly forced to admit that archives can preserve evidence while still using authority to decide which contradictions are allowed to survive.
+
+His arc is not from “history is false” to “nothing is true.” It is from one authorized master record to disciplined provenance, uncertainty, and preserved disagreement.
 
 ## Sena Ash — Emberstep kiln captain
 
-A veteran foundry leader whose people are blamed whenever the Meridian network fails because their furnaces produce bell-metal. She distrusts Cairnspire and initially distrusts Neris as another capital-trained bellwright.
+A veteran foundry leader whose people are blamed whenever the Meridian network fails because their furnaces produce bell-metal. She distrusts Cairnspire and initially distrusts Neris as another authorized bellwright arriving with a capital stamp.
+
+She becomes one of the strongest advocates for traceable maker responsibility rather than anonymous centralized standards.
 
 ## Ilyra Vale — Neris's mother
 
@@ -99,7 +184,11 @@ Alive, but trapped in the Hush for eleven years.
 
 Ilyra has experienced years differently: in the Hush, memories repeat, overlap, and erode. She has kept herself coherent by rebuilding the same imaginary workbench again and again.
 
-Her return is emotionally difficult rather than a clean reunion. She loves Neris but initially relates to a six-year-old child who no longer exists.
+She loves Neris and is also ashamed of how directly Mercy Window contributed to Maelor's intellectual path.
+
+Her return is emotionally difficult rather than a clean reunion. She initially relates to a six-year-old child who no longer exists and repeats Orin's mistake by trying to control when Neris receives painful truths.
+
+Her arc is accepting responsibility without claiming responsibility for choices that remained Maelor's, and learning to work with the adult Neris without demanding absolution first.
 
 ## Maelor Renn — antagonist
 
@@ -109,13 +198,25 @@ He genuinely believes he has solved grief.
 
 He does not want to rule Orra. He thinks rulers, rebels, wars, inheritance, and progress are all symptoms of the same disease: time moving forward.
 
-His tragedy is that he cannot accept that love includes the possibility of losing what is loved.
+He also remains a gifted engineer. During Act One he gives Neris advice that genuinely saves people while simultaneously manipulating the three regional repairs into a phase-reference system.
+
+His tragedy is that he cannot accept that love includes the possibility of losing what is loved, and eventually treats other people's future agency as an engineering variable he is entitled to remove.
+
+## Prefect Aven Rusk — Bellwarden administrator
+
+Rusk is not a second villain.
+
+He believes standardization, controlled access, and public confidence prevent incompatible repairs, fraud, panic, and deaths. History gives him evidence for that belief.
+
+He also participates in secrecy because he thinks institutional stability justifies withholding dangerous truths.
+
+His arc tests whether an institution-minded person can choose people over procedure once the system itself becomes the danger.
 
 ## The Listener
 
 Not a god and not a demon.
 
-The Listener is the emergent consciousness of the Hush: every almost-event, unsaid word, path not taken, and memory no longer anchored to a living mind.
+The Listener is the emergent consciousness of the Hush: every almost-event, unsaid word, path not taken, and memory no longer anchored to a living mind, compressed together by centuries of forced Meridian containment.
 
 The Listener has been tortured by the Meridian Bell for centuries, but its goal is not revenge. Its first understandable desire is simply:
 
