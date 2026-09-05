@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#6 are LOCKED under scheduled-run delegation.
+**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#7 are LOCKED under scheduled-run delegation.
 
 ## Read first
 1. `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`
@@ -11,10 +11,11 @@
 4. `docs/84_SAVE_VERSION_MIGRATION_POLICY_ADDENDUM.md`
 5. `docs/85_SAVE_INTEGRITY_RECOVERY_ADDENDUM.md`
 6. `docs/86_SAVE_SLOT_CADENCE_RETRY_ADDENDUM.md`
-7. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
-8. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
-9. `ROADMAP.md`
-10. GitHub Issue #4 — `Define persistent world-state and save schema`
+7. `docs/87_SAVE_WORLD_STATE_IDE_ADDENDUM.md`
+8. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
+9. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
+10. `ROADMAP.md`
+11. GitHub Issue #4 — `Define persistent world-state and save schema`
 
 Always re-check exact current `main` before repository writes.
 
@@ -30,25 +31,24 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 4. Versioning/migration — LOCKED (`docs/84`).
 5. Integrity/containment/recovery — LOCKED (`docs/85`).
 6. Slot/cadence/death-retry — LOCKED (`docs/86`).
+7. Save / World-State System IDE — LOCKED (`docs/87`).
 
-Decision #6 principle:
-> **Stillring autosaves meaningful durable progress, lets the player manually save at safe boundaries, and keeps death/retry on an authored checkpoint snapshot instead of pretending the disk file is a combat rewind.**
+Decision #7 principle:
+> **Stillring's Save IDE operates on semantic identities, owners, snapshots, migrations, and recovery chains—not Actor archaeology or byte poking—and every mutation routes through the same authoritative services as gameplay.**
 
-### #7 — Save / World-State System IDE complete contract — NEXT
-Freshly research and decide:
-- workbench information architecture across identity/state/schema/migration/recovery/cadence;
-- safe authoring of persistent IDs/defaults/tombstones/migration dispositions;
-- named semantic preset construction through owner APIs;
-- snapshot/migration/recovery exercise controls;
-- validation suite and release gates;
-- semantic diff/capture/repro artifacts;
-- fault injection and Shipping exclusion;
-- binary-vs-semantic inspection boundaries;
-- controller/keyboard/accessibility requirements;
-- cross-workbench links to Hush/Quest/Completion/Combat/Tool systems;
-- deterministic IDE fixtures.
+### #8 — cumulative Issue #4 closure / acceptance — NEXT
+This is a separate reconciliation/closure decision, not new feature invention.
 
-After Decision #7, perform one separate cumulative Issue #4 closure/acceptance decision before closing the issue or moving to the next design system.
+Required work:
+- reconcile Decisions #1–#7 into one cumulative implementation-facing save/world-state specification;
+- resolve any contradiction/redundancy against Gate 4 Hush save authority and Combat death/retry authority;
+- define complete acceptance matrix and full-playthrough fixture contract;
+- extend `docs/18_PROJECT_DECISION_REGISTER.md` with Save/World-State decisions/guardrails;
+- define exact implementation authorization vs still-unverified UE5.8/platform/human evidence;
+- update Issue #4 with closure summary and close only if its stated design acceptance criteria are satisfied;
+- update handoff to the next actual unresolved design system from current roadmap/open issues.
+
+Do not begin the next system until this closure is merged and Issue #4 is reconciled.
 
 ## Governing constraints
 - Unreal Engine 5.8.
