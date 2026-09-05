@@ -20,9 +20,10 @@ A useful shorthand is:
 8. `docs/04_TECHNICAL_DIRECTION.md`
 9. `docs/15_CANON_TO_PLAY_PIPELINE.md`
 10. `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` when the task creates or changes playable behavior, stateful content, debug tooling, or tests
-11. `docs/18_PROJECT_DECISION_REGISTER.md` when a task depends on a cross-project settled decision or reveals a new durable decision
-12. `docs/05_IP_GUARDRAILS.md`
-13. `docs/06_CONTENT_MATRIX.md` when work touches a region, dungeon, item, boss, or progression beat
+11. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` **before implementing or materially expanding any major gameplay/content system that will need repeated in-game authoring, tuning, state inspection, reproduction, or validation**
+12. `docs/18_PROJECT_DECISION_REGISTER.md` when a task depends on a cross-project settled decision or reveals a new durable decision
+13. `docs/05_IP_GUARDRAILS.md`
+14. `docs/06_CONTENT_MATRIX.md` when work touches a region, dungeon, item, boss, or progression beat
 
 ### If the task touches narrative, quests, NPCs, regions, dialogue, world state, or progression
 Read these **in order** before authoring or implementing content:
@@ -54,6 +55,33 @@ Chats, prompts, summaries, model memory, and implementation sessions are disposa
 If implementation exposes a missing design decision, return it to the appropriate authority layer instead of inventing a permanent answer in C++, Blueprint, config, or a binary Unreal asset.
 
 When a conversation settles a durable project decision, ensure the relevant repository authority and `docs/18_PROJECT_DECISION_REGISTER.md` are updated before later implementation depends on chat memory.
+
+## In-game System IDE rule
+
+Stillring must remain developable **from inside the running game** wherever practical.
+
+> **Build the system and its in-game IDE together.**
+
+`docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` is binding production architecture.
+
+Any major gameplay/content system that will require repeated tuning, authoring, state inspection, reproduction, or validation must receive a dedicated development-only **System IDE** workbench registered into the shared in-game developer shell.
+
+A serious System IDE is not merely a read-only debug panel or bag of console variables. It should provide the useful system-specific forms of:
+- **Inspect** — semantic state and why the system made an important decision;
+- **Author / Tune** — approved live-editable values or authored development data;
+- **Exercise** — representative states, forcing/reset controls, and rapid return to test cases;
+- **Validate** — system-specific assertions, blockers, rejection reasons, and invariants;
+- **Capture / Promote** — evidence plus deliberate persistence/export into reviewable repository-backed authority.
+
+Rules:
+- IDE debt counts as feature debt, not optional polish;
+- temporary runtime overrides must be visibly distinct from canonical/persisted values;
+- promoted changes must be reviewable in source control or carry explicit binary-asset evidence;
+- System IDE mutation should use the same authoritative gameplay services as ordinary play wherever practical rather than creating a second hidden state model;
+- Gate 1 establishes the shared shell pattern with the **Locomotion IDE**; Camera/Targeting and all later major systems register into the same architecture;
+- Shipping builds must exclude or hard-disable System IDE modules and must not gain an AI/API/network-control dependency from this development architecture.
+
+If a task adds a substantial system but omits the workbench surface it will clearly need later, treat that omission as production debt and report it explicitly. Do not normalize a workflow that requires repeated editor archaeology and long replay routes for ordinary iteration.
 
 ## Zelda design-lineage rule
 
@@ -109,7 +137,7 @@ Prefer C++ for:
 - dialogue eligibility/state;
 - Waking/Hush authority;
 - completion logic;
-- developer console semantics;
+- developer console/System IDE semantics and registration contracts;
 - machine-readable QA/test interfaces.
 
 ### Blueprints stay thin
@@ -174,6 +202,7 @@ Use one only when the current task/architecture has a demonstrated need and the 
 - Add or update tests/checks where practical.
 - Run relevant project validation before reporting completion.
 - Use named authored IDs and named test-state presets for state-heavy content instead of Actor paths, package paths, or undocumented debug saves.
+- Build the relevant System IDE/workbench alongside a major system when repeated later tuning/authoring/reproduction will need it; do not defer obvious IDE debt until content production is expensive.
 - Keep developer tooling local/offline by default; the retail game must not depend on external model APIs or autonomous agents.
 - Never import or derive from commercial game ROMs, decompilations, leaked code, ripped assets, extracted maps, copied dialogue, copied music, or trademarked branding.
 - Do not create a suspiciously close substitute for a Nintendo character, enemy, dungeon, UI, musical motif, logo, map, scene sequence, or quest dependency.
@@ -201,7 +230,8 @@ If the answer is merely “same thing with different names/colors,” stop and r
 - Use Enhanced Input and named actions; never hard-code gameplay to physical keys.
 - Keep imported/source art separate when it matters and use Git LFS for Unreal/project binary assets.
 - Optimize for controller first; keyboard/mouse must remain supported.
-- Build debug entry points alongside state-heavy systems rather than after the world becomes expensive to replay.
+- Build debug entry points and System IDE surfaces alongside state-heavy systems rather than after the world becomes expensive to replay.
+- Register major workbenches into the shared in-game developer shell instead of inventing unrelated debug architectures per feature.
 - Expose semantic machine-readable test state where it materially improves regression and softlock testing; do not mistake automated completion for subjective quality.
 - Favor reproducible command-line build/test entry points so validation does not depend entirely on manual editor clicking.
 
@@ -217,7 +247,8 @@ Before changing playable behavior, resolve:
 - relevant automated checks;
 - regression surface;
 - whether the task changes binary Unreal assets and how those changes will be evidenced;
-- any player-feel decision still marked pending/prototype-only.
+- any player-feel decision still marked pending/prototype-only;
+- whether this system requires a System IDE/workbench surface under `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`, and if so which Inspect / Author-Tune / Exercise / Validate / Capture-Promote capabilities are in scope for this milestone.
 
 For locomotion work specifically, verify the task against `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` and its canonical human acceptance route. If implementation appears to require a semantic choice not covered there, stop and return the gap to design authority rather than filling it with an Unreal default.
 
@@ -235,7 +266,8 @@ Use the strongest verification appropriate to the task, which may include:
 - save/load fixtures;
 - screenshots/video for visual behavior;
 - frame-time/stat evidence for performance-sensitive changes;
-- developer-state preset reproduction.
+- developer-state preset reproduction;
+- in-game System IDE inspection/reset/validation evidence when the task adds or changes a registered workbench/system.
 
 A successful compile is not proof that a playable feature is good.
 
@@ -248,8 +280,9 @@ Every completed implementation task should report:
 - why;
 - source files changed;
 - Unreal assets/maps created or modified;
+- System IDE/workbench surface created or changed, or an explicit reason the task does not require one;
 - tests/checks run and exact result;
-- manual/editor verification performed;
+- manual/editor/in-game-IDE verification performed;
 - known limitations;
 - next recommended task.
 
@@ -266,6 +299,7 @@ Do not ship:
 - API keys;
 - autonomous development agents;
 - remote debug listeners;
+- System IDE/development workbench modules;
 - editor-only tooling;
 - test-only state mutation surfaces.
 
