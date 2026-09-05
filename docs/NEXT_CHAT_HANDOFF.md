@@ -2,14 +2,14 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#3 are LOCKED under scheduled-run delegation.
+**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#4 are LOCKED under scheduled-run delegation.
 
 ## Read first
 1. `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`
 2. `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`
 3. `docs/83_SAVE_SCHEMA_V1_STRUCTURE_ADDENDUM.md`
-4. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
-5. `docs/10_COMPLETION_MODEL.md`
+4. `docs/84_SAVE_VERSION_MIGRATION_POLICY_ADDENDUM.md`
+5. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
 6. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 7. `ROADMAP.md`
 8. GitHub Issue #4 — `Define persistent world-state and save schema`
@@ -31,23 +31,25 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 ### #3 — Save Schema v1 structure — LOCKED (`docs/83`)
 > **Save v1 is an explicit, versioned, typed semantic aggregate with deterministic ordering and stable IDs. Unreal serializes it; Unreal does not define its meaning.**
 
-Schema v1 has explicit semantic sections, section/record versions, stable record kinds independent of UObject paths, typed payloads, sparse/default rules, deterministic canonical ordering, a development-only human-readable canonical export, and a concrete v1 fixture.
+### #4 — versioning and migration — LOCKED (`docs/84`)
+> **Released saves move forward only through explicit deterministic migrations. Older code never guesses at newer saves, and retired semantic IDs remain accounted for until no supported save can reference them.**
 
-### #4 — versioning and migration policy — NEXT
+Migrations run in memory from immutable source through ordered version steps, validate before gameplay reconstruction, never downgrade newer saves, never immediately destroy the source copy, and use explicit Alias/Retire/Split/Merge/tombstone semantics for persistent IDs/content evolution.
+
+### #5 — malformed/corrupt/incompatible save recovery — NEXT
 Freshly research and decide:
-- compatibility contract from schema v1 onward;
-- global/section/record version responsibilities;
-- ordered migration pipeline and idempotence;
-- old persistent-ID rename/retirement/tombstone mapping;
-- content removed/replaced/split/merged semantics;
-- forward-version/newer-save handling;
-- migration validation and golden fixtures;
-- rollback/backward-write expectations;
-- build/content revision relationship to schema version;
-- Hush representation refactor guarantees;
-- System IDE migration preview/audit surface.
+- integrity/corruption detection boundaries;
+- transactional write strategy and last-known-good preservation;
+- primary/backup/autosave relationships;
+- crash/interrupted-write behavior;
+- malformed semantic data vs unsupported-version vs missing-content distinctions;
+- quarantine/repair boundaries and when recovery must refuse to invent state;
+- player-facing recovery/communication;
+- developer diagnostics and canonical forensic export;
+- accessibility of recovery UI;
+- deterministic corruption/recovery fixtures.
 
-Do not decide malformed/corrupt-save player recovery UX until Decision #4 is individually closed.
+Do not decide final save-slot/autosave cadence UX until Decision #5 is individually closed.
 
 ## Governing constraints
 - Unreal Engine 5.8.
