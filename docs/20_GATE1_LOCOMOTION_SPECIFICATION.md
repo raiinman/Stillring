@@ -1,13 +1,13 @@
 # 20 — Gate 1 Locomotion Specification
 
-**Status:** detailed locomotion authority — owner final review pending  
+**Status:** detailed locomotion authority — FINAL OWNER APPROVED  
 **Updated:** 2026-09-04  
 **Scope:** player locomotion only; camera composition, combat actions, animation production, and world-content authoring remain governed elsewhere.
 
 ## Authority and review protocol
 This file is the implementation-facing accumulation of settled Gate 1 locomotion behavior. `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` explains the reasoning; this file states the movement contract Claude may implement.
 
-The owner delegated approval for the remaining **locomotion-only** decisions in this pass. Each meaningful choice is still reasoned through, documented, diff-reviewed, and merged. The completed package remains **pending final owner review** before Issue #1 closes.
+The owner delegated approval for the remaining **locomotion-only** decisions in this pass and, during the final review, explicitly instructed the three discovered edge-case closures to be walked through and then auto-approved. Each is recorded below. **Final owner review is complete.**
 
 > **Simple intention, capable character, honest world.**
 
@@ -20,6 +20,14 @@ The owner delegated approval for the remaining **locomotion-only** decisions in 
 - always-available modest deliberate jump;
 - meaningful height gates remain authored traversal problems;
 - affordances must be visually honest.
+
+### Ordinary edge commitment
+- ordinary unsupported ground edges have **no invisible edge guard / auto-brake**;
+- if the player continues giving movement intent toward an unsupported edge, Neris may walk/run/Sprint off it and enter ordinary airborne/fall rules;
+- careful analog movement, brisk stopping control, and level readability are the baseline tools for approaching ordinary edges safely;
+- coyote time remains the already-locked short jump-forgiveness window after ordinary ground-edge departure; it is not an edge-prevention system;
+- ordinary edge commitment does not authorize magnetic ledge catches: a catch still requires the existing reachable-ledge trajectory/intent rules;
+- a future explicitly authored precarious state such as a balance beam, rail, squeeze, or special traversal mode may define different edge-safety behavior only in its own explicit state contract.
 
 ### Sprint
 - sustained from the beginning;
@@ -76,6 +84,14 @@ Exact dimensions/angles/timing remain tuning tied to Neris's scale.
 - prompt release, no hold confirmation;
 - physical binding remappable.
 
+### Deliberate-release re-catch suppression
+- deliberately releasing a ledge makes the **released handhold** temporarily ineligible for automatic re-catch;
+- Neris must genuinely separate from that handhold and establish a new plausible approach/trajectory before the same handhold can become catchable again;
+- implementation may use geometric separation/state evidence rather than an arbitrary long lockout timer; exact local thresholds are tuning so long as deliberate Drop cannot immediately undo itself;
+- this suppression is handhold-specific, not a blanket ban on all ledge catches after release;
+- while falling, a **different** valid ledge may still be caught when the normal reach/trajectory/directional-intent rules genuinely support it;
+- deliberate release never grants fall immunity, free reattachment, altered fall severity, or extra steering authority.
+
 ---
 
 ## 4. Broader climbing boundary — LOCKED
@@ -118,6 +134,8 @@ No automatic climb sequence. Exact speed/alignment/animation remain tuning.
 - analog away/side/diagonal/drift never detaches;
 - release → normal airborne/fall rules;
 - no special safety/free reattachment.
+
+A deliberate ladder release must likewise not immediately reattach to the same ladder from the unchanged release position merely because the normal mount detector still overlaps it. Re-entry requires genuine separation plus a new valid deliberate mount approach under the ladder rules.
 
 ---
 
@@ -192,7 +210,7 @@ Fall consequences use body/level-design-relative severity bands. Exact threshold
 - moderate damaging falls use proportionate brief recovery, severe falls can cause major health loss, extreme falls may be lethal;
 - no landing-input gimmick cancels impact;
 - deep valid water may reduce ordinary-to-moderate severity but is not universal immunity;
-- ledge/ladder/slide-off states feed the same fall model.
+- ledge/ladder/slide-off/ordinary-edge departures feed the same fall model.
 
 ---
 
@@ -460,13 +478,23 @@ While target-lock locomotion is active on ordinary ground:
 - if Neris physically enters an incompatible traversal state such as hang, ladder, surface swim, committed slide, or a tool-owned traversal state, target-lock locomotion ends; target retention/camera behavior after that transition belongs to Issue #2/combat lock authority;
 - a valid ledge catch caused by an actual airborne trajectory may still save a fall under the existing ledge rules, and entering the hang state ends target-lock locomotion.
 
-### Releasing / losing lock
-- voluntarily releasing lock or losing a valid target returns movement to camera-relative exploration semantics without hard-zeroing existing velocity;
+### Target-lock jump air-control frame
+- when Neris jumps while target-lock locomotion is valid, her already-limited airborne movement correction remains **target-relative**, preserving the same movement language used at takeoff;
+- the jump gains no additional air-control magnitude, speed, jump impulse, or combat-evade behavior from target lock;
+- if target lock remains valid throughout the airborne state, the target-relative frame may continue updating normally from the valid target relationship so long as the resulting limited correction remains predictable;
+- if lock is voluntarily released, lost, or invalidated while Neris is airborne, the movement reference **does not snap to camera-relative mid-jump**;
+- instead, the last stable horizontal target-relative frame is frozen for the remainder of that short ordinary airborne state, preserving the meaning of currently held movement input;
+- landing with no active lock restores ordinary camera-relative exploration movement immediately;
+- entering another explicit traversal/movement-authority state before landing hands control to that state's documented grammar instead;
+- this stable-frame rule prevents reference-frame betrayal; it does not preserve target lock for camera/targeting purposes after the lock itself is gone.
+
+### Releasing / losing lock on ground
+- voluntarily releasing lock or losing a valid target while grounded returns movement to camera-relative exploration semantics without hard-zeroing existing velocity;
 - held movement input is reinterpreted under exploration movement immediately; no stick/key re-press is required;
 - because the Sprint request was cleared on lock entry, leaving lock never auto-Sprints Neris;
 - camera recentering, target-selection behavior, lock-loss presentation, and camera framing remain Issue #2 / combat-camera authority.
 
-The target feel is **precise position control around an opponent, with no invisible autopilot**.
+The target feel is **precise position control around an opponent, with no invisible autopilot and no midair control-reference surprise**.
 
 ---
 
@@ -528,15 +556,15 @@ This is the **owner-facing feel gate**, not a substitute for automated/unit/func
 
 ### Test-course requirement
 Gate 1 must provide one compact representative locomotion course that can be completed continuously without menus/loading and contains, in route order or a similarly efficient layout:
-- flat open movement space, a tight precision area, small stairs/steps/floor lips;
+- flat open movement space, a tight precision area, small stairs/steps/floor lips, and an ordinary unsupported edge that can be approached carefully or deliberately walked off;
 - knee/waist and waist/lower-chest mantle obstacles plus a shoulder-height obstacle that must **not** baseline auto-mantle;
-- a small authored jump gap, a catchable ledge, same-handhold shimmy segment, valid pull-up top, blocked pull-up top, and deliberate Drop/Release case;
+- a small authored jump gap, a catchable ledge, same-handhold shimmy segment, valid pull-up top, blocked pull-up top, deliberate Drop/Release case, and a nearby alternate catch opportunity suitable for proving same-handhold suppression without globally disabling catches;
 - a ladder positioned so the player can intentionally approach it and also pass nearby/parallel without mounting; valid top/bottom exits and a mid-ladder release opportunity;
 - shallow/wade water, ordinary deep swimmable water, a valid low exit, and a high/blocked exit;
 - normal walkable slope, short borderline scramble slope, and steep/low-traction slide slope;
 - safe traversal drop, upper-safe/heavy landing, and a controlled damaging-fall example;
 - one movement-compatible interaction and one planted/alignment-required interaction;
-- one target-lock dummy with enough space for radial/strafe movement and a nearby mantle/ladder temptation that should remain suppressed while locked;
+- one target-lock dummy with enough space for radial/strafe movement, ordinary jumping, and a nearby mantle/ladder temptation that should remain suppressed while locked;
 - one visually plausible but unsupported rough wall/cliff route that proves baseline free climbing remains impossible.
 
 The course may use graybox geometry. Visual polish is irrelevant; semantic readability and repeatability are mandatory.
@@ -544,13 +572,14 @@ The course may use graybox geometry. Visual polish is irrelevant; semantic reada
 ### Five-minute script
 Run the following as one continuous pass. Times are targets, not frame-perfect requirements.
 
-**0:00–0:45 — ground trust / speed bands**
+**0:00–0:45 — ground trust / speed bands / edge ownership**
 - start from neutral and make several tiny analog movements in different directions;
 - smoothly push from careful → run → requested Sprint, then reduce magnitude without releasing Sprint;
 - release movement from run and Sprint and judge stopping distance;
 - perform normal curved Sprint steering and one hard Sprint reversal;
 - intentionally hover around the Sprint threshold to check for chatter;
-- pass over stairs/small lips without special input.
+- pass over stairs/small lips without special input;
+- approach an ordinary unsupported edge carefully, stop close to it, then deliberately continue forward on a second attempt and verify Neris **walks off rather than invisibly braking**.
 
 **0:45–1:35 — jump / mantle / ledge intent**
 - perform ordinary jump from stand/run/Sprint and verify no hidden speed boost;
@@ -559,6 +588,8 @@ Run the following as one continuous pass. Times are targets, not frame-perfect r
 - approach low mantle geometry directly, then brush/pass parallel to similar geometry and verify only the deliberate case triggers;
 - test the upper mantle boundary so shoulder-height+ does not silently auto-mantle;
 - deliberately catch a valid ledge, remain neutral, shimmy, stop at a forbidden corner/gap, pull up on a valid top, remain hanging at a blocked top, and use explicit Drop/Release;
+- after deliberate Drop/Release, verify the **same released handhold does not instantly re-catch Neris** without real separation/new approach;
+- where the course provides it, confirm a different genuinely reachable ledge can still be caught during a valid falling trajectory;
 - push analog down/away while hanging once and verify it does **not** drop.
 
 **1:35–2:15 — ladder trust**
@@ -567,6 +598,7 @@ Run the following as one continuous pass. Times are targets, not frame-perfect r
 - climb up, down, stop neutral mid-ladder, then complete a valid end exit;
 - repeat enough to test the opposite end if needed;
 - use explicit Drop/Release mid-ladder and verify analog direction alone never releases;
+- confirm deliberate release does not instantly remount the same ladder from unchanged overlap;
 - confirm no magnetic long-distance alignment or forced blocked-end placement.
 
 **2:15–2:55 — water / slope / fall consequence**
@@ -583,14 +615,16 @@ Run the following as one continuous pass. Times are targets, not frame-perfect r
 - move away before commit once and verify clean cancellation/no delayed surprise trigger;
 - after a committed interaction releases movement, keep holding a valid direction and verify Neris resumes without requiring input re-press.
 
-**3:35–4:20 — target-lock precision**
+**3:35–4:20 — target-lock precision / airborne frame stability**
 - acquire target lock while moving fast enough to expose the Sprint→lock transition;
 - move toward, away, left/right, and diagonally around the dummy;
 - release stick and verify there is no auto-orbit or auto-distance correction;
 - press Sprint and verify exploration Sprint remains unavailable;
 - press Jump and verify it remains the baseline jump rather than a contextual evade flip;
+- while airborne from target lock, make a small allowed correction and verify its movement frame remains target-relative;
+- lose/release lock during one ordinary jump and keep holding a directional correction: verify the **last stable target-relative frame remains in force until landing** rather than snapping the held input to camera-relative midair;
 - deliberately move toward the nearby mantle/ladder temptation and verify locked ground locomotion does not accidentally seize that exploration traversal;
-- release/lose lock while holding movement and verify physical continuity plus immediate return to camera-relative exploration without re-press or surprise Sprint.
+- release/lose lock while grounded and holding movement and verify physical continuity plus immediate return to camera-relative exploration without re-press or surprise Sprint.
 
 **4:20–5:00 — stress loop / forbidden behavior**
 - chain Sprint → jump → landing → interaction → target lock → unlock → Sprint again;
@@ -607,7 +641,10 @@ Run the following as one continuous pass. Times are targets, not frame-perfect r
 ### Hard-fail conditions
 Any one of these fails the locomotion feel gate regardless of automated pass status:
 - Neris moves, mounts, mantles, drops, dives, climbs, exits, or interacts without a player intent that reasonably explains it;
+- ordinary unsupported edges invisibly stop/guard deliberate movement without an explicit authored traversal state that owns that behavior;
+- a deliberate Drop/Release immediately re-catches/re-mounts the same released traversal attachment without genuine separation/new valid approach;
 - clear legal intent is ignored because an animation/state waits unnecessarily or requires input release/re-press;
+- a target-lock jump changes the meaning of held airborne movement mid-jump because the lock was lost/released;
 - a transition hard-snaps/teleports position or velocity where the contract requires physical continuity;
 - analog drift/noise triggers movement or traversal;
 - repeated state transitions manufacture speed, height, fall reset, or collision bypass;
@@ -619,7 +656,7 @@ Any one of these fails the locomotion feel gate regardless of automated pass sta
 ### Tuning note versus semantic failure
 A test may produce **tuning notes** without failing the locked design when the behavior class is correct but an exact value needs adjustment—for example sprint acceleration slightly too quick, shimmy speed slightly slow, coyote window slightly generous, or a mantle angle needing refinement.
 
-A **semantic failure** is not a tuning note. Examples: analog-down drops a ledge, Sprint adds jump speed, ladder proximity auto-mounts, target lock auto-orbits, a blocked water edge pulls Neris out, or shoulder-height geometry baseline auto-mantles. Semantic failures must be fixed before proceeding.
+A **semantic failure** is not a tuning note. Examples: analog-down drops a ledge, Sprint adds jump speed, ladder proximity auto-mounts, an ordinary edge invisibly refuses deliberate walk-off, deliberate Drop instantly re-grabs the same handhold, target-lock loss remaps held air correction mid-jump, target lock auto-orbits, a blocked water edge pulls Neris out, or shoulder-height geometry baseline auto-mantles. Semantic failures must be fixed before proceeding.
 
 ### Required human verdict
 After each five-minute run, the tester records:
@@ -639,7 +676,11 @@ Re-run this five-minute test after any material change to movement physics, coll
 ## Current locked movement grammar
 ```text
 baseline ground/jump/sprint                   → ordinary locomotion contract
+ordinary ground + deliberate edgeward intent → NO invisible edge guard; unsupported edge may be left
+ordinary ground-edge departure               → airborne/fall rules + short coyote opportunity
 mantle / ledge / ladder / swim / slope        → their explicit locked state grammar
+explicit ledge/ladder Drop                    → released attachment cannot immediately auto-recatch/remount
+post-release different valid ledge            → may catch only under normal trajectory/intent rules
 interaction while moving                      → valid flow without magnetic snapping
 future traversal tool owned                   → NO passive universal movement expansion
 valid authored tool affordance + clear intent → enter that tool's explicit traversal state
@@ -666,8 +707,10 @@ target lock + left/right                      → strafe/orbit; player owns spac
 target lock + neutral                         → no automatic orbit/distance correction
 target lock + Sprint request                  → NO exploration Sprint
 target lock + Jump                            → normal baseline jump; NO contextual evade flip
+target-lock jump + valid lock                 → limited air correction remains target-relative
+lock lost/released during ordinary jump       → freeze last stable target-relative frame until landing/state change
 target lock → incompatible traversal state    → end target-lock locomotion; enter explicit traversal state
-release/lose target lock                      → preserve physical velocity; return to camera-relative exploration
+grounded release/lose target lock             → preserve physical velocity; return to camera-relative exploration
 remapped locomotion actions                   → same semantics on chosen bindings
 Digital Precision active                      → tuned careful digital movement magnitude; NO new traversal eligibility
 accessibility input settings                  → ergonomics/tolerance only; NO hidden world-rule expansion
@@ -677,7 +720,11 @@ animation transition                          → follows movement authority; NO
 
 ---
 
-## Remaining before locomotion owner review
-**Repository-authority reconciliation.**
+## Final owner-review closure — COMPLETE
 
-After reconciliation, present the complete locomotion package to the owner for final review together. Issue #1 remains open until that review is complete.
+The final red-team review exposed and closed three implementation ambiguities:
+1. ordinary ground edges do not use an invisible edge guard;
+2. deliberate Drop/Release cannot immediately auto-recatch/remount the released attachment without genuine separation and a new valid approach;
+3. target-lock airborne correction retains a stable target-relative frame through an ordinary committed jump, freezing the last stable frame if lock disappears before landing.
+
+The owner explicitly instructed these items to be walked through and auto-approved. They are now **LOCKED**. Issue #1 may close after repository/decision-register bookkeeping confirms this final authority state.
