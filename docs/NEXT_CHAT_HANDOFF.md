@@ -2,13 +2,13 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#2 are LOCKED under scheduled-run delegation.
+**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#3 are LOCKED under scheduled-run delegation.
 
 ## Read first
 1. `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`
 2. `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`
-3. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
-4. `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`
+3. `docs/83_SAVE_SCHEMA_V1_STRUCTURE_ADDENDUM.md`
+4. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
 5. `docs/10_COMPLETION_MODEL.md`
 6. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 7. `ROADMAP.md`
@@ -22,35 +22,32 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 **Work for as long as productively possible in every scheduled wake. Never batch unresolved decisions.**
 
 ## Issue #4 save/world-state decisions
-### #1 — stable persistent identity — LOCKED
-Authority: `docs/81`.
-
+### #1 — stable persistent identity — LOCKED (`docs/81`)
 > **Save identity belongs to the authored game meaning, not to the current Unreal object instance.**
 
-Project-owned semantic GUIDs are canonical. Runtime/path/package/Data-Layer/Actor identities are not save keys.
-
-### #2 — persistent state taxonomy and ownership — LOCKED
-Authority: `docs/82`.
-
+### #2 — persistent state taxonomy and ownership — LOCKED (`docs/82`)
 > **Each durable fact has one gameplay owner; the save system snapshots those owners. Runtime presentation is rebuilt, not promoted into truth.**
 
-Locked categories include save metadata, player progression, inventory/tools, quest/story, world facts, Hush semantic state, encounter outcomes, shortcuts/interactables, completion, catastrophe/world pivots, NPC recurrence, and checkpoint/location. Settings/profile data are separate. Movement/camera/combat/AI/tool/Hush/UI process state is transient/derived unless later explicitly promoted.
+### #3 — Save Schema v1 structure — LOCKED (`docs/83`)
+> **Save v1 is an explicit, versioned, typed semantic aggregate with deterministic ordering and stable IDs. Unreal serializes it; Unreal does not define its meaning.**
 
-### #3 — Save Schema v1 top-level structure and record shape — NEXT
+Schema v1 has explicit semantic sections, section/record versions, stable record kinds independent of UObject paths, typed payloads, sparse/default rules, deterministic canonical ordering, a development-only human-readable canonical export, and a concrete v1 fixture.
+
+### #4 — versioning and migration policy — NEXT
 Freshly research and decide:
-- exact v1 top-level semantic sections;
-- typed record/envelope structure;
-- GUID/category/owner representation;
-- sparse/default omission policy;
-- deterministic ordering/canonicalization;
-- unknown-field/unknown-record forward compatibility posture;
-- snapshot metadata needed before migration policy;
-- no raw UObject/Actor graph serialization;
-- example serialized v1 fixture;
-- System IDE schema inspection/validation;
-- deterministic round-trip fixtures.
+- compatibility contract from schema v1 onward;
+- global/section/record version responsibilities;
+- ordered migration pipeline and idempotence;
+- old persistent-ID rename/retirement/tombstone mapping;
+- content removed/replaced/split/merged semantics;
+- forward-version/newer-save handling;
+- migration validation and golden fixtures;
+- rollback/backward-write expectations;
+- build/content revision relationship to schema version;
+- Hush representation refactor guarantees;
+- System IDE migration preview/audit surface.
 
-Do not decide migration policy until Decision #3 is individually closed.
+Do not decide malformed/corrupt-save player recovery UX until Decision #4 is individually closed.
 
 ## Governing constraints
 - Unreal Engine 5.8.
