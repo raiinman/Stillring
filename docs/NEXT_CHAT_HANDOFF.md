@@ -1,92 +1,101 @@
 # Stillring — Next Chat Handoff
 
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED; next design work is Issue #2 camera  
-**Updated:** 2026-09-04  
-**Repository:** `raiinman/Stillring`
+**Updated:** 2026-09-05  
+**Repository:** `raiinman/Stillring`  
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#7 OWNER APPROVED.
 
-## Final locomotion authority
+## Read first
+1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+2. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
+3. `docs/22_GATE1_CAMERA_SPECIFICATION.md`
+4. `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`
+5. GitHub Issue #2 — `Lock exploration and combat camera specification`
 
-Exact player-facing locomotion behavior:
-- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+Then check the exact current `main` SHA before creating a branch.
 
-Supporting authority:
-- `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` — reasoning / design lineage;
-- `docs/18_PROJECT_DECISION_REGISTER.md` — durable decision index;
-- `docs/01_GAME_VISION.md` — vision-level movement summary;
-- Issue #1 — completed locomotion design/owner-review record.
+## Immediate next work
+Decision #7 is canonical in `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`. Before repository-finalizing Decision #8, fold Decision #7 into the cumulative `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark item #7 locked there.
 
-`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` owns exact semantics. Higher-level files summarize and point to it rather than duplicate a second locomotion specification.
+Then perform a fresh research pass and present **Camera Decision #8 — low-ceiling behavior** for owner review.
 
+Do not infer #8 from cramped-room policy and do not let Claude/Unreal choose a default.
+
+## Governing rules
+- Unreal Engine 5.8.
+- Claude primary implementation agent.
+- C++ first for gameplay/state authority; thin Blueprints.
+- No retail runtime AI/model/API dependency.
+- Pipeline: CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY.
+- Human play is authoritative for feel.
+- Resolve one meaningful high-impact feel decision at a time unless the owner explicitly delegates otherwise.
+- Research **before** major design recommendations.
+
+Movement principle:
 > **Simple intention, capable character, honest world.**
 
-## Final owner review — COMPLETE
+Camera goal:
+> **The player should look at Orra, not babysit the camera.**
 
-The owner-delegated locomotion design pass and repository reconciliation were completed first. A final red-team review then exposed three small implementation ambiguities. The owner instructed that each be walked through in the established style and then auto-approved.
-
-Final edge-case closures:
-1. **ordinary unsupported edges:** no invisible edge guard; continued deliberate movement may carry Neris off an ordinary unsupported edge into normal airborne/fall rules;
-2. **deliberate release:** releasing a ledge or ladder cannot immediately auto-recatch/remount the same released attachment from unchanged overlap; genuine separation and a new valid approach are required, while a different genuinely reachable ledge may still be caught under normal rules;
-3. **target-lock jump reference:** limited air correction stays target-relative during a target-lock jump; if lock disappears before landing, the last stable target-relative frame remains in force until landing or another explicit movement-authority state takes over.
-
-These are now locked in `docs/20` and covered by the canonical locomotion regression course.
-
-## Complete final locomotion package
-
-The package includes:
-- camera-relative ground movement and useful careful analog control;
-- deliberate ordinary edge commitment with no invisible cliff guard;
-- unlimited sustained Sprint, Hold default / Toggle optional;
-- sprint steering, reversal weight, jump momentum, and Sprint→target-lock continuity;
-- deliberate jump, limited air correction, coyote time, and input buffering;
-- automatic intent-based mantle with body-relative height scope;
-- automatic reachable ledge catch → real hang → pull-up / same-handhold shimmy / explicit Drop/Release;
-- same-attachment re-catch suppression after deliberate ledge/ladder release;
-- no baseline universal/free climbing;
-- authored ladder mount, player-driven movement, end exits, and explicit release;
-- surface swimming with no baseline underwater free-dive;
-- no baseline crouch/stealth posture;
-- slope scramble/slide boundaries;
-- fall severity and recovery philosophy;
-- interaction while moving;
-- traversal-tool override contract;
-- radial movement dead-zone semantics and worn-controller tolerance;
-- analog careful→run continuum with explicit Sprint upper band and hysteresis;
-- responsive acceleration/deceleration/turning with animation subordinate to control;
-- target-relative target-lock locomotion with no spacing autopilot;
-- stable target-relative airborne movement frame through target-lock jumps;
-- locomotion accessibility/remapping and Digital Precision for keyboard;
-- canonical five-minute-per-input-profile human feel/regression test.
-
-## System IDE architecture — first-class production rule
-
-`docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` and Issue #58 are binding.
+## System IDE rule
+`docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` is first-class authority.
 
 > **Build the system and its in-game IDE together.**
 
-Gate 1 implementation must establish the shared in-game developer-shell pattern with a **Locomotion IDE** so movement can be inspected, tuned, reset, validated, and iterated while the game is running. Camera and every later major system must register its own workbench into the same architecture rather than inventing unrelated debug menus.
+IDE debt counts as feature debt. Camera / Targeting must register in the shared dev-only shell and expose live state/rejection/tuning evidence for approved camera behavior.
 
-At minimum the Gate 1 Locomotion IDE must expose live locomotion/input state, speed/acceleration/rotation state, Sprint state, traversal eligibility/rejection reasons, fall classification, approved live-tunable numeric values, canonical locomotion-test teleports/reset, and clear session-override versus promoted-value provenance.
+## Camera decisions locked so far
 
-## Current boundary
+### #1 Default exploration framing
+Medium-wide, slightly elevated, full-body exploration view; Neris somewhat below center; enough footing plus forward-route/landmark visibility; stable through walk/run/Sprint; exact values remain tuning.
 
-- Issue #1 locomotion: ready to close after final closure PR merges;
-- Issue #58 System IDE framework: open implementation dependency;
-- **Issue #2 camera specification is next**;
-- camera design must not reinterpret settled locomotion semantics;
-- camera-specific look response, collision, recenter, target selection/framing, lock-loss presentation, look-stick accessibility, and motion-reduction behavior remain to be settled under Issue #2.
+### #2 Orbit
+360° player-owned yaw; generous bounded pitch; level horizon; camera input does not rotate Neris; manual input has priority; exact pitch limits/asymmetry remain tuning.
 
-## Implementation order
+### #3 Automatic yaw follow
+Conditional soft follow only. No hard snap. Manual input cancels assistance. Standing still does not auto-recenter. Careful movement receives little/none; open travel may receive more. Eventual Off/Never option required.
 
-1. close Issue #1 after the final owner-approval closure PR merges;
-2. complete Issue #2 camera specification with owner review;
-3. ensure Issue #5 Gate 1 Unreal harness includes the shared System IDE shell + Locomotion IDE registration pattern;
-4. bootstrap the Unreal 5.8 C++ prototype;
-5. implement locomotion under `docs/20` and its Locomotion IDE under `docs/21`;
-6. implement camera/targeting presentation under the final Issue #2 authority and register Camera/Targeting IDE in the same shell;
-7. run deterministic verification plus the canonical human feel tests.
+### #4 Manual recenter
+Dedicated remappable action. Fast eased recovery of yaw + pitch. While moving, align behind stable travel direction; while stationary, behind Neris facing. Manual input cancels it. It never changes movement, target, or gameplay state.
 
-## Continuation rule
+### #5 Collision compression / recovery
+Walls may shorten camera distance but do not steer it. Physical collision resolves promptly with a non-zero probe volume. Manual orbit stays authoritative while compressed. Outward recovery is smoother/slower with clearance stability + hysteresis. Camera-only blockers are allowed for pathological art collision.
 
-Do **not** reopen locomotion semantics merely because implementation tuning begins. Exact numeric values explicitly left to Gate 1 tuning may be tuned through human play and the Locomotion IDE, but any proposed change to the locked movement grammar must return to design authority deliberately.
+### #6 Occlusion priority
+Priority: Neris/readable movement first; established target second where physically honest; meaningful world geometry remains opaque/honest. Brief target LOS loss uses an occluded grace state. Sustained hard occlusion breaks lock instead of forcing camera around architecture. Explicit decorative clutter may be fade eligible.
 
-Proceed next to **Issue #2 — camera specification**, one meaningful camera/player-feel decision at a time unless the owner grants a similarly bounded delegation.
+### #7 Cramped-room behavior
+Exact authority: `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`.
+
+Stillring stays third-person. Severe compression changes composition, not control grammar. Close Quarters Camera may use small pivot/height/composition adjustments while preserving player yaw/pitch authority. No automatic first-person, fixed-camera, shoulder-aim, corridor snap, top-down, or aggressive FOV fallback. Neris may self-fade/dither only at pathological near-camera proximity to prevent interior-mesh clipping. Leaving the space uses Decision #5 recovery. Ordinary rooms that force long severe compression fail camera review unless deliberately authored.
+
+Philosophy:
+> **When the room gets smaller, the camera gets closer—not stranger.**
+
+## Remaining Issue #2 sequence
+1–7: LOCKED.  
+8. **low-ceiling behavior — NEXT**  
+9. vertical-space behavior  
+10. lock-on acquisition transition  
+11. lock-on framing distance/offset  
+12. target-switch transition  
+13. multiple-enemy framing limits  
+14. large boss framing  
+15. jump/fall/mantle camera  
+16. camera shake/accessibility  
+17. sensitivity/inversion/mouse parity  
+18. aim/first-person/gyro if later proposed
+
+Anything unresolved remains **PENDING OWNER REVIEW**.
+
+## Recent camera PRs
+- #63 default exploration framing
+- #64 player-owned orbit
+- #65 conditional yaw follow
+- #66 manual recenter
+- #67 collision compression/recovery
+- #68 occlusion readability hierarchy
+
+Main immediately before the Decision #7/handoff branch:
+`26166302eb968feeb1f10c1f431188d88cbe236f`
+
+Always re-check `main` next chat.
