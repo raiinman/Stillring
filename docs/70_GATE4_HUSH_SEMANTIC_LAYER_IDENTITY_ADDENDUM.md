@@ -202,12 +202,12 @@ Decision #6 will define Gate 4 reload behavior without preempting Issue #4's sch
 ## Representation-candidate implications
 
 ### World Partition + Runtime Data Layers
-Epic UE5.8 Data Layers can organize Actors in the Editor and activate/deactivate runtime layers, and Epic explicitly demonstrates light/dark-world style transitions. World Partition also supplies OFPA-friendly authoring/source-control behavior. These are strong representation capabilities. citeturn608943search0turn608943search1turn608943search3
+Epic UE5.8 Data Layers can organize Actors in the Editor and activate/deactivate runtime layers, and Epic demonstrates light/dark-world style transitions. World Partition also supplies OFPA-friendly authoring/source-control behavior. These are strong representation capabilities.
 
 But Runtime Data Layer state remains downstream of this semantic contract.
 
 ### Explicit level / Actor layering
-UE5.8 Level Streaming can asynchronously load/unload or toggle visibility of sublevels, while Level Instances provide an authoring workflow for grouped/reusable Actor arrangements. A compact Gate 4 map can therefore represent Waking/Hush without adopting World Partition solely to gain Data Layers. citeturn300280search2turn300280search3turn300280search9
+UE5.8 Level Streaming can asynchronously load/unload or toggle visibility of sublevels, while Level Instances provide an authoring workflow for grouped/reusable Actor arrangements. A compact Gate 4 map can therefore represent Waking/Hush without adopting World Partition solely to gain Data Layers.
 
 Again, level visibility remains downstream.
 
@@ -256,11 +256,11 @@ Stillring's authored identity is its own: the Hush is a coupled echo of discarde
 ## Research basis
 
 Primary current technical sources:
-- Epic Games, UE5.8 World Partition — Data Layers documentation. citeturn608943search0
-- Epic Games, UE5.8 World Partition documentation. citeturn608943search1
-- Epic Games, UE5.8 One File Per Actor documentation. citeturn608943search3
-- Epic Games, UE5.8 Level Streaming / Level Streaming Overview. citeturn300280search2turn300280search9
-- Epic Games, UE5.8 Level Instancing documentation. citeturn300280search3
+- Epic Games, UE5.8 World Partition — Data Layers documentation.
+- Epic Games, UE5.8 World Partition documentation.
+- Epic Games, UE5.8 One File Per Actor documentation.
+- Epic Games, UE5.8 Level Streaming / Level Streaming Overview.
+- Epic Games, UE5.8 Level Instancing documentation.
 
 Repository authority:
 - `docs/02_STORY_BIBLE.md`
