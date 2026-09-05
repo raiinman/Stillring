@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#8 OWNER APPROVED and reconciled into cumulative camera authority.
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#9 OWNER APPROVED. Decisions #1–#8 are reconciled into cumulative camera authority; Decision #9 is canonical in its provenance addendum pending next reconciliation.
 
 ## Read first
 1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
@@ -10,16 +10,17 @@
 3. `docs/22_GATE1_CAMERA_SPECIFICATION.md`
 4. `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`
 5. `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`
-6. GitHub Issue #2 — `Lock exploration and combat camera specification`
+6. `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`
+7. GitHub Issue #2 — `Lock exploration and combat camera specification`
 
 Then check the exact current `main` SHA before creating a branch.
 
 ## Immediate next work
-Camera Decision #8 is reconciled into `docs/22_GATE1_CAMERA_SPECIFICATION.md`; `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md` remains its decision-specific provenance record.
+Camera Decision #9 is canonical in `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`. Before repository-finalizing Decision #10, fold Decision #9 into the cumulative `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark item #9 locked there.
 
-Perform a fresh research pass and present **Camera Decision #9 — vertical-space behavior** for owner review. Do not infer #9 from low-ceiling or cramped-room policy and do not let Claude/Unreal choose a default.
+Then perform a fresh research pass and present **Camera Decision #10 — lock-on acquisition transition** for owner review.
 
-Decision #9 owns ordinary exploration readability for tall shafts/atriums, steep ascents and descents, drop approaches, upper/lower route inspection, and sustained route elevation changes. It must not silently decide jump/fall/mantle presentation (Decision #15) or lock-on combat framing (Decisions #10–#14).
+Do not infer #10 from Zelda lineage, stock Unreal behavior, or later lock-on framing decisions. Decision #10 owns what happens from the instant the player requests lock-on until a valid combat-camera state is established or the request fails: candidate acquisition, camera transition feel, target snap strength, movement/facing transition timing, no-target behavior, obstruction handling during acquisition, and manual camera authority during the transition.
 
 ## Governing rules
 - Unreal Engine 5.8.
@@ -67,7 +68,7 @@ Priority: Neris/readable movement first; established target second where physica
 ### #7 Cramped-room behavior
 Cumulative authority is reconciled into `docs/22`; provenance remains `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`.
 
-Stillring stays third-person. Severe compression changes composition, not control grammar. Close Quarters Camera may use small pivot/height/composition adjustments while preserving player yaw/pitch authority. No automatic first-person, fixed-camera, shoulder-aim, corridor snap, top-down, or aggressive FOV fallback. Neris may self-fade/dither only at pathological near-camera proximity to prevent interior-mesh clipping. Leaving the space uses Decision #5 recovery. Ordinary rooms that force long severe compression fail camera review unless deliberately authored.
+Stillring stays third-person. Severe compression changes composition, not control grammar. Close Quarters Camera may use small pivot/height/composition adjustments while preserving player yaw/pitch authority. No automatic first-person, fixed-camera, shoulder-aim, corridor snap, top-down, or aggressive FOV fallback. Neris may self-fade/dither only at pathological near-camera proximity. Ordinary rooms that force long severe compression fail camera review unless deliberately authored.
 
 Philosophy:
 > **When the room gets smaller, the camera gets closer—not stranger.**
@@ -75,15 +76,22 @@ Philosophy:
 ### #8 Low-ceiling behavior
 Cumulative authority is reconciled into `docs/22`; provenance remains `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`.
 
-Low ceilings constrain the camera vertically before they compress it longitudinally. A Ceiling-Constrained Camera lowers the rig/pivot smoothly while preserving ordinary distance, player-owned yaw, and as much pitch as real geometry permits. Impossible pitch stops at the physical boundary with no queued-input snap. The camera does not automatically aim down tunnels, does not use low ceiling alone to trigger Neris fading or dramatic FOV changes, and uses hysteresis to avoid rafter/lintel accordion pumping. Remaining obstruction falls back to Decision #5 distance compression; severe distance compression invokes Decision #7 Close Quarters.
+Low ceilings constrain vertically before avoidable distance compression. Ceiling-Constrained Camera lowers the rig/pivot smoothly, preserves yaw and as much pitch as geometry permits, never queues blocked pitch, never auto-aims down tunnels, and uses hysteresis against overhead pumping. Remaining obstruction follows #5; severe compression follows #7.
 
 Philosophy:
 > **When the ceiling comes down, the camera comes down with it—not into Neris.**
 
+### #9 Vertical-space behavior
+Exact authority until reconciliation: `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`.
+
+Grounded exploration uses **Vertical Context Assist**. Sustained ascent/descent first shifts Neris modestly in screen-space to reveal more route in the direction of elevation change. A very weak, bounded, delayed soft-pitch assist may occur only when screen-space framing is insufficient, and manual camera input always cancels/suppresses it. Drop framing requires actual approach intent; nearby/parallel/behind drops do not pull the camera down. Tall rooms do not automatically aim the camera. Automatic vertical pitch must offer an eventual Off/Never option. The camera may not use quest, puzzle-solution, secret-route, treasure, hidden-enemy, or other privileged metadata to decide where to aim. Grounded #9 does not decide jump/fall/mantle (#15) or lock-on/combat framing (#10–#14).
+
+Philosophy:
+> **Make room for the height. Never aim on the player's behalf.**
+
 ## Remaining Issue #2 sequence
-1–8: LOCKED.  
-9. **vertical-space behavior — NEXT / PENDING OWNER REVIEW**  
-10. lock-on acquisition transition  
+1–9: LOCKED.  
+10. **lock-on acquisition transition — NEXT / PENDING OWNER REVIEW**  
 11. lock-on framing distance/offset  
 12. target-switch transition  
 13. multiple-enemy framing limits  
@@ -105,8 +113,9 @@ Anything unresolved remains **PENDING OWNER REVIEW**.
 - #69 cramped-room camera behavior
 - #70 reconcile cramped-room authority into cumulative spec
 - #71 low-ceiling camera behavior
+- #73 reconcile low-ceiling authority into cumulative spec
 
-Main immediately before the Decision #8 reconciliation branch:
-`d85fb35a869e1f0137263df38b8d52a5204c6227`
+Main immediately before the Decision #9 branch:
+`6793aab8ba16d00d63b274adb0cbce71f7a09449`
 
 Always re-check `main` next chat.
