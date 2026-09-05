@@ -2,13 +2,13 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#8 are LOCKED. Next fresh decision: **#9 disengage / reset / leash / re-entry behavior**.
+**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#9 are LOCKED. Next fresh decision: **#10 encounter spawn/reset/debug fixture + cumulative closure**.
 
 ## Read first
 1. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 2. Camera authority `docs/22`–`docs/36`
 3. Player combat authority `docs/37`–`docs/49`
-4. Encounter authority `docs/50`–`docs/57`
+4. Encounter authority `docs/50`–`docs/58`
 5. `ROADMAP.md`
 6. GitHub Issue #104
 
@@ -20,41 +20,37 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 **Work for as long as productively possible in every scheduled wake. Never batch unresolved decisions.**
 
 ## Locked encounter decisions
-1. **Attack bandwidth** — `docs/50`: one ordinary `MajorCommit`, one separately-approved `PressureCommit` lane, active non-holder pressure, lock independent, honest fairness.
-2. **Melee pressure** — `docs/51`: broad pressure bands/occupancy, honest start conditions, real whiffs, no magnetism/input reading, Recovery/Yield.
-3. **Ranged pressure** — `docs/52`: visible non-homing projectile, honest fire corridor, bounded lead frozen at launch, conditional readable Standard Shot `PressureCommit`, no offscreen cheat/kiting.
-4. **Shield/armor** — `docs/53`: directional stateful shield, no hidden durability/posture, flank + Heavy `ShieldDisplaced` + attack `Exposure` + Perfect Guard tempo as valid answers, normal MajorCommit offense.
-5. **Telegraph/readability** — `docs/54`: Ready → committed Telegraph → Active → Recovery semantic grammar; body/world-space evidence first; no mandatory colored attack-ring language; no critical audio/color/vibration-only information; committed tells do not casually lie; danger direction matches presentation; gameplay owns Active, animation notifies synchronize/present; Major+Pressure overlap must remain separable; IDE validates threat timelines and animation/gameplay mismatch.
-6. **Offscreen / occluded threats** — `docs/55`: fresh ordinary high-salience melee/shield commits require meaningful visibility; already-honest committed attacks continue if the player looks away; hard occlusion is stricter than merely offscreen; real projectiles persist after launch; ranged PressureCommit is offscreen-presentation-gated; optional directional threat indicator may expose coarse direction/urgency but not radar-like hidden enemy identity/position; UI/audio/haptics/accessibility remain supplemental; camera never steers for secondary threats.
-7. **Enemy reaction / interrupt** — `docs/56`: no universal posture/stun meter; damage and reaction are separate; player attacks declare `ImpactForce`, enemy states declare explicit `ReactionResistance`; Light acknowledges impact but does not erase commitments; Heavy is baseline `Disrupt` against ordinary eligible commitments; shield front still uses `ShieldDisplaced`; Perfect Guard earns tempo rather than universal stun; large enemies require explicit state resistance rather than blanket boss armor; reaction retrigger protection prevents stun-lock; interrupted commits clean threat/reservation state.
-8. **Archetype coordination / encounter composition** — `docs/57`: compose complementary tactical jobs rather than rigid party slots; shared world-aware approach/pressure occupancy prevents stacking and waiting circles; ranged fire topology and shield denial must preserve practical movement/readability; duplicate archetypes are valid only when they change the spatial problem; arena topology is part of encounter validity; difficulty improves positioning/composition before quantity/concurrency; reinforcements become attributable before first committed threat; target lock never owns encounter roles.
+1. Attack bandwidth — `docs/50`.
+2. Melee pressure — `docs/51`.
+3. Ranged pressure — `docs/52`.
+4. Shield/armor — `docs/53`.
+5. Telegraph/readability — `docs/54`.
+6. Offscreen/occluded threats — `docs/55`.
+7. Enemy reaction/interrupt — `docs/56`.
+8. Archetype coordination/composition — `docs/57`.
+9. **Disengage/reset/re-entry** — `docs/58`: no magic leash radius; semantic Dormant/Engaged/Disengaging/Returning/Reset-Ready lifecycle; sustained loss of credible reachable fight drives disengage; temporary LOS/path loss does not; no new commits during Disengaging/Returning; projectiles remain real; no instant health refill; dead enemies do not revive from aggro loss; re-entry before completed reset preserves causal state; authored territory prevents cross-map pursuit; visible teleport-home is rejected; IDE exposes every viability/reset reason.
 
-## Next fresh decision — #9 disengage / reset / leash / re-entry
+## Next fresh decision — #10 spawn/reset/debug fixture + cumulative closure
 Core question:
-> **When should an encounter stop pursuing Neris, what state should enemies keep or restore, and how can the player leave/re-enter without farming broken AI boundaries or being magically punished across the map?**
+> **What deterministic fixture and reset contract proves the whole Gate 2 encounter system repeatedly, including death/checkpoint cleanup, without turning debug controls into hidden gameplay authority?**
 
 Research independently. Resolve:
-- semantic combat engagement/disengagement rather than one arbitrary radius;
-- pursuit through valid connected space versus authored encounter boundary;
-- LOS/time/distance/world-state evidence for disengagement;
-- committed attack/projectile handling as disengagement begins;
-- enemy health/reaction/position reset policy and exploit prevention;
-- whether enemies return home, hold a fallback state, or despawn only under authored authority;
-- re-entry and repeated pull/retreat behavior;
-- death/checkpoint/world-reset boundary without stealing Decision #10;
-- navigation failure and inaccessible-player cases;
-- Combat/Encounter IDE and adversarial fixtures.
+- stable encounter fixture IDs and authored roster/setup data;
+- deterministic spawn registration/order and valid placement;
+- reset semantics for living/dead enemies, projectiles, reservations, reactions, warnings, health and player state;
+- player-death/checkpoint integration boundary;
+- developer spawn/reset/health controls and provenance;
+- named 1/2/3/5-enemy representative fixtures;
+- machine-validatable invariants versus human-play authority;
+- capture/replay evidence format;
+- cumulative Issue #104 acceptance and Gate 2 enemy/encounter closure.
 
 ## Remaining Issue #104 sequence
-9. disengage/reset/leash/re-entry;
 10. spawn/reset/debug fixture + cumulative closure.
 
 ## Governing constraints
-Camera will not rescue crowd design. Player combat authority is settled. Enemy gameplay properties cannot come from animation alone. Engine AI/animation/navigation primitives are implementation options, not policy. C++ first. No retail runtime AI/model/API dependency. Human play remains final authority. Clean-room IP rules apply.
+Camera will not rescue crowd design. Player combat authority is settled. Enemy gameplay properties cannot come from animation alone. C++ first. No retail runtime AI/model/API dependency. Human play remains final authority. Clean-room IP rules apply.
 
 Movement: **Simple intention, capable character, honest world.**  
 Camera: **The player should look at Orra, not babysit the camera.**  
 System IDE: **Build the system and its in-game IDE together.**
-
-## Mechanical documentation debt — not design debt
-Camera `docs/28`/`docs/36` and combat `docs/49` remain temporary safe companion/register extensions awaiting normal-git consolidation. Do not reopen locked semantics because of bookkeeping.
