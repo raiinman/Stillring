@@ -98,9 +98,9 @@ For movement/camera/traversal work:
 - retain authored traversal progression rather than automatically adopting universal climb-everything traversal;
 - do not infer exact speeds, timings, camera distances, animation shapes, geometry, reticles, or input layouts from Zelda games.
 
-`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` is the implementation-facing locomotion authority. Numeric values explicitly left to Gate 1 tuning may be tuned through the approved prototype/human-play process, but Claude may not reinterpret the locked behavior class while tuning them.
+`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` is the **final-owner-approved implementation-facing locomotion authority**. Numeric values explicitly left to Gate 1 tuning may be tuned through the approved prototype/human-play process, but Claude may not reinterpret the locked behavior class while tuning them.
 
-Issue #1 remains the owner-acceptance gate for the locomotion package. **Do not treat an open final owner-review item as permission to redesign locomotion.** If final owner review has not closed Issue #1, movement implementation must not outrun that gate.
+Issue #1 records completed owner acceptance of the locomotion package. Locomotion implementation may proceed under `docs/20` once the tracking issue is closed, but implementation and tuning do **not** reopen semantic design freedom. If a genuinely new locomotion semantic gap appears, return it to design authority instead of choosing an Unreal/common-industry/Zelda default.
 
 Camera framing, look response, collision behavior, and target-selection presentation remain Issue #2 authority even where locomotion specifies when a movement reference/state changes.
 
@@ -117,7 +117,7 @@ Examples:
 - guard/evade feel;
 - traversal-tool behavior.
 
-Issue #1 locomotion semantics were completed under an explicit locomotion-only owner delegation and are now recorded in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`; final package acceptance remains owner-controlled.
+Issue #1 locomotion semantics and final package review were completed under explicit owner authority and are recorded in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` and `docs/18_PROJECT_DECISION_REGISTER.md`.
 
 For any other pending owner decision, do not pick the Unreal default, common-industry answer, or Zelda answer and call it settled. Implement only the specifically authorized hypothesis or return the unresolved choice to design authority.
 
