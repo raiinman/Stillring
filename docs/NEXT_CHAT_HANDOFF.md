@@ -2,13 +2,13 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#6 are LOCKED. Next fresh decision: **#7 enemy reaction / stun / poise / guard-break model if retained**.
+**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#7 are LOCKED. Next fresh decision: **#8 archetype coordination + encounter composition**.
 
 ## Read first
 1. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 2. Camera authority `docs/22`–`docs/36`
 3. Player combat authority `docs/37`–`docs/49`
-4. Encounter authority `docs/50`–`docs/55`
+4. Encounter authority `docs/50`–`docs/56`
 5. `ROADMAP.md`
 6. GitHub Issue #104
 
@@ -26,25 +26,24 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 4. **Shield/armor** — `docs/53`: directional stateful shield, no hidden durability/posture, flank + Heavy `ShieldDisplaced` + attack `Exposure` + Perfect Guard tempo as valid answers, normal MajorCommit offense.
 5. **Telegraph/readability** — `docs/54`: Ready → committed Telegraph → Active → Recovery semantic grammar; body/world-space evidence first; no mandatory colored attack-ring language; no critical audio/color/vibration-only information; committed tells do not casually lie; danger direction matches presentation; gameplay owns Active, animation notifies synchronize/present; Major+Pressure overlap must remain separable; IDE validates threat timelines and animation/gameplay mismatch.
 6. **Offscreen / occluded threats** — `docs/55`: fresh ordinary high-salience melee/shield commits require meaningful visibility; already-honest committed attacks continue if the player looks away; hard occlusion is stricter than merely offscreen; real projectiles persist after launch; ranged PressureCommit is offscreen-presentation-gated; optional directional threat indicator may expose coarse direction/urgency but not radar-like hidden enemy identity/position; UI/audio/haptics/accessibility remain supplemental; camera never steers for secondary threats.
+7. **Enemy reaction / interrupt** — `docs/56`: no universal posture/stun meter; damage and reaction are separate; player attacks declare `ImpactForce`, enemy states declare explicit `ReactionResistance`; Light acknowledges impact but does not erase commitments; Heavy is baseline `Disrupt` against ordinary eligible commitments; shield front still uses `ShieldDisplaced`; Perfect Guard earns tempo rather than universal stun; large enemies require explicit state resistance rather than blanket boss armor; reaction retrigger protection prevents stun-lock; interrupted commits clean threat/reservation state.
 
-## Next fresh decision — #7 enemy reaction / stun / poise / guard-break model if retained
+## Next fresh decision — #8 archetype coordination + encounter composition
 Core question:
-> **When Neris hits an enemy, what actually earns interruption, stagger, displacement, guard break, or continued commitment—and which of those systems do we really need?**
+> **How should melee, ranged, shield, and later specialist enemies share space and roles so encounters feel intentionally composed rather than like a random bag of AI actors?**
 
 Research independently. Resolve:
-- whether Stillring needs a universal hidden poise/stun meter at all;
-- ordinary hit reactions versus true gameplay interrupts;
-- light/heavy/Perfect Guard interaction with enemy commitment;
-- archetype-specific resistance without unexplained immunity;
-- shield-specific state integration from Decision #4;
-- boss/large-enemy boundary without blanket super armor;
-- repeated-hit stun lock prevention;
-- reaction readability and recovery ownership;
-- encounter commit cleanup when an attacker is interrupted;
-- Combat/Encounter IDE and red-team fixtures.
+- role/lane composition without rigid party slots;
+- minimum/maximum useful archetype overlap;
+- how melee pressure, ranged fire corridors, and shield denial complement rather than stack unfairly;
+- approach/pressure occupancy and arena topology;
+- when duplicate archetypes are healthy versus repetitive;
+- difficulty scaling through composition/behavior before raw concurrency;
+- spawn/reinforcement fairness boundaries without final wave scripting;
+- how target lock/camera limits constrain composition;
+- Combat/Encounter IDE composition diagnostics and red-team fixtures.
 
 ## Remaining Issue #104 sequence
-7. enemy reaction/stun/poise/guard-break if retained;
 8. archetype coordination + encounter composition;
 9. disengage/reset/leash/re-entry;
 10. spawn/reset/debug fixture + cumulative closure.
