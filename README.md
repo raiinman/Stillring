@@ -40,7 +40,7 @@ The game is built around five pillars:
 - `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` — player-control lineage/reasoning: the problems Stillring learns from Zelda without copying expression.
 - `docs/18_PROJECT_DECISION_REGISTER.md` — living index proving where durable project decisions are recorded so chat history is never required as authority.
 - `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — secondary traversal research input; not design authority.
-- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` — detailed Gate 1 locomotion behavior, accessibility implications, tuning boundaries, and canonical human feel test.
+- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` — final-owner-approved Gate 1 locomotion behavior, accessibility implications, tuning boundaries, and canonical human feel test.
 - `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` — shared in-game developer shell + per-system IDE/workbench contract so Stillring can be authored, tuned, inspected, validated, reset, and iterated while the game is running.
 - `docs/story/` — final scene, reveal, objective, dialogue, character, regional, pacing, recurrence, and side-interaction narrative contracts.
 - `game/` — Unreal project root; intentionally skeletal until Gate 1 bootstrap.
@@ -119,8 +119,8 @@ When a conversation settles a durable project decision, that decision is migrate
 
 The beginning-to-end story, scene/reveal/objective/dialogue contracts, regional living-world material, completion model, canon-to-play process, developer QA contract, Unreal technical direction, modern player-control lineage, and decision-capture workflow are established.
 
-**Issue #1 locomotion semantics are fully specified and repository-reconciled, pending final owner review/acceptance.** The detailed contract and canonical five-minute-per-input-profile feel gate live in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`.
+**Issue #1 locomotion is fully specified, repository-reconciled, and FINAL OWNER APPROVED.** The exact contract and canonical five-minute-per-input-profile feel/regression gate live in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`.
 
 The in-game **System IDE architecture is also locked** in `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`; Gate 1 establishes the shared developer-shell pattern with the Locomotion IDE, and later systems must plug into the same architecture as they are built.
 
-After final owner acceptance of Issue #1, the next design work is **Issue #2 camera specification**, followed by Claude's Gate 1 Unreal bootstrap. Production-scale world construction remains blocked until the graybox control foundation proves itself through human play.
+The next player-feel design work is **Issue #2 camera specification**, followed by Claude's Gate 1 Unreal bootstrap once camera authority is similarly complete. Production-scale world construction remains blocked until the graybox control foundation proves itself through human play.

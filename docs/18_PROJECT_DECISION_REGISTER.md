@@ -91,7 +91,8 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 | D-049N | LOCKED | Target-lock locomotion is target-relative with player-owned spacing: forward/back radial movement, left/right strafe/orbit, no auto-orbit/distance autopilot, no exploration Sprint, and Jump remains Jump rather than a hidden contextual evade. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
 | D-049O | LOCKED | Locomotion accessibility includes remapping, Hold/Toggle Sprint, configurable movement dead zones/outer saturation, no mashing/QTE locomotion, and a Digital Precision option for digital input. These change input ergonomics, not authored traversal eligibility. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
 | D-049P | LOCKED | Gate 1 locomotion uses a canonical representative five-minute **per input profile** human feel test with hard semantic-fail conditions. Human feel may reject locomotion even when automated checks pass, and the test is a regression gate after material movement/traversal/input/animation/route changes. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
-| D-049Q | PENDING OWNER REVIEW | Final owner acceptance of the reconciled Gate 1 locomotion package remains pending. This does **not** reopen the individually locked locomotion rules above; Issue #1 remains open until the owner completes the package review. | Issue #1, `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049Q | LOCKED | Final owner review/acceptance of the reconciled Gate 1 locomotion package is complete. The owner explicitly authorized the last red-team edge cases to be walked through and auto-approved before Issue #1 closure. | Issue #1, `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` |
+| D-049R | LOCKED | Final edge-case closures: ordinary unsupported ground edges have no invisible edge guard; deliberate ledge/ladder release cannot immediately auto-recatch/remount the released attachment without genuine separation/new valid approach; and target-lock jump air correction remains target-relative, freezing the last stable target-relative frame if lock disappears before landing. | `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`, Issue #1 |
 
 ---
 
@@ -107,6 +108,8 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 | D-055 | LOCKED | Developer tooling is production infrastructure and must grow alongside the game instead of being deferred until content becomes expensive to replay. | `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md`, `ROADMAP.md` |
 | D-056 | LOCKED | Important state-heavy scenarios use named, version-controlled test presets rather than undocumented magic saves or arbitrary flag mutation. | `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` |
 | D-057 | LOCKED | Feature creep receives its full integration cost: UI, save, accessibility, controller, tests, balance, content, regression, docs, binary assets, and maintenance. “Claude can code it quickly” is not enough. | `docs/15_CANON_TO_PLAY_PIPELINE.md`, `docs/07_INITIAL_BACKLOG.md` |
+| D-058 | LOCKED | **Build the system and its in-game IDE together.** Major gameplay/content systems that require repeated tuning, authoring, state inspection, reproduction, or validation must receive a dedicated development-only System IDE workbench registered into one shared in-game developer shell. IDE debt counts as feature debt. | `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`, Issue #58, `CLAUDE.md` |
+| D-059 | LOCKED | System IDE live changes distinguish canonical values, temporary session overrides, staged changes, and promoted changes; deliberate promotion must return to reviewable repository-backed authority or explicit binary evidence. System IDEs are excluded/hard-disabled in Shipping and introduce no runtime AI/API dependency. | `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`, Issue #58 |
 
 ---
 
@@ -139,7 +142,7 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 | ID | Status | Decision | Detailed authority |
 |---|---|---|---|
-| D-080 | LOCKED | High-impact player-feel choices are walked through with the owner **one meaningful decision at a time** rather than hidden inside a large implementation dump. A specifically delegated bounded workstream may proceed without repeated pauses when the owner explicitly grants that authority, but final review requirements remain binding. | `docs/03_PRODUCTION_WORKFLOW.md`, Issues #1/#2 and later feel-spec issues |
+| D-080 | LOCKED | High-impact player-feel choices are walked through with the owner **one meaningful decision at a time** rather than hidden inside a large implementation dump. A specifically delegated bounded workstream may proceed without repeated pauses when the owner explicitly grants that authority; if the owner explicitly authorizes auto-approval for named final-review items, that instruction may close those named items after they are individually walked through and documented. | `docs/03_PRODUCTION_WORKFLOW.md`, Issues #1/#2 and later feel-spec issues |
 | D-081 | LOCKED | A conversational suggestion does not become permanent design merely because it was proposed. Accepted rules, prototype hypotheses, and unresolved questions are labeled distinctly. | this register, `docs/03_PRODUCTION_WORKFLOW.md` |
 | D-082 | LOCKED | When a conversation settles a durable project decision, the same workstream should migrate it into the repository before proceeding far enough that future work could depend on chat memory. | `docs/03_PRODUCTION_WORKFLOW.md` |
 
@@ -156,16 +159,17 @@ The 2026-09-04 audit/reconciliation checked the major project decisions against 
 - bounded implementation-agent authority;
 - human versus machine QA boundaries;
 - developer console/named test-state/machine-action requirements;
+- the in-game System IDE architecture and the rule that IDE debt counts as feature debt;
 - vertical-slice-first production;
 - Unreal Engine 5.8 migration;
 - Claude as primary implementation agent;
 - C++-first / thin-Blueprint architecture;
 - Unreal binary authority and heavy-system opt-in rules;
 - modern Zelda design-lineage conclusions for movement/camera/traversal;
-- the complete Gate 1 locomotion semantic package and canonical five-minute human feel gate in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
+- the complete final-owner-approved Gate 1 locomotion semantic package and canonical five-minute human feel gate in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
 - the owner-review/conversation-to-repository capture protocol.
 
-At this reconciliation boundary, **locomotion semantics no longer depend on chat memory or stale unresolved lists**. The only remaining Issue #1 owner item is final review/acceptance of the reconciled package. Camera remains a separate Issue #2 workstream.
+At this boundary, **Gate 1 locomotion authority is final-owner-approved and reconstructable from the repository**. Issue #1 can close. Camera remains the next separate Issue #2 design workstream. Gate 1 implementation must build the Locomotion IDE alongside locomotion under `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`.
 
 ---
 

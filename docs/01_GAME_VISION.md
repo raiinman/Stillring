@@ -12,7 +12,7 @@ The detailed, implementation-facing Gate 1 locomotion contract lives in:
 
 - `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
 
-Issue #1 tracks final locomotion owner acceptance. Camera-specific authority remains Issue #2.
+Issue #1 records the completed final locomotion owner review. Camera-specific authority remains Issue #2.
 
 The governing idea is:
 
@@ -25,13 +25,15 @@ Vision-level movement commitments:
 - Neris has an always-available modest deliberate jump and an unlimited ordinary-travel Sprint with no stamina/resource tax;
 - Sprint is separate from combat evade, supports Hold/Toggle, remains highly steerable, and carries believable extra momentum only where it helps physical weight;
 - ordinary stairs, small steps, floor lips, and minor terrain should disappear beneath movement rather than create accidental platforming;
+- ordinary unsupported edges obey deliberate movement intent rather than using an invisible cliff guard; careful approach/stopping control and coyote time provide safety/forgiveness without making Neris disobey edgeward input;
 - low-obstacle mantle, reachable-ledge catch, authored ladders, surface swimming, slope response, fall consequence, and target-lock locomotion use the explicit intent/state rules in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
+- deliberate ledge/ladder release cannot immediately auto-recatch/remount the same released attachment from unchanged overlap; release must mean release;
 - Neris does **not** have universal/free climbing, baseline underwater free-diving, or a generic baseline crouch/stealth posture;
 - broader traversal comes from clearly authored structures, tools, or later capabilities with a consistent visible world language;
 - meaningful cliffs, height gates, submerged spaces, and route obstacles remain part of puzzle/progression geography instead of being erased by universal traversal;
 - animation sells weight but does not own ordinary locomotion timing or delay acknowledgement of valid player intent;
 - movement input/accessibility may change ergonomics—remapping, dead-zone tolerance, Hold/Toggle, digital precision—but does not secretly expand authored traversal eligibility;
-- target lock changes movement into precise target-relative positioning without auto-orbit, auto-distance maintenance, or hidden combat autopilot;
+- target lock changes movement into precise target-relative positioning without auto-orbit, auto-distance maintenance, or hidden combat autopilot; ordinary target-lock jumps keep a stable target-relative air-control frame so lock loss cannot reinterpret held movement midair;
 - the world must communicate traversal affordances honestly: if something reasonably looks traversable/interactable, the expected action should work or the exception should be visibly understandable.
 
 Exact speeds, acceleration values, angles, reach envelopes, coyote/buffer windows, fall thresholds, animation cadence, and related numeric values remain Gate 1 tuning unless `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` explicitly states otherwise. Tuning may refine feel; it may not silently change the locked movement grammar.
