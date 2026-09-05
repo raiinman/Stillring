@@ -37,8 +37,10 @@ The game is built around five pillars:
 - `docs/10_COMPLETION_MODEL.md` through `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md` — completion, authored optional content, 100% route, upgrades, and mastery authority.
 - `docs/15_CANON_TO_PLAY_PIPELINE.md` — source-of-truth pipeline: **CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY**.
 - `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` — developer console, named state presets, structured bug capture, and offline machine-assisted QA contract.
-- `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` — modernized movement/camera/traversal lessons from the full 3D Zelda lineage, with explicit separation between locked principles and prototype hypotheses.
+- `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` — player-control lineage/reasoning: the problems Stillring learns from Zelda without copying expression.
 - `docs/18_PROJECT_DECISION_REGISTER.md` — living index proving where durable project decisions are recorded so chat history is never required as authority.
+- `docs/19_ASSASSINS_CREED_MOVEMENT_LINEAGE_RESEARCH.md` — secondary traversal research input; not design authority.
+- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` — detailed Gate 1 locomotion behavior, accessibility implications, tuning boundaries, and canonical human feel test.
 - `docs/story/` — final scene, reveal, objective, dialogue, character, regional, pacing, recurrence, and side-interaction narrative contracts.
 - `game/` — Unreal project root; intentionally skeletal until Gate 1 bootstrap.
 
@@ -108,6 +110,8 @@ When a conversation settles a durable project decision, that decision is migrate
 
 **Gate 0 — narrative/design foundation complete; engine migrated to Unreal Engine 5.8 before Gate 1.**
 
-The beginning-to-end story, scene/reveal/objective/dialogue contracts, regional living-world material, completion model, canon-to-play process, developer QA contract, Unreal technical direction, modern Zelda control-lineage principles, and decision-capture workflow are established.
+The beginning-to-end story, scene/reveal/objective/dialogue contracts, regional living-world material, completion model, canon-to-play process, developer QA contract, Unreal technical direction, modern player-control lineage, and decision-capture workflow are established.
 
-The next work is **owner-led Issue #1 locomotion specification, one physical capability decision at a time**, followed by Issue #2 camera specification, then Claude's Gate 1 Unreal bootstrap. Production-scale world construction remains blocked until the graybox control foundation proves itself.
+**Issue #1 locomotion semantics are fully specified and repository-reconciled, pending final owner review/acceptance.** The detailed contract and canonical five-minute-per-input-profile feel gate live in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`.
+
+After final owner acceptance of Issue #1, the next design work is **Issue #2 camera specification**, followed by Claude's Gate 1 Unreal bootstrap. Production-scale world construction remains blocked until the graybox control foundation proves itself through human play.
