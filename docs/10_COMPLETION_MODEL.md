@@ -1,58 +1,145 @@
 # 10 — Stillring 100% Completion Model
 
 **Status:** canonical completion contract  
-**Updated:** 2026-09-05  
-**Related:** `docs/11_QUEST_AND_COMPLETION_LEDGER.md`, `docs/12_100_PERCENT_ROUTE.md`, `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`, `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md`, `docs/89`–`docs/104`
+**Related:** `docs/11_QUEST_AND_COMPLETION_LEDGER.md`, `docs/12_100_PERCENT_ROUTE.md`, `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`, `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md`
 
-This document defines what **100% completion means** for Project Stillring. Completion Decisions #1–#16 are incorporated here; `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md` owns aggregation/reporting details.
+This document defines what **100% completion means** for Project Stillring.
 
----
-
-# 1. Completion philosophy
-
-Stillring's 100% route is authored content, not map debris. Every completion-bearing item must teach/retest a verb, reveal meaningful world/character information, reopen a remembered place, improve a learned capability, create/pay off a cross-region dependency, visibly affect a community, or provide worthwhile mastery.
-
-Locked rules:
-- new verbs reopen curated remembered spaces;
-- visible world promises are preferable to immediate map icons;
-- optional content deepens the story without carrying mandatory story logic alone;
-- legitimate authored branches are not morality-graded;
-- random drops, repetitive grind, arbitrary currency totals, and replay score optimization never bear completion;
-- 100% changes specificity and visible consequence, not the canonical ending itself;
-- completion must remain auditable in-game without requiring an external guide.
+The detailed named content lives in docs 11–14. This file owns the rules, shipping category counts, and completion semantics.
 
 ---
 
-# 2. Shipping completion taxonomy
+# 1. Goal
 
-There are **16 top-level completion buckets**.
+Stillring should support a satisfying, auditable 100% playthrough without turning Orra into an icon vacuum.
 
-| # | Category | Shipping target | Global completion identity |
-|---:|---|---:|---|
-| 1 | Main Story | 1 complete route | 1 bucket item |
-| 2 | Local Repair Contracts | 24 | 24 equal items inside bucket |
-| 3 | Cross-state Setup/Payoff chains | 12 | 12 equal items inside bucket |
-| 4 | Bellwright Refuges | 11 | 11 equal items inside bucket |
-| 5 | Resonance Faults | 36 | 36 equal items inside bucket |
-| 6 | Pulse Shards | 18 | 18 equal items inside bucket |
-| 7 | Cantor Patterns | 9 | 9 equal items inside bucket |
-| 8 | Tool Mastery Upgrades | 14 | 14 equal items inside bucket |
-| 9 | Skill Trials | 9 | 9 equal items inside bucket |
-| 10 | Micro-vaults / maintenance cavities | 24 | 24 equal items inside bucket |
-| 11 | Testimonies / Records | 32 | 32 equal items inside bucket |
-| 12 | The Unstandard Tool | 12 internal stages | **1 quest-family item** |
-| 13 | Drift Knots | 12 | 12 equal items inside bucket |
-| 14 | Optional Elite Encounters | 8 | 8 equal items inside bucket |
-| 15 | Community Disconnection Projects | 6 | 6 equal items inside bucket |
-| 16 | Broken Standard Yard | 7 internal commissions | **1 mastery-complex item** |
+Completion content must do at least one of these jobs:
 
-Non-bearing: repeatable scores, personal bests, ordinary currency/materials, random drops, mutually exclusive dialogue variants, replay optimization.
+1. teach or retest a game verb;
+2. reveal character/world information;
+3. make an old place newly useful;
+4. improve a capability the player already understands;
+5. create a cross-region dependency;
+6. visibly affect a community or credits-state montage;
+7. pay off an earlier authored choice;
+8. provide a mastery challenge worth doing for its own sake.
+
+If content does none of those things, it is filler and should be cut even if cutting changes a target count.
 
 ---
 
-# 3. Stable completion IDs
+# 2. Completion philosophy
 
-Completion uses semantic authored IDs, never scene paths, coordinates, translated strings, display names, or Blueprint instance identity.
+## C1 — 100% is authored from pre-production
+
+Every region receives its completion inventory before production lock.
+
+Do not finish the main route and then scatter collectibles into empty corners because the world feels sparse.
+
+## C2 — New verbs reopen remembered spaces
+
+Every major verb must create a curated revisit wave.
+
+The player should periodically think:
+
+> I remember somewhere this could work.
+
+The game may help with regional category counts later, but should not immediately convert each new verb into a map covered in icons.
+
+## C3 — Visible promises beat invisible chores
+
+Whenever practical, gated optional content is seen before it is reachable:
+
+- a service hatch above a broken span;
+- a flooded pressure housing;
+- an odd hollow return from a wall;
+- a route strip with no active skiff;
+- a contradictory reflection;
+- an unstable Hush seam.
+
+The player remembers the world instead of reading a shopping list.
+
+## C4 — 100% must deepen story
+
+Stillring's optional content is part of the narrative fabric.
+
+A completionist should know:
+
+- more workers by name;
+- more consequences of Meridian standardization;
+- more of Tessa's route network;
+- more of Ilyra and Maelor's research history;
+- more regional practices that survive the collapse;
+- more specific reasons decentralization is difficult but possible.
+
+The critical path remains understandable without those details.
+
+## C5 — No hidden morality grading
+
+A repair contract counts when it reaches a resolved authored state.
+
+100% does not require the developer's preferred moral choice.
+
+Different decisions may alter later work, routes, people, dialogue, or credits images.
+
+## C6 — No random or grind completion
+
+100% must never require:
+
+- random rare drops;
+- repeated gambling/loot rolls;
+- arbitrary currency accumulation after all purchases are complete;
+- perfect leaderboard times unless one explicit mastery threshold is authored;
+- repeatable enemies killed a certain number of times with no story/system purpose.
+
+## C7 — No single 'true ending'
+
+The canonical ending is the same core ending for a critical-path player and a 100% player:
+
+- Meridian's central heart is destroyed;
+- forced synchronization ends;
+- the Hush settles into local seams;
+- Maelor survives to face trial;
+- communities inherit responsibility for their own systems;
+- Neris leaves as a traveling bellwright.
+
+100% changes **specificity and visible consequence**, not whether the player earned the morally correct universe.
+
+---
+
+# 3. Shipping completion taxonomy
+
+The counts below are the current shipping content budget.
+
+They are canonical enough for planning and persistence IDs. They may change only through an explicit content-budget decision that updates docs 10–14 together.
+
+| Category | Shipping target | 100% bearing? | Canonical detail source |
+|---|---:|---|---|
+| Main story | 1 complete route | yes | Story Bible + doc 12 |
+| Local Repair Contracts | 24 | yes | doc 11 |
+| Cross-state Setup/Payoff chains | 12 | yes | doc 11 |
+| Bellwright Refuges | 11 | yes | doc 11 |
+| Resonance Faults | 48 | yes | doc 11 |
+| Pulse Shards | 28 | yes | doc 11 |
+| Cantor Patterns | 9 | yes | doc 13 |
+| Tool Mastery Upgrades | 14 | yes | doc 13 |
+| Skill Trials | 9 | yes | doc 14 |
+| Micro-vaults / maintenance cavities | 30 | yes | doc 11 |
+| Testimonies / field records | 32 | yes | doc 11 |
+| Prestige craft quest | 12 stages | yes | doc 14 |
+| Drift Knot traversal hunt | 12 targets | yes | doc 14 |
+| Optional elite encounters | 8 | yes | doc 14 |
+| Community disconnection projects | 6 | yes | doc 14 / story route |
+| Mastery complex | 1 | yes | doc 14 |
+| Repeatable score improvement | unlimited | no | activity-specific |
+| Currency / ordinary materials | variable | no | economy design |
+| Random drops | variable | no | never completion-bearing |
+
+---
+
+# 4. Stable completion IDs
+
+Completion state is stored by semantic authored ID, not by scene-tree paths or display strings.
 
 Canonical families:
 
@@ -75,160 +162,280 @@ community.<region>.<slug>
 mastery.broken_standard_yard
 ```
 
-Semantic-ID changes require explicit versioned migration.
+Display names may change without save migration.
+
+Semantic IDs should not change once save compatibility matters unless a migration is supplied.
 
 ---
 
-# 4. Core category rules
+# 5. Core category rules
 
-## 4.1 Resonance Faults — 36
-Persistent authored local synchronization defects. Grammar: **diagnose → reconcile**. They are not tokens. K01 Field Memory settles at **6/36** Faults; K02 Fine Fork settles at **24/36**. See `docs/90`, `docs/97`, `docs/104`.
+## 5.1 Resonance Faults — 48
 
-## 4.2 Pulse Shards — 18
-Unique complete field-harness reinforcement inserts. No collect-four conversion and no health/stamina purchase split. See `docs/91`.
+Resonance Faults are persistent local synchronization defects.
 
-## 4.3 Bellwright Refuges — 11
-Authored local workshops/emergency stations. Discovery plus the canonical activation/resolution predicate counts. See `docs/95`.
+They are the broad exploration track, but are not generic floating tokens.
 
-## 4.4 Repair Contracts — 24
-Person/community problems expressed through bellwright work. Exactly 2 are critical-path and 22 optional; a legitimate resolved authored outcome counts regardless of moral branch. See `docs/92`.
+A Fault may require diagnosis, a major verb, a particular world state, environmental timing, a multi-tool interaction, or understanding from a testimony or pattern.
 
-## 4.5 Cross-state Setup/Payoff chains — 12
-An early authored setup stores a world fact whose later consequence becomes visible after the relevant state transition. Completion requires the later payoff state, not a prescribed early choice. Detailed authority continues under Issue #9.
+Threshold rewards arrive during the journey and improve current exploration. The authored ledger may tune exact threshold values during playtest, but the progression must include early fault-family recognition, regional unresolved-count assistance, at least one Cantor diagnostic improvement, one late exploration-quality improvement, and a final narrative/service acknowledgement.
 
-## 4.6 Cantor Patterns — 9
-Reusable operational procedures, not memorized note-string keys. Exactly 3 are story-required and 6 optional. See `docs/96`.
+## 5.2 Pulse Shards — 28
 
-## 4.7 Tool Mastery Upgrades — 14
-Optional qualitative capability/handling changes, never percentage-stat filler or hidden critical-path requirements. See `docs/97`.
+Pulse Shards reinforce Neris's field harness/resonance tolerance at refuges.
 
-## 4.8 Skill Trials — 9
-One qualifying semantic mastery clear each. Rank, leaderboard, par time, perfection, and repeated clears do not affect 100%. See `docs/98`.
+They are deliberately not shaped/presented as hearts and do not use a four-pieces-equals-one-heart rule.
 
-## 4.9 Micro-vaults — 24
-Compact authored maintenance spaces with one strong spatial/mechanical proposition, normally 1–5 minutes of core challenge. See `docs/93`.
+Their upgrade curve is a tuning problem for prototyping.
 
-## 4.10 Testimonies / Records — 32
-Eight meaningful evidence sets. Records may become active systemic evidence rather than passive lore text. See `docs/94`.
+## 5.3 Bellwright Refuges — 11
 
-## 4.11 The Unstandard Tool — 1 global quest-family item
-All **12 authored stages remain required internally**. Stages 1–11 are nested progress and never add global percentage independently. Stage 12 plus final reward settlement satisfies the single prestige bucket item. See `docs/99`, `docs/104`.
+Refuges are authored local workshops/emergency stations.
 
-## 4.12 Drift Knots — 12
-Deterministic authored moving route faults; no RNG/replay grind. Hunt eligibility begins at **10 reconciled Faults plus existing story/Line Skiff gates**. Route Listener is awarded after 12/12 and remains bounded to route-class unresolved service. See `docs/100`, `docs/104`.
+Discovery/resolution counts toward completion.
 
-## 4.13 Optional Elite Encounters — 8
-One-time authored system exams. No health-sponge/gear-grind qualification; supported accessibility/difficulty configurations earn identical completion. See `docs/101`.
+They are not magical cave shrines.
 
-## 4.14 Community Disconnection Projects — 6
-Regional replacement systems proving Unringing through local action. One completion item per operationally validated project; prerequisites are not double-counted. See `docs/102`.
+## 5.4 Repair Contracts — 24
 
-## 4.15 Broken Standard Yard — 1 global mastery-complex item
-All **7 internal commissions** must earn qualifying clears, but they do not add seven global items. The Yard tests adaptation, not endurance; commissions persist independently and optional score/perfection never affects 100%. See `docs/103`, `docs/104`.
+A contract is a person/community problem expressed through bellwright work.
+
+100% requires the contract to reach a resolved state, not a prescribed moral outcome.
+
+## 5.5 Cross-state Setup/Payoff chains — 12
+
+A setup stores an authored pre-Grand-Ring action whose consequence becomes visible after Stillness.
+
+Completion requires reaching the later payoff state.
+
+The early choice may alter what the payoff problem is.
+
+## 5.6 Cantor Patterns — 9
+
+Patterns are reusable operational tuning procedures.
+
+They are not melodies and should never become memorized note-string keycards.
+
+Every shipping pattern has at least three authored uses outside its acquisition scene.
+
+## 5.7 Tool Mastery Upgrades — 14
+
+Major verbs come from the critical path.
+
+Optional upgrades expand possibility, control, or combination—not only numeric power.
+
+## 5.8 Skill Trials — 9
+
+First completion at the authored mastery threshold counts.
+
+Faster times / higher scores beyond that threshold do not affect 100%.
+
+## 5.9 Micro-vaults — 30
+
+Each compact space should contain one strong 1–5 minute authored idea.
+
+Do not ship thirty reskinned caves.
+
+## 5.10 Testimonies / field records — 32
+
+Records are grouped into meaningful sets rather than a pile of lore notes.
+
+A set may produce active systemic payoff through Palinode, Witness Interval, quest options, or final testimony context.
+
+## 5.11 The Unstandard Tool — 12 stages
+
+The complete prestige quest is required for 100%.
+
+Every stage contains diagnosis, craft, traversal, relationship work, or mechanical action.
+
+Walking an arbitrary object from NPC A to NPC B is not enough.
+
+The reward is the **Freehand Frame** and its unique stance/repair interactions.
+
+## 5.12 Drift Knots — 12
+
+Drift Knots are moving route synchronization faults pursued with the Line Skiff and later verbs.
+
+They are authored/deterministic after unlock.
+
+No random waiting for a spawn.
+
+## 5.13 Optional elites — 8
+
+Elites test combinations the critical path does not require.
+
+Each must have a mechanical identity beyond inflated health/damage.
+
+## 5.14 Community disconnection projects — 6
+
+One major project per region proves the Unringing is something communities **do**, not merely something Neris announces.
+
+All six are required for 100% but not required to reach the canonical ending.
+
+## 5.15 Broken Standard Yard — 1 mastery complex
+
+The mastery complex is the optional synthesis exam.
+
+Completion requires clearing the authored threshold once.
+
+Score optimization afterward does not affect 100%.
 
 ---
 
-# 5. Regional allocation contract
+# 6. Regional allocation contract
+
+Current global allocation from doc 11:
 
 | Region / phase | Contracts | Setups | Refuges | Faults | Pulse | Vaults | Records |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Brindle / Cairnspire / First Circuit | 5 | 3 | 3 | 6 | 3 | 5 | 6 |
-| Rootmere | 4 | 2 | 1 | 5 | 3 | 4 | 4 |
-| Saltreach | 4 | 2 | 1 | 5 | 3 | 3 | 4 |
-| Emberstep | 4 | 2 | 1 | 5 | 3 | 3 | 4 |
-| High Aerie | 3 | 1 | 2 | 4 | 2 | 3 | 4 |
-| Mireglass | 2 | 1 | 1 | 4 | 2 | 2 | 4 |
-| Cairnfall | 2 | 1 | 1 | 4 | 1 | 2 | 3 |
-| Still-Cairn / Null Meridian | 0 | 0 | 1 | 3 | 1 | 2 | 3 |
-| **Total** | **24** | **12** | **11** | **36** | **18** | **24** | **32** |
+| Brindle / Cairnspire / First Circuit | 5 | 3 | 3 | 8 | 5 | 6 | 6 |
+| Rootmere | 4 | 2 | 1 | 7 | 4 | 4 | 4 |
+| Saltreach | 4 | 2 | 1 | 7 | 4 | 4 | 4 |
+| Emberstep | 4 | 2 | 1 | 7 | 4 | 4 | 4 |
+| High Aerie | 3 | 1 | 2 | 6 | 3 | 3 | 4 |
+| Mireglass | 2 | 1 | 1 | 6 | 3 | 3 | 4 |
+| Cairnfall | 2 | 1 | 1 | 5 | 3 | 3 | 3 |
+| Still-Cairn / Null Meridian | 0 | 0 | 1 | 2 | 2 | 3 | 3 |
+| **Total** | **24** | **12** | **11** | **48** | **28** | **30** | **32** |
 
-Allocation is a production budget, not a demand for equal regional density.
-
----
-
-# 6. Revisit-wave requirement
-
-Every major verb must create meaningful old-space payoffs in multiple earlier locations. Region planning must explicitly record relevant changes after base-kit exploration, Anchor Line, Glasslung Reed, Temper Gauntlet, Grand Ring/Stillness, Line Skiff, Vane Cloak, Palinode Pattern, Mirror Nail, seam mode, and Unringing.
+This allocation is a production budget, not an instruction that every region should feel equally dense.
 
 ---
 
-# 7. Completion aggregation and display
+# 7. Revisit-wave requirement
 
-Each of the 16 top-level buckets contributes exactly **6.25%** globally. Within a multi-item bucket, canonical items divide that bucket equally.
+No major region reaches production-complete status with blank revisit responsibilities.
 
-This is deliberately not raw-ID weighting. High-count families do not dominate the save percentage merely because they contain more authored entries.
+Each region's planning sheet must explicitly record what changes after base-kit exploration, Anchor Line, Glasslung Reed, Temper Gauntlet, Grand Ring / Stillness, Line Skiff, Vane Cloak, Palinode Pattern, Mirror Nail, seam mode, and the Unringing.
 
-Display rules:
-- global percentage uses one decimal place;
-- category pages show exact `resolved / total`;
-- an incomplete save that would round upward is capped at **99.9%**;
-- **100.0% appears only when all 16 buckets are fully satisfied and story completion is settled**;
-- percentage is derived from authoritative facts, never trusted as cached save truth.
+Not every region needs content for every verb.
+
+Every major verb does need meaningful old-space payoffs in multiple earlier locations.
 
 ---
 
-# 8. Completion-assist policy
+# 8. 100% route timing
 
-Completion help is progressive and bounded:
-1. natural world discovery;
-2. regional/category accounting once supporting Refuge/courier/archive infrastructure exists;
-3. authored physical hints tied to landmarks, sectors, or environmental state;
-4. stronger player-chosen accessibility/navigation assistance.
+The canonical spoiler route is doc 12.
 
-Using supported assistance never invalidates completion.
+Completion is intentionally braided through the story rather than deferred.
 
-The ledger distinguishes undiscovered, known unresolved, resolved, unavailable-by-current-state, and development-only audit mismatch. Late accounting may expose remaining counts without spoiling undiscovered quest outcomes or exact secret coordinates.
+Broad sweep rhythm:
 
-Route Listener and D06 remain bounded services, not universal treasure radar. See `docs/104`.
-
----
-
-# 9. Persistence, migration, and audit
-
-Authoritative facts remain owned by Story, Quest, World State, Player/Tool Progression, Mastery, Traversal, Encounter, and Record systems. Completion Ledger is a deterministic reconciliation/read model.
-
-The save compatibility envelope uses an explicit schema/custom version and semantic migrations for rename/split/merge/retire/add operations. Migration is idempotent.
-
-Development/System IDE audits must detect missing source facts, orphaned facts, contradictory facts, duplicate semantic identity, nested leakage, version mismatch, and canonical count mismatch. Retail behavior fails conservatively: never manufacture 100%, duplicate permanent rewards, or destroy recoverable save data.
+1. **Opening / First Circuit:** learn completion language, leave visible promises unresolved.
+2. **Anchor wave:** revisit remembered structural points.
+3. **Glasslung wave:** reopen pressure/water content.
+4. **Temper wave:** reopen material-state content, but story urgency limits cleanup before Grand Ring.
+5. **Changed-world wave:** see payoff of early authored choices.
+6. **Vane / Palinode wave:** vertical and historical reinterpretation.
+7. **Mirror wave:** largest optional reopening; old places gain committed echo-state content.
+8. **Seam-mode wave:** deepest dual-layer access and late Drift Knot tiers.
+9. **Unringing:** natural full-world completion sweep before Null Meridian.
+10. **Null Meridian:** final allocated completion content and story completion.
 
 ---
 
-# 10. Point of no return and postgame
+# 9. Completion-assist policy
 
-Null Meridian clearly warns before commitment and reports whether unresolved world content remains. The player may finish without 100%.
+A player pursuing 100% must be able to determine **what categories remain** without external websites.
 
-After credits, completion cleanup may return to a **pre-Null-Meridian world-state checkpoint**. This is a convenience save state, not a canon timeline where Meridian was destroyed and restored.
+The game does not have to reveal exact coordinates for every secret.
 
-100% should be naturally achievable before the finale except for intentionally allocated Null Meridian content and the story-complete flag.
+Early game journal tracking may show discovered items while leaving regional totals unknown.
 
----
+By the Unringing, Tessa's courier network and Bellwright Refuge records should provide a regional unresolved-category board.
 
-# 11. Definition of 100%
+After Ending is learned, specialists may provide stronger physical hints such as:
 
-A save is 100% complete only when all 16 top-level buckets are fully satisfied, including:
-- credits reached;
-- all 24 Contracts resolved;
-- all 12 Setup/Payoff chains paid off;
-- all 11 Refuges resolved;
-- all 36 Faults reconciled;
-- all 18 Pulse Shards acquired/settled;
-- all 9 Patterns acquired;
-- all 14 Tool Mastery Upgrades acquired;
-- all 9 Skill Trials qualifying-cleared;
-- all 24 Micro-vaults resolved;
-- all 32 Records settled;
-- all 12 Unstandard Tool stages complete and final quest-family settlement/reward complete;
-- all 12 Drift Knots reconciled;
-- all 8 Optional Elites resolved;
-- all 6 Community Projects operationally validated;
-- all 7 Broken Standard Yard commissions qualifying-cleared and final Yard settlement complete.
+> “The missing fault sounds downstream of the widow's ferry when river load is high.”
 
-100% never requires maximum currency/material stacks, replay optimization, perfect times, every dialogue variant, mutually exclusive branch outcomes on one save, random drops, or external knowledge.
+Accessibility settings may permit stronger map assistance.
 
 ---
 
-# 12. System IDE / change control
+# 10. Save-file percentage
 
-Build the Completion System and its in-game IDE together. The workbench must expose canonical bucket counts/weights, semantic IDs, owner facts, known/resolved state, nested/global relationships, exact contribution, thresholds, assist tier, save version/migrations, audit findings, and the Canonical Missing-Item Audit defined in `docs/104`.
+A plain percentage may appear on save select/status for players who want it.
 
-Any completion-bearing addition/removal/count change must update this model, the affected detailed catalogs/routes, save-schema/migration authority, regional content plans, and deterministic fixtures together. Never change one shipping count in isolation.
+Normal in-world presentation uses authored records:
+
+- work orders;
+- refuge stamps;
+- fault journal;
+- field records;
+- tool catalog;
+- courier route ledger;
+- community disconnection board.
+
+The percentage is computed from completion-bearing authored items, not playtime or currency.
+
+Category weighting should avoid one single 48-item track dominating the entire displayed percentage simply because it contains many IDs.
+
+---
+
+# 11. Point of no return and postgame
+
+Null Meridian should clearly warn the player before committing to the finale.
+
+At that point the completion journal must state whether unresolved world content remains.
+
+The player may continue the story without 100%.
+
+After credits, a save can return to a **pre-Null-Meridian world-state checkpoint** for completion cleanup if the player wants it.
+
+This is a convenience save state, not a canon timeline where Meridian was destroyed and then magically restored for free roam.
+
+100% should be achievable naturally **before** the finale except for completion-bearing content intentionally located inside Null Meridian and the story-complete flag itself.
+
+---
+
+# 12. Credits-state policy
+
+Optional completion affects credits through authored consequence.
+
+Examples include repaired local warning systems, named workers restored to records, independent courier routes, community heat/water/navigation practices, visible Freehand Frame variants, open archives, and additional testimony at Maelor's trial.
+
+No completion state grants a hidden golden universe where every consequence disappears.
+
+---
+
+# 13. Definition of 100%
+
+A save is **100% complete** when:
+
+- the main story has reached credits;
+- every shipping item in every category marked **yes** in the completion taxonomy has reached its resolved/completed authored state;
+- all 12 cross-state chains have reached a payoff state regardless of which legitimate early branch was chosen;
+- all six community projects are complete;
+- The Unstandard Tool has reached Stage 12 and the Freehand Frame is assembled;
+- all 12 Drift Knots are reconciled;
+- all 8 elite encounters are cleared;
+- Broken Standard Yard's completion threshold is cleared;
+- all final-dungeon completion-bearing content is resolved.
+
+100% does **not** require:
+
+- maximum currency;
+- every ordinary material stack;
+- perfect minigame times beyond mastery marks;
+- every dialogue variant;
+- every mutually exclusive branch outcome on one save;
+- repeated random drops;
+- external knowledge.
+
+---
+
+# 14. Change-control rule
+
+Any addition or removal of a completion-bearing category/item must update, as applicable:
+
+- this document;
+- `docs/11_QUEST_AND_COMPLETION_LEDGER.md`;
+- `docs/12_100_PERCENT_ROUTE.md`;
+- `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`;
+- `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md`;
+- save-schema documentation;
+- relevant regional content sheet;
+- tests/fixtures once implemented.
+
+Never change a shipping count in one document and leave the rest inconsistent.
