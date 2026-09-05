@@ -2,13 +2,13 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#4 are LOCKED; Decision #5 is finalizing in the current branch. Next fresh decision after merge: **#6 offscreen / occluded threat rules + optional communication**.
+**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#6 are LOCKED. Next fresh decision: **#7 enemy reaction / stun / poise / guard-break model if retained**.
 
 ## Read first
 1. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 2. Camera authority `docs/22`–`docs/36`
 3. Player combat authority `docs/37`–`docs/49`
-4. Encounter authority `docs/50`–`docs/54`
+4. Encounter authority `docs/50`–`docs/55`
 5. `ROADMAP.md`
 6. GitHub Issue #104
 
@@ -24,26 +24,26 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 2. **Melee pressure** — `docs/51`: broad pressure bands/occupancy, honest start conditions, real whiffs, no magnetism/input reading, Recovery/Yield.
 3. **Ranged pressure** — `docs/52`: visible non-homing projectile, honest fire corridor, bounded lead frozen at launch, conditional readable Standard Shot `PressureCommit`, no offscreen cheat/kiting.
 4. **Shield/armor** — `docs/53`: directional stateful shield, no hidden durability/posture, flank + Heavy `ShieldDisplaced` + attack `Exposure` + Perfect Guard tempo as valid answers, normal MajorCommit offense.
-5. **Telegraph/readability** — `docs/54`, FINALIZING / LOCKED ON MERGE: Ready → committed Telegraph → Active → Recovery semantic grammar; body/world-space evidence first; no mandatory colored attack-ring language; no critical audio/color/vibration-only information; committed tells do not casually lie; danger direction matches presentation; gameplay owns Active, animation notifies synchronize/present; Major+Pressure overlap must remain separable; IDE validates threat timelines and animation/gameplay mismatch.
+5. **Telegraph/readability** — `docs/54`: Ready → committed Telegraph → Active → Recovery semantic grammar; body/world-space evidence first; no mandatory colored attack-ring language; no critical audio/color/vibration-only information; committed tells do not casually lie; danger direction matches presentation; gameplay owns Active, animation notifies synchronize/present; Major+Pressure overlap must remain separable; IDE validates threat timelines and animation/gameplay mismatch.
+6. **Offscreen / occluded threats** — `docs/55`: fresh ordinary high-salience melee/shield commits require meaningful visibility; already-honest committed attacks continue if the player looks away; hard occlusion is stricter than merely offscreen; real projectiles persist after launch; ranged PressureCommit is offscreen-presentation-gated; optional directional threat indicator may expose coarse direction/urgency but not radar-like hidden enemy identity/position; UI/audio/haptics/accessibility remain supplemental; camera never steers for secondary threats.
 
-## Next fresh decision — #6 offscreen / occluded threat rules
+## Next fresh decision — #7 enemy reaction / stun / poise / guard-break model if retained
 Core question:
-> **When may an enemy the player cannot meaningfully see begin or continue an attack, and what warning is enough without making the camera or UI omniscient?**
+> **When Neris hits an enemy, what actually earns interruption, stagger, displacement, guard break, or continued commitment—and which of those systems do we really need?**
 
-Research independently after #5 merges. Resolve:
-- distinction between attack beginning offscreen versus an already-committed attack moving offscreen;
-- hard occlusion versus merely outside frame;
-- melee and projectile rules separately;
-- whether/when directional threat indicators are justified;
-- indicator information boundary (direction/timing/type) without target omniscience;
-- audio + visual alternatives/accessibility;
-- camera #6/#13 authority and no forced camera steering;
-- PressureCommit eligibility implications;
-- no attacks through meaningful opaque geometry;
-- Combat/Encounter IDE and adversarial tests.
+Research independently. Resolve:
+- whether Stillring needs a universal hidden poise/stun meter at all;
+- ordinary hit reactions versus true gameplay interrupts;
+- light/heavy/Perfect Guard interaction with enemy commitment;
+- archetype-specific resistance without unexplained immunity;
+- shield-specific state integration from Decision #4;
+- boss/large-enemy boundary without blanket super armor;
+- repeated-hit stun lock prevention;
+- reaction readability and recovery ownership;
+- encounter commit cleanup when an attacker is interrupted;
+- Combat/Encounter IDE and red-team fixtures.
 
 ## Remaining Issue #104 sequence
-6. offscreen/occluded threat rules;
 7. enemy reaction/stun/poise/guard-break if retained;
 8. archetype coordination + encounter composition;
 9. disengage/reset/leash/re-entry;
