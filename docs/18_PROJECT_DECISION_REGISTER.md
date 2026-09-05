@@ -1,7 +1,7 @@
 # 18 — Project Decision Register
 
 **Status:** living authority index  
-**Audit date:** 2026-09-04  
+**Audit date:** 2026-09-05  
 **Purpose:** ensure settled Project Stillring decisions do not exist only in chat history, model memory, or editor state.
 
 This file is an **index**, not a supersession layer. Detailed authority remains in the linked source documents. If this register and a detailed authority file ever disagree, fix the inconsistency instead of treating this register as a patch.
@@ -138,6 +138,23 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 ---
 
+## Persistent world-state / save authority
+
+| ID | Status | Decision | Detailed authority |
+|---|---|---|---|
+| D-090 | LOCKED | Canonical save identity is a project-owned semantic GUID attached to authored game meaning; Actor/runtime/path/package/Data-Layer identities are not canonical persistence keys and persistent GUIDs are never recycled. | `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`, Issue #4 |
+| D-091 | LOCKED | Every durable fact has one gameplay owner. The Save Coordinator orchestrates snapshots/serialization but does not own quest, world, inventory, completion, encounter, Hush, or checkpoint truth. | `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md` |
+| D-092 | LOCKED | Save Schema v1 is an explicit typed semantic aggregate with global/section/record versions, stable RecordKinds independent of UObject paths, deterministic canonical ordering, sparse/default rules, and a development human-readable canonical export. | `docs/83_SAVE_SCHEMA_V1_STRUCTURE_ADDENDUM.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md` |
+| D-093 | LOCKED | Released saves migrate forward only through explicit deterministic versioned transforms; newer saves are never guessed/downgraded by older code; retired persistent IDs retain explicit Alias/Retire/Split/Merge/tombstone dispositions. | `docs/84_SAVE_VERSION_MIGRATION_POLICY_ADDENDUM.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md` |
+| D-094 | LOCKED | A logical playthrough preserves verified recovery generations; a new candidate cannot destroy the last known good state before successful publication/validation, and malformed/incompatible saves are contained rather than repaired by inventing progression. | `docs/85_SAVE_INTEGRITY_RECOVERY_ADDENDUM.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md` |
+| D-095 | LOCKED | Stillring autosaves meaningful durable progress and supports manual save at safe semantic boundaries. Active combat, in-flight Hush seams, unsafe traversal, unsettled transactions, and other transient states defer save instead of serializing half-state. | `docs/86_SAVE_SLOT_CADENCE_RETRY_ADDENDUM.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md` |
+| D-096 | LOCKED | Death/retry uses an authored Retry Checkpoint Snapshot distinct from the latest durable disk generation; death itself is not a disk-save trigger and combat transient state never becomes persistence authority. | `docs/47_GATE2_COMBAT_DEATH_RETRY_ADDENDUM.md`, `docs/86_SAVE_SLOT_CADENCE_RETRY_ADDENDUM.md` |
+| D-097 | LOCKED | Hush persistence saves semantic layer/facts once and reconstructs current presentation; Data Layer/streaming/seam/collision-handoff process state is not canonical save truth. | `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`, `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`, `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md` |
+| D-098 | LOCKED | Save / World-State System IDE operates on semantic identities, owners, snapshots, fixtures, migrations, recovery chains, validation, and capture through authoritative services; fault/mutation interfaces are development-only and excluded from Shipping. | `docs/87_SAVE_WORLD_STATE_IDE_ADDENDUM.md`, `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` |
+| D-099 | LOCKED | Issue #4 save/world-state **design** is cumulatively closed by `docs/88`; runtime paired-layer save/exit/reload proof, platform durability, packaged Shipping exclusion, and human save/recovery UX remain implementation/verification obligations rather than claimed evidence. | `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`, Issue #4 |
+
+---
+
 ## Owner-review / conversation capture protocol
 
 | ID | Status | Decision | Detailed authority |
@@ -148,28 +165,18 @@ This file is an **index**, not a supersession layer. Detailed authority remains 
 
 ---
 
-# Audit coverage — 2026-09-04
+# Audit coverage — 2026-09-05
 
-The 2026-09-04 audit/reconciliation checked the major project decisions against repository authority, including:
-- story red-team/final canonical scene, reveal, objective, dialogue, regional, recurrence, side-interaction, and 100% contracts;
-- the “every major location is worth visiting before catastrophe” rule;
-- rejection of runtime AI/API-credit gameplay gimmicks;
-- the finished-game-backward production model;
-- CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY;
-- bounded implementation-agent authority;
-- human versus machine QA boundaries;
-- developer console/named test-state/machine-action requirements;
-- the in-game System IDE architecture and the rule that IDE debt counts as feature debt;
-- vertical-slice-first production;
-- Unreal Engine 5.8 migration;
-- Claude as primary implementation agent;
-- C++-first / thin-Blueprint architecture;
-- Unreal binary authority and heavy-system opt-in rules;
-- modern Zelda design-lineage conclusions for movement/camera/traversal;
-- the complete final-owner-approved Gate 1 locomotion semantic package and canonical five-minute human feel gate in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
-- the owner-review/conversation-to-repository capture protocol.
+The project decision register now includes durable authority for:
+- story/canon and lived-world principles;
+- modern Zelda design-lineage guardrails;
+- final Gate 1 locomotion authority;
+- source-of-truth and in-game System IDE workflow;
+- Unreal 5.8 / C++-first implementation boundaries;
+- no-retail-AI/runtime-model boundary;
+- the complete Issue #4 persistent world-state/save design: semantic GUID identity, one-owner state taxonomy, Save Schema v1, migration, integrity/recovery generations, manual/autosave cadence, authored retry snapshots, Hush semantic persistence, and Save / World-State IDE.
 
-At this boundary, **Gate 1 locomotion authority is final-owner-approved and reconstructable from the repository**. Issue #1 can close. Camera remains the next separate Issue #2 design workstream. Gate 1 implementation must build the Locomotion IDE alongside locomotion under `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`.
+Issue #4 design is reconstructable from `docs/81`–`docs/88`. Its runtime paired-layer save/exit/reload verification remains an implementation gate and is not claimed complete here.
 
 ---
 
