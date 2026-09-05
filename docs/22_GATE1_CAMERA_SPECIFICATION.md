@@ -82,7 +82,7 @@ If ordinary exploration makes the player repeatedly rotate or zoom merely to reg
 ### Manual-input authority
 - while the player is deliberately moving the camera, that manual camera intent has priority over ordinary camera assistance;
 - camera assistance must not visibly fight, counter-steer, or immediately undo active right-stick/mouse input;
-- releasing camera input does **not by itself** command a snap or recenter; automatic yaw behavior is a separate Decision #3 authority;
+- releasing camera input does **not by itself** command a snap or recenter;
 - moving Neris does not by itself cancel the manually chosen camera angle except where a later explicit approved assistance/state rule says otherwise.
 
 ### Framing continuity
@@ -106,11 +106,70 @@ The baseline orbit passes when:
 
 ---
 
+## 3. Automatic yaw recentering while moving — LOCKED
+
+### Core rule
+Stillring uses **conditional soft yaw follow**, not constant recentering and never an automatic hard snap.
+
+The camera may quietly help follow sustained travel when the current view has become poor at showing the player's direction of movement, but it may not decide what the player wants to look at.
+
+### Manual authority
+- while the player is actively moving the camera with right stick or mouse, automatic yaw follow is fully suppressed;
+- any new manual camera input immediately cancels an active automatic follow correction;
+- releasing manual camera input does not itself command a recenter;
+- the manually chosen view is preserved for a grace period before any follow assistance may begin;
+- exact grace-period timing remains Gate 1 tuning.
+
+### When soft follow may occur
+Automatic yaw follow may begin only when all relevant conditions support it, including:
+- Neris is in sustained ordinary movement rather than standing still;
+- the player is not actively manipulating the camera;
+- the travel direction has meaningfully diverged from the current view for long enough that route visibility is degraded;
+- no higher-priority explicit camera state owns composition.
+
+Small course corrections should produce little or no camera response. Stronger and more sustained travel-direction changes may justify stronger assistance.
+
+### When soft follow does not occur
+- standing still does not trigger automatic yaw recentering;
+- looking sideways or backward while intentionally moving forward is not automatically treated as an error;
+- careful movement near ledges, mechanisms, interactions, or precision traversal should use extremely weak or no automatic yaw follow;
+- automatic yaw follow does not alter camera pitch, exploration distance, Neris's movement direction, or locomotion authority;
+- camera assistance never teleports, snaps, or instantaneously places the view directly behind Neris.
+
+### Movement-context scaling
+- open sustained travel and Sprint may tolerate somewhat stronger follow assistance than careful movement;
+- lower-speed precision movement should preserve the chosen view more aggressively;
+- exact activation angle, delay, yaw speed, damping, and movement-speed scaling remain Gate 1 prototype tuning.
+
+### Accessibility / preference boundary
+The final camera settings must provide a way to reduce or completely disable ordinary automatic yaw follow. An **Off/Never** behavior is a legitimate player preference, not a debug-only exception.
+
+Exact settings presentation and sensitivity/accessibility grouping remain part of later Decision #17 authority.
+
+### Research basis / boundary
+This decision is informed by:
+- the Zelda lineage's history of explicit/manual camera centering and later free-camera ownership;
+- modern third-person games that separate camera follow strength, auto-adjust delay, and recenter assistance rather than treating one omnipresent autocamera as mandatory;
+- camera-design practice that preserves a manually chosen view before smoothly transitioning back toward ordinary follow behavior.
+
+Research supports a conditional assistance layer with player override. It does not justify copying another game's exact delay, angle threshold, follow speed, or damping.
+
+### Player-facing acceptance
+The behavior passes when:
+1. manual camera input always wins immediately;
+2. intentional sideways/backward viewing while moving remains possible;
+3. sustained travel can receive quiet help without the player feeling the camera being stolen;
+4. careful ledge/interaction movement does not trigger unwanted view rotation;
+5. no ordinary automatic yaw correction ever snaps;
+6. an eventual Off/Never setting can remove ordinary yaw-follow assistance without breaking camera-relative locomotion.
+
+---
+
 ## Remaining Issue #2 owner-review sequence
 
 1. ~~default exploration distance/height philosophy~~ — **LOCKED**
 2. ~~horizontal/vertical orbit behavior~~ — **LOCKED**
-3. automatic yaw recentering while moving — **PENDING OWNER REVIEW**
+3. ~~automatic yaw recentering while moving~~ — **LOCKED**
 4. manual recenter action behavior — **PENDING OWNER REVIEW**
 5. camera collision compression/recovery — **PENDING OWNER REVIEW**
 6. occlusion priority when player/target cannot both remain visible — **PENDING OWNER REVIEW**
