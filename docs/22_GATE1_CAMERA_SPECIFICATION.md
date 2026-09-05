@@ -294,6 +294,88 @@ Camera collision passes when:
 
 ---
 
+## 6. Occlusion priority when player and target cannot both remain visible — LOCKED
+
+### Core readability hierarchy
+Stillring uses a strict readability hierarchy:
+1. **Neris and her immediate movement/footing remain the highest visual priority.**
+2. A currently locked target is the next priority when the world physically permits both to remain readable.
+3. Meaningful opaque world geometry remains honest; target readability does not grant supernatural visibility through solid cover.
+
+When ideal composition is impossible, the camera sacrifices perfect target centering before sacrificing Neris's basic readability or violating world geometry.
+
+### Target-lock readability
+- target lock should normally keep the Neris ↔ target relationship legible rather than requiring the target to remain dead-center;
+- the camera may use available framing room within later-approved lock-on composition rules, but ordinary target occlusion does not authorize a violent automated orbit around architecture;
+- Decision #5 camera collision continues to solve where the camera may physically exist, independently from whether the target has line of sight;
+- target occlusion never rotates or repositions Neris to preserve framing.
+
+### Honest hard occluders
+Meaningful opaque structures remain visually authoritative, including walls, closed doors, substantial pillars, cliff faces, and comparable cover.
+
+- these objects do not automatically fade merely because they block a target;
+- Stillring does not display a target's exact body, pose, animation, or movement through hard world cover;
+- the camera does not swing around a hard occluder solely to manufacture impossible line of sight;
+- a target indicator may communicate that an already-established lock is temporarily **occluded**, but it may not become an x-ray representation of the target's exact hidden state.
+
+### Fade-eligible foreground clutter
+Small/decorative foreground objects may be explicitly authored as **camera-fade eligible** when their visual role is not meaningful cover and they repeatedly block critical readability.
+
+Examples may include selected foliage, cloth, thin decorative pieces, or other authored foreground clutter.
+
+- fade eligibility is explicit data/authoring, not a blanket material rule;
+- hard structural world geometry is not implicitly fade eligible;
+- exact fade amount, transition timing, material treatment, and eligible content classes remain Gate 1/production tuning and art implementation subject to this semantic boundary.
+
+### Temporary target occlusion grace
+Brief hard occlusion does not immediately destroy an existing lock.
+
+- an established lock enters a short **occluded grace state** when line of sight is temporarily lost;
+- a brief post, corner, doorway edge, animation crossover, or similar momentary interruption should not cause rapid lock/unlock flicker;
+- exact grace duration and reacquisition tolerances remain Gate 1 tuning;
+- while grace is active, the camera preserves ordinary readable composition without chasing the hidden target around geometry.
+
+### Sustained hard occlusion
+If hard occlusion persists beyond the valid grace/lock conditions:
+- target lock breaks cleanly;
+- the camera does not contort itself around architecture to keep the target artificially visible;
+- target-relative locomotion exits according to the already-locked locomotion transition authority rather than being silently maintained against an invalid hidden target;
+- subsequent target acquisition must satisfy later-approved target-lock acquisition rules.
+
+### Encounter-design consequence
+Camera logic is not allowed to compensate for unreadable combat staging with wall vision. Enemy aggression, attack timing, and arena composition must respect what the player can reasonably see and interpret under this camera contract.
+
+### System IDE requirement
+The Camera / Targeting IDE must expose enough live evidence to diagnose occlusion behavior, including at minimum:
+- Neris visibility/readability state where measurable;
+- current target line-of-sight state;
+- occlusion duration;
+- current occluder identity/classification;
+- camera-fade eligibility/result;
+- lock state including visible / occluded-grace / broken;
+- reason an occluded lock was retained or broken.
+
+### Research basis / boundary
+This decision is informed by:
+- Zelda's target-lock lineage, where lock-on exists to preserve a readable player ↔ opponent relationship;
+- modern target-lock/accessibility systems that distinguish visible targets and allow temporary loss of perfect composition without requiring supernatural visibility;
+- camera design guidance warning against excessive camera movement merely to maintain line of sight;
+- modern camera systems that treat camera pull-in, obstacle rotation, and transparency/fading as distinct tools rather than one mandatory response.
+
+Research supports prioritizing player readability, preserving target relationship where physically honest, and separating temporary occlusion from sustained invalid lock. It does not justify copying another game's exact grace time, fade implementation, lock-break distance, or target-indicator presentation.
+
+### Player-facing acceptance
+Occlusion handling passes when:
+1. Neris and her immediate movement remain readable before perfect target centering is preserved;
+2. brief occlusion does not cause distracting lock flicker;
+3. meaningful walls/cover do not become x-ray windows;
+4. decorative fade-eligible clutter can stop obscuring critical readability without globally dissolving the world;
+5. sustained impossible line of sight breaks lock rather than forcing a violent camera orbit;
+6. target occlusion never repositions Neris or invents gameplay authority;
+7. combat staging remains responsible for attacks the player is expected to read.
+
+---
+
 ## Remaining Issue #2 owner-review sequence
 
 1. ~~default exploration distance/height philosophy~~ — **LOCKED**
@@ -301,7 +383,7 @@ Camera collision passes when:
 3. ~~automatic yaw recentering while moving~~ — **LOCKED**
 4. ~~manual recenter action behavior~~ — **LOCKED**
 5. ~~camera collision compression/recovery~~ — **LOCKED**
-6. occlusion priority when player/target cannot both remain visible — **PENDING OWNER REVIEW**
+6. ~~occlusion priority when player/target cannot both remain visible~~ — **LOCKED**
 7. cramped-room behavior — **PENDING OWNER REVIEW**
 8. low-ceiling behavior — **PENDING OWNER REVIEW**
 9. vertical-space behavior — **PENDING OWNER REVIEW**
