@@ -2,17 +2,18 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#4 are LOCKED under scheduled-run delegation.
+**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, and Gate 4 Waking/Hush design are COMPLETE / LOCKED. Gate 4 playable Unreal implementation/human acceptance remain UNVERIFIED. Issue #4 persistent world-state/save design is active; Decisions #1–#5 are LOCKED under scheduled-run delegation.
 
 ## Read first
 1. `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`
 2. `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`
 3. `docs/83_SAVE_SCHEMA_V1_STRUCTURE_ADDENDUM.md`
 4. `docs/84_SAVE_VERSION_MIGRATION_POLICY_ADDENDUM.md`
-5. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
-6. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
-7. `ROADMAP.md`
-8. GitHub Issue #4 — `Define persistent world-state and save schema`
+5. `docs/85_SAVE_INTEGRITY_RECOVERY_ADDENDUM.md`
+6. `docs/75_GATE4_HUSH_SAVE_RELOAD_ADDENDUM.md`
+7. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
+8. `ROADMAP.md`
+9. GitHub Issue #4 — `Define persistent world-state and save schema`
 
 Always re-check exact current `main` before repository writes.
 
@@ -34,22 +35,26 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 ### #4 — versioning and migration — LOCKED (`docs/84`)
 > **Released saves move forward only through explicit deterministic migrations. Older code never guesses at newer saves, and retired semantic IDs remain accounted for until no supported save can reference them.**
 
-Migrations run in memory from immutable source through ordered version steps, validate before gameplay reconstruction, never downgrade newer saves, never immediately destroy the source copy, and use explicit Alias/Retire/Split/Merge/tombstone semantics for persistent IDs/content evolution.
+### #5 — integrity/containment/recovery — LOCKED (`docs/85`)
+> **Stillring publishes new save generations without sacrificing the last verified one. When a generation cannot be understood honestly, it is contained—not guessed into existence.**
 
-### #5 — malformed/corrupt/incompatible save recovery — NEXT
+Newest candidates must pass storage/integrity/version/migration/semantic checks before promotion. A verified Last Known Good generation is preserved. Failures are classified, quarantined for diagnostics where possible, and never repaired by inventing quest/world/inventory/completion facts.
+
+### #6 — slot model, save triggers, retention cadence, death/retry interaction — NEXT
 Freshly research and decide:
-- integrity/corruption detection boundaries;
-- transactional write strategy and last-known-good preservation;
-- primary/backup/autosave relationships;
-- crash/interrupted-write behavior;
-- malformed semantic data vs unsupported-version vs missing-content distinctions;
-- quarantine/repair boundaries and when recovery must refuse to invent state;
-- player-facing recovery/communication;
-- developer diagnostics and canonical forensic export;
-- accessibility of recovery UI;
-- deterministic corruption/recovery fixtures.
+- logical playthrough slot model versus internal generations;
+- manual save availability and safe-boundary restrictions;
+- checkpoint/autosave trigger philosophy;
+- anti-save-spam / no-surprise-loss balance;
+- retention counts/rotation relationship to LKG;
+- whether Hush seam/combat/traversal transitions defer autosave;
+- death/retry relationship to disk save versus checkpoint snapshot;
+- new-game/overwrite/delete confirmations;
+- save indicator/status accessibility;
+- developer slot separation;
+- deterministic cadence/trigger fixtures.
 
-Do not decide final save-slot/autosave cadence UX until Decision #5 is individually closed.
+Do not close Issue #4 until this decision and a final cumulative/IDE/acceptance reconciliation are individually completed.
 
 ## Governing constraints
 - Unreal Engine 5.8.
