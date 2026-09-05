@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED. Camera Decisions #1–#11 OWNER APPROVED. Decisions #1–#9 are reconciled into cumulative `docs/22`; Decisions #10–#11 remain canonical in `docs/26` and `docs/27` pending ordered cumulative reconciliation. Camera #12 is the next owner decision.
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#11 OWNER APPROVED. Decisions #1–#9 are reconciled into cumulative camera authority; Decisions #10–#11 are canonical in their provenance addenda pending ordered reconciliation.
 
 ## Read first
 1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
@@ -13,101 +13,26 @@
 6. `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`
 7. `docs/26_GATE1_CAMERA_LOCK_ACQUISITION_ADDENDUM.md`
 8. `docs/27_GATE1_CAMERA_LOCK_FRAMING_ADDENDUM.md`
-9. GitHub Issue #2
-10. `docs/18_PROJECT_DECISION_REGISTER.md`
-11. `ROADMAP.md`
+9. GitHub Issue #2 — `Lock exploration and combat camera specification`
 
-Always check exact current `main` SHA before repository writes.
+Then check the exact current `main` SHA before creating a branch.
 
-# CRITICAL WORKFLOW — OWNER RESTORED
+## Immediate next work
+Before repository-finalizing Camera Decision #12, reconcile approved Decisions #10 and #11 into `docs/22_GATE1_CAMERA_SPECIFICATION.md` **in order**, marking both locked while preserving `docs/26` and `docs/27` as provenance.
 
-Stillring proceeds **one meaningful design decision at a time**.
+Then perform a fresh research pass and present **Camera Decision #12 — target-switch transition behavior** for owner review.
 
-The required loop is:
+Do not infer #12 from generic action-game controls. #12 owns switch gesture/directionality, eligible switch candidates, transition speed, confirmation, camera movement, cooldown/debounce, no-candidate behavior, and conflicts with #11 bounded manual composition nudge. Multiple-enemy framing remains #13 and large-boss framing #14.
 
-> **deep research for the current decision → present recommendation/options to owner → explicit owner approval → document canonical decision → inspect exact diff → merge → only then research the next decision**
-
-The owner's instruction to "work as long as possible" means continue doing as much useful work as possible **inside this loop**. It does **not** authorize batching unresolved decisions, assuming approval, jumping ahead into later systems, or beginning implementation before the applicable design package has been individually reviewed.
-
-Previous locomotion auto-approval delegation applied to locomotion only. It does not grant automatic approval for camera, combat, or later system policy.
-
-## Overnight deep-work correction
-During the 2026-09-05 overnight run, the assistant over-interpreted permission to continue working and:
-- created one batch research file covering Camera #12–#18;
-- created a Gate 1 implementation-readiness plan;
-- prepared Gate 2 combat research ahead of sequence;
-- drafted a UE5.8/System IDE implementation scaffold in PR #79.
-
-Those actions **do not change the owner-review workflow**.
-
-### PR #79
-PR #79 is CLOSED / NOT MERGED as premature implementation. Its branch may remain as exploratory scratch work, but it is not approved architecture, implementation authority, or a basis for further code work.
-
-### Batch research files
-The following files are **background notes only**:
-- `docs/research/CAMERA_DECISIONS_12_18_RESEARCH_PACKET.md`
-- `docs/research/GATE2_COMBAT_FRAME_RESEARCH_PACKET.md`
-- `docs/28_GATE1_IMPLEMENTATION_READINESS_PLAN.md`
-
-They must **not** be treated as completed individual research passes, approval packets, canonical policy, or permission to implement. When each decision/system is actually reached, perform a fresh focused research pass on that decision, verify sources/current engine context, present the result to the owner, and wait for approval before advancing.
-
-# Current exact next work
-
-## Camera Decision #12 — target-switch transition behavior
-This is the single current owner decision.
-
-Before presenting #12:
-1. perform a fresh focused deep study of target switching specifically;
-2. research current UE 5.8 capabilities and primary sources;
-3. study relevant shipped-game solutions at the design-problem level without copying exact expression;
-4. reconcile against locked Camera #10 acquisition and #11 Relationship Frame;
-5. cover controller and mouse input implications, switch-vs-manual-nudge conflict, candidate semantics, transition behavior, repeated inputs, no-candidate behavior, occlusion, vertical candidates, accessibility, failure cases, System IDE diagnostics, and representative tests;
-6. present one coherent recommendation package to the owner;
-7. do not mark #12 locked until explicit owner approval.
-
-### Required cumulative reconciliation
-Before repository-finalizing approved Camera #12, fold Camera #10 then Camera #11 into `docs/22_GATE1_CAMERA_SPECIFICATION.md` in order and mark both locked there while preserving `docs/26` and `docs/27` as provenance.
-
-A prior GitHub Actions helper attempt failed before creating a job and was removed. Do not repeat that helper approach blindly.
-
-# Camera authority summary
-1. Default exploration framing — LOCKED.
-2. Player-owned orbit — LOCKED.
-3. Conditional soft yaw follow — LOCKED.
-4. Manual recenter — LOCKED.
-5. Collision compression/recovery — LOCKED.
-6. Occlusion priority/grace — LOCKED.
-7. Close Quarters Camera — LOCKED.
-8. Ceiling-Constrained Camera — LOCKED.
-9. Vertical Context Assist — LOCKED.
-10. Lock-on acquisition transition — LOCKED; provenance `docs/26`, cumulative reconciliation pending.
-11. Dual-subject Relationship Frame — LOCKED; provenance `docs/27`, cumulative reconciliation pending.
-12. Target-switch transition behavior — **NEXT / PENDING OWNER REVIEW**.
-13–18. PENDING OWNER REVIEW and must be handled individually after #12.
-
-# After camera
-Do not jump straight from camera into implementation merely because background planning exists.
-
-When Issue #2 is fully resolved and reconciled, review the repository/roadmap with the owner and begin the next system using the same process:
-
-> **research one meaningful decision → owner approval → canonical documentation → next decision**
-
-For systems such as combat, puzzle/tool behavior, Hush architecture, save/world state, and other major production systems, research and lock their policy decisions individually before implementation depends on them.
-
-The System IDE remains first-class authority:
-> **Build the system and its in-game IDE together.**
-
-That requirement affects every later implementation plan, but it does not authorize implementation before system policy is approved.
-
-# Governing rules
+## Governing rules
 - Unreal Engine 5.8.
 - Claude primary implementation agent.
 - C++ first for gameplay/state authority; thin Blueprints.
 - No retail runtime AI/model/API dependency.
 - Pipeline: CANON → PRODUCTION → IMPLEMENTATION → VERIFICATION → PLAY.
 - Human play is authoritative for feel.
-- Research **before** every major design recommendation.
-- Do not let Unreal defaults, Claude, another game, or batch research decide unresolved Stillring policy.
+- Resolve one meaningful high-impact feel decision at a time unless the owner explicitly delegates otherwise.
+- Research **before** major design recommendations.
 
 Movement principle:
 > **Simple intention, capable character, honest world.**
@@ -115,14 +40,104 @@ Movement principle:
 Camera goal:
 > **The player should look at Orra, not babysit the camera.**
 
-System IDE rule:
+## System IDE rule
+`docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` is first-class authority.
+
 > **Build the system and its in-game IDE together.**
 
-## Recent relevant PRs
-- #76 — lock-on acquisition transition
-- #77 — established target Relationship Frame
-- #78 — batch background research/readiness notes; NON-CANONICAL
-- #79 — premature UE/System IDE scaffold; CLOSED / NOT MERGED
-- #80 — background Gate 2 combat research; NON-CANONICAL
+IDE debt counts as feature debt. Camera / Targeting must register in the shared dev-only shell and expose live state/rejection/tuning evidence for approved camera behavior.
 
-Resume with **Camera Decision #12 only**.
+## Camera decisions locked so far
+
+### #1 Default exploration framing
+Medium-wide, slightly elevated, full-body exploration view; Neris somewhat below center; enough footing plus forward-route/landmark visibility; stable through walk/run/Sprint; exact values remain tuning.
+
+### #2 Orbit
+360° player-owned yaw; generous bounded pitch; level horizon; camera input does not rotate Neris; manual input has priority; exact pitch limits/asymmetry remain tuning.
+
+### #3 Automatic yaw follow
+Conditional soft follow only. No hard snap. Manual input cancels assistance. Standing still does not auto-recenter. Careful movement receives little/none; open travel may receive more. Eventual Off/Never option required.
+
+### #4 Manual recenter
+Dedicated remappable action. Fast eased recovery of yaw + pitch. While moving, align behind stable travel direction; while stationary, behind Neris facing. Manual input cancels it. It never changes movement, target, or gameplay state.
+
+### #5 Collision compression / recovery
+Walls may shorten camera distance but do not steer it. Physical collision resolves promptly with a non-zero probe volume. Manual orbit stays authoritative while compressed. Outward recovery is smoother/slower with clearance stability + hysteresis. Camera-only blockers are allowed for pathological art collision.
+
+### #6 Occlusion priority
+Priority: Neris/readable movement first; established target second where physically honest; meaningful world geometry remains opaque/honest. Brief target LOS loss uses an occluded grace state. Sustained hard occlusion breaks lock instead of forcing camera around architecture. Explicit decorative clutter may be fade eligible.
+
+### #7 Cramped-room behavior
+Cumulative authority is reconciled into `docs/22`; provenance remains `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`.
+
+Stillring stays third-person. Severe compression changes composition, not control grammar. Close Quarters Camera may use small pivot/height/composition adjustments while preserving player yaw/pitch authority. No automatic first-person, fixed-camera, shoulder-aim, corridor snap, top-down, or aggressive FOV fallback. Neris may self-fade/dither only at pathological near-camera proximity. Ordinary rooms that force long severe compression fail camera review unless deliberately authored.
+
+Philosophy:
+> **When the room gets smaller, the camera gets closer—not stranger.**
+
+### #8 Low-ceiling behavior
+Cumulative authority is reconciled into `docs/22`; provenance remains `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`.
+
+Low ceilings constrain vertically before avoidable distance compression. Ceiling-Constrained Camera lowers the rig/pivot smoothly, preserves yaw and as much pitch as geometry permits, never queues blocked pitch, never auto-aims down tunnels, and uses hysteresis against overhead pumping. Remaining obstruction follows #5; severe compression follows #7.
+
+Philosophy:
+> **When the ceiling comes down, the camera comes down with it—not into Neris.**
+
+### #9 Vertical-space behavior
+Cumulative authority is reconciled into `docs/22`; provenance remains `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`.
+
+Grounded exploration uses **Vertical Context Assist**. Sustained ascent/descent first shifts Neris modestly in screen-space; only weak bounded delayed pitch assistance may follow. Manual input wins. Drop framing requires approach intent. Tall rooms do not auto-aim. Privileged puzzle/quest/secret metadata may not direct the camera.
+
+Philosophy:
+> **Make room for the height. Never aim on the player's behalf.**
+
+### #10 Lock-on acquisition transition
+Exact authority until reconciliation: `docs/26_GATE1_CAMERA_LOCK_ACQUISITION_ADDENDUM.md`.
+
+One immediate candidate evaluation; honest initial LOS; current camera/screen intent prioritized over mere closeness/facing; immediate target and target-relative locomotion commitment; Sprint exits via approved deceleration/pivot; one fast eased camera transition directly from current pose; no hidden recenter, hard snap, slowdown, freeze, FOV punch, or micro-cutscene; failed requests have no side effects; no silent retarget; #5/#6/#7/#8 remain authoritative.
+
+Philosophy:
+> **Lock the target instantly. Move the camera deliberately.**
+
+### #11 Lock-on framing distance / offset philosophy
+Exact authority until reconciliation: `docs/27_GATE1_CAMERA_LOCK_FRAMING_ADDENDUM.md`.
+
+Established ordinary lock-on uses a **dual-subject Relationship Frame**: show Neris, the locked target, and readable combat space between them. Target is soft-framed rather than hard-centered. Screen-space dead/soft/hard zones suppress jitter. Ordinary combat uses a canonical medium distance with modest capped separation-driven dolly, dead band + hysteresis, and essentially stable FOV. Camera adaptation is visual only and never maintains gameplay spacing. Player retains bounded manual composition nudge; exact control conflict with switching waits for #12/#17. #5/#6/#7/#8 remain physical/occlusion authority. Multiple enemies remain #13; bosses #14.
+
+Philosophy:
+> **Frame the relationship, not the reticle.**
+
+Practical test:
+> **Show Neris. Show the threat. Show the space between them.**
+
+## Remaining Issue #2 sequence
+1–11: LOCKED.  
+12. **target-switch transition behavior — NEXT / PENDING OWNER REVIEW**  
+13. multiple-enemy framing limits  
+14. large boss framing  
+15. jump/fall/mantle camera  
+16. camera shake/accessibility  
+17. sensitivity/inversion/mouse parity  
+18. aim/first-person/gyro if later proposed
+
+Anything unresolved remains **PENDING OWNER REVIEW**.
+
+## Recent camera PRs
+- #63 default exploration framing
+- #64 player-owned orbit
+- #65 conditional yaw follow
+- #66 manual recenter
+- #67 collision compression/recovery
+- #68 occlusion readability hierarchy
+- #69 cramped-room camera behavior
+- #70 reconcile cramped-room authority into cumulative spec
+- #71 low-ceiling camera behavior
+- #73 reconcile low-ceiling authority into cumulative spec
+- #74 vertical-space camera behavior
+- #75 reconcile vertical-space authority into cumulative spec
+- #76 lock-on acquisition transition
+
+Main immediately before the Decision #11 branch:
+`5e7444620b676586d52833cdc6ec10ef81a40346`
+
+Always re-check `main` next chat.
