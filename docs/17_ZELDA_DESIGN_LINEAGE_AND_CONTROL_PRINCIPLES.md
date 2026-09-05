@@ -96,10 +96,13 @@ That means:
 - low obvious obstacles do not demand a redundant context button;
 - a clearly intended reachable ledge does not demand a frame-perfect extra grab input;
 - dangerous release is explicit rather than inferred from ambiguous analog correction;
+- deliberate release cannot be immediately undone by the same traversal detector;
+- ordinary unsupported edges obey deliberate movement intent rather than secretly auto-braking;
 - interaction can flow from movement without magnetic snapping;
 - animation communicates weight without delaying valid input acknowledgement;
 - hardware drift is filtered before it becomes movement/traversal intent;
 - target lock changes movement reference for precision but does not secretly choose combat spacing;
+- a committed target-lock jump keeps a stable movement language through the air rather than reinterpreting held input when lock disappears;
 - accessibility may reduce input burden without changing puzzle geography.
 
 This is **not** the same as making traversal automatic. Important commitments remain player-owned.
@@ -134,14 +137,16 @@ The modern-Zelda lesson is **player trust and agency**, not removal of authored 
 
 ## 5. Current Gate 1 locomotion authority
 
-The full semantic movement grammar has been worked through and recorded in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`. Issue #1 remains open only for final owner review/repository closure, not because Claude is expected to invent missing locomotion policy.
+The full semantic movement grammar has been worked through, repository-reconciled, and **final-owner-approved** in `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`. Issue #1 records the completed design/review process; Claude is not expected to invent missing locomotion policy during implementation.
 
 High-level locked areas now include:
 - camera-relative analog ground movement with useful careful control;
+- ordinary unsupported-edge commitment with no invisible cliff guard;
 - unlimited explicit-request Sprint, separate from combat evade;
 - predictable modest deliberate jump with limited air correction plus short baseline coyote/buffer forgiveness;
 - intent-based automatic low-obstacle mantle;
 - reachable ledge catch → real hang → same-handhold shimmy → valid pull-up or explicit Drop/Release;
+- deliberate ledge/ladder release suppression against immediate same-attachment re-catch/remount;
 - no baseline universal/free climbing;
 - player-driven authored ladders with deliberate intent-based mounting, safe end exits, and explicit release;
 - competent surface swimming with no stamina/breath tax and no baseline free underwater diving;
@@ -153,6 +158,7 @@ High-level locked areas now include:
 - radial movement-stick dead zones, drift protection, analog speed bands, Sprint hysteresis, and digital diagonal normalization;
 - immediate intention acknowledgement with speed-dependent physical weight;
 - target-relative lock-on locomotion with player-owned spacing and no auto-orbit/autopilot;
+- stable target-relative airborne correction for target-lock jumps, including frozen last-valid frame if lock disappears before landing;
 - remapping, Hold/Toggle Sprint, Digital Precision, and other locomotion-facing accessibility rules that do not change authored traversal eligibility.
 
 This list is a **summary**, not a second implementation specification. If this file and `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` ever disagree on locomotion behavior, reconcile the files; do not let Claude select whichever wording is convenient.
@@ -169,6 +175,7 @@ The semantics are locked, but Gate 1 human play still tunes numeric/animation de
 - coyote and input-buffer windows;
 - mantle angle/dimension calibration tied to Neris's body scale;
 - ledge reach/catch/shimmy/clearance tolerances;
+- same-attachment release-separation thresholds;
 - ladder speed/alignment/cadence;
 - swim speed/drag/turn response;
 - slope angles/traction/slide authority;
@@ -183,6 +190,9 @@ Examples of **semantic failures**, not tuning:
 - Sprint adds a jump speed boost;
 - passing near a ladder mounts it;
 - shoulder-height geometry silently becomes ordinary auto-mantle;
+- an ordinary unsupported edge invisibly blocks deliberate walk-off;
+- deliberate Drop instantly re-catches/re-mounts the released attachment;
+- target-lock loss changes the meaning of held air correction mid-jump;
 - target lock auto-orbits or maintains distance;
 - a blocked water edge magnetically pulls Neris out;
 - controller drift triggers traversal;
@@ -218,7 +228,7 @@ The old insight that players should quickly stop thinking about controlling a 3D
 
 > **Within roughly five minutes, ordinary movement should stop being something the player consciously operates.**
 
-`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` now defines the canonical representative graybox course, five-minute-per-input-profile script, hard-fail conditions, tuning-versus-semantic-failure distinction, and required human verdict questions.
+`docs/20_GATE1_LOCOMOTION_SPECIFICATION.md` defines the canonical representative graybox course, five-minute-per-input-profile script, hard-fail conditions, tuning-versus-semantic-failure distinction, and required human verdict questions.
 
 Human play is authoritative. A green build/test suite cannot overrule “this feels slippery,” “this feels magnetic,” “I am fighting the controls,” or another material owner feel failure.
 
