@@ -16,8 +16,8 @@ Does Stillring need 30 completion-bearing Micro-vaults, and what keeps these com
 The existing 30-entry ledger contains strong authored premises, but the total completion taxonomy is already broad. A 30-vault category layered over 36 Faults, 24 Contracts, 18 Pulse Shards, records, trials, elites, refuges, setup/payoffs, community projects, and prestige content creates too much pressure to populate every corner with a named activity.
 
 Comparative research supports two useful design lessons:
-- Nintendo's Tears of the Kingdom makes caves numerous, discoverable world features and even provides map-state cues for explored caves. That works in a much larger exploration sandbox; Stillring's tighter 20–30 hour authored game should not inherit that density simply because caves are enjoyable. citeturn692805search3turn692805search0
-- Open-world design analysis distinguishes exploration-led spaces from activity-led maps where visible tasks pull the player around. Stillring's Micro-vaults should reward curiosity and remembered affordances rather than turn Orra into a checklist of pocket dungeons. citeturn692805search10
+- Nintendo's official Tears of the Kingdom material makes caves numerous, discoverable world features and provides map-state cues for explored caves. That works in a much larger exploration sandbox; Stillring's tighter 20–30 hour authored game should not inherit that density simply because caves are enjoyable.
+- GameDeveloper's analysis of exploration-led versus activity-led open worlds highlights how visible task density changes the player's relationship with space. Stillring's Micro-vaults should reward curiosity and remembered affordances rather than turn Orra into a checklist of pocket dungeons.
 
 ## Locked philosophy
 
