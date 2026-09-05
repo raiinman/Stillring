@@ -2,23 +2,24 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#7 OWNER APPROVED.
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#8 OWNER APPROVED.
 
 ## Read first
 1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
 2. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 3. `docs/22_GATE1_CAMERA_SPECIFICATION.md`
 4. `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`
-5. GitHub Issue #2 — `Lock exploration and combat camera specification`
+5. `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`
+6. GitHub Issue #2 — `Lock exploration and combat camera specification`
 
 Then check the exact current `main` SHA before creating a branch.
 
 ## Immediate next work
-Decision #7 is canonical in `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`. Before repository-finalizing Decision #8, fold Decision #7 into the cumulative `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark item #7 locked there.
+Decision #8 is canonical in `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`. Before repository-finalizing Decision #9, fold Decision #8 into the cumulative `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark item #8 locked there.
 
-Then perform a fresh research pass and present **Camera Decision #8 — low-ceiling behavior** for owner review.
+Then perform a fresh research pass and present **Camera Decision #9 — vertical-space behavior** for owner review.
 
-Do not infer #8 from cramped-room policy and do not let Claude/Unreal choose a default.
+Do not infer #9 from low-ceiling or cramped-room policy and do not let Claude/Unreal choose a default. Vertical shafts, tall rooms, steep drops, upper/lower route inspection, and targets far above/below may require their own composition and pitch-assistance rules.
 
 ## Governing rules
 - Unreal Engine 5.8.
@@ -64,17 +65,24 @@ Walls may shorten camera distance but do not steer it. Physical collision resolv
 Priority: Neris/readable movement first; established target second where physically honest; meaningful world geometry remains opaque/honest. Brief target LOS loss uses an occluded grace state. Sustained hard occlusion breaks lock instead of forcing camera around architecture. Explicit decorative clutter may be fade eligible.
 
 ### #7 Cramped-room behavior
-Exact authority: `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`.
+Cumulative authority is reconciled into `docs/22`; provenance remains `docs/23_GATE1_CAMERA_CRAMPED_ROOM_ADDENDUM.md`.
 
 Stillring stays third-person. Severe compression changes composition, not control grammar. Close Quarters Camera may use small pivot/height/composition adjustments while preserving player yaw/pitch authority. No automatic first-person, fixed-camera, shoulder-aim, corridor snap, top-down, or aggressive FOV fallback. Neris may self-fade/dither only at pathological near-camera proximity to prevent interior-mesh clipping. Leaving the space uses Decision #5 recovery. Ordinary rooms that force long severe compression fail camera review unless deliberately authored.
 
 Philosophy:
 > **When the room gets smaller, the camera gets closer—not stranger.**
 
+### #8 Low-ceiling behavior
+Exact authority until reconciliation: `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`.
+
+Low ceilings constrain the camera vertically before they compress it longitudinally. A Ceiling-Constrained Camera lowers the rig/pivot smoothly while preserving ordinary distance, player-owned yaw, and as much pitch as real geometry permits. Impossible pitch stops at the physical boundary with no queued-input snap. The camera does not automatically aim down tunnels, does not use low ceiling alone to trigger Neris fading or dramatic FOV changes, and uses hysteresis to avoid rafter/lintel accordion pumping. Remaining obstruction falls back to Decision #5 distance compression; severe distance compression invokes Decision #7 Close Quarters.
+
+Philosophy:
+> **When the ceiling comes down, the camera comes down with it—not into Neris.**
+
 ## Remaining Issue #2 sequence
-1–7: LOCKED.  
-8. **low-ceiling behavior — NEXT**  
-9. vertical-space behavior  
+1–8: LOCKED.  
+9. **vertical-space behavior — NEXT**  
 10. lock-on acquisition transition  
 11. lock-on framing distance/offset  
 12. target-switch transition  
@@ -94,8 +102,10 @@ Anything unresolved remains **PENDING OWNER REVIEW**.
 - #66 manual recenter
 - #67 collision compression/recovery
 - #68 occlusion readability hierarchy
+- #69 cramped-room camera behavior
+- #70 reconcile cramped-room authority into cumulative spec
 
-Main immediately before the Decision #7/handoff branch:
-`26166302eb968feeb1f10c1f431188d88cbe236f`
+Main immediately before the Decision #8 branch:
+`0e0c0032c5d409d1f3f218f2e8b6e8a4e6ac8cd3`
 
 Always re-check `main` next chat.
