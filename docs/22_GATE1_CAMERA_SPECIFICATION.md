@@ -165,12 +165,68 @@ The behavior passes when:
 
 ---
 
+## 4. Manual recenter action behavior — LOCKED
+
+### Core purpose
+Manual recenter is an explicit **camera recovery command**: when the player asks for it, Stillring rapidly restores a sane canonical exploration composition without changing gameplay intent.
+
+Automatic yaw follow remains quiet assistance; manual recenter is the deliberate player command that says to restore the normal view now.
+
+### Input and target composition
+- manual recenter is a dedicated **remappable action**;
+- one press requests the canonical Decision #1 exploration framing;
+- recenter restores both **yaw and pitch**, not yaw alone;
+- while Neris is moving, the recenter target is aligned behind her **stable direction of travel**;
+- while Neris is stationary, the recenter target is aligned behind **Neris's facing direction**;
+- the action does not create a special zoom/FOV state and returns toward the normal medium-wide, slightly elevated exploration composition.
+
+### Transition behavior
+- recenter uses a **fast eased transition** rather than an instantaneous visual snap;
+- it must also avoid a slow cinematic pan that delays practical camera recovery;
+- exact transition duration, interpolation curve, and minor composition settling remain Gate 1 tuning;
+- repeated recenter presses do not stack camera animations; they retarget/restart the current recovery request from the current valid camera state.
+
+### Manual camera override
+- any deliberate right-stick/mouse camera input during the recenter transition immediately cancels the automatic transition and returns full camera authority to the player;
+- the recenter command may not counter-steer against active camera input.
+
+### Gameplay-authority boundary
+Manual recenter:
+- does **not** rotate Neris;
+- does **not** alter movement input or velocity;
+- does **not** choose or acquire an enemy;
+- does **not** point toward a quest objective or landmark;
+- does **not** trigger target lock;
+- is **not** a 180-degree quick-turn command;
+- does not override a higher-priority explicit camera state whose later-approved rules own composition.
+
+Camera collision may prevent the mathematically ideal recenter position. How the camera compresses, recovers, and handles obstruction is Decision #5 authority rather than being silently invented here.
+
+### Research basis / boundary
+This decision is informed by:
+- Ocarina of Time / Majora's Mask using an explicit center-behind camera command to recover a useful third-person view;
+- modern games preserving a distinct bindable recenter action rather than relying entirely on passive auto-follow;
+- modern camera practice favoring quick eased recovery over visually jarring hard snaps where the player's intent does not require an instantaneous cut.
+
+Research supports a decisive explicit recovery action, but does not justify copying Zelda's exact snap timing, button mapping, or camera numbers.
+
+### Player-facing acceptance
+Manual recenter passes when:
+1. one press reliably restores a useful exploration composition;
+2. moving recenter follows stable travel direction while stationary recenter follows facing;
+3. the recovery feels quick without feeling like a visual cut/slap;
+4. moving the camera manually cancels the transition immediately;
+5. recenter never changes Neris's movement, facing, target selection, or gameplay state;
+6. obstruction does not cause the action to violate later camera-collision authority.
+
+---
+
 ## Remaining Issue #2 owner-review sequence
 
 1. ~~default exploration distance/height philosophy~~ — **LOCKED**
 2. ~~horizontal/vertical orbit behavior~~ — **LOCKED**
 3. ~~automatic yaw recentering while moving~~ — **LOCKED**
-4. manual recenter action behavior — **PENDING OWNER REVIEW**
+4. ~~manual recenter action behavior~~ — **LOCKED**
 5. camera collision compression/recovery — **PENDING OWNER REVIEW**
 6. occlusion priority when player/target cannot both remain visible — **PENDING OWNER REVIEW**
 7. cramped-room behavior — **PENDING OWNER REVIEW**
