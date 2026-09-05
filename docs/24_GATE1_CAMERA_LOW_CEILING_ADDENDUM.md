@@ -2,7 +2,7 @@
 
 **Status:** FINAL OWNER APPROVED  
 **Updated:** 2026-09-05  
-**Scope:** Camera Decision #8 for Issue #2. This file records the owner-approved low-ceiling camera contract and is intended to agree with the cumulative authority in `docs/22_GATE1_CAMERA_SPECIFICATION.md`.
+**Scope:** Camera Decision #8 for Issue #2. This addendum extends `docs/22_GATE1_CAMERA_SPECIFICATION.md` until the next reconciliation pass folds it into that cumulative file.
 
 ## Authority
 
@@ -175,6 +175,10 @@ Philosophy:
 > **When the ceiling comes down, the camera comes down with it—not into Neris.**
 
 ---
+
+## Reconciliation note
+
+`docs/22_GATE1_CAMERA_SPECIFICATION.md` currently contains Decisions #1–#7. This file is canonical authority for Decision #8 until the next reconciliation pass folds this section into `docs/22` and marks item #8 locked there. Do that reconciliation **before** treating Camera Decision #9 as repository-final.
 
 ## Next owner decision
 
