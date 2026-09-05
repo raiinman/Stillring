@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED. Camera Decisions #1–#11 OWNER APPROVED. Decisions #1–#9 are reconciled into cumulative `docs/22`; Decisions #10–#11 remain canonical in `docs/26` and `docs/27` pending ordered cumulative reconciliation. Decisions #12–#18 now have a durable NON-CANONICAL research packet awaiting owner review.
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED. Camera Decisions #1–#11 OWNER APPROVED. Decisions #1–#9 are reconciled into cumulative `docs/22`; Decisions #10–#11 remain canonical in `docs/26` and `docs/27` pending ordered cumulative reconciliation. Decisions #12–#18 have a durable NON-CANONICAL research packet awaiting owner review. Gate 1 UE/System IDE source scaffolding is open in PR #79 pending real UE 5.8 verification. Gate 2 combat-state research is also prepared non-canonically.
 
 ## Read first
 1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
@@ -15,9 +15,11 @@
 8. `docs/27_GATE1_CAMERA_LOCK_FRAMING_ADDENDUM.md`
 9. `docs/research/CAMERA_DECISIONS_12_18_RESEARCH_PACKET.md`
 10. `docs/28_GATE1_IMPLEMENTATION_READINESS_PLAN.md`
-11. `ROADMAP.md`
-12. `docs/18_PROJECT_DECISION_REGISTER.md`
-13. GitHub Issues #2, #5, and #58
+11. `docs/research/GATE2_COMBAT_FRAME_RESEARCH_PACKET.md`
+12. `ROADMAP.md`
+13. `docs/18_PROJECT_DECISION_REGISTER.md`
+14. GitHub Issues #2, #5, #58, and #3
+15. Open PR #79 before doing more Gate 1 implementation work.
 
 Always check the exact current `main` SHA before writing.
 
@@ -28,37 +30,67 @@ Research is already prepared in `docs/research/CAMERA_DECISIONS_12_18_RESEARCH_P
 Recommended philosophy candidate:
 > **Switch by intent, not by roulette.**
 
-The packet also prepares #13 multiple-enemy framing limits, #14 large-boss framing, #15 jump/fall/mantle camera, #16 shake/accessibility, #17 sensitivity/inversion/mouse parity, and #18 aim/first-person/gyro deferral.
+The same packet prepares #13 multiple-enemy framing limits, #14 large-boss framing, #15 jump/fall/mantle camera, #16 shake/accessibility, #17 sensitivity/inversion/mouse parity, and #18 aim/first-person/gyro deferral.
 
 None of #12–#18 is canonical yet.
 
 ## Required reconciliation debt
 Before Camera Decision #12 is repository-final, fold approved Decisions #10 then #11 into `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark both locked there while preserving `docs/26` and `docs/27` as provenance.
 
-A one-shot GitHub Actions reconciliation helper was attempted during the overnight deep-work run. GitHub recognized the workflow but failed before creating a job; the helper was removed from `main`. No camera authority was changed or lost. Do not repeat that CI approach blindly.
+A one-shot GitHub Actions reconciliation helper was attempted during the deep-work run. GitHub recognized the workflow but failed before creating a job; the helper was removed from `main`. No camera authority was changed or lost. Do not repeat that CI approach blindly.
 
-## Authorized non-camera work can proceed
-Remaining camera owner review does **not** block infrastructure.
+## Gate 1 implementation status
+Remaining camera owner review does **not** block authorized infrastructure or locomotion implementation.
 
-`docs/28_GATE1_IMPLEMENTATION_READINESS_PLAN.md` defines work that is safe now:
-- minimal Unreal Engine 5.8 C++ project bootstrap for Issue #5;
-- Enhanced Input baseline;
-- Git/Git LFS Unreal rules;
-- reproducible build/editor/Automation entry points;
-- graybox Gate 1 scenario/test-map scaffolding;
-- shared development-only System IDE shell for Issue #58;
-- provenance model: canonical vs session override vs staged vs promoted;
-- scenario registry/reset/teleport/validation/capture infrastructure;
-- Locomotion IDE skeleton and implementation against final `docs/20` authority;
-- Camera/Targeting IDE skeleton and approved Camera #1–#11 semantics, without inventing #12–#18 policy.
+`docs/28_GATE1_IMPLEMENTATION_READINESS_PLAN.md` defines the safe boundary.
 
-Highest-leverage implementation sequence:
-1. UE 5.8 C++ harness + build/validation path;
-2. shared System IDE shell + registry/provenance models;
-3. ground locomotion + analog processing + Sprint as the first complete gameplay/workbench vertical slice;
-4. expand locomotion/traversal and approved camera slices with their IDE surfaces alongside them.
+### PR #79 — open / DO NOT MERGE WITHOUT UE 5.8 VERIFICATION
+`Gate 1: bootstrap UE5.8 C++ and System IDE registry scaffold`
 
-Actual Unreal build/binary-asset verification requires an environment with UE 5.8 available; never claim those checks passed without that environment.
+PR #79 contains source only:
+- `game/Stillring.uproject` targeting UE 5.8;
+- Enhanced Input plugin declaration;
+- minimal Runtime and Editor targets;
+- authoritative `Stillring` runtime module;
+- development-only `StillringDev` module;
+- shared System IDE workbench registry;
+- provenance states: canonical / session override / staged / promoted;
+- one registered Gate 1 sample workbench;
+- source-level `Stillring.Gate1.SystemIDE.Registry` Automation smoke test;
+- `game/BUILDING.md` with explicit verification entry points/status.
+
+No `.uasset` or `.umap` binaries are included.
+
+Current authoring environment does not contain Unreal Engine 5.8, so PR #79 has **NOT** been compiled, editor-loaded, Automation-run, or Shipping-exclusion-tested. Fix any real-engine API/build mismatch before merging.
+
+Highest-leverage implementation sequence after PR #79 verification:
+1. merge verified UE 5.8 C++ harness/System IDE registry;
+2. add shared shell UI/navigation + scenario/provenance/result surfaces;
+3. implement ground locomotion + analog processing + Sprint as the first complete gameplay/workbench vertical slice;
+4. expand approved locomotion/traversal and Camera #1–#11 slices with their IDE surfaces alongside them.
+
+## Gate 2 research prepared — NON-CANONICAL
+`docs/research/GATE2_COMBAT_FRAME_RESEARCH_PACKET.md` prepares Issue #3 without approving combat feel/state policy.
+
+Core architecture recommendation:
+> **Combat legality lives in authoritative gameplay state. Animation presents and timestamps that state.**
+
+Candidate feel philosophy:
+> **Commit to the decision, not to dead time.**
+
+Prepared future owner sequence:
+1. attack commitment/cancel philosophy;
+2. light-chain semantics;
+3. heavy/committed attack semantics;
+4. guard model;
+5. evade model / i-frame decision;
+6. hit reaction / interrupt hierarchy;
+7. input buffering;
+8. attack-facing/rotation assistance;
+9. combat resource/stamina/posture decision;
+10. death/retry combat-state boundary.
+
+Do not implement these as final combat policy until owner review.
 
 ## Governing rules
 - Unreal Engine 5.8.
@@ -97,7 +129,7 @@ System IDE rule:
 - #2 — complete camera specification.
 - #5 — bootstrap Gate 1 UE 5.8 C++ prototype harness.
 - #58 — build shared in-game System IDE framework.
-- #3 — combat frame/state model; may be researched, but combat feel/state policy requires deliberate owner review before implementation.
+- #3 — combat frame/state model; research packet ready, owner policy still pending.
 - #4/#8/#9/#10/#11 are later production/design tracks and should not displace Gate 1 implementation priority without explicit reason.
 
 ## Recent PRs
@@ -105,9 +137,12 @@ System IDE rule:
 - #75 reconcile vertical-space authority
 - #76 lock-on acquisition transition
 - #77 established target Relationship Frame
+- #78 remaining-camera research + Gate 1 readiness
+- #79 UE5.8/System IDE source scaffold — OPEN / UNVERIFIED
 
-## Overnight/deep-work additions
+## Deep-work additions
 - `docs/research/CAMERA_DECISIONS_12_18_RESEARCH_PACKET.md`
 - `docs/28_GATE1_IMPLEMENTATION_READINESS_PLAN.md`
+- `docs/research/GATE2_COMBAT_FRAME_RESEARCH_PACKET.md`
 
-Continue productively past camera research by advancing Issues #5/#58 within the readiness boundaries above. Do not implement unresolved owner camera/combat policy.
+Continue productively past camera research by verifying/advancing PR #79 on a UE 5.8 host and then implementing approved Gate 1 slices with their System IDEs. Do not implement unresolved owner camera/combat policy.
