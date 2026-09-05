@@ -2,18 +2,19 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, Gate 4 Waking/Hush, and Issue #4 persistent world-state/save **design** are COMPLETE / LOCKED. Runtime Unreal implementation, platform durability proof, packaged Shipping exclusion, and human acceptance remain UNVERIFIED. The next unresolved design system is Issue #8 — 100% completion taxonomy and persistence contract.
+**Status:** Gate 1 locomotion/camera, Gate 2 combat/encounter, Gate 3 Tool-Puzzle, Gate 4 Waking/Hush, and Issue #4 persistent world-state/save **design** are COMPLETE / LOCKED. Issue #8 Completion Decision #1 is now LOCKED. Runtime Unreal implementation, platform durability proof, packaged Shipping exclusion, and human acceptance remain UNVERIFIED.
 
 ## Read first
-1. `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`
-2. `docs/18_PROJECT_DECISION_REGISTER.md`
+1. `docs/89_COMPLETION_CATEGORY_AUTHORITY_ADDENDUM.md`
+2. `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`
 3. `docs/10_COMPLETION_MODEL.md`
 4. `docs/11_QUEST_AND_COMPLETION_LEDGER.md`
 5. `docs/12_100_PERCENT_ROUTE.md`
 6. `docs/09_STILLRING_PROGRESSION_BLUEPRINT.md`
-7. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
-8. `ROADMAP.md`
-9. GitHub Issue #8 — `Define 100% completion taxonomy and persistence contract`
+7. `docs/18_PROJECT_DECISION_REGISTER.md`
+8. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
+9. `ROADMAP.md`
+10. GitHub Issue #8 — `Define 100% completion taxonomy and persistence contract`
 
 Always re-check exact current `main` before repository writes.
 
@@ -38,21 +39,32 @@ Final principle:
 
 Important boundary: Issue #4 design closure does **not** claim the paired-layer prototype save/exit/reload verification has executed. That remains implementation evidence.
 
-## Next design system — Issue #8 completion taxonomy
-Issue #8 depends on the now-locked save contract and should proceed one decision at a time.
+## Issue #8 completion taxonomy
 
-### Completion Decision #1 — completion-bearing category authority — NEXT
-Freshly research and decide:
-- which existing proposed categories in `docs/10` are truly shipping 100%-bearing requirements versus flavor/supporting records;
-- whether each category measures discovery, acquisition, resolution, mastery, or authored outcome;
-- which categories are global versus regional;
-- whether any category creates grinding/random-drop pressure (reject if so);
-- how completion category ownership maps onto Save/Completion Ledger authority;
-- player-facing clarity and late-game auditability;
-- IP distinction from Zelda completion structures;
-- Completion/System IDE category inspection and fixtures.
+### Completion Decision #1 — completion-bearing category authority — LOCKED
+Authority: `docs/89_COMPLETION_CATEGORY_AUTHORITY_ADDENDUM.md`.
 
-Do **not** decide exact final counts/reward thresholds until category authority itself is individually locked.
+Locked philosophy:
+> **100% counts authored meaning, not map debris.**
+
+The existing sixteen finite authored shipping categories remain completion-bearing, but each now has an explicit semantic completion measure: resolution, acquisition, discovery+activation, authored outcome, or mastery threshold. Raw POIs, currency/material accumulation, random drops, repeatable score optimization, dialogue exhaustion, and mutually exclusive branch perfection are non-bearing. Regional/global progress are derived views over one Completion Ledger and never duplicate canonical truth.
+
+This decision **does not** lock the current proposed counts, percentage weighting, exact reward thresholds, or final UI formula.
+
+### Completion Decision #2 — Resonance Fault authority — NEXT
+Freshly research and decide **Resonance Faults only**:
+- whether 48 remains justified for a roughly 20–30 hour authored game;
+- regional density and pacing across the current allocation;
+- what makes a Fault materially different from a Vault, contract, or generic collectible;
+- access-gate/revisit-wave rules;
+- staged reward cadence without making Faults compulsory power grind;
+- deterministic ID/persistence behavior under Completion Ledger + World State ownership;
+- late-game unresolved-count/hint assistance;
+- accessibility and anti-frustration requirements;
+- Completion IDE Fault diagnostics/fixtures;
+- red-team for repetition, icon-vacuum behavior, map cleanup fatigue, and over-weighting.
+
+Do **not** decide Pulse Shards, contract counts, Vault density, records, percentage weighting, or final rewards in the same pass.
 
 ## Open design issues after #8
 Repository-open design work also includes:
@@ -69,11 +81,12 @@ Infrastructure issues #5 and #58 remain implementation tracks and must not displ
 - No retail runtime AI/model/API dependency.
 - Human play is final authority for feel/readability.
 - Clean-room IP rules apply.
-- Save/world-state semantic ownership is now locked and must not be bypassed by completion implementation.
+- Save/world-state semantic ownership is locked and must not be bypassed by completion implementation.
 
 Movement: **Simple intention, capable character, honest world.**  
 Camera: **The player should look at Orra, not babysit the camera.**  
 Tools: **Cantor explains the relationship. Anchor changes the load.**  
 Hush: **One place. One history of facts. Two authored expressions.**  
 Save/world-state: **Persist meaning, reconstruct presentation.**  
+Completion: **100% counts authored meaning, not map debris.**  
 System IDE: **Build the system and its in-game IDE together.**
