@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#10 OWNER APPROVED. Decisions #1–#9 are reconciled into cumulative camera authority; Decision #10 is canonical in its provenance addendum pending next reconciliation.
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#11 OWNER APPROVED. Decisions #1–#9 are reconciled into cumulative camera authority; Decisions #10–#11 are canonical in their provenance addenda pending ordered reconciliation.
 
 ## Read first
 1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
@@ -12,16 +12,17 @@
 5. `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`
 6. `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`
 7. `docs/26_GATE1_CAMERA_LOCK_ACQUISITION_ADDENDUM.md`
-8. GitHub Issue #2 — `Lock exploration and combat camera specification`
+8. `docs/27_GATE1_CAMERA_LOCK_FRAMING_ADDENDUM.md`
+9. GitHub Issue #2 — `Lock exploration and combat camera specification`
 
 Then check the exact current `main` SHA before creating a branch.
 
 ## Immediate next work
-Camera Decision #10 is canonical in `docs/26_GATE1_CAMERA_LOCK_ACQUISITION_ADDENDUM.md`. Before repository-finalizing Decision #11, fold Decision #10 into the cumulative `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark item #10 locked there.
+Before repository-finalizing Camera Decision #12, reconcile approved Decisions #10 and #11 into `docs/22_GATE1_CAMERA_SPECIFICATION.md` **in order**, marking both locked while preserving `docs/26` and `docs/27` as provenance.
 
-Then perform a fresh research pass and present **Camera Decision #11 — lock-on framing distance/offset philosophy** for owner review.
+Then perform a fresh research pass and present **Camera Decision #12 — target-switch transition behavior** for owner review.
 
-Do not infer #11 from the acquisition transition, Zelda lineage, stock Unreal behavior, or later multi-enemy/boss rules. Decision #11 owns the established ordinary lock-on composition: Neris/target screen placement, camera distance response to player-target separation, how strongly the target is centered, vertical-separation handling, whether combat uses modest dynamic framing, and how much camera influence the player retains while locked. Target-switch transitions remain #12, multiple-enemy framing #13, and large-boss framing #14.
+Do not infer #12 from generic action-game controls. #12 owns switch gesture/directionality, eligible switch candidates, transition speed, confirmation, camera movement, cooldown/debounce, no-candidate behavior, and conflicts with #11 bounded manual composition nudge. Multiple-enemy framing remains #13 and large-boss framing #14.
 
 ## Governing rules
 - Unreal Engine 5.8.
@@ -85,7 +86,7 @@ Philosophy:
 ### #9 Vertical-space behavior
 Cumulative authority is reconciled into `docs/22`; provenance remains `docs/25_GATE1_CAMERA_VERTICAL_SPACE_ADDENDUM.md`.
 
-Grounded exploration uses **Vertical Context Assist**. Sustained ascent/descent first shifts Neris modestly in screen-space to reveal more route in the direction of elevation change. A very weak, bounded, delayed soft-pitch assist may occur only when screen-space framing is insufficient, and manual camera input always cancels/suppresses it. Drop framing requires actual approach intent; nearby/parallel/behind drops do not pull the camera down. Tall rooms do not automatically aim the camera. Automatic vertical pitch must offer an eventual Off/Never option. The camera may not use quest, puzzle-solution, secret-route, treasure, hidden-enemy, or other privileged metadata to decide where to aim. Grounded #9 does not decide jump/fall/mantle (#15) or lock-on/combat framing (#10–#14).
+Grounded exploration uses **Vertical Context Assist**. Sustained ascent/descent first shifts Neris modestly in screen-space; only weak bounded delayed pitch assistance may follow. Manual input wins. Drop framing requires approach intent. Tall rooms do not auto-aim. Privileged puzzle/quest/secret metadata may not direct the camera.
 
 Philosophy:
 > **Make room for the height. Never aim on the player's behalf.**
@@ -93,15 +94,25 @@ Philosophy:
 ### #10 Lock-on acquisition transition
 Exact authority until reconciliation: `docs/26_GATE1_CAMERA_LOCK_ACQUISITION_ADDENDUM.md`.
 
-Lock requests use one immediate candidate evaluation. Initial acquisition requires honest visibility and strongly prioritizes current camera/screen intent over mere closeness or Neris facing. A valid winner commits target identity and target-relative locomotion immediately; Sprint exits through the already-approved short natural deceleration/pivot. The camera then performs one fast eased transition directly from its exact current pose toward the later-defined lock-on composition—no hidden recenter, hard snap, time slowdown, input freeze, dramatic FOV punch, or micro-cutscene. Failed requests have no camera/movement/Sprint side effects. Once committed, the system never silently retargets; temporary occlusion follows #6 and hard invalidation/cancel aborts cleanly from the current pose. Physical camera authority remains #5/#7/#8. Final established combat framing is #11 and intentional switching is #12.
+One immediate candidate evaluation; honest initial LOS; current camera/screen intent prioritized over mere closeness/facing; immediate target and target-relative locomotion commitment; Sprint exits via approved deceleration/pivot; one fast eased camera transition directly from current pose; no hidden recenter, hard snap, slowdown, freeze, FOV punch, or micro-cutscene; failed requests have no side effects; no silent retarget; #5/#6/#7/#8 remain authoritative.
 
 Philosophy:
 > **Lock the target instantly. Move the camera deliberately.**
 
+### #11 Lock-on framing distance / offset philosophy
+Exact authority until reconciliation: `docs/27_GATE1_CAMERA_LOCK_FRAMING_ADDENDUM.md`.
+
+Established ordinary lock-on uses a **dual-subject Relationship Frame**: show Neris, the locked target, and readable combat space between them. Target is soft-framed rather than hard-centered. Screen-space dead/soft/hard zones suppress jitter. Ordinary combat uses a canonical medium distance with modest capped separation-driven dolly, dead band + hysteresis, and essentially stable FOV. Camera adaptation is visual only and never maintains gameplay spacing. Player retains bounded manual composition nudge; exact control conflict with switching waits for #12/#17. #5/#6/#7/#8 remain physical/occlusion authority. Multiple enemies remain #13; bosses #14.
+
+Philosophy:
+> **Frame the relationship, not the reticle.**
+
+Practical test:
+> **Show Neris. Show the threat. Show the space between them.**
+
 ## Remaining Issue #2 sequence
-1–10: LOCKED.  
-11. **lock-on framing distance/offset philosophy — NEXT / PENDING OWNER REVIEW**  
-12. target-switch transition  
+1–11: LOCKED.  
+12. **target-switch transition behavior — NEXT / PENDING OWNER REVIEW**  
 13. multiple-enemy framing limits  
 14. large boss framing  
 15. jump/fall/mantle camera  
@@ -124,8 +135,9 @@ Anything unresolved remains **PENDING OWNER REVIEW**.
 - #73 reconcile low-ceiling authority into cumulative spec
 - #74 vertical-space camera behavior
 - #75 reconcile vertical-space authority into cumulative spec
+- #76 lock-on acquisition transition
 
-Main immediately before the Decision #10 branch:
-`8a4dcd8b64e7d89a921c1179ef0f144b6d77936d`
+Main immediately before the Decision #11 branch:
+`5e7444620b676586d52833cdc6ec10ef81a40346`
 
 Always re-check `main` next chat.
