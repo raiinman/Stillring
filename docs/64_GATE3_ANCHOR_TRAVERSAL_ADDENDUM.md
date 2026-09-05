@@ -35,7 +35,7 @@ The move is:
 - not a pendulum/swing;
 - not a teleport.
 
-The gameplay capsule/path owns truth. Animation presents that displacement. Root Motion or Motion Warping may align presentation, but may not secretly decide endpoint legality or path clearance. Epic's UE5.8 locomotion stack explicitly supports Character Movement, custom movement/state handling, Root Motion, and Motion Warping; these are implementation options, not policy. citeturn615928search0turn615928search1turn615928search4
+The gameplay capsule/path owns truth. Animation presents that displacement. Root Motion or Motion Warping may align presentation, but may not secretly decide endpoint legality or path clearance. Epic's UE5.8 locomotion stack supports Character Movement, custom movement/state handling, Root Motion, and Motion Warping; these are implementation options, not policy.
 
 ## Player control during pull
 
@@ -167,8 +167,9 @@ Catch:
 > **Anchor traversal is one short authored pull to a fixed maintenance/load point. It expands routes deliberately; it does not turn Orra into a grapple-anywhere playground.**
 
 ## Research basis
-- Epic Games — Unreal Engine 5.8 Movement Components / Character Movement / Locomotion / Motion Warping documentation. citeturn615928search0turn615928search1turn615928search4
-- Current Character Movement remains a battle-tested production option; Epic's newer Mover system is still experimental and does not become authority merely because it exists. citeturn615928search11
+- Epic Games — Unreal Engine 5.8 Movement Components / Character Movement / Locomotion / Motion Warping documentation.
+- Epic Games — Unreal Engine 5.8 comparison of Mover and Character Movement; Mover remains experimental and does not become authority merely because it exists.
+- Guerrilla / PlayStation — Horizon Forbidden West Pullcaster as a functional comparison only.
 - Locked Gate 1 locomotion/camera authority.
 - `docs/62_GATE3_ANCHOR_PHYSICAL_CONTRACT_ADDENDUM.md`
 - `docs/63_GATE3_ANCHOR_INPUT_TARGETING_ADDENDUM.md`
