@@ -1,8 +1,8 @@
 # 23 — Gate 1 Camera Cramped-Room Addendum
 
-**Status:** FINAL OWNER APPROVED  
+**Status:** FINAL OWNER APPROVED / RECONCILED INTO `docs/22`  
 **Updated:** 2026-09-05  
-**Scope:** Camera Decision #7 for Issue #2. This addendum extends `docs/22_GATE1_CAMERA_SPECIFICATION.md` until the next reconciliation pass folds it into that cumulative file.
+**Scope:** Camera Decision #7 for Issue #2. This file preserves the decision-specific record; cumulative implementation authority now also lives in `docs/22_GATE1_CAMERA_SPECIFICATION.md`.
 
 ## Authority
 
@@ -108,7 +108,7 @@ Cramped-room handling passes when:
 
 ## Reconciliation note
 
-`docs/22_GATE1_CAMERA_SPECIFICATION.md` currently contains Decisions #1–#6. This file is canonical authority for Decision #7 until the next chat folds this section into `docs/22` and marks item #7 locked there. Do that reconciliation **before** treating Camera Decision #8 as repository-final.
+Decision #7 has now been folded into `docs/22_GATE1_CAMERA_SPECIFICATION.md`, and item #7 is marked **LOCKED** in the cumulative Issue #2 sequence. This addendum remains a decision-specific provenance record and must agree with `docs/22`; if wording ever diverges, reconcile the files rather than allowing parallel camera authority.
 
 ## Next owner decision
 
