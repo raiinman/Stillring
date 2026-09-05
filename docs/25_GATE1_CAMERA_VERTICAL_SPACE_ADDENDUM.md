@@ -1,8 +1,8 @@
 # 25 — Gate 1 Camera Vertical-Space Addendum
 
-**Status:** FINAL OWNER APPROVED  
+**Status:** FINAL OWNER APPROVED / RECONCILED INTO `docs/22`  
 **Updated:** 2026-09-05  
-**Scope:** Camera Decision #9 for Issue #2. This addendum extends the cumulative authority in `docs/22_GATE1_CAMERA_SPECIFICATION.md` until the next reconciliation pass folds it into that file.
+**Scope:** Camera Decision #9 provenance record for Issue #2. The cumulative implementation-facing authority now lives in `docs/22_GATE1_CAMERA_SPECIFICATION.md`; this file preserves the decision-specific owner-approved record.
 
 ## Authority
 Camera Decision #9 is locked. Claude may not replace this behavior with a stock vertical-follow camera, automatic puzzle-directed pitch, constant slope-following, cinematic shaft framing, or any other unstated vertical-space policy.
@@ -168,7 +168,7 @@ Philosophy:
 ---
 
 ## Reconciliation note
-`docs/22_GATE1_CAMERA_SPECIFICATION.md` currently contains Decisions #1–#8. This file is canonical authority for Decision #9 until the next reconciliation pass folds this section into `docs/22` and marks item #9 locked there. Do that reconciliation **before** treating Camera Decision #10 as repository-final.
+Decision #9 has been folded into `docs/22_GATE1_CAMERA_SPECIFICATION.md`. `docs/22` is the cumulative implementation-facing camera authority; this addendum remains the owner-approved decision-specific provenance record. The two files must stay semantically consistent.
 
 ## Next owner decision
 **Camera Decision #10 — lock-on acquisition transition.**
