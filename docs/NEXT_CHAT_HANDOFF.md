@@ -2,13 +2,13 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#7 are LOCKED. Next fresh decision: **#8 archetype coordination + encounter composition**.
+**Status:** Gate 1 locomotion/camera COMPLETE / LOCKED. Gate 2 player combat COMPLETE / LOCKED; Issue #3 CLOSED. Gate 2 enemy / encounter combat is active in Issue #104. Encounter Decisions #1–#8 are LOCKED. Next fresh decision: **#9 disengage / reset / leash / re-entry behavior**.
 
 ## Read first
 1. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
 2. Camera authority `docs/22`–`docs/36`
 3. Player combat authority `docs/37`–`docs/49`
-4. Encounter authority `docs/50`–`docs/56`
+4. Encounter authority `docs/50`–`docs/57`
 5. `ROADMAP.md`
 6. GitHub Issue #104
 
@@ -27,24 +27,25 @@ Fresh focused research for exactly one decision → reconcile locked authority/I
 5. **Telegraph/readability** — `docs/54`: Ready → committed Telegraph → Active → Recovery semantic grammar; body/world-space evidence first; no mandatory colored attack-ring language; no critical audio/color/vibration-only information; committed tells do not casually lie; danger direction matches presentation; gameplay owns Active, animation notifies synchronize/present; Major+Pressure overlap must remain separable; IDE validates threat timelines and animation/gameplay mismatch.
 6. **Offscreen / occluded threats** — `docs/55`: fresh ordinary high-salience melee/shield commits require meaningful visibility; already-honest committed attacks continue if the player looks away; hard occlusion is stricter than merely offscreen; real projectiles persist after launch; ranged PressureCommit is offscreen-presentation-gated; optional directional threat indicator may expose coarse direction/urgency but not radar-like hidden enemy identity/position; UI/audio/haptics/accessibility remain supplemental; camera never steers for secondary threats.
 7. **Enemy reaction / interrupt** — `docs/56`: no universal posture/stun meter; damage and reaction are separate; player attacks declare `ImpactForce`, enemy states declare explicit `ReactionResistance`; Light acknowledges impact but does not erase commitments; Heavy is baseline `Disrupt` against ordinary eligible commitments; shield front still uses `ShieldDisplaced`; Perfect Guard earns tempo rather than universal stun; large enemies require explicit state resistance rather than blanket boss armor; reaction retrigger protection prevents stun-lock; interrupted commits clean threat/reservation state.
+8. **Archetype coordination / encounter composition** — `docs/57`: compose complementary tactical jobs rather than rigid party slots; shared world-aware approach/pressure occupancy prevents stacking and waiting circles; ranged fire topology and shield denial must preserve practical movement/readability; duplicate archetypes are valid only when they change the spatial problem; arena topology is part of encounter validity; difficulty improves positioning/composition before quantity/concurrency; reinforcements become attributable before first committed threat; target lock never owns encounter roles.
 
-## Next fresh decision — #8 archetype coordination + encounter composition
+## Next fresh decision — #9 disengage / reset / leash / re-entry
 Core question:
-> **How should melee, ranged, shield, and later specialist enemies share space and roles so encounters feel intentionally composed rather than like a random bag of AI actors?**
+> **When should an encounter stop pursuing Neris, what state should enemies keep or restore, and how can the player leave/re-enter without farming broken AI boundaries or being magically punished across the map?**
 
 Research independently. Resolve:
-- role/lane composition without rigid party slots;
-- minimum/maximum useful archetype overlap;
-- how melee pressure, ranged fire corridors, and shield denial complement rather than stack unfairly;
-- approach/pressure occupancy and arena topology;
-- when duplicate archetypes are healthy versus repetitive;
-- difficulty scaling through composition/behavior before raw concurrency;
-- spawn/reinforcement fairness boundaries without final wave scripting;
-- how target lock/camera limits constrain composition;
-- Combat/Encounter IDE composition diagnostics and red-team fixtures.
+- semantic combat engagement/disengagement rather than one arbitrary radius;
+- pursuit through valid connected space versus authored encounter boundary;
+- LOS/time/distance/world-state evidence for disengagement;
+- committed attack/projectile handling as disengagement begins;
+- enemy health/reaction/position reset policy and exploit prevention;
+- whether enemies return home, hold a fallback state, or despawn only under authored authority;
+- re-entry and repeated pull/retreat behavior;
+- death/checkpoint/world-reset boundary without stealing Decision #10;
+- navigation failure and inaccessible-player cases;
+- Combat/Encounter IDE and adversarial fixtures.
 
 ## Remaining Issue #104 sequence
-8. archetype coordination + encounter composition;
 9. disengage/reset/leash/re-entry;
 10. spawn/reset/debug fixture + cumulative closure.
 
