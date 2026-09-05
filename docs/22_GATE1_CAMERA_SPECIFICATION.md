@@ -221,13 +221,86 @@ Manual recenter passes when:
 
 ---
 
+## 5. Camera collision compression / recovery — LOCKED
+
+### Core rule
+Physical camera collision resolves by **compressing the camera inward along the player's currently chosen viewing direction**. Walls may shorten the camera arm; they do not steer the camera.
+
+Collision safety and view ownership are separate concerns: the solver may reduce legal camera distance, but ordinary collision does not automatically orbit, yaw, or pitch the camera around an obstacle.
+
+### Compression behavior
+- physical collision is resolved promptly enough that the camera never passes through or visibly enters blocking world geometry;
+- the camera has a non-zero collision/probe volume rather than behaving like an infinitely small point;
+- the solver finds the nearest legal camera distance along the current valid viewing direction;
+- inward collision response takes priority over distance smoothing when required for safety;
+- exact probe radius, inward response speed, clearance offsets, and trace/frustum implementation remain Gate 1 engineering/tuning choices so long as the semantic result matches this contract.
+
+### Manual orbit while compressed
+- right-stick/mouse orbit remains authoritative while collision-compressed;
+- when the player changes yaw or pitch, the collision solver recomputes the nearest legal distance along that newly requested view;
+- collision may shorten distance but does not counter-steer camera input;
+- ordinary collision solving does not silently select a sideways orbit around an obstacle.
+
+Whether deliberate occlusion handling may ever choose a lateral viewpoint is separate Decision #6 authority.
+
+### Recovery behavior
+When the obstructing geometry clears:
+- the camera does not instantly fire back to full Decision #1 distance;
+- clearance should remain credibly stable for a short tuning-defined window before outward recovery fully commits;
+- the camera then eases outward toward its canonical exploration distance;
+- outward recovery is deliberately smoother/slower than emergency inward compression;
+- if an obstruction reappears during recovery, inward safety immediately takes priority again;
+- hysteresis must prevent tiny collision-distance changes from causing visible rapid IN/OUT breathing around rails, posts, corners, foliage collision, or decorative geometry.
+
+Exact recovery delay, outward speed, damping, and hysteresis thresholds remain Gate 1 tuning.
+
+### Geometry-authoring boundary
+A generic solver is not required to make arbitrarily noisy art collision behave well.
+
+- camera-specific simplified blocker geometry may be authored where decorative/compound collision would otherwise cause vibration, snagging, or repeated compression churn;
+- those blockers exist only to represent the intended camera boundary cleanly; they do not become secret gameplay collision or world-state authority;
+- level review must include camera traversal through representative doors, railings, corners, stairs, clutter, and narrow transitions rather than assuming a default Unreal Spring Arm is sufficient.
+
+### Cramped-space boundary
+Decision #5 does **not** decide the final presentation when legal camera distance becomes extremely short. Character fading, special close framing, near-first-person behavior, or other severe-compression responses remain Decision #7 authority.
+
+### System IDE requirement
+The Camera / Targeting IDE must expose enough live evidence to tune and diagnose collision behavior, including at minimum:
+- desired camera distance;
+- actual camera distance;
+- collision-limited distance;
+- collision active/inactive state;
+- current blocking surface/actor where available;
+- probe/clearance parameters;
+- recovery state and clearance timer.
+
+### Research basis / boundary
+This decision is informed by:
+- Unreal's standard Spring Arm collision model, which retracts camera distance when obstructed and extends when clear;
+- Cinemachine-style separation of obstruction-entry damping, return damping, minimum obstruction time, and smoothing to reduce camera jumpiness;
+- shipped-game camera postmortems warning that automatic collision can pop or snag on complex geometry and may need authored camera constraints/blockers.
+
+Research supports fast collision safety plus controlled recovery. It does not justify copying another engine's exact probe size, damping values, or collision algorithm.
+
+### Player-facing acceptance
+Camera collision passes when:
+1. the camera never visibly enters solid geometry;
+2. walls shorten distance without stealing yaw/pitch ownership;
+3. manual orbit remains useful while compressed;
+4. leaving a wall does not produce a distracting snap-out;
+5. repeated thin obstacles do not make the camera visibly breathe or vibrate;
+6. pathological art collision can be repaired with clean camera-only blockers without changing gameplay geometry semantics;
+7. severe cramped-space presentation remains explicitly unresolved until Decision #7.
+
+---
+
 ## Remaining Issue #2 owner-review sequence
 
 1. ~~default exploration distance/height philosophy~~ — **LOCKED**
 2. ~~horizontal/vertical orbit behavior~~ — **LOCKED**
 3. ~~automatic yaw recentering while moving~~ — **LOCKED**
 4. ~~manual recenter action behavior~~ — **LOCKED**
-5. camera collision compression/recovery — **PENDING OWNER REVIEW**
+5. ~~camera collision compression/recovery~~ — **LOCKED**
 6. occlusion priority when player/target cannot both remain visible — **PENDING OWNER REVIEW**
 7. cramped-room behavior — **PENDING OWNER REVIEW**
 8. low-ceiling behavior — **PENDING OWNER REVIEW**
