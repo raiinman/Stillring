@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#8 OWNER APPROVED.
+**Status:** Gate 1 locomotion FINAL OWNER APPROVED; Camera Decisions #1–#8 OWNER APPROVED and reconciled into cumulative camera authority.
 
 ## Read first
 1. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
@@ -15,11 +15,11 @@
 Then check the exact current `main` SHA before creating a branch.
 
 ## Immediate next work
-Decision #8 is canonical in `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`. Before repository-finalizing Decision #9, fold Decision #8 into the cumulative `docs/22_GATE1_CAMERA_SPECIFICATION.md` and mark item #8 locked there.
+Camera Decision #8 is reconciled into `docs/22_GATE1_CAMERA_SPECIFICATION.md`; `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md` remains its decision-specific provenance record.
 
-Then perform a fresh research pass and present **Camera Decision #9 — vertical-space behavior** for owner review.
+Perform a fresh research pass and present **Camera Decision #9 — vertical-space behavior** for owner review. Do not infer #9 from low-ceiling or cramped-room policy and do not let Claude/Unreal choose a default.
 
-Do not infer #9 from low-ceiling or cramped-room policy and do not let Claude/Unreal choose a default. Vertical shafts, tall rooms, steep drops, upper/lower route inspection, and targets far above/below may require their own composition and pitch-assistance rules.
+Decision #9 owns ordinary exploration readability for tall shafts/atriums, steep ascents and descents, drop approaches, upper/lower route inspection, and sustained route elevation changes. It must not silently decide jump/fall/mantle presentation (Decision #15) or lock-on combat framing (Decisions #10–#14).
 
 ## Governing rules
 - Unreal Engine 5.8.
@@ -73,7 +73,7 @@ Philosophy:
 > **When the room gets smaller, the camera gets closer—not stranger.**
 
 ### #8 Low-ceiling behavior
-Exact authority until reconciliation: `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`.
+Cumulative authority is reconciled into `docs/22`; provenance remains `docs/24_GATE1_CAMERA_LOW_CEILING_ADDENDUM.md`.
 
 Low ceilings constrain the camera vertically before they compress it longitudinally. A Ceiling-Constrained Camera lowers the rig/pivot smoothly while preserving ordinary distance, player-owned yaw, and as much pitch as real geometry permits. Impossible pitch stops at the physical boundary with no queued-input snap. The camera does not automatically aim down tunnels, does not use low ceiling alone to trigger Neris fading or dramatic FOV changes, and uses hysteresis to avoid rafter/lintel accordion pumping. Remaining obstruction falls back to Decision #5 distance compression; severe distance compression invokes Decision #7 Close Quarters.
 
@@ -82,7 +82,7 @@ Philosophy:
 
 ## Remaining Issue #2 sequence
 1–8: LOCKED.  
-9. **vertical-space behavior — NEXT**  
+9. **vertical-space behavior — NEXT / PENDING OWNER REVIEW**  
 10. lock-on acquisition transition  
 11. lock-on framing distance/offset  
 12. target-switch transition  
@@ -104,8 +104,9 @@ Anything unresolved remains **PENDING OWNER REVIEW**.
 - #68 occlusion readability hierarchy
 - #69 cramped-room camera behavior
 - #70 reconcile cramped-room authority into cumulative spec
+- #71 low-ceiling camera behavior
 
-Main immediately before the Decision #8 branch:
-`0e0c0032c5d409d1f3f218f2e8b6e8a4e6ac8cd3`
+Main immediately before the Decision #8 reconciliation branch:
+`d85fb35a869e1f0137263df38b8d52a5204c6227`
 
 Always re-check `main` next chat.
