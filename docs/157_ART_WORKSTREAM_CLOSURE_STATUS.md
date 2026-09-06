@@ -1,7 +1,7 @@
 # 157 — Art Workstream Closure Status
 
 **Status:** ACTIVE / STUDIO HANDOFF CLOSURE TRACKING  
-**Updated:** 2026-09-05  
+**Updated:** 2026-09-06  
 **Parent program:** `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md`  
 **Art authority:** `docs/154_STILLRING_ART_BIBLE.md`  
 **Supporting method:** `docs/155_ART_REFERENCE_METHOD_AND_BOARD_INDEX.md`  
@@ -12,100 +12,69 @@
 
 # 1. Purpose
 
-This file prevents the existence of an Art Bible from being mistaken for completion of the entire art-production handoff.
+This file records what the current art package actually settles, what remains dependency-bound, and what an external studio is or is not allowed to invent.
 
-It records:
-
-- what the current documentation now answers;
-- what remains open;
-- which unknowns are legitimate;
-- which unknowns would be unsafe studio assumptions;
-- the next required art documents.
+A mood board is never closure by itself.
 
 ---
 
 # 2. Direction now settled
 
-The following are current owner-approved visual direction and should not be silently reinterpreted by an agent, contractor, or implementation team:
+## 2.1 Final visual identity
 
-## 2.1 Final-direction identity
-
-Stillring's visual doctrine is **Playable Fantasy Illustration**.
-
-This means:
+Stillring's visual doctrine is **Playable Fantasy Illustration**:
 
 - believable physical world;
 - intentionally stylized composition;
 - exaggerated geography where it serves memory/gameplay;
 - strong silhouettes;
 - landmark-first spatial identity;
-- restrained, selective detail;
+- restrained selective detail;
 - controlled materials;
-- painterly decision-making in color/value/composition without requiring a literal painterly shader;
-- grounded lightly stylized characters;
+- painterly decision-making in color/value/composition without requiring a painterly filter;
+- grounded stylized humans;
 - mature fantasy without blanket grimdark treatment.
 
 ## 2.2 Relationship to N64 lineage
 
-Stillring retains the strengths previously described as N64-era readability:
+Stillring retains N64/OoT-era strengths:
 
 - silhouette clarity;
 - visual hierarchy;
 - fog/composition discipline;
 - controlled materials;
-- region color identity;
+- regional color identity;
 - minimal clutter.
 
-It does **not** currently lock final production to:
-
-- literal low-poly asset limits;
-- tiny textures;
-- retro framebuffer resolution;
-- nearest-neighbor/pixel filtering;
-- period-accurate lighting;
-- N64-style animation limits.
-
-Those older constraints are inspiration/history unless separately selected later for a bounded artistic or performance reason.
+It does **not** require literal 1998 rendering limits, low-poly geometry, tiny textures, retro framebuffer resolution or period-accurate animation/lighting.
 
 ## 2.3 Environment direction
 
-Major locations must be recognizable by:
+Major locations are recognized through shape, landmark, palette relationship, architecture, atmosphere and route composition. Settlements visibly respond to terrain, climate, labor, transport, resources and civic machinery.
 
-- shape;
-- landmark;
-- palette relationship;
-- architecture;
-- atmosphere;
-- route composition.
+## 2.4 Character direction — now creatively locked
 
-Settlements must respond visibly to terrain, weather, labor, transport, resources, and civic machinery.
+`docs/158_CHARACTER_PRODUCTION_MANIFEST.md` is the specific production authority that completes the character placeholders anticipated by the Art Bible.
 
-## 2.4 Character direction
+Principal character creative identity is now locked:
 
-Characters are grounded and deliberately stylized, not photoreal scans or exaggerated anime forms.
+- **Neris Vale is female, she/her, age 17**;
+- Neris has a defined face, hair, body/build target, costume construction, palette, Cantor carry solution, progression-equipment rules and six state variants;
+- Tessa, Ilyra, Orin, Maelor, Caldrin, Sena and Rusk each have defined age/build, face, hair, costume, palette and state identity;
+- principal reference heights and silhouette relationships are defined;
+- family resemblance/relationship echoes are defined;
+- the Listener's visible manifestation is defined rather than left as an abstract “special entity” placeholder;
+- principal characters read through occupation and human history before fantasy archetype.
 
-Neris must visually read as a working seventeen-year-old apprentice bellwright rather than a chosen-one fantasy archetype.
-
-`docs/158_CHARACTER_PRODUCTION_MANIFEST.md` now makes the principal-cast production direction explicit:
-
-- occupation before fantasy archetype;
-- clothing is wearable, repairable, and work-shaped;
-- principal silhouettes must separate without face/color dependence;
-- Neris, Tessa, Ilyra, Orin, Maelor, Caldrin, Sena, and Rusk have distinct production briefs;
-- the Listener is a special cross-discipline presentation problem, not a default humanoid god/monster;
-- final Neris face/body/costume and materially divergent principal-character concepts remain owner-review gates.
+Board 03 is now a **visual verification board**, not a new design competition.
 
 ## 2.5 Hush direction
 
-The Hush is a world-state/art relationship, not a one-button color filter or generic glitch effect.
-
-Regional identity and gameplay readability must survive Hush transformation.
+The Hush is a world-state/art relationship, not a universal filter or glitch pass. Regional and character identity must survive transformation.
 
 ## 2.6 Readability direction
 
-Gameplay readability outranks graphical spectacle.
-
-Art must participate in honest traversal/interactions rather than relying on universal highlight paint or hidden affordances.
+Gameplay readability outranks spectacle. Art must honestly communicate traversal, interaction and threat states without default universal highlight paint.
 
 ---
 
@@ -113,117 +82,102 @@ Art must participate in honest traversal/interactions rather than relying on uni
 
 | Gap | Current status | Evidence | Remaining closure |
 |---|---|---|---|
-| `SH-ART-001` Neris production spec | **SUBSTANTIALLY CLOSED AT DOCUMENTATION LEVEL** | `docs/154` §18, `docs/156` §6, `docs/158` §9 | Board 03 + final face/body/costume concept + owner visual approval; scale/rig/runtime dependencies |
-| `SH-ART-002` named-character visual bible | **SUBSTANTIALLY CLOSED FOR PRINCIPAL CAST** | `docs/158` §§9–18 | enumerate C3 recurring regional cast in region manifests; final concept approvals and state-specific production sheets |
-| `SH-ART-003` NPC population strategy | **PARTIALLY CLOSED / STRATEGY DEFINED** | `docs/154` §19, `docs/156` §7, `docs/158` §§24–25 | per-region archetype pools, exact reuse bounds/counts, body/head/clothing production plan |
+| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` §8 | Board 03 faithful execution proof; representative Q2 model; rig/scale/performance evidence |
+| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST** | `docs/158` §§8–18 | C3 regional recurring cast enumeration; Q2/Q3 execution sheets/models |
+| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158` §§22–23 | region-specific C3/C4 manifests and final production counts above locked variety floor |
 | `SH-ART-004` enemy/boss visual taxonomy | **PARTIALLY CLOSED** | `docs/154` §20, `docs/156` §8 | full enemy/boss manifest mapped to encounter authority |
-| `SH-ART-005` modular environment standards | **PARTIALLY CLOSED** | `docs/156` §§9–10 | numeric scale/grid after honest character/camera/traversal representation; kit-specific manifests |
-| `SH-ART-006` region color/material/lighting bibles | **PARTIALLY CLOSED** | `docs/154` §§10–13; `docs/156` §11 | detailed per-region scripts and state variants |
-| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §15; `docs/156` §14; `docs/158` character-state rules | H0–H5 content-family matrix and later runtime representation proof |
-| `SH-ART-008` VFX language | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §23; `docs/156` §15 | full effect manifest and later performance/accessibility evidence |
-| `SH-ART-009` region asset manifests | **OPEN / STARTER CREATED** | `docs/156` §11 | detailed quoteable asset/content manifests per region |
-| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10; `docs/158` scale/rig gates | requires approved Neris representation + camera/traversal representation and later human/runtime evidence |
+| `SH-ART-005` modular environment standards | **PARTIALLY CLOSED** | `docs/156` §§9–10 | numeric scale/grid after Neris/camera/traversal representation; kit manifests |
+| `SH-ART-006` region color/material/lighting bibles | **PARTIALLY CLOSED** | `docs/154` §§10–13, `docs/156` §11 | detailed per-region scripts/state variants |
+| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158` state rules | H0–H5 content-family matrix and runtime proof |
+| `SH-ART-008` VFX language | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §23, `docs/156` §15 | full effect manifest and performance/accessibility evidence |
+| `SH-ART-009` region asset manifests | **OPEN / STARTER CREATED** | `docs/156` §11 | detailed quoteable manifests per region |
+| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
 
-No row should be marked closed merely because a mood board exists.
+“Creatively closed” means the studio may execute the identity but may not redesign it. It does not mean a final production model has been built or tested.
 
 ---
 
-# 4. Studio decision-rights for art
+# 4. Art decision rights
 
 ## LOCKED — implement, do not redefine
 
-- Playable Fantasy Illustration doctrine;
-- readability over graphical spectacle;
+- Playable Fantasy Illustration;
+- readability over spectacle;
 - landmark/navigation priority;
-- each region requires distinct shape language;
-- settlements grow from environment and practical life;
+- region-specific shape language;
+- settlements grow from environment/practical life;
 - selective detail/material hierarchy;
 - no blanket photoreal clutter;
-- no generic grimdark visual language;
-- Hush cannot be a universal recolor/filter;
-- pre-catastrophe places must be visually worth caring about;
-- art must honestly communicate authored traversal;
+- no generic grimdark language;
+- Hush is not a universal recolor/filter;
+- pre-catastrophe places must be worth caring about;
+- authored traversal remains visually honest;
 - clean-room reference rules;
-- principal-character occupation-before-archetype language from `docs/158`;
-- principal-character silhouette separation requirements;
-- Neris may not visually become chosen/royal/mystical;
-- Maelor may not be visually spoiled as a conventional villain at first sight.
+- full principal-character creative designs in `docs/158`;
+- Neris is female, age 17, and visually a working apprentice/field bellwright—not royal, chosen, mystical, assassin-coded or sexualized;
+- Tessa is courier, not rogue;
+- Ilyra is field engineer, not oracle;
+- Orin is repairman/father, not hidden master;
+- Maelor initially remains visually trustworthy/human;
+- Caldrin is archivist-engineer, not fantasy priest;
+- Sena is foundry captain, not armored warrior;
+- Rusk is credible administrator, not cartoon villain;
+- Listener manifestation follows `docs/158` §16.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
-Subject to later Technical Production Bible and performance/platform authority:
+Subject to later technical authority:
 
-- topology strategy;
-- sculpting/modeling package;
-- texture-authoring package;
-- exact shader implementation;
-- exact material graph architecture;
-- Nanite use per compatible asset;
-- LOD/fallback implementation;
-- foliage authoring workflow;
-- modular mesh decomposition;
-- light authoring workflow;
-- source-art organization;
-- procedural support tools;
-- character hair/cloth implementation technology;
-- character topology/UV organization;
-- shared-rig/body reuse implementation that preserves identity;
-- how the written doctrine is achieved technically.
-
-These choices may not redefine the visible result.
+- topology;
+- UV/material organization;
+- modeling/sculpting software;
+- shader implementation;
+- hair technology;
+- cloth technology;
+- skeleton/retarget architecture that preserves silhouette;
+- small seam/stitch/deformation adjustments that do not alter identity;
+- Nanite/LOD/fallback choices;
+- foliage and environment authoring workflow;
+- source-art organization.
 
 ## PROTOTYPE / RUNTIME EVIDENCE
 
-Requires representative implementation before final lock:
+Requires representative implementation:
 
-- exact internal rendering resolution;
-- target scalability tiers;
-- triangle budgets where still relevant;
-- material complexity budgets;
-- texture resolution/memory budgets;
+- final internal rendering resolution/scalability;
+- geometry/material/texture budgets;
 - foliage density;
 - shadow/GI cost envelope;
-- VFX overdraw/density budgets;
-- final fog/atmosphere cost envelope;
-- final Hush representation architecture;
-- camera-sensitive scale refinements;
-- exact character scale;
-- skeleton/rig family count;
+- VFX overdraw/density;
+- Hush runtime representation architecture;
+- final world-scale conversion;
+- final skeleton/rig family count;
 - hair/cloth simulation budget;
 - facial-animation technology;
-- final tool/garment attachment placement under animation.
+- final attachment offsets under animation.
 
 ## OWNER REVIEW REQUIRED
 
-- material redefinition of the game's overall visual style;
-- final Neris appearance;
-- final Neris face/body/base costume/primary palette;
-- major named-character identity if concept work creates materially different directions;
-- final Listener visible presentation;
-- substantial change from grounded stylization toward photoreal, cartoon, anime, retro-low-poly, cel-shaded, or grimdark aesthetics;
-- major branding/iconography direction;
-- any proposed visual solution that changes locked story/gameplay identity rather than merely expressing it.
+Owner review is no longer a request to invent principal character identity from options. It is required for:
+
+- any material departure from the locked designs in `docs/158`;
+- any change to Neris's face/hair/body/costume/palette/gender presentation;
+- any principal redesign that changes story read;
+- any materially different Listener manifestation;
+- any shift toward photoreal, anime, cartoon, cel-shaded, retro-low-poly or grimdark character treatment;
+- major branding/iconography redefinition.
 
 ---
 
 # 5. Engine technology boundary
 
-UE5.8 is the engine authority, but no rendering feature is art direction by itself.
+UE5.8 is the engine authority, but no renderer feature is art direction by itself.
 
-Current Epic 5.8 documentation describes Nanite as capable of extremely high geometry detail and automatic fine-grained LOD, while also noting practical performance limits still depend on material complexity, instance counts, output resolution, hardware, and content choices.
+Stillring may use modern rendering capability without allowing modern rendering capability to define visual identity.
 
-Therefore:
+Do not infer mandatory photogrammetry, MetaHumans, maximum texture resolution, maximum vegetation density or every renderer feature enabled.
 
-> **Stillring may use modern rendering capability without allowing modern rendering capability to define its visual identity.**
-
-A studio must not infer that “modern Unreal game” means mandatory photogrammetry, MetaHumans, maximum texture resolution, maximal vegetation, or every supported renderer feature enabled.
-
-Relevant current reference:
-
-- Epic Games, *Nanite Virtualized Geometry in Unreal Engine 5.8*: `https://dev.epicgames.com/documentation/unreal-engine/nanite-virtualized-geometry-in-unreal-engine`
-- Epic Games, *Scalability and the Developer for Unreal Engine 5.8*: `https://dev.epicgames.com/documentation/unreal-engine/scalability-and-the-developer-for-unreal-engine`
-
-Technical-production authority must later turn the selected target hardware/platform into measured budgets.
+Technical production must later turn target hardware/platform requirements into measured budgets.
 
 ---
 
@@ -233,77 +187,62 @@ Technical-production authority must later turn the selected target hardware/plat
 
 **Board 01 — Master Art Direction / North Star**
 
-Current concept board exists as a generated visual artifact from the owner/assistant art-direction session.
+Directional companion to written authority. It does not override repository text.
 
-The board illustrates:
-
-- playable fantasy illustration;
-- exaggerated but believable world scale;
-- forest settlement integration;
-- waterfall/geographic landmark thinking;
-- monumental ruins;
-- quiet sacred-space treatment;
-- character stylization direction;
-- material/readability hierarchy.
-
-The board is **DIRECTIONAL**, not independent canon.
-
-A repository binary copy remains pending because current GitHub text actions do not provide a safe binary-image commit path in this work session.
-
-The absence of the image from the repository does not make chat authoritative; `docs/154` records the durable decisions in text.
-
-## Still required
+## Required
 
 - Board 02 — Regional Shape Language;
-- Board 03 — Character Style Band;
+- Board 03 — Character Style Band / locked-design verification;
 - Board 04 — Lighting / Atmosphere / Time;
 - Board 05 — Gameplay Readability;
 - Board 06 — Representative Benchmark Scene.
 
-See `docs/155_ART_REFERENCE_METHOD_AND_BOARD_INDEX.md`.
+Board 03 must now visualize `docs/158` faithfully, including:
 
-Board 03 now has a written source brief in `docs/158`; it must illustrate that authority rather than inventing a new character style.
+- Neris front/side/back;
+- Neris face/expression target;
+- all eight human principals at reference scale;
+- black-silhouette test;
+- flat-color test;
+- hand/tool treatment;
+- skin/hair/material target band;
+- Listener manifestation diagram.
 
 ---
 
-# 7. Next documentation sequence
+# 7. Next art-workstream sequence
 
-Recommended continuation of the art workstream:
-
-1. read combat/encounter/boss authority and produce the **Enemy / Boss Art Manifest**;
-2. build detailed **Region Environment / Prop Manifests** from canonical region files, including C3 named-character enumeration;
+1. produce the **Enemy / Boss Art Manifest** from encounter/combat authority;
+2. build **Region Environment / Prop Manifests**, including C3 named-character enumeration;
 3. produce **Regional Color / Material / Lighting Scripts**;
 4. produce the **Hush Visual Production Matrix**;
 5. produce the **VFX Production Manifest**;
-6. create Board 03 / the Neris owner-review concept package when visual concept generation is the active task;
-7. create the remaining visual board set in parallel with corresponding written contracts;
-8. defer exact numeric scale/performance budgets until the dependencies are real;
-9. update global authority/supersession/onboarding indexes once the art package is reviewed as a complete closure unit;
-10. only then mark relevant `SH-ART-*` rows fully closed.
+6. create Board 03 as faithful visualization of the locked principal designs;
+7. create the remaining board set alongside the matching written contracts;
+8. defer numeric performance/scale budgets until representative implementation exists;
+9. update global authority/onboarding indexes after art-package review;
+10. mark remaining `SH-ART-*` rows closed only when their actual deliverables exist.
 
 ---
 
 # 8. Art-workstream acceptance condition
 
-The art workstream is studio-handoff-safe when an external art director/lead can answer from repository authority:
+The art handoff is safe when an external art director can answer from repository authority:
 
-- what Stillring should look like;
-- why it looks that way;
-- how each region differs;
-- how characters are stylized;
-- how Neris must read;
-- how the principal cast must remain visually distinct;
-- how Hush transformation works visually;
-- how gameplay affordances remain honest;
+- what Stillring looks like and why;
+- how every region differs;
+- how principal characters look and why;
+- how Neris is built visually and how her equipment evolves;
+- how named/population reuse works;
+- how Hush transformation works;
+- how gameplay readability remains honest;
 - what asset families exist;
-- which assets are reusable versus unique;
-- what quality is expected at each production stage;
-- which decisions are theirs;
-- which decisions require owner review;
-- which decisions require runtime evidence;
-- what references may and may not be copied;
-- what volume of art work must be staffed.
+- what is reusable versus unique;
+- what quality each stage requires;
+- what the studio may choose;
+- what requires owner review;
+- what requires runtime evidence;
+- what references may not be copied;
+- what production volume must be staffed.
 
-The current package now materially answers the principal-character production questions and makes the remaining concept/runtime gates explicit.
-
-The art workstream is still incomplete overall because enemy/boss, detailed regional asset, regional lighting/material, Hush-production, VFX, scale, and full C3/C4 production counts remain open.
+The principal-character creative package now answers its portion of that acceptance test. Enemy/boss, region-manifest, lighting/material, Hush-production, VFX and final scale/performance work remain intentionally visible rather than hidden in chat history.
