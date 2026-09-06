@@ -200,6 +200,9 @@ Must communicate:
 
 ## Board 02 — Regional Shape Language
 
+**Written source brief:** `docs/165_BOARD_02_REGIONAL_SHAPE_LANGUAGE_SOURCE_BRIEF.md`  
+**Job:** visualization and verification of the locked region/environment shape authority; not a region-redesign round.
+
 Must compare all six major regions plus Cairnspire/Brindle and finale spaces.
 
 For each region show:
@@ -212,6 +215,8 @@ For each region show:
 - route language;
 - Waking/Hush relationship;
 - day/night/weather note.
+
+Board 02 may not invent routes, blockout scale, traversal legality, new hero-space identity or new Hush semantics. If its execution conflicts with `docs/154`, `docs/160`, `docs/161`, `docs/162` or `docs/165`, the board fails and must be corrected.
 
 ## Board 03 — Character Style Band
 
@@ -237,6 +242,9 @@ Board 03 may not redesign Neris or any other locked principal identity. If its e
 
 ## Board 04 — Lighting / Atmosphere / Time
 
+**Written source brief:** `docs/166_BOARD_04_LIGHTING_ATMOSPHERE_TIME_SOURCE_BRIEF.md`  
+**Job:** visualization and verification of the locked regional lighting/material/atmosphere relationships in `docs/161`; not a grading, renderer or exposure-selection round.
+
 Must compare:
 
 - dawn;
@@ -250,6 +258,8 @@ Must compare:
 - weather families.
 
 Purpose: prevent every environment artist from inventing a separate exposure/color philosophy.
+
+Board 04 may not lock exact exposure/light/fog values, choose renderer technology, invent a global night/Hush LUT, alter regional palette relationships, or treat visual keys as runtime/performance proof. If execution conflicts with `docs/161`, `docs/162`, `docs/163` or `docs/166`, the board fails and must be corrected.
 
 ## Board 05 — Gameplay Readability
 
@@ -330,7 +340,11 @@ Before promoting any generated visual idea, record:
 
 Generated typography, symbols, costume details, props, and architecture should be treated as provisional unless separately specified in repository authority.
 
+For Board 02 specifically, generated imagery must be corrected to match `docs/160`/`161`/`162`/`165`; it may not use generation variance as permission to invent a region, route, landmark, Hush relationship or production scale.
+
 For Board 03 specifically, generated imagery must be corrected to match `docs/158` and `docs/164`; it may not use generation variance as permission to alter locked character identity.
+
+For Board 04 specifically, generated imagery must be corrected to match `docs/161`/`162`/`163`/`166`; it may not use generation variance as permission to establish exposure values, renderer behavior, new weather semantics, global grading or runtime proof.
 
 ---
 
