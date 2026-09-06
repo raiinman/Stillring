@@ -16,6 +16,8 @@ The written Art Bible is authoritative. Visual boards are explanatory evidence f
 
 If a board and `docs/154_STILLRING_ART_BIBLE.md` conflict, the written authority wins until the owner explicitly changes the written authority.
 
+Where a later specific written authority intentionally completes an earlier placeholder, the later specific authority controls that detail. For principal character identity this means `docs/158_CHARACTER_PRODUCTION_MANIFEST.md` controls the specific character facts while `docs/154` continues to control overall character doctrine.
+
 ---
 
 # 2. Why boards exist
@@ -213,7 +215,10 @@ For each region show:
 
 ## Board 03 — Character Style Band
 
-Must establish:
+**Written source brief:** `docs/164_BOARD_03_CHARACTER_STYLE_BAND_SOURCE_BRIEF.md`  
+**Job:** visualization and verification of the locked character authority in `docs/158`; not an identity-selection round.
+
+Must establish and verify:
 
 - anatomy/proportion range;
 - face simplification;
@@ -222,9 +227,13 @@ Must establish:
 - hand/tool readability;
 - age/body diversity;
 - named-character versus population differentiation;
-- forbidden uncanny/photoreal boundary.
+- forbidden uncanny/photoreal boundary;
+- principal group silhouette separation;
+- Neris's locked female age-17 visual identity and Cantor/equipment integration;
+- state continuity and Hush recognition;
+- Listener manifestation.
 
-The board must not finalize Neris's face by accident. Final Neris concept requires owner review.
+Board 03 may not redesign Neris or any other locked principal identity. If its execution conflicts with `docs/158`, the board fails and must be corrected.
 
 ## Board 04 — Lighting / Atmosphere / Time
 
@@ -320,6 +329,8 @@ Before promoting any generated visual idea, record:
 - whether gameplay/architecture logic actually works in 3D.
 
 Generated typography, symbols, costume details, props, and architecture should be treated as provisional unless separately specified in repository authority.
+
+For Board 03 specifically, generated imagery must be corrected to match `docs/158` and `docs/164`; it may not use generation variance as permission to alter locked character identity.
 
 ---
 
