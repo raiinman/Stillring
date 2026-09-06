@@ -263,17 +263,26 @@ Board 04 may not lock exact exposure/light/fog values, choose renderer technolog
 
 ## Board 05 — Gameplay Readability
 
+**Written source brief:** `docs/167_BOARD_05_GAMEPLAY_READABILITY_SOURCE_BRIEF.md`  
+**Job:** visualization and verification of current gameplay/art readability authority; not a traversal, combat, tool, Hush, UI or accessibility redesign round.
+
 Must demonstrate:
 
 - traversable versus non-traversable structures;
-- mantle/ledge/ladder visual language;
+- mantle/ledge/ladder/water-exit visual language;
+- route guidance through the honest world rather than universal highlight paint;
 - puzzle/mechanism hierarchy;
+- Cantor/Anchor world-first and tool-ready readability without scan-spam or glowing-keycard language;
 - target/interactable readability;
-- hazards;
 - enemy telegraphs at gameplay distance;
-- VFX density limits;
-- color-independent cues;
-- examples of “honest world” affordances.
+- target-lock versus attack-permission distinction;
+- bounded offscreen committed-threat warning where current encounter authority requires it;
+- Hush/weather readability stress;
+- VFX hierarchy and Reduced Effects conceptual preservation;
+- color-independent cue redundancy;
+- explicit failure examples.
+
+Board 05 may not invent traversal permission, tool compatibility, attack timing, enemy weak points, target-lock rules, Hush semantics, UI production identity, exact accessibility values or runtime proof. If execution conflicts with the source gameplay authorities, `docs/154`, `docs/159`, `docs/162`, `docs/163` or `docs/167`, the board fails and must be corrected.
 
 ## Board 06 — Representative Benchmark Scene
 
@@ -345,6 +354,8 @@ For Board 02 specifically, generated imagery must be corrected to match `docs/16
 For Board 03 specifically, generated imagery must be corrected to match `docs/158` and `docs/164`; it may not use generation variance as permission to alter locked character identity.
 
 For Board 04 specifically, generated imagery must be corrected to match `docs/161`/`162`/`163`/`166`; it may not use generation variance as permission to establish exposure values, renderer behavior, new weather semantics, global grading or runtime proof.
+
+For Board 05 specifically, generated imagery must be corrected to match current locomotion/camera/combat/encounter/tool/Hush authority and `docs/154`/`159`/`162`/`163`/`167`; it may not use generation variance as permission to invent traversal affordances, weak points, glowing tool sockets, scan outlines, attack classes, UI policy, Hush semantics or gameplay-camera behavior.
 
 ---
 
