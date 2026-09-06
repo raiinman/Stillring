@@ -2,27 +2,30 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Operational status:** Core design through Save/World-State and Completion is locked. Issue #9 Setup/Payoff is design/documentation complete pending merge/closure of the current closure package. UE5.8 runtime implementation, System IDE implementation, deterministic fixture execution, and human play acceptance remain UNVERIFIED unless a later authority explicitly proves them.
+**Operational status:** Core design through Save/World-State, Completion, Issue #9 Setup/Payoff, and Issue #10 Traversal Transformation is documentation/design complete once the current Issue #10 closure package merges. UE5.8 runtime implementation, System IDE implementation, deterministic fixture execution, performance evidence, and human play acceptance remain UNVERIFIED unless later authority explicitly proves them.
 
 ## Read first
 
-1. `docs/118_SETUP_PAYOFF_ISSUE_9_CLOSURE_AUDIT.md`
-2. `docs/119_SETUP_PAYOFF_DECISION_REGISTER_ADDENDUM.md`
-3. `docs/117_SETUP_PAYOFF_PROTOTYPE_INSTANTIATION_AUTHORITY.md`
-4. `docs/116_SETUP_PAYOFF_AUTHORING_DATA_AUTHORITY_ADDENDUM.md`
-5. `docs/115_SETUP_PAYOFF_PORTFOLIO_AUTHORITY_ADDENDUM.md`
-6. `docs/114_SETUP_PAYOFF_PAYOFF_MATERIALITY_AUTHORITY_ADDENDUM.md`
-7. `docs/113_SETUP_PAYOFF_COMMIT_BOUNDARY_AUTHORITY_ADDENDUM.md`
-8. `docs/112_SETUP_PAYOFF_STATE_AUTHORITY_ADDENDUM.md`
+1. `docs/125_TRAVERSAL_TRANSFORMATION_ISSUE_10_CLOSURE_AUDIT.md`
+2. `docs/126_TRAVERSAL_TRANSFORMATION_DECISION_REGISTER_ADDENDUM.md`
+3. `docs/124_TRAVERSAL_TRANSFORMATION_DECISION_5_NETWORK_INTEGRATION.md`
+4. `docs/123_TRAVERSAL_TRANSFORMATION_DECISION_4_ACQUISITION_MASTERY.md`
+5. `docs/122_TRAVERSAL_TRANSFORMATION_DECISION_3_WORLD_LAYER_ROUTE_STATE.md`
+6. `docs/121_TRAVERSAL_TRANSFORMATION_DECISION_2_ROUTE_NETWORK_GRAMMAR.md`
+7. `docs/120_TRAVERSAL_TRANSFORMATION_DECISION_1_LINE_SKIFF_SELECTION.md`
+8. `docs/100_COMPLETION_DRIFT_KNOT_AUTHORITY_ADDENDUM.md`
 9. `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`
-10. `docs/105_COMPLETION_DECISION_16_CLEANUP_AUDIT.md`
-11. `docs/109_COMPLETION_LEGACY_LITERAL_BLOCKLIST.md`
-12. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
-13. `docs/18_PROJECT_DECISION_REGISTER.md`
-14. `docs/11_QUEST_AND_COMPLETION_LEDGER.md` — older authored content source; newer addenda control conflicting Setup/Payoff or completion literals
-15. `docs/12_100_PERCENT_ROUTE.md` — older authored route source; newer addenda control conflicting Setup/Payoff or completion literals
-16. GitHub Issue #9
-17. GitHub Issue #10
+10. `docs/98_COMPLETION_SKILL_TRIAL_AUTHORITY_ADDENDUM.md`
+11. `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`
+12. `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`
+13. `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`
+14. `docs/22_GATE1_CAMERA_SPECIFICATION.md`
+15. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+16. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
+17. `docs/119_SETUP_PAYOFF_DECISION_REGISTER_ADDENDUM.md`
+18. `docs/118_SETUP_PAYOFF_ISSUE_9_CLOSURE_AUDIT.md`
+19. `docs/18_PROJECT_DECISION_REGISTER.md`
+20. GitHub Issue #11 — Define Null Meridian synthesis trial matrix
 
 Always re-check exact current `main` before repository writes.
 
@@ -30,150 +33,326 @@ Always re-check exact current `main` before repository writes.
 
 For unresolved design work:
 
-fresh research -> reconcile existing authority, IP, accessibility, failure/recovery, save semantics, System IDE, deterministic fixtures, and human-play implications -> owner approval -> document -> exact diff/review -> expected-head merge -> next decision.
+fresh research -> reconcile existing authority, IP, accessibility, failure/recovery, save semantics, System IDE, deterministic fixtures, content-production cost, and human-play implications -> owner review/approval -> document -> exact diff/review -> expected-head merge -> next decision.
 
-Do not silently reopen a locked decision merely because an older authored document still contains shorthand. Use the authority/supersession chain.
+The owner's previous auto-approval delegation applied to locomotion/traversal work and was used for Issue #10. **Do not carry that delegation into Issue #11.** Null Meridian synthesis decisions require explicit owner review unless the owner grants a new delegation.
 
-## Completion status
+Do not silently reopen a locked decision merely because an older authored document contains shorthand. Use the authority/supersession chain.
 
-Completion Decision #16 is LOCKED in `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`.
+---
 
-Canonical top-level completion remains 16 equal 6.25% buckets. Setup/Payoff is one bucket containing exactly 12 canonical chain items. Global weighting is category-based, not raw-ID weighted. Old 48 Fault / 28 Pulse / 30 Vault / K02=30 / Drift=13 literals are superseded where conflicting.
+# Completion status
 
-Issue #8 is design complete. Runtime Completion Ledger / Save / IDE evidence remains future work.
+Completion Decision #16 remains locked in `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`.
 
-## Issue #9 Setup/Payoff — locked decisions
+Canonical completion remains 16 equal 6.25% top-level buckets.
 
-### Decision #1 — semantic state authority — `docs/112`
+Relevant here:
 
-- stable ID `setup.<region>.<slug>`;
-- source systems own facts; Setup/Payoff evaluates rather than shadow-copies them;
-- lifecycle: Dormant -> Primed -> Committed -> Payoff Available -> Resolved;
-- exceptional classifications: Unavailable and Superseded;
-- valid choices/non-intervention cannot silently make 100% impossible;
-- save/load reconciles from semantic identity, source facts, legitimate chain-owned history, and migration;
-- dedicated Setup/Payoff System IDE/workbench is required.
+- Cross-state Setup/Payoff = 12 canonical items;
+- Skill Trials = 9;
+- Tool Mastery Upgrades = 14;
+- Drift Knots = 12.
 
-### Decision #2 — commit boundaries — `docs/113`
+Drift Knot family eligibility is:
 
-- commit is an explicit semantic physical/social/operational/catastrophe boundary;
-- save/autosave, map unload, dialogue/cutscene end, checkpoint, Hush entry/exit, and generic story phases are never implicit generic commits;
-- commit/recovery must be atomic and idempotent;
-- death/retry follows authoritative checkpoint/save semantics;
-- committed history is not casually rewritten by later present-day changes.
+**10 reconciled Resonance Faults + existing story/Line Skiff prerequisites.**
 
-### Decision #3 — payoff materiality — `docs/114`
+Older fixed 13-Fault wording is superseded.
 
-- canonical payoff requires at least one meaningful player-perceivable downstream difference in authoritative game state;
-- consequence strength is qualitative, not a fixed number of surfaces/systems;
-- spatial, operational, social, epistemic, relationship, decision-space, prevention, negative, or other authored consequences may qualify;
-- rewards/dialogue/presentation cannot substitute for genuine underlying state change;
-- reconvergence may unify the present but cannot falsify the past.
+---
 
-### Decision #4 — twelve-chain portfolio — `docs/115`
+# Issue #9 Setup/Payoff — CLOSED / design complete
 
-Regional allocation remains 3/2/2/2/1/1/1 across Brindle/Circuit, Rootmere, Saltreach, Emberstep, High Aerie, Mireglass, Cairnfall.
+Issue #9 closed after PR #167 / main merge `30d3e0efca12ae71a2a3ccc9189a755166e4bde3`.
 
-Story structure remains 3 mandatory / 9 optional-for-story, all 12 completion-bearing.
+Authority:
 
-Mandatory chains:
-- S03 Common Measure
-- S06 Manual Fog Code
-- S08 Maker Marks
+- `docs/112` — semantic state authority;
+- `docs/113` — commit boundaries;
+- `docs/114` — payoff materiality;
+- `docs/115` — 12-chain portfolio;
+- `docs/116` — authoring/data authority;
+- `docs/117` — S01/S06/S11 prototypes;
+- `docs/118` — closure audit;
+- `docs/119` — compact decision register.
 
-Key reconciliations:
-- S07 primary payoff = local-vs-central pressure control/community operational autonomy, NOT another moving deep-inlet refuge as the main result;
-- S10 primary payoff = distributed agency/knowledge, not merely a backup copy surviving;
-- S01 Crooked Fire Bell = flagship vertical-slice chain;
-- prototype set = S01, S06, S11.
+Runtime Setup/Payoff/DataAsset/Save/IDE/vertical-slice/human proof remains future work.
 
-### Decision #5 — authoring/data authority — `docs/116`
+---
 
-- one canonical semantic-ID authored definition per chain, intended as UE5.8 Primary Data Asset architecture;
-- authored definition and runtime/save history are separate;
-- transient lifecycle truth is derived where possible rather than blindly persisted;
-- durable chain history is minimal commit/resolution receipt state plus migration provenance;
-- predicates are declarative/typed with named deterministic source-owned provider escape hatches;
-- arbitrary per-chain Blueprint authority, Actor/map-path authority, hidden callbacks, and duplicate hand-maintained registries of truth are forbidden;
-- shared System IDE provides authoring validation, dependency tracing, variant exercise, save/reload matrices, unexpected-order testing, and Explain Current State.
+# Issue #10 Traversal Transformation — locked decisions
 
-### Decision #6 — prototype instantiation — `docs/117`
+## Decision #1 — Line Skiff selection — `docs/120`
 
-S01 Crooked Fire Bell:
-- elective physical chain;
-- commit when final repair returns to service after verification;
-- standardized and locally tuned normal variants;
-- skipped pre-Grand-Ring C01 can become Superseded rather than a fabricated commit;
-- equivalent post-Stillness resolution remains completion-valid;
-- Mara availability cannot erase physical truth.
+Selected **Line Skiff** as Stillring's midgame traversal transformation.
 
-S06 Manual Fog Code:
-- mandatory operational chain with one normal committed variant;
-- proves Setup/Payoff does not require binary choice;
-- commit only after local code is verified against actual current coast;
-- canonical story progression cannot claim C10 complete while required setup service remains unfinished.
+Core identity:
 
-S11 Personal Provenance:
-- road-to-Cairnspire mirror/traveler = seed;
-- Cairnspire civic registration = semantic commit opportunity;
-- variants personal_provenance / anonymous_salvage;
-- named provenance gives an interpretive advantage later; anonymous history retains authored Palinode/Mirror reconstruction path;
-- both remain completion-valid and may later reconverge without erasing history.
+> **The Line Skiff is a network vehicle, not a mount. It makes authored roads newly expressive; it does not replace the world between them.**
 
-## Issue #9 closure
+Rejected as primary transformation:
 
-`docs/118_SETUP_PAYOFF_ISSUE_9_CLOSURE_AUDIT.md` maps every original Issue #9 acceptance criterion.
+- wind-rig — overlaps Vane/High Aerie, broad 3D world/camera scope, puzzle-bypass risk;
+- maintenance strider — horse-analogue behavior, large terrain/IK/collision/dismount scope.
 
-Design/documentation acceptance is satisfied after the closure package merges:
-- data shape documented;
-- 3 Stillring-specific prototypes written;
-- failure/reload behavior defined;
-- writers can author without node-path hardcoding;
-- S01 is the canonical naturally noticeable vertical-slice design.
+Line Skiff:
 
-The vertical-slice **runtime/player proof is NOT complete** merely because its design is complete.
+- seeded at Graymile before Grand Ring;
+- tied to Tessa's route/courier history;
+- acquired on changed-world return;
+- uses `pattern.roadhand_pulse`;
+- cannot be summoned anywhere;
+- cannot free-roam cross-country;
+- is not ordinary mounted combat;
+- has no normal fuel/stamina/ticket travel tax;
+- preserves authored on-foot exploration.
 
-Once the closure PR merges, close Issue #9 as **completed — design/documentation complete, runtime evidence pending implementation/verification tracks**.
+## Decision #2 — route/network grammar — `docs/121`
 
-## NEXT unresolved design issue
+Locked principle:
 
-**Issue #10 — traversal transformation/mastery loop.**
+> **The semantic network owns legal macro travel; the player owns acceleration, coasting, braking, bounded lateral placement, junction intent, Roadhand Pulse, momentum, and camera.**
 
-Do not start by inventing mechanics in isolation. First read Issue #10 plus progression/tool/traversal authorities and research comparable modern adventure traversal mastery systems. Preserve Stillring's existing rules:
+Stable identities:
 
-- authored traversal progression;
-- new verbs reopen remembered places;
-- ordinary Sprint has no stamina tax;
-- no baseline universal free climbing;
-- tools/capabilities do not silently universalize traversal;
-- Zelda lineage is a design-problem reference, not copied expression;
-- Assassin's Creed movement may inform locomotion feel only where it does not swallow puzzle/traversal authorship;
-- every repeatedly tuned/stateful major traversal system needs its own System IDE/workbench and deterministic fixtures.
+- `skiff.route.<region>.<slug>`
+- `skiff.node.<region>.<slug>`
 
-Issue #11 Null Meridian synthesis trial matrix follows Issue #10.
+Spline/Actor/map paths are presentation, never persistence identity.
 
-## Repository truth / stale-document rule
+Control/network rules:
 
-Older authored docs remain valuable for content, but newer authority addenda control conflicts.
+- accelerate / coast / brake;
+- low-speed reverse only;
+- meaningful bounded lateral corridor control;
+- route-edge scrub/resistance rather than invisible billiard bounce;
+- readable standard junctions use player branch intent;
+- no quest-marker branch selection;
+- no safe default -> controlled stop;
+- Roadhand Pulse wakes/identifies compatible infrastructure, never generic boost;
+- intentional boarding/parking/dismount at compatible semantic nodes;
+- no baseline high-speed dismount exploit;
+- minor collision sheds momentum, not instant fail;
+- major invalid route -> controlled safe stop;
+- manual camera orbit remains authoritative.
 
-In particular:
-- `docs/104` controls completion counts/weighting over older `docs/10`–`docs/14` literals;
-- `docs/112`–`docs/118` control Setup/Payoff state, commit, payoff, portfolio, authoring, prototypes, and closure over older shorthand in `docs/11`, `docs/12`, or regional story files;
-- `docs/119` is the compact Setup/Payoff decision-register addendum.
+Switchshoe:
 
-Do not mechanically rewrite long authored docs merely to remove every historical literal unless a scoped cleanup plan proves the rewrite is safe. Prefer explicit authority/supersession unless the old text creates an actual implementation hazard.
+- `upgrade.lineskiff.switchshoe`;
+- before upgrade, marked legacy transfer may require stop/re-couple;
+- after upgrade, supported adjacent strips may transfer at speed;
+- does not increase global top speed or permit off-network hopping.
 
-## Governing constraints
+## Decision #3 — Stillness/Hush/world route state — `docs/122`
+
+Authority separation:
+
+- Story/World State owns durable route history/damage/repair;
+- Hush/World-Layer owns active `Waking` / `Hush` semantic layer;
+- Line Skiff network derives current traversal from those truths;
+- Runtime Data Layers/streaming are representation only.
+
+While riding, seam shift is legal only if the current route has an explicit deterministic paired continuation and destination occupancy is safe before semantic commit.
+
+No route contract -> reject before commit.
+
+Route expression classes:
+
+- Shared Invariant;
+- Paired Expression;
+- Layer Exclusive;
+- Related Distinct.
+
+Roadhand may wake valid dormant infrastructure but cannot override destroyed/story-blocked/tool-gated/layer-invalid roads.
+
+Non-deferrable world events that could invalidate an occupied route require an Occupied-Segment Continuity Contract.
+
+Changed-world route changes may not silently brick Drift Knots or required access.
+
+## Decision #4 — acquisition/mastery — `docs/123`
+
+Teaching arc:
+
+1. see Tessa use it;
+2. safely wake/couple/move/park;
+3. unpressured fun stretch;
+4. learn lateral control, braking, junction, parking;
+5. learn Roadhand-in-motion with safe fallback;
+6. ordinary-world practice;
+7. Trial 05 Relay Run;
+8. Switchshoe expansion;
+9. advanced Drift Knot/tool synthesis.
+
+Mastery = route fluency, not top speed.
+
+Trial 05:
+
+`trial.circuit.line_skiff_relay_run`
+
+Tests:
+
+- acceleration/coasting/braking;
+- momentum;
+- junction/route choice;
+- Roadhand Pulse;
+- recovery.
+
+Three physical relay flags use generous authored mechanical timing.
+
+Completion does NOT require rank/par/leaderboard/perfect/no-collision/personal best.
+
+Accessible timing/steering/speed accommodations earn identical Trial completion and reward.
+
+Qualifying clear settles Switchshoe exactly once.
+
+## Decision #5 — network/optional integration — `docs/124`
+
+Network is shared world infrastructure, not 12 Hunt racetracks.
+
+Purpose families:
+
+- Trunk Corridors;
+- Hub Approaches;
+- Regional Spurs;
+- Legacy/Maintenance Lanes;
+- Hazard/Hunt Segments;
+- Mastery Course.
+
+By natural late-game state, network should meaningfully approach every major region where story/world facts permit, usually preserving a last meaningful on-foot stretch.
+
+The 12 Drift Knots retain stable existing identities and progressively combine:
+
+- base Skiff/Cantor;
+- Anchor;
+- Glasslung;
+- Temper;
+- Switchshoe;
+- Vane/Crosswind;
+- Palinode;
+- authored observation window;
+- Mirror;
+- Hush/Mirror;
+- Fine Fork;
+- seam/Switchshoe/Fine Fork synthesis.
+
+No route-discovery completion category.
+
+No required infinite courier grind.
+
+Other tools interact while riding only through explicit Route Tool Interaction Contracts: Observe/Diagnose, In-Motion Compatible, Slow-Zone Compatible, or Park/Service Required.
+
+Route Listener remains bounded completion assistance after 12/12 Knots.
+
+---
+
+# Issue #10 closure — `docs/125`
+
+All original acceptance criteria are design-satisfied:
+
+- 3 concepts evaluated;
+- 1 selected;
+- route/network requirements documented;
+- Hush/Stillness interaction documented;
+- optional Hunt hook defined;
+- mastery activity defined;
+- foreshadowing preserved;
+- faster/more expressive known-world travel specified;
+- limitations preserve authored on-foot spaces.
+
+Issue #10 can close **design/documentation complete** after the closure package merges.
+
+Runtime proof remains explicitly open, including:
+
+- UE5.8 Skiff implementation;
+- semantic route graph;
+- high-speed camera tuning;
+- World Partition streaming/HLOD performance at target speed;
+- Hush paired-route transitions;
+- save/reload;
+- Roadhand/Switchshoe runtime;
+- Trial 05;
+- 12 Drift Knots;
+- Route Listener;
+- accessibility;
+- Line Skiff / Route Network System IDE;
+- human confirmation that the Skiff is fun, readable, transformative, and does not trivialize the world.
+
+`docs/126` is the compact traversal decision-register addendum.
+
+---
+
+# NEXT unresolved design issue
+
+**Issue #11 — Define Null Meridian synthesis trial matrix.**
+
+Issue goal:
+
+Design the final dungeon as a cumulative exam of Stillring's existing verbs rather than a new-mechanic dump or renamed version of another game's finale.
+
+Required verb families:
+
+- Anchor Line;
+- Glasslung Reed;
+- Temper Gauntlet;
+- Vane Cloak;
+- Mirror Nail;
+- Cantor patterns;
+- Hush seam mode;
+- core lock-on combat.
+
+Issue rules:
+
+- 5–7 compact synthesis trials;
+- no one-room-per-region / one-barrier-per-element formula;
+- every trial combines previously mastered mechanics;
+- at least one traversal + combat trial;
+- at least one perception/state-commitment trial;
+- final Maelor/Listener sequence resolves thematic problem through mechanics as well as cutscenes;
+- no new mandatory core verb in finale;
+- every trial lists prerequisites and failure/recovery;
+- debug loadouts must permit trial testing before full narrative content exists.
+
+## Issue #11 process boundary
+
+Do not auto-approve Issue #11 from the old traversal delegation.
+
+Before proposing the first Null Meridian decision:
+
+1. read Issue #11;
+2. read final story / Null Meridian objective / scene / puzzle / combat authority;
+3. inventory every required verb's final locked capabilities and upgrades;
+4. research cumulative-final-dungeon / synthesis-challenge design without copying specific rooms/puzzles;
+5. propose the first trial-matrix architecture for explicit owner review.
+
+---
+
+# Repository truth / stale-document rule
+
+Newer authority controls conflicts:
+
+- `docs/104` controls completion counts/thresholds over older literals;
+- `docs/112`–`docs/119` control Setup/Payoff;
+- `docs/120`–`docs/126` control Line Skiff / Issue #10 traversal transformation;
+- old 13-Fault Drift Knot unlock is superseded by 10 reconciled Faults;
+- Issue #10's wind-rig/strider candidate text is historical framing, not current selection authority.
+
+Do not mechanically rewrite long authored docs merely to erase every old literal unless a scoped cleanup proves it is safe. Prefer explicit precedence/supersession when the older text remains valuable context.
+
+---
+
+# Governing constraints
 
 - Unreal Engine 5.8 target
 - C++ first; thin Blueprints
-- System IDE first-class: build the system and its in-game workbench together
+- every major stateful/tuned system gets an in-game System IDE/workbench
 - no retail AI/API dependency
 - clean-room IP discipline
 - authored world over procedural duplication
+- puzzles/story remain central
 - no hidden morality meter
 - no ordinary traversal stamina tax
 - save/world facts use stable semantic IDs
-- human play is final authority for feel, clarity, pacing, emotional impact, and whether a payoff is naturally noticed
+- human play is final authority for movement feel, readability, pacing, puzzle clarity, emotional impact, and whether traversal transformation actually improves the game
 
 **Build the system and its in-game IDE together.**
