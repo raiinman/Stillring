@@ -1,7 +1,7 @@
 # 152 — Studio Handoff Gap Register
 
 **Status:** ACTIVE / CURRENT  
-**Updated:** 2026-09-05  
+**Updated:** 2026-09-06  
 **Parent:** `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md`  
 **Runtime boundary:** documentation only; no testing or UE5.8 implementation authorized
 
@@ -69,33 +69,52 @@ No implementation, production assets, runtime evidence, certification scope, or 
 
 ---
 
-# 5. Art-direction production gaps
+# 5. Art-direction production gaps — reconciled current status
 
-Existing authority is strong at the philosophy level:
+The original `SH-ART-*` rows correctly identified missing production-operational art authority before the current art package existed.
 
-- low-poly/readable silhouette direction;
-- deliberate small texture/material language;
-- regional visual identity;
-- fog/composition;
-- no photoreal clutter;
-- clean-room IP firewall.
+That written package now exists across `docs/154`–`docs/169`.
 
-What is missing is **production-operational visual authority**.
+For current `SH-ART-001`–`SH-ART-010` status:
 
-| ID | Class | Gap | Required closure |
-|---|---|---|---|
-| SH-ART-001 | **P1** | Neris final production character specification | character-art bible section: proportions, silhouette, costume construction, materials, palette, tool attachment, readability distances, damage/state variants, facial scope |
-| SH-ART-002 | **P1** | named-character visual bible | per-character silhouette, costume/social role, palette, age/build, prop/tool language, Hush/post-Stillness needs |
-| SH-ART-003 | **P1/P2** | generic NPC population strategy | population archetypes, reuse limits, body/head/clothing variation strategy, region-specific differentiation |
-| SH-ART-004 | **P1** | enemy/boss visual taxonomy | enemy family silhouettes, threat readability, armor/material language, Hush expression, boss uniqueness boundaries |
-| SH-ART-005 | **P1/P2** | modular environment production standards | module dimensions, snapping assumptions, kit families, collision/readability boundaries, reusable vs hero geometry |
-| SH-ART-006 | **P1** | region color/material/lighting bibles | palette scripts, surface families, atmosphere, lighting intent, readable traversal contrast, Hush changes |
-| SH-ART-007 | **P1** | Hush visual-production grammar | paired versus changed geometry rules, material/VFX language, preserved readability, accessibility redundancy |
-| SH-ART-008 | **P1** | VFX language | gameplay-critical versus decorative VFX, density/readability, color-independent cues, region/Hush differentiation |
-| SH-ART-009 | **P2** | region asset manifests | modular kits, hero structures, props, mechanisms, landmarks, Hush variants, reusable families, unique burden |
-| SH-ART-010 | **P1** | world scale/reference metric sheet | door/stair/ledge/human scale, traversal-safe dimensions, prop scale, interaction reach references derived from locked gameplay semantics |
+1. use this section for the global gap-register summary;
+2. use `docs/169_ART_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md` for the scoped evidence and acceptance reasoning;
+3. use `docs/157_ART_WORKSTREAM_CLOSURE_STATUS.md` for active sequencing and remaining art evidence.
 
-A studio should not be asked to infer these from mood references or from Zelda/N64 lineage.
+The governing distinction is:
+
+> **Written production authority may be closed while visual execution, production assets, runtime proof, accessibility validation and human-play acceptance remain open.**
+
+Stillring should therefore no longer be described as lacking production-operational art authority in general.
+
+| ID | Original class | Current status | Current authority | Remaining honest closure |
+|---|---|---|---|---|
+| `SH-ART-001` | **P1** | **PASS — WRITTEN AUTHORITY** | `docs/154`, `docs/158`, `docs/164`, integrated benchmark use in `docs/168` | Board 03/06 rendered verification; final concept/model execution; rig/scale/performance evidence |
+| `SH-ART-002` | **P1** | **PARTIAL — PRINCIPAL CAST CLOSED / C3 EXECUTION PLANNING REMAINS** | `docs/158`, C3/C3+ enumeration and burden in `docs/160`, Board 03 brief `docs/164` | rendered principal verification; C3 production sheets/head-costume assignments and execution planning |
+| `SH-ART-003` | **P1/P2** | **PARTIAL — POPULATION STRATEGY CLOSED / EXACT POOL PLAN REMAINS** | `docs/154`, `docs/156`, `docs/158`, `docs/160`, `docs/164` | exact regional C4 body/head/hair/garment pool counts, reuse matrix and production-volume plan during staffing/asset planning |
+| `SH-ART-004` | **P1** | **PASS — WRITTEN AUTHORITY** | `docs/154`, `docs/156`, `docs/159`, readability integration in `docs/167` | concept/model/animation/VFX execution; gameplay-distance readability and performance evidence |
+| `SH-ART-005` | **P1/P2** | **PARTIAL — WRITTEN MODULAR LANGUAGE CLOSED / METRIC CONVERSION DEPENDENCY-BOUND** | `docs/156`, `docs/160`, `docs/165`, `docs/167`, `docs/168` | final module dimensions/grid, collision envelopes and tested world-scale conversion after representative Neris/camera/traversal implementation |
+| `SH-ART-006` | **P1** | **PASS — WRITTEN AUTHORITY** | `docs/154`, `docs/156`, `docs/161`, `docs/166`, integrated benchmark in `docs/168` | Board 04/06 rendered keys; exact runtime exposure/light/fog behavior; measured performance proof |
+| `SH-ART-007` | **P1** | **PASS — WRITTEN AUTHORITY** | `docs/154`, `docs/156`, `docs/160`–`docs/162`, Boards 02–06 integration in `docs/164`–`docs/168` | visual execution; per-asset Hush tracking during production; runtime/accessibility/performance proof |
+| `SH-ART-008` | **P1** | **PASS — WRITTEN AUTHORITY** | `docs/154`, `docs/156`, `docs/159`, `docs/161`–`docs/163`, `docs/166`–`docs/168` | Board 05/06 rendered verification; implementation; Reduced Effects/accessibility validation; measured runtime budgets |
+| `SH-ART-009` | **P2** | **PASS — WRITTEN INVENTORY AUTHORITY** | `docs/156`, detailed regional environment/prop manifests in `docs/160`, regional scripts and Boards 02–06 in `docs/161`, `docs/165`–`docs/168` | detailed production-estimate counts and asset scheduling; rendered Board 02/04/05/06 verification; runtime proof |
+| `SH-ART-010` | **P1** | **RUNTIME-GATED / PARTIAL REFERENCE ANCHORS EXIST** | `docs/156`, design-reference heights in `docs/158`, non-runtime scale presentation in `docs/164`/`docs/165`, benchmark noncanonical-layout boundary in `docs/168` | tested door/stair/ledge/interaction/module metrics after representative Neris + camera + traversal implementation; do not invent “standard Unreal” values now |
+
+## 5.1 What remains an actual art handoff gap
+
+The remaining art work is now concentrated rather than broad:
+
+- C3 recurring-character execution sheets and assignments;
+- exact C4 regional population/reuse pool counts for staffing and scheduling;
+- owner-reviewed rendered execution for Boards 02–06;
+- representative Q2 character/environment/VFX production evidence;
+- final modular/world-scale metrics derived from later implementation rather than guessed;
+- per-asset Hush/VFX production tracking;
+- runtime accessibility, readability, scalability and performance evidence.
+
+These remaining items do not reopen locked art doctrine, principal character identity, regional art identity, enemy/boss taxonomy, Hush grammar, VFX language or visual-board source authority.
+
+A studio should not infer art direction from mood references, Zelda/N64 lineage, Unreal defaults, or chat history. The current written package is the authority.
 
 ---
 
