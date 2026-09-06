@@ -16,7 +16,8 @@
 **Board 02 source authority:** `docs/165_BOARD_02_REGIONAL_SHAPE_LANGUAGE_SOURCE_BRIEF.md`  
 **Board 04 source authority:** `docs/166_BOARD_04_LIGHTING_ATMOSPHERE_TIME_SOURCE_BRIEF.md`  
 **Board 05 source authority:** `docs/167_BOARD_05_GAMEPLAY_READABILITY_SOURCE_BRIEF.md`  
-**Board 06 source authority:** `docs/168_BOARD_06_REPRESENTATIVE_BENCHMARK_SCENE_SOURCE_BRIEF.md`
+**Board 06 source authority:** `docs/168_BOARD_06_REPRESENTATIVE_BENCHMARK_SCENE_SOURCE_BRIEF.md`  
+**Written art-handoff audit authority:** `docs/169_ART_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
 
 ---
 
@@ -160,6 +161,22 @@ Board 06 explicitly does **not** lock final Relay Square topology, final travers
 
 The written Board 02–06 suite is now production-executable at source-brief level.
 
+## 2.10 Written art-handoff audit
+
+`docs/169_ART_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md` reconciles the original `SH-ART-001`–`SH-ART-010` gap baseline against the current `docs/154`–`168` package.
+
+Its scoped determination is:
+
+- written art handoff is **SUBSTANTIALLY READY**;
+- principal-character, enemy/boss, regional environment/prop, lighting/material, Hush, VFX and Board 02–06 written authority are materially established;
+- `SH-ART-002` remains partial for C3 execution planning;
+- `SH-ART-003` remains partial for exact C4 population pool/reuse counts;
+- `SH-ART-005` remains partial where final modular metric conversion depends on representative implementation;
+- `SH-ART-010` remains explicitly runtime-gated;
+- rendered Boards 02–06, representative Q2/Q3 assets, UE5 runtime evidence, performance/accessibility and human-play proof remain pending.
+
+The audit is a documentation-status reconciliation, not a visual or runtime acceptance event.
+
 ---
 
 # 3. SH-ART gap status
@@ -167,15 +184,15 @@ The written Board 02–06 suite is now production-executable at source-brief lev
 | Gap | Current status | Evidence | Remaining closure |
 |---|---|---|---|
 | `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / VISUAL SOURCE BRIEF COMPLETE / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` + `docs/164` + integrated use in `docs/168` | Board 03/06 rendered execution proof; representative Q2 model; rig/scale/performance evidence |
-| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST / BOARD SOURCE BRIEF COMPLETE** | `docs/158`, `docs/164` | Board 03 rendered group/face/material verification; C3 execution sheets/models |
-| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY/INVENTORY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158`, `docs/160`, `docs/164`, integrated population burden in `docs/168` | final regional C4 pool counts/reuse plan after production planning; rendered population-band/benchmark verification |
-| `SH-ART-004` enemy/boss visual taxonomy | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL / READABILITY SOURCE BRIEF COMPLETE** | `docs/154` §20, `docs/156` §8, `docs/159`, `docs/167` | concept/model/Board 05 execution and measured runtime readability/performance proof |
-| `SH-ART-005` modular environment standards | **SUBSTANTIALLY CLOSED AT WRITTEN LEVEL / SHAPE + READABILITY + INTEGRATED BENCHMARK SOURCE BRIEFS COMPLETE** | `docs/156` §§9–10, `docs/160`, `docs/165`, `docs/167`, `docs/168` | Board 02/05/06 rendered proof; numeric scale/grid after Neris/camera/traversal representation; blockout/runtime proof |
-| `SH-ART-006` region color/material/lighting bibles | **CLOSED AT WRITTEN SCRIPT LEVEL / LIGHTING + INTEGRATED BENCHMARK SOURCE BRIEFS COMPLETE** | `docs/154` §§10–13, `docs/156` §11, `docs/161`, `docs/166`, `docs/168` | Board 04/06 rendered keys; later measured runtime/performance proof |
-| `SH-ART-007` Hush visual grammar | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL / LIGHTING + READABILITY + INTEGRATED COMPARISON CONTRACTS COMPLETE** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161`, `docs/162`, `docs/164`, `docs/165`, `docs/166`, `docs/167`, `docs/168` | visual execution, per-asset tracking during production, later runtime/accessibility/performance proof |
-| `SH-ART-008` VFX language | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL / GAMEPLAY READABILITY + INTEGRATED BENCHMARK SOURCE BRIEFS COMPLETE** | `docs/154` §23, `docs/156` §15, `docs/159`, `docs/161`, `docs/162`, `docs/163`, `docs/166`, `docs/167`, `docs/168` | Board 05/06 rendered effect/readability keyframes; implementation, Reduced Effects validation and measured runtime/performance/accessibility proof |
-| `SH-ART-009` region asset manifests | **SUBSTANTIALLY CLOSED AT WRITTEN INVENTORY LEVEL / SHAPE + LIGHTING + READABILITY + INTEGRATED BENCHMARK SOURCE BRIEFS COMPLETE** | `docs/156` §11, `docs/160`, `docs/161`, `docs/165`, `docs/166`, `docs/167`, `docs/168` | Board 02/04/05/06 rendered execution; detailed count estimates during production planning; runtime proof |
-| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights, `docs/164` reference-scale presentation, `docs/165` non-runtime scale figures, `docs/168` benchmark-only noncanonical layout boundary | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
+| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST / C3 EXECUTION PLANNING PARTIAL** | `docs/158`, `docs/160`, `docs/164`, reconciled by `docs/169` | Board 03 rendered group/face/material verification; C3 execution sheets/models/head-costume assignments |
+| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY/INVENTORY LEVEL / EXACT POOL PLAN PARTIAL** | `docs/154` §19, `docs/156` §7, `docs/158`, `docs/160`, `docs/164`, integrated population burden in `docs/168`, reconciled by `docs/169` | final regional C4 body/head/clothing pool counts and reuse matrix after production planning; rendered population-band/benchmark verification |
+| `SH-ART-004` enemy/boss visual taxonomy | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL / READABILITY SOURCE BRIEF COMPLETE** | `docs/154` §20, `docs/156` §8, `docs/159`, `docs/167`, `docs/169` | concept/model/Board 05 execution and measured runtime readability/performance proof |
+| `SH-ART-005` modular environment standards | **SUBSTANTIALLY CLOSED AT WRITTEN LEVEL / METRIC CONVERSION PARTIAL** | `docs/156` §§9–10, `docs/160`, `docs/165`, `docs/167`, `docs/168`, reconciled by `docs/169` | Board 02/05/06 rendered proof; final module dimensions/grid/collision envelopes after Neris/camera/traversal representation; blockout/runtime proof |
+| `SH-ART-006` region color/material/lighting bibles | **CLOSED AT WRITTEN SCRIPT LEVEL / LIGHTING + INTEGRATED BENCHMARK SOURCE BRIEFS COMPLETE** | `docs/154` §§10–13, `docs/156` §11, `docs/161`, `docs/166`, `docs/168`, `docs/169` | Board 04/06 rendered keys; later measured runtime/performance proof |
+| `SH-ART-007` Hush visual grammar | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL / LIGHTING + READABILITY + INTEGRATED COMPARISON CONTRACTS COMPLETE** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161`, `docs/162`, `docs/164`, `docs/165`, `docs/166`, `docs/167`, `docs/168`, `docs/169` | visual execution, per-asset tracking during production, later runtime/accessibility/performance proof |
+| `SH-ART-008` VFX language | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL / GAMEPLAY READABILITY + INTEGRATED BENCHMARK SOURCE BRIEFS COMPLETE** | `docs/154` §23, `docs/156` §15, `docs/159`, `docs/161`, `docs/162`, `docs/163`, `docs/166`, `docs/167`, `docs/168`, `docs/169` | Board 05/06 rendered effect/readability keyframes; implementation, Reduced Effects validation and measured runtime/performance/accessibility proof |
+| `SH-ART-009` region asset manifests | **CLOSED AT WRITTEN INVENTORY-AUTHORITY LEVEL / PRODUCTION ESTIMATE COUNTS LATER** | `docs/156` §11, `docs/160`, `docs/161`, `docs/165`, `docs/166`, `docs/167`, `docs/168`, reconciled by `docs/169` | Board 02/04/05/06 rendered execution; detailed production-estimate counts and actual asset scheduling; runtime proof |
+| `SH-ART-010` world scale/reference metrics | **RUNTIME-GATED / PARTIAL REFERENCE ANCHORS EXIST** | `docs/156` §10, `docs/158` reference heights, `docs/164` reference-scale presentation, `docs/165` non-runtime scale figures, `docs/168` benchmark-only noncanonical layout boundary, reconciled by `docs/169` | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
 
 “Closed at written level” means the external studio no longer has to invent the intended production answer. It does not mean final assets have been built, rendered, tested or performance-approved.
 
@@ -355,18 +372,20 @@ Completed written steps:
 7. Board 02 Regional Shape Language Source Brief — `docs/165`;
 8. Board 04 Lighting / Atmosphere / Time Source Brief — `docs/166`;
 9. Board 05 Gameplay Readability Source Brief — `docs/167`;
-10. Board 06 Representative Benchmark Scene Source Brief — `docs/168`.
+10. Board 06 Representative Benchmark Scene Source Brief — `docs/168`;
+11. Art Written-Handoff Acceptance Audit — `docs/169`.
 
-The planned **written visual-board source-brief sequence is complete**.
+The planned **written visual-board source-brief sequence is complete**, and the scoped written-art reconciliation is now complete.
 
 Next bounded art-workstream needs, in order, are:
 
 1. produce/owner-review the visual execution artifacts when binary visual production is active;
 2. reconcile Board 06 against Boards 02–05 before promoting it from Directional to Production Reference;
 3. produce representative model/environment/VFX evidence when production and implementation are authorized;
-4. defer numeric performance/scale budgets until representative implementation exists;
-5. update global authority/onboarding indexes after the art package is reviewed;
-6. mark remaining `SH-ART-*` rows fully closed only when their actual visual/runtime deliverables exist.
+4. derive C3/C4 exact execution/reuse counts during staffing/asset planning rather than guessing them now;
+5. defer numeric performance/scale budgets until representative implementation exists;
+6. update global authority/onboarding indexes after the art package is reviewed;
+7. mark remaining `SH-ART-*` rows fully closed only when their actual visual/runtime deliverables exist.
 
 Do **not** create another visual-board source brief merely to keep the sequence moving. A new brief requires a real review-discovered gap.
 
@@ -400,6 +419,6 @@ The art handoff is safe when an external art director can answer from repository
 - what references may not be copied;
 - what production volume must be staffed.
 
-Character, enemy/boss, regional environment/prop, regional visual-script, cross-content Hush-production and VFX-production questions are materially answered at written-authority level. **Boards 02, 03, 04, 05 and 06 now all have production-executable written verification briefs.**
+Character, enemy/boss, regional environment/prop, regional visual-script, cross-content Hush-production and VFX-production questions are materially answered at written-authority level. **Boards 02, 03, 04, 05 and 06 all have production-executable written verification briefs, and `docs/169` now records the scoped written-art acceptance state.**
 
-The next meaningful art closure work is visual execution / owner-art-package review when that production mode is authorized, followed by runtime-dependent scale, performance, accessibility and representative-production proof. The documentation-only boundary remains in force.
+The next meaningful art closure work is visual execution / owner-art-package review when that production mode is authorized, followed by production-planning detail and runtime-dependent scale, performance, accessibility and representative-production proof. The documentation-only boundary remains in force.
