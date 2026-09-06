@@ -9,6 +9,8 @@
 **Closes toward:** `SH-ART-001`, `SH-ART-002`, and the character-facing portion of `SH-ART-003`  
 **Boundary:** this file locks creative character identity. It does not authorize UE5.8 implementation, final modeling, rigging, animation production, or invented technical/performance budgets.
 
+> **Specificity rule:** `docs/154_STILLRING_ART_BIBLE.md` remains the higher-level character doctrine. Where its §18 intentionally listed Neris face/hair/body/palette/garment/Cantor details as not-yet-locked, this manifest is the later specific contract that fills those placeholders. Those items are no longer open.
+
 ---
 
 # 1. Purpose
@@ -32,8 +34,8 @@ Only facts that honestly depend on implementation remain deferred: final Unreal-
 Resolve character-production conflicts in this order:
 
 1. canonical story/character facts;
-2. `docs/154_STILLRING_ART_BIBLE.md`;
-3. this manifest;
+2. `docs/154_STILLRING_ART_BIBLE.md` for doctrine;
+3. this manifest for principal-character specifics and completion of Art Bible placeholders;
 4. `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`;
 5. approved execution sheets derived from this manifest;
 6. technical-production/rigging requirements;
@@ -250,7 +252,7 @@ Every C0–C2 character must pass:
 
 Neris should look like a young woman who expected to repair civic machinery that morning, not like someone dressed for an epic prophecy.
 
-Her femininity is visible in face/body proportion but is not expressed through cleavage, impractical tailoring, skirts that obstruct traversal, cosmetic armor shaping or “girl version of the hero” decoration.
+Her femininity is visible in face/body proportion but is not expressed through cleavage, impractical tailoring, obstructive skirts, cosmetic armor shaping or “girl version of the hero” decoration.
 
 ## 8.2 Face
 
@@ -804,7 +806,7 @@ Never render Sena as armored warrior, fantasy blacksmith cliché, barbarian, “
 ## 15.2 Costume
 
 - civic off-white high-collar shirt;
-- structured civic blue-gray knee-above coat ending mid-thigh, not long enough to become ceremonial robes;
+- structured civic blue-gray coat ending mid-thigh, not long enough to become ceremonial robes;
 - coat uses consistent Bellwarden hidden-hook standard with one visible brass authorization tab at upper left chest;
 - charcoal straight trousers;
 - dark-steel-toned maintained ankle boots;
@@ -817,7 +819,7 @@ Authority comes from consistent construction, cleanliness and system markings—
 
 - `RUSK_V0_ADMIN` — full structured coat, authorization tab present;
 - `RUSK_V1_INVESTIGATION` — coat open, document case active;
-- `RUSK_V2_GRAND_RING_RESPONSE` — outer coat partially removed/secured for emergency work; sleeves fastened back; proves he can physically act;
+- `RUSK_V2_GRAND_RING_RESPONSE` — outer coat partially removed/secured for emergency work; sleeves fastened back;
 - `RUSK_V4_POST_STILLNESS` — same coat with authorization tab deliberately left but one central-standard seal removed/replaced by local access tags;
 - `RUSK_V5_TESTIMONY` — simplest institutional state, no dramatic rebel makeover.
 
@@ -846,7 +848,7 @@ It consists of:
 
 - 12–20 incomplete human-scale silhouette fragments occupying overlapping positions;
 - partial shoulders, hands, profiles, backs of heads and standing gestures that never combine into one person;
-- thin slices of familiar environment surfaces passing through those fragments as if different possibilities are sharing the same volume;
+- thin slices of familiar environment surfaces passing through those fragments as if different possibilities share the same volume;
 - a central negative-space corridor where the background appears slightly too far away rather than a glowing core;
 - no stable face;
 - no eyes;
@@ -859,53 +861,42 @@ The viewer sometimes perceives a person for less than a second because several f
 
 - no single Listener color;
 - fragments borrow restrained palette/material information from places the player knows;
-- saturation remains lower than the source location but never becomes universal blue/purple;
-- overlap boundaries may create a pale neutral seam line, thin and intermittent;
+- saturation is reduced but never becomes universal blue/purple;
+- overlap boundaries may create a thin intermittent pale-neutral seam;
 - the Listener does not glow like a magic entity;
-- ambient light should still affect the fragments enough to anchor them in the scene.
+- ambient light still affects fragments enough to anchor them in the scene.
 
 ## 16.4 Shadows and reflections
 
-- the Listener casts several partial shadows that do not fully converge;
-- reflective surfaces may show a different but related set of fragments;
-- neither effect should obscure gameplay or become glitch-noise wallpaper.
+- several partial shadows do not fully converge;
+- reflective surfaces may show a different but related fragment set;
+- neither effect may obscure gameplay or become glitch wallpaper.
 
 ## 16.5 Motion
 
 - constituent gestures complete at different rates;
-- hands may begin an ordinary action from one remembered context and finish as another incomplete gesture;
+- hands may begin one ordinary action and finish as another incomplete gesture;
 - the whole volume does not walk like a character;
-- movement is mostly assembly/disassembly around a stable spatial locus;
-- when the Listener directs attention toward Neris, several incomplete head/shoulder fragments orient approximately toward her without producing a single face.
+- motion is assembly/disassembly around a stable spatial locus;
+- when attention turns to Neris, several incomplete head/shoulder fragments orient approximately toward her without producing one face.
 
 ## 16.6 Communication presentation
 
-When a comprehensible idea is presented, the Listener briefly resolves one **human-scale gesture**, not one human identity: an open hand, a turned shoulder, someone stepping away, someone releasing an object. The gesture is assembled from multiple partial bodies and dissolves immediately after carrying meaning.
+When a comprehensible idea is presented, the Listener briefly resolves one **human-scale gesture**, not one human identity: an open hand, turned shoulder, releasing hand or step away. The gesture is assembled from multiple partial bodies and dissolves after carrying meaning.
 
 No lip sync is required because there is no mouth.
 
 ## 16.7 Save-state sensitivity
 
-At least two fragment families should be allowed to draw from recognizable visual motifs associated with content the player actually completed, while a stable canonical fragment library guarantees the scene works for every save.
+At least two fragment families may draw from recognizable visual motifs associated with content the player actually completed, while a stable canonical fragment library guarantees the scene works for every save.
 
-This is an authored substitution system, not procedural AI generation.
+This is authored substitution, not procedural AI generation.
 
 ## 16.8 Hard failures
 
-Never render the Listener as:
+Never render the Listener as giant humanoid god, masked deity, cosmic person, shadow demon, tentacle creature, angel, giant eye, face in the sky, random particle blob or glitch monster.
 
-- giant humanoid god;
-- masked deity;
-- cosmic woman/man;
-- shadow demon;
-- tentacle creature;
-- angel;
-- giant eye;
-- face in the sky;
-- random particle blob;
-- glitch monster.
-
-The Listener's creative presentation is now **LOCKED**. Exact shader/VFX implementation remains technical.
+The Listener's creative presentation is **LOCKED**. Exact shader/VFX implementation remains technical.
 
 ---
 
@@ -957,7 +948,7 @@ Shared:
 
 ## Ilyra / Maelor
 
-Their historical collaboration is visible through restrained old-era technical hardware proportions—thin brass measurement pieces, compact instrument cases, field coats built for service access—but their silhouettes remain distinct.
+Past collaboration is visible through restrained old-era technical hardware proportions—thin brass measurement pieces, compact instrument cases and field coats built for service access—but current silhouettes remain distinct.
 
 ## Maelor / Rusk
 
@@ -966,7 +957,7 @@ Their historical collaboration is visible through restrained old-era technical h
 
 ## Tessa / world routes
 
-Tessa may accumulate **functional replacement parts** from different routes, but never souvenir clutter.
+Tessa may accumulate functional replacement parts from different routes, but never souvenir clutter.
 
 ---
 
@@ -974,7 +965,7 @@ Tessa may accumulate **functional replacement parts** from different routes, but
 
 ## Wetness
 
-Use only from swimming/rain/spray/marsh/coastal exposure. Selected cloth/hair darkens or clumps; the entire character does not become glossy.
+Use only from swimming/rain/spray/marsh/coastal exposure. Selected cloth/hair darkens or clumps; the whole character does not become glossy.
 
 ## Ash/dust
 
@@ -982,7 +973,7 @@ Regional and causal only.
 
 ## Blood/injury
 
-Only where rating/narrative authority requires it. Injury is not the visual shorthand for seriousness.
+Only where rating/narrative authority requires it. Injury is not shorthand for seriousness.
 
 ## Repair
 
@@ -996,13 +987,7 @@ After meaningful damage, later repair is preferred over permanent rags.
 
 Neris, Tessa, Ilyra, Orin, Maelor.
 
-Requires:
-
-- close-up-safe deformation;
-- strong brows/eyes/mouth;
-- asymmetry;
-- subtle listening/hesitation;
-- restrained emotion, not only broad phoneme shapes.
+Requires close-up-safe deformation, strong brows/eyes/mouth, asymmetry, subtle listening/hesitation and restrained emotion.
 
 ## F1 — major recurring
 
@@ -1022,7 +1007,7 @@ Exact facial technology is downstream technical authority.
 
 Allowed in principle:
 
-- common underlying humanoid skeleton where deformation supports the height/build spread;
+- common underlying humanoid skeleton where deformation supports height/build spread;
 - compatible base-topology families;
 - shared facial-rig architecture;
 - shared material systems;
@@ -1032,7 +1017,7 @@ Not allowed:
 
 - identical hero bodies with head swaps;
 - arbitrary mesh scaling that destroys anatomy;
-- forcing Sena/Caldrin/Rusk/Tessa/Maelor/Orin into one silhouette because it is convenient.
+- forcing distinct silhouettes into one body because it is convenient.
 
 Recommended creative grouping for technical evaluation:
 
@@ -1048,12 +1033,12 @@ This is an evaluation starting point, not a locked rig count.
 
 Every named regional NPC who appears in more than one meaningful state or owns a significant quest/relationship chain receives at minimum:
 
-- one identity brief;
-- one occupation silhouette;
+- identity brief;
+- occupation silhouette;
 - named face/head solution;
 - region costume assignment;
 - prop/work assignment;
-- state-continuity notes;
+- state continuity notes;
 - reuse classification;
 - facial tier;
 - post-Stillness requirement where applicable.
@@ -1064,43 +1049,41 @@ No recurring named character may silently use a random generic population combin
 
 # 23. Population variation baseline
 
-The exact final counts are production-budget dependent, but the **minimum visual variety requirement** is locked.
+Exact final counts are production-budget dependent, but the **minimum visible variety requirement** is locked.
 
 Per major settled region, final population art must support at least:
 
 - 5 visibly different adult body silhouettes;
-- 2 youth silhouette families where population canon supports youth;
+- 2 youth silhouette families where canon supports youth;
 - 2 elder silhouette families;
 - 10 recognizable head/face bases before hair/age variation;
-- 8 hair/headwear families appropriate to the region;
+- 8 hair/headwear families appropriate to region;
 - 4 occupation outerwear families;
 - 3 footwear families;
-- 3 climate/protection layers where region requires them;
-- enough palette/material combination to prevent immediate clone recognition in small settlements.
+- 3 climate/protection layers where required;
+- enough palette/material combinations to prevent immediate clone recognition in small settlements.
 
-These are **minimum visible-variety targets**, not necessarily unique rigs or meshes.
+These are visible-variety targets, not necessarily unique rigs or meshes.
 
-A close recurring named NPC may not reuse a face that is prominently visible on another named NPC.
+A prominent recurring named NPC may not reuse another named NPC's recognizable face.
 
 ---
 
 # 24. Character Style Board 03
 
-`Board 03 — Character Style Band` is still required, but its job has changed.
+`Board 03 — Character Style Band` is required, but its job is now visualization/verification rather than identity selection.
 
-It now visualizes and verifies these locked designs rather than presenting identity options.
+It must contain:
 
-Board 03 must contain:
-
-- final Neris front/side/back and gameplay silhouette;
-- Neris face close-up and expression strip;
-- all eight human principals together at reference scale;
+- Neris front/side/back and gameplay silhouette;
+- Neris face close-up/expression strip;
+- all C1/C2 characters together at reference scale;
 - black-silhouette group test;
 - flat-color group test;
 - hand/tool close-ups;
 - hair-shape examples;
 - target skin-detail band;
-- material hierarchy;
+- costume material hierarchy;
 - gameplay-distance and cinematic-distance comparisons;
 - Listener manifestation diagrams;
 - do/don't examples.
@@ -1119,24 +1102,17 @@ If Board 03 conflicts with this file, this file wins.
 
 **PASSED at written authority level for C0–C2 and Listener.**
 
-Execution art must still prove that the written silhouettes work.
+Execution art must still prove the written silhouettes work.
 
 ## Gate C-C — Execution concept proof
 
 Requires faithful front/side/back, group silhouette, material, prop and state sheets derived from this manifest.
 
-This is no longer an open design competition. Material departures require owner review.
+This is not an open design competition. Material departures require owner review.
 
 ## Gate C-D — Representative model
 
-Requires:
-
-- one Neris Q2 model;
-- one representative C1/C2 Q2 model;
-- one representative population character;
-- gameplay/cinematic lighting tests;
-- deformation/attachment tests;
-- measured technical evidence.
+Requires one Neris Q2 model, one representative C1/C2 Q2 model, one population character, gameplay/cinematic lighting tests, deformation/attachment tests and measured technical evidence.
 
 ## Gate C-E — Final production
 
@@ -1148,9 +1124,9 @@ Requires final rig, material, performance, platform and production validation.
 
 ## LOCKED — do not redesign
 
-- Neris is female, age 17, and uses the complete visual design in §8;
-- all principal ages/builds/heights at concept-reference level;
-- principal faces/hair directions;
+- Neris is female, she/her, age 17, and uses the complete visual design in §8;
+- all principal ages/builds/reference heights;
+- principal face/hair directions;
 - base costumes and palette relationships;
 - principal equipment/carry identity;
 - family resemblance relationships;
@@ -1163,8 +1139,8 @@ Requires final rig, material, performance, platform and production validation.
 - Sena as foundry leader, not armored warrior;
 - Rusk as credible administrator, not cartoon villain;
 - Listener manifestation defined in §16;
-- clothing must remain functional/repairable;
-- named-character silhouettes remain distinct.
+- clothing functional/repairable;
+- named-character silhouette separation.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
@@ -1179,7 +1155,7 @@ Requires final rig, material, performance, platform and production validation.
 ## OWNER REVIEW REQUIRED
 
 - any change to face shape, hair silhouette, body build, base costume silhouette, primary palette relationship, sex/gender presentation or signature prop placement;
-- any character-design change that changes story read;
+- any character change that changes story read;
 - any departure from Playable Fantasy Illustration character stylization;
 - any materially different Listener representation.
 
@@ -1234,7 +1210,7 @@ Variants should reuse base body/costume architecture where possible.
 
 No principal **creative identity** item remains intentionally blank.
 
-The remaining unknowns are only:
+Remaining unknowns are only:
 
 - technical body/skeleton reuse outcome after deformation testing;
 - topology/texture/material budgets;
@@ -1244,7 +1220,7 @@ The remaining unknowns are only:
 - C3 regional cast enumeration in Region Production Manifests;
 - final population counts above the minimum variety floor.
 
-Agents may not treat those technical unknowns as permission to redesign the characters.
+Agents may not treat those technical unknowns as permission to redesign characters.
 
 ---
 
@@ -1253,16 +1229,16 @@ Agents may not treat those technical unknowns as permission to redesign the char
 Before production approval, ask:
 
 1. Can this person be identified without a face?
-2. Can the viewer infer what kind of work shaped them?
-3. Does the clothing look wearable and repairable?
-4. Does the design support the scenes/movement actually performed?
+2. Can the viewer infer what work shaped them?
+3. Does clothing look wearable and repairable?
+4. Does the design support actual scenes/movement?
 5. Is the identity specifically Stillring rather than fantasy shorthand?
-6. Does the design work in a gray room without environment help?
+6. Does it work in a gray room without environment help?
 7. Is it readable at gameplay distance?
-8. Does the face support restrained emotional acting?
-9. Does the design accidentally spoil a role meant to remain ambiguous?
+8. Does the face support restrained acting?
+9. Does the design spoil a role meant to remain ambiguous?
 10. Does every major detail have a job?
-11. Does the Hush/state treatment preserve identity rather than applying a universal effect?
+11. Does Hush/state treatment preserve identity rather than applying a universal effect?
 12. Can a modeler, rigger, animator and cinematic artist tell what must not change?
 
 If not, the execution is not production-ready.
@@ -1273,7 +1249,7 @@ If not, the execution is not production-ready.
 
 Stillring is a story about ordinary people becoming responsible for a world previously controlled by a sacred central system.
 
-The cast should therefore look like **ordinary people worth following**, not pre-labeled fantasy classes.
+The cast should look like **ordinary people worth following**, not pre-labeled fantasy classes.
 
 Neris is not memorable because her costume announces “hero.”
 
