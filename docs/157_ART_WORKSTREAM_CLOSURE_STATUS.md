@@ -5,7 +5,8 @@
 **Parent program:** `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md`  
 **Art authority:** `docs/154_STILLRING_ART_BIBLE.md`  
 **Supporting method:** `docs/155_ART_REFERENCE_METHOD_AND_BOARD_INDEX.md`  
-**Production framework:** `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`
+**Production framework:** `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`  
+**Character production authority:** `docs/158_CHARACTER_PRODUCTION_MANIFEST.md`
 
 ---
 
@@ -85,6 +86,15 @@ Characters are grounded and deliberately stylized, not photoreal scans or exagge
 
 Neris must visually read as a working seventeen-year-old apprentice bellwright rather than a chosen-one fantasy archetype.
 
+`docs/158_CHARACTER_PRODUCTION_MANIFEST.md` now makes the principal-cast production direction explicit:
+
+- occupation before fantasy archetype;
+- clothing is wearable, repairable, and work-shaped;
+- principal silhouettes must separate without face/color dependence;
+- Neris, Tessa, Ilyra, Orin, Maelor, Caldrin, Sena, and Rusk have distinct production briefs;
+- the Listener is a special cross-discipline presentation problem, not a default humanoid god/monster;
+- final Neris face/body/costume and materially divergent principal-character concepts remain owner-review gates.
+
 ## 2.5 Hush direction
 
 The Hush is a world-state/art relationship, not a one-button color filter or generic glitch effect.
@@ -103,16 +113,16 @@ Art must participate in honest traversal/interactions rather than relying on uni
 
 | Gap | Current status | Evidence | Remaining closure |
 |---|---|---|---|
-| `SH-ART-001` Neris production spec | **PARTIALLY CLOSED** | `docs/154` §18, `docs/156` §6 | final face/body/costume concept and owner visual approval; scale/rig dependencies |
-| `SH-ART-002` named-character visual bible | **OPEN / FRAMEWORK READY** | `docs/154` §17, `docs/156` §5 | per-character manifests derived from canonical arcs and region/social role |
-| `SH-ART-003` NPC population strategy | **PARTIALLY CLOSED** | `docs/154` §19, `docs/156` §7 | per-region archetype pools, reuse bounds, body/head/clothing strategy |
+| `SH-ART-001` Neris production spec | **SUBSTANTIALLY CLOSED AT DOCUMENTATION LEVEL** | `docs/154` §18, `docs/156` §6, `docs/158` §9 | Board 03 + final face/body/costume concept + owner visual approval; scale/rig/runtime dependencies |
+| `SH-ART-002` named-character visual bible | **SUBSTANTIALLY CLOSED FOR PRINCIPAL CAST** | `docs/158` §§9–18 | enumerate C3 recurring regional cast in region manifests; final concept approvals and state-specific production sheets |
+| `SH-ART-003` NPC population strategy | **PARTIALLY CLOSED / STRATEGY DEFINED** | `docs/154` §19, `docs/156` §7, `docs/158` §§24–25 | per-region archetype pools, exact reuse bounds/counts, body/head/clothing production plan |
 | `SH-ART-004` enemy/boss visual taxonomy | **PARTIALLY CLOSED** | `docs/154` §20, `docs/156` §8 | full enemy/boss manifest mapped to encounter authority |
 | `SH-ART-005` modular environment standards | **PARTIALLY CLOSED** | `docs/156` §§9–10 | numeric scale/grid after honest character/camera/traversal representation; kit-specific manifests |
 | `SH-ART-006` region color/material/lighting bibles | **PARTIALLY CLOSED** | `docs/154` §§10–13; `docs/156` §11 | detailed per-region scripts and state variants |
-| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §15; `docs/156` §14 | H0–H5 content-family matrix and later runtime representation proof |
+| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §15; `docs/156` §14; `docs/158` character-state rules | H0–H5 content-family matrix and later runtime representation proof |
 | `SH-ART-008` VFX language | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §23; `docs/156` §15 | full effect manifest and later performance/accessibility evidence |
 | `SH-ART-009` region asset manifests | **OPEN / STARTER CREATED** | `docs/156` §11 | detailed quoteable asset/content manifests per region |
-| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10 | requires Neris scale + camera/traversal representation and later human/runtime evidence |
+| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10; `docs/158` scale/rig gates | requires approved Neris representation + camera/traversal representation and later human/runtime evidence |
 
 No row should be marked closed merely because a mood board exists.
 
@@ -122,7 +132,7 @@ No row should be marked closed merely because a mood board exists.
 
 ## LOCKED — implement, do not redefine
 
-- Playable Fantasy Illustration doctrine.
+- Playable Fantasy Illustration doctrine;
 - readability over graphical spectacle;
 - landmark/navigation priority;
 - each region requires distinct shape language;
@@ -133,7 +143,11 @@ No row should be marked closed merely because a mood board exists.
 - Hush cannot be a universal recolor/filter;
 - pre-catastrophe places must be visually worth caring about;
 - art must honestly communicate authored traversal;
-- clean-room reference rules.
+- clean-room reference rules;
+- principal-character occupation-before-archetype language from `docs/158`;
+- principal-character silhouette separation requirements;
+- Neris may not visually become chosen/royal/mystical;
+- Maelor may not be visually spoiled as a conventional villain at first sight.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
@@ -151,6 +165,9 @@ Subject to later Technical Production Bible and performance/platform authority:
 - light authoring workflow;
 - source-art organization;
 - procedural support tools;
+- character hair/cloth implementation technology;
+- character topology/UV organization;
+- shared-rig/body reuse implementation that preserves identity;
 - how the written doctrine is achieved technically.
 
 These choices may not redefine the visible result.
@@ -169,13 +186,20 @@ Requires representative implementation before final lock:
 - VFX overdraw/density budgets;
 - final fog/atmosphere cost envelope;
 - final Hush representation architecture;
-- camera-sensitive scale refinements.
+- camera-sensitive scale refinements;
+- exact character scale;
+- skeleton/rig family count;
+- hair/cloth simulation budget;
+- facial-animation technology;
+- final tool/garment attachment placement under animation.
 
 ## OWNER REVIEW REQUIRED
 
 - material redefinition of the game's overall visual style;
 - final Neris appearance;
+- final Neris face/body/base costume/primary palette;
 - major named-character identity if concept work creates materially different directions;
+- final Listener visible presentation;
 - substantial change from grounded stylization toward photoreal, cartoon, anime, retro-low-poly, cel-shaded, or grimdark aesthetics;
 - major branding/iconography direction;
 - any proposed visual solution that changes locked story/gameplay identity rather than merely expressing it.
@@ -238,22 +262,24 @@ The absence of the image from the repository does not make chat authoritative; `
 
 See `docs/155_ART_REFERENCE_METHOD_AND_BOARD_INDEX.md`.
 
+Board 03 now has a written source brief in `docs/158`; it must illustrate that authority rather than inventing a new character style.
+
 ---
 
 # 7. Next documentation sequence
 
 Recommended continuation of the art workstream:
 
-1. read all major named-character canon and produce the **Character Production Manifest**;
-2. read combat/encounter/boss authority and produce the **Enemy / Boss Art Manifest**;
-3. build detailed **Region Environment / Prop Manifests** from canonical region files;
-4. produce **Regional Color / Material / Lighting Scripts**;
-5. produce the **Hush Visual Production Matrix**;
-6. produce the **VFX Production Manifest**;
-7. create the visual board set in parallel with those written contracts;
+1. read combat/encounter/boss authority and produce the **Enemy / Boss Art Manifest**;
+2. build detailed **Region Environment / Prop Manifests** from canonical region files, including C3 named-character enumeration;
+3. produce **Regional Color / Material / Lighting Scripts**;
+4. produce the **Hush Visual Production Matrix**;
+5. produce the **VFX Production Manifest**;
+6. create Board 03 / the Neris owner-review concept package when visual concept generation is the active task;
+7. create the remaining visual board set in parallel with corresponding written contracts;
 8. defer exact numeric scale/performance budgets until the dependencies are real;
 9. update global authority/supersession/onboarding indexes once the art package is reviewed as a complete closure unit;
-10. only then mark relevant `SH-ART-*` rows closed.
+10. only then mark relevant `SH-ART-*` rows fully closed.
 
 ---
 
@@ -266,6 +292,7 @@ The art workstream is studio-handoff-safe when an external art director/lead can
 - how each region differs;
 - how characters are stylized;
 - how Neris must read;
+- how the principal cast must remain visually distinct;
 - how Hush transformation works visually;
 - how gameplay affordances remain honest;
 - what asset families exist;
@@ -277,6 +304,6 @@ The art workstream is studio-handoff-safe when an external art director/lead can
 - what references may and may not be copied;
 - what volume of art work must be staffed.
 
-The current package materially improves the first eleven questions but does **not** yet close the full volume/manifests requirement.
+The current package now materially answers the principal-character production questions and makes the remaining concept/runtime gates explicit.
 
-That remaining work is visible and bounded rather than hidden in chat history.
+The art workstream is still incomplete overall because enemy/boss, detailed regional asset, regional lighting/material, Hush-production, VFX, scale, and full C3/C4 production counts remain open.
