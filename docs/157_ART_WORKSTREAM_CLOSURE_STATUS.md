@@ -11,7 +11,8 @@
 **Region environment/prop authority:** `docs/160_REGION_ENVIRONMENT_PROP_MANIFEST.md`  
 **Regional visual-script authority:** `docs/161_REGIONAL_COLOR_MATERIAL_LIGHTING_SCRIPTS.md`  
 **Hush production authority:** `docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md`  
-**VFX production authority:** `docs/163_VFX_PRODUCTION_MANIFEST.md`
+**VFX production authority:** `docs/163_VFX_PRODUCTION_MANIFEST.md`  
+**Board 03 source authority:** `docs/164_BOARD_03_CHARACTER_STYLE_BAND_SOURCE_BRIEF.md`
 
 ---
 
@@ -57,9 +58,9 @@ It does **not** require literal 1998 rendering limits, low-poly geometry, tiny t
 
 Major locations are recognized through shape, landmark, palette relationship, architecture, atmosphere and route composition. Settlements visibly respond to terrain, climate, labor, transport, resources and civic machinery.
 
-`docs/160` now turns every major ordinary-world region into a quoteable environment/prop production package, including C3 recurring-character burden and S0–S5 state families.
+`docs/160` turns every major ordinary-world region into a quoteable environment/prop production package, including C3 recurring-character burden and S0–S5 state families.
 
-`docs/161` now locks the written regional color/material/lighting relationships for Brindle, Cairnspire, Rootmere, Saltreach, Emberstep, High Aerie, Mireglass and Cairnfall, including day/night/weather/Hush/post-Stillness behavior.
+`docs/161` locks the written regional color/material/lighting relationships for Brindle, Cairnspire, Rootmere, Saltreach, Emberstep, High Aerie, Mireglass and Cairnfall, including day/night/weather/Hush/post-Stillness behavior.
 
 ## 2.4 Character direction — creatively locked
 
@@ -75,23 +76,25 @@ Principal character creative identity is locked:
 - the Listener's visible manifestation is defined;
 - principal characters read through occupation and human history before fantasy archetype.
 
-Board 03 is a visual verification board, not a new design competition.
+`docs/164_BOARD_03_CHARACTER_STYLE_BAND_SOURCE_BRIEF.md` now translates that locked identity into a concrete visual-verification package. It defines the master lineup, black-silhouette test, flat-color test, Neris turnaround/face/hair/Cantor/movement/state panels, principal face/hand/hair/material bands, Hush recognition checks, population authorship-density examples, Listener manifestation sequence, do/don't language, provenance requirements and board acceptance checklist.
+
+Board 03 remains a visual verification artifact, not a new design competition.
 
 ## 2.5 Enemy/boss direction
 
-`docs/159_ENEMY_BOSS_ART_MANIFEST.md` now provides the production-facing enemy/boss taxonomy, regional family logic, silhouette/readability rules, boss identity, state burden and production boundaries.
+`docs/159_ENEMY_BOSS_ART_MANIFEST.md` provides the production-facing enemy/boss taxonomy, regional family logic, silhouette/readability rules, boss identity, state burden and production boundaries.
 
-Enemy/boss art may no longer be invented as disconnected monster-design portfolio pieces.
+Enemy/boss art may not be invented as disconnected monster-design portfolio pieces.
 
 ## 2.6 Hush direction
 
 The Hush is a world-state/art relationship, not a universal filter or glitch pass. Regional and character identity must survive transformation.
 
-`docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md` now closes the cross-content written Hush production grammar. It joins Gate 4 semantic relationship classes (Shared Invariant / Paired Expression / Layer Exclusive / Related Distinct) to independent H0–H5 art-production burden, covers every major region and content family, and prevents art classification from inventing gameplay truth.
+`docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md` closes the cross-content written Hush production grammar. It joins Gate 4 semantic relationship classes (Shared Invariant / Paired Expression / Layer Exclusive / Related Distinct) to independent H0–H5 art-production burden, covers every major region and content family, and prevents art classification from inventing gameplay truth.
 
 ## 2.7 VFX direction
 
-`docs/163_VFX_PRODUCTION_MANIFEST.md` now closes the written VFX production language.
+`docs/163_VFX_PRODUCTION_MANIFEST.md` closes the written VFX production language.
 
 Locked production principles include:
 
@@ -117,16 +120,16 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 
 | Gap | Current status | Evidence | Remaining closure |
 |---|---|---|---|
-| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` | Board 03 execution proof; representative Q2 model; rig/scale/performance evidence |
-| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST** | `docs/158` | C3 execution sheets/models; region manifests now enumerate production burden |
-| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY/INVENTORY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158`, `docs/160` | final regional C4 pool counts/reuse plan after production planning |
+| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / VISUAL SOURCE BRIEF COMPLETE / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` + `docs/164` | Board 03 rendered execution proof; representative Q2 model; rig/scale/performance evidence |
+| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST / BOARD SOURCE BRIEF COMPLETE** | `docs/158`, `docs/164` | Board 03 rendered group/face/material verification; C3 execution sheets/models |
+| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY/INVENTORY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158`, `docs/160`, `docs/164` | final regional C4 pool counts/reuse plan after production planning; rendered population-band verification |
 | `SH-ART-004` enemy/boss visual taxonomy | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §20, `docs/156` §8, `docs/159` | concept/model/runtime execution and measured readability/performance proof |
 | `SH-ART-005` modular environment standards | **SUBSTANTIALLY CLOSED AT WRITTEN LEVEL** | `docs/156` §§9–10, `docs/160` | numeric scale/grid after Neris/camera/traversal representation; blockout/runtime proof |
 | `SH-ART-006` region color/material/lighting bibles | **CLOSED AT WRITTEN SCRIPT LEVEL** | `docs/154` §§10–13, `docs/156` §11, `docs/161` | rendered keys/boards and later measured runtime/performance proof |
-| `SH-ART-007` Hush visual grammar | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161`, `docs/162` | visual relationship boards/keys, per-asset tracking during production, and later runtime/accessibility/performance proof |
+| `SH-ART-007` Hush visual grammar | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161`, `docs/162`, `docs/164` | visual relationship boards/keys, per-asset tracking during production, later runtime/accessibility/performance proof |
 | `SH-ART-008` VFX language | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §23, `docs/156` §15, `docs/159`, `docs/161`, `docs/162`, `docs/163` | effect keyframes/boards, implementation, Reduced Effects validation and measured runtime/performance/accessibility proof |
 | `SH-ART-009` region asset manifests | **SUBSTANTIALLY CLOSED AT WRITTEN INVENTORY LEVEL** | `docs/156` §11, `docs/160`, `docs/161` | detailed count estimates during production planning; execution/runtime proof |
-| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
+| `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights, `docs/164` reference-scale presentation | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
 
 “Closed at written level” means the external studio no longer has to invent the intended production answer. It does not mean final assets have been built, rendered, tested or performance-approved.
 
@@ -150,9 +153,10 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 - authored traversal remains visually honest;
 - clean-room reference rules;
 - principal-character creative designs in `docs/158`;
+- Board 03 visual-verification content and non-reopening rules in `docs/164`;
 - enemy/boss production identity in `docs/159`;
 - environment/prop production families and C3 burden in `docs/160`;
-- Hush semantic/art classification crosswalk, H0–H5 production burden, region/content-family defaults, Reduced Hush Effects requirements, and late-game Hush production rules in `docs/162`;
+- Hush semantic/art classification crosswalk, H0–H5 production burden, region/content-family defaults, Reduced Hush Effects requirements and late-game Hush production rules in `docs/162`;
 - VFX semantic ownership, class system, effect-language rules, regional/boss/tool families, Reduced Effects behavior, scalability philosophy and decision rights in `docs/163`.
 
 ## STUDIO CHOICE WITHIN BOUNDS
@@ -171,6 +175,7 @@ Subject to later technical authority:
 - Nanite/LOD/fallback choices;
 - foliage/environment authoring workflow;
 - source-art organization;
+- Board 03 render/drawing medium and layout details within `docs/164`;
 - VFX emitter decomposition, simulation method, flipbooks, ribbons/meshes/volumes and effect LOD implementation within `docs/163` bounds.
 
 ## PROTOTYPE / RUNTIME EVIDENCE
@@ -229,17 +234,23 @@ Technical production must later turn target hardware/platform requirements into 
 
 Directional companion to written authority. It does not override repository text.
 
-## Required
+## Source briefs / written execution authority
 
-- Board 02 — Regional Shape Language;
-- Board 03 — Character Style Band / locked-design verification;
-- Board 04 — Lighting / Atmosphere / Time;
-- Board 05 — Gameplay Readability;
-- Board 06 — Representative Benchmark Scene.
+- **Board 03 — Character Style Band:** source brief complete in `docs/164`; rendered execution artifact pending.
 
-Board 04 now has direct written source authority in `docs/161` and must visualize those scripts rather than invent new region grades.
+## Still required
 
-Board 05 now has direct written VFX/readability source authority in `docs/163` and must include representative combat, Cantor, Hush, weather and Reduced Effects comparisons without inventing new gameplay semantics.
+- Board 02 — Regional Shape Language source/execution brief + artifact;
+- Board 03 — rendered Character Style Band execution artifact;
+- Board 04 — Lighting / Atmosphere / Time source/execution brief + artifact;
+- Board 05 — Gameplay Readability source/execution brief + artifact;
+- Board 06 — Representative Benchmark Scene source/execution brief + artifact.
+
+Board 03 now has direct written source authority in `docs/164` and must verify `docs/158` rather than invent new principal designs.
+
+Board 04 has direct written visual-script authority in `docs/161` and must visualize those scripts rather than invent new region grades.
+
+Board 05 has direct written VFX/readability source authority in `docs/163` and must include representative combat, Cantor, Hush, weather and Reduced Effects comparisons without inventing new gameplay semantics.
 
 ---
 
@@ -251,12 +262,13 @@ Completed written steps:
 2. Region Environment / Prop Manifest — `docs/160`;
 3. Regional Color / Material / Lighting Scripts — `docs/161`;
 4. Hush Visual Production Matrix — `docs/162`;
-5. VFX Production Manifest — `docs/163`.
+5. VFX Production Manifest — `docs/163`;
+6. Board 03 Character Style Band Source Brief — `docs/164`.
 
 Next bounded steps:
 
-1. create Board 03 as faithful visualization/source brief of the locked principal designs;
-2. create the remaining Board 02–06 source briefs/execution artifacts alongside matching written contracts;
+1. create the remaining Board 02, Board 04, Board 05 and Board 06 source briefs/execution contracts from their existing written authorities;
+2. produce/owner-review visual execution artifacts when binary visual production is active;
 3. defer numeric performance/scale budgets until representative implementation exists;
 4. update global authority/onboarding indexes after art-package review;
 5. mark remaining `SH-ART-*` rows fully closed only when their actual deliverables exist.
@@ -271,6 +283,7 @@ The art handoff is safe when an external art director can answer from repository
 - how every region differs;
 - how each region behaves in day, night, weather, Hush and post-Stillness states;
 - how principal characters look and why;
+- exactly what Board 03 must show to verify those characters;
 - how named/population reuse works;
 - how enemies/bosses derive from region/gameplay identity;
 - how Hush transformation works across every content family;
@@ -285,6 +298,6 @@ The art handoff is safe when an external art director can answer from repository
 - what references may not be copied;
 - what production volume must be staffed.
 
-Character, enemy/boss, regional environment/prop, regional visual-script, cross-content Hush-production and VFX-production questions are now materially answered at written-authority level.
+Character, enemy/boss, regional environment/prop, regional visual-script, cross-content Hush-production and VFX-production questions are materially answered at written-authority level. Board 03 also now has a production-executable written verification brief.
 
-The next meaningful art gap is faithful visual-board source/execution work, followed by runtime-dependent scale, performance, accessibility and representative-production proof.
+The next meaningful art gap is the remaining Board 02/04/05/06 source-brief work, followed by visual execution and runtime-dependent scale, performance, accessibility and representative-production proof.
