@@ -6,7 +6,10 @@
 **Art authority:** `docs/154_STILLRING_ART_BIBLE.md`  
 **Supporting method:** `docs/155_ART_REFERENCE_METHOD_AND_BOARD_INDEX.md`  
 **Production framework:** `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`  
-**Character production authority:** `docs/158_CHARACTER_PRODUCTION_MANIFEST.md`
+**Character production authority:** `docs/158_CHARACTER_PRODUCTION_MANIFEST.md`  
+**Enemy/boss authority:** `docs/159_ENEMY_BOSS_ART_MANIFEST.md`  
+**Region environment/prop authority:** `docs/160_REGION_ENVIRONMENT_PROP_MANIFEST.md`  
+**Regional visual-script authority:** `docs/161_REGIONAL_COLOR_MATERIAL_LIGHTING_SCRIPTS.md`
 
 ---
 
@@ -52,11 +55,15 @@ It does **not** require literal 1998 rendering limits, low-poly geometry, tiny t
 
 Major locations are recognized through shape, landmark, palette relationship, architecture, atmosphere and route composition. Settlements visibly respond to terrain, climate, labor, transport, resources and civic machinery.
 
+`docs/160` now turns every major ordinary-world region into a quoteable environment/prop production package, including C3 recurring-character burden and S0–S5 state families.
+
+`docs/161` now locks the written regional color/material/lighting relationships for Brindle, Cairnspire, Rootmere, Saltreach, Emberstep, High Aerie, Mireglass and Cairnfall, including day/night/weather/Hush/post-Stillness behavior.
+
 ## 2.4 Character direction — creatively locked
 
 `docs/158_CHARACTER_PRODUCTION_MANIFEST.md` is the specific production authority that completes the character placeholders anticipated by the Art Bible.
 
-Principal character creative identity is now locked:
+Principal character creative identity is locked:
 
 - **Neris Vale is female, she/her, age 17**;
 - Neris has a defined face, hair, body/build target, costume construction, palette, Cantor carry solution, progression-equipment rules and six state variants;
@@ -66,13 +73,21 @@ Principal character creative identity is now locked:
 - the Listener's visible manifestation is defined;
 - principal characters read through occupation and human history before fantasy archetype.
 
-Board 03 is now a **visual verification board**, not a new design competition.
+Board 03 is a visual verification board, not a new design competition.
 
-## 2.5 Hush direction
+## 2.5 Enemy/boss direction
+
+`docs/159_ENEMY_BOSS_ART_MANIFEST.md` now provides the production-facing enemy/boss taxonomy, regional family logic, silhouette/readability rules, boss identity, state burden and production boundaries.
+
+Enemy/boss art may no longer be invented as disconnected monster-design portfolio pieces.
+
+## 2.6 Hush direction
 
 The Hush is a world-state/art relationship, not a universal filter or glitch pass. Regional and character identity must survive transformation.
 
-## 2.6 Readability direction
+`docs/161` now adds region-specific Hush visual behavior, but the cross-content H0–H5 production matrix remains open.
+
+## 2.7 Readability direction
 
 Gameplay readability outranks spectacle. Art must honestly communicate traversal, interaction and threat states without default universal highlight paint.
 
@@ -82,18 +97,18 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 
 | Gap | Current status | Evidence | Remaining closure |
 |---|---|---|---|
-| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` §8 | Board 03 execution proof; representative Q2 model; rig/scale/performance evidence |
-| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST** | `docs/158` §§8–18 | C3 regional recurring cast enumeration; Q2/Q3 execution sheets/models |
-| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158` §§22–23 | region-specific C3/C4 manifests and final production counts above locked variety floor |
-| `SH-ART-004` enemy/boss visual taxonomy | **PARTIALLY CLOSED** | `docs/154` §20, `docs/156` §8 | full enemy/boss manifest mapped to encounter authority |
-| `SH-ART-005` modular environment standards | **PARTIALLY CLOSED** | `docs/156` §§9–10 | numeric scale/grid after Neris/camera/traversal representation; kit manifests |
-| `SH-ART-006` region color/material/lighting bibles | **PARTIALLY CLOSED** | `docs/154` §§10–13, `docs/156` §11 | detailed per-region scripts/state variants |
-| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158` state rules | H0–H5 content-family matrix and runtime proof |
+| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` | Board 03 execution proof; representative Q2 model; rig/scale/performance evidence |
+| `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST** | `docs/158` | C3 execution sheets/models; region manifests now enumerate production burden |
+| `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY/INVENTORY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158`, `docs/160` | final regional C4 pool counts/reuse plan after production planning |
+| `SH-ART-004` enemy/boss visual taxonomy | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §20, `docs/156` §8, `docs/159` | concept/model/runtime execution and measured readability/performance proof |
+| `SH-ART-005` modular environment standards | **SUBSTANTIALLY CLOSED AT WRITTEN LEVEL** | `docs/156` §§9–10, `docs/160` | numeric scale/grid after Neris/camera/traversal representation; blockout/runtime proof |
+| `SH-ART-006` region color/material/lighting bibles | **CLOSED AT WRITTEN SCRIPT LEVEL** | `docs/154` §§10–13, `docs/156` §11, `docs/161` | rendered keys/boards and later measured runtime/performance proof |
+| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE/REGION LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161` | H0–H5 content-family matrix and runtime proof |
 | `SH-ART-008` VFX language | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §23, `docs/156` §15 | full effect manifest and performance/accessibility evidence |
-| `SH-ART-009` region asset manifests | **OPEN / STARTER CREATED** | `docs/156` §11 | detailed quoteable manifests per region |
+| `SH-ART-009` region asset manifests | **SUBSTANTIALLY CLOSED AT WRITTEN INVENTORY LEVEL** | `docs/156` §11, `docs/160`, `docs/161` | detailed count estimates during production planning; execution/runtime proof |
 | `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
 
-“Creatively closed” means the studio may execute the identity but may not redesign it. It does not mean a final production model has been built or tested.
+“Closed at written level” means the external studio no longer has to invent the intended production answer. It does not mean final assets have been built, rendered, tested or performance-approved.
 
 ---
 
@@ -105,6 +120,7 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 - readability over spectacle;
 - landmark/navigation priority;
 - region-specific shape language;
+- regional color/material/lighting relationships in `docs/161`;
 - settlements grow from environment/practical life;
 - selective detail/material hierarchy;
 - no blanket photoreal clutter;
@@ -113,16 +129,9 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 - pre-catastrophe places must be worth caring about;
 - authored traversal remains visually honest;
 - clean-room reference rules;
-- full principal-character creative designs in `docs/158`;
-- Neris is female, age 17, and visually a working apprentice/field bellwright—not royal, chosen, mystical, assassin-coded or sexualized;
-- Tessa is courier, not rogue;
-- Ilyra is field engineer, not oracle;
-- Orin is repairman/father, not hidden master;
-- Maelor initially remains visually trustworthy/human;
-- Caldrin is archivist-engineer, not fantasy priest;
-- Sena is foundry captain, not armored warrior;
-- Rusk is credible administrator, not cartoon villain;
-- Listener manifestation follows `docs/158` §16.
+- principal-character creative designs in `docs/158`;
+- enemy/boss production identity in `docs/159`;
+- environment/prop production families and C3 burden in `docs/160`.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
@@ -132,12 +141,13 @@ Subject to later technical authority:
 - UV/material organization;
 - modeling/sculpting software;
 - shader implementation;
-- hair technology;
-- cloth technology;
+- hair/cloth technology;
 - skeleton/retarget architecture that preserves silhouette;
-- small seam/stitch/deformation adjustments that do not alter identity;
+- exact PBR authoring implementation;
+- local color tuning that preserves `docs/161` relationships;
+- light-authoring workflow;
 - Nanite/LOD/fallback choices;
-- foliage and environment authoring workflow;
+- foliage/environment authoring workflow;
 - source-art organization.
 
 ## PROTOTYPE / RUNTIME EVIDENCE
@@ -149,22 +159,25 @@ Requires representative implementation:
 - foliage density;
 - shadow/GI cost envelope;
 - VFX overdraw/density;
+- fog/atmosphere cost envelope;
 - Hush runtime representation architecture;
 - final world-scale conversion;
 - final skeleton/rig family count;
 - hair/cloth simulation budget;
 - facial-animation technology;
-- final attachment offsets under animation.
+- final attachment offsets under animation;
+- exact exposure/light values.
 
 ## OWNER REVIEW REQUIRED
 
-Owner review is no longer a request to invent principal character identity from options. It is required for:
+Owner review is required for:
 
-- any material departure from the locked designs in `docs/158`;
-- any change to Neris's face/hair/body/costume/palette/gender presentation;
-- any principal redesign that changes story read;
-- any materially different Listener manifestation;
-- any shift toward photoreal, anime, cartoon, cel-shaded, retro-low-poly or grimdark character treatment;
+- material departure from locked principal designs;
+- changes to Neris's face/hair/body/costume/palette/gender presentation;
+- principal redesign that changes story read;
+- materially different Listener manifestation;
+- redefinition of a region's locked visual identity/palette relationship;
+- shift toward photoreal, anime, cartoon, cel-shaded, retro-low-poly or grimdark treatment;
 - major branding/iconography redefinition.
 
 ---
@@ -197,31 +210,27 @@ Directional companion to written authority. It does not override repository text
 - Board 05 — Gameplay Readability;
 - Board 06 — Representative Benchmark Scene.
 
-Board 03 must now visualize `docs/158` faithfully, including:
-
-- Neris front/side/back;
-- Neris face/expression target;
-- all eight human principals at reference scale;
-- black-silhouette test;
-- flat-color test;
-- hand/tool treatment;
-- skin/hair/material target band;
-- Listener manifestation diagram.
+Board 04 now has direct written source authority in `docs/161` and must visualize those scripts rather than invent new region grades.
 
 ---
 
 # 7. Next art-workstream sequence
 
-1. produce the **Enemy / Boss Art Manifest** from encounter/combat authority;
-2. build **Region Environment / Prop Manifests**, including C3 named-character enumeration;
-3. produce **Regional Color / Material / Lighting Scripts**;
-4. produce the **Hush Visual Production Matrix**;
-5. produce the **VFX Production Manifest**;
-6. create Board 03 as faithful visualization of the locked principal designs;
-7. create the remaining board set alongside the matching written contracts;
-8. defer numeric performance/scale budgets until representative implementation exists;
-9. update global authority/onboarding indexes after art-package review;
-10. mark remaining `SH-ART-*` rows closed only when their actual deliverables exist.
+Completed written steps:
+
+1. Enemy / Boss Art Manifest — `docs/159`;
+2. Region Environment / Prop Manifest — `docs/160`;
+3. Regional Color / Material / Lighting Scripts — `docs/161`.
+
+Next bounded steps:
+
+1. produce the **Hush Visual Production Matrix**;
+2. produce the **VFX Production Manifest**;
+3. create Board 03 as faithful visualization of the locked principal designs;
+4. create the remaining board source briefs/execution artifacts alongside matching written contracts;
+5. defer numeric performance/scale budgets until representative implementation exists;
+6. update global authority/onboarding indexes after art-package review;
+7. mark remaining `SH-ART-*` rows fully closed only when their actual deliverables exist.
 
 ---
 
@@ -231,10 +240,11 @@ The art handoff is safe when an external art director can answer from repository
 
 - what Stillring looks like and why;
 - how every region differs;
+- how each region behaves in day, night, weather, Hush and post-Stillness states;
 - how principal characters look and why;
-- how Neris is built visually and how her equipment evolves;
 - how named/population reuse works;
-- how Hush transformation works;
+- how enemies/bosses derive from region/gameplay identity;
+- how Hush transformation works across every content family;
 - how gameplay readability remains honest;
 - what asset families exist;
 - what is reusable versus unique;
@@ -245,4 +255,4 @@ The art handoff is safe when an external art director can answer from repository
 - what references may not be copied;
 - what production volume must be staffed.
 
-The principal-character creative package now answers its portion of that acceptance test. Enemy/boss, region-manifest, lighting/material, Hush-production, VFX and final scale/performance work remain intentionally visible rather than hidden in chat history.
+Character, enemy/boss, regional environment/prop and regional visual-script questions are now materially answered at written-authority level. The next meaningful art gap is the cross-content Hush production matrix, followed by the VFX manifest and visual execution boards.
