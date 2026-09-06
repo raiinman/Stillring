@@ -202,7 +202,7 @@ Any older reference to the latter is stale.
 
 - `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`
 - supporting decisions `docs/70`–`78`
-- prototype/closure context `docs/80_GATE4_PROTOTYPE_CLOSURE.md`
+- prototype/closure context `docs/80_GATE4_ISSUE_227_CLOSURE_AND_PROTOTYPE_PLAN.md`
 
 ### Key boundaries
 
@@ -227,10 +227,10 @@ World Partition + Runtime Data Layers has been used as a prototype direction wit
 
 ## Governing authority
 
-- `docs/81_PERSISTENT_IDENTITY_CONTRACT_ADDENDUM.md`
+- `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`
 - `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`
-- `docs/83_SAVE_SCHEMA_V1_ADDENDUM.md`
-- `docs/84_SAVE_MIGRATION_POLICY_ADDENDUM.md`
+- `docs/83_SAVE_SCHEMA_V1_STRUCTURE_ADDENDUM.md`
+- `docs/84_SAVE_VERSION_MIGRATION_POLICY_ADDENDUM.md`
 - `docs/85_SAVE_INTEGRITY_RECOVERY_ADDENDUM.md`
 - `docs/86_SAVE_SLOT_CADENCE_RETRY_ADDENDUM.md`
 - `docs/87_SAVE_WORLD_STATE_IDE_ADDENDUM.md`
