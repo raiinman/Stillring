@@ -9,7 +9,8 @@
 **Character production authority:** `docs/158_CHARACTER_PRODUCTION_MANIFEST.md`  
 **Enemy/boss authority:** `docs/159_ENEMY_BOSS_ART_MANIFEST.md`  
 **Region environment/prop authority:** `docs/160_REGION_ENVIRONMENT_PROP_MANIFEST.md`  
-**Regional visual-script authority:** `docs/161_REGIONAL_COLOR_MATERIAL_LIGHTING_SCRIPTS.md`
+**Regional visual-script authority:** `docs/161_REGIONAL_COLOR_MATERIAL_LIGHTING_SCRIPTS.md`  
+**Hush production authority:** `docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md`
 
 ---
 
@@ -85,7 +86,7 @@ Enemy/boss art may no longer be invented as disconnected monster-design portfoli
 
 The Hush is a world-state/art relationship, not a universal filter or glitch pass. Regional and character identity must survive transformation.
 
-`docs/161` now adds region-specific Hush visual behavior, but the cross-content H0–H5 production matrix remains open.
+`docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md` now closes the cross-content written Hush production grammar. It joins Gate 4 semantic relationship classes (Shared Invariant / Paired Expression / Layer Exclusive / Related Distinct) to independent H0–H5 art-production burden, covers every major region and content family, and prevents art classification from inventing gameplay truth.
 
 ## 2.7 Readability direction
 
@@ -103,7 +104,7 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 | `SH-ART-004` enemy/boss visual taxonomy | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §20, `docs/156` §8, `docs/159` | concept/model/runtime execution and measured readability/performance proof |
 | `SH-ART-005` modular environment standards | **SUBSTANTIALLY CLOSED AT WRITTEN LEVEL** | `docs/156` §§9–10, `docs/160` | numeric scale/grid after Neris/camera/traversal representation; blockout/runtime proof |
 | `SH-ART-006` region color/material/lighting bibles | **CLOSED AT WRITTEN SCRIPT LEVEL** | `docs/154` §§10–13, `docs/156` §11, `docs/161` | rendered keys/boards and later measured runtime/performance proof |
-| `SH-ART-007` Hush visual grammar | **SUBSTANTIALLY CLOSED AT DOCTRINE/REGION LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161` | H0–H5 content-family matrix and runtime proof |
+| `SH-ART-007` Hush visual grammar | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161`, `docs/162` | visual relationship boards/keys, per-asset tracking during production, and later runtime/accessibility/performance proof |
 | `SH-ART-008` VFX language | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §23, `docs/156` §15 | full effect manifest and performance/accessibility evidence |
 | `SH-ART-009` region asset manifests | **SUBSTANTIALLY CLOSED AT WRITTEN INVENTORY LEVEL** | `docs/156` §11, `docs/160`, `docs/161` | detailed count estimates during production planning; execution/runtime proof |
 | `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
@@ -131,7 +132,8 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 - clean-room reference rules;
 - principal-character creative designs in `docs/158`;
 - enemy/boss production identity in `docs/159`;
-- environment/prop production families and C3 burden in `docs/160`.
+- environment/prop production families and C3 burden in `docs/160`;
+- Hush semantic/art classification crosswalk, H0–H5 production burden, region/content-family defaults, Reduced Hush Effects requirements, and late-game Hush production rules in `docs/162`.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
@@ -220,17 +222,17 @@ Completed written steps:
 
 1. Enemy / Boss Art Manifest — `docs/159`;
 2. Region Environment / Prop Manifest — `docs/160`;
-3. Regional Color / Material / Lighting Scripts — `docs/161`.
+3. Regional Color / Material / Lighting Scripts — `docs/161`;
+4. Hush Visual Production Matrix — `docs/162`.
 
 Next bounded steps:
 
-1. produce the **Hush Visual Production Matrix**;
-2. produce the **VFX Production Manifest**;
-3. create Board 03 as faithful visualization of the locked principal designs;
-4. create the remaining board source briefs/execution artifacts alongside matching written contracts;
-5. defer numeric performance/scale budgets until representative implementation exists;
-6. update global authority/onboarding indexes after art-package review;
-7. mark remaining `SH-ART-*` rows fully closed only when their actual deliverables exist.
+1. produce the **VFX Production Manifest**;
+2. create Board 03 as faithful visualization of the locked principal designs;
+3. create the remaining board source briefs/execution artifacts alongside matching written contracts;
+4. defer numeric performance/scale budgets until representative implementation exists;
+5. update global authority/onboarding indexes after art-package review;
+6. mark remaining `SH-ART-*` rows fully closed only when their actual deliverables exist.
 
 ---
 
@@ -255,4 +257,4 @@ The art handoff is safe when an external art director can answer from repository
 - what references may not be copied;
 - what production volume must be staffed.
 
-Character, enemy/boss, regional environment/prop and regional visual-script questions are now materially answered at written-authority level. The next meaningful art gap is the cross-content Hush production matrix, followed by the VFX manifest and visual execution boards.
+Character, enemy/boss, regional environment/prop, regional visual-script and cross-content Hush-production questions are now materially answered at written-authority level. The next meaningful art gap is the VFX Production Manifest, followed by visual execution boards and later runtime-dependent proof.
