@@ -1,82 +1,61 @@
 # 158 — Character Production Manifest
 
-**Status:** ACTIVE / PRE-PRODUCTION CHARACTER AUTHORITY  
-**Updated:** 2026-09-05  
+**Status:** ACTIVE / OWNER-AUTHORIZED FINAL CHARACTER VISUAL AUTHORITY / DOCUMENTATION-ONLY PRE-PRODUCTION  
+**Updated:** 2026-09-06  
 **Parent program:** `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md`  
 **Art authority:** `docs/154_STILLRING_ART_BIBLE.md`  
 **Production framework:** `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`  
 **Narrative authority:** `docs/02_STORY_BIBLE.md`, `docs/story/01_FOUNDATIONS_AND_OPENING.md`, `docs/story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`  
 **Closes toward:** `SH-ART-001`, `SH-ART-002`, and the character-facing portion of `SH-ART-003`  
-**Boundary:** documentation only; this file does not authorize UE5.8 implementation, final modeling, rigging, animation production, or final owner approval of faces/costumes.
+**Boundary:** this file locks creative character identity. It does not authorize UE5.8 implementation, final modeling, rigging, animation production, or invented technical/performance budgets.
 
 ---
 
 # 1. Purpose
 
-This document turns Stillring's character philosophy into a production package that an external character-art team can quote, concept, model, texture, rig, and hand off without reconstructing intent from chat history.
+This is the production-facing visual authority for Stillring's principal cast.
 
-It answers:
+An external character team should be able to derive concept sheets, model sheets, texture/material work, rig requirements, cinematic staging, gameplay readability and state variants from this file without inventing missing fantasy conventions or reconstructing owner intent from chat history.
 
-- which characters require unique production treatment;
-- what each character must communicate visually;
-- what their occupations and histories imply for clothing and materials;
-- what silhouette conflicts must be avoided;
-- what story-state variants must be budgeted;
-- what close-up/facial burden exists;
-- what equipment and animation needs must be anticipated;
-- what a concept artist may choose;
-- what requires owner review;
-- what cannot be finalized before rig/runtime evidence exists.
-
-This is not a costume-fashion document.
-
-Stillring characters must look like people whose bodies, clothing, tools, repairs, and posture have been shaped by ordinary work.
-
-Core rule:
+The governing principle is:
 
 > **Occupation before archetype. Human history before fantasy decoration. Silhouette before surface detail.**
+
+The principal cast is creatively defined here. Concept art is now an execution and verification stage, not permission to reopen identity from scratch.
+
+Only facts that honestly depend on implementation remain deferred: final Unreal-world scale conversion, topology density, skeleton/rig architecture, cloth/hair simulation, material/texture budgets, facial technology and performance scalability.
 
 ---
 
 # 2. Authority order
 
-Character production must resolve conflicts in this order:
+Resolve character-production conflicts in this order:
 
 1. canonical story/character facts;
 2. `docs/154_STILLRING_ART_BIBLE.md`;
 3. this manifest;
 4. `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`;
-5. approved concept sheets;
+5. approved execution sheets derived from this manifest;
 6. technical-production/rigging requirements;
-7. runtime tuning and performance evidence.
+7. runtime tuning and measured performance evidence.
 
-Mood boards and generated images are directional only.
-
-No external reference, Unreal default, MetaHuman preset, costume pack, fantasy convention, or artist preference may override canonical character identity.
+Mood boards, generated images, external art, MetaHuman defaults, marketplace packs and genre convention are subordinate references only.
 
 ---
 
 # 3. Character production classes
 
-Character production is divided into five classes.
-
 ## C0 — Player hero
 
 ### Neris Vale
 
-Production burden:
-
-- unique final model;
-- full gameplay silhouette validation;
+- unique U3 game-hero identity;
+- highest gameplay silhouette burden;
 - complete locomotion/combat/tool/traversal compatibility;
 - repeated cinematic close-up use;
-- multiple progression/state variants;
-- signature equipment attachment burden;
-- highest rig/animation dependency;
-- highest readability requirement.
-
-Uniqueness: **U3 / game hero**.  
-Final target: **Q3**, after concept and runtime dependencies are proven.
+- progression-equipment integration;
+- multiple authored state variants;
+- highest hand/tool readability requirement.
 
 ## C1 — Principal recurring cinematic cast
 
@@ -85,17 +64,7 @@ Final target: **Q3**, after concept and runtime dependencies are proven.
 - Orin Vale;
 - Maelor Renn.
 
-Production burden:
-
-- unique head/face identity;
-- unique costume silhouette;
-- cinematic facial performance;
-- recurring dialogue staging;
-- story-state variants;
-- major prop/tool interactions where applicable.
-
-Uniqueness: **U3 or U2 depending technical reuse**, but visually unique.  
-Final target: **Q3**.
+Each receives a unique head, body proportion target, costume silhouette, F0 facial-performance burden and authored state continuity.
 
 ## C2 — Major recurring world cast
 
@@ -103,556 +72,380 @@ Final target: **Q3**.
 - Sena Ash;
 - Prefect Aven Rusk.
 
-Production burden:
-
-- unique recognizable silhouette;
-- named-character face;
-- recurring gameplay dialogue;
-- major story/civic scenes;
-- region/state variants where required;
-- less bespoke gameplay motion than C0/C1, but not generic population treatment.
-
-Uniqueness: **U2/U3 visual identity**.  
-Final target: **Q3**, with body/rig reuse allowed if silhouette integrity survives.
+Each receives a unique named-character visual identity and F1 performance target. Shared technical foundations are allowed only when visible identity survives.
 
 ## C3 — Named regional recurring/support cast
 
-These are recurring named people defined in regional narrative authority, quest ledgers, setup/payoff contracts, ordinary-life anchors, and world-pulse content.
+Recurring named workers, ferry operators, archivists, cooks, route staff, maintenance workers, teachers, civic officials, quest owners and relationship-chain characters.
 
-Examples include regional workers, ferry operators, archivists, cooks, route staff, maintenance workers, teachers, civic officials, and quest owners.
-
-These characters require:
-
-- recognizable heads/silhouettes at conversational distance;
-- region/occupation-specific costume treatment;
-- continuity across world-state changes;
-- controlled reuse rather than full bespoke hero production by default.
-
-Final production class is assigned in the Region Production Manifest.
+They require a named head solution, occupation-readable silhouette, regional costume assignment, continuity across revisits and explicit reuse classification.
 
 ## C4 — Population archetypes
 
-Unnamed or lightly recurring civilians and workers.
-
-These use a bounded variation system:
-
-- shared body/rig families;
-- head/hair pools;
-- region garment layers;
-- occupational props;
-- palette variation;
-- age/life-stage variation;
-- emergency/post-Stillness variants.
-
-Population reuse must never make six cultures look like the same ten people wearing recolored hats.
+Unnamed/lightly recurring civilians and workers use bounded variation systems. Population reuse must never make six cultures look like the same small group in recolored clothing.
 
 ---
 
-# 4. Universal character art doctrine
+# 4. Universal visual doctrine
 
-## 4.1 Stylization band
+## 4.1 Stylization target
 
-Characters are grounded humans with controlled stylization.
+Stillring humans are believable, deliberately stylized people.
 
-The final look must preserve:
+Required:
 
-- believable anatomy;
-- readable facial structure;
-- clear eye/brow/mouth performance;
-- strong head/hair mass;
-- recognizable body silhouette;
-- simplified skin treatment;
-- selective detail.
+- credible anatomy;
+- large-form facial readability;
+- expressive brows/eyes/mouth;
+- authored hair mass;
+- readable hands;
+- simplified skin micro-detail;
+- clothing shape hierarchy;
+- controlled material breakup.
 
-Do not pursue:
+Reject:
 
-- pore-first photorealism;
-- scan-faithful facial noise;
-- doll-smooth skin;
+- actor-scan identity;
+- pore-first realism;
+- doll skin;
 - anime facial proportions;
-- exaggerated heroic bodybuilder anatomy;
-- fashion-model uniformity;
-- tiny costume clutter as identity.
+- heroic-bodybuilder uniformity;
+- fashion-model homogenization;
+- tiny accessories as primary identity.
 
-The desired result should still read well in ordinary gameplay framing, not only in a portrait render.
+## 4.2 Design-reference heights and builds
 
-## 4.2 Body diversity
+These are locked **relative art anchors**. Technical production may uniformly rescale the world later but may not casually erase their relative relationships.
 
-The cast should visibly differ in:
-
-- height;
-- shoulder/hip relationship;
-- build;
-- posture;
-- age/life-stage;
-- hand size/read;
-- gait implication;
-- occupational wear.
-
-Do not derive every named character from one idealized heroic base body.
-
-Exact heights remain **TBD SCALE / OWNER-CONCEPT REVIEW** until Neris scale and camera representation are established.
-
-Relative silhouette differences may be concepted now.
+| Character | Design-reference height | Build read |
+|---|---:|---|
+| Neris | 168 cm | young woman; compact, wiry manual-work strength |
+| Tessa | 174 cm | lean, long-limbed endurance build |
+| Ilyra | 170 cm | lean field-engineer build |
+| Orin | 178 cm | broad ordinary repair-worker build |
+| Maelor | 183 cm | tall, narrow, controlled posture |
+| Caldrin | 176 cm | sturdy older build, slightly soft middle |
+| Sena | 173 cm | broad-shouldered powerful work build |
+| Rusk | 181 cm | tall, square, institutionally upright |
 
 ## 4.3 Hands
 
-Hands are unusually important in Stillring because the fiction repeatedly centers on:
+Hands are hero-level storytelling surfaces because the fiction centers repair, tools, bells, records, casting, measurement and physical evidence.
 
-- repair;
-- tuning;
-- bells;
-- tools;
-- records;
-- foundry work;
-- route work;
-- physical evidence.
+C0/C1 hands require:
 
-Hero/principal characters require hands capable of readable close interactions.
-
-Character art should plan for:
-
-- useful finger separation;
-- glove/no-glove logic;
-- believable work wear;
-- grip compatibility;
-- tool contact;
-- expressive hand acting in dialogue where relevant.
-
-Hands must not become oversized cartoon forms, but may be slightly emphasized in silhouette where it benefits readability.
+- clear finger separation;
+- close-up-safe nails/knuckles without scan noise;
+- occupational callus/wear;
+- tool-grip compatibility;
+- expressive conversational posing;
+- glove states that preserve hand readability.
 
 ## 4.4 Hair
 
-Hair is treated as authored shape before strand simulation.
+Hair identity comes from authored shape before strand technology.
 
-Requirements:
-
-- recognizable mass from gameplay distance;
-- practical relationship to occupation/weather;
-- animation-safe silhouette;
-- no dependence on thousands of individual visible strands for identity;
-- wet/wind/ash behavior only where production value justifies it.
-
-Hair technology remains a studio/technical choice.
+- styles must make occupational sense;
+- eyes must remain readable;
+- gameplay silhouette cannot depend on individual strands;
+- wet/wind/ash response may deform the shape but not erase it.
 
 ## 4.5 Skin
 
-Skin must support facial performance and life history without becoming a photoreal material showcase.
+Skin uses broad tonal modeling and restrained imperfections.
 
-Use:
+- no universal grime;
+- no random scar culture;
+- no beauty retouching that erases age/work;
+- wrinkles follow expression and life stage rather than noise maps.
 
-- controlled tonal variation;
-- region/labor-appropriate exposure;
-- age-appropriate structure;
-- restrained blemishes/scars only when character-relevant;
-- readable lips/eyes/brows.
+## 4.6 Clothing and fasteners
 
-Avoid:
+Every garment needs function, closure logic and repair logic.
 
-- excessive pore/noise maps;
-- universal beauty retouching;
-- universal grime;
-- random scars added for "character."
+Favor hooks, toggles, tied closures, load-bearing buckles, stitched reinforcement, maker hardware and replacement panels.
 
-## 4.6 Clothing construction
-
-Clothes must appear wearable, repairable, and adapted to work.
-
-Every principal costume must answer:
-
-- what is the base layer?
-- what protects against local weather/work?
-- what opens/closes the garment?
-- where are repeated repairs?
-- what gets dirty first?
-- what is replaced most often?
-- where are tools carried?
-- what must remain clear of hands, knees, ladders, ledges, weapons, or machinery?
-- what visually communicates social role?
-
-Avoid ornamental straps, belts, buckles, pauldrons, pouches, spikes, dangling charms, or armor plates without function.
+Reject decorative strap forests, fantasy pauldrons, spikes, dangling charms and pouch clutter.
 
 ## 4.7 Repair language
 
-Stillring clothing should often show maintenance rather than decay.
+Stillring characters maintain clothing instead of merely decaying into rags.
 
-Useful signals:
+Recurring cues:
 
-- visible re-stitching;
+- contrast re-stitching;
 - replaced cuffs;
 - patched knees/elbows;
 - re-oiled leather;
-- reinforced tool-contact points;
-- mismatched but practical replacement hardware.
+- reinforced tool-contact zones;
+- mismatched replacement hooks;
+- polished surfaces where hands repeatedly touch.
 
-This is preferable to generic dirt and rips.
+## 4.8 Footwear
 
-## 4.8 Fasteners and metalwork
+Footwear is designed for actual labor and travel.
 
-Fasteners should belong to Stillring's material culture.
-
-Favor:
-
-- simple hooks;
-- toggles;
-- tied closures;
-- buckles where load-bearing use explains them;
-- region-specific maker hardware;
-- repairable mechanical closures.
-
-Avoid decorative "fantasy metal everywhere."
-
-## 4.9 Footwear
-
-Footwear is a production-critical visual and animation concern.
-
-Neris and route-active characters need footwear that can plausibly support:
-
-- long travel;
-- ladders;
-- uneven ground;
-- wet surfaces;
-- workshops;
-- combat movement.
-
-Regional NPCs may have more specialized footwear.
-
-Exact sole/ankle design is concept-driven but must later validate against foot IK, slope animation, water, and traversal.
+No principal character wears ornamental heels, fashion boots or oversized armored sabatons.
 
 ---
 
-# 5. Character readability tests
+# 5. Principal palette system
 
-Every C0–C2 character must pass these concept reviews before final model approval.
+Values below are authoritative concept swatches, not physically exact final shader values. Material/lighting work may tune them while preserving visible relationships.
 
-## 5.1 Black silhouette test
+| Character | Primary | Secondary | Neutral | Accent | Metal/technical |
+|---|---|---|---|---|---|
+| Neris | slate blue `#465866` | oat `#D0C4A7` | charcoal brown `#3A3834` | burnt amber `#B56E3C` | aged brass `#8A7655` |
+| Tessa | storm teal `#3E5A59` | road sand `#B6A786` | dark umber `#3A302A` | route ochre `#C39243` | weathered silver `#7D7B74` |
+| Ilyra | faded indigo `#4A5666` | bone `#CDC5B4` | soot slate `#353B40` | oxide rust `#8E5F46` | muted brass `#88745D` |
+| Orin | moss brown `#5A5A43` | flax `#C8B992` | dark leather `#3D3027` | workshop rust `#8A5A3C` | dull iron `#73706A` |
+| Maelor | graphite `#43484E` | stone `#B6B0A4` | muted midnight `#35465A` | cool bronze `#756A59` | precision brass `#8B7A60` |
+| Caldrin | wind gray `#6A7477` | archive cream `#D0C9B6` | slate `#424B52` | binding ochre `#B08B4C` | oxidized iron `#6C7472` |
+| Sena | kiln charcoal `#383A38` | clay `#A85F3F` | ash beige `#B9AA94` | black-glass `#252728` | ceramic sand `#D0B98F` |
+| Rusk | civic blue-gray `#4D6071` | civic off-white `#D0CDC2` | charcoal `#3B4147` | standard brass `#80745D` | dark steel `#626970` |
 
-At gameplay framing, can the character be distinguished from every other principal character without face, texture, or color?
-
-## 5.2 Head-shape test
-
-At conversational medium shot, can the character be identified from hair/head/neck/shoulder mass without costume color?
-
-## 5.3 Occupation test
-
-Can a viewer infer the character does real work or belongs to a specific institution/region before being told their lore?
-
-## 5.4 Flat-color test
-
-Does the design survive with only 4–6 large color/material masses?
-
-## 5.5 Hand/prop test
-
-Does the design remain readable while holding or using its most important prop?
-
-## 5.6 Motion test
-
-Does the costume preserve readable limbs and center-of-mass during key animation?
-
-## 5.7 No-face test
-
-If the face were blurred, does the character remain identifiable?
-
-If not, the costume/body silhouette is too generic.
+No character is readable only by hue; shape/material redundancy is mandatory.
 
 ---
 
-# 6. Character palette rules
+# 6. Readability tests
 
-Characters should harmonize with their home culture without disappearing into the environment.
+Every C0–C2 character must pass:
 
-Rules:
-
-- principal characters receive a controlled identity accent;
-- no principal cast member should be identified only by one bright color;
-- palette must survive night/weather/Hush shifts;
-- color-critical identity requires shape/material redundancy;
-- dyes should feel culturally/materially plausible;
-- not every important person wears saturated hero colors;
-- avoid MMO rarity-color logic.
-
-Principal cast palette relationships are **directional**, not final hex values.
-
----
-
-# 7. Shared production deliverables for C0–C2 characters
-
-Each C0–C2 character must receive the following deliverable package before final modeling lock.
-
-## Concept package
-
-1. **Narrative/occupation brief** — one page.
-2. **Silhouette sheet** — minimum 12 materially different silhouettes.
-3. **Body/build exploration** — bounded range, not cosmetic body sliders.
-4. **Head/hair exploration** — several clearly different shape directions.
-5. **Costume construction sheet** — front/back/side, layer breakdown.
-6. **Material callout sheet** — cloth/leather/metal/wood/ceramic/etc.
-7. **Palette exploration** — minimum 3 viable controlled palettes.
-8. **Prop/equipment integration sheet** — carried/worn/stowed states.
-9. **Movement stress poses** — crouch substitute not required, but stride, run, climb/ladder/working poses as relevant.
-10. **State/variant sheet** — story-required variants.
-11. **Expression range sheet** for C0/C1 and selected C2 characters.
-12. **Close-up paintover/reference frame** showing final stylization band.
-
-## Model package
-
-Required later at Q3:
-
-- clean neutral body/head source;
-- costume layers separated where production requires variants;
-- material IDs organized by real production need;
-- footwear/glove/prop attachment compatibility;
-- facial topology appropriate to selected performance solution;
-- deformation-sensitive areas validated with rig/animation;
-- hidden geometry policy documented;
-- source files and provenance retained.
-
-## Texture/material package
-
-Must include:
-
-- readable base material separation;
-- authored wear hierarchy;
-- state-specific dirt/damage only where required;
-- no random micro-detail pass as a finishing substitute;
-- scalable material setup consistent with later technical budgets.
-
-## Rig handoff package
-
-Character art must provide:
-
-- costume deformation notes;
-- rigid/semi-rigid parts;
-- secondary motion candidates;
-- attachment locations;
-- cloth/hair dependencies;
-- facial design landmarks;
-- areas where silhouette must not collapse in motion.
-
-The Animation Bible later owns final rig/animation architecture.
+1. black silhouette test;
+2. head-shape test;
+3. occupation test;
+4. flat-color test with 4–6 large masses;
+5. hand/prop test;
+6. motion test;
+7. no-face test;
+8. weather test;
+9. Hush-state recognition test;
+10. eight-character group separation test.
 
 ---
 
-# 8. Variant taxonomy
+# 7. Variant taxonomy
 
-Variants must be planned intentionally; avoid creating a new full character mesh for every story state.
-
-## V0 — Base identity
-
-Default stable costume/body identity.
-
-## V1 — Work/travel configuration
-
-Same identity with practical changes such as:
-
-- outer layer removed/added;
-- tool roll attached;
-- rain/wind protection;
-- gloves/apron;
-- courier load;
-- foundry protection.
-
-## V2 — Crisis/wear state
-
-Only when story requires:
-
-- dirt;
-- wetness;
-- ash;
-- damaged garment;
-- improvised repair;
-- bandage.
-
-This must be causally specific.
-
-## V3 — Hush state
-
-Not automatically a separate model.
-
-Possible burden:
-
-- material/light relationship;
-- repeated/incorrect detail;
-- altered wear;
-- silhouette/presentation changes;
-- unique state pieces where canon requires.
-
-The Hush matrix later classifies each character's exact burden.
-
-## V4 — Post-Stillness adaptation
-
-Visible consequence or practical adaptation after the midpoint catastrophe.
-
-## V5 — Epilogue
-
-Used only when the ending genuinely needs a changed visual state.
-
-The epilogue should generally communicate lived change through practical modification, not "final armor."
+- **V0 Base** — stable identity.
+- **V1 Work/Travel** — functional configuration change.
+- **V2 Crisis/Wear** — causally specific wet/ash/damage/repair state.
+- **V3 Hush** — related-reality presentation; not automatically another mesh.
+- **V4 Post-Stillness** — practical adaptation after midpoint catastrophe.
+- **V5 Epilogue** — lived change, never prestige “final armor.”
 
 ---
 
-# 9. Neris Vale — C0 player hero manifest
+# 8. Neris Vale — FINAL C0 VISUAL LOCK
 
-**Production class:** C0 / U3 / Q3 final target  
-**Status:** CANON REQUIREMENT / DIRECTIONALLY BOUNDED / FINAL FACE-COSTUME OWNER REVIEW REQUIRED  
-**Canonical identity:** seventeen-year-old apprentice bellwright from Brindle; mechanically gifted; practical; curious about regional repair practice; not chosen, royal, prophesied, reincarnated, or secretly magical.
+**Sex/gender:** female; she/her.  
+**Age:** 17.  
+**Design-reference height:** 168 cm.  
+**Build:** compact, wiry young woman; narrow-to-medium shoulders, modest feminine hip line, strong forearms and legs from manual work/travel; natural adolescent/young-adult musculature; no heroic V-taper and no sexualized body emphasis.  
+**Production class:** C0 / U3 / Q3 target.
 
-## 9.1 Visual thesis
+## 8.1 Visual thesis
 
-> **A village apprentice who grows into a traveling field bellwright without ever visually turning into a chosen-one warrior.**
+> **A seventeen-year-old village bellwright apprentice who grows into a field professional through accumulated work, not destiny.**
 
-Neris should initially look like someone who expected to spend the day repairing civic machinery, not fighting monsters.
+Neris should look like a young woman who expected to repair civic machinery that morning, not like someone dressed for an epic prophecy.
 
-By late game, progression should read as accumulated practical capability and travel history rather than prestige armor escalation.
+Her femininity is visible in face/body proportion but is not expressed through cleavage, impractical tailoring, skirts that obstruct traversal, cosmetic armor shaping or “girl version of the hero” decoration.
 
-## 9.2 Primary silhouette
+## 8.2 Face
+
+Locked direction:
+
+- warm medium-brown skin;
+- oval face with slightly high, broad cheekbones;
+- softly angular jaw narrowing to a modest chin;
+- straight dark eyebrows, thick enough to carry expression;
+- deep amber-brown eyes with slightly heavy upper lids;
+- medium-width straight nose with a small visible bridge bump inherited from Orin;
+- mouth slightly wide, lower lip modestly fuller than upper;
+- light sun/freckle variation across upper cheeks/nose, subtle enough not to become a logo;
+- ears slightly prominent in profile;
+- no facial tattoo, beauty-mark branding, heroic scar or permanent makeup treatment.
+
+Default expression is **observant concentration**.
+
+Facial acting must support curiosity, quick irritation, technical absorption, dry humor, disbelief, grief, anger and long silent listening.
+
+## 8.3 Hair
+
+Locked design:
+
+- deep chestnut-brown;
+- dense coarse-wave texture;
+- jaw/ear-length practical bob with slightly longer front pieces;
+- shorter nape kept clear of collar/tools;
+- uneven self/household-maintained cut rather than salon symmetry;
+- front pushed off the eyes with one broken forelock that can fall during motion/wetness;
+- no ponytail, heroic braid, undercut, shaved symbol or color streak.
+
+Gameplay silhouette: compact rounded wedge with one irregular front break.
+
+## 8.4 Body/age safeguards
+
+Neris must read as 17, not as a 25-year-old model shrunk into “teen” scale.
 
 Required:
 
-- compact, mobile workwear silhouette;
-- hands and forearms visually available for tool interaction;
-- legs/knees unobscured enough for traversal animation;
-- no floor-length coat or cape in base identity;
-- no oversized shoulder armor;
-- no royal/chosen iconography;
-- no assassin-hood silhouette;
-- no giant weapon profile dominating the body;
-- Cantor Key must integrate as a recognizable but not magical-totem attachment.
+- youthful facial fullness;
+- relatively slight ribcage/shoulder mass;
+- modest chest contour under layered workwear;
+- strong but not heavily defined limbs;
+- relaxed, sometimes impatient posture rather than adult military bearing;
+- no sexualized camera-dependent costume construction.
 
-Directional concept target:
+## 8.5 Costume — `NERIS_V0_BRINDLE_APPRENTICE`
 
-- practical upper layer ending around upper thigh or shorter;
-- asymmetry may come from tool carry or repair layering, not ornamental fantasy design;
-- one strong diagonal or side-mounted equipment line may help identify Neris in motion;
-- silhouette should remain youthful without making Neris childlike.
+### Base shirt
 
-## 9.3 Body/build direction
+- collarless oat work shirt;
+- medium-weight woven cloth;
+- narrow three-loop opening at upper chest;
+- full sleeves, commonly rolled one turn at the forearm during bench work.
 
-Locked outcome:
+### Bellwright jacket
 
-- physically credible for climbing, swimming, running, tool use, and combat;
-- not bodybuilder heroic;
-- not frail waif coding;
-- age 17 must remain visually believable;
-- body should suggest active manual work without impossible combat conditioning.
+- slate-blue short work jacket ending just below high hip;
+- lightly asymmetric front closure from upper-left chest toward center waist;
+- three visible aged-brass hook closures;
+- charcoal reinforced cuffs;
+- articulated under-arm gussets;
+- burnt-amber re-stitched repair at left elbow;
+- smaller amber reinforcement at right shoulder seam;
+- shaped enough to fit her body but never corseted or tight;
+- no hood, cape, shoulder armor or decorative cleavage opening.
 
-Exact build requires owner-approved concept.
+### Lower body
 
-## 9.4 Face direction
+- charcoal-brown straight/tapered work trousers;
+- articulated knees without tactical-pad styling;
+- reinforced inner-ankle patches from workshop/ladder wear;
+- high enough rise for climbing coverage;
+- no dangling straps.
 
-Required:
+### Belt/tool carry
 
-- readable curiosity, irritation, concentration, grief, humor, and silence;
-- age-appropriate features;
-- strong brow/eye communication;
-- no idealized fantasy-prince/princess beauty template;
-- no resemblance-dependent identity borrowed from an actor or famous game character.
+- one narrow dark-brown working belt;
+- right-rear Cantor cradle mount;
+- left-front two-tool loop strip;
+- one small flat field-journal sleeve at left rear hip;
+- no wall of pouches.
 
-Final face is **OWNER REVIEW**.
+### Footwear
 
-## 9.5 Hair direction
+- dark-brown mid-ankle road/work boots;
+- round-to-slight-square toe;
+- low layered sole with visible replaceable heel/edge pieces;
+- two strap/hook closures plus short lacing section;
+- flexible ankle.
 
-Required:
+### Gloves
 
-- practical around workshop/tools;
-- strong shape from gameplay framing;
-- animation-safe;
-- can become wet/disordered without requiring a completely different groom.
+- no permanent gloves;
+- thin brown work gloves carried folded under belt loop and used only when function requires them.
 
-Exact cut/color is owner review after concept exploration.
+## 8.6 Palette hierarchy
 
-## 9.6 Costume construction logic
+1. slate jacket = primary identity mass;
+2. oat shirt = face/hand framing secondary mass;
+3. charcoal trousers = grounding neutral;
+4. burnt-amber repair stitching = warmth/family accent;
+5. aged brass = technical accent.
 
-Base costume must visibly support bellwright work.
+Never shift Neris into saturated green, royal purple, pure-white, all-black or default-red protagonist shorthand.
 
-Required functions:
+## 8.7 Family resemblance
 
-- durable base shirt/undershirt;
-- work outer layer or reinforced overshirt/jacket;
-- lower-body garment allowing full stride and ladder movement;
-- tool-compatible belt/harness solution;
-- durable travel footwear;
-- optional removable work gloves rather than mandatory permanent gloves;
-- at least one visible repair/replacement that implies ordinary maintenance.
+From Ilyra:
 
-Concept should explore workwear-derived silhouettes rather than armor-derived silhouettes.
+- eye spacing;
+- straight brow line;
+- cheekbone placement;
+- long-fingered hands.
 
-Strong concept lane:
+From Orin:
 
-- short practical jacket/overshirt;
-- reinforced forearm/cuff treatment;
-- small utility/tool side rather than a belt covered in pouches;
-- sturdy trousers with region-neutral enough construction to travel;
-- boots designed for workshop and road;
-- subdued cloth/leather/metal mix.
+- small bridge bump in nose;
+- slight ear prominence;
+- chin transition;
+- one-sided half-smile.
 
-This lane is directional, not a final garment lock.
+## 8.8 Cantor Key stow/use solution
 
-## 9.7 Palette direction
+Locked solution:
 
-Neris must remain readable across all six regions.
+- Key stows at **right rear waist/upper hip** in a mechanical swivel cradle;
+- cradle angles roughly 20 degrees rearward during walking;
+- sprung hinge lets the device flatten toward lower back/hip for ladders, ledges and swim states;
+- draw begins with right hand lifting lower grip while left releases top catch;
+- re-stow reverses the operation;
+- leather-backed cradle uses darkened brass/iron hardware;
+- no floating attachment, magnetic glow or energy sheath.
 
-Recommended relationship:
+The Key's prongs/slider/hammer remain visible enough to identify it in silhouette.
 
-- grounded neutral base;
-- one warmer human accent inherited from Brindle/workshop life;
-- restrained cool/metal detail around technical equipment;
-- progression accents come from tools and repairs, not rainbow costume swaps.
+## 8.9 Progression equipment
 
-Avoid:
+Only meaningful selected equipment receives strong permanent silhouette priority.
 
-- heroic pure white;
-- royal purple coding;
-- permanent black assassin palette;
-- saturated franchise-like green hero shorthand;
-- red-as-main-character by default.
+- Anchor Line: compact spool/anchor assembly on left-back belt interface when equipped;
+- Glasslung Reed: slim protected reed case at inner upper jacket/chest, not an air tank;
+- Temper Gauntlet: functional right-hand/forearm layer replacing the ordinary work glove when active;
+- Vane Cloak: short airflow mantle system ending above knee, split/controlled for ladders and ledges;
+- Mirror Nail: compact rigid case at left hip, never sword-like;
+- seam-mode changes alter Cantor hardware subtly rather than making it a glowing weapon.
 
-Exact palette is owner concept review.
+Neris never becomes a walking inventory rack.
 
-## 9.8 Cantor Key integration
+## 8.10 Variants
 
-The Key is a U3 signature prop and requires a dedicated joint concept package with Neris.
+### `NERIS_V1_FIELD_TRAVEL`
 
-Must define:
+- same base costume;
+- charcoal weatherproof shoulder yoke covering upper back/chest and ending above elbows;
+- journal moved to faster field access;
+- cuffs generally down;
+- lightly weathered boot edges.
 
-- neutral stowed location;
-- draw/use path;
-- two-hand/one-hand states if applicable;
-- collision-safe relationship to mantle/ledge/ladder animation;
-- swim/travel handling;
-- cinematic hand contact;
-- readable prong/weight/hammer silhouette;
-- later mode additions without turning it into a glowing fantasy weapon.
+### `NERIS_V2_POST_GRAND_RING`
 
-The Key must look engineered, repairable, and used.
+- same jacket;
+- damaged right shoulder seam repaired with neutral/amber cross-stitching;
+- one patched tear in weather yoke;
+- no permanent blood or generic battle grime.
 
-## 9.9 Progression visual philosophy
+### `NERIS_V3_HUSH_PRESENTATION`
 
-Neris does not receive a sequence of rarity costumes.
+- same body and silhouette;
+- Hush response is material/light correspondence, not ghost anatomy;
+- base colors locally desaturate according to environment relationship;
+- amber repair thread remains unusually stable and recognizable.
 
-New capabilities may add or replace functional components:
+### `NERIS_V4_LATE_TOOL_LOADOUT`
 
-- Anchor Line carry solution;
-- Glasslung-related travel hardware;
-- Temper Gauntlet;
-- Vane Cloak;
-- Mirror Nail;
-- seam-mode/late Key changes;
-- other canonical tools.
+- base body/costume unchanged;
+- mixed maker-replacement hardware from travel;
+- wear concentrated at real attachment/contact points;
+- silhouette still clearly V0 Neris.
 
-Rules:
+### `NERIS_V5_EPILOGUE_TRAVELING_BELLWRIGHT`
 
-- additions must not destroy the original recognizable silhouette;
-- attachment clutter must be managed;
-- some tools may be context-stowed rather than permanently visible;
-- late-game Neris should look traveled and equipped, not transformed into a different genre archetype.
+- slate jacket sun-faded and neatly repaired;
+- travel yoke becomes a slightly longer field over-yoke ending at upper thigh, still short/split for movement;
+- slim cross-body document case for traveling work;
+- replaced boot soles;
+- Cantor cradle cleaner and more refined through Neris's own modifications;
+- no ceremonial badge, crown, armor promotion or legendary-hero costume.
 
-## 9.10 Animation burden
+## 8.11 Animation burden
 
-Neris character art must support:
+Art must support:
 
-- analog locomotion;
-- Sprint;
+- analog locomotion and Sprint;
 - jump/fall/land;
 - mantle;
 - ledge hang/shimmy/pull-up/release;
@@ -660,1094 +453,836 @@ Neris character art must support:
 - surface swimming;
 - slope scramble/slide;
 - target-lock locomotion;
-- combat attacks/guard/evade/reactions;
-- Cantor interactions;
-- field-tool interactions;
+- combat attack/guard/evade/reaction;
+- Cantor use;
+- field tools;
 - Line Skiff use;
+- workbench repair;
 - cinematic close-ups;
-- workbench/repair animation;
 - environmental interactions.
 
-No garment, hair mass, rigid prop, or attachment may be approved without stress-testing these categories conceptually.
+## 8.12 Hard failures
 
-## 9.11 Required variants
+Reject any Neris execution that reads primarily as:
 
-Minimum anticipated burden:
-
-- `NERIS_V0_BRINDLE_APPRENTICE` — base opening identity;
-- `NERIS_V1_FIELD_TRAVEL` — practical field configuration;
-- `NERIS_V2_POST_GRAND_RING` — story-specific wear/adaptation, not generic battle damage;
-- `NERIS_V3_HUSH_PRESENTATION` — exact representation TBD Hush matrix;
-- `NERIS_V4_LATE_TOOL_LOADOUT` — functional accumulated capability;
-- `NERIS_V5_EPILOGUE_TRAVELING_BELLWRIGHT` — changed but recognizably the same person.
-
-These may share the same body/base costume architecture. They are production states, not necessarily separate meshes.
-
-## 9.12 Hard failures
-
-Reject any Neris concept that reads primarily as:
-
-- legendary swordsman;
+- legendary swordswoman;
 - assassin;
-- prince/princess;
 - mage;
 - knight;
-- anime protagonist;
-- generic leather RPG adventurer;
-- miniature adult;
-- photoreal actor scan.
+- princess/royal heir;
+- anime heroine;
+- photoreal actor;
+- generic leather adventurer;
+- sexualized teen protagonist;
+- child mascot.
 
-## 9.13 Owner-review package
-
-Before final Neris model approval, owner must see:
-
-- 12+ black silhouettes;
-- 3 narrowed body/build directions;
-- 3 distinct head/hair directions;
-- 3 costume construction directions;
-- 3 palette directions;
-- Cantor stow/use integration;
-- traversal stress poses;
-- one representative gameplay-distance render;
-- one representative cinematic close-up.
-
-Owner approval chooses identity; technical review then validates feasibility.
+Neris's creative visual identity is **LOCKED** by this section.
 
 ---
 
-# 10. Tessa Marr — C1 principal recurring manifest
+# 9. Tessa Marr — FINAL C1 VISUAL LOCK
 
-**Canonical role:** route courier; closest ally; knows roads, smugglers, old signal towers, cheap inns, old route infrastructure; later accepts durable civic responsibility.  
-**Production class:** C1 / visually unique / Q3 target.
+**Sex/gender:** female; she/her.  
+**Visual age:** 25.  
+**Design-reference height:** 174 cm.  
+**Build:** lean, long-limbed endurance build; strong calves/hips from road work; relaxed shoulders.  
+**Skin:** deep brown with warm undertone.  
+**Eyes:** dark brown.  
+**Hair:** black, tightly coiled; side/back gathered into compact low knot with short natural crown volume.
 
-## 10.1 Visual thesis
+## 9.1 Face
 
-> **A person built by distance, weather, shortcuts, and carrying things for other people.**
+- long oval/diamond face;
+- high cheekbones;
+- broad straight nose;
+- mobile brows with one slightly higher resting arch;
+- wide expressive mouth;
+- no scar shorthand.
 
-Tessa should read as a working courier before reading as a rogue.
+Default read: awake, mildly skeptical, measuring the road ahead.
 
-Do not turn "sharp-tongued courier with forged-manifest history" into a fantasy smuggler cliché.
+## 9.2 Costume
 
-## 10.2 Silhouette
+- road-sand collarless base shirt;
+- storm-teal mid-thigh courier coat with twin rear boarding/riding vents;
+- three offset load-bearing front toggles;
+- sleeves tapered/secured above wrist;
+- dark-umber road trousers;
+- ochre neck wrap, normally loose but usable against dust/wind;
+- reinforced dark road boots just above ankle;
+- broad cross-body courier strap from right shoulder to **left hip satchel**;
+- rigid-backed weathered satchel sized for documents/compact freight;
+- small route-tag loop holding only current route markers.
 
-Required:
+No hood dependency, dagger bandolier, pirate buckle language or endless hidden pockets.
 
-- travel-forward body/costume massing;
-- asymmetric load/carry logic is appropriate;
-- clear leg movement;
-- outerwear designed for road weather;
-- recognizably different from Neris's workbench/tool silhouette;
-- should plausibly board/use route infrastructure and Line Skiff.
+## 9.3 Variants
 
-Avoid:
+- `TESSA_V0_COURIER` — base;
+- `TESSA_V1_COAST_WEATHER` — waxed shoulder panel, neck wrap raised, satchel cover;
+- `TESSA_V2_RELIEF_NETWORK` — extra ledger sleeve and emergency signal tags, no military gear;
+- `TESSA_V3_LINE_SKIFF_COORDINATOR` — compact gloves and route-board folio;
+- `TESSA_V5_EPILOGUE` — same coat repeatedly repaired, cleaner standardized route tags reflecting accepted civic responsibility.
 
-- hooded thief silhouette;
-- dagger-bandolier cliché;
-- excessive hidden pockets as personality;
-- pirate styling unless regionally justified by actual route culture.
+## 9.4 Hard failure
 
-## 10.3 Costume logic
-
-Must visibly solve:
-
-- weather changes;
-- long travel;
-- carrying documents/small freight;
-- quick access to route tools;
-- repeated repair;
-- sitting/riding/boarding;
-- cheap practical replacement rather than prestige tailoring.
-
-Useful concept elements:
-
-- layered weatherproof outer piece;
-- route bag/satchel with believable load points;
-- scarf/wrap or neck protection where useful;
-- reinforced footwear;
-- route markers/tags only if grounded in courier practice.
-
-## 10.4 Palette
-
-Tessa may carry a stronger travel/route accent than Neris, but avoid "rogue red" cliché.
-
-Palette should remain readable in Saltreach weather, road dust, and changed-world rescue scenes.
-
-## 10.5 State burden
-
-Anticipate:
-
-- ordinary courier state;
-- Saltreach/travel weather state;
-- post-Grand-Ring relief-network state;
-- Line Skiff/route coordination configuration;
-- epilogue civic-responsibility continuation.
-
-Her later responsibility should change practical equipment/organization more than fashion status.
-
-## 10.6 Face/performance
-
-Tessa needs strong conversational performance because humor, avoidance, confession, frustration, and durable loyalty all matter.
-
-Avoid permanently smirking "sarcastic sidekick" face design.
-
-## 10.7 Hard failure
-
-Reject if she reads primarily as:
-
-- thief;
-- pirate;
-- sexy rogue;
-- comic-relief mascot;
-- leather-clad adventurer with no courier function.
+Never render Tessa as thief, pirate, sexy rogue, dagger specialist, smuggler stereotype or comic-relief mascot.
 
 ---
 
-# 11. Ilyra Vale — C1 principal recurring manifest
+# 10. Ilyra Vale — FINAL C1 VISUAL LOCK
 
-**Canonical role:** brilliant field bellwright; Neris's mother; Quiet Court collaborator; Mercy Window author; trapped in Hush for eleven years; returns with disrupted temporal/emotional continuity.  
-**Production class:** C1 / U3 visual identity / Q3 target.
+**Sex/gender:** female; she/her.  
+**Chronological age:** 43.  
+**Physical/Hush appearance:** approximately 32–34 because eleven Waking years do not translate into ordinary physical aging in the Hush.  
+**Design-reference height:** 170 cm.  
+**Build:** lean field-engineer; long forearms/hands; compact shoulders.  
+**Skin:** warm medium-brown, slightly deeper than Neris's tone.  
+**Eyes:** deep amber-brown.  
+**Hair:** dark brown, jaw-length working cut pinned back at both sides with one dull-metal comb.
 
-## 11.1 Visual thesis
+## 10.1 Face
 
-> **A field engineer whose competence survives eleven years of wrong time.**
+- oval-square face;
+- broad cheekbones;
+- straight brow line and eye spacing echoed in Neris;
+- slightly longer nose than Neris;
+- narrower mouth with pronounced concentration compression at corners;
+- subtle line between brows from habitual focus;
+- no haunted-ghost eye treatment.
 
-Ilyra must not visually become a mystical Hush oracle.
+## 10.2 Costume
 
-Her identity is engineering first.
+- bone work shirt;
+- faded-indigo mid-thigh field coat with side splits and four muted-brass closures;
+- soot-slate trousers;
+- dark service boots with shallow tread and replaceable heel blocks;
+- high-waist narrow instrumentation belt with two flat measurement sleeves and fold-down note surface;
+- oxide-rust reinforcement at inside elbows/one pocket edge;
+- no robes, cloak, sash or mystical jewelry.
 
-## 11.2 Silhouette
+## 10.3 Hush state
 
-Required:
+- body remains opaque/physical;
+- two coat seams show almost-identical repairs one layer apart, implying repeated resets rather than eleven years of rot;
+- some high-contact metal remains strangely unworn while adjacent cloth shows localized wear;
+- hair/cloth occasionally settles a fraction too early relative to surrounding Hush motion;
+- no global glow, transparency, black veins or floating cloth.
 
-- mature working bellwright silhouette;
-- distinct from Neris while allowing believable family resemblance if final face direction supports it;
-- practical tool/work posture;
-- Hush state must preserve recognition;
-- no robes-of-the-wise-woman transformation.
+## 10.4 Returned state
 
-## 11.3 Costume logic
+Ilyra replaces one repeated Hush repair with one unmistakably new Waking repair. That small act is the visual statement that she is participating in current time rather than restoring an old state.
 
-Pre-disappearance clothing should plausibly support:
+## 10.5 Hard failure
 
-- field measurement;
-- mechanism access;
-- tool carry;
-- climbing/service spaces;
-- technical note work;
-- weather exposure.
-
-Hush survival must not automatically produce eleven years of ordinary physical garment decay if canon/representation does not support it. The Hush state should be authored according to its own material logic.
-
-## 11.4 Hush burden
-
-Ilyra is one of the highest-priority Hush character studies.
-
-Concept must explore wrongness through controlled relationships such as:
-
-- repairs that repeat rather than progress;
-- garment state inconsistent with elapsed Waking time;
-- selective wear/stillness;
-- subtle mismatch between remembered and current self-presentation;
-- lighting/material behavior that does not turn her into a ghost.
-
-Do not use:
-
-- translucent ghost body;
-- generic blue glow;
-- black corruption veins;
-- floating magical cloth by default.
-
-## 11.5 Face/performance
-
-Ilyra needs one of the strongest facial-performance designs in the game.
-
-Must support:
-
-- seeing Neris as the child she remembers;
-- recognition delay;
-- shame;
-- technical concentration;
-- restrained affection;
-- uncertainty;
-- direct admission without melodramatic villain guilt.
-
-## 11.6 State burden
-
-- pre-disappearance archival/flashback state where required;
-- Hush survival state;
-- reunion state;
-- Cairnfall working collaboration state;
-- returned/epilogue state showing difficulty rather than magical recovery.
-
-## 11.7 Hard failure
-
-Reject if she reads primarily as:
-
-- mystical mother;
-- saint;
-- witch;
-- ethereal chosen engineer;
-- innocent victim visually purified by the Hush.
+Never render Ilyra as oracle, saint, witch, ghost mother, ethereal engineer or visually purified victim.
 
 ---
 
-# 12. Orin Vale — C1 principal recurring manifest
+# 11. Orin Vale — FINAL C1 VISUAL LOCK
 
-**Canonical role:** practical village repairman; Neris's father; loving but secretive; taken through the Brindle seam; later preserved inside Still-Cairn defensive states.  
-**Production class:** C1 / unique head and silhouette / Q3 target.
+**Sex/gender:** male; he/him.  
+**Visual age:** 46.  
+**Design-reference height:** 178 cm.  
+**Build:** broad ordinary repair-worker; strong hands/forearms; slight softness at waist; no warrior physique.  
+**Skin:** light-medium warm olive/tan.  
+**Eyes:** gray-brown.  
+**Hair:** medium brown with gray at temples; rough short crop.  
+**Facial hair:** practical short beard.
 
-## 12.1 Visual thesis
+## 11.1 Face
 
-> **The person who taught Neris ordinary repair, not a hidden mastermind or warrior.**
+- broad rectangular face;
+- slightly raised/crooked nose bridge inherited by Neris;
+- heavy but kind brow;
+- visible smile lines rather than heroic scars;
+- slightly prominent ears;
+- one-sided half-smile echoed in Neris.
 
-Orin must establish the Vale workshop as a lived family/work space.
+## 11.2 Costume
 
-## 12.2 Silhouette
+- flax work shirt with rolled sleeves;
+- moss-brown sleeveless heavy-weave work vest;
+- removable workshop-rust apron panel from waist to upper thigh;
+- dark-brown straight work trousers;
+- dark leather ankle boots with visibly replaced outer heel;
+- two simple tool loops plus folding rag/hook on belt.
 
-Required:
+For First Ring, Orin brushes/cleans this same clothing and adds one simple dark neck fastening. He does not transform into ceremonial elite dress.
 
-- grounded village repairman;
-- visibly older/more settled work silhouette than Neris;
-- practical hands/forearms/tool posture;
-- no secret-master visual coding;
-- clear family relation may come through selected facial/material echoes, not matching costumes.
+## 11.3 Still-Cairn state
 
-## 12.3 Costume logic
+Preserved Orin initially appears in a clean, familiar V0 workshop state—slightly too complete, every patch exactly where Neris remembers it.
 
-Must support:
+As the defensive state destabilizes, repetition appears in environment and gesture relationships first. Orin never grows monster armor or corruption anatomy.
 
-- workshop work;
-- village service/repair calls;
-- First Ring opening ceremony context without becoming ceremonial elite dress;
-- later Still-Cairn recognition.
+## 11.4 Epilogue
 
-His clothing should be familiar enough that preserved variants carry emotional weight.
-
-## 12.4 Still-Cairn burden
-
-Orin's late-game visual production must distinguish:
-
-- the actual Orin;
-- preserved/safe-state presentation;
-- workshop memories or repeated arena-state logic.
-
-The design must preserve humanity rather than turning him into a boss-monster aesthetic unless encounter authority explicitly requires a gameplay-driven state.
-
-## 12.5 Hard failure
-
-Reject if he reads as:
-
-- secret knight;
-- master wizard-engineer;
-- conspirator;
-- martyr-saint;
-- obvious doomed-father cliché built entirely from visual sentimentality.
+Same vest, new pocket repair, slightly more visible gray where chronology permits. Familiarity matters more than reinvention.
 
 ---
 
-# 13. Maelor Renn — C1 principal recurring manifest
+# 12. Maelor Renn — FINAL C1 VISUAL LOCK
 
-**Canonical role:** chief acoustician; engineer; Quiet Court founder; antagonist; calm, useful, competent, grief-driven, coercive; not a ruler seeking power.  
-**Production class:** C1 / U3 principal antagonist / Q3 target.
+**Sex/gender:** male; he/him.  
+**Visual age:** 52.  
+**Design-reference height:** 183 cm.  
+**Build:** tall, narrow, upright; long hands; not frail.  
+**Skin:** light bronze/olive.  
+**Eyes:** gray-blue.  
+**Hair:** near-black, straight-to-slight-wave, swept back; silver concentrated at temples; medium-short.  
+**Facial hair:** clean-shaven.
 
-## 13.1 Visual thesis
+## 12.1 Face
 
-> **The most dangerous engineer in the story should initially look like someone whose advice you would trust.**
+- long triangular/rectangular face;
+- narrow jaw without gauntness;
+- straight nose;
+- deep-set but not sinister eyes;
+- fine horizontal forehead lines;
+- neutral/soft resting mouth rather than smirk;
+- one slightly drooping upper eyelid suggesting fatigue, not villainy.
 
-Maelor must not be visually spoiled as "the villain" on first sight.
+First impression: **competent, calm and safe to ask a technical question**.
 
-## 13.2 Silhouette
+## 12.2 Costume
 
-Required:
+- stone-gray high-neck base shirt;
+- graphite mid-thigh acoustician field coat with straight front and concealed hooks;
+- muted-midnight inner facing visible only when coat moves/opens;
+- narrow dark trousers;
+- polished but repaired field boots;
+- slim precision-instrument case on left hip;
+- narrow brass calibration scale integrated into a coat seam as a real tool;
+- no cape, robe, medals, villain collar or luxury fabric.
 
-- controlled, precise, mature professional silhouette;
-- visually distinct from Rusk's administrative authority and Caldrin's archival/monastic identity;
-- no spiked, black, demonic, or villain-coded costume massing;
-- deliberate restraint;
-- should look capable of field/technical work even if his current role is senior.
+His clothing is better maintained than Neris/Tessa's because of institutional access, but remains work clothing.
 
-## 13.3 Costume logic
+## 12.3 State progression
 
-His clothing should suggest:
+### Trusted expert
 
-- technical authority earned through work;
-- long association with Meridian infrastructure;
-- precision;
-- maintenance/measurement familiarity;
-- institutional proximity without reducing him to uniform bureaucracy.
+Cleanest state. Graphite/stone dominate.
 
-Avoid luxury as a shorthand for villainy.
+### Grand Ring reveal
 
-## 13.4 Palette
+Same clothing; coat opened into working configuration, sleeves partially secured. The reveal is behavioral, not an “evil costume” change.
 
-Use calm, controlled values.
+### Post-Stillness
 
-Do not make the antagonist the only person wearing black/red.
+Temporary interface clips and measurement strips appear from system maintenance. No black/red corruption pass.
 
-If a late Stillring-state palette changes, it should express the engineered system and his narrowing doctrine—not "evil mode."
+### Null Meridian
 
-## 13.5 Face/performance
+Additional precision hardware is restricted to forearms/waist where encounter function requires it. His human silhouette remains intact.
 
-Critical expressions:
+### Ending/trial
 
-- attentive listening;
-- precise explanation;
-- genuine concern;
-- fatigue;
-- grief held under control;
-- anger that matters because it is rare;
-- certainty becoming coercion;
-- final loss without instant redemption.
+Institutional equipment is removed. He appears smaller because the machinery/context is gone, not because he becomes physically broken for sympathy.
 
-Do not design a perpetual villain smirk, dead eyes, or predatory facial shorthand.
+## 12.4 Hard failure
 
-## 13.6 State burden
-
-- Act One trusted expert;
-- Grand Ring reveal/confrontation;
-- post-Stillness system-maintenance state;
-- Null Meridian final confrontation;
-- trial/ending representation where shown.
-
-The visual throughline must remain the same human being.
-
-## 13.7 Hard failure
-
-Reject if he reads primarily as:
-
-- dark lord;
-- evil priest;
-- dictator;
-- aristocrat;
-- possessed scientist;
-- anime mastermind;
-- disheveled mad inventor.
+Never render Maelor as dark lord, priest, dictator, aristocratic villain, possessed scientist, anime mastermind or wild-haired mad inventor.
 
 ---
 
-# 14. Brother Caldrin — C2 major recurring manifest
+# 13. Brother Caldrin — FINAL C2 VISUAL LOCK
 
-**Canonical role:** High Aerie archivist; gentle but stubborn monk-engineer; decades spent preserving damaged bell records; learns to preserve provenance and contradiction rather than one authorized master copy.  
-**Production class:** C2 / unique named identity / Q3 target.
+**Sex/gender:** male; he/him.  
+**Visual age:** 63.  
+**Design-reference height:** 176 cm.  
+**Build:** sturdy older frame with slightly soft middle; strong hands; mountain-walking legs; not frail.  
+**Skin:** medium brown with cool-neutral undertone.  
+**Eyes:** dark hazel.  
+**Hair:** dense short gray curls, receding naturally but not tonsured.  
+**Facial hair:** short full gray beard trimmed clear of mouth.
 
-## 14.1 Visual thesis
+## 13.1 Face
 
-> **A working archivist-engineer whose monastic identity is practical stewardship, not fantasy priesthood.**
+- broad forehead;
+- softly rounded square face;
+- deep smile/concern lines at eyes;
+- wide nose;
+- heavy brows going silver;
+- default expression attentive and patient rather than holy/serene.
 
-## 14.2 Silhouette
+## 13.2 Costume
 
-Required:
+- archive-cream wrapped base shirt with practical overlap closure;
+- wind-gray hip-length mountain coat with asymmetric storm flap;
+- slate trousers;
+- dark mountain boots with grippy segmented sole and wrapped ankle reinforcement;
+- narrow archive harness around waist/ribs carrying two rigid record cases behind left hip;
+- ochre binding tape/labels visible at case edges;
+- oxidized-iron maintenance hook and small annotation tool case;
+- no floor robe, hooded monk silhouette, prayer beads or mystical relic.
 
-- readable archive/monastery identity;
-- weather/adaptation to High Aerie;
-- hands capable of handling records/tools;
-- clear separation from Maelor's technical authority and Rusk's civic administration;
-- age/life-stage should support "decades" of work without forcing frailty.
+## 13.3 State progression
 
-## 14.3 Costume logic
+- `CALDRIN_V0_ARCHIVE` — clean cases, controlled labels;
+- `CALDRIN_V1_HIGH_AERIE_FIELD` — storm flap closed, gloves, outer neck wrap;
+- `CALDRIN_V2_AUTHORITY_BREAK` — one official seal removed/cut from case and replaced with visible handwritten provenance tags;
+- `CALDRIN_V5_PUBLIC_ARCHIVE` — more varied tags and open-access case organization; same coat/body identity.
 
-Combine:
-
-- practical mountain layering;
-- archive protection/storage;
-- maintenance/technical work;
-- institutional/monastic signifiers kept restrained.
-
-Avoid generic hooded monk robe if it would interfere with the working-engineer identity.
-
-## 14.4 Prop language
-
-Possible signature burden should derive from canon:
-
-- record cases;
-- repair bindings;
-- annotation tools;
-- archival seals/provenance tags;
-- technical measuring aids if justified by scenes.
-
-Do not invent mystical relics.
-
-## 14.5 State burden
-
-- Cairnspire/archive appearances;
-- High Aerie regional work;
-- institutional fracture/authority-seal break;
-- later public provenance archive state.
-
-His later visual change should show changed practice, not superhero promotion.
+His character change is visible in **record practice**, not costume promotion.
 
 ---
 
-# 15. Sena Ash — C2 major recurring manifest
+# 14. Sena Ash — FINAL C2 VISUAL LOCK
 
-**Canonical role:** veteran Emberstep foundry leader/kiln captain; trained caster; coordinates safety/production; strong advocate for traceable maker responsibility.  
-**Production class:** C2 / regional hero identity / Q3 target.
+**Sex/gender:** female; she/her.  
+**Visual age:** 48.  
+**Design-reference height:** 173 cm.  
+**Build:** broad shoulders, powerful forearms/back, sturdy hips/legs; body shaped by foundry work, not fantasy warrior training.  
+**Skin:** rich deep umber-brown with warm copper undertone.  
+**Eyes:** near-black brown.  
+**Hair:** black with visible gray; tightly braided in flat crown rows gathered into a compact protected rear knot for foundry safety.
 
-## 15.1 Visual thesis
+## 14.1 Face
 
-> **A foundry leader who looks credible standing beside dangerous heat and telling everyone else exactly what is unsafe.**
+- broad square face;
+- strong straight nose;
+- full mouth;
+- heavy expressive brow;
+- no decorative facial scars;
+- fine heat/exposure tonal variation only where plausible.
 
-## 15.2 Silhouette
+Default read: evaluating whether something is actually safe.
 
-Required:
+## 14.2 Costume
 
-- physically grounded working-leader silhouette;
-- foundry protection integrated into identity;
-- strong readable stance without fantasy-warrior armor;
-- clearly different from Neris's light field mobility;
-- veteran competence should come from posture/material choices, not scars and muscles alone.
+- ash-beige dense woven base shirt;
+- kiln-charcoal sleeveless/short-sleeved heavy work over-jacket with high underarm mobility;
+- clay-colored reinforced front/side panels;
+- dark work trousers with wide stable stance and no armor shaping;
+- heavy foundry boots with ceramic-capped upper toe and heat-resistant sole layers;
+- removable black-glass/ceramic forearm guards for active casting, asymmetrical based on task;
+- split heavy apron only in active floor state, removable for public/inspection scenes;
+- maker mark stamped on replaceable apron/guard components, not tattooed as identity.
 
-## 15.3 Costume logic
+## 14.3 Wear logic
 
-Must visibly address:
+- heat discoloration at guard edges;
+- ash concentrated at lower hems/boots;
+- polished tool-contact zones;
+- visibly replaced protection components;
+- no universal soot-covered face.
 
-- radiant heat;
-- sparks;
-- heavy tools;
-- dust/ash;
-- production-floor authority;
-- inspection/public scenes.
+## 14.4 Variants
 
-Potential materials:
+- `SENA_V0_KILN_CAPTAIN` — full active protection;
+- `SENA_V1_PUBLIC_INSPECTION` — apron/guards reduced, same core over-jacket;
+- `SENA_V2_GRAND_RING_CRISIS` — emergency cloth wrap/replaced guard specific to event;
+- `SENA_V4_DISTRIBUTED_PRODUCTION` — multiple visible maker tags/locally replaced parts demonstrating decentralized production;
+- `SENA_V5_EPILOGUE` — cleaner traceability marks, same working silhouette.
 
-- heavy woven cloth;
-- treated leather where functional;
-- ceramic/metal heat guards where plausible;
-- removable work protection.
+## 14.5 Hard failure
 
-Do not cover her in ornamental forge armor.
-
-## 15.4 Wear logic
-
-Emberstep wear should be specific:
-
-- heat discoloration;
-- ash;
-- polished tool-contact areas;
-- replaced protection;
-- maker marks.
-
-Avoid universal soot-face treatment.
-
-## 15.5 State burden
-
-- active kiln-captain work state;
-- public/investigation scenes;
-- Grand Ring crisis;
-- changed-world distributed production;
-- epilogue maker-name/traceability role.
+Never render Sena as armored warrior, fantasy blacksmith cliché, barbarian, “battle mom,” or soot-and-muscle shorthand.
 
 ---
 
-# 16. Prefect Aven Rusk — C2 major recurring manifest
+# 15. Prefect Aven Rusk — FINAL C2 VISUAL LOCK
 
-**Canonical role:** Bellwarden administrator; believes standards, controlled access, and public confidence prevent harm; participates in secrecy; later chooses people over procedure when the system becomes dangerous.  
-**Production class:** C2 / unique institutional identity / Q3 target.
+**Sex/gender:** male; he/him.  
+**Visual age:** 54.  
+**Design-reference height:** 181 cm.  
+**Build:** tall, square shoulders, ordinary middle-aged civic fitness; controlled posture rather than military physique.  
+**Skin:** fair-to-medium tan with neutral undertone.  
+**Eyes:** dark gray.  
+**Hair:** ash-brown turning gray, neatly cut short with strong side part.  
+**Facial hair:** none.
 
-## 16.1 Visual thesis
+## 15.1 Face
 
-> **A competent public administrator whose authority is understandable before its limits become clear.**
+- square face with broad jaw;
+- straight medium nose;
+- level brows;
+- faint lines at mouth/forehead from restraint and concentration;
+- no villain sneer or aristocratic sharpness.
 
-Rusk must not look like a cartoon bureaucratic villain.
+## 15.2 Costume
 
-## 16.2 Silhouette
+- civic off-white high-collar shirt;
+- structured civic blue-gray knee-above coat ending mid-thigh, not long enough to become ceremonial robes;
+- coat uses consistent Bellwarden hidden-hook standard with one visible brass authorization tab at upper left chest;
+- charcoal straight trousers;
+- dark-steel-toned maintained ankle boots;
+- slim document/access case at right hip;
+- one standardized utility loop hidden under coat side opening for actual emergency tool access.
 
-Required:
+Authority comes from consistent construction, cleanliness and system markings—not luxury.
 
-- structured institutional silhouette;
-- less field-work clutter than Neris/Maelor;
-- controlled posture;
-- recognizable authority without aristocratic luxury;
-- silhouette must remain practical enough for emergency action during the Grand Ring.
+## 15.3 Variants
 
-## 16.3 Costume logic
+- `RUSK_V0_ADMIN` — full structured coat, authorization tab present;
+- `RUSK_V1_INVESTIGATION` — coat open, document case active;
+- `RUSK_V2_GRAND_RING_RESPONSE` — outer coat partially removed/secured for emergency work; sleeves fastened back; proves he can physically act;
+- `RUSK_V4_POST_STILLNESS` — same coat with authorization tab deliberately left but one central-standard seal removed/replaced by local access tags;
+- `RUSK_V5_TESTIMONY` — simplest institutional state, no dramatic rebel makeover.
 
-Should communicate:
+## 15.4 Hard failure
 
-- public office;
-- Bellwarden standardization;
-- document/access authority;
-- civic duty;
-- enough practical familiarity with infrastructure that emergency action is believable.
-
-Institutional markings should be systematic and reproducible across Bellwarden population costumes.
-
-## 16.4 Palette
-
-Rusk may embody the Bellwarden institutional palette, but should not monopolize it.
-
-Authority should come through cut, construction, insignia placement, and maintenance quality—not only saturated color.
-
-## 16.5 State burden
-
-- Cairnspire administrative state;
-- investigation/restricted-access scenes;
-- Grand Ring emergency response;
-- changed-world cooperation outside old legitimacy;
-- trial/testimony/ending state where shown.
-
-His later appearance should not become visually "liberated rebel Rusk." He remains recognizably institution-shaped while changing behavior.
+Never render Rusk as aristocrat, fascist-uniform caricature, cartoon bureaucrat, secret villain or sudden rebel leader.
 
 ---
 
-# 17. The Listener — special character/entity presentation
+# 16. The Listener — FINAL SPECIAL VISUAL LOCK
 
-**Canonical role:** emergent consciousness of the Hush; not god, demon, villain, or human personality; contains unfinished possibilities; final desire involves release from forced singularity.  
-**Production class:** SPECIAL / cross-owned by character art, environment art, VFX, narrative, and finale production.
+**Nature:** emergent consciousness of the Hush; not human, god, demon or monster.  
+**Production ownership:** character art + environment art + VFX + narrative + finale staging.
 
-## 17.1 Visual thesis
+## 16.1 Core visual thesis
 
-> **The Listener should feel like many incomplete possibilities becoming briefly legible, not a monster waiting behind reality.**
+> **Many incomplete possibilities temporarily agreeing on where a presence should be.**
 
-## 17.2 Prohibitions
+The Listener has no permanent biological body.
 
-Do not default to:
+## 16.2 Base manifestation
+
+The canonical final-chamber manifestation occupies a roughly **2.3–2.6 m high vertical ovoid volume**, but it is not a humanoid giant.
+
+It consists of:
+
+- 12–20 incomplete human-scale silhouette fragments occupying overlapping positions;
+- partial shoulders, hands, profiles, backs of heads and standing gestures that never combine into one person;
+- thin slices of familiar environment surfaces passing through those fragments as if different possibilities are sharing the same volume;
+- a central negative-space corridor where the background appears slightly too far away rather than a glowing core;
+- no stable face;
+- no eyes;
+- no mouth;
+- no limbs extending from one coherent torso.
+
+The viewer sometimes perceives a person for less than a second because several fragments align, then the alignment breaks.
+
+## 16.3 Material/color behavior
+
+- no single Listener color;
+- fragments borrow restrained palette/material information from places the player knows;
+- saturation remains lower than the source location but never becomes universal blue/purple;
+- overlap boundaries may create a pale neutral seam line, thin and intermittent;
+- the Listener does not glow like a magic entity;
+- ambient light should still affect the fragments enough to anchor them in the scene.
+
+## 16.4 Shadows and reflections
+
+- the Listener casts several partial shadows that do not fully converge;
+- reflective surfaces may show a different but related set of fragments;
+- neither effect should obscure gameplay or become glitch-noise wallpaper.
+
+## 16.5 Motion
+
+- constituent gestures complete at different rates;
+- hands may begin an ordinary action from one remembered context and finish as another incomplete gesture;
+- the whole volume does not walk like a character;
+- movement is mostly assembly/disassembly around a stable spatial locus;
+- when the Listener directs attention toward Neris, several incomplete head/shoulder fragments orient approximately toward her without producing a single face.
+
+## 16.6 Communication presentation
+
+When a comprehensible idea is presented, the Listener briefly resolves one **human-scale gesture**, not one human identity: an open hand, a turned shoulder, someone stepping away, someone releasing an object. The gesture is assembled from multiple partial bodies and dissolves immediately after carrying meaning.
+
+No lip sync is required because there is no mouth.
+
+## 16.7 Save-state sensitivity
+
+At least two fragment families should be allowed to draw from recognizable visual motifs associated with content the player actually completed, while a stable canonical fragment library guarantees the scene works for every save.
+
+This is an authored substitution system, not procedural AI generation.
+
+## 16.8 Hard failures
+
+Never render the Listener as:
 
 - giant humanoid god;
 - masked deity;
 - cosmic woman/man;
-- black shadow demon;
-- tentacle entity;
-- glowing angel;
+- shadow demon;
+- tentacle creature;
+- angel;
 - giant eye;
-- evil face in the sky;
-- abstract particle blob with no authored meaning.
+- face in the sky;
+- random particle blob;
+- glitch monster.
 
-## 17.3 Production approach
-
-The Listener may be represented through combinations of:
-
-- borrowed/echoed spatial forms;
-- incomplete human-scale gestures;
-- preserved memories;
-- environment relationships;
-- controlled material contradictions;
-- silhouette fragments;
-- voice/subtitle/presentation systems;
-- save-state-sensitive familiar imagery where canon calls for it.
-
-The final representation requires dedicated owner review because it materially affects Stillring's ending identity.
-
-The Listener is not closed by this manifest.
+The Listener's creative presentation is now **LOCKED**. Exact shader/VFX implementation remains technical.
 
 ---
 
-# 18. Principal cast silhouette separation matrix
+# 17. Principal cast silhouette separation
 
-| Character | Primary visual read | Must not overlap with |
-|---|---|---|
-| Neris | mobile apprentice field-worker + compact tool carry | Tessa rogue/courier silhouette; Maelor technical authority |
-| Tessa | weathered route courier + travel load | assassin/thief; Neris tool-worker |
-| Ilyra | mature field bellwright + Hush continuity | mystical oracle; Neris duplicate |
-| Orin | settled village repairman | secret master; Maelor engineer-leader |
-| Maelor | restrained senior acoustician/engineer | dark lord; Rusk bureaucrat; Caldrin monk |
-| Caldrin | mountain archivist-engineer | generic priest; Maelor scholar |
-| Sena | foundry captain / heat-work authority | armored warrior; generic blacksmith NPC |
-| Rusk | structured civic administrator | aristocrat; villain official; Maelor technical silhouette |
+| Character | Primary black-silhouette read |
+|---|---|
+| Neris | short compact jacket, youthful field-worker proportions, right-rear Cantor line |
+| Tessa | long courier coat, long legs, left-hip satchel/cross-body load |
+| Ilyra | longer split field coat, narrow instrumentation waist, pinned-back head shape |
+| Orin | broad vest/apron workshop mass, rolled forearms |
+| Maelor | tall narrow straight coat, minimal side instrument case |
+| Caldrin | sturdy mountain coat, rear-left paired record cases |
+| Sena | broad foundry shoulders, protected forearms/apron state |
+| Rusk | square structured civic coat, clean vertical authority mass |
 
-Concept review should display all eight as flat black silhouettes on one sheet.
-
-If two are hard to distinguish at that stage, revise before detail work.
+All eight must remain distinguishable as pure black shapes at gameplay framing.
 
 ---
 
-# 19. Relationship-based visual echoes
-
-Visual relationships may use subtle shared language, but must never become costume uniforms for thematic ideas.
+# 18. Relationship-based visual echoes
 
 ## Neris / Ilyra
 
-Possible echoes:
+Shared:
 
-- hand/tool posture;
-- one facial structural relationship;
-- workwear construction logic;
-- a repeated practical habit in equipment arrangement.
+- eye spacing;
+- straight brow line;
+- cheekbone position;
+- long-fingered tool hands;
+- practical field-work layering logic.
 
-Do not make them matching outfits.
+Not shared:
+
+- exact jacket cut;
+- hair shape;
+- palette dominance;
+- equipment arrangement.
 
 ## Neris / Orin
 
-Possible echoes:
+Shared:
 
-- repair patches;
-- workshop material language;
-- footwear/tool storage tradition;
-- small family-made component.
+- bridge bump;
+- ear prominence;
+- half-smile asymmetry;
+- visible repair culture;
+- replaceable boot/gear hardware.
 
 ## Ilyra / Maelor
 
-Their past collaboration may be visible through shared technical-era design language or instrument culture, but current silhouettes must communicate divergence.
+Their historical collaboration is visible through restrained old-era technical hardware proportions—thin brass measurement pieces, compact instrument cases, field coats built for service access—but their silhouettes remain distinct.
 
 ## Maelor / Rusk
 
-Both have institutional proximity but should split clearly:
+- Maelor = precision/technical narrowness;
+- Rusk = procedural/civic squareness.
 
-- Maelor = technical precision;
-- Rusk = procedural/civic structure.
+## Tessa / world routes
 
-## Tessa / regional routes
-
-Tessa may accumulate regionally sourced repairs or practical substitutions over time, visually supporting how widely she travels.
-
-This must remain controlled; she should not become a walking souvenir rack.
+Tessa may accumulate **functional replacement parts** from different routes, but never souvenir clutter.
 
 ---
 
-# 20. Costume state-change philosophy
-
-Major story change should not automatically trigger a wardrobe change.
-
-A new costume or visible modification requires one of:
-
-- new functional burden;
-- changed occupation/responsibility;
-- environmental necessity;
-- damaged/repaired garment caused by a specific event;
-- time/epilogue passage;
-- Hush-state requirement;
-- strong narrative reason.
-
-Do not use new outfits simply to mark acts.
-
-Stillring's people should often keep and repair the same things.
-
-That continuity helps places and relationships feel real.
-
----
-
-# 21. Character damage, dirt, and weather
-
-Damage states must remain specific.
+# 19. Damage, dirt and weather
 
 ## Wetness
 
-Use when:
-
-- swimming;
-- rain;
-- spray;
-- marsh/coastal exposure.
-
-Wetness should affect selected cloth/hair/material response, not automatically turn the whole character glossy.
+Use only from swimming/rain/spray/marsh/coastal exposure. Selected cloth/hair darkens or clumps; the entire character does not become glossy.
 
 ## Ash/dust
 
-Use regionally and causally.
-
-Do not apply universal adventure grime after every combat encounter.
+Regional and causal only.
 
 ## Blood/injury
 
-Only where narrative/gameplay rating and final art direction authorize it.
-
-Do not make injury the primary visual shorthand for seriousness.
+Only where rating/narrative authority requires it. Injury is not the visual shorthand for seriousness.
 
 ## Repair
 
-After important damage, later visible repair may be more Stillring-specific than leaving permanent torn clothing.
+After meaningful damage, later repair is preferred over permanent rags.
 
 ---
 
-# 22. Facial performance production tiers
+# 20. Facial performance tiers
 
-## F0 — Player/principal performance
+## F0 — full principal performance
 
 Neris, Tessa, Ilyra, Orin, Maelor.
 
 Requires:
 
-- full dialogue facial rig target;
 - close-up-safe deformation;
 - strong brows/eyes/mouth;
-- asymmetry capability;
+- asymmetry;
 - subtle listening/hesitation;
-- restrained emotion, not only broad phoneme performance.
+- restrained emotion, not only broad phoneme shapes.
 
-## F1 — Major recurring performance
+## F1 — major recurring
 
-Caldrin, Sena, Rusk and selected regional leads.
+Caldrin, Sena, Rusk and selected C3 leads.
 
-Requires:
+Requires credible medium-close dialogue and scene-specific emotion.
 
-- credible dialogue;
-- medium-close staging;
-- emotion range appropriate to scenes;
-- reduced bespoke facial burden relative to F0 where necessary.
+## F2 — population
 
-## F2 — Population dialogue
+Readable basic dialogue/emotion may use shared systems.
 
-Requires readable basic speech/emotion but may use shared systems.
-
-Exact facial technology belongs to the Animation Bible/Technical Production Bible.
+Exact facial technology is downstream technical authority.
 
 ---
 
-# 23. Body/rig reuse policy
-
-Reuse is encouraged when it does not erase identity.
+# 21. Body/rig reuse policy
 
 Allowed in principle:
 
-- common underlying skeleton;
-- compatible base topology families;
+- common underlying humanoid skeleton where deformation supports the height/build spread;
+- compatible base-topology families;
+- shared facial-rig architecture;
 - shared material systems;
-- shared garment construction components;
-- shared facial rig architecture;
-- retargeting where deformation remains acceptable.
+- modular garment foundations.
 
 Not allowed:
 
-- same body proportions for all major characters because it is convenient;
-- head swaps on identical hero bodies when silhouette needs differ;
-- forcing Sena, Caldrin, Rusk, Tessa, Maelor, and Orin into one costume-compatible body if it damages identity;
-- shrinking/stretching a base mesh until anatomy becomes visibly wrong.
+- identical hero bodies with head swaps;
+- arbitrary mesh scaling that destroys anatomy;
+- forcing Sena/Caldrin/Rusk/Tessa/Maelor/Orin into one silhouette because it is convenient.
 
-The Animation Bible will select final rig families.
+Recommended creative grouping for technical evaluation:
+
+- **Body Family A:** Neris / Tessa / Ilyra — related lean/mobile foundation but distinct proportions;
+- **Body Family B:** Orin / Caldrin / Rusk / Maelor — adult male foundation with substantial proportion variants;
+- **Body Family C:** Sena — may share skeleton architecture but should retain a distinct broader body mesh if reuse compromises silhouette.
+
+This is an evaluation starting point, not a locked rig count.
 
 ---
 
-# 24. Named regional cast production rule
+# 22. C3 named-character rule
 
-The full region manifests will enumerate every recurring named character.
+Every named regional NPC who appears in more than one meaningful state or owns a significant quest/relationship chain receives at minimum:
 
-Until then, the following rule is binding:
-
-Any named regional NPC who appears in more than one meaningful story/world state or owns a significant quest/relationship chain must receive at minimum:
-
-- identity brief;
-- silhouette/occupation concept;
+- one identity brief;
+- one occupation silhouette;
 - named face/head solution;
 - region costume assignment;
 - prop/work assignment;
-- state continuity notes;
+- state-continuity notes;
 - reuse classification;
-- dialogue/facial tier;
+- facial tier;
 - post-Stillness requirement where applicable.
 
-A recurring named character may not silently use a random generic population combination if doing so undermines recognition across revisits.
+No recurring named character may silently use a random generic population combination if recognition across revisits matters.
 
 ---
 
-# 25. Population variation strategy — preliminary authority
+# 23. Population variation baseline
 
-This section partially closes `SH-ART-003` without pretending final counts exist.
+The exact final counts are production-budget dependent, but the **minimum visual variety requirement** is locked.
 
-## 25.1 Shared human foundation
+Per major settled region, final population art must support at least:
 
-Orra's regions are culturally distinct human populations, not six visual species.
+- 5 visibly different adult body silhouettes;
+- 2 youth silhouette families where population canon supports youth;
+- 2 elder silhouette families;
+- 10 recognizable head/face bases before hair/age variation;
+- 8 hair/headwear families appropriate to the region;
+- 4 occupation outerwear families;
+- 3 footwear families;
+- 3 climate/protection layers where region requires them;
+- enough palette/material combination to prevent immediate clone recognition in small settlements.
 
-Use controlled shared production systems with regional differentiation.
+These are **minimum visible-variety targets**, not necessarily unique rigs or meshes.
 
-## 25.2 Variation axes
-
-Population should vary across:
-
-- body build;
-- height range;
-- age/life stage;
-- face shape;
-- skin tone;
-- hair texture/style;
-- garment layer combinations;
-- occupational gear;
-- regional palette;
-- repair/wear state;
-- weather protection;
-- post-Stillness adaptation.
-
-## 25.3 Region identity
-
-Regional differentiation should rely strongly on:
-
-- construction methods;
-- climate adaptation;
-- labor equipment;
-- material availability;
-- local fasteners;
-- footwear;
-- outerwear;
-- civic markings;
-- occupational props.
-
-Avoid costume caricature.
-
-## 25.4 Reuse rule
-
-A body/head may recur across distant background population only when:
-
-- wardrobe/hair/palette changes are sufficient;
-- the same face is not repeatedly visible in close recurring scenes;
-- named NPC recognition is protected;
-- crowd repetition does not become obvious in small settlements.
-
-Exact pool counts remain `TBD PRODUCTION / REGION MANIFEST`.
+A close recurring named NPC may not reuse a face that is prominently visible on another named NPC.
 
 ---
 
-# 26. Character concept-board requirement
+# 24. Character Style Board 03
 
-`Board 03 — Character Style Band` remains required.
+`Board 03 — Character Style Band` is still required, but its job has changed.
 
-It should not merely show attractive portraits.
+It now visualizes and verifies these locked designs rather than presenting identity options.
 
-It must include:
+Board 03 must contain:
 
-- Neris body/face/costume options;
-- all C1/C2 silhouettes together;
-- stylization band examples from too realistic → target → too stylized;
-- hand/tool readability;
-- hair-shape treatment;
-- skin-detail treatment;
-- costume material hierarchy;
-- gameplay-distance comparisons;
-- cinematic close-up comparisons;
+- final Neris front/side/back and gameplay silhouette;
+- Neris face close-up and expression strip;
+- all eight human principals together at reference scale;
+- black-silhouette group test;
+- flat-color group test;
+- hand/tool close-ups;
+- hair-shape examples;
+- target skin-detail band;
+- material hierarchy;
+- gameplay-distance and cinematic-distance comparisons;
+- Listener manifestation diagrams;
 - do/don't examples.
 
-The board is subordinate to this document.
+If Board 03 conflicts with this file, this file wins.
 
 ---
 
-# 27. Character production acceptance gates
+# 25. Production gates
 
-## Gate C-A — Canon brief complete
+## Gate C-A — Canon/visual brief
 
-Pass when:
+**PASSED for C0–C2 and Listener.**
 
-- role;
-- occupation;
-- states;
-- relationships;
-- prohibitions;
-- production class
+## Gate C-B — Creative identity lock
 
-are documented.
+**PASSED at written authority level for C0–C2 and Listener.**
 
-All C0–C2 characters pass this documentation gate under this manifest.
+Execution art must still prove that the written silhouettes work.
 
-## Gate C-B — Silhouette approval
+## Gate C-C — Execution concept proof
 
-Requires:
+Requires faithful front/side/back, group silhouette, material, prop and state sheets derived from this manifest.
 
-- group silhouette sheet;
-- occupation read;
-- no major confusion;
-- owner review for Neris and materially identity-defining principal directions.
-
-Not yet passed.
-
-## Gate C-C — Concept approval
-
-Requires:
-
-- selected head/body/costume;
-- material sheet;
-- palette;
-- props;
-- state variants;
-- gameplay stress poses.
-
-Not yet passed.
+This is no longer an open design competition. Material departures require owner review.
 
 ## Gate C-D — Representative model
 
 Requires:
 
 - one Neris Q2 model;
-- representative principal NPC Q2 model;
-- representative population character;
+- one representative C1/C2 Q2 model;
+- one representative population character;
 - gameplay/cinematic lighting tests;
-- animation deformation test;
-- technical/performance evidence.
-
-Runtime gate; not authorized yet.
+- deformation/attachment tests;
+- measured technical evidence.
 
 ## Gate C-E — Final production
 
-Requires final concept, rig, material, performance, platform, and production approval.
-
-Not authorized under current documentation-only boundary.
+Requires final rig, material, performance, platform and production validation.
 
 ---
 
-# 28. Decision-rights matrix
+# 26. Decision rights
 
-## LOCKED
+## LOCKED — do not redesign
 
-- grounded controlled stylization;
-- occupation-before-archetype principle;
-- Neris is a 17-year-old apprentice, not chosen/royal/mystical;
-- Tessa reads as courier, not rogue cliché;
-- Ilyra reads as engineer, not oracle;
-- Orin reads as repairman/father, not secret master;
-- Maelor must initially remain visually trustworthy and human;
-- Caldrin is archivist-engineer, not generic priest;
-- Sena is foundry leader, not armored warrior;
-- Rusk is credible administrator, not cartoon villain;
-- Listener is not default humanoid god/demon;
-- clothing must be functional and repairable;
-- named-character silhouettes must remain distinct;
-- final art cannot rely on photoreal surface detail for identity.
+- Neris is female, age 17, and uses the complete visual design in §8;
+- all principal ages/builds/heights at concept-reference level;
+- principal faces/hair directions;
+- base costumes and palette relationships;
+- principal equipment/carry identity;
+- family resemblance relationships;
+- occupation-first silhouettes;
+- Tessa as courier, not rogue;
+- Ilyra as engineer, not oracle;
+- Orin as repairman/father, not secret master;
+- Maelor visually trustworthy at first encounter;
+- Caldrin as archivist-engineer, not priest archetype;
+- Sena as foundry leader, not armored warrior;
+- Rusk as credible administrator, not cartoon villain;
+- Listener manifestation defined in §16;
+- clothing must remain functional/repairable;
+- named-character silhouettes remain distinct.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
-- exact garment seam layout;
-- fastener details;
-- topology;
-- UV/material implementation;
-- hair technology;
-- cloth simulation technology;
-- body/rig sharing architecture;
-- palette values within approved relationships;
-- subtle scars/blemishes where non-canonical and non-identity-changing;
-- ordinary wear placement consistent with work.
+- seam micro-layout that does not alter silhouette;
+- exact stitch density;
+- topology/UV implementation;
+- non-identity-changing wear variation;
+- physically plausible material tuning;
+- hair/cloth technology;
+- small deformation-driven construction adjustments.
 
-## OWNER REVIEW
+## OWNER REVIEW REQUIRED
 
-- final Neris face;
-- final Neris body/build;
-- final Neris base costume;
-- final Neris primary palette;
-- final principal cast concepts when materially different identity directions exist;
-- Listener final visible presentation;
-- any major departure from grounded stylization;
-- any concept that materially changes story identity.
+- any change to face shape, hair silhouette, body build, base costume silhouette, primary palette relationship, sex/gender presentation or signature prop placement;
+- any character-design change that changes story read;
+- any departure from Playable Fantasy Illustration character stylization;
+- any materially different Listener representation.
 
-## RUNTIME / ANIMATION / TECHNICAL EVIDENCE
+## RUNTIME / TECHNICAL EVIDENCE
 
-- final character scale in centimeters;
-- exact rig/skeleton families;
-- cloth/hair simulation budget;
-- material slot/texture budgets;
+Still legitimately open:
+
+- final centimeters-to-Unreal-world conversion if global scale changes;
+- final skeleton/rig family count;
 - topology density;
-- deformation limits;
-- facial technology;
-- final attachment placements under animation;
-- performance scalability.
+- material-slot/texture budgets;
+- cloth/hair simulation budget;
+- exact facial-rig technology;
+- final attachment offsets under animation;
+- scalability/performance tiers.
+
+These are engineering/production unknowns, not missing character design.
 
 ---
 
-# 29. Quoteable production burden — current minimum
+# 27. Quoteable principal production burden
 
-The studio should currently budget, at minimum:
+Known high-priority visual packages:
 
-## Unique principal identity work
+1. Neris;
+2. Tessa;
+3. Ilyra;
+4. Orin;
+5. Maelor;
+6. Caldrin;
+7. Sena;
+8. Rusk;
+9. Listener manifestation family.
 
-- 1 C0 player hero: Neris;
-- 4 C1 principal recurring characters: Tessa, Ilyra, Orin, Maelor;
-- 3 C2 major recurring characters: Caldrin, Sena, Rusk;
-- 1 special Listener presentation family;
-- named C3 regional characters to be counted in Region Production Manifests;
-- C4 population systems per regional culture.
+State burdens:
 
-## Required concept packages
+- Neris — 6 authored states;
+- Tessa — 5 authored states;
+- Ilyra — pre-disappearance/Hush/reunion-returned states;
+- Orin — opening/Still-Cairn/ending states;
+- Maelor — trusted/Grand Ring/post-Stillness/finale/trial states;
+- Caldrin — archive/mountain/authority-break/public-archive states;
+- Sena — foundry/public/crisis/distributed-production/epilogue states;
+- Rusk — admin/investigation/crisis/post-Stillness/testimony states;
+- Listener — one core manifestation with controlled save-sensitive fragment substitutions.
 
-Minimum unique high-priority concept packages now known:
-
-- Neris;
-- Tessa;
-- Ilyra;
-- Orin;
-- Maelor;
-- Caldrin;
-- Sena;
-- Rusk;
-- Listener presentation exploration.
-
-This is **nine visual-development packages**, not nine guaranteed unique technical body rigs.
-
-## Required state burden
-
-At least several principals require multiple authored states:
-
-- Neris — opening, field, post-catastrophe, late-tool, Hush presentation, epilogue;
-- Tessa — courier, relief-network/Skiff, later civic responsibility;
-- Ilyra — pre-disappearance/Hush/reunion/returned;
-- Orin — opening/Still-Cairn/preserved-state/ending;
-- Maelor — trusted expert/Grand Ring/post-Stillness/finale/trial if shown;
-- Caldrin — archive/High Aerie/authority-break/later archive;
-- Sena — foundry/crisis/distributed-production;
-- Rusk — administrative/crisis/later accountability.
-
-The exact number of separate meshes/material variants is not yet locked.
+Variants should reuse base body/costume architecture where possible.
 
 ---
 
-# 30. What remains genuinely open
+# 28. Remaining open items
 
-This manifest deliberately does **not** pretend the following are settled:
+No principal **creative identity** item remains intentionally blank.
 
-- Neris final face;
-- Neris final hair;
-- Neris exact body build;
-- Neris exact costume;
-- Neris exact palette;
-- exact adult cast ages where canon does not specify them;
-- exact heights;
-- exact ethnic/facial casting directions;
-- final C1/C2 faces;
-- final costume silhouettes after concept exploration;
-- final Listener manifestation;
-- exact population pool counts;
-- exact rig count;
-- exact topology/texture/material budgets;
-- exact facial animation technology;
-- exact cloth/hair technology;
-- exact Hush character representation method.
+The remaining unknowns are only:
 
-These unknowns are visible production gates, not permission for silent assumptions.
+- technical body/skeleton reuse outcome after deformation testing;
+- topology/texture/material budgets;
+- exact cloth/hair/facial technology;
+- final runtime scale conversion;
+- exact Hush shader/VFX implementation;
+- C3 regional cast enumeration in Region Production Manifests;
+- final population counts above the minimum variety floor.
+
+Agents may not treat those technical unknowns as permission to redesign the characters.
 
 ---
 
-# 31. Next required character-art work
+# 29. Final character-art test
 
-Documentation sequence after this file:
+Before production approval, ask:
 
-1. create **Board 03 — Character Style Band** using this manifest;
-2. create a **Neris Concept Review Package** with materially different options rather than one polished assumption;
-3. enumerate C3 named recurring characters inside each Region Production Manifest;
-4. define regional population archetype pools and reuse limits;
-5. reconcile the selected Neris concept with the future Animation Bible and world-scale sheet;
-6. define character Hush burden in the Hush Visual Production Matrix;
-7. only after owner-approved concept and representative runtime evidence may `SH-ART-001` be fully closed.
-
----
-
-# 32. Final character-art test
-
-Before a principal character is approved, ask:
-
-1. Can I identify this person without seeing the face?
-2. Can I infer what kind of work shaped them?
-3. Does their clothing look wearable and repairable?
-4. Does the design support the scenes and movement they actually perform?
-5. Is the fantasy identity coming from Stillring rather than genre costume shorthand?
-6. Could this character stand in a plain gray room and still be recognizable?
-7. Does the design remain readable at gameplay distance?
+1. Can this person be identified without a face?
+2. Can the viewer infer what kind of work shaped them?
+3. Does the clothing look wearable and repairable?
+4. Does the design support the scenes/movement actually performed?
+5. Is the identity specifically Stillring rather than fantasy shorthand?
+6. Does the design work in a gray room without environment help?
+7. Is it readable at gameplay distance?
 8. Does the face support restrained emotional acting?
-9. Does the concept accidentally spoil a narrative role that should remain ambiguous?
-10. Does any detail exist merely because fantasy concept art usually includes it?
-11. Is the Hush/state variant expressing character/story logic rather than a universal effect?
-12. Would an external modeler, rigger, animator, and cinematic artist understand what must be preserved?
+9. Does the design accidentally spoil a role meant to remain ambiguous?
+10. Does every major detail have a job?
+11. Does the Hush/state treatment preserve identity rather than applying a universal effect?
+12. Can a modeler, rigger, animator and cinematic artist tell what must not change?
 
-If not, the character is not production-ready.
+If not, the execution is not production-ready.
 
 ---
 
-# 33. Governing character principle
+# 30. Governing character principle
 
 Stillring is a story about ordinary people becoming responsible for a world previously controlled by a sacred central system.
 
-The cast should therefore look like **ordinary people worth following**, not a collection of pre-labeled fantasy classes.
+The cast should therefore look like **ordinary people worth following**, not pre-labeled fantasy classes.
 
-Neris is not memorable because the costume announces "hero."
+Neris is not memorable because her costume announces “hero.”
 
-Tessa is not memorable because the costume announces "rogue."
+Tessa is not memorable because her costume announces “rogue.”
 
-Maelor is not memorable because the costume announces "villain."
+Maelor is not memorable because his costume announces “villain.”
 
-Sena is not memorable because the costume announces "blacksmith."
+Sena is not memorable because her costume announces “blacksmith.”
 
-They become memorable because silhouette, work, material history, face, movement, and story all point toward the same human being.
+They become memorable because silhouette, work, material history, face, movement and story all point toward the same human being.
 
 > **Stillring's character art should make the player believe these people had lives before the plot arrived.**
