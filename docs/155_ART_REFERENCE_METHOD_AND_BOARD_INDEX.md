@@ -286,21 +286,25 @@ Board 05 may not invent traversal permission, tool compatibility, attack timing,
 
 ## Board 06 — Representative Benchmark Scene
 
-Must be created only after the earlier rules are stable enough.
+**Written source brief:** `docs/168_BOARD_06_REPRESENTATIVE_BENCHMARK_SCENE_SOURCE_BRIEF.md`  
+**Selected benchmark anchor:** Brindle Relay Square / local Waybell relay.  
+**Job:** integrated verification that Boards 02–05 and their underlying written authorities still describe one coherent game when character, environment, landmark, props, lighting, atmosphere, VFX, traversal readability and Waking/Hush relationship coexist in one representative scene.
 
-One representative Stillring location should combine:
+The benchmark must combine:
 
-- final-direction character treatment;
-- regional kit;
-- landmark composition;
-- traversal readability;
-- lighting;
-- atmosphere;
-- props;
-- VFX;
-- Waking/Hush comparison where appropriate.
+- current final-direction Neris treatment;
+- Brindle regional kit and materials;
+- Relay Square / local Waybell landmark composition;
+- ordinary-life work/market/service burden;
+- gameplay-camera-compatible route/traversal readability;
+- Brindle lighting and atmosphere;
+- physically caused restrained VFX;
+- matched Waking/Hush comparison;
+- grayscale/saturation/Reduced Effects/detail reductions;
+- production breakdown showing reusable kit versus hero assets;
+- explicit failure examples.
 
-This board becomes useful for vertical-slice production quality comparison but does not prove runtime performance.
+Board 06 is a Q2 visual-production-direction benchmark, not a vertical-slice completion claim. It may not lock final Relay Square topology, final gameplay routes, exact traversal dimensions, canonical M00-S05 staging, the exact location of M00-S07 first Hush sight, renderer technology, runtime budgets, accessibility acceptance or performance proof. If execution conflicts with `docs/158`/`160`/`161`/`162`/`163`/`165`/`166`/`167` or current gameplay/narrative authority, the board fails and must be corrected.
 
 ---
 
@@ -356,6 +360,8 @@ For Board 03 specifically, generated imagery must be corrected to match `docs/15
 For Board 04 specifically, generated imagery must be corrected to match `docs/161`/`162`/`163`/`166`; it may not use generation variance as permission to establish exposure values, renderer behavior, new weather semantics, global grading or runtime proof.
 
 For Board 05 specifically, generated imagery must be corrected to match current locomotion/camera/combat/encounter/tool/Hush authority and `docs/154`/`159`/`162`/`163`/`167`; it may not use generation variance as permission to invent traversal affordances, weak points, glowing tool sockets, scan outlines, attack classes, UI policy, Hush semantics or gameplay-camera behavior.
+
+For Board 06 specifically, generated imagery must be corrected to match `docs/158`/`160`/`161`/`162`/`163`/`165`/`166`/`167`/`168` and current Brindle/story/gameplay authority. It may not use generation variance as permission to redesign Neris, establish final Relay Square topology, invent final Waybell engineering, create new traversal routes, define canonical First Ring staging, relocate the canonical first Hush sight, establish final signage/UI/VFX, or claim runtime feasibility.
 
 ---
 
