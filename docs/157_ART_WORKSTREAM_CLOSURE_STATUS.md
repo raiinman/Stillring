@@ -10,7 +10,8 @@
 **Enemy/boss authority:** `docs/159_ENEMY_BOSS_ART_MANIFEST.md`  
 **Region environment/prop authority:** `docs/160_REGION_ENVIRONMENT_PROP_MANIFEST.md`  
 **Regional visual-script authority:** `docs/161_REGIONAL_COLOR_MATERIAL_LIGHTING_SCRIPTS.md`  
-**Hush production authority:** `docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md`
+**Hush production authority:** `docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md`  
+**VFX production authority:** `docs/163_VFX_PRODUCTION_MANIFEST.md`
 
 ---
 
@@ -88,7 +89,25 @@ The Hush is a world-state/art relationship, not a universal filter or glitch pas
 
 `docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md` now closes the cross-content written Hush production grammar. It joins Gate 4 semantic relationship classes (Shared Invariant / Paired Expression / Layer Exclusive / Related Distinct) to independent H0–H5 art-production burden, covers every major region and content family, and prevents art classification from inventing gameplay truth.
 
-## 2.7 Readability direction
+## 2.7 VFX direction
+
+`docs/163_VFX_PRODUCTION_MANIFEST.md` now closes the written VFX production language.
+
+Locked production principles include:
+
+- VFX presents state; source gameplay/world systems own state;
+- gameplay-critical effects require non-color redundancy and Reduced Effects behavior;
+- combat VFX remains subordinate to pose, silhouette, mechanism state and directional movement;
+- Cantor/resonance effects remain engineered diagnostic/tuning language rather than spellcasting;
+- region environmental effects derive from local physical causes and `docs/161` visual scripts;
+- Hush VFX reinforces relationship contradiction rather than universal purple/blue/glitch treatment;
+- boss effects preserve `docs/159` identity instead of turning encounters into particle spectacles;
+- scalability removes richness before meaning;
+- success/resolution may be expressed through effect reduction or cessation;
+- Listener is not a particle character;
+- High Aerie Stillness may communicate through absence of expected particles/motion.
+
+## 2.8 Readability direction
 
 Gameplay readability outranks spectacle. Art must honestly communicate traversal, interaction and threat states without default universal highlight paint.
 
@@ -105,7 +124,7 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 | `SH-ART-005` modular environment standards | **SUBSTANTIALLY CLOSED AT WRITTEN LEVEL** | `docs/156` §§9–10, `docs/160` | numeric scale/grid after Neris/camera/traversal representation; blockout/runtime proof |
 | `SH-ART-006` region color/material/lighting bibles | **CLOSED AT WRITTEN SCRIPT LEVEL** | `docs/154` §§10–13, `docs/156` §11, `docs/161` | rendered keys/boards and later measured runtime/performance proof |
 | `SH-ART-007` Hush visual grammar | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §15, `docs/156` §14, `docs/158`, `docs/161`, `docs/162` | visual relationship boards/keys, per-asset tracking during production, and later runtime/accessibility/performance proof |
-| `SH-ART-008` VFX language | **SUBSTANTIALLY CLOSED AT DOCTRINE LEVEL** | `docs/154` §23, `docs/156` §15 | full effect manifest and performance/accessibility evidence |
+| `SH-ART-008` VFX language | **CLOSED AT WRITTEN PRODUCTION-AUTHORITY LEVEL** | `docs/154` §23, `docs/156` §15, `docs/159`, `docs/161`, `docs/162`, `docs/163` | effect keyframes/boards, implementation, Reduced Effects validation and measured runtime/performance/accessibility proof |
 | `SH-ART-009` region asset manifests | **SUBSTANTIALLY CLOSED AT WRITTEN INVENTORY LEVEL** | `docs/156` §11, `docs/160`, `docs/161` | detailed count estimates during production planning; execution/runtime proof |
 | `SH-ART-010` world scale/reference metrics | **INTENTIONALLY OPEN / DEPENDENCY-BOUND** | `docs/156` §10, `docs/158` reference heights | convert reference dimensions into tested world/camera/traversal metrics after representative implementation |
 
@@ -133,7 +152,8 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 - principal-character creative designs in `docs/158`;
 - enemy/boss production identity in `docs/159`;
 - environment/prop production families and C3 burden in `docs/160`;
-- Hush semantic/art classification crosswalk, H0–H5 production burden, region/content-family defaults, Reduced Hush Effects requirements, and late-game Hush production rules in `docs/162`.
+- Hush semantic/art classification crosswalk, H0–H5 production burden, region/content-family defaults, Reduced Hush Effects requirements, and late-game Hush production rules in `docs/162`;
+- VFX semantic ownership, class system, effect-language rules, regional/boss/tool families, Reduced Effects behavior, scalability philosophy and decision rights in `docs/163`.
 
 ## STUDIO CHOICE WITHIN BOUNDS
 
@@ -150,7 +170,8 @@ Subject to later technical authority:
 - light-authoring workflow;
 - Nanite/LOD/fallback choices;
 - foliage/environment authoring workflow;
-- source-art organization.
+- source-art organization;
+- VFX emitter decomposition, simulation method, flipbooks, ribbons/meshes/volumes and effect LOD implementation within `docs/163` bounds.
 
 ## PROTOTYPE / RUNTIME EVIDENCE
 
@@ -160,7 +181,7 @@ Requires representative implementation:
 - geometry/material/texture budgets;
 - foliage density;
 - shadow/GI cost envelope;
-- VFX overdraw/density;
+- VFX overdraw/density/emitter/light/memory budgets;
 - fog/atmosphere cost envelope;
 - Hush runtime representation architecture;
 - final world-scale conversion;
@@ -168,7 +189,10 @@ Requires representative implementation:
 - hair/cloth simulation budget;
 - facial-animation technology;
 - final attachment offsets under animation;
-- exact exposure/light values.
+- exact exposure/light values;
+- Reduced Effects validation under combat/weather/Hush overlap;
+- photosensitivity/motion-sensitivity validation;
+- representative target-hardware VFX performance.
 
 ## OWNER REVIEW REQUIRED
 
@@ -180,17 +204,18 @@ Owner review is required for:
 - materially different Listener manifestation;
 - redefinition of a region's locked visual identity/palette relationship;
 - shift toward photoreal, anime, cartoon, cel-shaded, retro-low-poly or grimdark treatment;
-- major branding/iconography redefinition.
+- major branding/iconography redefinition;
+- material redefinition of VFX toward spectacle-heavy magic, spellcasting Cantor language, universal Hush effects or finale-only visual grammar.
 
 ---
 
 # 5. Engine technology boundary
 
-UE5.8 is the engine authority, but no renderer feature is art direction by itself.
+UE5.8 is the engine authority, but no renderer or VFX feature is art direction by itself.
 
 Stillring may use modern rendering capability without allowing modern rendering capability to define visual identity.
 
-Do not infer mandatory photogrammetry, MetaHumans, maximum texture resolution, maximum vegetation density or every renderer feature enabled.
+Do not infer mandatory photogrammetry, MetaHumans, maximum texture resolution, maximum vegetation density, Niagara-specific architecture or every renderer/VFX feature enabled.
 
 Technical production must later turn target hardware/platform requirements into measured budgets.
 
@@ -214,6 +239,8 @@ Directional companion to written authority. It does not override repository text
 
 Board 04 now has direct written source authority in `docs/161` and must visualize those scripts rather than invent new region grades.
 
+Board 05 now has direct written VFX/readability source authority in `docs/163` and must include representative combat, Cantor, Hush, weather and Reduced Effects comparisons without inventing new gameplay semantics.
+
 ---
 
 # 7. Next art-workstream sequence
@@ -223,16 +250,16 @@ Completed written steps:
 1. Enemy / Boss Art Manifest — `docs/159`;
 2. Region Environment / Prop Manifest — `docs/160`;
 3. Regional Color / Material / Lighting Scripts — `docs/161`;
-4. Hush Visual Production Matrix — `docs/162`.
+4. Hush Visual Production Matrix — `docs/162`;
+5. VFX Production Manifest — `docs/163`.
 
 Next bounded steps:
 
-1. produce the **VFX Production Manifest**;
-2. create Board 03 as faithful visualization of the locked principal designs;
-3. create the remaining board source briefs/execution artifacts alongside matching written contracts;
-4. defer numeric performance/scale budgets until representative implementation exists;
-5. update global authority/onboarding indexes after art-package review;
-6. mark remaining `SH-ART-*` rows fully closed only when their actual deliverables exist.
+1. create Board 03 as faithful visualization/source brief of the locked principal designs;
+2. create the remaining Board 02–06 source briefs/execution artifacts alongside matching written contracts;
+3. defer numeric performance/scale budgets until representative implementation exists;
+4. update global authority/onboarding indexes after art-package review;
+5. mark remaining `SH-ART-*` rows fully closed only when their actual deliverables exist.
 
 ---
 
@@ -247,8 +274,9 @@ The art handoff is safe when an external art director can answer from repository
 - how named/population reuse works;
 - how enemies/bosses derive from region/gameplay identity;
 - how Hush transformation works across every content family;
-- how gameplay readability remains honest;
-- what asset families exist;
+- how VFX presents combat, tools, machinery, weather, Hush and authored sequences without owning gameplay truth;
+- how gameplay readability remains honest under Reduced Effects and lower scalability;
+- what asset/effect families exist;
 - what is reusable versus unique;
 - what quality each stage requires;
 - what the studio may choose;
@@ -257,4 +285,6 @@ The art handoff is safe when an external art director can answer from repository
 - what references may not be copied;
 - what production volume must be staffed.
 
-Character, enemy/boss, regional environment/prop, regional visual-script and cross-content Hush-production questions are now materially answered at written-authority level. The next meaningful art gap is the VFX Production Manifest, followed by visual execution boards and later runtime-dependent proof.
+Character, enemy/boss, regional environment/prop, regional visual-script, cross-content Hush-production and VFX-production questions are now materially answered at written-authority level.
+
+The next meaningful art gap is faithful visual-board source/execution work, followed by runtime-dependent scale, performance, accessibility and representative-production proof.
