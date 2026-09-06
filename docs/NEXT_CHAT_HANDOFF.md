@@ -2,27 +2,32 @@
 
 **Updated:** 2026-09-05  
 **Repository:** `raiinman/Stillring`  
-**Reviewed main before Phase 4 package:** `af44e4cb79cadd593e35a4816267ec80527859d8`  
-**Operational boundary:** Documentation Closure Phases 1–3 are merged. Phase 4 owner-review package is prepared on `documentation-closure/phase-4-owner-authorization`. Broad UE5.8 implementation remains **UNAUTHORIZED** until the owner explicitly approves `docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md`.
+**Current reviewed main:** `aa80c1f295d3c194c9fe5189ec2056d77db64221`  
+**Active program:** Studio Production Handoff Closure  
+**Operational boundary:** **DOCUMENTATION ONLY — NO TESTING / NO UE5.8 IMPLEMENTATION YET**
 
-## Read first
+---
 
-1. `docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md`
-2. `docs/149_DOCUMENTATION_CLOSURE_COMPLETENESS_AUDIT.md`
-3. `docs/148_DOCUMENTATION_CLOSURE_PHASE_3_AUDIT.md`
-4. `docs/145_IMPLEMENTATION_READINESS_GAP_REGISTER.md`
-5. `docs/144_UNANSWERED_QUESTION_REGISTER.md`
-6. `docs/146_CONTENT_TRACEABILITY_MATRIX.md`
-7. `docs/147_STALE_LITERAL_REFERENCE_AUDIT.md`
-8. `docs/136_CANONICAL_AUTHORITY_INDEX.md`
-9. `docs/137_SUPERSESSION_GRAPH.md`
-10. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md`
-11. `docs/139_SYSTEM_OWNERSHIP_MAP.md`
-12. `docs/140_CROSS_SYSTEM_CONTRACT_MATRIX.md`
-13. `docs/141_SYSTEM_IDE_COVERAGE_MATRIX.md`
-14. `docs/142_RUNTIME_EVIDENCE_LEDGER_BASELINE.md`
-15. `ROADMAP.md`
-16. `AGENTS.md` / repository-local agent instructions
+# Read first
+
+1. `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md`
+2. `docs/152_STUDIO_HANDOFF_GAP_REGISTER.md`
+3. `docs/153_STUDIO_HANDOFF_ACCEPTANCE_CHECKLIST.md`
+4. `docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md`
+5. `docs/149_DOCUMENTATION_CLOSURE_COMPLETENESS_AUDIT.md`
+6. `docs/145_IMPLEMENTATION_READINESS_GAP_REGISTER.md`
+7. `docs/144_UNANSWERED_QUESTION_REGISTER.md`
+8. `docs/146_CONTENT_TRACEABILITY_MATRIX.md`
+9. `docs/147_STALE_LITERAL_REFERENCE_AUDIT.md`
+10. `docs/136_CANONICAL_AUTHORITY_INDEX.md`
+11. `docs/137_SUPERSESSION_GRAPH.md`
+12. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md`
+13. `docs/139_SYSTEM_OWNERSHIP_MAP.md`
+14. `docs/140_CROSS_SYSTEM_CONTRACT_MATRIX.md`
+15. `docs/141_SYSTEM_IDE_COVERAGE_MATRIX.md`
+16. `docs/142_RUNTIME_EVIDENCE_LEDGER_BASELINE.md`
+17. `ROADMAP.md`
+18. `AGENTS.md` / repository-local agent instructions
 
 Always re-check exact current `main` before repository writes.
 
@@ -30,13 +35,13 @@ Always re-check exact current `main` before repository writes.
 
 # Current project truth
 
-## Design/documentation
+## What is already strong
 
-Locked/documented through:
+Stillring has substantial locked/current authority for:
 
 - story/world/content foundation;
-- Gate 1 locomotion + camera/targeting;
-- Gate 2 combat + encounter;
+- Gate 1 locomotion and camera/targeting;
+- Gate 2 combat and encounter behavior;
 - Gate 3 Cantor/tools/puzzles;
 - Gate 4 Hush/world-layer semantics;
 - Save/World-State design;
@@ -44,141 +49,250 @@ Locked/documented through:
 - Issue #9 Setup/Payoff;
 - Issue #10 Line Skiff traversal transformation;
 - Issue #11 Null Meridian synthesis/finale;
-- shared System IDE contract;
-- authority index, supersession, terminology, ownership, cross-system interfaces, traceability, stale-literal containment, readiness gaps, and unknown classification.
+- shared in-game System IDE contract;
+- authority/supersession/terminology;
+- system ownership and cross-system contracts;
+- content traceability;
+- stale-literal containment;
+- runtime/readiness/unknown classification.
 
-## Runtime
+A competent gameplay/engineering team should not need to invent Stillring's core identity or mechanics to begin scoped implementation later.
 
-Still minimally implemented/unverified.
+## What is not yet strong enough
 
-At the current reviewed baseline, `game/` is skeletal and no repository UE5.8 `.uproject` foundation has been proven.
+The repository is **not yet a complete external-studio full-production handoff package**.
 
-Do not claim:
+Major production disciplines still require concrete production bibles/manifests for:
 
-- locomotion/camera feel;
-- combat fairness/fun;
-- Hush performance/comfort;
-- save/load correctness;
-- Setup/Payoff runtime legibility;
-- Skiff handling;
-- Null Meridian pacing;
-- System IDE runtime behavior;
-- production readiness.
+- character/environment/prop art;
+- animation;
+- audio/music/VO;
+- UI/UX;
+- narrative scripting/cinematics/dialogue production;
+- region-by-region asset/content burden;
+- technical production conventions;
+- production dependencies/staffing boundaries;
+- platform/performance product decisions;
+- studio decision rights and change control.
 
-without actual evidence.
+The active goal is to close those gaps **without implementing or testing the game yet**.
 
 ---
 
-# Open issues — intentionally remain open
+# Owner boundary — current
 
-## #5 — Bootstrap Gate 1 Unreal Engine 5.8 C++ prototype harness
+Previous `docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md` recommended beginning the UE5.8 Gate 1 implementation after Documentation Closure.
 
-Recommended first implementation target **if owner authorizes implementation**.
+The owner has now explicitly chosen a different immediate boundary:
 
-Requires real UE5.8 project/build/open, Enhanced Input, graybox course, reset/readout, smoke/Automation path, Git LFS-safe binary workflow, and fresh-checkout proof.
+> **NO TESTING YET. DOCUMENT THE COMPLETE STUDIO-HANDOFF GAPS FIRST.**
 
-## #58 — shared in-game System IDE framework
+Therefore:
 
-Gate 1 shared shell + Locomotion IDE should be implemented **alongside #5**, not deferred.
+- do **not** start Issue #5 implementation;
+- do **not** start Issue #58 runtime work;
+- do **not** create a `.uproject` yet under this active boundary;
+- do **not** run gameplay tests;
+- do **not** claim runtime proof;
+- do **not** reopen locked gameplay/story decisions merely because production documentation is incomplete.
 
-## #4 — persistent world-state/save schema
+The active work is Studio Production Handoff Closure only.
 
-Design is substantially documented in docs 81–88.
+---
 
-Remains open until a paired Waking/Hush prototype can save -> exit -> reopen -> load and reproduce intended semantic state using stable IDs.
+# Studio Production Handoff Closure goal
+
+The repository should eventually pass this test:
+
+> **Could a competent external studio determine what to build, why it exists, what quality bar it must meet, what it depends on, and which decisions it is not authorized to make—without reconstructing owner intent from chat history?**
+
+This is stricter than the previous engineering-readiness standard.
+
+The desired eventual state is not merely:
+
+> “A studio understands the game.”
+
+It is:
+
+> **“A studio can quote, staff, schedule, author, build, and polish the intended game from repository authority, with only explicitly scheduled owner decisions and runtime-tuning gates remaining.”**
+
+---
+
+# Required Studio Handoff outputs
+
+Per `docs/151`, the closure program must produce at minimum:
+
+1. **Art Bible**
+2. **Character / Environment / Prop Production Manifests**
+3. **Animation Bible + Animation Manifest**
+4. **Audio / Music / VO Bible**
+5. **UI/UX Production Specification**
+6. **Narrative Production Package**
+7. **Technical Production Bible**
+8. **Performance / Platform Product Brief**
+9. **Production Dependency / Discipline Matrix**
+10. **Region-by-Region Production Manifest**
+11. **Studio Decision-Rights Matrix**
+12. **Final Studio Handoff Acceptance Audit**
+
+Do not collapse these into vague mood documents. They must be useful to actual external production disciplines.
+
+---
+
+# Current major studio-handoff gaps
+
+`docs/152_STUDIO_HANDOFF_GAP_REGISTER.md` is the authority.
+
+High-level gaps include:
+
+- target-PC baseline — `TBD OWNER` before later objective performance acceptance;
+- launch-platform scope beyond PC-first — `TBD OWNER` before platform-specific commitments;
+- production-operational character/environment/Hush/VFX art rules;
+- asset manifests and reusable-vs-unique production burden;
+- complete animation-family inventory and rig/IK/root-motion boundaries;
+- audio/score/VO production scope and manifests;
+- complete UI screen/state flow;
+- dialogue/cinematic/VO/localization production inventories;
+- region/dungeon production manifests;
+- technical naming/package/data/source-control conventions;
+- production dependency and studio decision-rights matrices.
+
+Do not use “good judgment” as the closure answer for any of these.
+
+---
+
+# Genuine owner decisions currently visible
+
+Keep these few and explicit.
+
+## Definitely still owner/product decisions
+
+- intended launch-platform scope;
+- target-PC performance baseline;
+- VO scope if not already settled by current narrative authority;
+- commercial title/name after clearance when needed;
+- any material change to locked game/story/art/product scope.
+
+## Not owner decisions
+
+Do not ask the owner to choose:
+
+- C++ class names;
+- Slate versus UMG merely as an internal technical preference;
+- mesh decomposition;
+- ordinary source-control implementation details;
+- exact movement/camera/combat tuning that belongs to later prototype/human play;
+- implementation choices that preserve locked authority.
+
+---
+
+# Current runtime truth
+
+`game/` remains intentionally skeletal.
+
+No runtime claim should be inferred from the amount of documentation.
+
+Still unproven:
+
+- UE5.8 project/bootstrap;
+- locomotion/camera feel;
+- combat/encounter runtime;
+- tool/puzzle runtime;
+- Hush production representation/performance;
+- save/load;
+- completion registry/math;
+- Setup/Payoff runtime;
+- Line Skiff;
+- Null Meridian;
+- System IDE runtime shell/workbenches;
+- performance/accessibility/human-play acceptance.
+
+Issues #4, #5, and #58 intentionally remain open.
 
 ---
 
 # Completion constants — do not regress
 
-Canonical authority: `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`.
+Canonical authority remains `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`.
 
 - 16 equal top-level categories = 6.25% each;
-- Resonance Faults = 36, not 48;
-- Pulse Shards = 18, not 28;
-- Micro-vaults = 24, not 30;
-- K02 = 24 reconciled Faults, not 30;
-- Drift Knot eligibility = 10 reconciled Faults + existing story/Line Skiff prereqs, not 13;
+- Resonance Faults = 36;
+- Pulse Shards = 18;
+- Micro-vaults = 24;
+- K02 = 24 reconciled Faults;
+- Drift Knot eligibility = 10 reconciled Faults + existing story/Line Skiff prerequisites;
 - Unstandard Tool = 1 global item / 12 internal stages;
 - Broken Standard Yard = 1 global item / 7 commissions.
 
-Use docs 104/109/147 whenever older content docs disagree.
+Stale 48/28/30/30-Fault/13-Fault literals must not become production constants.
 
 ---
 
 # Critical system boundaries
 
-- **Source systems own facts. Setup/Payoff evaluates them; it does not copy them.**
+- Source systems own facts; Setup/Payoff evaluates them.
 - Save Coordinator orchestrates snapshots; it does not own all gameplay truth.
 - Hush/Waking semantic state is not Data Layer state.
-- Actor/map/node/runtime IDs are not persistence identity.
-- Completion owns completion consequences, not everybody else's gameplay facts.
+- Actor/map/node/runtime IDs are not canonical persistence identity.
+- Completion owns completion consequences, not every gameplay fact.
 - Line Skiff is a network vehicle, not a free-roam mount.
 - ordinary traversal has no stamina/fuel/ticket tax.
-- System IDEs use authoritative gameplay services; no hidden debug-state model.
-- exact Null Meridian order is governed by docs 127–134; S6 is **Take It Off the Bell**.
+- System IDEs use authoritative gameplay services; no hidden shadow state.
+- Null Meridian order is governed by docs 127–134.
+- optional completion does not gate the canonical ending.
+- clean-room IP rules remain binding across art/audio/UI/animation production.
 
 ---
 
-# Documentation Closure result
+# Recommended Studio Handoff documentation order
 
-Phases 1–3 are complete and merged.
+Per `docs/152`:
 
-Phase 4 completeness audit says the repository is ready for an owner implementation-authorization decision.
+1. Studio Decision-Rights Matrix + Product/Platform Brief skeleton
+2. Art Bible + scale/material/lighting/Hush production rules
+3. Character/Environment/Prop Production Manifests
+4. Animation Bible + animation manifest
+5. UI/UX Production Specification
+6. Audio/Music/VO Bible
+7. Narrative Production Package
+8. Region-by-Region Production Manifest
+9. Technical Production Bible
+10. Production Dependency/Discipline Matrix
+11. QA/accessibility/localization production consolidation
+12. Final Studio Handoff Acceptance Audit
 
-Important finding:
+Research before locking production rules where external/current production practice materially matters.
 
-> **No unresolved mechanics-design owner decision blocks the minimal Gate 1 prototype.**
-
-Remaining Gate 1 variables such as speeds, curves, camera lag, jump feel, and similar values are tuning/human-play questions inside locked boundaries, not reasons for another paper-design round.
-
-A later owner product decision is still needed before Gate 5/production performance acceptance:
-
-- target-PC performance baseline;
-- launch-platform scope.
-
-That is **not** a Gate 1 blocker.
-
----
-
-# Owner decision now required
-
-Read `docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md` and choose:
-
-- **APPROVED — BEGIN UE5.8 IMPLEMENTATION**
-- **HOLD — KEEP DOCUMENTATION-ONLY**
-- **APPROVED WITH CHANGE —** state the scope change
-
-Recommended authorization scope:
-
-> **Begin with Issue #5 + the Gate 1 portion of Issue #58, then the already-locked Gate 1 camera/targeting runtime + Camera IDE.**
-
-Do not jump ahead to combat, Hush, production world content, Line Skiff, or Null Meridian.
+Preserve existing authority rather than duplicating or silently superseding it.
 
 ---
 
-# If owner approves
+# Final studio-handoff acceptance
 
-1. merge/finalize the Phase 4 documentation package if not already merged;
-2. re-check exact `main` SHA;
-3. mark the authorization state in the next handoff/review record;
-4. create a scoped implementation branch for Issue #5;
-5. build the minimal UE5.8 C++ harness;
-6. build the Gate 1 shared System IDE shell + Locomotion IDE alongside it;
-7. preserve all locked locomotion/camera authority;
-8. collect actual runtime/deterministic evidence;
-9. bring movement/camera feel back for owner human-play review before later gates depend on tuning.
+Use `docs/153_STUDIO_HANDOFF_ACCEPTANCE_CHECKLIST.md`.
 
-Engineering may make documented Class-B implementation choices inside locked design without asking the owner about every class name or subsystem detail.
+A final reviewer who does not rely on chat history should be able to determine from the repository:
 
-Genuine new Class-F design/product decisions still return to the owner.
+- what Stillring is;
+- what each discipline needs to build;
+- what volume of content exists;
+- what is locked;
+- what the studio may choose;
+- what must return to the owner;
+- what remains runtime-gated;
+- what is intentionally TBD;
+- where each discipline starts reading.
+
+Any normal production answer that depends on “the owner said in chat…” is a handoff failure.
+
+This is a **documentation review**, not gameplay testing.
 
 ---
 
 # Method
 
-For implementation work:
+For Studio Production Handoff Closure:
 
-**read current authority -> implement smallest scoped slice -> build its System IDE surface -> deterministic fixtures -> save/recovery where relevant -> accessibility/performance evidence -> human play -> accept/tune -> exact diff/review -> expected-head merge.**
+**read current canonical authority -> research the production discipline where useful -> derive production-facing rules/manifests without reopening locked gameplay -> classify decision rights -> cross-link dependencies -> exact diff/review -> merge -> next production discipline.**
 
-Never convert documentation completeness into fake runtime proof.
+Do not implement or test under the current owner boundary.
