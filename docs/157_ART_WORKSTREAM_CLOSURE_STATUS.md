@@ -12,7 +12,7 @@
 
 # 1. Purpose
 
-This file records what the current art package actually settles, what remains dependency-bound, and what an external studio is or is not allowed to invent.
+This file records what the current art package actually settles, what remains dependency-bound, and what an external studio may or may not invent.
 
 A mood board is never closure by itself.
 
@@ -52,7 +52,7 @@ It does **not** require literal 1998 rendering limits, low-poly geometry, tiny t
 
 Major locations are recognized through shape, landmark, palette relationship, architecture, atmosphere and route composition. Settlements visibly respond to terrain, climate, labor, transport, resources and civic machinery.
 
-## 2.4 Character direction — now creatively locked
+## 2.4 Character direction — creatively locked
 
 `docs/158_CHARACTER_PRODUCTION_MANIFEST.md` is the specific production authority that completes the character placeholders anticipated by the Art Bible.
 
@@ -63,7 +63,7 @@ Principal character creative identity is now locked:
 - Tessa, Ilyra, Orin, Maelor, Caldrin, Sena and Rusk each have defined age/build, face, hair, costume, palette and state identity;
 - principal reference heights and silhouette relationships are defined;
 - family resemblance/relationship echoes are defined;
-- the Listener's visible manifestation is defined rather than left as an abstract “special entity” placeholder;
+- the Listener's visible manifestation is defined;
 - principal characters read through occupation and human history before fantasy archetype.
 
 Board 03 is now a **visual verification board**, not a new design competition.
@@ -82,7 +82,7 @@ Gameplay readability outranks spectacle. Art must honestly communicate traversal
 
 | Gap | Current status | Evidence | Remaining closure |
 |---|---|---|---|
-| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` §8 | Board 03 faithful execution proof; representative Q2 model; rig/scale/performance evidence |
+| `SH-ART-001` Neris production spec | **CREATIVELY CLOSED / TECHNICALLY DEPENDENCY-BOUND** | `docs/154` §18 + `docs/158` §8 | Board 03 execution proof; representative Q2 model; rig/scale/performance evidence |
 | `SH-ART-002` named-character visual bible | **CREATIVELY CLOSED FOR PRINCIPAL CAST** | `docs/158` §§8–18 | C3 regional recurring cast enumeration; Q2/Q3 execution sheets/models |
 | `SH-ART-003` NPC population strategy | **SUBSTANTIALLY CLOSED AT STRATEGY LEVEL** | `docs/154` §19, `docs/156` §7, `docs/158` §§22–23 | region-specific C3/C4 manifests and final production counts above locked variety floor |
 | `SH-ART-004` enemy/boss visual taxonomy | **PARTIALLY CLOSED** | `docs/154` §20, `docs/156` §8 | full enemy/boss manifest mapped to encounter authority |
