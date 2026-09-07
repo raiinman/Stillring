@@ -1,530 +1,508 @@
 # 136 — Canonical Authority Index
 
 **Status:** CANONICAL NAVIGATION AUTHORITY  
-**Updated:** 2026-09-05  
-**Program:** Documentation Closure Phase 1  
-**Baseline:** `f3874de569e7e791c1f34fee093539bc34970fb4`
-
-## Purpose
-
-This index answers one question:
-
-> **If you are about to implement, author, tune, test, or revise something in Stillring, which document contains the current authority for that topic?**
-
-It is a navigation/precedence document.
-
-It does not replace the detailed authority files it points to.
-
-Do not infer runtime completion from the presence of a design authority file.
-
-Status vocabulary follows `docs/135_DOCUMENTATION_CLOSURE_PROGRAM_CHARTER.md`.
+**Updated:** 2026-09-07  
+**Active program:** Studio Production Handoff Closure — Final Reconciliation / Acceptance  
+**Current operational entrypoint:** `docs/NEXT_CHAT_HANDOFF.md`  
+**Current cross-program production map:** `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md`
 
 ---
 
-# 1. Project-level authority
+# 1. Purpose
 
-| Domain | Current authority | Design/document status | Runtime status |
-|---|---|---|---|
-| Project roadmap / gate order | `ROADMAP.md` | Current gate-based production plan | Gates 1+ largely unimplemented/unverified |
-| Canon-to-play process | `docs/15_CANON_TO_PLAY_PIPELINE.md` | Locked project process | Must be followed during implementation |
-| Developer tooling / machine QA | `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` | Locked design contract | Runtime tooling largely unimplemented |
-| Zelda design lineage / control principles | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` | Locked reference discipline | Human-play application unverified |
-| Project decision register | `docs/18_PROJECT_DECISION_REGISTER.md` plus scoped later decision registers | Locked decisions/navigation | Not runtime proof |
-| Shared in-game System IDE | `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md` | Locked design contract | **OPEN ISSUE #58 — implementation unverified** |
-| Current handoff / operational boundary | `docs/NEXT_CHAT_HANDOFF.md` | Current operational entrypoint | N/A |
-| Documentation closure process | `docs/135_DOCUMENTATION_CLOSURE_PROGRAM_CHARTER.md` | Active governing process | N/A |
-| Canonical authority navigation | this document | Active/current | N/A |
-| Supersession / precedence | `docs/137_SUPERSESSION_GRAPH.md` | Active/current | N/A |
-| Terminology / onboarding | `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md` | Active/current | N/A |
+This index answers:
+
+> **If you are about to design, author, estimate, implement, tune, test, outsource, or review something in Stillring, which repository authority should you read first?**
+
+This is navigation and precedence authority.
+
+It does not replace detailed system or production documents.
+
+A detailed document does not imply implementation, runtime verification, performance proof, accessibility proof or human-play acceptance.
+
+Chats and remembered context are not authority.
 
 ---
 
-# 2. Narrative / world / content authority
+# 2. Current operational precedence
 
-The canonical story lives primarily in `docs/story/` plus the project story/content bibles and completion authority.
+For current project work, read in this order:
 
-Do not treat an older side-content count as current if it conflicts with Completion Decision #16.
+1. `docs/NEXT_CHAT_HANDOFF.md` — current operating boundary and immediate next task;
+2. `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md` — current production-handoff status and open-decision queue;
+3. `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md` — governing handoff program;
+4. `docs/153_STUDIO_HANDOFF_ACCEPTANCE_CHECKLIST.md` — final handoff acceptance questions;
+5. this index — topic routing;
+6. `docs/137_SUPERSESSION_GRAPH.md` — scoped precedence/supersession;
+7. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md` — terminology;
+8. relevant system/story/production authority.
 
-| Topic | Current authority | Notes |
+Important historical boundaries:
+
+- `docs/149_DOCUMENTATION_CLOSURE_COMPLETENESS_AUDIT.md` is the earlier engineering/documentation closure audit, not the current full-production-handoff verdict.
+- `docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md` is historical and explicitly **not** current authorization.
+
+Current owner boundary remains **documentation only**.
+
+---
+
+# 3. Project-level authority
+
+| Domain | Current authority | Current status |
 |---|---|---|
-| Core story premise / beginning-to-end story spine | `docs/02_STORY_BIBLE.md` and current `docs/story/` canon | Story facts remain subject to later scoped addenda such as Null Meridian precedence |
-| Progression structure | `docs/09_STILLRING_PROGRESSION_BLUEPRINT.md` | Use with later tool/Hush/traversal/finale authority |
-| Completion model | `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md` | **Numeric authority** for completion counts/weights/thresholds |
-| 100% route | `docs/12_100_PERCENT_ROUTE.md` | Narrative/content route; numeric literals subordinate to doc 104 where stale |
-| Cantor patterns / tool upgrades catalog | `docs/13_CANTOR_AND_UPGRADE_CATALOG.md` | Content catalog; completion thresholds/counts subordinate to doc 104 where stale |
-| Prestige / mastery content | `docs/14_PRESTIGE_AND_MASTERY_CONTENT.md` + docs 96–103 where relevant | Category counts/weights subordinate to completion authority |
-| Main scene order | `docs/story/07_SCENE_BEAT_LEDGER.md` | Null Meridian exact M16 order is superseded by doc 134 |
-| Reveal/foreshadow | `docs/story/08_REVEAL_AND_FORESHADOW_LEDGER.md` | Must remain consistent with later scoped finale authority |
-| Main quest objective flow | `docs/story/09_MAIN_QUEST_OBJECTIVE_FLOW.md` | Objective presentation is subordinate to semantic state ownership |
-| Narrative flow repair/audit | `docs/story/11_NARRATIVE_FLOW_AUDIT.md` | Current audit context; not a substitute for system authority |
-| World change / offscreen action | `docs/story/12_WORLD_PULSE_LEDGER.md` | World-state runtime owner still follows Save/World-State authority |
-| Emotional pacing | `docs/story/13_EMOTIONAL_PACING_MAP.md` | Human-play proof remains future work |
-| Regional story bibles | `docs/story/regions/` | Canonical region-specific narrative, subject to later scoped addenda |
-| Hush-Cairnspire / Null Meridian story | `docs/story/regions/09_HUSH_CAIRNSPIRE_AND_NULL_MERIDIAN.md` + docs 127–134 | Docs 127–134 control exact final-dungeon mechanics/order |
+| Project charter / product identity | `docs/00_PROJECT_CHARTER.md`, `docs/01_GAME_VISION.md` | canonical |
+| Roadmap / gate order | `ROADMAP.md` | canonical sequencing |
+| Production workflow | `docs/03_PRODUCTION_WORKFLOW.md` | canonical process |
+| Technical direction | `docs/04_TECHNICAL_DIRECTION.md` plus `docs/188` | canonical direction / production consolidation |
+| IP / clean-room guardrails | `docs/05_IP_GUARDRAILS.md` | canonical |
+| Canon-to-play | `docs/15_CANON_TO_PLAY_PIPELINE.md` | canonical |
+| Developer tooling / machine QA | `docs/16_DEVELOPER_TOOLING_AND_MACHINE_QA.md` | canonical design; runtime absent |
+| Zelda design-lineage principles | `docs/17_ZELDA_DESIGN_LINEAGE_AND_CONTROL_PRINCIPLES.md` | reference discipline |
+| Project decision register | `docs/18_PROJECT_DECISION_REGISTER.md` + later scoped authorities | canonical decisions |
+| Shared System IDE | `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`, `docs/141` | design complete; Issue #58 runtime open |
+| Documentation closure framework | `docs/135`–`docs/150` | historical/current as individually marked |
+| Studio handoff closure | `docs/151`–`docs/195` | active current program |
+| Current handoff | `docs/NEXT_CHAT_HANDOFF.md` | operational entrypoint |
 
 ---
 
-# 3. Gate 1 — locomotion
+# 4. Authority / ownership / evidence infrastructure
 
-## Governing authority
+| Topic | Authority |
+|---|---|
+| Canonical topic navigation | `docs/136_CANONICAL_AUTHORITY_INDEX.md` |
+| Supersession / precedence | `docs/137_SUPERSESSION_GRAPH.md` |
+| Terminology / onboarding | `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md` |
+| System ownership | `docs/139_SYSTEM_OWNERSHIP_MAP.md` |
+| Cross-system contracts | `docs/140_CROSS_SYSTEM_CONTRACT_MATRIX.md` |
+| System IDE coverage | `docs/141_SYSTEM_IDE_COVERAGE_MATRIX.md` |
+| Runtime evidence baseline | `docs/142_RUNTIME_EVIDENCE_LEDGER_BASELINE.md` |
+| Open implementation/tuning unknowns | `docs/144_UNANSWERED_QUESTION_REGISTER.md`; current owner queue scoped by `docs/195` |
+| Implementation-readiness gaps | `docs/145_IMPLEMENTATION_READINESS_GAP_REGISTER.md` |
+| Content traceability | `docs/146_CONTENT_TRACEABILITY_MATRIX.md` |
+| Stale literal/reference audit | `docs/147_STALE_LITERAL_REFERENCE_AUDIT.md` |
+| Studio handoff current gap statuses | `docs/152_STUDIO_HANDOFF_GAP_REGISTER.md` |
+| Studio handoff acceptance checklist | `docs/153_STUDIO_HANDOFF_ACCEPTANCE_CHECKLIST.md` |
+| Decision rights | `docs/170_STUDIO_DECISION_RIGHTS_MATRIX.md` |
+| Production dependencies/change control | `docs/190_PRODUCTION_DEPENDENCY_DISCIPLINE_MATRIX.md` |
+| Cross-program reconciliation | `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md` |
 
-- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`
+---
 
-This is the current cumulative locomotion specification after the owner-led locomotion decision program.
+# 5. Story / world / narrative canon
 
-### Locked examples
-- useful analog movement from low speed through full speed;
-- sustained sprint from beginning of game;
-- **no stamina/resource cost for ordinary sprint/travel**;
-- deliberate always-available modest jump;
-- small authored mantle/scramble for obviously low obstacles;
-- automatic stairs/small terrain handling;
-- meaningful height gates remain meaningful;
+The story contracts remain direct canon.
+
+Read in the repository order required by `CLAUDE.md` when work touches story, quests, NPCs, progression or regions.
+
+Primary sources:
+
+- `docs/02_STORY_BIBLE.md`;
+- `docs/story/06_CHARACTER_ARCS_AND_RELATIONSHIPS.md`;
+- `docs/story/07_SCENE_BEAT_LEDGER.md`;
+- `docs/story/08_REVEAL_AND_FORESHADOW_LEDGER.md`;
+- `docs/story/09_MAIN_QUEST_OBJECTIVE_FLOW.md`;
+- `docs/story/10_DIALOGUE_ANCHORS.md`;
+- `docs/story/12_WORLD_PULSE_LEDGER.md`;
+- `docs/story/13_EMOTIONAL_PACING_MAP.md`;
+- `docs/story/14_QUIET_MOMENTS_AND_TRAVEL_BEATS.md`;
+- `docs/story/17_SIDE_INTERACTION_REBALANCE.md`;
+- relevant files under `docs/story/regions/`.
+
+Null Meridian exact final-dungeon scene/order authority is further scoped by `docs/127`–`docs/134`, especially `docs/134_NULL_MERIDIAN_SCENE_ORDER_PRECEDENCE_ADDENDUM.md`.
+
+Narrative production execution authority is `docs/182`–`docs/184`.
+
+---
+
+# 6. Gate 1 locomotion
+
+Current cumulative authority:
+
+- `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`.
+
+Locked examples include:
+- analog low-speed through full-speed intention;
+- sustained Sprint from the beginning;
+- **no ordinary traversal stamina/resource cost**;
+- modest always-available jump;
+- authored low-obstacle mantle/scramble;
 - no universal/free climbing;
-- hang shimmy limited to the same continuous handhold;
+- same-handhold ledge shimmy only;
 - explicit ledge release;
-- locomotion design may not silently mutate during implementation.
+- slopes/stairs/falls/landings governed by the specification.
 
-### Runtime status
+Runtime status: **unimplemented/unverified**.
 
-**Not UE5.8 proven.**
-
-Issue #5 remains open for the Gate 1 prototype harness.
-
-Exact speeds, curves, thresholds, animation response, jump feel, air control, collision tuning, and human comfort remain prototype/human-play work where not explicitly locked.
+Issue #5 remains open.
 
 ---
 
-# 4. Gate 1 — camera / targeting
+# 7. Gate 1 camera / targeting
 
-## Governing authority
+Primary authority:
 
-- `docs/22_GATE1_CAMERA_SPECIFICATION.md`
-- supporting camera decision addenda in `docs/23`–`36` where implementation detail is needed
+- `docs/22_GATE1_CAMERA_SPECIFICATION.md`;
+- supporting camera decisions `docs/23`–`docs/36`.
 
-### Locked direction
+The package governs free camera, recenter, collision/compression, target lock, target switching, framing, occlusion, large/high/low targets and camera-facing accessibility.
 
-Camera follows Stillring's modernized third-person control principles rather than copying OoT-era hardware constraints.
-
-Free camera, recenter convenience, camera collision, target lock, target switching, combat readability, high/low geometry behavior, locomotion continuity, and deterministic test requirements are documented in the camera package.
-
-### Runtime status
-
-**Not UE5.8/human-play proven.**
-
-Gate 1 harness implementation remains under Issue #5.
+Runtime/human feel remains unverified.
 
 ---
 
-# 5. Gate 2 — player combat
+# 8. Gate 2 combat / encounter
 
-## Governing authority
+## Player combat
 
-- `docs/48_GATE2_COMBAT_STATE_MODEL.md`
-- supporting locked Gate 2 player-combat decisions in `docs/37`–`49`
+Primary authority:
 
-Use the later/cumulative state-model authority for conflicts within the player-combat package.
+- `docs/48_GATE2_COMBAT_STATE_MODEL.md`;
+- supporting decisions `docs/37`–`docs/49`.
 
-### Key boundary
+Gameplay owns combat legality/state.
 
-Combat state is authoritative gameplay state; Animation Blueprint/presentation may represent it but must not own a contradictory combat model.
+Animation is presentation and may not become a contradictory gameplay state machine.
 
-### Runtime status
+## Enemy / encounter pressure
 
-**Design locked / runtime unverified.**
+Primary authority:
 
-No claim that final hit timing, balance, damage, animation feel, enemy pressure, or human combat readability is proven.
+- `docs/50`–`docs/59`;
+- closure/fixture boundary: `docs/59_GATE2_ENCOUNTER_FIXTURE_CLOSURE.md`.
 
----
+Encounter pressure/readability and individual-AI behavior are separate ownership domains.
 
-# 6. Gate 2 — enemy / encounter
-
-## Governing authority
-
-- locked encounter/enemy addenda `docs/50`–`59`
-- `docs/59_GATE2_ENCOUNTER_FIXTURE_CLOSURE.md` for the closure/fixture boundary
-
-### Key authority themes
-
-- attack bandwidth/readability;
-- melee/ranged/offscreen pressure constraints;
-- enemy reaction/interrupt semantics;
-- authored encounter composition;
-- no unfair hidden pressure fixes;
-- deterministic encounter fixtures;
-- camera/combat coordination.
-
-### Runtime status
-
-**Design locked / runtime unverified.**
-
-Actual AI behavior, nav/spacing, animation, difficulty tuning, encounter fun, accessibility, and performance require UE5.8 proof.
+Runtime balance/AI/fairness remains unverified.
 
 ---
 
-# 7. Gate 3 — Cantor / field tools / puzzle mechanisms
+# 9. Gate 3 Cantor / tools / puzzle mechanisms
 
-## Governing authority
+Current cumulative authority:
 
-- `docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`
-- supporting decisions `docs/60`–`68`
-- content/catalog relationships in `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`
+- `docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`;
+- supporting decisions `docs/60`–`docs/68`;
+- authored tool/pattern/upgrade catalog: `docs/13_CANTOR_AND_UPGRADE_CATALOG.md`.
 
-### Important filename rule
+Canonical filename is `69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`.
 
-The canonical cumulative file is:
+Do not resurrect the stale `69_GATE3_TOOL_PUZZLE_CUMULATIVE_SPECIFICATION.md` reference.
 
-`docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`
+Cantor diagnoses relationships; it is not generic detective vision.
 
-Not:
+Anchor is physical/load-path traversal/combat-pressure/puzzle grammar, not universal grappling.
 
-`docs/69_GATE3_TOOL_PUZZLE_CUMULATIVE_SPECIFICATION.md`
-
-Any older reference to the latter is stale.
-
-### Key authority themes
-
-- Cantor diagnoses/compares relationships; it is not a generic magic scanner;
-- tool interactions use coherent physical/semantic contracts;
-- Anchor spans traversal/combat-pressure/puzzle use without becoming freeform grappling;
-- source systems retain authority for actual world state;
-- deterministic test fixtures and IDE surfaces are required.
-
-### Runtime status
-
-**Design locked / runtime unverified.**
+Runtime/tool feel remains unverified.
 
 ---
 
-# 8. Gate 4 — Hush / world-layer system
+# 10. Gate 4 Hush / world-layer
 
-## Governing authority
+Current cumulative semantic authority:
 
-- `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`
-- supporting decisions `docs/70`–`78`
-- prototype/closure context `docs/80_GATE4_ISSUE_227_CLOSURE_AND_PROTOTYPE_PLAN.md`
+- `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`;
+- supporting decisions `docs/70`–`docs/78`;
+- prototype/closure context `docs/80_GATE4_ISSUE_227_CLOSURE_AND_PROTOTYPE_PLAN.md`.
 
-### Key boundaries
+Hard boundary:
 
-- Waking/Hush are semantic world-layer expressions, not duplicated quest truths;
-- seams obey explicit legality and transition contracts;
-- locomotion/combat state is not magically reset by layer transition;
-- seam grants no generic invulnerability/action cancel/momentum reset;
-- paired persistent identity is semantic;
-- Data Layer load state cannot become quest/world-state authority.
+> **Waking/Hush semantic truth is not Unreal Data Layer/streaming representation state.**
 
-### Architecture status
+Production representation remains runtime-gated.
 
-World Partition + Runtime Data Layers has been used as a prototype direction with spatial streaming disabled in the prototype context, but final production architecture still requires real UE5.8 evidence for authoring/source-control/performance/save/reload behavior.
-
-### Runtime status
-
-**Design locked / production runtime unverified.**
+Technical comparison requirements are in `docs/188`/`docs/189`.
 
 ---
 
-# 9. Save / World-State
+# 11. Save / World-State
 
-## Governing authority
+Cumulative authority:
 
-- `docs/81_SAVE_PERSISTENT_IDENTITY_ADDENDUM.md`
-- `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`
-- `docs/83_SAVE_SCHEMA_V1_STRUCTURE_ADDENDUM.md`
-- `docs/84_SAVE_VERSION_MIGRATION_POLICY_ADDENDUM.md`
-- `docs/85_SAVE_INTEGRITY_RECOVERY_ADDENDUM.md`
-- `docs/86_SAVE_SLOT_CADENCE_RETRY_ADDENDUM.md`
-- `docs/87_SAVE_WORLD_STATE_IDE_ADDENDUM.md`
-- **cumulative:** `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`
+- `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`;
+- detailed subcontracts `docs/81`–`docs/87`.
 
-### Key boundaries
-
+Key rules:
 - stable semantic IDs;
-- actor paths/runtime instance IDs forbidden as canonical persistence keys;
-- state categories and owners explicit;
-- schema v1/versioning/migration;
-- malformed/incompatible save recovery;
-- source systems restore before derived consumers reconcile;
-- transient presentation does not outrank semantic facts;
-- half-transitions are not valid save authority.
+- no Actor/package/runtime identity as save truth;
+- explicit schema/version/migration;
+- coherent snapshot barriers;
+- source owners restore before derived consumers reconcile;
+- half-transition Hush state is not valid save authority.
 
-### GitHub issue status
-
-**Issue #4 remains OPEN.**
-
-Its design criteria are substantially documented, but verification explicitly requires a paired-layer runtime save/exit/reload proof.
-
-### Runtime status
-
-**Design locked / runtime verification outstanding.**
+Issue #4 remains open until real paired-layer save -> exit -> reopen -> load proof exists.
 
 ---
 
-# 10. Completion / 100%
+# 12. Completion / 100%
 
-## Numeric and reconciliation authority
+Numeric/count/weight authority:
 
-- `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`
+- `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`.
 
-## Category-specific authorities
+Exact current 36 Fault / 18 Pulse / 24 Vault semantic roster authority:
 
-- docs `89`–`103`
+- `docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md`.
 
-## Cleanup / stale-literal authorities
+Category authorities:
 
-- docs `105`–`111`
-- especially `docs/109_COMPLETION_LEGACY_LITERAL_BLOCKLIST.md`
+- `docs/89`–`docs/103`.
 
-### Locked top-level model
+Stale-literal blocking:
 
-There are **16 equal completion categories**, each worth **6.25%**.
+- `docs/105`–`docs/111`;
+- especially `docs/109_COMPLETION_LEGACY_LITERAL_BLOCKLIST.md` and `docs/147_STALE_LITERAL_REFERENCE_AUDIT.md`.
 
-Current key counts:
+Locked top-level counts:
+
 - Main Story — 1 route;
 - Local Repair Contracts — 24;
 - Setup/Payoff — 12;
-- Bellwright Refuges — 11;
-- Resonance Faults — 36;
+- Refuges — 11;
+- Faults — 36;
 - Pulse Shards — 18;
-- Cantor Patterns — 9;
+- Patterns — 9;
 - Tool Mastery Upgrades — 14;
 - Skill Trials — 9;
 - Micro-vaults — 24;
-- Testimonies / Records — 32;
-- Unstandard Tool prestige — 1 global item / 12 internal stages;
+- Records — 32;
+- Unstandard Tool — 1 global / 12 internal stages;
 - Drift Knots — 12;
-- Optional Elite Encounters — 8;
-- Community Disconnection Projects — 6;
-- Broken Standard Yard — 1 global item / 7 internal commissions.
+- Optional Elites — 8;
+- Community Projects — 6;
+- Broken Standard Yard — 1 global / 7 internal commissions.
 
-Drift Knot eligibility:
+Do not use stale 48/28/30/30-Fault/13-Fault literals.
 
-**10 reconciled Resonance Faults + existing story/Line Skiff prerequisites.**
-
-Stale values such as 48 Faults / 28 Pulse Shards / 30 Vaults / Drift=13 / K02=30 must not be implemented.
-
-### Runtime status
-
-**Design/documentation locked / runtime ledger and 100% reconciliation unverified.**
+The old 28-Pulse ledger enumerated only 27 IDs; do not invent a missing legacy ID.
 
 ---
 
-# 11. Setup/Payoff — Issue #9
+# 13. Setup / Payoff
 
-## Governing authority
+Current authority:
 
-- `docs/112_SETUP_PAYOFF_STATE_AUTHORITY_ADDENDUM.md`
-- `docs/113_SETUP_PAYOFF_COMMIT_BOUNDARY_AUTHORITY_ADDENDUM.md`
-- `docs/114_SETUP_PAYOFF_PAYOFF_MATERIALITY_AUTHORITY_ADDENDUM.md`
-- `docs/115_SETUP_PAYOFF_PORTFOLIO_AUTHORITY_ADDENDUM.md`
-- `docs/116_SETUP_PAYOFF_AUTHORING_DATA_AUTHORITY_ADDENDUM.md`
-- `docs/117_SETUP_PAYOFF_PROTOTYPE_INSTANTIATION_AUTHORITY.md`
-- closure: `docs/118_SETUP_PAYOFF_ISSUE_9_CLOSURE_AUDIT.md`
-- navigation: `docs/119_SETUP_PAYOFF_DECISION_REGISTER_ADDENDUM.md`
+- `docs/112`–`docs/119`.
 
-### Core rule
+Core rule:
 
-> **Source systems own facts. Setup/Payoff evaluates them. It does not copy them.**
+> **Source systems own facts. Setup/Payoff evaluates them; it does not copy them.**
 
-### Runtime status
+All 12 chains are design/documentation complete.
 
-Issue #9 is closed as design/documentation complete.
-
-Primary DataAsset/runtime definition implementation, persistence, IDE, vertical-slice proof, migrations, and human legibility remain unverified.
+Runtime persistence/reconciliation/human legibility remains unverified.
 
 ---
 
-# 12. Traversal Transformation / Line Skiff — Issue #10
+# 14. Line Skiff
 
-## Governing authority
+Current authority:
 
-- `docs/120_TRAVERSAL_TRANSFORMATION_DECISION_1_LINE_SKIFF_SELECTION.md`
-- `docs/121_TRAVERSAL_TRANSFORMATION_DECISION_2_ROUTE_NETWORK_GRAMMAR.md`
-- `docs/122_TRAVERSAL_TRANSFORMATION_DECISION_3_WORLD_LAYER_ROUTE_STATE.md`
-- `docs/123_TRAVERSAL_TRANSFORMATION_DECISION_4_ACQUISITION_MASTERY.md`
-- `docs/124_TRAVERSAL_TRANSFORMATION_DECISION_5_NETWORK_INTEGRATION.md`
-- closure: `docs/125_TRAVERSAL_TRANSFORMATION_ISSUE_10_CLOSURE_AUDIT.md`
-- navigation: `docs/126_TRAVERSAL_TRANSFORMATION_DECISION_REGISTER_ADDENDUM.md`
+- `docs/120`–`docs/126`.
 
-### Core identity
+Core identity:
 
-> **The Line Skiff is a network vehicle, not a mount. It makes authored roads newly expressive; it does not replace the world between them.**
+> **The Line Skiff is a supported route-network vehicle, not a summon-anywhere/free-roam mount.**
 
-### Runtime status
+No ordinary fuel/stamina tax.
 
-Issue #10 is closed as design/documentation complete.
+Route truth is semantic and independent of spline visibility.
 
-Vehicle handling, high-speed camera, semantic route graph, World Partition/HLOD behavior, save/reload, Hush paired-route continuation, Trial 05, Drift Knots, Route Listener, accessibility, IDE, and human fun remain unverified.
+Runtime handling/camera/streaming/save/Hush continuation remains unverified.
 
 ---
 
-# 13. Null Meridian — Issue #11
+# 15. Null Meridian / finale
 
-## Governing authority
+Current authority:
 
-- `docs/127_NULL_MERIDIAN_DECISION_1_SYNTHESIS_ARCHITECTURE.md`
-- `docs/128_NULL_MERIDIAN_DECISION_2_ONE_GOVERNING_DUNGEON_IDEA.md`
-- `docs/129_NULL_MERIDIAN_DECISION_3_FIRST_HALF_ADVENTURE_FLOW.md`
-- `docs/130_NULL_MERIDIAN_DECISION_4_SECOND_HALF_ESCALATION.md`
-- `docs/131_NULL_MERIDIAN_DECISION_5_TAKE_IT_OFF_THE_BELL.md`
-- closure: `docs/132_NULL_MERIDIAN_ISSUE_11_CLOSURE_AUDIT.md`
-- navigation: `docs/133_NULL_MERIDIAN_DECISION_REGISTER_ADDENDUM.md`
-- exact scene-order precedence: `docs/134_NULL_MERIDIAN_SCENE_ORDER_PRECEDENCE_ADDENDUM.md`
+- `docs/127`–`docs/134`.
 
-### Governing idea
+S1–S6 sequence and exact scene-order precedence are locked at design authority.
 
-> **Meridian keeps forcing distinct local things toward one authoritative state. Neris progresses by allowing legitimate local difference, preserving contradiction where needed, letting old states become past, and finally removing central command without destroying coordination.**
+Optional completion cannot gate the canonical ending.
 
-### Runtime status
+Null Meridian introduces no hidden mandatory finale-only core verb.
 
-Issue #11 is closed as design/documentation complete.
-
-Blockout, actual S1–S6 scripting, combat, Hush, Maelor, Listener, save/reload, accessibility, performance, IDE, fixtures, human comprehension, and emotional pacing remain unverified.
+Blockout, Maelor, Listener, pacing, save/retry, accessibility and human emotional proof remain runtime work.
 
 ---
 
-# 14. System IDE authority
+# 16. Studio production authority by discipline
 
-## Shared shell
+## Art
 
-- `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`
+- Art Bible / reference / manifest framework: `docs/154`–`docs/156`;
+- workstream status: `docs/157`;
+- character manifest: `docs/158`;
+- enemy/boss manifest: `docs/159`;
+- regional environment/prop manifest: `docs/160`;
+- color/material/lighting scripts: `docs/161`;
+- Hush visual matrix: `docs/162`;
+- VFX manifest: `docs/163`;
+- visual-board source briefs: `docs/164`–`docs/168`;
+- art handoff audit: `docs/169`.
 
-## System-specific IDE requirements
+## Product / decision rights
 
-Many system packages add explicit IDE obligations, including:
-- locomotion;
-- camera/targeting;
-- combat/encounter;
-- Cantor/tools/puzzles;
-- Hush/world layer;
-- Save/World-State;
-- Completion;
-- Setup/Payoff;
-- Line Skiff;
-- Null Meridian.
+- `docs/170`–`docs/172`.
 
-The phase-2 `System IDE Coverage Matrix` will consolidate these.
+## Animation
 
-### GitHub issue status
+- `docs/173`–`docs/175`.
 
-**Issue #58 remains OPEN.**
+## UI/UX
 
-Design is specified; shared runtime shell/workbench implementation is not proven.
+- `docs/176`–`docs/178`.
 
----
+## Audio / Music / VO
 
-# 15. UE5.8 implementation bootstrap authority
+- `docs/179`–`docs/181`.
 
-## Governing issue
+## Narrative Production
 
-**Issue #5 — Bootstrap Gate 1 Unreal Engine 5.8 C++ prototype harness**
+- `docs/182`–`docs/184`.
 
-The issue is intentionally still open.
+## Region / World / Content
 
-It requires real runtime evidence including:
-- project opens cleanly in UE5.8;
-- reproducible C++ build;
-- Enhanced Input;
-- graybox Gate 1 course;
-- reset/reload/runtime readout;
-- Automation/smoke path;
-- Git LFS-safe `.uasset`/`.umap` policy;
-- fresh-checkout verification.
+- `docs/185`–`docs/187`;
+- exact reduced completion-item roster: `docs/194`.
 
-The Documentation Closure Program does not close or bypass this issue.
+## Technical Production
 
----
+- `docs/188`–`docs/189`.
 
-# 16. Fast implementation read order by task
+## Production Management / outsourcing / change control
 
-## Movement / camera engineer
+- `docs/190`–`docs/191`.
 
-Read:
-1. `docs/135_DOCUMENTATION_CLOSURE_PROGRAM_CHARTER.md`
-2. this index;
-3. `docs/137_SUPERSESSION_GRAPH.md`;
-4. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md`;
-5. `docs/20_GATE1_LOCOMOTION_SPECIFICATION.md`;
-6. `docs/22_GATE1_CAMERA_SPECIFICATION.md`;
-7. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`;
-8. Issue #5 acceptance criteria;
-9. supporting Gate 1 addenda only when needed for exact edge behavior.
+## QA / Accessibility / Localization
 
-## Combat / encounter engineer
+- `docs/192`–`docs/193`.
 
-Read:
-1. closure docs 135–138;
-2. `docs/22_GATE1_CAMERA_SPECIFICATION.md` for targeting/camera constraints;
-3. `docs/48_GATE2_COMBAT_STATE_MODEL.md`;
-4. `docs/50`–`59` as relevant;
-5. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`.
+## Cross-program reconciliation
 
-## Tool / puzzle engineer
-
-Read:
-1. closure docs 135–138;
-2. `docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`;
-3. `docs/13_CANTOR_AND_UPGRADE_CATALOG.md` for authored capability content;
-4. relevant Gate 3 addenda;
-5. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`.
-
-## Hush / world-layer engineer
-
-Read:
-1. closure docs 135–138;
-2. `docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md`;
-3. `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`;
-4. relevant Gate 4 addenda;
-5. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`;
-6. Issue #4 runtime verification boundary.
-
-## Save / world-state engineer
-
-Read:
-1. closure docs 135–138;
-2. `docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md`;
-3. docs 81–87 for exact subcontracts;
-4. completion doc 104;
-5. Setup/Payoff docs 112–119;
-6. Hush doc 79;
-7. `docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md`;
-8. Issue #4.
-
-## Story / content writer
-
-Read:
-1. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md`;
-2. this index;
-3. `docs/02_STORY_BIBLE.md`;
-4. current `docs/story/` story spine/scene/reveal/objective/region authority;
-5. `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md` before using completion counts;
-6. Setup/Payoff docs 115/117 for cross-state authored chains;
-7. Null Meridian docs 127–134 for final-dungeon content/order.
+- `docs/195`.
 
 ---
 
-# 17. Current proof boundary summary
+# 17. Current studio-handoff status source
 
-At the time of this index:
+Do not derive current discipline status from the age of a gap row.
 
-### Documentation/design complete
-- narrative/design foundation;
-- Gate 1 locomotion/camera specifications;
-- Gate 2 combat/encounter specifications;
-- Gate 3 tool system design;
-- Gate 4 Hush design;
-- Save/World-State design package;
-- completion design;
-- Setup/Payoff design;
-- Line Skiff design;
-- Null Meridian design.
+Use:
 
-### Still open / runtime-dependent
-- Issue #4 — paired-layer save/world-state verification;
-- Issue #5 — UE5.8 Gate 1 harness implementation;
-- Issue #58 — shared System IDE implementation.
+1. `docs/195` for cross-program status;
+2. `docs/152` for current SH-* status rows;
+3. each scoped acceptance audit for detailed reasoning;
+4. `docs/153` for final acceptance questions.
 
-### Broad implementation authorization
+No known production discipline is currently `MISSING` after the 2026-09-07 reconciliation.
 
-**Not yet granted by the Documentation Closure Program.**
+Remaining non-PASS items are explicitly owner/product decisions or runtime gates.
 
-Finish closure phases and final owner review first.
+The final repository-wide handoff verdict still requires the Final Studio Handoff Acceptance Audit.
+
+---
+
+# 18. Current owner/product decision queue
+
+Current scoped authority: `docs/195`.
+
+1. Broad UE5.8 implementation authorization — **NOT GRANTED**.
+2. Launch platforms beyond PC-first — **TBD OWNER**.
+3. Target-PC hardware/performance baseline — **TBD OWNER**.
+4. VO scope — **TBD OWNER**.
+5. Commercial title/name — **TBD OWNER / LATER CLEARANCE**.
+6. Localization ship-language list — **TBD PRODUCT**.
+7. Any material future change to locked game/story/art/product/platform identity.
+
+Do not turn internal engineering or tuning choices into fake owner questions.
+
+---
+
+# 19. Runtime proof boundary
+
+At this index revision:
+
+- `game/` remains skeletal;
+- no accepted `.uproject` runtime exists;
+- no major gameplay system is implemented/proven;
+- no System IDE runtime exists;
+- no target-PC performance proof exists;
+- no accessibility runtime conformance exists;
+- no localized build/LQA exists;
+- no platform certification exists;
+- no human feel/fun/emotional claim is proven.
+
+Open runtime issues #4, #5 and #58 remain open.
+
+---
+
+# 20. Fast read order by production discipline
+
+## External producer / studio lead
+
+1. `NEXT_CHAT_HANDOFF`;
+2. `docs/195`;
+3. `docs/151`–`docs/153`;
+4. `docs/170`–`docs/172`;
+5. `docs/190`–`docs/191`;
+6. relevant discipline package;
+7. `docs/192`–`docs/193` for QA/accessibility/localization obligations.
+
+## Gameplay engineering
+
+1. current handoff / docs 195;
+2. docs 136–145 as relevant;
+3. system cumulative authority;
+4. docs 188–189;
+5. docs 21/141 for System IDE;
+6. open implementation issue acceptance criteria.
+
+Implementation is not currently authorized.
+
+## Art / animation / VFX
+
+1. current handoff / docs 195;
+2. docs 154–169;
+3. docs 173–175 for animation;
+4. gameplay/system authority affecting readability/contact/timing;
+5. docs 190–193 for handoff/evidence/accessibility.
+
+## UI / UX
+
+1. current handoff / docs 195;
+2. docs 176–178;
+3. owning gameplay/save/completion authorities;
+4. docs 192–193.
+
+## Audio / VO / music
+
+1. current handoff / docs 195;
+2. docs 179–181;
+3. docs 182–184 for line/scene/performance context;
+4. docs 192–193.
+
+## Narrative / cinematic / localization
+
+1. current handoff / docs 195;
+2. story canon in required `CLAUDE.md` order;
+3. docs 182–184;
+4. docs 176–181 where UI/audio delivery matters;
+5. docs 192–193.
+
+## World / level / content production
+
+1. current handoff / docs 195;
+2. docs 185–187;
+3. docs 194 for active Fault/Pulse/Vault semantic IDs;
+4. relevant story/system authorities;
+5. docs 154–163 for visual burden;
+6. docs 190–193 for dependency/evidence/accessibility.
+
+---
+
+# 21. Current final rule
+
+> **Use the repository to determine what Stillring is. Use later runtime evidence to determine whether its implementation works. Never use an Unreal default, studio habit, old planning literal, chat memory or prototype convenience to silently redefine project authority.**
