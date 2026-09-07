@@ -1,139 +1,187 @@
 # 137 — Supersession Graph
 
 **Status:** CANONICAL PRECEDENCE / NAVIGATION AUTHORITY  
-**Updated:** 2026-09-05  
-**Program:** Documentation Closure Phase 1
+**Updated:** 2026-09-07  
+**Active program:** Studio Production Handoff Closure — Final Reconciliation / Acceptance  
+**Current operational entrypoint:** `docs/NEXT_CHAT_HANDOFF.md`  
+**Cross-program status authority:** `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md`
 
-## Purpose
+---
 
-Stillring intentionally preserves historical design documents.
+# 1. Purpose
 
-That is useful only if a future contributor can tell when an older document is still current, partially current, or explicitly superseded.
+Stillring deliberately preserves older design, audit and planning documents for provenance.
 
-This graph records **scoped precedence**.
+That is useful only when a future contributor can tell whether an older statement is:
 
-It is not a rule that "higher document number always wins."
+- still current;
+- current only outside a newer scoped decision;
+- numeric/historical context only;
+- or explicitly superseded.
 
 Core rule:
 
-> **Newer authority supersedes older material only within the scope explicitly resolved by the newer authority. Unaffected material remains valid.**
+> **A newer document supersedes older material only for the exact scope it resolves. Unaffected older material remains valid.**
 
-If a conflict is not listed here or clearly resolved inside the authority files themselves, do not guess. Register it for closure review.
-
----
-
-# 1. Graph notation
-
-```text
-A  --->  B
-```
-
-means:
-
-**A supersedes or governs B for the stated scope.**
-
-```text
-A  -X->  B
-```
-
-means:
-
-**B is historical/reverted and must not be treated as current authority for that scope.**
-
-```text
-A  --->  B [numeric only]
-```
-
-means B remains useful except for numeric literals controlled by A.
+Do not infer precedence from document number, timestamp, Unreal convenience, studio habit, or chat memory.
 
 ---
 
-# 2. Top-level process precedence
+# 2. Notation
 
 ```text
-docs/135_DOCUMENTATION_CLOSURE_PROGRAM_CHARTER.md
-        ---> closure-process assumptions in older handoffs/chat-derived notes
+A ---> B
+```
 
-docs/136_CANONICAL_AUTHORITY_INDEX.md
-        ---> ad-hoc guesses about which file to read first
+A governs or supersedes B for the stated scope.
 
-docs/137_SUPERSESSION_GRAPH.md
-        ---> date/filename-number-only precedence guesses
+```text
+A -X-> B
+```
 
+B is historical/reverted/non-current for that scope.
+
+```text
+A ---> B [numeric only]
+```
+
+B remains useful except for the named numeric facts.
+
+```text
+A DOES NOT ---> B
+```
+
+A must not be misread as proof/authority for B.
+
+---
+
+# 3. Current operational precedence
+
+```text
 docs/NEXT_CHAT_HANDOFF.md
-        ---> previous versions of NEXT_CHAT_HANDOFF.md
+        ---> previous versions of NEXT_CHAT_HANDOFF.md [operational direction]
+
+docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md
+        ---> pre-reconciliation summaries of current discipline status / owner queue
+
+docs/152_STUDIO_HANDOFF_GAP_REGISTER.md [2026-09-07 current-status revision]
+        ---> older literal reading that Animation/UI/Audio/etc. are still broadly missing
+
+docs/136_CANONICAL_AUTHORITY_INDEX.md [2026-09-07 revision]
+        ---> older navigation that stops before production docs 154–195
 ```
 
-`NEXT_CHAT_HANDOFF.md` is operational navigation, not gameplay design authority. It points to authority; it does not replace it.
+`NEXT_CHAT_HANDOFF.md` is operational navigation. It does not replace detailed gameplay/story authority.
+
+`docs/195` is current cross-program status and owner/product-decision authority. It does not replace the detailed discipline bibles/manifests it reconciles.
 
 ---
 
-# 3. Locomotion precedence
+# 4. Documentation-closure versus Studio-Handoff precedence
+
+The earlier Documentation Closure program established engineering-safe authority through docs 135–150.
+
+The later Studio Production Handoff Closure program adds discipline-complete production authority through docs 151–195.
+
+Therefore:
+
+```text
+docs/151–195 Studio Production Handoff Closure
+        ---> docs/149 engineering/documentation closure verdict [full-production-handoff status only]
+```
+
+`docs/149_DOCUMENTATION_CLOSURE_COMPLETENESS_AUDIT.md` remains valid historical evidence that core design/ownership/implementation-readiness documentation was coherent at that earlier boundary.
+
+It is not the final external-studio handoff verdict.
+
+## Historical implementation recommendation
+
+```text
+current owner boundary in NEXT_CHAT_HANDOFF + docs/195
+        -X-> docs/150 recommendation to begin UE5.8 implementation [authorization only]
+```
+
+`docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md` is now explicitly marked historical/superseded as current operational direction.
+
+Its technical sequencing advice may remain useful **if implementation is later authorized**.
+
+Its old recommendation is **not authorization**.
+
+Current rule:
+
+> **Broad UE5.8 implementation remains unauthorized.**
+
+---
+
+# 5. Locomotion precedence
 
 Current cumulative locomotion authority:
 
 ```text
 docs/20_GATE1_LOCOMOTION_SPECIFICATION.md
-        ---> earlier individual locomotion decision drafts/notes for incorporated topics
+        ---> earlier incorporated locomotion decision drafts/notes
 ```
 
-Important locked scoped precedence includes:
-- no ordinary traversal stamina/resource cost;
-- deliberate jump remains available;
-- low-obstacle mantle/scramble remains authored/bounded;
+Locked scoped precedence includes:
+- no ordinary traversal stamina/resource tax;
+- sustained Sprint is available;
+- modest deliberate jump remains available;
+- authored low-obstacle mantle/scramble;
 - no universal/free climbing;
-- same-continuous-handhold shimmy only;
-- no corner wrapping/gap transfers/lateral jumps/vertical handhold climbing by baseline shimmy;
-- explicit Drop/Release required; analog drift/down/away does not silently release.
+- same-continuous-handhold ledge shimmy only;
+- no baseline corner-wrap/gap-transfer/lateral-jump/vertical handhold climbing;
+- explicit Drop/Release rather than silent analog-drift release.
 
-A future prototype may tune values but may not use "prototype feel" as authority to silently remove these locks.
+Runtime tuning may refine values but cannot silently change the behavior class.
 
 ---
 
-# 4. Camera precedence
+# 6. Camera / targeting precedence
 
 ```text
 docs/22_GATE1_CAMERA_SPECIFICATION.md
-        ---> incorporated individual camera decisions in docs/23–36 where cumulative text conflicts
+        ---> incorporated docs/23–36 where cumulative text conflicts
 ```
 
-Supporting camera addenda remain useful for exact edge-case rationale and fixtures unless the cumulative specification or a later explicit reconciliation says otherwise.
+Supporting camera addenda remain detailed rationale/fixture authority where consistent.
 
-No stock Unreal Third Person camera value and no copied Zelda camera value supersedes Stillring authority merely because it is convenient.
+No stock Unreal camera value and no Zelda camera value becomes Stillring authority by convenience.
 
 ---
 
-# 5. Combat / encounter precedence
+# 7. Combat / encounter precedence
 
 Player combat:
 
 ```text
 docs/48_GATE2_COMBAT_STATE_MODEL.md
-        ---> earlier Gate 2 player-combat drafts for incorporated state-model topics
+        ---> earlier Gate 2 player-combat drafts for incorporated state topics
 ```
 
-Enemy/encounter:
+Encounter/pressure:
 
 ```text
 docs/59_GATE2_ENCOUNTER_FIXTURE_CLOSURE.md
-        ---> incomplete fixture assumptions inside earlier encounter drafts
+        ---> incomplete fixture assumptions in earlier encounter drafts
 ```
 
-Docs 50–58 remain scoped authority for their individual encounter topics unless explicitly reconciled by later closure/cumulative authority.
+Docs 50–58 remain scoped encounter authority where consistent.
 
-Combat/encounter implementation may not override camera readability/targeting authority by simply spawning or scheduling more simultaneous threats.
+Animation presentation cannot supersede Combat gameplay ownership.
+
+Encounter pressure cannot silently supersede Camera/Targeting readability authority.
 
 ---
 
-# 6. Gate 3 filename/reference precedence
+# 8. Gate 3 filename/reference precedence
 
-Canonical cumulative Gate 3 tool-system document:
+Canonical cumulative tool-system file:
 
 ```text
 docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md
 ```
 
-Stale/nonexistent reference:
+Stale/nonexistent filename:
 
 ```text
 docs/69_GATE3_TOOL_PUZZLE_CUMULATIVE_SPECIFICATION.md
@@ -146,35 +194,33 @@ docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md
         -X-> docs/69_GATE3_TOOL_PUZZLE_CUMULATIVE_SPECIFICATION.md [filename/reference only]
 ```
 
-The stale filename is not a historical design fork; it is a broken reference.
-
-Any document linking the nonexistent filename should be repaired to the actual cumulative file.
+The stale filename is not an alternate design branch.
 
 ---
 
-# 7. Gate 4 / Hush precedence
+# 9. Hush / world-layer precedence
 
 ```text
 docs/79_GATE4_HUSH_CUMULATIVE_SPECIFICATION.md
-        ---> docs/70–78 for incorporated cumulative topics
+        ---> docs/70–78 for incorporated semantic behavior
 ```
 
-Docs 70–78 remain useful detailed authority where consistent.
+Docs 70–78 remain detailed supporting authority where consistent.
 
-Production-architecture caution:
+Hard representation boundary:
 
 ```text
-Gate 4 prototype direction (World Partition + Runtime Data Layers, spatial streaming disabled)
-        DOES NOT ---> production architecture proof
+World Partition / Runtime Data Layer prototype direction
+        DOES NOT ---> production architecture selection
 ```
 
-The prototype does not supersede the requirement to compare real authoring/source-control/performance/save behavior before production lock.
+Production representation remains runtime-gated by `docs/188`–`docs/189`.
 
-Data Layer loaded state never supersedes semantic world-state authority.
+Data Layer loaded state, sublevel state, Actor existence, streaming state or visualization state never supersedes semantic Waking/Hush authority.
 
 ---
 
-# 8. Save / World-State precedence
+# 10. Save / World-State precedence
 
 ```text
 docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md
@@ -183,202 +229,194 @@ docs/88_SAVE_WORLD_STATE_CUMULATIVE_SPECIFICATION.md
 
 Docs 81–87 remain detailed subcontracts.
 
-Runtime proof boundary:
-
 ```text
 docs/81–88 design package
-        DOES NOT ---> GitHub Issue #4 runtime verification requirement
+        DOES NOT ---> Issue #4 runtime verification closure
 ```
 
-Issue #4 remains open until paired-layer save/exit/reload reproduction is proven in runtime.
+Issue #4 remains open until paired Waking/Hush save -> process exit -> reopen -> load proof exists.
 
-Stable semantic IDs supersede:
-- actor paths;
+Stable semantic identity supersedes:
+- Actor paths;
+- UObject/package paths;
 - runtime instance IDs;
 - display strings;
-- map coordinates;
-- transient Data Layer load state;
+- coordinates;
+- transient Data Layer/load state;
 - trigger occupancy;
 
 as canonical persistence identity.
 
 ---
 
-# 9. Completion numeric precedence
+# 11. Completion numeric precedence
 
-This is one of the most implementation-dangerous precedence areas.
-
-## Governing numeric authority
+Governing numeric authority:
 
 ```text
 docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md
-        ---> docs/10_COMPLETION_MODEL.md [where numeric model differs]
-        ---> docs/11_QUEST_AND_COMPLETION_LEDGER.md [numeric counts/thresholds only]
-        ---> docs/12_100_PERCENT_ROUTE.md [numeric counts/thresholds only]
-        ---> docs/13_CANTOR_AND_UPGRADE_CATALOG.md [completion thresholds only]
-        ---> docs/14_PRESTIGE_AND_MASTERY_CONTENT.md [global weighting/count interpretation only]
-        ---> older completion planning documents [numeric counts/weights]
+        ---> docs/10_COMPLETION_MODEL.md [numeric counts/weights/thresholds]
+        ---> docs/11_QUEST_AND_COMPLETION_LEDGER.md [numeric counts/thresholds]
+        ---> docs/12_100_PERCENT_ROUTE.md [numeric counts/thresholds]
+        ---> docs/13_CANTOR_AND_UPGRADE_CATALOG.md [completion thresholds]
+        ---> docs/14_PRESTIGE_AND_MASTERY_CONTENT.md [global-count/threshold interpretation]
+        ---> older completion planning values
 ```
 
-Those older files remain narrative/content authorities for unaffected descriptions.
-
-## Canonical replacements
+Canonical numeric replacements:
 
 ```text
-48 Resonance Faults   ---> 36 Resonance Faults
-28 Pulse Shards       ---> 18 Pulse Shards
-30 Micro-vaults       ---> 24 Micro-vaults
-K02 at 30 Faults      ---> K02 at 24 reconciled Faults
-Drift unlock at 13    ---> 10 reconciled Faults + existing story/Line Skiff prerequisites
-12 prestige stages as 12 global items
-                       ---> 1 global Unstandard Tool item / 12 internal stages
-7 Yard commissions as 7 global items
-                       ---> 1 global Broken Standard Yard item / 7 internal commissions
+48 Resonance Faults ---> 36
+28 Pulse Shards ---> 18
+30 Micro-vaults ---> 24
+K02 at 30 Faults ---> 24 reconciled Faults
+Drift unlock at 13 Faults ---> 10 reconciled Faults + existing story/Line Skiff prerequisites
+12 Unstandard stages as 12 global items ---> 1 global item / 12 internal stages
+7 Yard commissions as 7 global items ---> 1 global item / 7 internal commissions
 ```
 
-## Blocklist
+`docs/109_COMPLETION_LEGACY_LITERAL_BLOCKLIST.md` and `docs/147_STALE_LITERAL_REFERENCE_AUDIT.md` prevent stale implementation literals.
 
-`docs/109_COMPLETION_LEGACY_LITERAL_BLOCKLIST.md` explicitly protects implementation from stale literals.
+Do not blind-replace narrative prose when only the numeric interpretation is stale.
+
+---
+
+# 12. Completion item-roster precedence
+
+The old `docs/11_QUEST_AND_COMPLETION_LEDGER.md` still preserves pre-reduction Fault/Pulse/Vault candidate lists for historical context.
+
+Exact active shipping semantic-ID authority is now:
+
+```text
+docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md
+        ---> docs/11 old 48-Fault item roster [active/tombstone disposition]
+        ---> docs/11 old Pulse item roster [active/tombstone disposition]
+        ---> docs/11 old 30-Vault item roster [active/tombstone disposition]
+```
+
+Current active rosters are exactly:
+- 36 Fault IDs;
+- 18 Pulse IDs;
+- 24 Vault IDs.
+
+Important forensic precedence:
+
+```text
+old stated Pulse budget = 28
+old enumerated Pulse semantic IDs = 27
+```
+
+No 28th legacy Pulse ID was ever assigned.
 
 Therefore:
 
 ```text
-docs/104 + docs/109
-        ---> any stale hard-coded completion literal in older content docs
+docs/194
+        -X-> any attempt to invent a phantom legacy Pulse #28
 ```
 
-Do not perform blind global numeric replacements. Preserve narrative prose and repair scoped stale values deliberately.
+## Still-Cairn reclassification
+
+The already-authored optional deliberate-release-room premise was reclassified before runtime implementation:
+
+```text
+fault.stillcairn.unreleased_room
+        ---> pulse.stillcairn.unreleased_room [completion-category identity]
+```
+
+The Pulse ID is retired.
+
+The underlying authored activity survives as the Fault.
+
+Both may not count.
 
 ---
 
-# 10. Setup/Payoff precedence
+# 13. Setup / Payoff precedence
 
-Issue #9 authority layers:
+Issue #9 authority is additive:
 
 ```text
 docs/112 state authority
-   -> docs/113 commit boundaries
-   -> docs/114 payoff materiality
-   -> docs/115 portfolio
-   -> docs/116 authoring/data contract
-   -> docs/117 canonical prototype instantiation
-   -> docs/118 closure audit
-   -> docs/119 navigation register
+ + docs/113 commit boundary
+ + docs/114 materiality
+ + docs/115 portfolio
+ + docs/116 authoring/data
+ + docs/117 canonical instantiation
+ + docs/118 closure audit
+ + docs/119 navigation register
 ```
 
-These are additive scoped authorities, not a simple replacement chain.
-
-## Core ownership precedence
+Core ownership precedence:
 
 ```text
 source-system facts
         ---> copied Setup/Payoff shadow facts
 ```
 
-Meaning:
+Source systems own facts. Setup/Payoff evaluates them.
 
-**Source systems own facts. Setup/Payoff evaluates them. It does not copy them.**
+## S07 Pressure Release
 
-## Portfolio precedence
+Docs 115/117 supersede interpretations that turn S07 into another refuge/moving-pocket payoff.
 
-Doc 115 supersedes older portfolio wording where it conflicts, including:
+Current focus is operational autonomy/control/labor.
 
-### S07 Pressure Release
+## S10 Distributed Copy
 
-Older interpretations that turn S07 into another refuge/moving-pocket payoff are superseded.
+Docs 115/117 supersede “backup copy survives” as the complete payoff meaning.
 
-Current payoff focuses on **operational autonomy/control/labor**:
-- independent deep-inlet crews retain manual pressure authority and can create their own low-water work/rescue/salvage windows;
-- reconnected route improves main-dock pressure resilience/heavy service but removes independent deep-inlet control and requires coordinated assistance.
+Current focus is distributed agency/knowledge.
 
-### S10 Distributed Copy
+## S11 timing
 
-Older interpretations that reduce S10 to "backup copy survives" are superseded.
-
-Current payoff is **distributed agency/knowledge**:
-- ordinary people/novices can possess/challenge/act on knowledge before archive authority returns;
-- may affect recognition, action, standing, triage/rescue timing;
-- not simply duplicate-record survival.
-
-### S11 timing
-
-Doc 117 clarifies:
-- seed/encounter may begin on road toward Cairnspire;
-- the meaningful provenance classification commit occurs through Cairnspire civic registration.
-
-Older shorthand implying the commit itself belongs to First Circuit is subordinate.
+Doc 117 clarifies that road encounter/seed and Cairnspire civic-registration commit are not the same boundary.
 
 ---
 
-# 11. Traversal Transformation precedence
+# 14. Line Skiff precedence
 
 Issue #10 authority:
 
 ```text
-docs/120 selection
-   + docs/121 route grammar
-   + docs/122 world-layer route state
-   + docs/123 acquisition/mastery
-   + docs/124 network integration
-        ---> older vague "horse/mount" or free-roam traversal assumptions
+docs/120 + docs/121 + docs/122 + docs/123 + docs/124
+        ---> vague mount/free-roam traversal assumptions
 ```
 
-Core precedence:
+Core identity:
 
 ```text
-Line Skiff = network vehicle
-        ---> mount/free-roam/horse analogue assumptions
+Line Skiff = supported route-network vehicle
+        ---> horse/mount/summon-anywhere/free-roam assumptions
 ```
 
-Therefore older/current prose cannot be interpreted to authorize:
-- summon anywhere;
-- cross-country driving;
-- ordinary mounted combat;
-- fuel/stamina/ticket tax on normal use;
-- Roadhand Pulse as speed boost;
-- Switchshoe as raw speed percentage;
-- arbitrary Hush shift where no paired route continuation exists;
-- twelve bespoke racetracks justified only by Drift Knot count.
+No ordinary fuel/stamina/ticket tax.
 
-## Drift prerequisite precedence
+Roadhand Pulse is not a generic speed boost.
 
-```text
-docs/104 completion reconciliation
-        ---> older traversal/content references to 13-Fault Drift Knot threshold
-```
+Switchshoe is not a raw speed percentage.
 
-Current threshold is 10 reconciled Faults plus existing story/Line Skiff prerequisites.
+Hush transitions aboard require authored paired continuation.
+
+The Drift threshold is governed by docs 104/194-era reconciliation, not stale 13-Fault prose.
 
 ---
 
-# 12. Null Meridian precedence
+# 15. Null Meridian precedence
 
-Issue #11 exact authority:
+Current synthesis/finale authority:
 
 ```text
 docs/127 six-sequence architecture
-   + docs/128 one governing dungeon idea
-   + docs/129 first-half adventure flow
-   + docs/130 second-half escalation
-   + docs/131 Take It Off the Bell
-   + docs/134 scene-order precedence
+ + docs/128 one governing dungeon idea
+ + docs/129 first-half adventure flow
+ + docs/130 second-half escalation
+ + docs/131 Take It Off the Bell
+ + docs/134 exact scene-order precedence
         ---> older generic M16 paired-trials shorthand where conflicting
 ```
 
-## Exact scene-order precedence
-
-Older `docs/story/07_SCENE_BEAT_LEDGER.md` shorthand:
-
-```text
-Independent Signals
- -> Paired Mechanic Trials
- -> Quiet Court Archive
- -> Maelor
-```
-
-is superseded for exact adjacency.
-
-Current flow:
+Exact current adjacency:
 
 ```text
 Entry
@@ -390,193 +428,265 @@ Entry
  -> S4
  -> S5
  -> Maelor personal workspace
- -> S6
+ -> S6 Take It Off the Bell
  -> Maelor
  -> Listener
  -> final decommission
 ```
 
-The scene ledger remains canonical for unaffected story facts.
+The older Scene Beat Ledger remains canonical for unaffected story facts.
 
-## Systems-heavy S1/S2 sketches
+## S1/S2 simplification
 
-Early proposed but unapproved concepts such as:
-- complex structural phase-lag puzzle modeling;
-- thermally remapped pressure-network topology;
+Unapproved systems-heavy sketches are not authority.
 
-are **not** authority.
-
-Docs 128–129 lock the simpler player-facing forms:
+Docs 128–129 lock the player-readable forms:
 - S1: forced-together walkways must be allowed to move separately;
-- S2: unlike machines must be returned to their own valid operating conditions.
+- S2: unlike machines return to their own valid operating conditions.
 
-## S6 precedence
+## S6
 
-Doc 131 refines Decision #1's provisional `No Master Pulse` slot.
+Doc 131 supersedes a vague `No Master Pulse`/generic multi-system capstone interpretation.
 
-Current S6 is **Take It Off the Bell**:
+Current S6 requires:
 - local service authority first;
-- mandatory Common Measure for one temporary operation;
+- temporary Common Measure operation;
 - physical master-relay disconnection;
 - local continuation at different rhythms.
 
-Older generic "multi-system capstone" descriptions are subordinate where they imply six regional switches, a new master frequency, or mandatory Local Accord.
+No six-region-switch exam and no mandatory Local Accord.
 
 ---
 
-# 13. Story countertone/checklist precedence
+# 16. Story countertone/checklist precedence
 
-Current story authority explicitly rejects presenting Motion / Memory / Ending as an upfront collectible checklist.
+Current story/reveal/progression authority supersedes any shorthand that presents Motion / Memory / Ending as an upfront fetch checklist.
 
 ```text
 current story/reveal/progression authority
-        ---> older shorthand that frames "three Countertones" as fetch items
+        ---> "collect the three Countertones" quest framing
 ```
 
-Locked principle:
-- each relation emerges through play/story need;
-- the player follows practical evidence/leads;
-- only after the relevant discoveries can the learned set be summarized as Motion / Memory / Ending;
-- no `collect the three Countertones` quest structure.
+The relationships are discovered through ordinary story needs and named afterward.
 
-Do not reintroduce the removed checklist through objectives, UI, achievement text, or implementation data naming visible to players.
+Do not reintroduce the removed checklist through UI, objectives, achievements or player-visible data naming.
 
 ---
 
-# 14. Cleanup PR history precedence
-
-Known repository cleanup history:
-
-```text
-later restored/accepted cleanup authority
-        -X-> PR #78 / PR #80 effects that were reverted/superseded
-        -X-> PR #79 (closed / not merged)
-```
-
-PR #81/#82 restored the intended workflow after the earlier cleanup attempts.
-
-When investigating historical Git state, do not assume an old merged PR remains current if it was later reverted.
-
-Current `main` content and explicit authority documents outrank historical merge status.
-
----
-
-# 15. System IDE precedence
+# 17. System IDE precedence
 
 ```text
 docs/21_IN_GAME_SYSTEM_IDE_CONTRACT.md
-        ---> ad-hoc one-off debug menus as system iteration architecture
+ + docs/141_SYSTEM_IDE_COVERAGE_MATRIX.md
+        ---> ad-hoc one-off debug menus as production iteration architecture
 ```
 
-System-specific IDE addenda refine doc 21.
+System-specific workbenches refine the shared contract.
 
-A system-specific workbench may add controls/fixtures but may not create a second authoritative state model.
+They may not create shadow gameplay truth.
 
-Runtime authority remains with gameplay services.
-
-Issue #58 remains open until the shared shell is actually implemented/proven.
+Issue #58 remains open until runtime implementation/proof exists.
 
 ---
 
-# 16. Blueprint / presentation precedence
+# 18. Technical production precedence
 
-Project architecture:
+Current technical production consolidation:
 
 ```text
-authoritative C++ gameplay/state services
-        ---> presentation-only Blueprint state when they conflict
+docs/188_TECHNICAL_PRODUCTION_BIBLE.md
+ + docs/189_TECHNICAL_PRODUCTION_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md
+        ---> scattered assumptions about naming/data/LFS/plugin/build/localization conventions
 ```
 
-Blueprints may:
-- present state;
-- assemble content;
-- drive scoped presentation;
-- host thin authored hooks where approved.
+This does not erase detailed system ownership documents.
+
+It operationalizes them for an external studio.
+
+C++ authoritative gameplay/state supersedes conflicting presentation-only Blueprint state.
+
+A `.uasset`/`.umap` path never supersedes a required semantic persistent ID.
+
+A bundled/popular Unreal framework never becomes mandatory by availability alone.
+
+Hush representation and final performance budgets remain runtime-gated.
+
+---
+
+# 19. Production-management / decision-rights precedence
+
+Decision rights:
+
+```text
+docs/170_STUDIO_DECISION_RIGHTS_MATRIX.md
+        ---> informal assumptions about what the studio may decide
+```
+
+Dependencies/change control:
+
+```text
+docs/190_PRODUCTION_DEPENDENCY_DISCIPLINE_MATRIX.md
+ + docs/191_PRODUCTION_MANAGEMENT_HARD_PASS_AUDIT.md
+        ---> ad-hoc staffing/parallelization/outsourcing/change-control guesses
+```
+
+A region pod cannot fork shared systems because local production is inconvenient.
+
+A vendor delivery is not integrated acceptance merely because files were delivered.
+
+Schedule pressure does not convert LOCKED authority into studio choice.
+
+---
+
+# 20. Discipline-package status precedence
+
+`docs/152` originally recorded missing production packages before the packages existed.
+
+Current status is governed by the 2026-09-07 revision of `docs/152`, scoped audits, and `docs/195`.
+
+Therefore:
+
+```text
+current docs/152 + docs/195 + scoped discipline audits
+        ---> older literal wording that a completed discipline package is still missing
+```
+
+Key resolved dependencies include:
+- Animation cinematic burden: former PARTIAL closed by Narrative's 113-entry scene inventory in `docs/183`;
+- World/content completion roster: former PARTIAL closed by `docs/194`;
+- Art C3/C4 exact production pool decomposition: bounded production planning, not an unbounded creative gap;
+- UI/Narrative broad production inventories: written authority complete;
+- Production Management: HARD PASS at written authority.
+
+Non-PASS rows that remain are owner/product or runtime gates, not hidden studio assumptions.
+
+---
+
+# 21. QA / accessibility / localization precedence
+
+```text
+docs/192_QA_ACCESSIBILITY_LOCALIZATION_PRODUCTION_CONSOLIDATION.md
+ + docs/193_QA_ACCESSIBILITY_LOCALIZATION_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md
+        ---> scattered accessibility/localization/QA production assumptions
+```
+
+These documents define production obligations and evidence classes.
+
+They do **not** prove runtime accessibility, localized-build quality, certification or performance.
+
+Platform certification scope remains downstream of platform selection.
+
+---
+
+# 22. Blueprint / presentation precedence
+
+Project architecture rule:
+
+```text
+authoritative C++ gameplay/state service or approved source-owner data
+        ---> conflicting presentation-only Blueprint/AnimBP/UI/Sequencer state
+```
+
+Blueprints/animation/UI/audio/cinematics may present and request.
 
 They may not silently become:
-- canonical save owner;
-- hidden quest state owner;
-- duplicate combat state owner;
+- canonical Save owner;
+- hidden Quest/World State owner;
+- duplicate Combat owner;
 - duplicate Hush truth owner;
-- per-chain Setup/Payoff authority;
-- scene-order-only persistence logic.
+- Completion database;
+- per-chain Setup/Payoff truth;
+- scene-filename-only persistence logic.
 
 ---
 
-# 17. Runtime evidence precedence
+# 23. Runtime evidence precedence
 
-A document saying `LOCKED`, `COMPLETE`, or `CLOSED` at the design layer does not supersede runtime evidence requirements.
+Detailed design documentation does not supersede proof obligations.
 
 ```text
-actual UE5.8 deterministic/runtime/human evidence
-        ---> assumptions based solely on design completion
+LOCKED / PASS / CLOSED at documentation layer
+        DOES NOT ---> IMPLEMENTED / RUNTIME VERIFIED / HUMAN ACCEPTED / PRODUCTION READY
 ```
 
-But runtime evidence also does not automatically supersede locked design.
+Actual UE5.8 evidence is required for runtime claims.
 
-If runtime testing shows a design performs poorly:
-- document the evidence;
-- propose a scoped design revision;
-- obtain required owner approval;
-- then change authority.
+But runtime inconvenience also does not silently supersede locked design.
 
-Do not silently mutate canon in code because a prototype was inconvenient.
-
----
-
-# 18. Current known stale-reference hazards
-
-## Confirmed
-
-1. `docs/82_SAVE_STATE_TAXONOMY_OWNERSHIP_ADDENDUM.md`
-   - stale link: `docs/69_GATE3_TOOL_PUZZLE_CUMULATIVE_SPECIFICATION.md`
-   - correct: `docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`
-
-2. Older completion literals protected by docs 104/109:
-   - 48 Fault;
-   - 28 Pulse;
-   - 30 Vault;
-   - K02=30;
-   - Drift=13;
-   - prestige stage/global-item confusion;
-   - Yard commission/global-item confusion.
-
-3. Older Null Meridian M16 adjacency:
-   - use doc 134.
-
-4. Older Setup/Payoff S07/S10 interpretations:
-   - use docs 115/117.
-
-## Closure action
-
-The program will continue scanning for:
-- dead filenames;
-- obsolete IDs;
-- stale thresholds;
-- old system names;
-- invalid actor/map path assumptions;
-- contradictory scene ordering;
-- references to superseded implementation architecture.
-
-New findings belong in later stale-reference/content-traceability outputs.
+If a prototype demonstrates a design problem:
+1. capture evidence;
+2. classify the issue;
+3. propose a scoped authority change;
+4. obtain required approval;
+5. update repository authority;
+6. then change implementation.
 
 ---
 
-# 19. Precedence decision procedure
+# 24. Current known stale-reference hazards
 
-When two documents appear to conflict:
+## Blocked implementation-dangerous values
 
-1. identify the **exact fact** in conflict;
-2. find the most specific owner-approved authority for that fact;
-3. check this graph for scoped precedence;
-4. check a relevant cumulative specification/closure audit;
-5. preserve unaffected content from the older file;
-6. if the conflict is still unresolved, do not improvise;
-7. add it to the Unanswered-Question Register with classification `F — owner decision required` or the appropriate category.
+Use docs 104/109/147/194, not legacy planning prose, for:
+- 36 Faults, not 48;
+- 18 Pulse Shards, not 28;
+- 24 Micro-vaults, not 30;
+- K02 at 24 reconciled Faults, not 30;
+- Drift eligibility at 10 reconciled Faults + existing story/Skiff gates, not 13;
+- Unstandard Tool = one global item / 12 internal stages;
+- Broken Standard Yard = one global item / 7 internal commissions;
+- active Fault/Pulse/Vault semantic IDs from doc 194 only.
+
+## Gate 3 dead filename
+
+Use:
+
+`docs/69_GATE3_TOOL_SYSTEM_CUMULATIVE.md`
+
+not the stale nonexistent alternate filename.
+
+## Null Meridian order
+
+Use doc 134.
+
+## Setup/Payoff S07/S10
+
+Use docs 115/117.
+
+## Old implementation recommendation
+
+Do not treat doc 150 as authorization.
+
+## Old Studio Handoff gap wording
+
+Do not treat pre-package “missing” descriptions as current status; use current docs 152/195/scoped audits.
+
+---
+
+# 25. Precedence decision procedure
+
+When two sources appear to conflict:
+
+1. identify the exact fact in conflict;
+2. find its explicit source owner;
+3. check `docs/136` for current topic routing;
+4. check this graph for scoped supersession;
+5. check the relevant cumulative/system/production authority;
+6. check `docs/195` if the disagreement is about current handoff status or owner/product queue;
+7. preserve unaffected older content;
+8. if still unresolved, classify the unknown rather than improvising.
 
 Never resolve precedence by:
-- higher filename number alone;
+- higher file number alone;
 - newer Git timestamp alone;
-- whichever document is shorter;
-- whichever choice is easiest to implement;
-- whichever value resembles another game's design.
+- shortest document;
+- easiest Unreal implementation;
+- studio convention;
+- another game's precedent;
+- chat memory.
+
+---
+
+# 26. Current final precedence statement
+
+> **Current repository authority is a layered system: gameplay/story canon owns what the game means; production bibles/manifests own how disciplines execute that meaning; decision-rights/dependency documents bound studio freedom; runtime evidence proves whether implementation works; and current handoff/reconciliation documents control operational status. Historical plans remain provenance, not silent authority.**
