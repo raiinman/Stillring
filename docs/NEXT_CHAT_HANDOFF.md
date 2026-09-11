@@ -1,309 +1,229 @@
 # Stillring — Next Chat Handoff
 
-**Updated:** 2026-09-07  
+**Updated:** 2026-09-11  
 **Repository:** `raiinman/Stillring`  
 **Current reviewed main:** `cc05b65be577d2723640c6cfd4e8c8b29c0b0717`  
-**Active program:** Studio Production Handoff Closure — Final Reconciliation / Acceptance  
-**Operational boundary:** **DOCUMENTATION ONLY — NO TESTING / NO UE5.8 IMPLEMENTATION YET**
+**Active program:** Studio Production Handoff Closure — **FINAL ACCEPTANCE COMPLETE**  
+**Documentation handoff verdict:** **HANDOFF READY FOR FULL PRODUCTION**  
+**Execution boundary:** **HOLD — DOCUMENTATION ONLY / NO UE5.8 IMPLEMENTATION OR TESTING AUTHORIZED**
 
 ---
 
 # Read first
 
-1. `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md`
-2. `docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md`
-3. `docs/151_STUDIO_PRODUCTION_HANDOFF_CLOSURE_CHARTER.md`
-4. `docs/153_STUDIO_HANDOFF_ACCEPTANCE_CHECKLIST.md`
-5. `docs/152_STUDIO_HANDOFF_GAP_REGISTER.md`
-6. `docs/170_STUDIO_DECISION_RIGHTS_MATRIX.md`
-7. `docs/171_PERFORMANCE_PLATFORM_PRODUCT_BRIEF.md`
-8. `docs/190_PRODUCTION_DEPENDENCY_DISCIPLINE_MATRIX.md`
-9. `docs/192_QA_ACCESSIBILITY_LOCALIZATION_PRODUCTION_CONSOLIDATION.md`
-10. `docs/136_CANONICAL_AUTHORITY_INDEX.md`
-11. `docs/137_SUPERSESSION_GRAPH.md`
-12. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md`
-13. `docs/139_SYSTEM_OWNERSHIP_MAP.md`
-14. `docs/140_CROSS_SYSTEM_CONTRACT_MATRIX.md`
-15. `docs/141_SYSTEM_IDE_COVERAGE_MATRIX.md`
-16. `docs/142_RUNTIME_EVIDENCE_LEDGER_BASELINE.md`
-17. `docs/144_UNANSWERED_QUESTION_REGISTER.md`
-18. `docs/145_IMPLEMENTATION_READINESS_GAP_REGISTER.md`
-19. `docs/146_CONTENT_TRACEABILITY_MATRIX.md`
-20. `docs/147_STALE_LITERAL_REFERENCE_AUDIT.md`
-21. `ROADMAP.md`
-22. `AGENTS.md` / `CLAUDE.md`
+1. `docs/197_FINAL_STUDIO_HANDOFF_ACCEPTANCE_AUDIT.md`
+2. `docs/196_SCOPED_HANDOFF_STATUS_AND_SCOPE_RECONCILIATION.md`
+3. `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md`
+4. `docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md`
+5. `docs/153_STUDIO_HANDOFF_ACCEPTANCE_CHECKLIST.md`
+6. `docs/152_STUDIO_HANDOFF_GAP_REGISTER.md`
+7. `docs/170_STUDIO_DECISION_RIGHTS_MATRIX.md`
+8. `docs/171_PERFORMANCE_PLATFORM_PRODUCT_BRIEF.md`
+9. `docs/190_PRODUCTION_DEPENDENCY_DISCIPLINE_MATRIX.md`
+10. `docs/192_QA_ACCESSIBILITY_LOCALIZATION_PRODUCTION_CONSOLIDATION.md`
+11. `docs/136_CANONICAL_AUTHORITY_INDEX.md`
+12. `docs/137_SUPERSESSION_GRAPH.md`
+13. `docs/138_TERMINOLOGY_GLOSSARY_AND_ONBOARDING.md`
+14. `docs/139_SYSTEM_OWNERSHIP_MAP.md`
+15. `docs/140_CROSS_SYSTEM_CONTRACT_MATRIX.md`
+16. `docs/141_SYSTEM_IDE_COVERAGE_MATRIX.md`
+17. `docs/142_RUNTIME_EVIDENCE_LEDGER_BASELINE.md`
+18. `docs/144_UNANSWERED_QUESTION_REGISTER.md`
+19. `docs/145_IMPLEMENTATION_READINESS_GAP_REGISTER.md`
+20. `ROADMAP.md`
+21. `AGENTS.md` / `CLAUDE.md`
 
 Always re-check exact current `main` before repository writes.
 
-`docs/149_DOCUMENTATION_CLOSURE_COMPLETENESS_AUDIT.md` is historical engineering-closure evidence.
+`docs/149_DOCUMENTATION_CLOSURE_COMPLETENESS_AUDIT.md` is historical engineering/documentation-closure evidence.
 
-`docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md` is historical and explicitly superseded as current authorization direction.
-
----
-
-# Current project truth
-
-Stillring now has discipline-complete written production authority for:
-
-- product boundaries and studio decision rights;
-- art direction, characters, enemies/bosses, regions, props, Hush visuals and VFX;
-- animation doctrine and production inventory;
-- UI/UX screens, HUD states, navigation, assets, save/recovery and accessibility presentation;
-- audio, music, ambience, Hush/silence, combat, Skiff, VO models and performance direction;
-- narrative production, scene/dialogue inventory, records, ambient families, localization context and credits burden;
-- region/world/content production burden;
-- dungeon, encounter and Line Skiff network production burden;
-- exact completion-item semantic rosters for 36 Faults / 18 Pulse Shards / 24 Micro-vaults;
-- technical production conventions;
-- production dependency, deliverable maturity, outsourcing, integration and change control;
-- QA, accessibility and localization production expectations.
-
-The broad production-documentation gaps described in the original Studio Handoff Gap Register are no longer missing in general.
-
-Current statuses are reconciled in `docs/195` and the scoped discipline audits.
+`docs/150_IMPLEMENTATION_OWNER_REVIEW_PACKAGE.md` is historical and superseded as current authorization direction.
 
 ---
 
-# Immediate next work
+# Final Studio Handoff result
 
-The next bounded step is the **Final Studio Handoff Acceptance Audit**.
+The chat-history-independent acceptance audit is complete.
 
-Do not create another discipline bible unless the final audit proves one is genuinely missing.
+Final documentation handoff status:
 
-The final audit must behave as though the reviewer has never seen project chat history.
+> # **HANDOFF READY FOR FULL PRODUCTION**
 
-It must answer the questions in `docs/153`, including:
+Meaning, under `docs/153`:
 
-- what Stillring is;
-- product scope and hard constraints;
-- minute-to-minute player experience;
-- world and region structure;
-- discipline deliverables and workload;
-- content volume;
-- decision rights;
-- prohibited reinterpretations;
-- owner decisions;
-- runtime-gated items;
-- production dependencies;
-- outsourcing safety;
-- QA/accessibility/localization obligations;
-- implementation boundary;
-- where each discipline begins reading.
+> a competent external studio can staff and execute the intended full game from repository authority, with only explicitly scheduled owner decisions and runtime/human-evidence gates remaining.
 
-If any normal production answer still depends on “the owner said in chat,” the audit must fail that area and repair repository authority before declaring handoff readiness.
+This is a **documentation readiness classification**, not permission to begin execution.
+
+Current owner execution status remains:
+
+> # **HOLD — DOCUMENTATION ONLY**
+
+Do not interpret the final handoff grade as authorization to code, test, merge, create production assets, record VO, localize, profile or certify the game.
 
 ---
 
-# Current owner boundary
+# Final audit repairs
 
-The owner has **not** authorized broad UE5.8 implementation.
+The blind audit did not simply rubber-stamp the prior reconciliation.
 
-Current rule:
+It found and reconciled:
 
-> **DOCUMENT THE COMPLETE STUDIO HANDOFF FIRST. DO NOT IMPLEMENT OR TEST YET.**
+1. stale scoped `PARTIAL` status wording where later packages closed the dependency;
+2. the old world/content warning that the 36/18/24 item roster was missing after `docs/194` had created it;
+3. six-major-region design language versus eight ordinary-world environment-production families.
 
-Therefore:
+Current scope taxonomy:
 
-- do not create `Stillring.uproject`;
-- do not implement Issue #5;
-- do not implement Issue #58;
-- do not run gameplay tests;
-- do not create production maps/assets;
-- do not claim runtime proof;
-- do not merge the stacked Studio Handoff PR chain without owner approval.
+## Six major adventure regions
 
-`docs/150` once recommended beginning implementation. That recommendation is historical only and has been explicitly marked superseded operationally.
+- Rootmere
+- Saltreach
+- Emberstep
+- High Aerie
+- Mireglass
+- Cairnfall
 
----
+## Additional ordinary-world production families
 
-# Current genuine owner / product decisions
+- Brindle / First Circuit / Graymile — opening/home/circuit family
+- Cairnspire — capital/hub/Grand Ring family
 
-Keep these few and explicit.
+Therefore there are **eight ordinary-world environment production families** without changing the product into eight major adventure regions.
 
-1. **Broad UE5.8 implementation authorization** — currently **NOT GRANTED**.
-2. **Launch platforms beyond PC-first** — `TBD OWNER`.
-3. **Target-PC hardware/performance baseline** — `TBD OWNER` before objective Gate 5 performance acceptance.
-4. **VO scope** — `TBD OWNER` before casting/recording commitment.
-5. **Commercial title/name** — `TBD OWNER / LATER CLEARANCE`.
-6. **Localization ship-language list** — `TBD PRODUCT` before localization staffing/ship commitment.
-7. Any future material change to locked mechanics, story, art identity, completion model, world structure or product/platform scope.
-
-Not owner decisions:
-
-- C++ class names;
-- UMG versus Slate/CommonUI solely as implementation detail;
-- ordinary plugin/helper choice that preserves authority;
-- mesh decomposition;
-- exact production pool decomposition within manifest bounds;
-- numeric feel tuning that belongs to later prototype/human play;
-- ordinary internal engineering choices inside locked ownership contracts.
-
----
-
-# Current runtime truth
-
-`game/` remains intentionally skeletal.
-
-No runtime claim should be inferred from documentation volume.
-
-Still unproven:
-
-- UE5.8 project/bootstrap/build/open workflow;
-- Locomotion and Camera runtime feel;
-- Combat/Encounter runtime;
-- Tool/Puzzle runtime;
-- Hush production representation;
-- Hush save/reload integrity;
-- Save/World-State implementation;
-- Completion runtime registry/math;
-- Setup/Payoff runtime;
-- Line Skiff runtime;
-- Null Meridian runtime;
-- System IDE runtime shell/workbenches;
-- performance/memory/loading;
-- accessibility runtime usability;
-- localized-build/LQA;
-- platform certification;
-- human fun/readability/pacing/emotional/music acceptance.
-
-Issues #4, #5 and #58 intentionally remain open.
-
----
-
-# Completion constants — do not regress
-
-Canonical numeric authority remains `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`.
-
-Exact item-roster authority is now `docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md`.
-
-Current totals:
-
-- 16 equal top-level completion categories = 6.25% each;
-- Local Repair Contracts = 24;
-- Setup/Payoff = 12;
-- Bellwright Refuges = 11;
-- Resonance Faults = 36;
-- Pulse Shards = 18;
-- Cantor Patterns = 9;
-- Tool Mastery Upgrades = 14;
-- Skill Trials = 9;
-- Micro-vaults = 24;
-- Testimonies / Records = 32;
-- Drift Knots = 12;
-- Optional Elites = 8;
-- Community Projects = 6;
-- Unstandard Tool = 1 global item / 12 internal stages;
-- Broken Standard Yard = 1 global item / 7 internal commissions.
-
-Other important constants:
-
-- K02 Fine Fork = 24 reconciled Faults;
-- Drift Knot eligibility = 10 reconciled Faults + existing story/Line Skiff prerequisites.
-
-Stale 48/28/30/30-Fault/13-Fault literals must never become production constants.
-
-Important forensic note:
-
-> the old 28-Pulse planning ledger only enumerated 27 actual Pulse semantic IDs. Do not invent a missing 28th legacy item.
+Hush-Cairnspire, Still-Cairn and Null Meridian are late transformed/finale burdens, not additional ordinary-world major cultures.
 
 ---
 
 # Current production-documentation stack
 
 ## Art
+- `docs/154`–`169`
 
-- `docs/154_STILLRING_ART_BIBLE.md`
-- `docs/155_ART_REFERENCE_METHOD_AND_BOARD_INDEX.md`
-- `docs/156_ART_PRODUCTION_MANIFEST_FRAMEWORK.md`
-- `docs/157_ART_WORKSTREAM_CLOSURE_STATUS.md`
-- `docs/158_CHARACTER_PRODUCTION_MANIFEST.md`
-- `docs/159_ENEMY_BOSS_ART_MANIFEST.md`
-- `docs/160_REGION_ENVIRONMENT_PROP_MANIFEST.md`
-- `docs/161_REGIONAL_COLOR_MATERIAL_LIGHTING_SCRIPTS.md`
-- `docs/162_HUSH_VISUAL_PRODUCTION_MATRIX.md`
-- `docs/163_VFX_PRODUCTION_MANIFEST.md`
-- `docs/164`–`168` visual-board source briefs
-- `docs/169_ART_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
-
-## Product / decision rights
-
-- `docs/170_STUDIO_DECISION_RIGHTS_MATRIX.md`
-- `docs/171_PERFORMANCE_PLATFORM_PRODUCT_BRIEF.md`
-- `docs/172_PRODUCT_DECISION_RIGHTS_WRITTEN_HANDOFF_AUDIT.md`
+## Product / Decision Rights
+- `docs/170`–`172`
 
 ## Animation
+- `docs/173`–`175`
 
-- `docs/173_STILLRING_ANIMATION_BIBLE.md`
-- `docs/174_ANIMATION_PRODUCTION_MANIFEST.md`
-- `docs/175_ANIMATION_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
-
-## UI/UX
-
-- `docs/176_UI_UX_PRODUCTION_SPECIFICATION.md`
-- `docs/177_UI_SCREEN_STATE_AND_ASSET_MANIFEST.md`
-- `docs/178_UI_UX_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
+## UI / UX
+- `docs/176`–`178`
 
 ## Audio / Music / VO
+- `docs/179`–`181`
 
-- `docs/179_STILLRING_AUDIO_MUSIC_VO_BIBLE.md`
-- `docs/180_AUDIO_CUE_ASSET_AND_MUSIC_MANIFEST.md`
-- `docs/181_AUDIO_MUSIC_VO_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
+## Narrative Production
+- `docs/182`–`184`
 
-## Narrative
+## Region / World / Content
+- `docs/185`–`187`
 
-- `docs/182_STILLRING_NARRATIVE_PRODUCTION_BIBLE.md`
-- `docs/183_NARRATIVE_SCENE_DIALOGUE_TEXT_MANIFEST.md`
-- `docs/184_NARRATIVE_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
+## Technical Production
+- `docs/188`–`189`
 
-## World / content
-
-- `docs/185_REGION_WORLD_CONTENT_PRODUCTION_MANIFEST.md`
-- `docs/186_DUNGEON_ENCOUNTER_AND_NETWORK_PRODUCTION_MANIFEST.md`
-- `docs/187_WORLD_CONTENT_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
-
-## Technical
-
-- `docs/188_TECHNICAL_PRODUCTION_BIBLE.md`
-- `docs/189_TECHNICAL_PRODUCTION_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
-
-## Production management
-
-- `docs/190_PRODUCTION_DEPENDENCY_DISCIPLINE_MATRIX.md`
-- `docs/191_PRODUCTION_MANAGEMENT_HARD_PASS_AUDIT.md`
+## Production Management
+- `docs/190`–`191`
 
 ## QA / Accessibility / Localization
+- `docs/192`–`193`
 
-- `docs/192_QA_ACCESSIBILITY_LOCALIZATION_PRODUCTION_CONSOLIDATION.md`
-- `docs/193_QA_ACCESSIBILITY_LOCALIZATION_WRITTEN_HANDOFF_ACCEPTANCE_AUDIT.md`
-
-## Final reconciliation
-
-- `docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md`
-- `docs/195_STUDIO_HANDOFF_CROSS_PROGRAM_RECONCILIATION.md`
+## Final roster / reconciliation / acceptance
+- `docs/194`
+- `docs/195`
+- `docs/196`
+- `docs/197`
 
 ---
 
-# Critical system boundaries
+# Current content constants
 
-- Source systems own facts; Setup/Payoff evaluates them.
-- Save Coordinator orchestrates snapshots; it does not own all gameplay truth.
-- Hush/Waking semantic state is not Data Layer state.
-- Actor/map/node/runtime IDs are not canonical persistence identity.
-- Completion owns completion consequences, not every gameplay fact.
-- Line Skiff is a network vehicle, not a free-roam mount.
-- ordinary traversal has no stamina/fuel/ticket tax.
-- System IDEs use authoritative gameplay services; no hidden shadow state.
-- Null Meridian order is governed by docs 127–134.
-- optional completion does not gate the canonical ending.
-- clean-room IP rules remain binding across every production discipline.
+Numeric authority:
+- `docs/104_COMPLETION_LEDGER_RECONCILIATION_AUTHORITY_ADDENDUM.md`
+
+Exact reduced item-roster authority:
+- `docs/194_COMPLETION_ITEM_ROSTER_RECONCILIATION_AUTHORITY.md`
+
+Current completion burden:
+
+- Main Story — 1 route
+- Local Repair Contracts — 24
+- Setup/Payoff — 12
+- Refuges — 11
+- Resonance Faults — 36
+- Pulse Shards — 18
+- Cantor Patterns — 9
+- Tool Mastery Upgrades — 14
+- Skill Trials — 9
+- Micro-vaults — 24
+- Records/Testimonies — 32
+- Unstandard Tool — 1 global item / 12 internal stages
+- Drift Knots — 12
+- Optional Elites — 8
+- Community Projects — 6
+- Broken Standard Yard — 1 global item / 7 internal commissions
+
+Other protected constants:
+
+- 16 equal top-level completion categories = 6.25% each
+- K02 Fine Fork = 24 reconciled Faults
+- Drift Knot eligibility = 10 reconciled Faults + existing story/Line Skiff prerequisites
+
+Do not revive stale 48/28/30/30-Fault/13-Fault values.
+
+The old “28 Pulse” planning ledger only enumerated 27 actual Pulse IDs. Do not invent a phantom legacy ID.
+
+---
+
+# Current genuine owner / product decisions
+
+1. **Broad UE5.8 implementation authorization** — **NOT GRANTED**.
+2. **Launch platforms beyond PC-first** — `TBD OWNER`.
+3. **Target-PC hardware/performance baseline** — `TBD OWNER`.
+4. **VO scope** — `TBD OWNER`.
+5. **Commercial title/name** — `TBD OWNER / LATER CLEARANCE`.
+6. **Localization ship-language list** — `TBD PRODUCT`.
+7. Any future material change to locked game/story/art/completion/world/product/platform identity.
+
+Do not manufacture owner decisions from ordinary engineering, art-production decomposition or runtime tuning.
+
+---
+
+# Runtime / human evidence still open
+
+The final handoff audit does not claim implementation evidence.
+
+Still unproven:
+
+- UE5.8 project/bootstrap/build/open
+- Locomotion/Camera feel
+- Combat/Encounter runtime and human fairness
+- Tool/Puzzle runtime
+- Hush production representation
+- Hush transition comfort
+- paired Hush save/exit/reload
+- Save/World-State runtime
+- Completion registry/math runtime
+- Setup/Payoff runtime
+- Line Skiff handling/streaming/camera
+- Null Meridian implementation/pacing
+- shared System IDE runtime
+- final world/module metrics
+- performance/memory/loading
+- audio mastering
+- accessibility runtime usability
+- localized-build LQA
+- platform certification
+- human fun/readability/emotional/music acceptance
+
+Issues #4, #5 and #58 remain open.
 
 ---
 
 # Stacked PR chain
 
-The Studio Production Handoff work remains intentionally stacked and unmerged.
+All Studio Handoff work remains intentionally stacked and unmerged.
 
-Review order:
+Review/merge order if the owner later approves:
 
 1. PR #186 — Art
 2. PR #187 — Product / Decision Rights
@@ -315,7 +235,8 @@ Review order:
 8. PR #193 — Technical Production
 9. PR #194 — Production Dependency / Discipline
 10. PR #195 — QA / Accessibility / Localization
-11. current Final Reconciliation branch / PR when opened
+11. PR #196 — Final Cross-Program Reconciliation
+12. PR #197 — Final Studio Handoff Acceptance Audit
 
 Do not merge a later stacked PR independently onto an incompatible base.
 
@@ -323,10 +244,29 @@ Do not merge without owner approval.
 
 ---
 
-# Method for final acceptance
+# Issue #184 status
 
-For the next audit:
+Issue #184 `Complete Studio Production Handoff Closure` has all required documentation outputs represented on the stacked PR chain, including the Final Studio Handoff Acceptance Audit.
 
-**read repository authority only -> answer every `docs/153` acceptance question -> attempt adversarial studio/Astra reconstruction -> identify any answer that depends on chat -> repair only genuine repository gaps -> assign final handoff status -> preserve runtime/owner gates -> stop before implementation.**
+Recommended tracking state:
 
-The final audit is documentation review, not gameplay testing.
+> **DOCUMENTATION WORK COMPLETE / READY TO CLOSE AFTER OWNER-APPROVED STACK MERGE**
+
+Keep it open while the accepted documents are still absent from `main`.
+
+---
+
+# What happens next
+
+Do **not** automatically begin implementation.
+
+The next action is an owner decision, not another design invention:
+
+1. review/approve or request changes to the stacked handoff package;
+2. decide whether/when to merge the stack;
+3. separately decide whether the documentation-only execution hold should be changed;
+4. if implementation is later authorized, begin from the already-defined Gate 1 / Issue #5 + Issue #58 sequence rather than improvising a new starting point.
+
+Until the owner explicitly changes the execution boundary:
+
+> **NO UE5.8 IMPLEMENTATION. NO GAMEPLAY TESTING. NO PRODUCTION-ASSET EXECUTION.**
