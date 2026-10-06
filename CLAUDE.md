@@ -304,3 +304,7 @@ Do not ship:
 - test-only state mutation surfaces.
 
 The final executable must function as a complete authored single-player game with no AI-service dependency.
+
+## README presentation
+
+Keep `README.md` centered, with original decorative artwork in `readme-banner.png`, its brief in `readme-banner-prompt.txt`, compact logo badges using Shields.io `label-message-color` URLs, and a linked section index with verified project-file shortcuts. Center documentation tables and code containers while preserving code spacing. Public repository metrics may use live Shields.io or Badgen badges. Preserve project status, attribution, evidence boundaries, and operational authority; artwork and badges are presentation only.
